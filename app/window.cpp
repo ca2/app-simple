@@ -59,7 +59,7 @@ namespace simple_app
       auto colorBackground = get_color(pstyle, ::user::element_background);
 
       pgraphics->fill_rect(rectClient, ARGB(127, 255, 255, 255));
-      
+
       double dBase = (double) rectClient.minimum_signed_absolute_dimension() / 17.0;
 
       double x = dBase * 3;
@@ -77,7 +77,7 @@ namespace simple_app
       for (int i = 0; i < dBase; i++)
       {
 
-         pgraphics->draw3d_rect(rectClient, ARGB(255, 127, 127, 127));
+         pgraphics->draw_rect(rectClient, ARGB(255, 127, 127, 127));
 
          rectClient.deflate(1, 1);
 

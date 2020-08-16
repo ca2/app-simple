@@ -94,16 +94,9 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath=\\$$$ORIGIN" />
-			<Add option="-lX11" />
-			<Add option="-lEGL" />
-			<Add option="-lGL" />
-			<Add option="-lsqlite3" />
-			<Add option="-lbz2" />
-			<Add option="-lz" />
-			<Add option="-lssl" />
-			<Add option="-lidn" />
-			<Add option="-lfreetype" />
 			<Add option="-laura" />
+			<Add option="-lapp_shader" />
+			<Add option="-lcore" />
 			<Add option="-Wl,-z,defs" />
 			<Add directory="$(#time_dir)/x64/$(TARGET_NAME)" />
 		</Linker>
@@ -126,10 +119,7 @@
 		<Unit filename="main_frame.cpp" />
 		<Unit filename="main_frame.h" />
 		<Unit filename="pane_view.h" />
-		<Unit filename="render.cpp" />
 		<Unit filename="render.h" />
-		<Unit filename="simple_shader_1through3.cpp" />
-		<Unit filename="simple_shader_arcs.cpp" />
 		<Unit filename="tab_view.cpp" />
 		<Unit filename="view.cpp" />
 		<Unit filename="view.h" />
