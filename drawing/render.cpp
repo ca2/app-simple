@@ -112,7 +112,7 @@ namespace simple_drawing
          for (index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw3d_rect(rect, ARGB(127, 225, 225, 225));
+            pgraphics->draw_rect(rect, ARGB(127, 225, 225, 225));
 
             rect.deflate(1, 1);
 

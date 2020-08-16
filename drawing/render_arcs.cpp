@@ -56,7 +56,7 @@ namespace simple_drawing
 
       rectBack.bottom = rectBack.top + size.cy * 2 + 4 * 3;
 
-      pgraphics->fill_solid_rect(rectBack, ARGB(127, 80, 80, 80));
+      pgraphics->fill_rect(rectBack, ARGB(127, 80, 80, 80));
 
       pgraphics->text_out(rectBack.left + 4, rectBack.top + 4, str1);
 
@@ -199,13 +199,13 @@ namespace simple_drawing
       if (__bool(Application.m_echeckSimple))
       {
 
-         pgraphics->fill_solid_rect(rClient, ARGB(127, 192, 192, 192));
+         pgraphics->fill_rect(rClient, ARGB(127, 192, 192, 192));
 
       }
       else
       {
 
-         pgraphics->fill_solid_rect(rClient, ARGB(127, 120, 120, 120));
+         pgraphics->fill_rect(rClient, ARGB(127, 120, 120, 120));
 
       }
 

@@ -176,7 +176,7 @@ namespace simple_drawing
          for (index i = 0; i < 11; i++)
          {
 
-            pgraphics->draw3d_rect(rect, ARGB(180, 80, 80, 80));
+            pgraphics->draw_rect(rect, ARGB(180, 80, 80, 80));
 
             rect.deflate(1, 1);
 
