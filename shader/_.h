@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 
+#include "app/shader/_.h"
 #include "core/_.h"
 
 
@@ -35,10 +36,10 @@ namespace opengl
 } // namespace opengl
 
 
-#include "aura/gpu/gpu/_.h"
+//#include "aura/gpu/gpu/_.h"
 
 
-#include "render.h"
+//#include "render.h"
 
 
 #include "application.h"

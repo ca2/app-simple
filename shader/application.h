@@ -7,21 +7,21 @@ namespace simple_shader
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER application :
-      virtual public ::aura::application
+      virtual public ::app_shader::application
    {
    public:
 
 
-      ::enum_check &                         m_echeckSimple;
-      ::enum_check &                         m_echeckNoClientFrame;
-      string &                               m_strSimple;
+      //::enum_check &                         m_echeckSimple;
+      //::enum_check &                         m_echeckNoClientFrame;
+      //string &                               m_strSimple;
 
-      bool                                   m_bMultiverseChat;
+      //bool                                   m_bMultiverseChat;
 
-      ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
-      ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
-      tab_view *                             m_ppaneview;
+      //::user::document *                     m_pdocMenu;
+      //::user::plain_edit_view *              m_prollfps;
+      ::user::single_document_template *     m_ptemplateSimpleShaderMain;
+      tab_view *                             m_ptabview;
 
       string                                 m_strMainTitle;
 
@@ -35,16 +35,16 @@ namespace simple_shader
 
       virtual void on_request(::create * pcreate) override;
 
-#ifdef DEBUG
-      virtual int64_t add_ref(OBJ_REF_DBG_PARAMS) override;
-      virtual int64_t dec_ref(OBJ_REF_DBG_PARAMS) override;
-#endif
+//#ifdef DEBUG
+//      virtual int64_t add_ref(OBJ_REF_DBG_PARAMS) override;
+//      virtual int64_t dec_ref(OBJ_REF_DBG_PARAMS) override;
+//#endif
 
       virtual __pointer(view) create_simple_shader_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
-      virtual string get_main_title() const;
-      virtual string get_hover_font() const;
+      //virtual string get_main_title() const;
+      //virtual string get_hover_font() const;
 
 
       //DECL_GEN_SIGNAL(_001OnSimpleCheckbox);

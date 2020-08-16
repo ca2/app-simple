@@ -54,7 +54,7 @@ namespace simple_shader
 
       }
 
-      Application.m_ppaneview = this;
+      Application.m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("1", "shader1");

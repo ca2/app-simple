@@ -12,9 +12,9 @@ namespace simple_shader
    public:
 
 
-      int                     m_iView;
-      __pointer(render)       m_prender;
-      bool                    m_bSaveFrame;
+      int                                 m_iView;
+      __pointer(::app_shader::render)     m_prender;
+      bool                                m_bSaveFrame;
 
 
       view();

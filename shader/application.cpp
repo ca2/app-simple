@@ -7,57 +7,21 @@ namespace simple_shader
 {
 
 
-   application::application() :
-      m_echeckSimple(topic(id_simple_checkbox)),
-      m_echeckNoClientFrame(topic(id_no_client_frame)),
-      m_strSimple(topic(id_simple_text))
+   application::application()
    {
       
-      auto pproperty1 = find_property(id_simple_checkbox);
-      
-      bool bCheckOk = false;
-      
-      if(pproperty1->m_etype == type_enum_check)
-      {
-         
-         auto pproperty = pproperty1;
-         
-         if(pproperty->m_etype == type_enum_check)
-         {
-            
-            auto & echeck = pproperty->m_echeck;
-            
-            if(echeck == check_undefined)
-            {
-               
-               bCheckOk = true;
-               
-            }
-            
-         }
-         
-      }
-      
-      if(!bCheckOk)
-      {
-       
-         message_box("simple_check_box is not ok");
-         
-      }
-      
-      m_ptemplateSimpleDrawingMain = nullptr;
 
-      m_ppaneview = nullptr;
+      m_ptemplateSimpleShaderMain = nullptr;
+
+      m_ptabview = nullptr;
 
       m_strAppId = "app-simple/shader";
 
       m_strAppName = "app-simple/shader";
 
-      m_strBaseSupportId = "ca2_flag";
+      m_strBaseSupportId = "app-simple/shader";
 
       m_bLicense = false;
-
-      m_bMultiverseChat = true;
 
       m_strMainTitle = "Simple Drawing";
 
@@ -72,12 +36,12 @@ namespace simple_shader
 
 
 
-   string application::get_hover_font() const
-   {
+   //string application::get_hover_font() const
+   //{
 
-      return "Helvetica";
+   //   return "Helvetica";
 
-   }
+   //}
 
 
    ::estatus application::init_instance()
@@ -85,7 +49,7 @@ namespace simple_shader
 
       set_local_data();
 
-      User.will_use_view_hint(FONTSEL_IMPACT);
+      //User.will_use_view_hint(FONTSEL_IMPACT);
 
       create_factory <::simple_shader::document >();
       create_factory <::simple_shader::frame >();
@@ -111,15 +75,9 @@ namespace simple_shader
                                __type(main_frame),
                                __type(tab_view)));
 
-      m_ptemplateSimpleDrawingMain = pdoctemplate;
+      m_ptemplateSimpleShaderMain = pdoctemplate;
 
       add_document_template(pdoctemplate);
-
-      default_data_save_handling(id_simple_checkbox);
-
-      default_data_save_handling(id_no_client_frame);
-
-      default_data_save_handling(id_simple_text);
 
       return true;
 
@@ -155,9 +113,7 @@ namespace simple_shader
 
 #endif
 
-      m_bMultiverseChat = !is_true("no_hello_edit");
-
-      if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
+      if (m_ptemplateSimpleShaderMain->get_document_count() == 0)
       {
 
          if(pcreate->m_bMakeVisible)
@@ -173,7 +129,7 @@ namespace simple_shader
 
          }
 
-         m_ptemplateSimpleDrawingMain->do_request(pcreate);
+         m_ptemplateSimpleShaderMain->do_request(pcreate);
 
       }
 
@@ -197,26 +153,26 @@ namespace simple_shader
    }
 
 
-#ifdef _DEBUG
-
-
-   int64_t application::add_ref(OBJ_REF_DBG_PARAMS_DEF)
-   {
-
-      return ::object::add_ref(OBJ_REF_DBG_ARGS);
-
-   }
-
-
-   int64_t application::dec_ref(OBJ_REF_DBG_PARAMS_DEF)
-   {
-
-      return ::object::dec_ref(OBJ_REF_DBG_ARGS);
-
-   }
-
-
-#endif
+//#ifdef _DEBUG
+//
+//
+//   int64_t application::add_ref(OBJ_REF_DBG_PARAMS_DEF)
+//   {
+//
+//      return ::object::add_ref(OBJ_REF_DBG_ARGS);
+//
+//   }
+//
+//
+//   int64_t application::dec_ref(OBJ_REF_DBG_PARAMS_DEF)
+//   {
+//
+//      return ::object::dec_ref(OBJ_REF_DBG_ARGS);
+//
+//   }
+//
+//
+//#endif
 
 
    __pointer(view) application::create_simple_shader_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
