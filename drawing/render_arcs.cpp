@@ -70,7 +70,7 @@ namespace simple_drawing
 
       pgraphics->set(brush);
 
-      if (__bool(Application.m_echeckSimple))
+      if (__bool(ThisApp.m_echeckSimple))
       {
 
          if (dAngle < 0.0)
@@ -196,7 +196,7 @@ namespace simple_drawing
 
       ::rect rClient(m_rect);
 
-      if (__bool(Application.m_echeckSimple))
+      if (__bool(ThisApp.m_echeckSimple))
       {
 
          pgraphics->fill_rect(rClient, ARGB(127, 192, 192, 192));

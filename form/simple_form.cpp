@@ -40,7 +40,7 @@ namespace simple_form
             //main_async([this,p]()
             //{
 
-            g_track_popup_lyricview(this, pmouse);
+            // g_track_popup_lyricview(this, pmouse);
 
             // });
 //               get_thread()->m_bTemporary = bTemporary;

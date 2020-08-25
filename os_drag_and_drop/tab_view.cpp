@@ -161,7 +161,7 @@ namespace simple_os_drag_and_drop
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
 
       }
       break;
@@ -172,7 +172,7 @@ namespace simple_os_drag_and_drop
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = Application.create_simple_os_drag_and_drop_view(this, pimpactdata);
+         auto pview = ThisApp.create_simple_os_drag_and_drop_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

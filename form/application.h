@@ -7,7 +7,7 @@ namespace simple_form
 
 
    class CLASS_DECL_APP_SIMPLE_FORM application :
-      virtual public ::aura::application
+      virtual public ::base::application
    {
    public:
 

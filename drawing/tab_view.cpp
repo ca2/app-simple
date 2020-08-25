@@ -172,7 +172,7 @@ namespace simple_drawing
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = Application.create_simple_drawing_view(this, pimpactdata);
+         auto pview = ThisApp.create_simple_drawing_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

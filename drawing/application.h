@@ -7,7 +7,7 @@ namespace simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING application :
-      virtual public ::aura::application
+      virtual public ::base::application
    {
    public:
 

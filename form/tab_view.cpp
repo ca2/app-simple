@@ -163,7 +163,7 @@ namespace simple_form
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
 
       }
       break;

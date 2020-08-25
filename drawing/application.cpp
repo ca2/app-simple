@@ -137,7 +137,7 @@ namespace simple_drawing
    void application::term_application()
    {
 
-      ::aura::application::term_application();
+      ::base::application::term_application();
 
    }
 

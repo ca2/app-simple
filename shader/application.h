@@ -7,7 +7,8 @@ namespace simple_shader
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER application :
-      virtual public ::app_shader::application
+      virtual public ::app_shader::application,
+      virtual public ::core::application
    {
    public:
 

@@ -102,7 +102,7 @@ namespace simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (Application.m_echeckNoClientFrame != ::check_checked)
+      if (ThisApp.m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rect rect(m_rect);

@@ -54,7 +54,7 @@ namespace simple_shader
 
       }
 
-      Application.m_ptabview = this;
+      ThisApp.m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("1", "shader1");
@@ -168,7 +168,7 @@ namespace simple_shader
       if(::str::begins_eat_ci(strId, "shader"))
       {
 
-         auto pview = Application.create_simple_shader_view(this, pimpactdata);
+         auto pview = ThisApp.create_simple_shader_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

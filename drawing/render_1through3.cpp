@@ -87,7 +87,7 @@ namespace simple_drawing
 
          pgraphics->set(font);
 
-         strTitle = Application.m_strMainTitle;
+         strTitle = ThisApp.m_strMainTitle;
 
          size = pgraphics->GetTextExtent(strTitle);
 
@@ -123,7 +123,7 @@ namespace simple_drawing
             
       }
 
-      auto& echeckSimple = Application.m_echeckSimple;
+      auto& echeckSimple = ThisApp.m_echeckSimple;
 
       if (__bool(echeckSimple))
       {
@@ -147,7 +147,7 @@ namespace simple_drawing
       else
       {
 
-         if (__bool(Application.m_echeckSimple))
+         if (__bool(ThisApp.m_echeckSimple))
          {
 
             brush->create_solid(ARGB(255, 255, 255, 200));
@@ -187,7 +187,7 @@ namespace simple_drawing
       else if (m_iDrawing == 3)
       {
 
-         if (__bool(Application.m_echeckSimple))
+         if (__bool(ThisApp.m_echeckSimple))
          {
 
             brush->create_solid(m_hlsText);
@@ -215,7 +215,7 @@ namespace simple_drawing
       else
       {
 
-         if (__bool(Application.m_echeckSimple))
+         if (__bool(ThisApp.m_echeckSimple))
          {
 
             brush->create_solid(m_hlsText);

@@ -54,7 +54,7 @@ namespace simple_application
 
       __compose(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
-      add_document_template(pdoctemplate);
+      User.document_manager()->add_document_template(pdoctemplate);
 
       return true;
 
@@ -64,7 +64,7 @@ namespace simple_application
    void application::term_application()
    {
 
-      ::aura::application::term_application();
+      ::base::application::term_application();
 
    }
 

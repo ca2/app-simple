@@ -7,7 +7,7 @@ namespace simple_os_drag_and_drop
 
 
    class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP application :
-      virtual public ::aura::application
+      virtual public ::base::application
    {
    public:
 
