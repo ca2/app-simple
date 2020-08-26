@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A2032FE24EB4CF6009D23A7 /* libapp_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2032F924EB4CE1009D23A7 /* libapp_shader.dylib */; };
 		9A258B7C24DA55F40013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B7A24DA55F40013F50E /* tab_view.h */; };
 		9A258B7D24DA55F40013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B7B24DA55F40013F50E /* tab_view.cpp */; };
-		9A258B9924DA575A0013F50E /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258B9424DA574D0013F50E /* libcore.dylib */; };
-		9A258B9B24DA57600013F50E /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258B9A24DA57600013F50E /* libaura.dylib */; };
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
@@ -21,6 +18,11 @@
 		9A449BBF24775E120002A827 /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A449BB624775E110002A827 /* _.h */; };
 		9A449BC324775E120002A827 /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BBA24775E120002A827 /* frame.cpp */; };
 		9A449C2D24775F9B0002A827 /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A449BBA24775E120002A827 /* frame.cpp */; };
+		9A833C0B24F5463400C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258B9A24DA57600013F50E /* libaura.dylib */; };
+		9A833C0D24F5463A00C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C0C24F5463A00C079FB /* libaxis.dylib */; };
+		9A833C0F24F5464000C079FB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C0E24F5464000C079FB /* libbase.dylib */; };
+		9A833C1024F5464E00C079FB /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258B9424DA574D0013F50E /* libcore.dylib */; };
+		9A833C1124F5465500C079FB /* libapp_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2032F924EB4CE1009D23A7 /* libapp_shader.dylib */; };
 		9A8F90CE240C09F10097E249 /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* view.cpp */; };
 		9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
 		9A8F90D1240C09F10097E249 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C5240C09F00097E249 /* document.h */; };
@@ -107,6 +109,8 @@
 		9A449BB524775E110002A827 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		9A449BB624775E110002A827 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 		9A449BBA24775E120002A827 /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
+		9A833C0C24F5463A00C079FB /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A833C0E24F5464000C079FB /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8F90C2240C09F00097E249 /* view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = view.cpp; sourceTree = "<group>"; };
 		9A8F90C3240C09F00097E249 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
 		9A8F90C5240C09F00097E249 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
@@ -141,9 +145,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A2032FE24EB4CF6009D23A7 /* libapp_shader.dylib in Frameworks */,
-				9A258B9B24DA57600013F50E /* libaura.dylib in Frameworks */,
-				9A258B9924DA575A0013F50E /* libcore.dylib in Frameworks */,
+				9A833C1124F5465500C079FB /* libapp_shader.dylib in Frameworks */,
+				9A833C1024F5464E00C079FB /* libcore.dylib in Frameworks */,
+				9A833C0B24F5463400C079FB /* libaura.dylib in Frameworks */,
+				9A833C0F24F5464000C079FB /* libbase.dylib in Frameworks */,
+				9A833C0D24F5463A00C079FB /* libaxis.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +177,8 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A833C0E24F5464000C079FB /* libbase.dylib */,
+				9A833C0C24F5463A00C079FB /* libaxis.dylib */,
 				9A258B9A24DA57600013F50E /* libaura.dylib */,
 			);
 			name = Frameworks;
@@ -600,6 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -616,7 +625,7 @@
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) . $(WorkspaceDir)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../..";
 			};
@@ -667,6 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -681,7 +691,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) . $(WorkspaceDir)";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
 				WorkspaceDir = "$(SRCROOT)/../..";
@@ -691,7 +701,6 @@
 		9AEB75A816F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Debug;
@@ -699,7 +708,6 @@
 		9AEB75A916F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Release;

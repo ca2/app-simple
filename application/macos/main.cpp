@@ -16,5 +16,4 @@
 //  Created by Camilo Sasuke Tsumanuma on 1/19/13.
 //  Copyright (c) 2013 Camilo Sasuke Tsumanuma. All rights reserved.
 //
-
 #include "aura/application.h"

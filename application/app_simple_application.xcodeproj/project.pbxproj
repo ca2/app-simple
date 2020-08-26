@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
-		9A258BD324DA5DCC0013F50E /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BCE24DA58CB0013F50E /* libcore.dylib */; };
-		9A258BD524DA5DD30013F50E /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BD424DA5DD30013F50E /* libaura.dylib */; };
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
 		9A415C2E247393C100EF2BCD /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* view.cpp */; };
+		9A833BE124F544B200C079FB /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A833BDF24F544B200C079FB /* _.h */; };
+		9A833BE224F544B200C079FB /* _user.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A833BE024F544B200C079FB /* _user.h */; };
+		9A833BE924F544EA00C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BD424DA5DD30013F50E /* libaura.dylib */; };
+		9A833BEB24F544EF00C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BEA24F544EF00C079FB /* libaxis.dylib */; };
+		9A833BEC24F544F500C079FB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BE824F544D600C079FB /* libbase.dylib */; };
 		9A8F90CE240C09F10097E249 /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* view.cpp */; };
 		9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
 		9A8F90D1240C09F10097E249 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C5240C09F00097E249 /* document.h */; };
@@ -28,26 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A258BCD24DA58CB0013F50E /* PBXContainerItemProxy */ = {
+		9A833BE724F544D600C079FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A258BC724DA58CB0013F50E /* core.xcodeproj */;
+			containerPortal = 9A833BE324F544D600C079FB /* base.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9A19A1A519C6F50B0018DF7D;
-			remoteInfo = core;
-		};
-		9A258BCF24DA58CB0013F50E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A258BC724DA58CB0013F50E /* core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24DDC1904CF6E001AEFFB;
-			remoteInfo = ios_core;
-		};
-		9A258BD124DA58CB0013F50E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A258BC724DA58CB0013F50E /* core.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24DEB1904CF6E001AEFFB;
-			remoteInfo = core_iosTests;
+			remoteGlobalIDString = 9AD117F324F51BE400177261;
+			remoteInfo = base;
 		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,8 +60,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A258BC724DA58CB0013F50E /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
 		9A258BD424DA5DD30013F50E /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A833BDF24F544B200C079FB /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
+		9A833BE024F544B200C079FB /* _user.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _user.h; sourceTree = "<group>"; };
+		9A833BE324F544D600C079FB /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
+		9A833BEA24F544EF00C079FB /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8F90C2240C09F00097E249 /* view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = view.cpp; sourceTree = "<group>"; };
 		9A8F90C3240C09F00097E249 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
 		9A8F90C5240C09F00097E249 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
@@ -108,20 +100,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A258BD524DA5DD30013F50E /* libaura.dylib in Frameworks */,
-				9A258BD324DA5DCC0013F50E /* libcore.dylib in Frameworks */,
+				9A833BEC24F544F500C079FB /* libbase.dylib in Frameworks */,
+				9A833BEB24F544EF00C079FB /* libaxis.dylib in Frameworks */,
+				9A833BE924F544EA00C079FB /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A258BC824DA58CB0013F50E /* Products */ = {
+		9A833BE424F544D600C079FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A258BCE24DA58CB0013F50E /* libcore.dylib */,
-				9A258BD024DA58CB0013F50E /* libios_core.a */,
-				9A258BD224DA58CB0013F50E /* core_iosTests.xctest */,
+				9A833BE824F544D600C079FB /* libbase.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +120,7 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A833BEA24F544EF00C079FB /* libaxis.dylib */,
 				9A258BD424DA5DD30013F50E /* libaura.dylib */,
 			);
 			name = Frameworks;
@@ -137,7 +129,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9A258BC724DA58CB0013F50E /* core.xcodeproj */,
+				9A833BE324F544D600C079FB /* base.xcodeproj */,
 				9AEB75AA16F78E600085103B /* simple_application */,
 				9AEB75A416F78DF10085103B /* Products */,
 				9A920FD61F3BF68400CD9D94 /* Frameworks */,
@@ -157,6 +149,8 @@
 		9AEB75AA16F78E600085103B /* simple_application */ = {
 			isa = PBXGroup;
 			children = (
+				9A833BDF24F544B200C079FB /* _.h */,
+				9A833BE024F544B200C079FB /* _user.h */,
 				9A8F90C6240C09F00097E249 /* application.cpp */,
 				9A8F90CA240C09F10097E249 /* application.h */,
 				9A8F90C9240C09F10097E249 /* document.cpp */,
@@ -178,6 +172,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A833BE224F544B200C079FB /* _user.h in Headers */,
+				9A833BE124F544B200C079FB /* _.h in Headers */,
 				9A8F90D4240C09F10097E249 /* view.h in Headers */,
 				9A8F90D6240C09F10097E249 /* application.h in Headers */,
 				9A8F90D3240C09F10097E249 /* main_frame.h in Headers */,
@@ -269,8 +265,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A258BC824DA58CB0013F50E /* Products */;
-					ProjectRef = 9A258BC724DA58CB0013F50E /* core.xcodeproj */;
+					ProductGroup = 9A833BE424F544D600C079FB /* Products */;
+					ProjectRef = 9A833BE324F544D600C079FB /* base.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -283,25 +279,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A258BCE24DA58CB0013F50E /* libcore.dylib */ = {
+		9A833BE824F544D600C079FB /* libbase.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libcore.dylib;
-			remoteRef = 9A258BCD24DA58CB0013F50E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A258BD024DA58CB0013F50E /* libios_core.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libios_core.a;
-			remoteRef = 9A258BCF24DA58CB0013F50E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A258BD224DA58CB0013F50E /* core_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = core_iosTests.xctest;
-			remoteRef = 9A258BD124DA58CB0013F50E /* PBXContainerItemProxy */;
+			path = libbase.dylib;
+			remoteRef = 9A833BE724F544D600C079FB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -525,6 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -541,8 +524,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) . $(WorkspaceDir)";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../..";
 			};
@@ -594,6 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -608,8 +592,8 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) . $(WorkspaceDir)";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
 				WorkspaceDir = "$(SRCROOT)/../..";
@@ -619,7 +603,6 @@
 		9AEB75A816F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Debug;
@@ -627,7 +610,6 @@
 		9AEB75A916F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Release;

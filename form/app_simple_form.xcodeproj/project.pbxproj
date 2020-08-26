@@ -10,8 +10,6 @@
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9A258BDA24DA5E460013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258BD824DA5E460013F50E /* tab_view.h */; };
 		9A258BDB24DA5E460013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258BD924DA5E460013F50E /* tab_view.cpp */; };
-		9A25901924DAA22A0013F50E /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A25901824DAA22A0013F50E /* libaura.dylib */; };
-		9A25901B24DAA2330013F50E /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A25901A24DAA2330013F50E /* libcore.dylib */; };
 		9A39EA60243364EB000FECDA /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA47243364EA000FECDA /* application.cpp */; };
 		9A39EA62243364EC000FECDA /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA49243364EA000FECDA /* document.cpp */; };
 		9A39EA63243364EC000FECDA /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4A243364EA000FECDA /* document.h */; };
@@ -41,6 +39,9 @@
 		9A415C162473939C00EF2BCD /* main_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4D243364EA000FECDA /* main_view.cpp */; };
 		9A415C182473939C00EF2BCD /* simple_form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA4F243364EA000FECDA /* simple_form.cpp */; };
 		9A415C192473939C00EF2BCD /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA5D243364EB000FECDA /* view.cpp */; };
+		9A833C1D24F5740500C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A25901824DAA22A0013F50E /* libaura.dylib */; };
+		9A833C1F24F5740F00C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C1E24F5740F00C079FB /* libaxis.dylib */; };
+		9A833C2024F5741800C079FB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C1A24F573DD00C079FB /* libbase.dylib */; };
 		9AE24EA11904CFFD001AEFFB /* libapp_simple_form.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_form.a */; };
 		9AE24EA71904CFFD001AEFFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9AE24EA51904CFFD001AEFFB /* InfoPlist.strings */; };
 		9AEB75DD16F78E600085103B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
@@ -48,26 +49,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A92E3C4240B605600660EFD /* PBXContainerItemProxy */ = {
+		9A833C1924F573DD00C079FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */;
+			containerPortal = 9A833C1524F573DD00C079FB /* base.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = app_simple_notify_drawing;
+			remoteGlobalIDString = 9AD117F324F51BE400177261;
+			remoteInfo = base;
 		};
-		9A92E3C6240B605600660EFD /* PBXContainerItemProxy */ = {
+		9A833C1B24F573FB00C079FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_app_simple_notify_drawing;
-		};
-		9A92E3C8240B605600660EFD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
+			containerPortal = 9A833C1524F573DD00C079FB /* base.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AD117F224F51BE400177261;
+			remoteInfo = base;
 		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -115,7 +109,8 @@
 		9A39EA5D243364EB000FECDA /* view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = view.cpp; sourceTree = "<group>"; };
 		9A39EA5E243364EB000FECDA /* main_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_view.h; sourceTree = "<group>"; };
 		9A39EA7A2433652A000FECDA /* wiosapp_core_beatmapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = wiosapp_core_beatmapperTests.m; path = wiosapp_core_simple_formTests/wiosapp_core_beatmapperTests.m; sourceTree = SOURCE_ROOT; };
-		9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_notify_drawing.xcodeproj; path = ../notify_drawing/app_simple_notify_drawing.xcodeproj; sourceTree = "<group>"; };
+		9A833C1524F573DD00C079FB /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
+		9A833C1E24F5740F00C079FB /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8A1904CFFD001AEFFB /* libapp_simple_form.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_simple_form.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
@@ -145,31 +140,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A25901B24DAA2330013F50E /* libcore.dylib in Frameworks */,
-				9A25901924DAA22A0013F50E /* libaura.dylib in Frameworks */,
+				9A833C2024F5741800C079FB /* libbase.dylib in Frameworks */,
+				9A833C1F24F5740F00C079FB /* libaxis.dylib in Frameworks */,
+				9A833C1D24F5740500C079FB /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A833C1624F573DD00C079FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A833C1A24F573DD00C079FB /* libbase.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A833C1E24F5740F00C079FB /* libaxis.dylib */,
 				9A25901A24DAA2330013F50E /* libcore.dylib */,
 				9A25901824DAA22A0013F50E /* libaura.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9A92E3BF240B605600660EFD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A92E3C5240B605600660EFD /* libapp_simple_notify_drawing.dylib */,
-				9A92E3C7240B605600660EFD /* libapp_simple_notify_drawing.a */,
-				9A92E3C9240B605600660EFD /* app_core_hellomultiverse_iosTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
@@ -193,7 +188,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */,
+				9A833C1524F573DD00C079FB /* base.xcodeproj */,
 				9AEB75AA16F78E600085103B /* simple_form */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AEB75A416F78DF10085103B /* Products */,
@@ -312,6 +307,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A833C1C24F573FB00C079FB /* PBXTargetDependency */,
 			);
 			name = app_simple_form;
 			productName = app_core_hellomultiverse;
@@ -345,8 +341,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A92E3BF240B605600660EFD /* Products */;
-					ProjectRef = 9A92E3BE240B605600660EFD /* app_simple_notify_drawing.xcodeproj */;
+					ProductGroup = 9A833C1624F573DD00C079FB /* Products */;
+					ProjectRef = 9A833C1524F573DD00C079FB /* base.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -359,25 +355,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A92E3C5240B605600660EFD /* libapp_simple_notify_drawing.dylib */ = {
+		9A833C1A24F573DD00C079FB /* libbase.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libapp_simple_notify_drawing.dylib;
-			remoteRef = 9A92E3C4240B605600660EFD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A92E3C7240B605600660EFD /* libapp_simple_notify_drawing.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libapp_simple_notify_drawing.a;
-			remoteRef = 9A92E3C6240B605600660EFD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A92E3C9240B605600660EFD /* app_core_hellomultiverse_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
-			remoteRef = 9A92E3C8240B605600660EFD /* PBXContainerItemProxy */;
+			path = libbase.dylib;
+			remoteRef = 9A833C1924F573DD00C079FB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -440,6 +422,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A833C1C24F573FB00C079FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = base;
+			targetProxy = 9A833C1B24F573FB00C079FB /* PBXContainerItemProxy */;
+		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE24E891904CFFD001AEFFB /* ios_app_simple_form */;
@@ -619,8 +606,8 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir) $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) .";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../..";
 			};
@@ -687,8 +674,8 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include";
-				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir) $(WorkspaceDir)/app $(PROJECT_DIR)/.. $(PROJECT_DIR) .";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/third/include $(WorkspaceDir)/app/_include $(HOME)/__archive/archive/third-$(PLATFORM_MODIFIER)/third/include/";
+				USER_HEADER_SEARCH_PATHS = "$(WorkspaceDir) $(WorkspaceDir)/include $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER) $(WorkspaceDir)/platform-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/app/_include $(WorkspaceDir)/third/include $(WorkspaceDir)/app . $(PROJECT_DIR) $(HOME)/__archive/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
 				WorkspaceDir = "$(SRCROOT)/../..";
@@ -698,8 +685,6 @@
 		9AEB75A816F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Debug;
@@ -707,8 +692,6 @@
 		9AEB75A916F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Release;
