@@ -16,8 +16,6 @@
 		9A8D804124DE38350029004E /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803824DE38350029004E /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D804224DE38350029004E /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803924DE38350029004E /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D804324DE38350029004E /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803A24DE38350029004E /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D804424DE38350029004E /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803B24DE38350029004E /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D804524DE38350029004E /* libpcre.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803C24DE38350029004E /* libpcre.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D804624DE38350029004E /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D803D24DE38350029004E /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D804724DE38410029004E /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D803924DE38350029004E /* libaura.dylib */; };
 		9AE5CC9522CBED1E00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC9422CBED1E00EDEAD1 /* en.lproj */; };
@@ -40,9 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				9A8D804524DE38350029004E /* libpcre.dylib in CopyFiles */,
 				9A8D803E24DE38350029004E /* libssl.dylib in CopyFiles */,
-				9A8D804424DE38350029004E /* libidn.dylib in CopyFiles */,
 				9A8D804324DE38350029004E /* libexperience_core.dylib in CopyFiles */,
 				9A8D804124DE38350029004E /* libcrypto.dylib in CopyFiles */,
 				9A8D804624DE38350029004E /* libdraw2d_quartz2d.dylib in CopyFiles */,
@@ -68,8 +64,6 @@
 		9A8D803824DE38350029004E /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../time/macos/libcrypto.dylib; sourceTree = "<group>"; };
 		9A8D803924DE38350029004E /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = ../../time/macos/libaura.dylib; sourceTree = "<group>"; };
 		9A8D803A24DE38350029004E /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = ../../time/macos/libexperience_core.dylib; sourceTree = "<group>"; };
-		9A8D803B24DE38350029004E /* libidn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libidn.dylib; path = ../../time/macos/libidn.dylib; sourceTree = "<group>"; };
-		9A8D803C24DE38350029004E /* libpcre.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpcre.dylib; path = ../../time/macos/libpcre.dylib; sourceTree = "<group>"; };
 		9A8D803D24DE38350029004E /* libdraw2d_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdraw2d_quartz2d.dylib; path = ../../time/macos/libdraw2d_quartz2d.dylib; sourceTree = "<group>"; };
 		9AE5CC9422CBED1E00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,8 +152,6 @@
 				9A8D803824DE38350029004E /* libcrypto.dylib */,
 				9A8D803D24DE38350029004E /* libdraw2d_quartz2d.dylib */,
 				9A8D803A24DE38350029004E /* libexperience_core.dylib */,
-				9A8D803B24DE38350029004E /* libidn.dylib */,
-				9A8D803C24DE38350029004E /* libpcre.dylib */,
 				9A8D803524DE38350029004E /* libssl.dylib */,
 			);
 			name = Frameworks;

@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "core/_.h"
+#include "aura/_.h"
 //#include "core/user/userex/_userex.h"
 
 
@@ -17,7 +17,7 @@ namespace user
 
    class button;
 
-   typedef ::user::show < ::user::button > button_view;
+   //typedef ::user::show < ::user::button > button_view;
 
 } // namespace user
 
