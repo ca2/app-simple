@@ -130,19 +130,19 @@ namespace simple_form
 
       int iHeight = 25;
 
-      m_pstill->set_window_pos(zorder_top, iLeft, y, 200, iHeight, SWP_SHOWWINDOW);
+      m_pstill->display_child(iLeft, y, 200, iHeight);
 
       y += 30;
 
-      m_pedit->set_window_pos(zorder_top, iLeft-30, y, 200, iHeight, SWP_SHOWWINDOW);
+      m_pedit->display_child(iLeft-30, y, 200, iHeight);
 
       y += 30;
 
-      m_pcombobox->set_window_pos(zorder_top, iLeft, y, 200, iHeight, SWP_SHOWWINDOW);
+      m_pcombobox->display_child(iLeft, y, 200, iHeight);
 
       y += 30;
 
-      m_pbutton->set_window_pos(zorder_top, iLeft-30, y, 200, iHeight, SWP_SHOWWINDOW);
+      m_pbutton->display_child(iLeft-30, y, 200, iHeight);
 
    }
 

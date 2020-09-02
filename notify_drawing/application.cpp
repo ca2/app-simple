@@ -29,8 +29,6 @@ namespace notify_drawing
 
       set_local_data();
 
-      User.will_use_view_hint(FONTSEL_IMPACT);
-
       create_factory <::notify_drawing::main_frame >();
       create_factory <::notify_drawing::view >();
 
@@ -122,7 +120,7 @@ namespace notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < simple_drawing::document >()->get_typed_view < ::user::tab_view >()->GetTopLevelFrame()->prodevian_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < simple_drawing::document >()->get_typed_view < ::user::tab_view >()->GetTopLevelFrame()->sketch_prepare_window_maximize();
 
       }
 

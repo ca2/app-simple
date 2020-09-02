@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 
-#include "core/_.h"
+#include "base/_.h"
 
 
 #ifdef _APP_SIMPLE_DRAWING_LIBRARY

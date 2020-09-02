@@ -1,9 +1,6 @@
 #pragma once
 
 
-
-
-
 #include "app-simple/drawing/_drawing.h"
 
 
