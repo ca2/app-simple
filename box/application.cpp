@@ -40,7 +40,7 @@ namespace simple_message_box
             {
 
                message_box(
-                  "Simple Message Box!! (message_box).<br><br>Finish?", 
+                  "Simple Message Box!! (message_box).<br><br>Finish?",
                   nullptr,
                   message_box_yes_no | message_box_icon_information,
                   pcallbacks->first());
