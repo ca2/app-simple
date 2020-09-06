@@ -12,8 +12,6 @@ namespace simple_form
 
       window_enable_full_screen();
 
-
-
    }
 
 
