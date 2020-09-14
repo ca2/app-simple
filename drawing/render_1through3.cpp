@@ -31,7 +31,7 @@ namespace simple_drawing
             fork([this]()
                {
 
-                  m_pimage1 = get_image("matter://pat1.jpg");
+                  m_pimage1 = Application.image().get_image("matter://pat1.jpg");
 
                   if (::is_ok(m_pimage1))
                   {
@@ -62,7 +62,7 @@ namespace simple_drawing
 
       rect rect;
 
-      int iSize = MIN(m_rect.width(), m_rect.height());
+      int iSize = min(m_rect.width(), m_rect.height());
 
       iSize = iSize * 3 / 4;
 
@@ -96,12 +96,12 @@ namespace simple_drawing
 
             int iHeight = rect.height();
 
-            int iMaxDimension = size.get_maximum_dimension();
+            double dMaxDimension = size.get_maximum_dimension();
 
             if (m_iDrawing == 1)
             {
 
-               float fSize = iHeight * 80.0 / iMaxDimension;
+               float fSize = (float) (iHeight * 80.0 / dMaxDimension);
 
                font->create_pixel_font(strFontFamily, fSize, 800);
 
@@ -109,7 +109,7 @@ namespace simple_drawing
             else
             {
 
-               float fSize = iHeight * 160.0 / iMaxDimension;
+               float fSize = (float) (iHeight * 160.0 / dMaxDimension);
 
                font->create_pixel_font(strFontFamily, fSize, 800);
 

@@ -102,7 +102,7 @@ namespace simple_os_drag_and_drop
 
       rect rect;
 
-      int iSize = MIN(m_rect.width(), m_rect.height());
+      int iSize = min(m_rect.width(), m_rect.height());
 
       iSize = iSize * 3 / 4;
 
@@ -117,7 +117,7 @@ namespace simple_os_drag_and_drop
       if(m_iDragAndDrop == 3)
       {
 
-         brush->CreatePatternBrush(get_image("matter://pat1.jpg"));
+         brush->CreatePatternBrush(Application.image().get_image("matter://pat1.jpg"));
 
       }
       else
@@ -148,7 +148,7 @@ namespace simple_os_drag_and_drop
             if(m_pimagemap["pat1grayed"]->is_null())
             {
 
-               auto pimage1 = get_image("matter://pat1.jpg");
+               auto pimage1 = Application.image().get_image("matter://pat1.jpg");
                
                /**pimage1 += { success, [this](auto & result)
                {

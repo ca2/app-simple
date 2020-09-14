@@ -3,7 +3,6 @@
 #include "aura/update.h"
 
 
-
 namespace simple_application
 {
 

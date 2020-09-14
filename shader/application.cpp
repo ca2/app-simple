@@ -10,6 +10,7 @@ namespace simple_shader
    application::application()
    {
       
+      m_bImaging = true;
 
       m_ptemplateSimpleShaderMain = nullptr;
 

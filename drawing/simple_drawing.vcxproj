@@ -223,7 +223,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -316,7 +316,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -420,7 +420,7 @@
       </Command>
     </PostBuildEvent>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -509,7 +509,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -594,7 +594,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -687,7 +687,7 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <CustomBuildStep>
-      <Command>$(__archive)\tool-windows\program\app._.exe "core" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
+      <Command>$(__archive)\tool-windows\program\app._.exe "base" "$(OutDir)app.exe" "$(ProjectName)" "$(OutDir)$(TargetName).exe"</Command>
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>$(OutDir)$(TargetName).exe</Outputs>
@@ -731,6 +731,12 @@
     <ResourceCompile Include="..\..\platform-windows\version.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\app\acme\acme.vcxproj">
+      <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
+      <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
