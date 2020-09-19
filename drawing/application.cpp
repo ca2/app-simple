@@ -16,39 +16,39 @@ namespace simple_drawing
    {
 
       m_pstrHoverFontFamilyName = nullptr;
-      
+
       auto pproperty1 = find_property(id_simple_checkbox);
-      
+
       bool bCheckOk = false;
-      
+
       if(pproperty1->m_etype == type_enum_check)
       {
-         
+
          auto pproperty = pproperty1;
-         
+
          if(pproperty->m_etype == type_enum_check)
          {
-            
+
             auto & echeck = pproperty->m_echeck;
-            
+
             if(echeck == check_undefined)
             {
-               
+
                bCheckOk = true;
-               
+
             }
-            
+
          }
-         
+
       }
-      
+
       if(!bCheckOk)
       {
-       
+
          message_box("simple_check_box is not ok");
-         
+
       }
-      
+
       m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabview = nullptr;
@@ -106,7 +106,7 @@ namespace simple_drawing
 
       default_toggle_check_handling(id_no_client_frame);
 
-      if (!::aura::application::init_instance())
+      if (!::base::application::init_instance())
       {
 
          return false;
