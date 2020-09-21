@@ -1,5 +1,5 @@
 #include "framework.h"
-#include "aura/callback.h"
+#include "apex/future.h"
 #include "aura/application.h"
 
 
@@ -31,10 +31,10 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add(e_callback_finish, [=](const var& var)
+      add(e_future_finish, [=](const var& var)
          {
 
-            auto pcallbacks = callbacks(e_callback_finish);
+            auto pcallbacks = futures(e_future_finish);
 
             if (var == "no")
             {
@@ -55,7 +55,7 @@ namespace simple_message_box
 
          });
 
-      receive(e_callback_finish, "no");
+      send(e_future_finish, "no");
 
    }
 
