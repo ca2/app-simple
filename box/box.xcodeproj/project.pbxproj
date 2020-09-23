@@ -10,6 +10,8 @@
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
+		9A18FD47251B0EFA0064BCDE /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD46251B0EFA0064BCDE /* libacme.dylib */; };
+		9A18FD49251B0EFA0064BCDE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD48251B0EFA0064BCDE /* libapex.dylib */; };
 		9A8D7FDB24DE35AE0029004E /* libcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D7FD224DE35AE0029004E /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D7FDC24DE35AE0029004E /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D7FD324DE35AE0029004E /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D7FDD24DE35AE0029004E /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D7FD424DE35AE0029004E /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -60,6 +62,8 @@
 		07C6AA191CA4F16B00B4E555 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = macos/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		07C6AA1A1CA4F16B00B4E555 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macos/Info.plist; sourceTree = SOURCE_ROOT; };
 		07C6AA261CA4F3A700B4E555 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = macos/main.cpp; sourceTree = SOURCE_ROOT; };
+		9A18FD46251B0EFA0064BCDE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A18FD48251B0EFA0064BCDE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8D7FD224DE35AE0029004E /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = ../../time/macos/libcore.dylib; sourceTree = "<group>"; };
 		9A8D7FD324DE35AE0029004E /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = ../../time/macos/libaura.dylib; sourceTree = "<group>"; };
 		9A8D7FD424DE35AE0029004E /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = ../../time/macos/libexperience_core.dylib; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A18FD47251B0EFA0064BCDE /* libacme.dylib in Frameworks */,
+				9A18FD49251B0EFA0064BCDE /* libapex.dylib in Frameworks */,
 				9A8D7FE324DE35CC0029004E /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +155,8 @@
 		9ADF1D4522C16E1600456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A18FD46251B0EFA0064BCDE /* libacme.dylib */,
+				9A18FD48251B0EFA0064BCDE /* libapex.dylib */,
 				9A8D801B24DE37120029004E /* libapp_simple_box.dylib */,
 				9A8D7FD324DE35AE0029004E /* libaura.dylib */,
 				9A8D7FD224DE35AE0029004E /* libcore.dylib */,
@@ -452,7 +460,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.box";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.box";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -470,7 +478,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.box";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.box";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;

@@ -10,6 +10,8 @@
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
+		9A18FD53251B0F220064BCDE /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD52251B0F220064BCDE /* libacme.dylib */; };
+		9A18FD55251B0F220064BCDE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD54251B0F220064BCDE /* libapex.dylib */; };
 		9A8D802B24DE37DE0029004E /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802224DE37DE0029004E /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D802D24DE37DF0029004E /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802424DE37DE0029004E /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D802F24DE37DF0029004E /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802624DE37DE0029004E /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -58,6 +60,8 @@
 		07C6AA191CA4F16B00B4E555 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = macos/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		07C6AA1A1CA4F16B00B4E555 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macos/Info.plist; sourceTree = SOURCE_ROOT; };
 		07C6AA261CA4F3A700B4E555 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = macos/main.cpp; sourceTree = SOURCE_ROOT; };
+		9A18FD52251B0F220064BCDE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A18FD54251B0F220064BCDE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8D802224DE37DE0029004E /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = ../../time/macos/libaura.dylib; sourceTree = "<group>"; };
 		9A8D802424DE37DE0029004E /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../time/macos/libcrypto.dylib; sourceTree = "<group>"; };
 		9A8D802624DE37DE0029004E /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = ../../time/macos/libexperience_core.dylib; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A18FD53251B0F220064BCDE /* libacme.dylib in Frameworks */,
+				9A18FD55251B0F220064BCDE /* libapex.dylib in Frameworks */,
 				9A8D803424DE37E80029004E /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +152,8 @@
 		9ADF1D6122C16E7F00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A18FD52251B0F220064BCDE /* libacme.dylib */,
+				9A18FD54251B0F220064BCDE /* libapex.dylib */,
 				9A8D802A24DE37DE0029004E /* libapp_simple_notify_drawing.dylib */,
 				9A8D802224DE37DE0029004E /* libaura.dylib */,
 				9A8D802924DE37DE0029004E /* libcore.dylib */,
@@ -448,7 +456,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.notify-drawing";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.notify-drawing";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -466,7 +474,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "cc.ca2.app-simple.notify-drawing";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.notify-drawing";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
