@@ -42,6 +42,9 @@
     <ClInclude Include="render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tab_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -59,9 +62,6 @@
     <ClCompile Include="main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pane_view.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -74,5 +74,13 @@
     <ClCompile Include="render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tab_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="u_app_simple_drawing.def">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
