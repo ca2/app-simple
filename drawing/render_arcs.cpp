@@ -9,7 +9,7 @@ namespace simple_drawing
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rect& r, double dStart, double dAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rect& r, angle angleStart, angle angleAngle, bool bPath)
    {
 
       ::draw2d::font_pointer font(e_create);
@@ -26,11 +26,11 @@ namespace simple_drawing
 
       string str1;
 
-      str1.Format("Start: %0.0f", dStart);
+      str1.Format("Start: %0.0f", angleStart.degree());
 
       string str2;
 
-      str2.Format("Angle: %0.0f", dAngle);
+      str2.Format("Angle: %0.0f", angleAngle.degree());
 
       auto size1 = pgraphics->GetTextExtent(str1);
 
@@ -73,7 +73,7 @@ namespace simple_drawing
       if (__bool(ThisApp.m_echeckSimple))
       {
 
-         if (dAngle < 0.0)
+         if (angleAngle < 0.0)
          {
 
             pen->create_solid(4.0, ARGB(255, 120, 120, 120));
@@ -90,7 +90,7 @@ namespace simple_drawing
       else
       {
 
-         if (dAngle < 0.0)
+         if (angleAngle < 0.0)
          {
 
             if (bPath)
@@ -131,7 +131,7 @@ namespace simple_drawing
 
       pgraphics->clear_current_point();
 
-      pgraphics->Arc(r, dStart, dAngle);
+      pgraphics->Arc(r, angleStart, angleAngle);
 
    }
 
@@ -141,58 +141,57 @@ namespace simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      double_array daStart;
+      ::array < angle > angleaStart;
 
-      double_array daAngle;
+      ::array < angle > angleaAngle;
 
-      daStart.add(0.0);
-      daAngle.add(100.0);
+      angleaStart.add(0.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(90.0);
-      daAngle.add(100.0);
+      angleaStart.add(90.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(180.0);
-      daAngle.add(100.0);
+      angleaStart.add(180.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(270.0);
-      daAngle.add(100.0);
+      angleaStart.add(270.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-90.0);
-      daAngle.add(100.0);
+      angleaStart.add(-90.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-180.0);
-      daAngle.add(100.0);
+      angleaStart.add(-180.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-270.0);
-      daAngle.add(100.0);
+      angleaStart.add(-270.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(45.0);
-      daAngle.add(100.0);
+      angleaStart.add(45.0_degree);
+      angleaAngle.add(100.0_degree);
 
+      angleaStart.add(0.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(0.0);
-      daAngle.add(-100.0);
+      angleaStart.add(90.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(90.0);
-      daAngle.add(-100.0);
+      angleaStart.add(180.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(180.0);
-      daAngle.add(-100.0);
+      angleaStart.add(270.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(270.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-90.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-90.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-180.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-180.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-270.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-270.0);
-      daAngle.add(-100.0);
-
-      daStart.add(45.0);
-      daAngle.add(-100.0);
+      angleaStart.add(45.0_degree);
+      angleaAngle.add(-100.0_degree);
 
       ::rect rClient(m_rect);
 
@@ -223,12 +222,12 @@ namespace simple_drawing
 
       int iColumnWidth = rClient.width() / iColumnCount;
 
-      for (i = 0; i < iColumnCount && i < daStart.get_size(); i++)
+      for (i = 0; i < iColumnCount && i < angleaStart.get_size(); i++)
       {
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 
@@ -240,12 +239,12 @@ namespace simple_drawing
 
       r.bottom = rClient.bottom;
 
-      for (; i < iColumnCount * 2 && i < daStart.get_size(); i++)
+      for (; i < iColumnCount * 2 && i < angleaStart.get_size(); i++)
       {
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 
