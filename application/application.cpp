@@ -1,4 +1,5 @@
 #include "framework.h"
+#define NO_IMAGING
 #include "aura/application.h"
 #include "aura/update.h"
 
@@ -9,6 +10,8 @@ namespace simple_application
 
    application::application()
    {
+
+      //m_bLocalization = true;
 
       m_ppaneview = nullptr;
 

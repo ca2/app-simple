@@ -8,6 +8,8 @@ namespace simple_application
    main_frame::main_frame()
    {
 
+      //m_bFramePayloadFlags = true;
+
       set_bitmap_source("Simple Application!!");
 
       m_bDefaultCreateToolbar = false;

@@ -6,6 +6,9 @@
 CLASS_DECL_AURA COLORREF dk_red(); // <3 tbs
 
 
+//#define DEBUG_WORK
+
+
 namespace simple_application
 {
 
@@ -113,15 +116,33 @@ namespace simple_application
 
    }
 
-
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
+
+      ::rect rectClient;
+
+      get_client_rect(rectClient);
+
+      if (rectClient.is_empty())
+      {
+
+         return;
+
+      }
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
       ::color color_dk(dk_red());
 
       color_dk.m_iA = 127;
+
+#ifdef DEBUG_WORK
+
+      ::rect rectDryProWithLove_Work(100, 100, 200, 200);
+
+      pgraphics->fill_rect(rectDryProWithLove_Work, ARGB(255, 150, 200, 255));
+
+#endif
 
       pgraphics->set_text_color(color_dk);
 
