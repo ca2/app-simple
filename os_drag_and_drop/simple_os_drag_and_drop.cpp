@@ -199,58 +199,58 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
-      double_array daStart;
+      ::array < angle > angleaStart;
 
-      double_array daAngle;
+      ::array < angle > angleaAngle;
 
-      daStart.add(0.0);
-      daAngle.add(100.0);
+      angleaStart.add(0.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(90.0);
-      daAngle.add(100.0);
+      angleaStart.add(90.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(180.0);
-      daAngle.add(100.0);
+      angleaStart.add(180.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(270.0);
-      daAngle.add(100.0);
+      angleaStart.add(270.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-90.0);
-      daAngle.add(100.0);
+      angleaStart.add(-90.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-180.0);
-      daAngle.add(100.0);
+      angleaStart.add(-180.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(-270.0);
-      daAngle.add(100.0);
+      angleaStart.add(-270.0_degree);
+      angleaAngle.add(100.0_degree);
 
-      daStart.add(45.0);
-      daAngle.add(100.0);
+      angleaStart.add(45.0_degree);
+      angleaAngle.add(100.0_degree);
 
 
-      daStart.add(0.0);
-      daAngle.add(-100.0);
+      angleaStart.add(0.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(90.0);
-      daAngle.add(-100.0);
+      angleaStart.add(90.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(180.0);
-      daAngle.add(-100.0);
+      angleaStart.add(180.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(270.0);
-      daAngle.add(-100.0);
+      angleaStart.add(270.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-90.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-90.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-180.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-180.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(-270.0);
-      daAngle.add(-100.0);
+      angleaStart.add(-270.0_degree);
+      angleaAngle.add(-100.0_degree);
 
-      daStart.add(45.0);
-      daAngle.add(-100.0);
+      angleaStart.add(45.0_degree);
+      angleaAngle.add(-100.0_degree);
 
       ::rect rClient(m_rect);
 
@@ -270,12 +270,12 @@ namespace simple_os_drag_and_drop
 
       int iColumnWidth = rClient.width() / iColumnCount;
 
-      for (i = 0; i < iColumnCount && i < daStart.get_size(); i++)
+      for (i = 0; i < iColumnCount && i < angleaStart.get_size(); i++)
       {
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 
@@ -287,12 +287,12 @@ namespace simple_os_drag_and_drop
 
       r.bottom = rClient.bottom;
 
-      for (; i < iColumnCount * 2 && i < daStart.get_size(); i++)
+      for (; i < iColumnCount * 2 && i < angleaStart.get_size(); i++)
       {
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, daStart[i], daAngle[i], bPath);
+         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 
@@ -301,7 +301,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, double dStart, double dAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, angle angleStart, angle angleAngle, bool bPath)
    {
 
 
@@ -315,17 +315,17 @@ namespace simple_os_drag_and_drop
 
       string str;
 
-      str.Format("Start: %d", dStart);
+      str.Format("Start: %0.0f", angleStart.degree());
 
       pgraphics->text_out(r.left, r.top, str);
 
-      str.Format("Angle: %d", dAngle);
+      str.Format("Angle: %0.0f", angleAngle.degree());
 
       pgraphics->text_out(r.left, r.top + 20, str);
 
       ::draw2d::pen_pointer pen(e_create);
 
-      if (dAngle < 0.0)
+      if (angleAngle < 0.0)
       {
 
          if (bPath)
@@ -363,7 +363,7 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set(pen);
 
-      pgraphics->Arc(r, dStart, dAngle);
+      pgraphics->Arc(r, angleStart, angleAngle);
 
 
    }

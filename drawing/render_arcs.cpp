@@ -145,7 +145,8 @@ namespace simple_drawing
 
       ::array < angle > angleaAngle;
 
-      angleaStart.add(0.0_degree);
+      auto a = 0.0_degree;
+      angleaStart.add(a);
       angleaAngle.add(100.0_degree);
 
       angleaStart.add(90.0_degree);
