@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A258B7C24DA55F40013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B7A24DA55F40013F50E /* tab_view.h */; };
 		9A258B7D24DA55F40013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B7B24DA55F40013F50E /* tab_view.cpp */; };
+		9A2E62BA25258F9E0001CC7E /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2E62B925258F9E0001CC7E /* libaqua.dylib */; };
+		9A2E62BE25258FF30001CC7E /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2E62BD25258FF30001CC7E /* libbred.dylib */; };
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
@@ -107,6 +109,8 @@
 		9A258B7B24DA55F40013F50E /* tab_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_view.cpp; sourceTree = "<group>"; };
 		9A258B8D24DA574D0013F50E /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
 		9A258B9A24DA57600013F50E /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2E62B925258F9E0001CC7E /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2E62BD25258FF30001CC7E /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A449BB024775E110002A827 /* _shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _shader.h; sourceTree = "<group>"; };
 		9A449BB524775E110002A827 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		9A449BB624775E110002A827 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2E62BE25258FF30001CC7E /* libbred.dylib in Frameworks */,
+				9A2E62BA25258F9E0001CC7E /* libaqua.dylib in Frameworks */,
 				9A7D922E251AF36400DE81AE /* libacme.dylib in Frameworks */,
 				9A7D9230251AF36400DE81AE /* libapex.dylib in Frameworks */,
 				9A833C1124F5465500C079FB /* libapp_shader.dylib in Frameworks */,
@@ -183,6 +189,8 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A2E62BD25258FF30001CC7E /* libbred.dylib */,
+				9A2E62B925258F9E0001CC7E /* libaqua.dylib */,
 				9A7D922D251AF36400DE81AE /* libacme.dylib */,
 				9A7D922F251AF36400DE81AE /* libapex.dylib */,
 				9A833C0E24F5464000C079FB /* libbase.dylib */,

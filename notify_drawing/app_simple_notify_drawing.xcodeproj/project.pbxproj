@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
+		9A2E62B425258F910001CC7E /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2E62B325258F910001CC7E /* libaqua.dylib */; };
 		9A415C0B2473938E00EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EB4B424498F1A0056E362 /* application.cpp */; };
 		9A415C0C2473938E00EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EB4B924498F1A0056E362 /* main_frame.cpp */; };
 		9A415C0D2473938E00EF2BCD /* view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EB4B624498F1A0056E362 /* view.cpp */; };
@@ -16,7 +17,6 @@
 		9A833C0424F545EF00C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BEF24DA5F570013F50E /* libaura.dylib */; };
 		9A833C0624F545F600C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C0524F545F600C079FB /* libaxis.dylib */; };
 		9A833C0824F545FA00C079FB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833C0724F545FA00C079FB /* libbase.dylib */; };
-		9A833C0924F5460700C079FB /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BF124DA5F5C0013F50E /* libcore.dylib */; };
 		9A833C0A24F5460E00C079FB /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA6234422BA3B890090BD40 /* libapp_simple_drawing.dylib */; };
 		9A8EB4C024498F1B0056E362 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8EB4B324498F1A0056E362 /* application.h */; };
 		9A8EB4C124498F1B0056E362 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EB4B424498F1A0056E362 /* application.cpp */; };
@@ -86,6 +86,7 @@
 /* Begin PBXFileReference section */
 		9A258BEF24DA5F570013F50E /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A258BF124DA5F5C0013F50E /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2E62B325258F910001CC7E /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D9223251AF35500DE81AE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D9225251AF35500DE81AE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A833C0524F545F600C079FB /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,10 +130,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2E62B425258F910001CC7E /* libaqua.dylib in Frameworks */,
 				9A7D9224251AF35500DE81AE /* libacme.dylib in Frameworks */,
 				9A7D9226251AF35500DE81AE /* libapex.dylib in Frameworks */,
 				9A833C0A24F5460E00C079FB /* libapp_simple_drawing.dylib in Frameworks */,
-				9A833C0924F5460700C079FB /* libcore.dylib in Frameworks */,
 				9A833C0424F545EF00C079FB /* libaura.dylib in Frameworks */,
 				9A833C0824F545FA00C079FB /* libbase.dylib in Frameworks */,
 				9A833C0624F545F600C079FB /* libaxis.dylib in Frameworks */,
@@ -145,6 +146,7 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A2E62B325258F910001CC7E /* libaqua.dylib */,
 				9A7D9223251AF35500DE81AE /* libacme.dylib */,
 				9A7D9225251AF35500DE81AE /* libapex.dylib */,
 				9A833C0724F545FA00C079FB /* libbase.dylib */,

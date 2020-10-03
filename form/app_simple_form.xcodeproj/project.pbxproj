@@ -10,6 +10,7 @@
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9A258BDA24DA5E460013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258BD824DA5E460013F50E /* tab_view.h */; };
 		9A258BDB24DA5E460013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258BD924DA5E460013F50E /* tab_view.cpp */; };
+		9A2E62B225258F890001CC7E /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2E62B125258F890001CC7E /* libaqua.dylib */; };
 		9A39EA60243364EB000FECDA /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA47243364EA000FECDA /* application.cpp */; };
 		9A39EA62243364EC000FECDA /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A39EA49243364EA000FECDA /* document.cpp */; };
 		9A39EA63243364EC000FECDA /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A39EA4A243364EA000FECDA /* document.h */; };
@@ -91,6 +92,7 @@
 		9A258BD924DA5E460013F50E /* tab_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_view.cpp; sourceTree = "<group>"; };
 		9A25901824DAA22A0013F50E /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A25901A24DAA2330013F50E /* libcore.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcore.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2E62B125258F890001CC7E /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A39EA47243364EA000FECDA /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A39EA49243364EA000FECDA /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A39EA4A243364EA000FECDA /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2E62B225258F890001CC7E /* libaqua.dylib in Frameworks */,
 				9A7D9220251AF34C00DE81AE /* libacme.dylib in Frameworks */,
 				9A7D9222251AF34C00DE81AE /* libapex.dylib in Frameworks */,
 				9A833C2024F5741800C079FB /* libbase.dylib in Frameworks */,
@@ -166,6 +169,7 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A2E62B125258F890001CC7E /* libaqua.dylib */,
 				9A7D921F251AF34C00DE81AE /* libacme.dylib */,
 				9A7D9221251AF34C00DE81AE /* libapex.dylib */,
 				9A833C1E24F5740F00C079FB /* libaxis.dylib */,
