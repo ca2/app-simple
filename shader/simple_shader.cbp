@@ -92,9 +92,13 @@
 		</Compiler>
 		<Linker>
 			<Add option="-Wl,-rpath=\\$$$ORIGIN" />
+			<Add option="-lacme" />
+			<Add option="-lapex" />
+			<Add option="-laqua" />
 			<Add option="-laura" />
 			<Add option="-laxis" />
 			<Add option="-lbase" />
+			<Add option="-lbred" />
 			<Add option="-lcore" />
 			<Add option="-lapp_shader" />
 			<Add option="-Wl,-z,defs" />
