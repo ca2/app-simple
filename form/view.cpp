@@ -80,8 +80,12 @@ namespace simple_form
 
       pcreate->previous();
 
-      if(pcreate->m_bRet)
+      if (pcreate->m_bRet)
+      {
+
          return;
+
+      }
 
       string strId = get_document()->m_pimpactsystem->m_strMatter;
 
@@ -143,7 +147,6 @@ namespace simple_form
       }
 
    }
-
 
 
 } // namespace simple_form

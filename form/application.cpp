@@ -70,7 +70,7 @@ namespace simple_form
       create_factory <::simple_form::simple_form_001 >();
       create_factory <::simple_form::simple_form_002 >();
 
-      if (!::aura::application::init_instance())
+      if (!::base::application::init_instance())
       {
 
          return false;
