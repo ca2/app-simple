@@ -108,7 +108,7 @@ namespace simple_os_drag_and_drop
 
       rect.set_size(iSize, iSize);
 
-      rect.Align(align_center, m_rect);
+      rect.Align(e_align_center, m_rect);
 
       rect.offset_x(-iSize/5 * 3);
 
@@ -187,7 +187,7 @@ namespace simple_os_drag_and_drop
 
          pgraphics->set(brush);
 
-         //pgraphics->draw_text("Simple Drawing", rectText, DT_CENTER | DT_VCENTER);
+         //pgraphics->draw_text("Simple Drawing", rectText, e_align_horizontal_center | e_align_vertical_center);
 
       }
 

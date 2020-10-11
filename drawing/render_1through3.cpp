@@ -68,7 +68,7 @@ namespace simple_drawing
 
       rect.set_size(iSize, iSize);
 
-      rect.Align(align_center, m_rect);
+      rect.Align(e_align_center, m_rect);
 
       rect.offset_x(-iSize / 5 * 3);
 
@@ -174,7 +174,7 @@ namespace simple_drawing
 
       rectText.inflate(10, 10);
 
-      rectText.Align(align_center, rect);
+      rectText.Align(e_align_center, rect);
 
       pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
@@ -235,7 +235,7 @@ namespace simple_drawing
       if(bDrawText)
       {
       
-         pgraphics->draw_text(strTitle, rectText, DT_CENTER | DT_VCENTER);
+         pgraphics->draw_text(strTitle, rectText, e_align_horizontal_center | e_align_vertical_center);
          
       }
 
