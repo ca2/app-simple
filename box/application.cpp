@@ -36,7 +36,7 @@ namespace simple_message_box
 
             auto pcallbacks = futures(e_future_finish);
 
-            if (var == "no")
+            if (var == IDNO)
             {
 
                message_box(
@@ -55,7 +55,7 @@ namespace simple_message_box
 
          });
 
-      send(e_future_finish, "no");
+      send(e_future_finish, IDNO);
 
    }
 
