@@ -130,10 +130,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void view::update(::update * pupdate)
+   void view::on_apply(::action * paction)
    {
 
-      ::user::impact::update(pupdate);
+      ::user::impact::on_apply(paction);
    }
 
 
