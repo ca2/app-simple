@@ -29,8 +29,8 @@ namespace simple_form
          //}
          //else
          {
-            //            bool bTemporary =get_thread()->m_bTemporary;
-            //            get_thread()->m_bTemporary = true;
+            //            bool bTemporary =get_task()->m_bTemporary;
+            //            get_task()->m_bTemporary = true;
             string strMatter = Context.dir().matter("popup_lyricview.xml");
             ::file::path path = Context.defer_process_path(strMatter);
             //__pointer(::message::mouse) p=pmouse->
@@ -40,7 +40,7 @@ namespace simple_form
             // g_track_popup_lyricview(this, pmouse);
 
             // });
-//               get_thread()->m_bTemporary = bTemporary;
+//               get_task()->m_bTemporary = bTemporary;
          }
 
          pmouse->m_bRet = true;
