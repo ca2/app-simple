@@ -6,7 +6,7 @@ namespace simple_application
 
 
    class CLASS_DECL_APP_SIMPLE_APPLICATION main_frame :
-      virtual public simple_frame_window
+      virtual public simple_main_frame
    {
    public:
 
