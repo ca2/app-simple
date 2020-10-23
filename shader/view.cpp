@@ -93,18 +93,18 @@ namespace simple_shader
 
       GetTopLevelFrame()->set_prodevian();
 
-      auto predraw = [this]()
+      auto methodRedraw = __method([this]()
          {
 
             set_need_redraw();
 
             post_redraw();
 
-         };
+         });
 
-      Application.m_mapRunnable[id_simple_checkbox] += predraw;
+      Application.add_method(id_simple_checkbox, methodRedraw);
 
-      Application.m_mapRunnable[id_no_client_frame] += predraw;
+      Application.add_method(id_no_client_frame, methodRedraw);
 
       auto estatus = __construct_new(m_prender);
 
@@ -159,14 +159,14 @@ namespace simple_shader
 
          auto idRunnable = Application.translate_property_id(id);
 
-         Application.m_mapRunnable[idRunnable] += [this, id]()
+         Application.add_method(idRunnable, __method([this, id]()
          {
 
             auto pproperty = fetch_property(id);
 
             m_prender->defer_load_fragment(pproperty->get_string());
 
-         };
+         }));
 
       }
 

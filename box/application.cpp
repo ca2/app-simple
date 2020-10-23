@@ -31,7 +31,7 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add(e_future_finish, [=](const var& var)
+      add_future(e_future_finish, __future([=](const var& var)
          {
 
             auto pcallbacks = futures(e_future_finish);
@@ -53,9 +53,9 @@ namespace simple_message_box
 
             }
 
-         });
+         }));
 
-      send(e_future_finish, IDNO);
+      send_future(e_future_finish, IDNO);
 
    }
 

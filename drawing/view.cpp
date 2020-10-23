@@ -88,18 +88,18 @@ namespace simple_drawing
 
       }
 
-      auto predraw = [this]()
+      auto methodRedraw = __method([this]()
       {
 
          set_need_redraw();
 
          post_redraw();
 
-      };
+      });
 
-      Application.m_mapRunnable[id_simple_checkbox] += predraw;
+      Application.m_mapMethod[id_simple_checkbox].add_item(methodRedraw);
 
-      Application.m_mapRunnable[id_no_client_frame] += predraw;
+      Application.m_mapMethod[id_no_client_frame].add_item(methodRedraw);
 
       auto estatus = __construct_new(m_prender);
 
