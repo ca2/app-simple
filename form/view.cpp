@@ -68,7 +68,7 @@ namespace simple_form
 
       ::user::impact::install_message_routing(psender);
 
-      IGUI_MSG_LINK(WM_CREATE,psender,this,&view::_001OnCreate);
+      MESSAGE_LINK(e_message_create,psender,this,&view::_001OnCreate);
 
    }
 
