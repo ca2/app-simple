@@ -30,7 +30,7 @@ namespace simple_os_drag_and_drop
 
       set_local_data();
 
-      //User.will_use_view_hint(FONTSEL_IMPACT);
+      //puser->will_use_view_hint(FONTSEL_IMPACT);
 
       create_factory <::simple_os_drag_and_drop::document >();
       create_factory <::simple_os_drag_and_drop::frame >();

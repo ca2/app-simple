@@ -56,7 +56,9 @@ namespace simple_application
 
       __compose(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
-      User.document_manager()->add_document_template(pdoctemplate);
+      auto puser = User;
+
+      puser->document_manager()->add_document_template(pdoctemplate);
 
       return true;
 
