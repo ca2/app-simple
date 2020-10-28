@@ -119,7 +119,7 @@ namespace simple_form
 
          message_box("m=1");
 
-         set_finish();
+         finish();
 
          return;
 

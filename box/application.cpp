@@ -49,7 +49,7 @@ namespace simple_message_box
             else
             {
 
-               finish();
+               finish(get_context());
 
             }
 
