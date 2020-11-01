@@ -101,6 +101,7 @@
 			<Add option="-lbase" />
 			<Add option="-Wl,-z,defs" />
 			<Add directory="$(WORKSPACEDIR)/../../time-$(#platform_modifier)/x64/$(TARGET_NAME)" />
+			<Add directory="$(#archive)/storage-$(#platform_modifier)/third/library/x64/" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="$(#archive)/tool-linux/bin/app._.sh $(WORKSPACE_DIR) $(PROJECT_DIR) $(TARGET_NAME) $(PROJECT_NAME) $(#platform_modifier) $(#archive) $(#config)  app-simple/drawing" />
