@@ -31,10 +31,10 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add_future(e_future_finish, __future([=](const var& var)
+      add_futurevar(e_future_finish, __futurevar([=](const var& var)
          {
 
-            auto pcallbacks = futures(e_future_finish);
+            auto pfuturevars = futurevars(e_future_finish);
 
             if (var == IDNO)
             {
@@ -43,7 +43,7 @@ namespace simple_message_box
                   "Simple Message Box!! (message_box).<br><br>Finish?",
                   nullptr,
                   message_box_yes_no | message_box_icon_information,
-                  pcallbacks->first());
+                  pfuturevars->first());
 
             }
             else
@@ -55,7 +55,7 @@ namespace simple_message_box
 
          }));
 
-      send_future(e_future_finish, IDNO);
+      send_futurevar(e_future_finish, IDNO);
 
    }
 

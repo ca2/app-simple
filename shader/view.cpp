@@ -93,7 +93,7 @@ namespace simple_shader
 
       GetTopLevelFrame()->set_prodevian();
 
-      auto methodRedraw = __method([this]()
+      auto pprocedureRedraw = __procedure([this]()
          {
 
             set_need_redraw();
@@ -102,9 +102,9 @@ namespace simple_shader
 
          });
 
-      Application.add_method(id_simple_checkbox, methodRedraw);
+      Application.add_procedure(id_simple_checkbox, pprocedureRedraw);
 
-      Application.add_method(id_no_client_frame, methodRedraw);
+      Application.add_procedure(id_no_client_frame, pprocedureRedraw);
 
       auto estatus = __construct_new(m_prender);
 
@@ -159,7 +159,7 @@ namespace simple_shader
 
          auto idRunnable = Application.translate_property_id(id);
 
-         Application.add_method(idRunnable, __method([this, id]()
+         Application.add_procedure(idRunnable, __procedure([this, id]()
          {
 
             auto pproperty = fetch_property(id);
