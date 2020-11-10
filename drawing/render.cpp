@@ -3,7 +3,7 @@
 #include <math.h>
 
 
-CLASS_DECL_AURA COLORREF dk_red(); // <3 tbs
+CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
 
 
 namespace simple_drawing
@@ -62,7 +62,7 @@ namespace simple_drawing
 
       m_iDrawing = iDrawing;
 
-      COLORREF crText = ARGB(255, 55, 210, 120);
+      color32_t crText = ARGB(255, 55, 210, 120);
 
       if (m_iDrawing == 1)
       {
