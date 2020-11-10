@@ -48,7 +48,7 @@ target_precompile_headers(app_simple_application PRIVATE framework.h)
 set_target_properties(app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
 
 if (MSVC)
-    target_compile_options(app_simple_applicationv PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_compile_options(app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
