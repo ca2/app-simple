@@ -86,7 +86,7 @@ target_compile_definitions(app_simple_application PRIVATE UNICODE)
 target_compile_definitions(app_simple_application PRIVATE _UNICODE)
 
 
-add_dependencies(app_simple_application draw2d_gdiplu experience_core)
+add_dependencies(app_simple_application draw2d_gdiplus experience_core)
 
 
 
