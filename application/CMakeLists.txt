@@ -53,7 +53,7 @@ if (MSVC)
     target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
 elseif(LINUX)
-    target_compile_options(acme PRIVATE -fpermissive)
+    target_compile_options(app_simple_application PRIVATE -fpermissive)
     target_link_options(app_simple_application PRIVATE -Wl,-rpath=\$ORIGIN)
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
     target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
@@ -81,10 +81,12 @@ target_include_directories(app_simple_application PRIVATE ${CMAKE_CURRENT_SOURCE
 target_include_directories(app_simple_application PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
-
 target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
 target_compile_definitions(app_simple_application PRIVATE UNICODE)
 target_compile_definitions(app_simple_application PRIVATE _UNICODE)
+
+
+add_dependencies(app_simple_application draw2d_gdiplu experience_core)
 
 
 
