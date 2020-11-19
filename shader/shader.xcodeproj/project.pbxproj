@@ -18,7 +18,7 @@
 		9A8D805724DE38A00029004E /* libssl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D804C24DE38A00029004E /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D805924DE38A00029004E /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D804E24DE38A00029004E /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D805A24DE38A00029004E /* libimaging_coreimage.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D804F24DE38A00029004E /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D805B24DE38A00029004E /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D805024DE38A00029004E /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D805B24DE38A00029004E /* libexperience_lite.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D805024DE38A00029004E /* libexperience_lite.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D805C24DE38A00029004E /* libgpu_opengl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D805124DE38A00029004E /* libgpu_opengl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D805D24DE38A00029004E /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D805224DE38A00029004E /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D805E24DE38AE0029004E /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D805224DE38A00029004E /* libaura.dylib */; };
@@ -46,7 +46,7 @@
 				9A8D805324DE38A00029004E /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9A8D805A24DE38A00029004E /* libimaging_coreimage.dylib in CopyFiles */,
 				9A8D805C24DE38A00029004E /* libgpu_opengl.dylib in CopyFiles */,
-				9A8D805B24DE38A00029004E /* libexperience_core.dylib in CopyFiles */,
+				9A8D805B24DE38A00029004E /* libexperience_lite.dylib in CopyFiles */,
 				9A8D805424DE38A00029004E /* libapp_simple_shader.dylib in CopyFiles */,
 				9A8D805D24DE38A00029004E /* libaura.dylib in CopyFiles */,
 				9A8D805624DE38A00029004E /* libcore.dylib in CopyFiles */,
@@ -72,7 +72,7 @@
 		9A8D804C24DE38A00029004E /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = ../../time/macos/libssl.dylib; sourceTree = "<group>"; };
 		9A8D804E24DE38A00029004E /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../time/macos/libcrypto.dylib; sourceTree = "<group>"; };
 		9A8D804F24DE38A00029004E /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimaging_coreimage.dylib; path = ../../time/macos/libimaging_coreimage.dylib; sourceTree = "<group>"; };
-		9A8D805024DE38A00029004E /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = ../../time/macos/libexperience_core.dylib; sourceTree = "<group>"; };
+		9A8D805024DE38A00029004E /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = ../../time/macos/libexperience_lite.dylib; sourceTree = "<group>"; };
 		9A8D805124DE38A00029004E /* libgpu_opengl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgpu_opengl.dylib; path = ../../time/macos/libgpu_opengl.dylib; sourceTree = "<group>"; };
 		9A8D805224DE38A00029004E /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = ../../time/macos/libaura.dylib; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 				9A8D804B24DE38A00029004E /* libcore.dylib */,
 				9A8D804E24DE38A00029004E /* libcrypto.dylib */,
 				9A8D804824DE38A00029004E /* libdraw2d_quartz2d.dylib */,
-				9A8D805024DE38A00029004E /* libexperience_core.dylib */,
+				9A8D805024DE38A00029004E /* libexperience_lite.dylib */,
 				9A8D805124DE38A00029004E /* libgpu_opengl.dylib */,
 				9A8D804F24DE38A00029004E /* libimaging_coreimage.dylib */,
 				9A8D804C24DE38A00029004E /* libssl.dylib */,

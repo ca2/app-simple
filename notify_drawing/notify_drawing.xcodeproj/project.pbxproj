@@ -14,7 +14,7 @@
 		9A18FD55251B0F220064BCDE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD54251B0F220064BCDE /* libapex.dylib */; };
 		9A8D802B24DE37DE0029004E /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802224DE37DE0029004E /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D802D24DE37DF0029004E /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802424DE37DE0029004E /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D802F24DE37DF0029004E /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802624DE37DE0029004E /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D802F24DE37DF0029004E /* libexperience_lite.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802624DE37DE0029004E /* libexperience_lite.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D803024DE37DF0029004E /* libssl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802724DE37DE0029004E /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D803124DE37DF0029004E /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802824DE37DE0029004E /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D803224DE37DF0029004E /* libcore.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A8D802924DE37DE0029004E /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -40,7 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				9A8D802F24DE37DF0029004E /* libexperience_core.dylib in CopyFiles */,
+				9A8D802F24DE37DF0029004E /* libexperience_lite.dylib in CopyFiles */,
 				9A8D803124DE37DF0029004E /* libdraw2d_quartz2d.dylib in CopyFiles */,
 				9A8D802B24DE37DE0029004E /* libaura.dylib in CopyFiles */,
 				9A8D802D24DE37DF0029004E /* libcrypto.dylib in CopyFiles */,
@@ -64,7 +64,7 @@
 		9A18FD54251B0F220064BCDE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8D802224DE37DE0029004E /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libaura.dylib; path = ../../time/macos/libaura.dylib; sourceTree = "<group>"; };
 		9A8D802424DE37DE0029004E /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../time/macos/libcrypto.dylib; sourceTree = "<group>"; };
-		9A8D802624DE37DE0029004E /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_core.dylib; path = ../../time/macos/libexperience_core.dylib; sourceTree = "<group>"; };
+		9A8D802624DE37DE0029004E /* libexperience_lite.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexperience_lite.dylib; path = ../../time/macos/libexperience_lite.dylib; sourceTree = "<group>"; };
 		9A8D802724DE37DE0029004E /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = ../../time/macos/libssl.dylib; sourceTree = "<group>"; };
 		9A8D802824DE37DE0029004E /* libdraw2d_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdraw2d_quartz2d.dylib; path = ../../time/macos/libdraw2d_quartz2d.dylib; sourceTree = "<group>"; };
 		9A8D802924DE37DE0029004E /* libcore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcore.dylib; path = ../../time/macos/libcore.dylib; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				9A8D802924DE37DE0029004E /* libcore.dylib */,
 				9A8D802424DE37DE0029004E /* libcrypto.dylib */,
 				9A8D802824DE37DE0029004E /* libdraw2d_quartz2d.dylib */,
-				9A8D802624DE37DE0029004E /* libexperience_core.dylib */,
+				9A8D802624DE37DE0029004E /* libexperience_lite.dylib */,
 				9A8D802724DE37DE0029004E /* libssl.dylib */,
 			);
 			name = Frameworks;
