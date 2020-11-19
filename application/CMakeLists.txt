@@ -82,7 +82,7 @@ target_include_directories(app_simple_application PRIVATE ${CMAKE_CURRENT_SOURCE
 
 
 
-target_compile_definitions(app_simple_application PRIVATE _APP_SHADER_LIBRARY)
+target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
 target_compile_definitions(app_simple_application PRIVATE UNICODE)
 target_compile_definitions(app_simple_application PRIVATE _UNICODE)
 
