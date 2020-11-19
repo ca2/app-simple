@@ -52,12 +52,16 @@ if (MSVC)
     target_link_options(app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
+    add_dependencies(app_simple_application draw2d_gdiplus)
 elseif(LINUX)
     target_compile_options(app_simple_application PRIVATE -fpermissive)
     target_link_options(app_simple_application PRIVATE -Wl,-rpath=\$ORIGIN)
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
     target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
+    add_dependencies(app_simple_application draw2d_cairo)
 endif()
+
+add_dependencies(app_simple_application experience_core)
 
 
 target_link_directories(app_simple_application PRIVATE ${LIBRARY_OUTPUT_PATH})
@@ -86,7 +90,7 @@ target_compile_definitions(app_simple_application PRIVATE UNICODE)
 target_compile_definitions(app_simple_application PRIVATE _UNICODE)
 
 
-add_dependencies(app_simple_application draw2d_gdiplus experience_core)
+
 
 
 
