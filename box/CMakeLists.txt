@@ -21,17 +21,11 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_
 
 list(APPEND app_simple_box_source
         _.h
-        _user.h
         application.cpp
         application.h
-        document.cpp
-        document.h
         framework.cpp
         framework.h
-        main_frame.cpp
-        main_frame.h
-        view.cpp
-        view.h)
+   )
 
 
 if (MSVC)

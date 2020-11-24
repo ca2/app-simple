@@ -101,7 +101,7 @@ namespace simple_application
    }
 
 
-   void view::on_apply(::action * paction)
+   void view::on_apply(::subject * paction)
    {
 
       ::user::impact::on_apply(paction);

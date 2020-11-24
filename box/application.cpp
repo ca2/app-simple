@@ -31,12 +31,12 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add_futurevar(e_future_finish, __futurevar([=](const var& var)
+      add_futurevar(e_future_finish, __process([=](const payload& payload)
          {
 
             auto pfuturevars = futurevars(e_future_finish);
 
-            if (var == IDNO)
+            if (payload == IDNO)
             {
 
                message_box(
