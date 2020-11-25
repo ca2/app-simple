@@ -109,10 +109,10 @@ namespace simple_form
    }
 
 
-   void view::on_apply(::action * paction)
+   void view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
    {
 
-      ::user::impact::on_apply(paction);
+      ::user::impact::on_subject(psubject, pcontext);
    }
 
 

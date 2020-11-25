@@ -89,9 +89,9 @@ namespace simple_drawing
       }
 
 
-      Application.add_update(id_simple_checkbox, this);
+      Application.delivery_for(id_simple_checkbox, this);
 
-      Application.add_update(id_no_client_frame, this);
+      Application.delivery_for(id_no_client_frame, this);
 
       auto estatus = __construct_new(m_prender);
 
@@ -133,18 +133,18 @@ namespace simple_drawing
    }
 
 
-   void view::on_apply(::action * paction)
+   void view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
    {
 
-      if (paction->id() == id_simple_checkbox
-         || paction->id() == id_no_client_frame)
+      if (psubject->id() == id_simple_checkbox
+         || psubject->id() == id_no_client_frame)
       {
 
          set_need_redraw();
 
       }
 
-      ::user::impact::on_apply(paction);
+      ::user::impact::on_subject(psubject, pcontext);
    }
 
 
