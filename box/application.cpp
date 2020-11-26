@@ -36,7 +36,7 @@ namespace simple_message_box
 
             auto pprocessa = processa(e_future_finish);
 
-            if (payload == IDNO)
+            if (payload == e_dialog_result_no)
             {
 
                message_box(
@@ -55,7 +55,7 @@ namespace simple_message_box
 
          }));
 
-      send_payload(e_future_finish, IDNO);
+      send_payload(e_future_finish, e_dialog_result_no);
 
    }
 

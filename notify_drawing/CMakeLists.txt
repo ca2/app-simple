@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(app_simple_drawin CXX)
+project(app_simple_notify_drawing CXX)
 
 
 set(CMAKE_CXX_STANDARD 14)
@@ -19,13 +19,10 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAM
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
 
 
-list(APPEND app_simple_application_source
+list(APPEND app_simple_notify_drawing_source
         _.h
-        _user.h
         application.cpp
         application.h
-        document.cpp
-        document.h
         framework.cpp
         framework.h
         main_frame.cpp
@@ -40,54 +37,66 @@ else()
     set(LIBCXX_TARGETING_MSVC OFF)
 endif()
 
+list(APPEND app_simple_notify_drawing_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_drawing
+   )
 
-add_executable(app_simple_drawin ${app_simple_application_source})
 
-target_precompile_headers(app_simple_drawin PRIVATE framework.h)
 
-set_target_properties(app_simple_drawin PROPERTIES LINKER_LANGUAGE CXX)
+add_executable(app_simple_notify_drawing ${app_simple_notify_drawing_source})
+
+target_precompile_headers(app_simple_notify_drawing PRIVATE framework.h)
+
+set_target_properties(app_simple_notify_drawing PROPERTIES LINKER_LANGUAGE CXX)
+
 
 if (MSVC)
-    target_compile_options(app_simple_drawin PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_drawin PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_drawin PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(app_simple_drawin PRIVATE acme apex aqua aura axis base)
-    add_dependencies(app_simple_drawin draw2d_gdiplus imaging_wic)
+    target_compile_options(app_simple_notify_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(app_simple_notify_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(app_simple_notify_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(app_simple_notify_drawing PRIVATE ${app_simple_notify_drawing_references})
+    add_dependencies(app_simple_notify_drawing draw2d_gdiplus imaging_wic)
 elseif(LINUX)
-    target_compile_options(app_simple_drawin PRIVATE -fpermissive)
-    target_link_options(app_simple_drawin PRIVATE -Wl,-rpath=\$ORIGIN)
-    target_link_libraries(app_simple_drawin PRIVATE acme apex aqua aura axis base)
-    target_link_options(app_simple_drawin PRIVATE -Wl,-z,defs)
-    add_dependencies(app_simple_drawin draw2d_cairo imaging_freeimage)
+    target_compile_options(app_simple_notify_drawing PRIVATE -fpermissive)
+    target_link_options(app_simple_notify_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+    target_link_libraries(app_simple_notify_drawing PRIVATE ${app_simple_notify_drawing_references}  )
+    target_link_options(app_simple_notify_drawing PRIVATE -Wl,-z,defs)
+    add_dependencies(app_simple_notify_drawing draw2d_cairo imaging_freeimage)
 endif()
 
-add_dependencies(app_simple_drawin experience_core)
+add_dependencies(app_simple_notify_drawing experience_core)
 
 
-target_link_directories(app_simple_drawin PRIVATE ${LIBRARY_OUTPUT_PATH})
-target_link_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/library/x64/basis)
-target_link_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/third/library/x64/basis)
+target_link_directories(app_simple_notify_drawing PRIVATE ${LIBRARY_OUTPUT_PATH})
+target_link_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/library/x64/basis)
+target_link_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/third/library/x64/basis)
 
 
-target_include_directories(app_simple_drawin PRIVATE .)
-target_include_directories(app_simple_drawin PRIVATE $ENV{HOME}/__config)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app/_include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME})
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME}/_include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include/include)
-target_include_directories(app_simple_drawin PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(app_simple_notify_drawing PRIVATE .)
+target_include_directories(app_simple_notify_drawing PRIVATE $ENV{HOME}/__config)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app/_include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME})
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME}/_include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include/include)
+target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
-target_compile_definitions(app_simple_drawin PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
-target_compile_definitions(app_simple_drawin PRIVATE UNICODE)
-target_compile_definitions(app_simple_drawin PRIVATE _UNICODE)
+target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(app_simple_notify_drawing PRIVATE UNICODE)
+target_compile_definitions(app_simple_notify_drawing PRIVATE _UNICODE)
 
 
 

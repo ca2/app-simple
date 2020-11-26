@@ -21,6 +21,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_
 
 list(APPEND app_simple_application_source
    _.h
+   001.cpp
+   002.cpp
    application.cpp
    application.h
    document.cpp
@@ -31,6 +33,12 @@ list(APPEND app_simple_application_source
    framework.h
    main_frame.cpp
    main_frame.h
+   main_view.cpp
+   main_view.h
+   simple_form.cpp
+   simple_form.h
+   tab_view.cpp
+   tab_view.h
    view.cpp
    view.h
    )
@@ -63,7 +71,7 @@ elseif (LINUX)
    add_dependencies(app_simple_form draw2d_cairo imaging_freeimage)
 endif ()
 
-add_dependencies(app_simple_form experience_core)
+add_dependencies(app_simple_form experience_tranquillum)
 
 
 target_link_directories(app_simple_form PRIVATE ${LIBRARY_OUTPUT_PATH})

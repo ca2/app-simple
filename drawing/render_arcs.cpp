@@ -16,7 +16,7 @@ namespace simple_drawing
 
       string strFontFamily = get_font();
 
-      font->create_pixel_font(strFontFamily, 14.0, FW_LIGHT);
+      font->create_pixel_font(strFontFamily, 14.0, e_font_weight_light);
 
       ::color color(m_hlsText);
 
