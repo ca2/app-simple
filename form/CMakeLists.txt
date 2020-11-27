@@ -95,12 +95,9 @@ target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/.
 target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
-target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
 target_compile_definitions(app_simple_form PRIVATE UNICODE)
 target_compile_definitions(app_simple_form PRIVATE _UNICODE)
-
-
-
 
 
 
