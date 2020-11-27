@@ -41,7 +41,7 @@ else()
 endif()
 
 
-add_executable(app_simple_application ${app_simple_application_source} ../drawing/windows/main.cpp)
+add_executable(app_simple_application ${app_simple_application_source} )
 
 target_precompile_headers(app_simple_application PRIVATE framework.h)
 

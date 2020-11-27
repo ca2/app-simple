@@ -114,13 +114,16 @@ list(APPEND library_include_directories
 target_include_directories(app_simple_drawing PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 target_compile_definitions(app_simple_drawing PRIVATE UNICODE)
 target_compile_definitions(app_simple_drawing PRIVATE _UNICODE)
 
 add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp)
+target_compile_definitions(_app_simple_drawing PRIVATE UNICODE)
+target_compile_definitions(_app_simple_drawing PRIVATE _UNICODE)
 
 if (MSVC)
+   target_compile_options(_app_simple_drawing PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
    target_compile_options(_app_simple_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
