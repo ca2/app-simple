@@ -31,10 +31,10 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add_process(e_future_finish, __process([=](const payload& payload)
+      add_process(e_process_finish, __process([=](const payload& payload)
          {
 
-            auto pprocessa = processa(e_future_finish);
+            auto pprocessa = processa(e_process_finish);
 
             if (payload == e_dialog_result_no)
             {
@@ -55,7 +55,7 @@ namespace simple_message_box
 
          }));
 
-      send_payload(e_future_finish, e_dialog_result_no);
+      send_payload(e_process_finish, e_dialog_result_no);
 
    }
 
