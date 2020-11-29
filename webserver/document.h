@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING document :
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER document :
       public ::user::document
    {
    public:
@@ -32,7 +32,7 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

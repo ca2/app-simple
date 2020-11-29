@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING tab_view :
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER tab_view :
       virtual public ::user::tab_view,
       virtual public ::user::form_callback,
       virtual public __application_consumer
@@ -51,7 +51,7 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

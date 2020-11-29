@@ -5,7 +5,7 @@
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
@@ -254,7 +254,7 @@ namespace simple_drawing
    }
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

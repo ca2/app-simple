@@ -1,28 +1,30 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING application :
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER application :
       virtual public ::base::application
    {
    public:
 
 
-      ::enum_check &                         m_echeckSimple;
-      ::enum_check &                         m_echeckNoClientFrame;
-      string &                               m_strSimple;
-      string *                               m_pstrHoverFontFamilyName;
-      string &                               m_strMainTitle;
+      ::enum_check &                                  m_echeckSimple;
+      ::enum_check &                                  m_echeckNoClientFrame;
+      string &                                        m_strSimple;
+      string *                                        m_pstrHoverFontFamilyName;
+      string &                                        m_strMainTitle;
 
-      bool                                   m_bMultiverseChat;
+      bool                                            m_bMultiverseChat;
 
-      ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
-      ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
-      tab_view *                             m_ptabview;
+      ::user::document *                              m_pdocMenu;
+      ::user::plain_edit_view *                       m_prollfps;
+      ::user::single_document_template *              m_ptemplateSimpleDrawingMain;
+      tab_view *                                      m_ptabview;
+      __composite(::netserver::socket_thread_base)    m_psocketthread;
+
 
       application();
       virtual ~application();
@@ -41,6 +43,7 @@ namespace simple_drawing
       virtual __pointer(view) create_simple_drawing_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
+      ::estatus create_webserver();
 
 
       virtual ::type get_pane_view_type() const;
@@ -63,7 +66,7 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

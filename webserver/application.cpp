@@ -1,10 +1,11 @@
 #include "framework.h"
 #include "aura/application.h"
 #include "aura/update.h"
+#include "_webserver.h"
 
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
@@ -74,6 +75,40 @@ namespace simple_drawing
    }
 
 
+   ::estatus application::create_webserver()
+   {
+
+      auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));
+
+      if (!estatus)
+      {
+
+         return estatus;
+
+      }
+
+      m_psocketthread->m_strIp = "127.0.0.1";
+      m_psocketthread->m_iPort = 10009;
+
+      if (!m_psocketthread->begin())
+      {
+
+         return ::error_failed;
+
+      }
+
+      //fork([this]()
+        // {
+
+            ::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
+
+         //});
+
+      return estatus;
+
+   }
+
+
    ::type application::get_pane_view_type() const
    {
 
@@ -95,12 +130,12 @@ namespace simple_drawing
 
       set_local_data();
 
-      create_factory <::simple_drawing::document >();
-      create_factory <::simple_drawing::frame >();
-      create_factory <::simple_drawing::main_frame >();
+      create_factory <::simple_webserver::document >();
+      create_factory <::simple_webserver::frame >();
+      create_factory <::simple_webserver::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_drawing::view >();
-      create_factory <::simple_drawing::tab_view >();
+      create_factory <::simple_webserver::view >();
+      create_factory <::simple_webserver::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 
@@ -192,7 +227,7 @@ namespace simple_drawing
 
       }
 
-      output_debug_string("\nfinished simple_drawing::on_request");
+      output_debug_string("\nfinished simple_webserver::on_request");
 
    }
 
@@ -265,7 +300,7 @@ namespace simple_drawing
    __namespace_application_factory("app-simple/drawing");
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

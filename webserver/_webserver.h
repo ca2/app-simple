@@ -1,9 +1,9 @@
 #pragma once
 
 
-//#include "_.h"
 #include "base/user/simple/_simple.h"
 #include "base/user/menu/_menu.h"
+#include "axis/net/netserver/_netserver.h"
 
 
 namespace user
@@ -23,5 +23,6 @@ namespace user
 
 #include "tab_view.h"
 
-
+#include "socket.h"
+//#include "socket_thread.h"
 

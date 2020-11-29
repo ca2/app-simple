@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING view :
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER view :
       virtual public ::user::impact,
       virtual public __application_consumer
    {
@@ -44,6 +44,6 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 

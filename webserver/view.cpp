@@ -3,7 +3,7 @@
 #include "acme/const/id.h"
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
@@ -88,6 +88,7 @@ namespace simple_drawing
 
       }
 
+      ThisApp.create_webserver();
 
       Application.delivery_for(id_simple_checkbox, this);
 
@@ -197,7 +198,7 @@ namespace simple_drawing
    }
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 

@@ -1,11 +1,11 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING render :
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER render :
       virtual public __application_consumer
    {
    public:
@@ -53,6 +53,6 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 

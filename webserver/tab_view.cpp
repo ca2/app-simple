@@ -2,7 +2,7 @@
 #include "aura/update.h"
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
@@ -205,7 +205,7 @@ namespace simple_drawing
    }
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
 
