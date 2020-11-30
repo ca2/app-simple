@@ -94,7 +94,7 @@ target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOU
 target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
-target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY)
 target_compile_definitions(app_simple_notify_drawing PRIVATE UNICODE)
 target_compile_definitions(app_simple_notify_drawing PRIVATE _UNICODE)
 
