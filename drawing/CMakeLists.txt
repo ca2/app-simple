@@ -124,7 +124,7 @@ target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRAR
 target_compile_definitions(app_simple_drawing PRIVATE UNICODE)
 target_compile_definitions(app_simple_drawing PRIVATE _UNICODE)
 
-add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp)
+add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp ../../app-core/hellomultiverse/linux/main.cpp)
 target_compile_definitions(_app_simple_drawing PRIVATE UNICODE)
 target_compile_definitions(_app_simple_drawing PRIVATE _UNICODE)
 
