@@ -4,7 +4,7 @@ project(app_simple_box CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
-
+add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
     set(LINUX TRUE)

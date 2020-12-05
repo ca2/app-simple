@@ -4,6 +4,7 @@ project(app_simple_drawing CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
+add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
 
 
 if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
@@ -124,24 +125,27 @@ target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRAR
 target_compile_definitions(app_simple_drawing PRIVATE UNICODE)
 target_compile_definitions(app_simple_drawing PRIVATE _UNICODE)
 
-add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp ../../app-core/hellomultiverse/linux/main.cpp)
+add_executable(_app_simple_drawing ${PLATFORM_NAME}/main.cpp)
 target_compile_definitions(_app_simple_drawing PRIVATE UNICODE)
 target_compile_definitions(_app_simple_drawing PRIVATE _UNICODE)
 
+
+target_compile_definitions(_app_simple_drawing PRIVATE _APP_ID="app-simple/drawing")
+
+
 if (MSVC)
 
-   target_compile_options(_app_simple_drawing PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
    target_compile_options(_app_simple_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references} app_simple_drawing)
+   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references})
    add_dependencies(_app_simple_drawing draw2d_gdiplus imaging_wic)
 
 elseif (LINUX)
 
    target_compile_options(_app_simple_drawing PRIVATE -fpermissive)
    target_link_options(_app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
-   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references} app_simple_drawing)
+   target_link_libraries(_app_simple_drawing PRIVATE ${app_simple_drawing_references})
    target_link_options(_app_simple_drawing PRIVATE -Wl,-z,defs)
    add_dependencies(_app_simple_drawing draw2d_cairo imaging_freeimage)
 
@@ -153,7 +157,7 @@ target_include_directories(_app_simple_drawing PRIVATE ${library_include_directo
 
 target_link_directories(_app_simple_drawing PRIVATE ${library_link_directories})
 
-target_link_libraries(_app_simple_drawing PRIVATE acme apex aqua aura axis base app_simple_drawing)
+target_link_libraries(_app_simple_drawing PRIVATE acme apex)
 
 set_target_properties(_app_simple_drawing PROPERTIES LINKER_LANGUAGE CXX)
 
