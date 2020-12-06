@@ -43,7 +43,7 @@ namespace simple_video
       virtual __pointer(view) create_simple_drawing_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
-      ::estatus create_webserver();
+      ::estatus create_video();
 
 
       virtual ::type get_pane_view_type() const;

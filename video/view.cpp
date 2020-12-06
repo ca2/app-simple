@@ -88,7 +88,7 @@ namespace simple_video
 
       }
 
-      ThisApp.create_webserver();
+      ThisApp.create_video();
 
       Application.delivery_for(id_simple_checkbox, this);
 

@@ -1,7 +1,7 @@
 #include "framework.h"
 #include "aura/application.h"
 #include "aura/update.h"
-#include "_webserver.h"
+#include "_video.h"
 
 
 
@@ -75,7 +75,7 @@ namespace simple_video
    }
 
 
-   ::estatus application::create_webserver()
+   ::estatus application::create_video()
    {
 
       auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));

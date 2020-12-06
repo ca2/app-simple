@@ -89,6 +89,9 @@ namespace simple_webserver
 
       m_psocketthread->m_strIp = "127.0.0.1";
       m_psocketthread->m_iPort = 10009;
+      m_psocketthread->m_strCat = "cat://"+file_as_string("C:\\sensitive\\sensitive\\certificate\\localwebserver.app\\localwebserver.cat");
+      m_psocketthread->m_strCipherList = "ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-RC4-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:RSA:SHA:3DES:!aNULL:!eNULL:!EXP:!LOW:!MD5:@STRENGTH";
+      m_psocketthread->m_iSsl = 1;
 
       if (!m_psocketthread->begin())
       {
@@ -100,7 +103,8 @@ namespace simple_webserver
       //fork([this]()
         // {
 
-            ::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
+            //::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
+      ::hyperlink::open_link("https://localwebserver.app:" + __str(m_psocketthread->m_iPort) + "/");
 
          //});
 
