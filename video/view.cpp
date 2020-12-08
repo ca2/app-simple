@@ -88,11 +88,9 @@ namespace simple_video
 
       }
 
+      ThisApp.m_pview = this;
+
       ThisApp.create_video();
-
-      Application.delivery_for(id_simple_checkbox, this);
-
-      Application.delivery_for(id_no_client_frame, this);
 
       auto estatus = __construct_new(m_prender);
 
@@ -122,6 +120,15 @@ namespace simple_video
             pinteraction->_001SetText(strText,::source_initialize);
 
          }
+
+      }
+
+      string strDevice;
+
+      if (ThisApp.data_get("device", strDevice))
+      {
+
+         m_prender->initialize_simple_video(strDevice);
 
       }
 
@@ -160,21 +167,6 @@ namespace simple_video
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (ThisApp.m_echeckNoClientFrame != ::check_checked)
-      {
-
-         ::rect rect = get_client_rect();
-
-         for (index i = 0; i < 11; i++)
-         {
-
-            pgraphics->draw_rect(rect, ARGB(180, 80, 80, 80));
-
-            rect.deflate(1, 1);
-
-         }
-
-      }
 
       m_prender->_001OnDraw(pgraphics);
 

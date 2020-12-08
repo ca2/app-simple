@@ -6,25 +6,18 @@ namespace simple_video
 
 
    class CLASS_DECL_APP_SIMPLE_VIDEO application :
-      virtual public ::base::application
+      virtual public ::core::application
    {
    public:
 
 
-      ::enum_check &                                  m_echeckSimple;
-      ::enum_check &                                  m_echeckNoClientFrame;
-      string &                                        m_strSimple;
-      string *                                        m_pstrHoverFontFamilyName;
-      string &                                        m_strMainTitle;
-
-      bool                                            m_bMultiverseChat;
 
       ::user::document *                              m_pdocMenu;
       ::user::plain_edit_view *                       m_prollfps;
       ::user::single_document_template *              m_ptemplateSimpleDrawingMain;
       tab_view *                                      m_ptabview;
       __composite(::netserver::socket_thread_base)    m_psocketthread;
-
+      __pointer(view)                                 m_pview;
 
       application();
       virtual ~application();
@@ -40,7 +33,7 @@ namespace simple_video
       virtual int64_t dec_ref(OBJ_REF_DBG_PARAMS) override;
 #endif
 
-      virtual __pointer(view) create_simple_drawing_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual __pointer(view) create_simple_video_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
       ::estatus create_video();

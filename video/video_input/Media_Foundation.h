@@ -2,19 +2,31 @@
 
 struct IMFAttributes;
 
-// Class for creating of Media Foundation context
-class Media_Foundation
+
+namespace video_input
 {
-public:
-	virtual ~Media_Foundation(void);
 
-	static Media_Foundation& getInstance();
 
-	bool buildListOfDevices();
+	// Class for creating of Media Foundation context
+	class media_foundation
+	{
+	public:
+		virtual ~media_foundation(void);
 
-private: 
-    	
-	Media_Foundation(void);
+		static media_foundation & get_instance();
 
-};
+		bool buildListOfDevices();
+
+	private:
+
+		media_foundation(void);
+
+	};
+
+
+
+} // namespace video_input
+
+
+
 

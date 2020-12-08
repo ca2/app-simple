@@ -1,41 +1,45 @@
+// https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
+#include "framework.h"
+
+
 // TestvideoInput.cpp: „€„„‚„u„t„u„|„‘„u„„ „„„€„‰„{„… „r„‡„€„t„p „t„|„‘ „{„€„~„ƒ„€„|„„~„€„s„€ „„‚„y„|„€„w„u„~„y„‘.
 //
 
 //#include "stdafx.h"
 #include <windows.h>
-#include "videoInput.h"
+#include "video_input.h"
 //#include "highgui.h"
 
 #pragma comment(lib, "lib\\opencv\\Release\\opencv_highgui242.lib")
 #pragma comment(lib, "lib\\opencv\\Release\\opencv_core242.lib")
 
-#pragma comment(lib, "videoInput.lib")
+#pragma comment(lib, "video_input.lib")
 
 void StopEvent(int deviceID, void * userData)
 {
-   videoInput * VI = &videoInput::getInstance();
+   video_input * VI = &video_input::get_instance();
 
-   VI->closeDevice(deviceID);
+   VI->close_device(deviceID);
 }
 
 int _tmain(int argc, TCHAR * argv[])
 {
-   videoInput * VI = &videoInput::getInstance();
+   video_input * VI = &video_input::get_instance();
 
-   int i = VI->listDevices();
+   int i = VI->list_devices();
 
    if (i > 0)
    {
-      if (VI->setupDevice(i - 1, 640, 480, 60))
+      if (VI->setup_device(i - 1, 640, 480, 60))
       {
-         VI->setEmergencyStopEvent(i - 1, NULL, StopEvent);
+         VI->set_emergency_stop_event(i - 1, NULL, StopEvent);
 
-         if (VI->isFrameNew(i - 1))
+         if (VI->is_frame_new(i - 1))
          {
             int countLeftFrames = 0;
 
             cvNamedWindow("VideoTest", CV_WINDOW_AUTOSIZE);
-            CvSize size = cvSize(VI->getWidth(i - 1), VI->getHeight(i - 1));
+            CvSize size = cvSize(VI->get_width(i - 1), VI->get_height(i - 1));
 
             IplImage * frame;
 
@@ -43,9 +47,9 @@ int _tmain(int argc, TCHAR * argv[])
 
             while (1)
             {
-               if (VI->isFrameNew(i - 1))
+               if (VI->is_frame_new(i - 1))
                {
-                  VI->getPixels(i - 1, (unsigned char *)frame->imageData);
+                  VI->get_pixels(i - 1, (unsigned char *)frame->imageData);
 
                   cvShowImage("VideoTest", frame);
 
@@ -61,13 +65,13 @@ int _tmain(int argc, TCHAR * argv[])
 
                if (c == 49)
                {
-                  CamParametrs CP = VI->getParametrs(i - 1);
-                  CP.Brightness.CurrentValue = 128;
-                  CP.Brightness.Flag = 1;
-                  VI->setParametrs(i - 1, CP);
+                  camera_parameters CP = VI->get_parameters(i - 1);
+                  CP.Brightness.m_lCurrentValue = 128;
+                  CP.Brightness.m_lFlag = 1;
+                  VI->set_parameters(i - 1, CP);
                }
 
-               if (!VI->isDeviceSetup(i - 1))
+               if (!VI->is_device_setup(i - 1))
                {
                   break;
                }
@@ -76,21 +80,21 @@ int _tmain(int argc, TCHAR * argv[])
                   break;
             }
 
-            VI->closeDevice(i - 1);
+            VI->close_device(i - 1);
 
             cvDestroyWindow("VideoTest");
          }
       }
    }
 
-   if (VI->setupDevice(i - 1, 1920, 1080, 60))
+   if (VI->setup_device(i - 1, 1920, 1080, 60))
    {
-      if (VI->isFrameNew(i - 1))
+      if (VI->is_frame_new(i - 1))
       {
          int countLeftFrames = 0;
 
          cvNamedWindow("VideoTest1", CV_WINDOW_AUTOSIZE);
-         CvSize size = cvSize(VI->getWidth(i - 1), VI->getHeight(i - 1));
+         CvSize size = cvSize(VI->get_width(i - 1), VI->get_height(i - 1));
 
          IplImage * frame;
 
@@ -98,9 +102,9 @@ int _tmain(int argc, TCHAR * argv[])
 
          while (1)
          {
-            if (VI->isFrameNew(i - 1))
+            if (VI->is_frame_new(i - 1))
             {
-               VI->getPixels(i - 1, (unsigned char *)frame->imageData, false);
+               VI->get_pixels(i - 1, (unsigned char *)frame->imageData, false);
                cvShowImage("VideoTest1", frame);
                countLeftFrames = 0;
             }
@@ -112,7 +116,7 @@ int _tmain(int argc, TCHAR * argv[])
             if (c == 27)
                break;
 
-            if (!VI->isDeviceSetup(i - 1))
+            if (!VI->is_device_setup(i - 1))
             {
                break;
             }
@@ -121,7 +125,7 @@ int _tmain(int argc, TCHAR * argv[])
                break;
          }
 
-         VI->closeDevice(i - 1);
+         VI->close_device(i - 1);
 
          cvDestroyWindow("VideoTest1");
       }

@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 
-#include "base/_.h"
+#include "core/_.h"
 
 
 #ifdef _APP_SIMPLE_VIDEO_LIBRARY
@@ -9,8 +9,6 @@
 #else
 #define CLASS_DECL_APP_SIMPLE_VIDEO  CLASS_DECL_IMPORT
 #endif
-
-
 
 
 namespace simple_video

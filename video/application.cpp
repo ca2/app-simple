@@ -9,62 +9,20 @@ namespace simple_video
 {
 
 
-   application::application() :
-      m_echeckSimple(topic(id_simple_checkbox)),
-      m_echeckNoClientFrame(topic(id_no_client_frame)),
-      m_strSimple(topic(id_simple_text)),
-      m_strMainTitle(topic(id_main_title))
+   application::application()
    {
-
-      m_pstrHoverFontFamilyName = nullptr;
-
-      auto pproperty1 = find_property(id_simple_checkbox);
-
-      bool bCheckOk = false;
-
-      if(pproperty1->m_etype == type_enum_check)
-      {
-
-         auto pproperty = pproperty1;
-
-         if(pproperty->m_etype == type_enum_check)
-         {
-
-            auto & echeck = pproperty->m_echeck;
-
-            if(echeck == check_undefined)
-            {
-
-               bCheckOk = true;
-
-            }
-
-         }
-
-      }
-
-      if(!bCheckOk)
-      {
-
-         message_box("simple_check_box is not ok");
-
-      }
 
       m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabview = nullptr;
 
-      m_strAppId = "app-simple/drawing";
+      m_strAppId = "app-simple/video";
 
-      m_strAppName = "app-simple/drawing";
+      m_strAppName = "app-simple/video";
 
       m_strBaseSupportId = "ca2_flag";
 
       m_bLicense = false;
-
-      m_bMultiverseChat = true;
-
-      m_strMainTitle = "Simple Drawing";
 
    }
 
@@ -78,33 +36,35 @@ namespace simple_video
    ::estatus application::create_video()
    {
 
-      auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));
+      //auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));
 
-      if (!estatus)
-      {
+      //if (!estatus)
+      //{
 
-         return estatus;
+      //   return estatus;
 
-      }
+      //}
 
-      m_psocketthread->m_strIp = "127.0.0.1";
-      m_psocketthread->m_iPort = 10009;
+      //m_psocketthread->m_strIp = "127.0.0.1";
+      //m_psocketthread->m_iPort = 10009;
 
-      if (!m_psocketthread->begin())
-      {
+      //if (!m_psocketthread->begin())
+      //{
 
-         return ::error_failed;
+      //   return ::error_failed;
 
-      }
+      //}
 
-      //fork([this]()
-        // {
+      ////fork([this]()
+      //  // {
 
-            ::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
+      //      ::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
 
-         //});
+      //   //});
 
-      return estatus;
+      //return estatus;
+
+      return ::success;
 
    }
 
@@ -198,8 +158,6 @@ namespace simple_video
 
 #endif
 
-      m_bMultiverseChat = !is_true("no_hello_edit");
-
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
@@ -262,7 +220,7 @@ namespace simple_video
 #endif
 
 
-   __pointer(view) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(view) application::create_simple_video_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
       return pimpactParent->create_view < view >(pimpactdata);
@@ -297,7 +255,7 @@ namespace simple_video
    }
 
 
-   __namespace_application_factory("app-simple/drawing");
+   __namespace_application_factory("app-simple/video");
 
 
 } // namespace simple_video

@@ -11,15 +11,16 @@ namespace simple_video
    public:
 
 
-      string   & m_strHoverFontFamilyName;
-
+      string                              m_strDevice;
+      string   &                          m_strHoverFontFamilyName;
       rect                                m_rect;
       ::user::impact *                    m_pview;
       string                              m_strFont1;
-      int                                 m_iDrawing;
       string_map < ::image_pointer >      m_pimagemap;
-      ::image_pointer                     m_pimage1;
-      ::image_pointer                     m_pimage2;
+      ::image_pointer                     m_imagea[2];
+      ::mutex                             m_mutexa[2];
+      int                                 m_iShow;
+
       ::hls                               m_hlsText;
 
       render();
@@ -33,21 +34,22 @@ namespace simple_video
       string get_font();
       ::estatus set_font(const string& strFont);
 
-      virtual void initialize_simple_drawing(int iDrawing);
+      virtual void initialize_simple_video(const string & strDevice);
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void _001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics);
+      //virtual void _001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
+      //virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, angle angleStart, angle angleAngle, bool bPath);
+      //virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, angle angleStart, angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      int get_device();
 
+      void capture_loop();
 
-
-
+      void capture_step(int iVideo);
       
 
    };

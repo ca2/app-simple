@@ -13,16 +13,21 @@ namespace simple_video
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
-      __reference(view)                               m_pviewTopic;
-      string                                          m_strTopicTitle;
+      ::user::split_view *                      m_ptopviewLast;
+      __reference(view)                         m_pviewTopic;
+      string                                    m_strTopicTitle;
 
 
-      __pointer(::user::document)                            m_pdocMenu;
+      ::form_document *                         m_pdocMenu;
+      __pointer_array(::user::check_box)        m_checkptraDevice;
+      string                                    m_strDevice;
 
 
       tab_view();
       virtual ~tab_view();
+
+      
+      string prepare_menu_view();
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

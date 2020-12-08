@@ -1,8 +1,9 @@
 #include "framework.h"
 #include "aura/id.h"
 #include <math.h>
+#include "video_input/video_input.h"
 
-
+void video_input_stop_event(int deviceID, void * userData);
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
 
 
@@ -15,7 +16,10 @@ namespace simple_video
       m_strHoverFontFamilyName(topic(id_hover_font_family_name))
    {
 
-      m_iDrawing = 1;
+      defer_create_mutex();
+
+      
+
 
    }
 
@@ -54,47 +58,253 @@ namespace simple_video
 
    }
 
+   int render::get_device()
+   {
 
-   void render::initialize_simple_drawing(int iDrawing)
+      auto & videoinput = ::video_input::video_input::get_instance();
+
+      return videoinput.get_video_device_index(m_strDevice);
+
+   }
+
+
+   void render::capture_loop()
+   {
+
+
+      while (::thread_get_run())
+      {
+
+         auto & videoinput = ::video_input::video_input::get_instance();
+
+         if (videoinput.is_frame_new(get_device()))
+         {
+
+            int iVideo;
+
+            if (m_iShow == 0)
+            {
+
+               iVideo = 1;
+
+            }
+            else
+            {
+
+               iVideo = 0;
+
+            }
+
+
+            capture_step(m_iShow);
+
+            sync_lock sl(mutex());
+
+            if (m_iShow == 0)
+            {
+
+               m_iShow = 1;
+
+            }
+            else
+            {
+
+               m_iShow = 0;
+
+            }
+
+         }
+
+         m_pview->post_redraw();
+
+         sleep(100_ms);
+
+      }
+
+
+   }
+
+   void render::capture_step(int iCapture)
+   {
+
+      auto & mutex = m_mutexa[iCapture];
+
+      sync_lock sl(&mutex);
+
+      auto & pimage = m_imagea[iCapture];
+
+      auto & videoinput = ::video_input::video_input::get_instance();
+
+      videoinput.get_pixels(get_device(), pimage->get_data());
+
+   }
+
+
+   void render::initialize_simple_video(const string & strDevice)
    {
 
       initialize_application_consumer();
+      
+      auto & videoinput = ::video_input::video_input::get_instance();
 
-      m_iDrawing = iDrawing;
+      auto iDevice = videoinput.get_video_device_index(strDevice);
 
-      color32_t crText = ARGB(255, 55, 210, 120);
-
-      if (m_iDrawing == 1)
-      {
-
-         crText = ARGB(127, 0, 127, 200);
-
-      }
-      else if (m_iDrawing == 3)
-      {
-
-         crText = ARGB(255, 180, 180, 180);
-
+      if(iDevice < 0)
+      { 
+      
+         return;
+      
       }
 
-      color color(crText);
+      m_strDevice = strDevice;
 
-      string strDataId;
+      ThisApp.data_set("device", strDevice);
 
-      strDataId = m_pview->m_id;
-
-      //m_hlsText.m_dH = 0.1;
-      //m_hlsText.m_dL = 0.5;
-      //m_hlsText.m_dS = 0.9;
-
-      //Application.data_set(strDataId, m_hlsText);
-
-      if(!Application.data_get(strDataId +".color", m_hlsText))
+      if (strDevice.is_empty())
       {
 
-         m_hlsText = color.get_hls();
+         __throw(invalid_argument_exception());
+
+         return;
 
       }
+
+      if (videoinput.setup_device(get_device(), 1920, 1080, 60))
+      {
+
+         videoinput.set_emergency_stop_event(get_device(), NULL, &video_input_stop_event);
+
+         //if (videoinput.is_frame_new(m_iDevice))
+         //{
+         
+            int countLeftFrames = 0;
+
+            m_imagea[0].create(e_create);
+            m_imagea[1].create(e_create);
+
+            m_imagea[0]->create(videoinput.get_width(get_device()), videoinput.get_height(get_device()));
+            m_imagea[1]->create(videoinput.get_width(get_device()), videoinput.get_height(get_device()));
+            m_iShow = 0;
+
+            fork([this]()
+               {
+
+                  capture_loop();
+
+               });
+
+
+                  //else
+                  //   countLeftFrames++;
+
+         //         char c = cvWaitKey(33);
+
+         //         if (c == 27)
+         //            break;
+
+         //         if (c == 49)
+         //         {
+         //            camera_parameters CP = VI->get_parameters(i - 1);
+         //            CP.Brightness.m_lCurrentValue = 128;
+         //            CP.Brightness.m_lFlag = 1;
+         //            VI->set_parameters(i - 1, CP);
+         //         }
+
+         //         if (!VI->is_device_setup(i - 1))
+         //         {
+         //            break;
+         //         }
+
+         //         if (countLeftFrames > 60)
+         //            break;
+         //      }
+
+         //      VI->close_device(i - 1);
+
+         //      cvDestroyWindow("VideoTest");
+         //   }
+         //}
+      }
+
+      //if (VI->setup_device(i - 1, 1920, 1080, 60))
+      //{
+      //   if (VI->is_frame_new(i - 1))
+      //   {
+      //      int countLeftFrames = 0;
+
+      //      cvNamedWindow("VideoTest1", CV_WINDOW_AUTOSIZE);
+      //      CvSize size = cvSize(VI->get_width(i - 1), VI->get_height(i - 1));
+
+      //      IplImage * frame;
+
+      //      frame = cvCreateImage(size, 8, 3);
+
+      //      while (1)
+      //      {
+      //         if (VI->is_frame_new(i - 1))
+      //         {
+      //            VI->get_pixels(i - 1, (unsigned char *)frame->imageData, false);
+      //            cvShowImage("VideoTest1", frame);
+      //            countLeftFrames = 0;
+      //         }
+      //         else
+      //            countLeftFrames++;
+
+      //         char c = cvWaitKey(33);
+
+      //         if (c == 27)
+      //            break;
+
+      //         if (!VI->is_device_setup(i - 1))
+      //         {
+      //            break;
+      //         }
+
+      //         if (countLeftFrames > 60)
+      //            break;
+      //      }
+
+      //      VI->close_device(i - 1);
+
+      //      cvDestroyWindow("VideoTest1");
+      //   }
+
+      //}
+
+
+      //color32_t crText = ARGB(255, 55, 210, 120);
+
+      //if (m_iDevice == 1)
+      //{
+
+      //   crText = ARGB(127, 0, 127, 200);
+
+      //}
+      //else if (m_iDevice == 3)
+      //{
+
+      //   crText = ARGB(255, 180, 180, 180);
+
+      //}
+
+      //color color(crText);
+
+      //string strDataId;
+
+      //strDataId = m_pview->m_id;
+
+      ////m_hlsText.m_dH = 0.1;
+      ////m_hlsText.m_dL = 0.5;
+      ////m_hlsText.m_dS = 0.9;
+
+      ////Application.data_set(strDataId, m_hlsText);
+
+      //if(!Application.data_get(strDataId +".color", m_hlsText))
+      //{
+
+      //   m_hlsText = color.get_hls();
+
+      //}
 
    }
 
@@ -102,40 +312,14 @@ namespace simple_video
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (ThisApp.m_echeckNoClientFrame != ::check_checked)
+      sync_lock sl1(mutex());
+
+      sync_lock sl2(&m_mutexa[m_iShow]);
+
+      if (m_imagea[m_iShow])
       {
 
-         ::rect rect(m_rect);
-
-         pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
-
-         for (index i = 0; i < 5; i++)
-         {
-
-            pgraphics->draw_rect(rect, ARGB(127, 225, 225, 225));
-
-            rect.deflate(1, 1);
-
-         }
-
-      }
-
-      if(m_iDrawing <= 3)
-      {
-
-         _001OnDraw1Through3(pgraphics);
-
-      }
-      else if(m_iDrawing == 4)
-      {
-
-         _001OnDrawArcs(pgraphics, false);
-
-      }
-      else
-      {
-
-         _001OnDrawArcs(pgraphics, true);
+         pgraphics->draw_at(point(), m_imagea[m_iShow]);
 
       }
 

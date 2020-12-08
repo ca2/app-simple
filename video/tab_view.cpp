@@ -1,5 +1,18 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "video_input/video_input.h"
+#include "video_input/video_device_array.h"
+#include "video_input/video_device.h"
+
+
+void video_input_stop_event(int deviceID, void * userData)
+{
+   
+   auto & videoinput = ::video_input::video_input::get_instance();
+
+   videoinput.close_device(deviceID);
+
+}
 
 
 namespace simple_video
@@ -8,7 +21,7 @@ namespace simple_video
 
    tab_view::tab_view()
    {
-
+      
    }
 
 
@@ -54,19 +67,21 @@ namespace simple_video
 
       }
 
-      //Application.m_ptabview = this;
-
       set_tab("Menu", MENU_IMPACT);
-      set_tab("001", "drawing1");
-      set_tab("002", "drawing2");
-      set_tab("003", "drawing3");
-      set_tab("arcs", "drawing4");
-      set_tab("arcpths", "drawing5");
+
+      set_tab("video", "video");
+
+      set_cur_tab_by_id("video");
+
+      //set_tab("002", "video2");
+      //set_tab("003", "video3");
+      //set_tab("arcs", "video4");
+      //set_tab("arcpths", "video5");
       //set_tab("Font", FONTSEL_IMPACT);
       //set_tab("Color", COLORSEL_IMPACT);
       //set_tab("Open", FILEMANAGER_IMPACT);
 
-      set_cur_tab_by_id("drawing1");
+      //set_cur_tab_by_id("video1");
 
    }
 
@@ -101,22 +116,26 @@ namespace simple_video
       if (get_view_id() == MENU_IMPACT)
       {
 
-         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
+         auto str = prepare_menu_view();
 
-         pmenuview->destroy_menu();
-
-         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
+         if (!m_pdocMenu->open_document(str))
          {
 
-            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
+            GetParentFrame()->message_box("Failed to open the menu.");
+
+            return;
 
          }
+
+         ::user::impact * pview = m_pdocMenu->get_view(0);
+
+         pview->set_need_load_form_data();
 
       }
 
       string strViewId = get_view_id().to_string();
 
-      if(::str::begins(strViewId, "drawing"))
+      if(::str::begins(strViewId, "video"))
       {
 
          if(get_pane_by_id(FILEMANAGER_IMPACT) != nullptr && get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder != nullptr)
@@ -136,12 +155,52 @@ namespace simple_video
          __refer(m_pviewTopic,m_pimpactdata->m_pplaceholder->get_hold());
 
       }
-      //else if (get_view_id() == MENU_IMPACT)
-      //{
 
-      //   m_pdocMenu->open_document("matter://menu.html");
+   }
 
-      //}
+
+   string tab_view::prepare_menu_view()
+   {
+
+      string strHtml;
+
+      string strBilbo;
+
+      auto & videoinput = ::video_input::video_input::get_instance();
+
+      auto cCount = videoinput.list_devices();
+
+      m_checkptraDevice.set_size(cCount);
+
+      strHtml += "<html>";
+      strHtml += "<head>";
+      strHtml += "</head>";
+      strHtml += "<body>";
+
+      for (int i = 0; i < cCount; i++)
+      {
+
+         string strName;
+
+         strName = videoinput.get_video_device_name(i);
+
+         string strId;
+
+         strId = videoinput.get_video_device_id2(i);
+
+         strHtml +="<input type = \"checkbox\" id=\"" + strId + "\" /><h1>" + strName + "</h1><br/>\n";
+
+      }
+
+      strHtml += "</body>";
+
+      ::file::path path;
+
+      path = Context.dir().appdata() / "menu.html";
+
+      Context.file().put_contents(path, strHtml);
+   
+      return path;
 
    }
 
@@ -161,7 +220,11 @@ namespace simple_video
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         auto puser = User;
+
+         m_pdocMenu = puser->create_child_form(this, this, pimpactdata->m_pplaceholder);
+
+         pimpactdata->m_eflag.add(::user::flag_hide_on_kill_focus);
 
       }
       break;
@@ -169,14 +232,12 @@ namespace simple_video
 
       string strId = pimpactdata->m_id;
 
-      if(::str::begins_eat_ci(strId, "drawing"))
+      if(::str::begins_eat_ci(strId, "video"))
       {
 
-         auto pview = ThisApp.create_simple_drawing_view(this, pimpactdata);
+         auto pview = ThisApp.create_simple_video_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
-
-         pview->m_prender->initialize_simple_drawing(atoi(strId));
 
          pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
 
@@ -191,6 +252,56 @@ namespace simple_video
 
    void tab_view::on_control_event(::user::control_event * pevent)
    {
+
+      string strId = pevent->m_id;
+
+      if (pevent->m_eevent == ::user::event_load_form_data)
+      {
+
+         ::user::impact * pview = m_pdocMenu->get_view(0);
+
+         string str;
+
+         auto puiRollFps = pview->get_child_by_id("roll_fps");
+
+         auto & videodevicearray = ::video_input::video_device_array::get_instance();
+
+         for (auto & videodevice : videodevicearray.m_deviceptra)
+         {
+
+            string strId = System.crypto_md5_text(videodevice->m_strName);
+
+            auto pcheckbox = pview->get_child_by_id(strId);
+
+            bool bSelected = ThisApp.m_pview->m_prender->m_strDevice == strId;
+
+            pcheckbox->_001SetCheck(bSelected? ::check_checked : ::check_unchecked, ::source_sync);
+
+         }
+
+         pevent->m_bOk = true;
+
+         pevent->m_bRet = true;
+
+         return;
+
+      }
+
+   else if (pevent->m_eevent == ::user::event_set_check)
+   {
+         if (pevent->m_actioncontext.is_user_source())
+         {
+
+            for (auto & pcheck : m_checkptraDevice)
+            {
+
+               ThisApp.m_pview->m_prender->initialize_simple_video(strId);
+
+            }
+
+         }
+
+      }
 
 
    }

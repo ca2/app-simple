@@ -14,6 +14,7 @@ namespace simple_video
 
       __pointer(render)          m_prender;
 
+      //int                        m_iDevice;
 
       view();
       virtual ~view();
