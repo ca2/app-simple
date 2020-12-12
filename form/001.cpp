@@ -139,7 +139,12 @@ namespace simple_form
 
             m_pedit->_001GetText(strText);
 
-            message_box("send_button clicked\nText: " + strText);
+            main_async(__routine([this, strText]()
+               {
+
+                  message_box("send_button clicked\nText: " + strText);
+
+               }));
 
             pevent->m_bRet = true;
 

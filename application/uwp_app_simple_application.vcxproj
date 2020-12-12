@@ -485,22 +485,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\__archive\storage-uwp\binary\Win32\basis\libeay32.dll">
+    <None Include="..\..\..\archive\storage-uwp\binary\Win32\basis\libeay32.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\__archive\storage-uwp\binary\Win32\basis\ssleay32.dll">
+    <None Include="..\..\..\archive\storage-uwp\binary\Win32\basis\ssleay32.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\__archive\storage-uwp\third\binary\Win32\basis\bzip2.dll">
+    <None Include="..\..\..\archive\storage-uwp\third\binary\Win32\basis\bzip2.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\__archive\storage-uwp\third\binary\Win32\basis\pcre.dll">
+    <None Include="..\..\..\archive\storage-uwp\third\binary\Win32\basis\pcre.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\__archive\storage-uwp\third\binary\Win32\basis\sqlite.dll">
+    <None Include="..\..\..\archive\storage-uwp\third\binary\Win32\basis\sqlite.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\__archive\storage-uwp\third\binary\Win32\basis\zlib.dll">
+    <None Include="..\..\..\archive\storage-uwp\third\binary\Win32\basis\zlib.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="uwp_app_simple_application_TemporaryKey.pfx" />
@@ -572,7 +572,7 @@
     <ProjectReference Include="..\..\..\source\app\draw2d_direct2d\u_draw2d_direct2d.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\experience_lite\u_experience_lite.vcxproj">
+    <ProjectReference Include="..\..\app\experience_core\u_experience_core.vcxproj">
       <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
     </ProjectReference>
     <ProjectReference Include="u_app_simple_application.vcxproj">

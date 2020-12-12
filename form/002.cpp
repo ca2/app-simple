@@ -156,15 +156,32 @@ namespace simple_form
          if (pevent->m_id == "send_button")
          {
 
+            string strText1;
+            
+            m_pedit->_001GetText(strText1);
+
+            string strText2;
+
+            m_pcombobox->_001GetText(strText2);
+
             string strText;
 
-            m_pcombobox->_001GetText(strText);
+            strText = strText1 + ";" + strText2;
 
             string strData;
 
             strData = m_pcombobox->get_current_item_string_value();
 
-            message_box("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData+"</h2>");
+            auto routine = [this, strText, strData]()
+            {
+
+               message_box("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
+
+            };
+
+            auto proutine = __routine(routine);
+
+            main_async(proutine);
 
          }
 

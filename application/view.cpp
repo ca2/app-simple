@@ -116,6 +116,7 @@ namespace simple_application
 
    }
 
+
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 

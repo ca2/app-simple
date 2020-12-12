@@ -2,7 +2,6 @@
 #include "aura/update.h"
 
 
-
 namespace simple_form
 {
 
@@ -41,7 +40,6 @@ namespace simple_form
    {
 
       ::user::tab_view::install_message_routing(pchannel);
-      //::userex::pane_tab_view::install_message_routing(pchannel);
 
       MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::_001OnCreate);
 
@@ -97,7 +95,6 @@ namespace simple_form
    {
 
       ::user::tab_view::_001OnDraw(pgraphics);
-      //::userex::pane_tab_view::_001OnDraw(pgraphics);
 
    }
 
@@ -150,7 +147,6 @@ namespace simple_form
          m_pviewLast = nullptr;
 
       }
-
 
    }
 
@@ -231,7 +227,6 @@ namespace simple_form
          {
 
             string strCheck = pevent->m_puie->m_id;
-
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
