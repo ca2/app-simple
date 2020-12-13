@@ -224,7 +224,7 @@ namespace simple_video
 
          m_pdocMenu = puser->create_child_form(this, this, pimpactdata->m_pplaceholder);
 
-         pimpactdata->m_eflag.add(::user::flag_hide_on_kill_focus);
+         pimpactdata->m_eflag.add(::user::e_flag_hide_on_kill_focus);
 
       }
       break;
@@ -239,7 +239,7 @@ namespace simple_video
 
          pview->m_id = pimpactdata->m_id;
 
-         pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
       }
 
@@ -255,7 +255,7 @@ namespace simple_video
 
       string strId = pevent->m_id;
 
-      if (pevent->m_eevent == ::user::event_load_form_data)
+      if (pevent->m_eevent == ::user::e_event_load_form_data)
       {
 
          ::user::impact * pview = m_pdocMenu->get_view(0);
@@ -287,7 +287,7 @@ namespace simple_video
 
       }
 
-   else if (pevent->m_eevent == ::user::event_set_check)
+   else if (pevent->m_eevent == ::user::e_event_set_check)
    {
          if (pevent->m_actioncontext.is_user_source())
          {
