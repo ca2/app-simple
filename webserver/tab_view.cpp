@@ -178,7 +178,7 @@ namespace simple_webserver
 
          pview->m_prender->initialize_simple_drawing(atoi(strId));
 
-         pimpactdata->m_eflag.add(::user::flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
       }
 
