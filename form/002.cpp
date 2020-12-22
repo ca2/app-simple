@@ -6,7 +6,6 @@ namespace simple_form
 {
 
 
-
    simple_form_002::simple_form_002()
    {
 
@@ -128,21 +127,27 @@ namespace simple_form
 
       int y = 100;
 
-      int iHeight = 25;
+      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pstill->display_child(iLeft, y, 200, iHeight);
+      m_pstill->display_child(iLeft, y, 200, sizeStill.cy);
 
-      y += 30;
+      y += sizeStill.cy * 1.25;
 
-      m_pedit->display_child(iLeft-30, y, 200, iHeight);
+      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      y += 30;
+      m_pedit->display_child(iLeft-30, y, 200, sizeEdit.cy);
 
-      m_pcombobox->display_child(iLeft, y, 200, iHeight);
+      y += sizeEdit.cy * 1.25;
 
-      y += 30;
+      auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pbutton->display_child(iLeft-30, y, 200, iHeight);
+      m_pcombobox->display_child(iLeft, y, 200, sizeCombo.cy);
+
+      y += sizeCombo.cy * 1.25;
+
+      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+
+      m_pbutton->display_child(iLeft-30, y, 200, sizeButton.cy);
 
    }
 
@@ -172,16 +177,16 @@ namespace simple_form
 
             strData = m_pcombobox->get_current_item_string_value();
 
-            auto routine = [this, strText, strData]()
-            {
+            //auto routine = [this, strText, strData]()
+            //{
 
                message_box("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
 
-            };
+            //};
 
-            auto proutine = __routine(routine);
+            //auto proutine = __routine(routine);
 
-            main_async(proutine);
+            //main_async(proutine);
 
          }
 

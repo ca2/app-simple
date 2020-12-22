@@ -6,7 +6,6 @@ namespace simple_form
 {
 
 
-
    simple_form_001::simple_form_001()
    {
 
@@ -111,17 +110,21 @@ namespace simple_form
 
       int y = 100;
 
-      int iHeight = 25;
+      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pstill->display_child(iLeft, y, 200, iHeight);
+      m_pstill->display_child(iLeft, y, 200, sizeStill.cy);
 
-      y += 30;
+      y += sizeStill.cy * 1.25;
 
-      m_pedit->display_child(iLeft, y, 600, iHeight);
+      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      y += 30;
+      m_pedit->display_child(iLeft, y, 600, sizeEdit.cy);
 
-      m_pbutton->display_child(iLeft, y, 200, iHeight);
+      y += sizeEdit.cy * 1.25;
+
+      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+
+      m_pbutton->display_child(iLeft, y, 200, sizeButton.cy);
 
    }
 
@@ -139,12 +142,12 @@ namespace simple_form
 
             m_pedit->_001GetText(strText);
 
-            main_async(__routine([this, strText]()
-               {
+            //main_async(__routine([this, strText]()
+              // {
 
                   message_box("send_button clicked\nText: " + strText);
 
-               }));
+               //}));
 
             pevent->m_bRet = true;
 
