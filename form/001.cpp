@@ -112,17 +112,33 @@ namespace simple_form
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
+      auto rectStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
+
+      y += rectStillMargin.top;
+
       m_pstill->display_child(iLeft, y, 200, sizeStill.cy);
 
-      y += sizeStill.cy * 1.25;
+      y += sizeStill.cy;
+
+      y += rectStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
+      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics));
+
+      y += rectEditMargin.top;
+
       m_pedit->display_child(iLeft, y, 600, sizeEdit.cy);
 
-      y += sizeEdit.cy * 1.25;
+      y += sizeEdit.cy;
+
+      y += rectEditMargin.bottom;
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+
+      auto sizeButtonMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics));
+
+      y += sizeButtonMargin.top;
 
       m_pbutton->display_child(iLeft, y, 200, sizeButton.cy);
 
