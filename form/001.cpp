@@ -124,7 +124,7 @@ namespace simple_form
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics));
+      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::user::e_element_none);
 
       y += rectEditMargin.top;
 
