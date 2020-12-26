@@ -116,7 +116,7 @@ namespace simple_form
 
       y += rectStillMargin.top;
 
-      m_pstill->display_child(iLeft, y, 200, sizeStill.cy);
+      m_pstill->display_child(iLeft, y, ceil(sizeStill.cx), ceil(sizeStill.cy));
 
       y += sizeStill.cy;
 
