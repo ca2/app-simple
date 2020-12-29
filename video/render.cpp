@@ -326,7 +326,7 @@ namespace simple_video
    }
 
 
-   ::estatus render::set_font(const string & strFont)
+   ::e_status render::set_font(const string & strFont)
    {
 
       if (strFont.is_empty())

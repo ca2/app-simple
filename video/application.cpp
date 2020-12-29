@@ -33,7 +33,7 @@ namespace simple_video
    }
 
 
-   ::estatus application::create_video()
+   ::e_status application::create_video()
    {
 
       //auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));
@@ -85,7 +85,7 @@ namespace simple_video
    }*/
 
 
-   ::estatus application::init_instance()
+   ::e_status application::init_instance()
    {
 
       set_local_data();

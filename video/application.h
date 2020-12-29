@@ -23,7 +23,7 @@ namespace simple_video
       virtual ~application();
 
       virtual string preferred_experience() override;
-      virtual ::estatus init_instance() override;
+      virtual ::e_status init_instance() override;
       virtual void term_application() override;
 
       virtual void on_request(::create * pcreate) override;
@@ -36,7 +36,7 @@ namespace simple_video
       virtual __pointer(view) create_simple_video_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
-      ::estatus create_video();
+      ::e_status create_video();
 
 
       virtual ::type get_pane_view_type() const;

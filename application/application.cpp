@@ -32,7 +32,7 @@ namespace simple_application
    }
 
 
-   ::estatus application::init_instance()
+   ::e_status application::init_instance()
    {
 
       set_local_data();

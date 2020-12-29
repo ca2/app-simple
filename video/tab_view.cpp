@@ -275,7 +275,7 @@ namespace simple_video
 
             bool bSelected = ThisApp.m_pview->m_prender->m_strDevice == strId;
 
-            pcheckbox->_001SetCheck(bSelected? ::check_checked : ::check_unchecked, ::source_sync);
+            pcheckbox->_001SetCheck(bSelected? ::check_checked : ::check_unchecked, ::e_source_sync);
 
          }
 

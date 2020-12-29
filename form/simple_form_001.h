@@ -13,7 +13,8 @@ namespace simple_form
 
       __composite(::user::still)             m_pstill;
       __composite(::user::plain_edit)        m_pedit;
-      __composite(::user::button)            m_pbutton;
+      __composite(::user::button)            m_pbuttonClear;
+      __composite(::user::button)            m_pbuttonSend;
 
 
       simple_form_001();

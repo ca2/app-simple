@@ -32,7 +32,7 @@ namespace simple_video
 #endif
 
       string get_font();
-      ::estatus set_font(const string& strFont);
+      ::e_status set_font(const string& strFont);
 
       virtual void initialize_simple_video(const string & strDevice);
 

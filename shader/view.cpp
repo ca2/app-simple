@@ -133,7 +133,7 @@ namespace simple_shader
 
             auto pinteraction = GetTypedParent<::user::split_view>()->get_child_by_id("top_edit_view");
 
-            pinteraction->_001SetText(strText,::source_initialize);
+            pinteraction->_001SetText(strText,::e_source_initialize);
 
          }
 

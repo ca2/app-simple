@@ -125,7 +125,7 @@ namespace video_input
 	}
 
 
-	::estatus image_grabber_thread::run()
+	::e_status image_grabber_thread::run()
 	{
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 

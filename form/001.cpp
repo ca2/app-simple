@@ -84,19 +84,31 @@ namespace simple_form
 
       __compose_new(m_pedit);
 
-      __compose_new(m_pbutton);
+      __compose_new(m_pbuttonClear);
+
+      __compose_new(m_pbuttonSend);
 
       m_pstill->create_window(this, "still");
 
       m_pedit->create_window(this, "edit");
 
-      m_pbutton->create_window(this, "send_button");
+      m_pbuttonClear->create_window(this, "clear_button");
+
+      m_pbuttonSend->create_window(this, "send_button");
 
       m_pstill->set_window_text("Enter new text:");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 
-      m_pbutton->set_window_text("Send");
+      string strInitialText;
+
+      strInitialText = Application.data_get("last_text");
+
+      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+
+      m_pbuttonClear->set_window_text("Clear");
+
+      m_pbuttonSend->set_window_text("Send");
 
    }
 
@@ -134,13 +146,23 @@ namespace simple_form
 
       y += rectEditMargin.bottom;
 
-      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto sizeButtonMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics));
+      auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
 
-      y += sizeButtonMargin.top;
+      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
 
-      m_pbutton->display_child(iLeft, y, 200, sizeButton.cy);
+      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
+
+      y += max(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
+
+      auto button_width = max(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
+
+      auto button_height = max(sizeButtonClear.cy, sizeButtonSend.cy);
+
+      m_pbuttonClear->display_child(iLeft, y, button_width, button_height);
+
+      m_pbuttonSend->display_child(iLeft + button_width + 32, y, button_width, button_height);
 
    }
 
@@ -148,10 +170,36 @@ namespace simple_form
    void simple_form_001::on_control_event(::user::control_event * pevent)
    {
 
-      if (pevent->m_eevent == ::user::e_event_button_clicked)
+      if (pevent->m_eevent == ::user::e_event_after_change_text)
       {
 
-         if (pevent->m_id == "send_button")
+         if (pevent->m_actioncontext.is_user_source())
+         {
+
+            if (pevent->m_id == "edit")
+            {
+
+               string strText;
+
+               m_pedit->_001GetText(strText);
+
+               Application.data_set("last_text", strText);
+
+            }
+
+         }
+
+      }
+      else if (pevent->m_eevent == ::user::e_event_button_clicked)
+      {
+
+         if (pevent->m_id == "clear_button")
+         {
+
+            m_pedit->_001SetText("", ::e_source_user);
+
+         }
+         else if (pevent->m_id == "send_button")
          {
 
             string strText;

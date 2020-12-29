@@ -75,7 +75,7 @@ namespace simple_webserver
    }
 
 
-   ::estatus application::create_webserver()
+   ::e_status application::create_webserver()
    {
 
       auto estatus = __compose(m_psocketthread, __new(::netserver::socket_thread < socket >()));
@@ -129,7 +129,7 @@ namespace simple_webserver
    }*/
 
 
-   ::estatus application::init_instance()
+   ::e_status application::init_instance()
    {
 
       set_local_data();
