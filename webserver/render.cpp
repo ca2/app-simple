@@ -198,7 +198,7 @@ namespace simple_webserver
             || m_strFont1.is_empty())
          {
 
-            m_strFont1 = FONT_SANS_EX;
+            m_strFont1 = os_font_name(e_font_sans_ex);
 
          }
 

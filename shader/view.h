@@ -44,7 +44,7 @@ namespace simple_shader
       DECL_GEN_SIGNAL(_001OnDestroy);
       DECL_GEN_SIGNAL(_001OnKeyDown);
 
-      virtual bool keyboard_focus_is_focusable() override;
+      virtual bool keyboard_focus_is_focusable() const override;
 
    };
 

@@ -222,7 +222,7 @@ namespace simple_shader
    }
 
 
-   bool view::keyboard_focus_is_focusable()
+   bool view::keyboard_focus_is_focusable() const
    {
 
       return true;
