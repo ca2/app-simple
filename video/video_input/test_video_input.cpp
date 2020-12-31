@@ -1,6 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-
+#include "_video_input.h"
 
 // TestvideoInput.cpp: „€„„‚„u„t„u„|„‘„u„„ „„„€„‰„{„… „r„‡„€„t„p „t„|„‘ „{„€„~„ƒ„€„|„„~„€„s„€ „„‚„y„|„€„w„u„~„y„‘.
 //

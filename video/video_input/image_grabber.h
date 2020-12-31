@@ -18,7 +18,7 @@ namespace video_input
 
 
 
-		~image_grabber(void);
+		virtual ~image_grabber(void);
 
 		// IUnknown methods
 		STDMETHODIMP QueryInterface(REFIID iid, void ** ppv);

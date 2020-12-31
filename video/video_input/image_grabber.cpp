@@ -1,15 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-#undef Context
-#include <mfapi.h>
-#include <mfidl.h>
-#include <mfobjects.h>
-#include <Shlwapi.h>
-#include "image_grabber.h"
-#include "debug_print_out.h"
-#include "format_reader.h"
-#include "acme/os/windows_common/prop_variant.h"
-
+#include "_video_input.h"
 
 #pragma comment(lib, "mfplat")
 #pragma comment(lib, "mf")
@@ -22,8 +13,19 @@
 namespace video_input
 {
 
+
    image_grabber::image_grabber(::u32 deviceID) : m_cRef(1), m_uDevice(deviceID), m_iMemory(0), m_bClose(false)
    {
+
+      HRESULT hr = MFStartup(MF_VERSION);
+
+      if (FAILED(hr))
+      {
+         debug_print_out * pdebugprintout = &debug_print_out::get_instance();
+
+         pdebugprintout->print_out(L"MEDIA FOUNDATION: It cannot be created!!!\n");
+      }
+
    }
 
 
@@ -249,6 +251,8 @@ namespace video_input
       debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
       comptr< IMFMediaEvent > pEvent;
+
+      //::CoInitialize(NULL);
 
       prop_variant var;
       PropVariantInit(&var);

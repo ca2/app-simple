@@ -1,7 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-#undef Context
-#include "debug_print_out.h"
+#include "_video_input.h"
 
 
 debug_print_out::debug_print_out(void):m_bVerbose(true)

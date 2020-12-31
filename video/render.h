@@ -11,17 +11,19 @@ namespace simple_video
    public:
 
 
-      string                              m_strDevice;
-      string   &                          m_strHoverFontFamilyName;
-      rect                                m_rect;
-      ::user::impact *                    m_pview;
-      string                              m_strFont1;
-      string_map < ::image_pointer >      m_pimagemap;
-      ::image_pointer                     m_imagea[2];
-      ::mutex                             m_mutexa[2];
-      int                                 m_iShow;
+      string                                    m_strDevice;
+      __pointer(::video_input::device)    m_pdevice;
+      string   &                                m_strHoverFontFamilyName;
+      rect                                      m_rect;
+      ::user::impact *                          m_pview;
+      string                                    m_strFont1;
+      string_map < ::image_pointer >            m_pimagemap;
+      ::image_pointer                           m_imagea[2];
+      ::mutex                                   m_mutexa[2];
+      int                                       m_iShow;
+      __composite(video_input::video_input)     m_pvideoinput;
 
-      ::hls                               m_hlsText;
+      ::hls                                     m_hlsText;
 
       render();
       virtual ~render();
@@ -34,7 +36,7 @@ namespace simple_video
       string get_font();
       ::e_status set_font(const string& strFont);
 
-      virtual void initialize_simple_video(const string & strDevice);
+      virtual ::e_status initialize_simple_video(::layered * pobjectContext, const string & strDevice);
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
 
@@ -45,7 +47,7 @@ namespace simple_video
       //virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rect & r, angle angleStart, angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
-      int get_device();
+      ::video_input::device * get_device();
 
       void capture_loop();
 

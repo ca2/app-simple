@@ -1,11 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-#undef Context
-#include <Mfapi.h>
-#include "format_reader.h"
-#include "Strsafe.h"
-#include "acme/os/windows_common/cotaskptr.h"
-#include "acme/os/windows_common/prop_variant.h"
+#include "_video_input.h"
 
 
 LPCWSTR GetGUIDNameConstNew(const GUID& guid);

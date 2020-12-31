@@ -1173,10 +1173,22 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="video_input\debug_print_out.cpp" />
+    <ClCompile Include="video_input\department.cpp" />
     <ClCompile Include="video_input\format_reader.cpp" />
     <ClCompile Include="video_input\image_grabber.cpp" />
     <ClCompile Include="video_input\image_grabber_thread.cpp" />
-    <ClCompile Include="video_input\media_foundation.cpp" />
+    <ClCompile Include="video_input\aaa_media_foundation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="video_input\raw_image.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">true</ExcludedFromBuild>
@@ -1201,9 +1213,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="video_input\video_device.cpp" />
-    <ClCompile Include="video_input\video_device_array.cpp" />
+    <ClCompile Include="video_input\device.cpp" />
+    <ClCompile Include="video_input\device_array.cpp" />
     <ClCompile Include="video_input\video_input.cpp" />
+    <ClCompile Include="video_input\_.cpp" />
+    <ClCompile Include="video_input\_struct.cpp" />
     <ClCompile Include="view.cpp" />
     <ClCompile Include="main_frame.cpp" />
     <ClCompile Include="socket.cpp" />
@@ -1216,14 +1230,18 @@
     <ClInclude Include="socket.h" />
     <ClInclude Include="aaa_socket_thread.h" />
     <ClInclude Include="video_input\debug_print_out.h" />
+    <ClInclude Include="video_input\department.h" />
     <ClInclude Include="video_input\format_reader.h" />
     <ClInclude Include="video_input\image_grabber.h" />
     <ClInclude Include="video_input\image_grabber_thread.h" />
     <ClInclude Include="video_input\media_foundation.h" />
     <ClInclude Include="video_input\aaa_raw_image.h" />
-    <ClInclude Include="video_input\video_device.h" />
-    <ClInclude Include="video_input\video_device_array.h" />
+    <ClInclude Include="video_input\device.h" />
+    <ClInclude Include="video_input\device_array.h" />
     <ClInclude Include="video_input\video_input.h" />
+    <ClInclude Include="video_input\_.h" />
+    <ClInclude Include="video_input\_struct.h" />
+    <ClInclude Include="video_input\_video_input.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="tab_view.h" />

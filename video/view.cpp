@@ -125,12 +125,9 @@ namespace simple_video
 
       string strDevice;
 
-      if (ThisApp.data_get("device", strDevice))
-      {
+      ThisApp.data_get("device", strDevice);
 
-         m_prender->initialize_simple_video(strDevice);
-
-      }
+      m_prender->initialize_simple_video(this, strDevice);
 
    }
 

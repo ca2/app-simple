@@ -1,10 +1,8 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-#undef Context
-#include <Mfapi.h>
+#include "_video_input.h"
 
-
-#include "::image.h"
+#include "image.h"
 
 
 ::image::::image(::u32 size): ri_new(false), ri_pixels(NULL)

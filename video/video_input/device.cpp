@@ -1,21 +1,6 @@
 // https://www.codeproject.com/Tips/559437/Capturing-Video-from-Web-camera_parameters-on-Windows-and-by
 #include "framework.h"
-#undef Context
-#include <mfobjects.h>
-#include <mfidl.h>
-#include <mfapi.h>
-#include <string.h>
-
-#include <Strmif.h>
-
-
-#include "video_device.h"
-#include "format_reader.h"
-#include "debug_print_out.h"
-#include "image_grabber_thread.h"
-#include "image_grabber.h"
-#include "acme/os/windows_common/cotaskptr.h"
-
+#include "_video_input.h"
 #pragma comment(lib, "Strmiids")
 
 namespace video_input
@@ -23,83 +8,120 @@ namespace video_input
 
 
 
-	video_device::video_device(void) : m_bSetup(false), m_elock(e_lock_open), 
-		m_emergencystopcallback(NULL), m_pUserData(NULL)
+	device::device() : 
+		m_bSetup(false),
+		m_elock(e_lock_open), 
+		m_emergencystopcallback(NULL)
 	{
 
 	}
 
-	void video_device::set_camera_parameters(camera_parameters parametrs)
+
+	device::~device()
 	{
+
+		close();
+
+	}
+
+
+	void device::set_camera_parameters(camera_parameters parameters)
+	{
+
 		if (m_bSetup)
 		{
+
 			if (m_pmediasource)
 			{
+
 				::u32 shift = sizeof(parameter);
 
-				parameter * pParametr = (parameter *)(&parametrs);
+				parameter * pParametr = (parameter *)(&parameters);
 
 				parameter * pPrevParametr = (parameter *)(&m_cameraparametersPrevious);
 
-				IAMVideoProcAmp * pProcAmp = NULL;
+				comptr<IAMVideoProcAmp> pProcAmp;
 				HRESULT hr = m_pmediasource->QueryInterface(IID_PPV_ARGS(&pProcAmp));
 
 				if (SUCCEEDED(hr))
 				{
+
 					for (::u32 i = 0; i < 10; i++)
 					{
+
 						if (pPrevParametr[i].m_lCurrentValue != pParametr[i].m_lCurrentValue || pPrevParametr[i].m_lFlag != pParametr[i].m_lFlag)
+						{
+
 							hr = pProcAmp->Set(VideoProcAmp_Brightness + i, pParametr[i].m_lCurrentValue, pParametr[i].m_lFlag);
+
+						}
 
 					}
 
-					pProcAmp->Release();
 				}
 
-				IAMCameraControl * pProcControl = NULL;
+				comptr<IAMCameraControl> pProcControl;
+
 				hr = m_pmediasource->QueryInterface(IID_PPV_ARGS(&pProcControl));
 
 				if (SUCCEEDED(hr))
 				{
+
 					for (::u32 i = 0; i < 7; i++)
 					{
+
 						if (pPrevParametr[10 + i].m_lCurrentValue != pParametr[10 + i].m_lCurrentValue || pPrevParametr[10 + i].m_lFlag != pParametr[10 + i].m_lFlag)
+						{
+
 							hr = pProcControl->Set(CameraControl_Pan + i, pParametr[10 + i].m_lCurrentValue, pParametr[10 + i].m_lFlag);
+
+						}
+
 					}
 
-					pProcControl->Release();
 				}
 
-				m_cameraparametersPrevious = parametrs;
+				m_cameraparametersPrevious = parameters;
+
 			}
+
 		}
+
 	}
 
-	camera_parameters video_device::get_camera_parameters()
+
+	camera_parameters device::get_camera_parameters()
 	{
+
 		camera_parameters out;
 
 		if (m_bSetup)
 		{
+
 			if (m_pmediasource)
 			{
+
 				::u32 shift = sizeof(parameter);
 
 				parameter * pParametr = (parameter *)(&out);
 
-				IAMVideoProcAmp * pProcAmp = NULL;
+				comptr<IAMVideoProcAmp> pProcAmp;
+
 				HRESULT hr = m_pmediasource->QueryInterface(IID_PPV_ARGS(&pProcAmp));
 
 				if (SUCCEEDED(hr))
 				{
+
 					for (::u32 i = 0; i < 10; i++)
 					{
+
 						parameter temp;
 
 						hr = pProcAmp->GetRange(VideoProcAmp_Brightness + i, &temp.m_lMin, &temp.m_lMax, &temp.m_lStep, &temp.m_lDefault, &temp.m_lFlag);
 
 						if (SUCCEEDED(hr))
 						{
+
 							long currentValue = temp.m_lDefault;
 
 							hr = pProcAmp->Get(VideoProcAmp_Brightness + i, &currentValue, &temp.m_lFlag);
@@ -107,25 +129,30 @@ namespace video_input
 							temp.m_lCurrentValue = currentValue;
 
 							pParametr[i] = temp;
+
 						}
+
 					}
 
-					pProcAmp->Release();
 				}
 
-				IAMCameraControl * pProcControl = NULL;
+				comptr<IAMCameraControl> pProcControl;
+
 				hr = m_pmediasource->QueryInterface(IID_PPV_ARGS(&pProcControl));
 
 				if (SUCCEEDED(hr))
 				{
+
 					for (::u32 i = 0; i < 7; i++)
 					{
+
 						parameter temp;
 
 						hr = pProcControl->GetRange(CameraControl_Pan + i, &temp.m_lMin, &temp.m_lMax, &temp.m_lStep, &temp.m_lDefault, &temp.m_lFlag);
 
 						if (SUCCEEDED(hr))
 						{
+
 							long currentValue = temp.m_lDefault;
 
 							hr = pProcAmp->Get(CameraControl_Pan + i, &currentValue, &temp.m_lFlag);
@@ -133,31 +160,31 @@ namespace video_input
 							temp.m_lCurrentValue = currentValue;
 
 							pParametr[10 + i] = temp;
+
 						}
+
 					}
 
-					pProcControl->Release();
 				}
+
 			}
+
 		}
 
 		return out;
+
 	}
 
-	long video_device::resetDevice(IMFActivate * pActivate)
+
+	long device::resetDevice(IMFActivate * pActivate)
 	{
-		HRESULT hr = -1;
+
+		HRESULT hr = E_FAIL;
 
 		m_mediatypea.clear();
 
-		//if (m_strFriendlyName)
-			//CoTaskMemFree(m_strFriendlyName);
-
-		//m_strFriendlyName = NULL;
-
 		if (pActivate)
 		{
-			IMFMediaSource * pSource = NULL;
 
 			cotaskptr < PWCHAR > pFriendlyName;
 
@@ -169,40 +196,32 @@ namespace video_input
 
 			m_strName = pFriendlyName;
 
-			//::CoTaskMemFree(pFriendlyName);
-
-
-			hr = pActivate->ActivateObject(
-				__uuidof(IMFMediaSource),
-				(void **)&pSource
-			);
-
-			enumerateCaptureFormats(pSource);
-
-			buildLibraryofTypes();
-
-
-
-			::acme::del(pSource);
-
-
+			hr = pActivate->ActivateObject(__uuidof(IMFMediaSource), (void **) &m_pmediasource);
 
 			if (FAILED(hr))
 			{
-				//m_strFriendlyName = NULL;
 
 				m_strName.Empty();
 
 				debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
 				pdebugprintout->print_out(L"VIDEODEVICE %i: IMFMediaSource interface cannot be created \n", m_uCurrentNumber);
+
+				return hr;
+
 			}
+
+			enumerateCaptureFormats();
+
+			buildLibraryofTypes();
+
 		}
 
 		return hr;
+
 	}
 
-	long video_device::readInfoOfDevice(IMFActivate * pActivate, ::u32 Num)
+	long device::readInfoOfDevice(IMFActivate * pActivate, ::u32 Num)
 	{
 		HRESULT hr = -1;
 
@@ -211,9 +230,11 @@ namespace video_input
 		hr = resetDevice(pActivate);
 
 		return hr;
+
 	}
 
-	long video_device::checkDevice(IMFAttributes * pAttributes, IMFActivate ** pDevice)
+
+	long device::checkDevice(IMFAttributes * pAttributes, IMFActivate ** pDevice)
 	{
 		HRESULT hr = S_OK;
 
@@ -297,8 +318,10 @@ namespace video_input
 		return hr;
 	}
 
-	long video_device::initDevice()
+
+	long device::initDevice()
 	{
+
 		HRESULT hr = -1;
 
 		comptr<IMFAttributes > pAttributes;
@@ -307,12 +330,11 @@ namespace video_input
 
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
-		CoInitialize(NULL);
-
 		hr = MFCreateAttributes(&pAttributes, 1);
 
 		if (SUCCEEDED(hr))
 		{
+
 			hr = pAttributes->SetGUID(
 				MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE,
 				MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_GUID
@@ -321,6 +343,7 @@ namespace video_input
 
 		if (SUCCEEDED(hr))
 		{
+
 			hr = checkDevice(pAttributes, &pactivate);
 
 			if (SUCCEEDED(hr) && pactivate)
@@ -354,7 +377,7 @@ namespace video_input
 	}
 
 
-	media video_device::get_format(::u32 id)
+	media device::get_format(::u32 id)
 	{
 
 		if (id < m_mediatypea.size())
@@ -372,31 +395,37 @@ namespace video_input
 
 	}
 
-	int video_device::get_format_count()
+
+	int device::get_format_count()
 	{
+
 		return m_mediatypea.size();
+
 	}
 
-	void video_device::set_emergency_stop_event(void * userData, void(*func)(int, void *))
+
+	void device::set_emergency_stop_event(void(*func)(int, void *))
 	{
+
 		m_emergencystopcallback = func;
 
-		m_pUserData = userData;
 	}
 
-	void video_device::close_device()
+
+	void device::close()
 	{
+
 		if (m_bSetup)
 		{
+
 			m_bSetup = false;
 
 			m_pmediasource->Stop();
 
 			if (m_elock == e_lock_raw_data)
 			{
-				m_pthreadImageGrabber->set_finish(&System);
 
-				//WaitForSingleObject(m_pthreadImageGrabber->getMutexHandle(), 5000);
+				m_pthreadImageGrabber->set_finish(&System);
 
 				m_pthreadImageGrabber.release();
 
@@ -413,8 +442,9 @@ namespace video_input
 	}
 
 
-	::u32 video_device::get_width()
+	::u32 device::get_width()
 	{
+
 		if (m_bSetup)
 		{
 
@@ -426,10 +456,13 @@ namespace video_input
 			return 0;
 
 		}
+
 	}
 
-	::u32 video_device::get_height()
+
+	::u32 device::get_height()
 	{
+
 		if (m_bSetup)
 		{
 
@@ -445,29 +478,63 @@ namespace video_input
 
 	}
 
-	IMFMediaSource * video_device::get_media_source()
+
+	::size device::get_size()
 	{
+
+		if (m_bSetup)
+		{
+
+			return m_size;
+
+		}
+		else
+		{
+
+			return {};
+
+		}
+
+	}
+
+
+	IMFMediaSource * device::get_media_source()
+	{
+
 		IMFMediaSource * out = NULL;
 
 		if (m_elock == e_lock_open)
 		{
+
 			m_elock = e_lock_media_source;
 
 			out = m_pmediasource;
+
 		}
 
 		return out;
+
 	}
 
-	int video_device::findType(::u32 size, ::u32 frameRate)
+
+	int device::findType(::u32 size, ::u32 frameRate)
 	{
+
 		if (m_mapCaptureFormat.size() == 0)
+		{
+
 			return 0;
+
+		}
 
 		auto & FRM = m_mapCaptureFormat[size];
 
 		if (FRM.size() == 0)
+		{
+
 			return 0;
+
+		}
 
 		::u32 frameRateMax = 0;  
 		
@@ -478,29 +545,41 @@ namespace video_input
 
 			for (auto & pair :FRM)
 			{
+
 				if (pair.element1() >= frameRateMax)
 				{
+
 					frameRateMax = pair.element1();
 
 					psubtypemap = &pair.element2();
+
 				}
+
 			}
 
 		}
 		else
 		{
+
 			for (auto & pair : FRM)
 			{
+
 				if (pair.element1() >= frameRateMax)
 				{
+
 					if (frameRate > pair.element1())
 					{
+
 						frameRateMax = pair.element1();
 
 						psubtypemap = &pair.element2();
+
 					}
+
 				}
+
 			}
+
 		}
 
 		if (!psubtypemap || psubtypemap->is_empty())
@@ -510,20 +589,25 @@ namespace video_input
 
 		}
 
-
 		auto & it = psubtypemap->begin();
 
 		auto n = it->element2();
 
 		if (n.size() == 0)
+		{
+
 			return 0;
+
+		}
 
 		return n[0];
 
 	}
 
-	void video_device::buildLibraryofTypes()
+
+	void device::buildLibraryofTypes()
 	{
+
 		::u32 size;
 
 		::u32 framerate;
@@ -532,6 +616,7 @@ namespace video_input
 
 		for (auto & mediatype :m_mediatypea)
 		{
+
 			size = mediatype.m_uFrameSize;
 
 			framerate = mediatype.m_uFrameRate;
@@ -553,58 +638,64 @@ namespace video_input
 			//m_mapCaptureFormat[size] = FRM;
 
 			m_cCount++;
+
 		}
+
 	}
 
-	long video_device::setDeviceFormat(IMFMediaSource * pSource, unsigned long  dwFormatIndex)
+
+	long device::setDeviceFormat(IMFMediaSource * pSource, unsigned long  dwFormatIndex)
 	{
+
 		comptr<IMFPresentationDescriptor> ppresentationdescriptor;
 		comptr < IMFStreamDescriptor> pstreamdescriptor;
 		comptr <IMFMediaTypeHandler > pmediatypehandler;
 		comptr < IMFMediaType> pmediatype;
 
 		HRESULT hr = pSource->CreatePresentationDescriptor(&ppresentationdescriptor);
+
 		if (FAILED(hr))
 		{
-			goto done;
+
+			return hr;
+
 		}
 
 		BOOL fSelected;
 		hr = ppresentationdescriptor->GetStreamDescriptorByIndex(0, &fSelected, &pstreamdescriptor);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		hr = pstreamdescriptor->GetMediaTypeHandler(&pmediatypehandler);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		hr = pmediatypehandler->GetMediaTypeByIndex((DWORD)dwFormatIndex, &pmediatype);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		hr = pmediatypehandler->SetCurrentMediaType(pmediatype);
 
-	done:
-		//SafeReleaseAllCount(&ppresentationdescriptor);
-		//::acme::del(pstreamdescriptor);
-		//::acme::del(pmediatypehandler);
-		//::acme::del(pmediatype);
 		return hr;
+
 	}
 
-	bool video_device::is_device_setup()
+
+	bool device::is_setup()
 	{
+
 		return m_bSetup;
+
 	}
 
 
-	::memory * video_device::get_out_memory()
+	::memory * device::get_out_memory()
 	{
 
 		if (!m_bSetup) return NULL;
@@ -621,12 +712,28 @@ namespace video_input
 
 			pdebugprintout->print_out(L"VIDEODEVICE %i: The instance of image_grabber_thread class does not exist  \n", m_uCurrentNumber);
 		}
-		return NULL;
+
+		return nullptr;
+
 	}
 
-	bool video_device::is_frame_new()
+
+	bool device::is_frame_new()
 	{
-		if (!m_bSetup) return false;
+
+		if (!m_bSetup)
+		{
+
+			return false;
+
+		}
+
+		if (is_media_source())
+		{
+
+			return false;
+
+		}
 
 		if (m_elock == e_lock_raw_data || m_elock == e_lock_open)
 		{
@@ -636,9 +743,7 @@ namespace video_input
 
 				image_grabber_thread * temp;
 
-				HRESULT hr = image_grabber_thread::CreateInstance(&temp, m_pmediasource, m_uCurrentNumber);
-
-				m_pthreadImageGrabber.reset(temp);
+				HRESULT hr = image_grabber_thread::CreateInstance(&temp, m_pmediasource, m_uCurrentNumber, m_emergencystopcallback);
 
 				if (FAILED(hr))
 				{
@@ -648,12 +753,14 @@ namespace video_input
 
 					return false;
 				}
+				m_pthreadImageGrabber.reset(temp);
 
-				m_pthreadImageGrabber->set_emergency_stop_event(m_pUserData, m_emergencystopcallback);
 
-				m_pthreadImageGrabber->start();
+				//m_pthreadImageGrabber->set_emergency_stop_event();
 
-				return true;
+				//m_pthreadImageGrabber->start();
+
+				return false;
 			}
 
 			if (m_pthreadImageGrabber.get())
@@ -668,22 +775,96 @@ namespace video_input
 		return false;
 	}
 
-	bool video_device::is_device_media_source()
-	{
-		if (m_elock == e_lock_media_source) return true;
 
-		return false;
+	string device::get_id2()
+	{
+
+		return System.crypto_md5_text(m_strName);
+
 	}
 
-	bool video_device::is_device_raw_data_source()
-	{
-		if (m_elock == e_lock_raw_data) return true;
 
-		return false;
+	bool device::get_pixels(color32_t * dstBuffer, bool flipRedAndBlue, bool flipImage)
+	{
+		bool success = false;
+
+		::u32 bytes = 4;
+
+		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
+
+		if (!is_raw_data_source())
+		{
+
+			
+			pdebugprintout->print_out(L"ERROR: GetPixels() - Unable to grab frame for device %s\n", m_strName.c_str());
+
+			return false;
+
+		}
+
+		auto pmemory =get_out_memory();
+
+		if (pmemory)
+		{
+			::u32 height = get_height();
+			::u32 width = get_width();
+
+			::u32 size = bytes * width * height;
+
+			if (size == pmemory->size())
+			{
+
+				processPixels((color32_t *)pmemory->get_data(), dstBuffer, width, height, bytes, flipRedAndBlue, flipImage);
+
+				pmemory->m_eobject -= e_object_changed;
+
+				success = true;
+
+			}
+			else
+			{
+				pdebugprintout->print_out(L"ERROR: GetPixels() - bufferSizes do not match!\n");
+			}
+		}
+
+		return true;
+
 	}
 
-	bool video_device::setup_device(::u32 id)
+
+	bool device::is_media_source()
 	{
+
+		if (m_elock == e_lock_media_source)
+		{
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+
+
+	bool device::is_raw_data_source()
+	{
+		
+		if (m_elock == e_lock_raw_data)
+		{
+
+			return true;
+
+		}
+
+		return false;
+
+	}
+
+
+	bool device::setup_device(::u32 id)
+	{
+
 		debug_print_out * pdebugprintout = &debug_print_out::get_instance();
 
 		if (!m_bSetup)
@@ -722,7 +903,7 @@ namespace video_input
 		}
 	}
 
-	bool video_device::setup_device(::u32 w, ::u32 h, ::u32 idealFramerate)
+	bool device::setup_device(::u32 w, ::u32 h, ::u32 idealFramerate)
 	{
 		::u32 id = findType(w * h, idealFramerate);
 
@@ -730,7 +911,7 @@ namespace video_input
 	}
 
 	
-	string video_device::get_name()
+	string device::get_name()
 	{
 		
 		return m_strName;
@@ -738,45 +919,40 @@ namespace video_input
 	}
 
 
-	video_device::~video_device(void)
+
+
+	long device::enumerateCaptureFormats()
 	{
 
-		close_device();
-
-	}
-
-
-	long video_device::enumerateCaptureFormats(IMFMediaSource * pSource)
-	{
 		comptr<IMFPresentationDescriptor> ppresentationdescriptor;
 		comptr<IMFStreamDescriptor> pstreamdescriptor;
 		comptr<IMFMediaTypeHandler> pmediatypehandler;
 		comptr<IMFMediaType> pmediatype;
 
-		HRESULT hr = pSource->CreatePresentationDescriptor(&ppresentationdescriptor);
+		HRESULT hr = m_pmediasource->CreatePresentationDescriptor(&ppresentationdescriptor);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		BOOL fSelected;
 		hr = ppresentationdescriptor->GetStreamDescriptorByIndex(0, &fSelected, &pstreamdescriptor);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		hr = pstreamdescriptor->GetMediaTypeHandler(&pmediatypehandler);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		DWORD cTypes = 0;
 		hr = pmediatypehandler->GetMediaTypeCount(&cTypes);
 		if (FAILED(hr))
 		{
-			goto done;
+			return hr;
 		}
 
 		for (DWORD i = 0; i < cTypes; i++)
@@ -785,19 +961,15 @@ namespace video_input
 
 			if (FAILED(hr))
 			{
-				goto done;
+				return hr;
 			}
 
 			media MT = format_reader::Read(pmediatype);
 
 			m_mediatypea.push_back(MT);
 
-			//SafeReleaseAllCount(&pmediatype);
 		}
 
-	done:
-		
-		///SafeReleaseAllCount(&ppresentationdescriptor);
 		
 		return hr;
 

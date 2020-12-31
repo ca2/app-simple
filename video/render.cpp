@@ -1,7 +1,7 @@
 #include "framework.h"
 #include "aura/id.h"
 #include <math.h>
-#include "video_input/video_input.h"
+#include "video_input/_.h"
 
 void video_input_stop_event(int deviceID, void * userData);
 CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
@@ -58,12 +58,10 @@ namespace simple_video
 
    }
 
-   int render::get_device()
+   ::video_input::device * render::get_device()
    {
 
-      auto & videoinput = ::video_input::video_input::get_instance();
-
-      return videoinput.get_video_device_index(m_strDevice);
+      return m_pdevice;
 
    }
 
@@ -75,9 +73,7 @@ namespace simple_video
       while (::thread_get_run())
       {
 
-         auto & videoinput = ::video_input::video_input::get_instance();
-
-         if (videoinput.is_frame_new(get_device()))
+         if (m_pdevice && m_pdevice->is_frame_new())
          {
 
             int iVideo;
@@ -133,26 +129,45 @@ namespace simple_video
 
       auto & pimage = m_imagea[iCapture];
 
-      auto & videoinput = ::video_input::video_input::get_instance();
-
-      videoinput.get_pixels(get_device(), pimage->get_data());
+      m_pdevice->get_pixels(pimage->get_data());
 
    }
 
 
-   void render::initialize_simple_video(const string & strDevice)
+   ::e_status render::initialize_simple_video(::layered * pobjectContext, const string & strDevice)
    {
+
+      auto estatus = ::object::initialize(pobjectContext);
+
+      if (!estatus)
+      {
+
+         return estatus;
+
+      }
+
+      if (!m_pvideoinput)
+      {
+
+         estatus = __compose(m_pvideoinput);
+
+         if (!estatus)
+         {
+
+            return estatus;
+
+         }
+
+      }
 
       initialize_application_consumer();
       
-      auto & videoinput = ::video_input::video_input::get_instance();
+      m_pdevice = m_pvideoinput->get_device_by_id2(strDevice);
 
-      auto iDevice = videoinput.get_video_device_index(strDevice);
-
-      if(iDevice < 0)
+      if(!m_pdevice)
       { 
       
-         return;
+         return estatus;
       
       }
 
@@ -163,35 +178,30 @@ namespace simple_video
       if (strDevice.is_empty())
       {
 
-         __throw(invalid_argument_exception());
-
-         return;
+         return ::error_invalid_argument;
 
       }
 
-      if (videoinput.setup_device(get_device(), 1920, 1080, 60))
+      if (m_pdevice->setup_device( 1920, 1080, 60))
       {
 
-         videoinput.set_emergency_stop_event(get_device(), NULL, &video_input_stop_event);
+         m_pdevice->set_emergency_stop_event(&video_input_stop_event);
 
-         //if (videoinput.is_frame_new(m_iDevice))
-         //{
-         
-            int countLeftFrames = 0;
+         int countLeftFrames = 0;
 
-            m_imagea[0].create(e_create);
-            m_imagea[1].create(e_create);
+         m_imagea[0].create(e_create);
+         m_imagea[1].create(e_create);
 
-            m_imagea[0]->create(videoinput.get_width(get_device()), videoinput.get_height(get_device()));
-            m_imagea[1]->create(videoinput.get_width(get_device()), videoinput.get_height(get_device()));
-            m_iShow = 0;
+         m_imagea[0]->create(m_pdevice->get_size());
+         m_imagea[1]->create(m_pdevice->get_size());
+         m_iShow = 0;
 
-            fork([this]()
-               {
+         fork([this]()
+            {
 
-                  capture_loop();
+               capture_loop();
 
-               });
+            });
 
 
                   //else
@@ -305,6 +315,8 @@ namespace simple_video
       //   m_hlsText = color.get_hls();
 
       //}
+
+      return ::success;
 
    }
 

@@ -2,6 +2,7 @@
 #include "aura/application.h"
 #include "aura/update.h"
 #include "_video.h"
+#include "video_input/_.h"
 
 
 
@@ -11,6 +12,8 @@ namespace simple_video
 
    application::application()
    {
+
+      create_factory < ::video_input::video_input >();
 
       m_ptemplateSimpleDrawingMain = nullptr;
 
@@ -96,6 +99,10 @@ namespace simple_video
       create_factory <::user::button_view >();
       create_factory <::simple_video::view >();
       create_factory <::simple_video::tab_view >();
+      create_factory <::video_input::department >();
+
+
+
 
       default_toggle_check_handling(id_simple_checkbox);
 
@@ -105,6 +112,15 @@ namespace simple_video
       {
 
          return false;
+
+      }
+
+      auto estatus = __compose(m_pdepartment);
+
+      if (!estatus)
+      {
+
+         return estatus;
 
       }
 

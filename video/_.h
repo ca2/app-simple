@@ -25,6 +25,15 @@ namespace simple_video
 } // namespace flag
 
 
+namespace video_input
+{
+
+   class video_input;
+
+} // namespace video_input
+
+#include "video_input/_.h"
+
 
 #include "render.h"
 

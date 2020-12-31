@@ -18,6 +18,7 @@ namespace simple_video
       tab_view *                                      m_ptabview;
       __composite(::netserver::socket_thread_base)    m_psocketthread;
       __pointer(view)                                 m_pview;
+      __composite(::video_input::department)          m_pdepartment;
 
       application();
       virtual ~application();

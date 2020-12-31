@@ -1,16 +1,14 @@
 #include "framework.h"
 #include "aura/update.h"
-#include "video_input/video_input.h"
-#include "video_input/video_device_array.h"
-#include "video_input/video_device.h"
+#include "video_input/_.h"
 
 
 void video_input_stop_event(int deviceID, void * userData)
 {
    
-   auto & videoinput = ::video_input::video_input::get_instance();
+   auto pdevice = (::video_input::device *)userData;
 
-   videoinput.close_device(deviceID);
+   pdevice->close();
 
 }
 
@@ -116,20 +114,7 @@ namespace simple_video
       if (get_view_id() == MENU_IMPACT)
       {
 
-         auto str = prepare_menu_view();
-
-         if (!m_pdocMenu->open_document(str))
-         {
-
-            GetParentFrame()->message_box("Failed to open the menu.");
-
-            return;
-
-         }
-
-         ::user::impact * pview = m_pdocMenu->get_view(0);
-
-         pview->set_need_load_form_data();
+         refresh_menu_view();
 
       }
 
@@ -159,48 +144,65 @@ namespace simple_video
    }
 
 
-   string tab_view::prepare_menu_view()
+   void tab_view::refresh_menu_view()
    {
 
-      string strHtml;
+      auto proutine = __routine([this]()
+         {
 
-      string strBilbo;
+            m_checkptraDevice.set_size(ThisApp.m_pview->m_prender->m_pvideoinput->device_count());
 
-      auto & videoinput = ::video_input::video_input::get_instance();
+            string strHtml;
 
-      auto cCount = videoinput.list_devices();
+            string strBilbo;
 
-      m_checkptraDevice.set_size(cCount);
+            strHtml += "<html>";
+            strHtml += "<head>";
+            strHtml += "</head>";
+            strHtml += "<body>";
 
-      strHtml += "<html>";
-      strHtml += "<head>";
-      strHtml += "</head>";
-      strHtml += "<body>";
+            for (int i = 0; i < m_checkptraDevice.get_count(); i++)
+            {
 
-      for (int i = 0; i < cCount; i++)
-      {
+               string strName;
 
-         string strName;
+               auto pdevice = ThisApp.m_pview->m_prender->m_pvideoinput->device_at(i);
 
-         strName = videoinput.get_video_device_name(i);
+               strName = pdevice->get_name();
 
-         string strId;
+               string strId;
 
-         strId = videoinput.get_video_device_id2(i);
+               strId = pdevice->get_id2();
 
-         strHtml +="<input type = \"checkbox\" id=\"" + strId + "\" /><h1>" + strName + "</h1><br/>\n";
+               strHtml += "<input type = \"checkbox\" id=\"" + strId + "\" /><h1>" + strName + "</h1><br/>\n";
 
-      }
+            }
 
-      strHtml += "</body>";
+            strHtml += "</body>";
 
-      ::file::path path;
+            ::file::path path;
 
-      path = Context.dir().appdata() / "menu.html";
+            path = Context.dir().appdata() / "menu.html";
 
-      Context.file().put_contents(path, strHtml);
-   
-      return path;
+            Context.file().put_contents(path, strHtml);
+
+            if (!m_pdocMenu->open_document(path))
+            {
+
+               GetParentFrame()->message_box("Failed to open the menu.");
+
+               return;
+
+            }
+
+            ::user::impact * pview = m_pdocMenu->get_view(0);
+
+            pview->set_need_load_form_data();
+
+         });
+
+      ThisApp.m_pview->m_prender->m_pvideoinput->refresh_device_list(proutine);
+
 
    }
 
@@ -264,12 +266,10 @@ namespace simple_video
 
          auto puiRollFps = pview->get_child_by_id("roll_fps");
 
-         auto & videodevicearray = ::video_input::video_device_array::get_instance();
-
-         for (auto & videodevice : videodevicearray.m_deviceptra)
+         for (auto & pdevice : ThisApp.m_pview->m_prender->m_pvideoinput->devicea())
          {
 
-            string strId = System.crypto_md5_text(videodevice->m_strName);
+            string strId = System.crypto_md5_text(pdevice->m_strName);
 
             auto pcheckbox = pview->get_child_by_id(strId);
 
@@ -295,7 +295,7 @@ namespace simple_video
             for (auto & pcheck : m_checkptraDevice)
             {
 
-               ThisApp.m_pview->m_prender->initialize_simple_video(strId);
+               ThisApp.m_pview->m_prender->initialize_simple_video(this, strId);
 
             }
 

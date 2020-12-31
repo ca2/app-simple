@@ -24,35 +24,12 @@ namespace video_input
 		//friend DWORD WINAPI MainThreadFunction(LPVOID lpParam);
 
 	public:
-		~image_grabber_thread(void);
 
-		static HRESULT CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, ::u32 deviceID);
-
-		void start();
-
-		void stop();
-
-		void set_emergency_stop_event(void * userData, void(*func)(int, void *));
-
-		image_grabber * get_image_grabber();
-
-		//HANDLE getMutexHandle();
-
-	//protected:
-
-		virtual ::e_status run() override;
-
-	//private:
-
-		image_grabber_thread(IMFMediaSource * pSource, ::u32 deviceID);
-
-		//HANDLE m_handle;
-
-		//HANDLE m_hMutex;
-
-		///DWORD   m_dwThreadIdArray;
+		HRESULT m_hresult;
 
 		comptr < image_grabber > m_pimagegrabber;
+
+		comptr < IMFMediaSource > m_psource;
 
 		emergensyStopEventCallback igt_func;
 
@@ -61,6 +38,38 @@ namespace video_input
 		bool m_bStop;
 
 		::u32 m_uDevice;
+		image_grabber_thread(IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *));
+
+		virtual ~image_grabber_thread();
+
+		static HRESULT CreateInstance(image_grabber_thread ** ppIGT, IMFMediaSource * pSource, ::u32 deviceID, void(*func)(int, void *));
+
+		HRESULT __create_instance();
+
+		void start();
+
+		void stop();
+
+		void set_emergency_stop_event(void(*func)(int, void *));
+
+		image_grabber * get_image_grabber();
+
+		//HANDLE getMutexHandle();
+
+	//protected:
+
+		virtual ::e_status init_thread() override;
+		virtual ::e_status run() override;
+
+	//private:
+
+
+		//HANDLE m_handle;
+
+		//HANDLE m_hMutex;
+
+		///DWORD   m_dwThreadIdArray;
+
 
 	};
 

@@ -27,7 +27,7 @@ namespace simple_video
       virtual ~tab_view();
 
       
-      string prepare_menu_view();
+      void refresh_menu_view();
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;
