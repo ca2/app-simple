@@ -13,7 +13,7 @@ namespace video_input
 	}
 		
 		
-		::estatus media_foundation::initialize_media_foundation(::layered * pobjectContext);)
+		::e_status media_foundation::initialize_media_foundation(::layered * pobjectContext);)
 	{
 
 		m_pvideoinput = pvideoinput;

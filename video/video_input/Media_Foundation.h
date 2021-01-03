@@ -17,7 +17,7 @@
 //		virtual ~media_foundation(void);
 //
 //
-//		::estatus media_foundation::initialize_media_foundation(::layered * pobjectContext);)
+//		::e_status media_foundation::initialize_media_foundation(::layered * pobjectContext);)
 //
 //		bool buildListOfDevices();
 //

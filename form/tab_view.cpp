@@ -55,7 +55,6 @@ namespace simple_form
       add_tab("Menu",MENU_IMPACT);
       add_tab("001", "form1");
       add_tab("002", "form2");
-      add_tab("Open", FILEMANAGER_IMPACT);
 
       string strForm;
 
