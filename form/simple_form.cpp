@@ -12,7 +12,7 @@ namespace simple_form
 
       ON_WM_RBUTTONUP
       {
-         //SCAST_PTR(::message::mouse, pmouse, pmessage);
+         //__pointer(::message::mouse) pmouse(pmessage);
          //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
          //index iLine;
          //index iToken;
@@ -117,7 +117,7 @@ namespace simple_form
    void simple_form::_001OnCreate(::message::message * pmessage)
    {
 
-      SCAST_PTR(::message::create, pcreate, pmessage);
+      __pointer(::message::create) pcreate(pmessage);
 
       pcreate->previous();
 

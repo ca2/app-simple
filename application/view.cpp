@@ -79,7 +79,7 @@ namespace simple_application
    void view::_001OnCreate(::message::message * pmessage)
    {
 
-      SCAST_PTR(::message::create,pcreate,pmessage);
+      __pointer(::message::create) pcreate(pmessage);
 
       pcreate->previous();
 
@@ -149,7 +149,31 @@ namespace simple_application
 
       pgraphics->set(m_pfontThomasBS_);
 
-      pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pview->_001OnDraw(pgraphics);");
+      //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pview->_001OnDraw(pgraphics);");
+      
+      string strText = "psimpleapplication->m_pview->_001OnDraw(pgraphics);";
+
+      auto size = pgraphics->GetTextExtent(strText);
+
+      ::point point;
+
+      bool bFixedPosition = true;
+
+      if (bFixedPosition)
+      {
+
+         point = { 10, 10 };
+
+      }
+      else
+      {
+       
+         point.x = __random(0, (int)(rectClient.width() - size.cx));
+         point.y = __random(0, (int)(rectClient.height() - size.cy));
+
+      }
+
+      pgraphics->text_out(point.x, point.y, strText);
 
    }
 

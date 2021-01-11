@@ -189,7 +189,7 @@ namespace simple_video
             if (!m_pdocMenu->open_document(path))
             {
 
-               GetParentFrame()->message_box("Failed to open the menu.");
+               get_parent_frame()->message_box("Failed to open the menu.");
 
                return;
 

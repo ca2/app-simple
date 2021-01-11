@@ -120,7 +120,7 @@ namespace notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < simple_drawing::document >()->get_typed_view < ::user::tab_view >()->GetTopLevelFrame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < simple_drawing::document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 
