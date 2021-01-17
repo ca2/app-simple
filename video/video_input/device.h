@@ -19,7 +19,7 @@ namespace video_input
 
 	using subtype_map = string_map < int_array >;
 
-	using frame_rate_map = map < ::u64, ::u64, subtype_map >;
+	using frame_rate_map = map < ::u64, subtype_map >;
 
 	typedef void(*emergensyStopEventCallback)(int, void *);
 
@@ -46,7 +46,7 @@ namespace video_input
 
 		bool												m_bSetup;
 
-		map < ::u64, ::u64, frame_rate_map>		m_mapCaptureFormat;
+		map < u64, frame_rate_map>					m_mapCaptureFormat;
 
 		::array < media >								m_mediatypea;
 

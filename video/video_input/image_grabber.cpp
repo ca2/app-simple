@@ -76,27 +76,27 @@ namespace video_input
       hr = pSource->CreatePresentationDescriptor(&ppresentationdescriptor);
       if (FAILED(hr))
       {
-         goto err;
+         return hr;
       }
 
       BOOL fSelected;
       hr = ppresentationdescriptor->GetStreamDescriptorByIndex(0, &fSelected, &pstreamdescriptor);
       if (FAILED(hr))
       {
-         goto err;
+         return hr;
       }
 
       hr = pstreamdescriptor->GetMediaTypeHandler(&pmediatypehandler);
       if (FAILED(hr))
       {
-         goto err;
+         return hr;
       }
 
       DWORD cTypes = 0;
       hr = pmediatypehandler->GetMediaTypeCount(&cTypes);
       if (FAILED(hr))
       {
-         goto err;
+         return hr;
       }
 
       if (cTypes > 0)
@@ -105,13 +105,13 @@ namespace video_input
 
          if (FAILED(hr))
          {
-            goto err;
+            return hr;
          }
 
          MT = format_reader::Read(pCurrentType);
       }
 
-   err:
+   //err:
 //      SafeReleaseAllCount(&ppresentationdescriptor);
   //    ::acme::del(pstreamdescriptor);
     //  ::acme::del(pmediatypehandler);

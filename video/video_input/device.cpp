@@ -399,7 +399,7 @@ namespace video_input
 	int device::get_format_count()
 	{
 
-		return m_mediatypea.size();
+		return (int) m_mediatypea.size();
 
 	}
 
@@ -589,7 +589,7 @@ namespace video_input
 
 		}
 
-		auto & it = psubtypemap->begin();
+		auto it = psubtypemap->begin();
 
 		auto n = it->element2();
 

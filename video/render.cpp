@@ -331,7 +331,7 @@ namespace simple_video
       if (m_imagea[m_iShow])
       {
 
-         pgraphics->draw_at(point(), m_imagea[m_iShow]);
+         pgraphics->draw(m_imagea[m_iShow]);
 
       }
 
