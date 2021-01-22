@@ -58,6 +58,10 @@ target_precompile_headers(app_simple_form PRIVATE framework.h)
 
 set_target_properties(app_simple_form PROPERTIES LINKER_LANGUAGE CXX)
 
+
+#target_compile_definitions(app_simple_form PRIVATE _APP_ID="app-simple/form")
+
+
 if (MSVC)
    target_compile_options(app_simple_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(app_simple_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
@@ -69,8 +73,9 @@ elseif (LINUX)
    target_link_options(app_simple_form PRIVATE -Wl,-rpath=\$ORIGIN)
    target_link_libraries(app_simple_form PRIVATE acme apex aqua aura axis base)
    target_link_options(app_simple_form PRIVATE -Wl,-z,defs)
-   add_dependencies(app_simple_form draw2d_cairo imaging_freeimage)
+   add_dependencies(app_simple_form draw2d_cairo imaging_freeimage node_gnome)
 endif ()
+
 
 add_dependencies(app_simple_form experience_tranquillum)
 
