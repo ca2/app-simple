@@ -91,13 +91,13 @@ namespace simple_form
 
       __compose_new(m_pbutton);
 
-      m_pstill->create_child(this);
+      m_pstill->create_control(this, "still");
 
-      m_pedit->create_child(this);
+      m_pedit->create_control(this, "edit");
 
-      m_pcombobox->create_child(this);
+      m_pcombobox->create_control(this, "combo_box");
 
-      m_pbutton->create_child(this);
+      m_pbutton->create_control(this, "send_button");
 
       m_pstill->set_window_text("Enter new text:");
 

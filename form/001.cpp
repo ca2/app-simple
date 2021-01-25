@@ -88,13 +88,13 @@ namespace simple_form
 
       __compose_new(m_pbuttonSend);
 
-      m_pstill->create_child(this);
+      m_pstill->create_control(this, "still");
 
-      m_pedit->create_child(this);
+      m_pedit->create_control(this, "edit");
 
-      m_pbuttonClear->create_child(this);
+      m_pbuttonClear->create_control(this, "clear_button");
 
-      m_pbuttonSend->create_child(this);
+      m_pbuttonSend->create_control(this, "send_button");
 
       m_pstill->set_window_text("Enter new text:");
 
