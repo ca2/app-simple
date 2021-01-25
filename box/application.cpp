@@ -31,7 +31,7 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add_process(e_process_finish, __process([=](const payload& payload)
+      add_process(e_process_finish, __process([=](const ::payload & payload)
          {
 
             auto pprocessa = processa(e_process_finish);

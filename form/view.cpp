@@ -9,9 +9,7 @@ namespace simple_form
    view::view()
    {
 
-
-      value(FONTSEL_IMPACT) = true;
-
+      payload(FONTSEL_IMPACT) = true;
 
       m_flagNonClient.remove(non_client_background);
       m_flagNonClient.remove(non_client_focus_rect);

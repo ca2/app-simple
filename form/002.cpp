@@ -91,13 +91,13 @@ namespace simple_form
 
       __compose_new(m_pbutton);
 
-      m_pstill->create_window(this, "still");
+      m_pstill->create_child(this);
 
-      m_pedit->create_window(this, "edit");
+      m_pedit->create_child(this);
 
-      m_pcombobox->create_window(this, "combo");
+      m_pcombobox->create_child(this);
 
-      m_pbutton->create_window(this, "send_button");
+      m_pbutton->create_child(this);
 
       m_pstill->set_window_text("Enter new text:");
 
@@ -123,31 +123,31 @@ namespace simple_form
 
       ::user::form_view::on_layout(pgraphics);
 
-      int iLeft = 100;
+      double iLeft = 100.;
 
-      int y = 100;
+      double y = 100.;
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pstill->display_child(iLeft, y, 200, sizeStill.cy);
+      m_pstill->display_child(::rectd_dim(iLeft, y, 200, sizeStill.cy));
 
       y += sizeStill.cy * 1.25;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pedit->display_child(iLeft-30, y, 200, sizeEdit.cy);
+      m_pedit->display_child(::rectd_dim(iLeft-30.0, y, 200.0, sizeEdit.cy));
 
       y += sizeEdit.cy * 1.25;
 
       auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pcombobox->display_child(iLeft, y, 200, sizeCombo.cy);
+      m_pcombobox->display_child(::rectd_dim(iLeft, y, 200., sizeCombo.cy));
 
       y += sizeCombo.cy * 1.25;
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pbutton->display_child(iLeft-30, y, 200, sizeButton.cy);
+      m_pbutton->display_child(::rectd_dim(iLeft-30., y, 200., sizeButton.cy));
 
    }
 

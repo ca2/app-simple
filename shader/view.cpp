@@ -12,7 +12,7 @@ namespace simple_shader
 
       m_iView = -1;
 
-      value(FONTSEL_IMPACT) = true;
+      payload(FONTSEL_IMPACT) = true;
 
       m_flagNonClient.remove(non_client_background);
 
@@ -148,7 +148,7 @@ namespace simple_shader
 
          auto pproperty = Application.fetch_property(id);
 
-         payload payload;
+         ::payload payload;
 
          if (Application.data_get(id, payload))
          {

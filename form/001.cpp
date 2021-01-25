@@ -88,13 +88,13 @@ namespace simple_form
 
       __compose_new(m_pbuttonSend);
 
-      m_pstill->create_window(this, "still");
+      m_pstill->create_child(this);
 
-      m_pedit->create_window(this, "edit");
+      m_pedit->create_child(this);
 
-      m_pbuttonClear->create_window(this, "clear_button");
+      m_pbuttonClear->create_child(this);
 
-      m_pbuttonSend->create_window(this, "send_button");
+      m_pbuttonSend->create_child(this);
 
       m_pstill->set_window_text("Enter new text:");
 
@@ -118,9 +118,9 @@ namespace simple_form
 
       ::user::form_view::on_layout(pgraphics);
 
-      int iLeft = 100;
+      double iLeft = 100.;
 
-      int y = 100;
+      double y = 100.;
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
@@ -128,7 +128,7 @@ namespace simple_form
 
       y += rectStillMargin.top;
 
-      m_pstill->display_child(iLeft, y, ceil(sizeStill.cx), ceil(sizeStill.cy));
+      m_pstill->display_child(::rectd_dim(iLeft, y, sizeStill.cx, sizeStill.cy));
 
       y += sizeStill.cy;
 
@@ -140,7 +140,7 @@ namespace simple_form
 
       y += rectEditMargin.top;
 
-      m_pedit->display_child(iLeft, y, 600, sizeEdit.cy);
+      m_pedit->display_child(::rectd_dim(iLeft, y, 600, sizeEdit.cy));
 
       y += sizeEdit.cy;
 
@@ -160,9 +160,9 @@ namespace simple_form
 
       auto button_height = max(sizeButtonClear.cy, sizeButtonSend.cy);
 
-      m_pbuttonClear->display_child(iLeft, y, button_width, button_height);
+      m_pbuttonClear->display_child(::rectd_dim(iLeft, y, button_width, button_height));
 
-      m_pbuttonSend->display_child(iLeft + button_width + 32, y, button_width, button_height);
+      m_pbuttonSend->display_child(::rectd_dim(iLeft + button_width + 32, y, button_width, button_height));
 
    }
 
