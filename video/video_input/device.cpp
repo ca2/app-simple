@@ -479,7 +479,7 @@ namespace video_input
 	}
 
 
-	::size device::get_size()
+	::size_i32 device::get_size()
 	{
 
 		if (m_bSetup)
@@ -527,7 +527,7 @@ namespace video_input
 
 		}
 
-		auto & FRM = m_mapCaptureFormat[size];
+		auto & FRM = m_mapCaptureFormat[size_i32];
 
 		if (FRM.size() == 0)
 		{
@@ -621,7 +621,7 @@ namespace video_input
 
 			framerate = mediatype.m_uFrameRate;
 
-			auto & FRM = m_mapCaptureFormat[size];
+			auto & FRM = m_mapCaptureFormat[size_i32];
 
 			auto & STM = FRM[framerate];
 
@@ -635,7 +635,7 @@ namespace video_input
 
 			//FRM[framerate] = STM;
 
-			//m_mapCaptureFormat[size] = FRM;
+			//m_mapCaptureFormat[size_i32] = FRM;
 
 			m_cCount++;
 

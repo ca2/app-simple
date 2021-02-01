@@ -5,11 +5,11 @@
 #include "image.h"
 
 
-::image::::image(::u32 size): ri_new(false), ri_pixels(NULL)
+::image::::image(::u32 size_i32): ri_new(false), ri_pixels(NULL)
 {
 	ri_size = size;
 
-	ri_pixels.reset(new unsigned char[size]);
+	ri_pixels.reset(new unsigned char[size_i32]);
 
 	memset((void *)ri_pixels.get(),0,ri_size);
 }
@@ -28,7 +28,7 @@ bool ::image::isNew()
 {
 }
 
-long ::image::CreateInstance(::image **ppRImage,::u32 size)
+long ::image::CreateInstance(::image **ppRImage,::u32 size_i32)
 {
 	*ppRImage = new (std::nothrow) ::image(size);
 

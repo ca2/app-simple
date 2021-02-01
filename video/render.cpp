@@ -123,9 +123,9 @@ namespace simple_video
    void render::capture_step(int iCapture)
    {
 
-      auto & mutex = m_mutexa[iCapture];
+      auto & ::mutex = m_mutexa[iCapture];
 
-      sync_lock sl(&mutex);
+      sync_lock sl(&::mutex);
 
       auto & pimage = m_imagea[iCapture];
 

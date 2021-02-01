@@ -105,16 +105,16 @@ namespace simple_webserver
       if (ThisApp.m_echeckNoClientFrame != ::check_checked)
       {
 
-         ::rect rect(m_rect);
+         ::rectangle_i32 rectangle(m_rectangle);
 
          pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
 
          for (index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw_rect(rect, ARGB(127, 225, 225, 225));
+            pgraphics->draw_rect(rectangle, ARGB(127, 225, 225, 225));
 
-            rect.deflate(1, 1);
+            rectangle.deflate(1, 1);
 
          }
 

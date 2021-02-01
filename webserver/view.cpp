@@ -163,14 +163,14 @@ namespace simple_webserver
       if (ThisApp.m_echeckNoClientFrame != ::check_checked)
       {
 
-         ::rect rect = get_client_rect();
+         ::rectangle_i32 rectangle = get_client_rect();
 
          for (index i = 0; i < 11; i++)
          {
 
-            pgraphics->draw_rect(rect, ARGB(180, 80, 80, 80));
+            pgraphics->draw_rect(rectangle, ARGB(180, 80, 80, 80));
 
-            rect.deflate(1, 1);
+            rectangle.deflate(1, 1);
 
          }
 
@@ -193,7 +193,7 @@ namespace simple_webserver
 
       }
 
-      m_prender->m_rect = rectClient;
+      m_prender->m_rectangle = rectClient;
 
    }
 

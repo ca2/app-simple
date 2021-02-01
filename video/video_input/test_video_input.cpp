@@ -2,7 +2,7 @@
 #include "framework.h"
 #include "_video_input.h"
 
-// TestvideoInput.cpp: „€„„‚„u„t„u„|„‘„u„„ „„„€„‰„{„… „r„‡„€„t„p „t„|„‘ „{„€„~„ƒ„€„|„Ž„~„€„s„€ „„‚„y„|„€„w„u„~„y„‘.
+// TestvideoInput.cpp: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½uï¿½tï¿½uï¿½|ï¿½ï¿½ï¿½uï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½ ï¿½rï¿½ï¿½ï¿½ï¿½ï¿½tï¿½p ï¿½tï¿½|ï¿½ï¿½ ï¿½{ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½sï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½yï¿½|ï¿½ï¿½ï¿½wï¿½uï¿½~ï¿½yï¿½ï¿½.
 //
 
 //#include "stdafx.h"

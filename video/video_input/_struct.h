@@ -11,7 +11,7 @@ namespace video_input
 	{
 
 		::u32				m_uFrameSize;
-		::size			m_size;
+		::size_i32			m_size;
 		::u32				m_uYuvMatrix;
 		::u32				m_uVideoLighting;
 		::u32				m_uDefaultStride;

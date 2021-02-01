@@ -120,7 +120,7 @@ namespace simple_application
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::rect rectClient;
+      ::rectangle_i32 rectClient;
 
       get_client_rect(rectClient);
 
@@ -139,7 +139,7 @@ namespace simple_application
 
 #ifdef DEBUG_WORK
 
-      ::rect rectDryProWithLove_Work(100, 100, 200, 200);
+      ::rectangle_i32 rectDryProWithLove_Work(100, 100, 200, 200);
 
       pgraphics->fill_rect(rectDryProWithLove_Work, ARGB(255, 150, 200, 255));
 
@@ -155,7 +155,7 @@ namespace simple_application
 
       auto size = pgraphics->GetTextExtent(strText);
 
-      ::point point;
+      ::point_i32 point;
 
       bool bFixedPosition = true;
 

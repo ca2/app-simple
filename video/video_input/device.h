@@ -40,7 +40,7 @@ namespace video_input
 
 		camera_parameters								m_cameraparametersPrevious;
 
-		::size											m_size;
+		::size_i32											m_size;
 
 		::u32												m_uCurrentNumber;
 
@@ -78,7 +78,7 @@ namespace video_input
 
 		::u32 get_height();
 
-		::size get_size();
+		::size_i32 get_size();
 
 		media get_format(::u32 id);
 
