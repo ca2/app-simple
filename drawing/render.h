@@ -20,7 +20,7 @@ namespace simple_drawing
       string_map < ::image_pointer >      m_pimagemap;
       ::image_pointer                     m_pimage1;
       ::image_pointer                     m_pimage2;
-      ::hls                               m_hlsText;
+      ::color::hls                               m_hlsText;
 
       render();
       virtual ~render();

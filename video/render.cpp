@@ -297,7 +297,7 @@ namespace simple_video
 
       //}
 
-      //color color(crText);
+      //::color::color color(crText);
 
       //string strDataId;
 

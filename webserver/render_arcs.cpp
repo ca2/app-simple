@@ -18,7 +18,7 @@ namespace simple_webserver
 
       font->create_pixel_font(strFontFamily, 14.0, e_font_weight_light);
 
-      ::color color(m_hlsText);
+      ::color::color color(m_hlsText);
 
       pgraphics->set_text_color(color);
 

@@ -215,7 +215,7 @@ namespace simple_shader
 
       }
 
-      color color(crText);
+      ::color::color color(crText);
 
       string strDataId;
 

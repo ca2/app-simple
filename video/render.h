@@ -23,7 +23,7 @@ namespace simple_video
       int                                       m_iShow;
       __composite(video_input::video_input)     m_pvideoinput;
 
-      ::hls                                     m_hlsText;
+      ::color::hls                                     m_hlsText;
 
       render();
       virtual ~render();

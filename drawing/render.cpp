@@ -77,7 +77,7 @@ namespace simple_drawing
 
       }
 
-      color color(crText);
+      ::color::color color(crText);
 
       string strDataId;
 
