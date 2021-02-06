@@ -185,7 +185,7 @@ namespace video_input
 
 
       // To run as fast as possible, set this attribute (requires Windows 7):
-      hr = pSinkActivate->SetUINT32(MF_SAMPLEGRABBERSINK_IGNORE_CLOCK, TRUE);
+      hr = pSinkActivate->SetUINT32(MF_SAMPLEGRABBERSINK_IGNORE_CLOCK, true);
 
 
       if (FAILED(hr))
@@ -400,7 +400,7 @@ namespace video_input
       {
          // In this example, we look for audio streams and connect them to the sink.
 
-         BOOL fSelected = FALSE;
+         BOOL fSelected = false;
          GUID majorType;
 
          hr = ppresentationdescriptor->GetStreamDescriptorByIndex(i, &fSelected, &pstreamdescriptor);
@@ -538,7 +538,7 @@ namespace video_input
          return hr;
       }
 
-      hr = pNode->SetUINT32(MF_TOPONODE_NOSHUTDOWN_ON_REMOVE, FALSE);
+      hr = pNode->SetUINT32(MF_TOPONODE_NOSHUTDOWN_ON_REMOVE, false);
       if (FAILED(hr))
       {
          return hr;
