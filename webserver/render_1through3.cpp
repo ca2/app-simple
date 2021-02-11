@@ -18,7 +18,7 @@ namespace simple_webserver
 
       ::draw2d::brush_pointer brush(e_create);
 
-      ::draw2d::font_pointer font(e_create);
+      ::write_text::font_pointer font(e_create);
       
       if (m_iDrawing == 3)
       {
@@ -74,7 +74,7 @@ namespace simple_webserver
 
       rectangle.offset_x(iSize / 5 * m_iDrawing);
       
-      ::size_f64 size_i32(0., 0.);
+      ::size_f64 size(0., 0.);
       
       bool bDrawText = true;
       
@@ -134,7 +134,7 @@ namespace simple_webserver
       else
       {
 
-         pen->create_solid(4.0, ARGB(255, 50, 180, 255));
+         pen->create_solid(4.0, argb(255, 50, 180, 255));
 
       }
 
@@ -150,13 +150,13 @@ namespace simple_webserver
          if (__bool(ThisApp.m_echeckSimple))
          {
 
-            brush->create_solid(ARGB(255, 255, 255, 200));
+            brush->create_solid(argb(255, 255, 255, 200));
 
          }
          else
          {
 
-            brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), ARGB(255, 255, 255, 200), ARGB(255, 255, 125, 100));
+            brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
 
          }
 
@@ -224,7 +224,7 @@ namespace simple_webserver
          else
          {
 
-            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), m_hlsText, ARGB(255, 255, 255, 200));
+            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
 
          }
 

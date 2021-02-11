@@ -1,6 +1,5 @@
 #include "framework.h"
-#define NO_IMAGING
-#include "aura/application.h"
+#include "base/user/user/_user.h"
 #include "aura/update.h"
 
 
@@ -136,9 +135,6 @@ namespace simple_application
 
 
 #endif
-
-
-   __namespace_application_factory("app-simple/application");
 
 
 } // namespace simple_application

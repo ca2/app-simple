@@ -90,7 +90,7 @@ namespace simple_application
 
       }
 
-      m_pfontThomasBS_ = ::draw2d::point_font("Fira Code", 24);
+      m_pfontThomasBS_ = ::write_text::point_font("Fira Code", 24);
 
    }
 
@@ -120,6 +120,10 @@ namespace simple_application
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
+      //pgraphics->fill_rectangle(rectd_dim(100, 100, 100, 100), color::magenta);
+
+      //return;
+
       ::rectangle_i32 rectClient;
 
       get_client_rect(rectClient);
@@ -135,13 +139,13 @@ namespace simple_application
 
       ::color::color color_dk(dk_red());
 
-      color_dk.m_iA = 127;
+      color_dk.alpha = 127;
 
 #ifdef DEBUG_WORK
 
       ::rectangle_i32 rectDryProWithLove_Work(100, 100, 200, 200);
 
-      pgraphics->fill_rect(rectDryProWithLove_Work, ARGB(255, 150, 200, 255));
+      pgraphics->fill_rectangle(rectDryProWithLove_Work, argb(255, 150, 200, 255));
 
 #endif
 

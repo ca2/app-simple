@@ -18,8 +18,6 @@ namespace simple_drawing
 
       ::draw2d::brush_pointer brush(e_create);
 
-      ::draw2d::font_pointer font(e_create);
-      
       if (m_iDrawing == 3)
       {
 
@@ -57,7 +55,6 @@ namespace simple_drawing
 
          }
 
-
       }
 
       rectangle_i32 rectangle;
@@ -74,18 +71,22 @@ namespace simple_drawing
 
       rectangle.offset_x(iSize / 5 * m_iDrawing);
       
-      ::size_f64 size_i32(0., 0.);
+      ::size_f64 size(0., 0.);
       
       bool bDrawText = true;
       
       string strTitle;
       
+      ::write_text::font_pointer font1(e_create);
+
+      ::write_text::font_pointer font2(e_create);
+
       if(bDrawText)
       {
 
-         font->create_pixel_font(strFontFamily, 100.0, 800);
+         font1->create_pixel_font(strFontFamily, 100.0, 800);
 
-         pgraphics->set(font);
+         pgraphics->set(font1);
 
          strTitle = ThisApp.m_strMainTitle;
 
@@ -98,12 +99,14 @@ namespace simple_drawing
 
             double dMaxDimension = size.get_maximum_dimension();
 
+            ::write_text::font_pointer font2(e_create);
+
             if (m_iDrawing == 1)
             {
 
                float fSize = (float) (iHeight * 80.0 / dMaxDimension);
 
-               font->create_pixel_font(strFontFamily, fSize, 800);
+               font2->create_pixel_font(strFontFamily, fSize, 800);
 
             }
             else
@@ -111,13 +114,13 @@ namespace simple_drawing
 
                float fSize = (float) (iHeight * 160.0 / dMaxDimension);
 
-               font->create_pixel_font(strFontFamily, fSize, 800);
+               font2->create_pixel_font(strFontFamily, fSize, 800);
 
             }
 
          }
 
-         pgraphics->set(font);
+         pgraphics->set(font2);
 
          size = pgraphics->GetTextExtent(strTitle);
             
@@ -134,7 +137,7 @@ namespace simple_drawing
       else
       {
 
-         pen->create_solid(4.0, ARGB(255, 50, 180, 255));
+         pen->create_solid(4.0, argb(255, 50, 180, 255));
 
       }
 
@@ -150,13 +153,13 @@ namespace simple_drawing
          if (__bool(ThisApp.m_echeckSimple))
          {
 
-            brush->create_solid(ARGB(255, 255, 255, 200));
+            brush->create_solid(argb(255, 255, 255, 200));
 
          }
          else
          {
 
-            brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), ARGB(255, 255, 255, 200), ARGB(255, 255, 125, 100));
+            brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
 
          }
 
@@ -224,7 +227,7 @@ namespace simple_drawing
          else
          {
 
-            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), m_hlsText, ARGB(255, 255, 255, 200));
+            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
 
          }
 

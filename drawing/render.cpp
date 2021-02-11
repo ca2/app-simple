@@ -62,18 +62,18 @@ namespace simple_drawing
 
       m_iDrawing = iDrawing;
 
-      color32_t crText = ARGB(255, 55, 210, 120);
+      color32_t crText = argb(255, 55, 210, 120);
 
       if (m_iDrawing == 1)
       {
 
-         crText = ARGB(127, 0, 127, 200);
+         crText = argb(127, 0, 127, 200);
 
       }
       else if (m_iDrawing == 3)
       {
 
-         crText = ARGB(255, 180, 180, 180);
+         crText = argb(255, 180, 180, 180);
 
       }
 
@@ -112,7 +112,7 @@ namespace simple_drawing
          for (index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw_rect(rectangle, ARGB(127, 225, 225, 225));
+            pgraphics->draw_rectangle(rectangle, argb(127, 225, 225, 225));
 
             rectangle.deflate(1, 1);
 

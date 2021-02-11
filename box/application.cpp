@@ -55,7 +55,11 @@ namespace simple_message_box
 
          }));
 
-      send_payload(e_process_finish, e_dialog_result_no);
+      ::id id(e_process_finish);
+
+      ::payload payload(e_dialog_result_no);
+
+      send_payload(id, payload);
 
    }
 

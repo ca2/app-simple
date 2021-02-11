@@ -12,7 +12,7 @@ namespace simple_drawing
    void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, angle angleStart, angle angleAngle, bool bPath)
    {
 
-      ::draw2d::font_pointer font(e_create);
+      ::write_text::font_pointer font(e_create);
 
       string strFontFamily = get_font();
 
@@ -56,7 +56,7 @@ namespace simple_drawing
 
       rectBack.bottom = rectBack.top + size.cy * 2 + 4 * 3;
 
-      pgraphics->fill_rect(rectBack, ARGB(127, 80, 80, 80));
+      pgraphics->fill_rectangle(rectBack, argb(127, 80, 80, 80));
 
       pgraphics->text_out(rectBack.left + 4, rectBack.top + 4, str1);
 
@@ -76,13 +76,13 @@ namespace simple_drawing
          if (angleAngle < 0.0)
          {
 
-            pen->create_solid(4.0, ARGB(255, 120, 120, 120));
+            pen->create_solid(4.0, argb(255, 120, 120, 120));
 
          }
          else
          {
 
-            pen->create_solid(4.0, ARGB(255, 255, 255, 255));
+            pen->create_solid(4.0, argb(255, 255, 255, 255));
 
          }
 
@@ -102,7 +102,7 @@ namespace simple_drawing
             else
             {
 
-               pen->create_solid(4.0, ARGB(255, 255, 230, 155));
+               pen->create_solid(4.0, argb(255, 255, 230, 155));
 
             }
 
@@ -113,13 +113,13 @@ namespace simple_drawing
             if (bPath)
             {
 
-               pen->create_solid(4.0, ARGB(255, 255, 255, 255));
+               pen->create_solid(4.0, argb(255, 255, 255, 255));
 
             }
             else
             {
 
-               pen->create_solid(4.0, ARGB(255, 50, 180, 255));
+               pen->create_solid(4.0, argb(255, 50, 180, 255));
 
             }
 
@@ -199,13 +199,13 @@ namespace simple_drawing
       if (__bool(ThisApp.m_echeckSimple))
       {
 
-         pgraphics->fill_rect(rClient, ARGB(127, 192, 192, 192));
+         pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
 
       }
       else
       {
 
-         pgraphics->fill_rect(rClient, ARGB(127, 120, 120, 120));
+         pgraphics->fill_rectangle(rClient, argb(127, 120, 120, 120));
 
       }
 

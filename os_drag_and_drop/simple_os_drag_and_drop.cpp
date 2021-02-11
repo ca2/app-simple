@@ -92,13 +92,13 @@ namespace simple_os_drag_and_drop
 
       ::draw2d::brush_pointer brush(e_create);
 
-      ::draw2d::font_pointer font(e_create);
+      ::write_text::font_pointer font(e_create);
 
       font->create_pixel_font(os_font_name(e_font_sans_ex), 100.0, 800);
 
       pgraphics->set(font);
 
-      pen->create_solid(4.0, ARGB(255, 50, 180, 255));
+      pen->create_solid(4.0, argb(255, 50, 180, 255));
 
       rectangle_i32 rectangle;
 
@@ -123,7 +123,7 @@ namespace simple_os_drag_and_drop
       else
       {
 
-         brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), ARGB(255, 255, 255, 200), ARGB(255, 255, 125, 100));
+         brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
 
       }
 
@@ -181,7 +181,7 @@ namespace simple_os_drag_and_drop
          else
          {
 
-            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), ARGB(255, 55, 210, 120), ARGB(255, 255, 255, 200));
+            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), argb(255, 55, 210, 120), argb(255, 255, 255, 200));
 
          }
 
@@ -254,7 +254,7 @@ namespace simple_os_drag_and_drop
 
       ::rectangle_i32 rClient(m_rectangle);
 
-      pgraphics->fill_rect(rClient, ARGB(255, 192, 192, 185));
+      pgraphics->fill_rectangle(rClient, argb(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
@@ -305,11 +305,11 @@ namespace simple_os_drag_and_drop
    {
 
 
-      ::draw2d::font_pointer font(e_create);
+      ::write_text::font_pointer font(e_create);
 
-      font->create_point_font(os_font_name(e_font_sans), 14.0, FW_LIGHT);
+      font->create_point_font(os_font_name(e_font_sans), 14.0, e_font_weight_light);
 
-      pgraphics->set_text_color(ARGB(255, 0, 0, 0));
+      pgraphics->set_text_color(argb(255, 0, 0, 0));
 
       pgraphics->set(font);
 
@@ -337,7 +337,7 @@ namespace simple_os_drag_and_drop
          else
          {
 
-            pen->create_solid(4.0, ARGB(255, 255, 230, 155));
+            pen->create_solid(4.0, argb(255, 255, 230, 155));
 
 
          }
@@ -349,13 +349,13 @@ namespace simple_os_drag_and_drop
          if (bPath)
          {
 
-            pen->create_solid(4.0, ARGB(255, 255, 255, 255));
+            pen->create_solid(4.0, argb(255, 255, 255, 255));
 
          }
          else
          {
 
-            pen->create_solid(4.0, ARGB(255, 50, 180, 255));
+            pen->create_solid(4.0, argb(255, 50, 180, 255));
 
          }
 
