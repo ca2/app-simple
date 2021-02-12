@@ -154,11 +154,11 @@ namespace simple_form
 
       auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
 
-      y += max(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
+      y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
-      auto button_width = max(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
+      auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
 
-      auto button_height = max(sizeButtonClear.cy, sizeButtonSend.cy);
+      auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
       m_pbuttonClear->display_child(::rectd_dim(iLeft, y, button_width, button_height));
 

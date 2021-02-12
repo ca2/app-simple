@@ -48,7 +48,7 @@ namespace simple_shader
 
       ::size size;
 
-      size = size1.max(size2);
+      size = size1.maximum(size2);
 
       ::rect rectBack(r);
 
