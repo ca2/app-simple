@@ -99,7 +99,7 @@ namespace simple_form
 
       ::user::form_view::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_form::_001OnCreate);
+      MESSAGE_LINK(e_message_create, psender, this, &simple_form::on_message_create);
 
    }
 
@@ -114,7 +114,7 @@ namespace simple_form
    }
 
 
-   void simple_form::_001OnCreate(::message::message * pmessage)
+   void simple_form::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
