@@ -2,18 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_drawing CXX)
 
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_EXTENSIONS OFF)
 add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
-
-
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-   set(LINUX TRUE)
-   set(PLATFORM_NAME "linux")
-   include(FindPkgConfig)
-elseif (WIN32)
-   set(PLATFORM_NAME "windows")
-endif ()
 
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
@@ -82,12 +71,13 @@ elseif (LINUX)
    target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
    target_link_libraries(app_simple_drawing PRIVATE ${app_simple_drawing_references})
    target_link_options(app_simple_drawing PRIVATE -Wl,-z,defs)
-   add_dependencies(app_simple_drawing draw2d_cairo imaging_freeimage)
+   add_dependencies(app_simple_drawing draw2d_cairo imaging_freeimage write_text_pango)
 
 endif ()
 
 
 add_dependencies(app_simple_drawing experience_core)
+add_dependencies(app_simple_drawing ${app_common_dependencies})
 
 
 list(APPEND library_link_directories

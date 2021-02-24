@@ -2,17 +2,8 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_application CXX)
 
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_EXTENSIONS OFF)
 add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
 
-if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    set(LINUX TRUE)
-    set(PLATFORM_NAME "linux")
-    include(FindPkgConfig)
-elseif(WIN32)
-    set(PLATFORM_NAME "windows")
-endif()
 
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
@@ -20,6 +11,7 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_
 
 
 list(APPEND app_simple_application_source
+        _.cpp
         _.h
         _user.h
         application.cpp
@@ -58,10 +50,12 @@ elseif(LINUX)
     target_link_options(app_simple_application PRIVATE -Wl,-rpath=\$ORIGIN)
     target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
     target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
-    add_dependencies(app_simple_application draw2d_cairo imaging_freeimage)
+    add_dependencies(app_simple_application draw2d_cairo imaging_freeimage write_text_pango)
 endif()
 
+
 add_dependencies(app_simple_application experience_core)
+add_dependencies(app_simple_application ${app_common_dependencies})
 
 
 target_link_directories(app_simple_application PRIVATE ${LIBRARY_OUTPUT_PATH})
