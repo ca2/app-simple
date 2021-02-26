@@ -10,42 +10,42 @@ namespace simple_form
    {
 
 
-      ON_WM_RBUTTONUP
-      {
-         //__pointer(::message::mouse) pmouse(pmessage);
-         //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
-         //index iLine;
-         //index iToken;
-         //strsize iChar;
-         //class point_i32 ptCursor;
-         //ptCursor = pmouse->m_pt;
-         //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
-         //   == ::user::e_line_hit_link)
-         //{
-         //   string str;
-         //   lyriclines.GetLink(str, iLine, iToken, iChar);
-         //   m_strCurrentLink = str;
-         //   //::user::menu menu(get_object());
-         //}
-         //else
-         {
-            //            bool bTemporary =get_task()->m_bTemporary;
-            //            get_task()->m_bTemporary = true;
-            string strMatter = Context.dir().matter("popup_lyricview.xml");
-            ::file::path path = Context.defer_process_path(strMatter);
-            //__pointer(::message::mouse) p=pmouse->
-            //main_async([this,p]()
-            //{
-
-            // g_track_popup_lyricview(this, pmouse);
-
-            // });
-//               get_task()->m_bTemporary = bTemporary;
-         }
-
-         pmouse->m_bRet = true;
-
-      };
+//      ON_WM_RBUTTONUP
+//      {
+//         //__pointer(::message::mouse) pmouse(pmessage);
+//         //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
+//         //index iLine;
+//         //index iToken;
+//         //strsize iChar;
+//         //class point_i32 ptCursor;
+//         //ptCursor = pmouse->m_pt;
+//         //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
+//         //   == ::user::e_line_hit_link)
+//         //{
+//         //   string str;
+//         //   lyriclines.GetLink(str, iLine, iToken, iChar);
+//         //   m_strCurrentLink = str;
+//         //   //::user::menu menu(get_object());
+//         //}
+//         //else
+//         {
+//            //            bool bTemporary =get_task()->m_bTemporary;
+//            //            get_task()->m_bTemporary = true;
+//            string strMatter = Context.dir().matter("popup_lyricview.xml");
+//            ::file::path path = Context.defer_process_path(strMatter);
+//            //__pointer(::message::mouse) p=pmouse->
+//            //main_async([this,p]()
+//            //{
+//
+//            // g_track_popup_lyricview(this, pmouse);
+//
+//            // });
+////               get_task()->m_bTemporary = bTemporary;
+//         }
+//
+//         pmouse->m_bRet = true;
+//
+//      };
 
    }
 

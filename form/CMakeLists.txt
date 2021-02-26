@@ -2,18 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_form CXX)
 
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_EXTENSIONS OFF)
 add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
-
-
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-   set(LINUX TRUE)
-   set(PLATFORM_NAME "linux")
-   include(FindPkgConfig)
-elseif (WIN32)
-   set(PLATFORM_NAME "windows")
-endif ()
 
 
 set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
@@ -79,10 +68,10 @@ elseif (LINUX)
    target_link_options(app_simple_form PRIVATE -Wl,-rpath=\$ORIGIN)
    target_link_libraries(app_simple_form PRIVATE acme apex aqua aura axis base)
    target_link_options(app_simple_form PRIVATE -Wl,-z,defs)
-   add_dependencies(app_simple_form draw2d_cairo imaging_freeimage)
 endif ()
 
 
+add_dependencies(app_simple_form ${default_draw2d} ${default_imaging} ${default_write_text})
 add_dependencies(app_simple_form experience_tranquillum)
 
 
