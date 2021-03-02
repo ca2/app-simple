@@ -196,7 +196,7 @@ namespace simple_drawing
    }
 
 
-   void tab_view::on_subject(::promise::subject * psubject, ::promise::context * pcontext)
+   void tab_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
 

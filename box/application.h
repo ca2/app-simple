@@ -21,6 +21,9 @@ namespace simple_message_box
       virtual void on_request(::create * pcreate) override;
 
 
+      virtual void show_message_box();
+
+
    };
 
 

@@ -31,35 +31,63 @@ namespace simple_message_box
 
       m_strAppName = "Simple Message Box!!";
 
-      add_process(e_process_finish, __process([=](const ::payload & payload)
+      show_message_box();
+
+      //add_process(e_process_finish, __process([=](const ::payload & payload)
+      //   {
+
+      //      auto pprocessa = processa(e_process_finish);
+
+      //      if (payload == e_dialog_result_no)
+      //      {
+
+      //      }
+      //      else
+      //      {
+
+      //         finish(get_context());
+
+      //      }
+
+      //   }));
+
+      //::id id(e_process_finish);
+
+      //::payload payload(e_dialog_result_no);
+
+      //send_payload(id, payload);
+
+   }
+
+
+   void application::show_message_box()
+   {
+
+      message_box(
+         "Simple Message Box!! (message_box).<br><br>Finish?",
+         nullptr,
+         e_message_box_yes_no | e_message_box_icon_information
+      )->then([this](auto pfuture)
+      {
+
+         if (pfuture->m_statusresult.m_result == e_dialog_result_yes)
          {
 
-            auto pprocessa = processa(e_process_finish);
+            finish();
 
-            if (payload == e_dialog_result_no)
-            {
+         }
+         else
+         {
 
-               message_box(
-                  "Simple Message Box!! (message_box).<br><br>Finish?",
-                  nullptr,
-                  e_message_box_yes_no | e_message_box_icon_information,
-                  pprocessa->first());
+            show_message_box();
 
-            }
-            else
-            {
+         }
 
-               finish(get_context());
+      });
 
-            }
+      
 
-         }));
 
-      ::id id(e_process_finish);
-
-      ::payload payload(e_dialog_result_no);
-
-      send_payload(id, payload);
 
    }
 
