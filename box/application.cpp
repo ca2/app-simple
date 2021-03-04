@@ -67,10 +67,10 @@ namespace simple_message_box
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          e_message_box_yes_no | e_message_box_icon_information
-      )->then([this](auto pfuture)
+      )->then([this](auto future)
       {
 
-         if (pfuture->m_statusresult.m_result == e_dialog_result_yes)
+         if (future->m_edialogresult == e_dialog_result_yes)
          {
 
             finish();

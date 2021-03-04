@@ -126,25 +126,25 @@ namespace simple_form
 
       auto rectStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += rectStillMargin.m_result.top;
+      y += rectStillMargin.top;
 
       m_pstill->display_child(::rectd_dim(iLeft, y, sizeStill.cx, sizeStill.cy));
 
       y += sizeStill.cy;
 
-      y += rectStillMargin.m_result.bottom;
+      y += rectStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
       auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::user::e_element_none);
 
-      y += rectEditMargin.m_result.top;
+      y += rectEditMargin.top;
 
       m_pedit->display_child(::rectd_dim(iLeft, y, 600, sizeEdit.cy));
 
       y += sizeEdit.cy;
 
-      y += rectEditMargin.m_result.bottom;
+      y += rectEditMargin.bottom;
 
       auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
 
@@ -154,7 +154,7 @@ namespace simple_form
 
       auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
 
-      y += maximum(sizeButtonMarginClear.m_result.top, sizeButtonMarginSend.m_result.top);
+      y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
       auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
 
