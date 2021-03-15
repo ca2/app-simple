@@ -88,11 +88,11 @@ namespace simple_webserver
 
       }
 
-      ThisApp.create_webserver();
+      m_papplication->create_webserver();
 
-      papplication->delivery_for(id_simple_checkbox, this);
+      m_papplication->delivery_for(id_simple_checkbox, this);
 
-      papplication->delivery_for(id_no_client_frame, this);
+      m_papplication->delivery_for(id_no_client_frame, this);
 
       auto estatus = __construct_new(m_prender);
 
@@ -160,7 +160,7 @@ namespace simple_webserver
    void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (ThisApp.m_echeckNoClientFrame != ::check_checked)
+      if (m_papplication->m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle = get_client_rect();

@@ -89,7 +89,7 @@ namespace simple_drawing
 
       //papplication->data_set(strDataId, m_hlsText);
 
-      if(!papplication->data_get(strDataId +".color", m_hlsText))
+      if(!m_papplication->data_get(strDataId +".color", m_hlsText))
       {
 
          m_hlsText = color.get_hls();
@@ -102,7 +102,7 @@ namespace simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (ThisApp.m_echeckNoClientFrame != ::check_checked)
+      if (m_papplication->m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
@@ -156,7 +156,7 @@ namespace simple_drawing
 
       strDataId = m_pview->m_id;
 
-      if (!papplication->data_set(strDataId + ".font_family", m_strFont1))
+      if (!m_papplication->data_set(strDataId + ".font_family", m_strFont1))
       {
 
          return error_failed;
@@ -194,11 +194,11 @@ namespace simple_drawing
 
          strDataId = m_pview->m_id;
 
-         if (!papplication->data_get(strDataId + ".font_family", m_strFont1)
+         if (!m_papplication->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 
-            m_strFont1 = os_font_name(e_font_sans_ex);
+            m_strFont1 = m_psystem->m_pnode->font_name(e_font_sans_ex);
 
          }
 

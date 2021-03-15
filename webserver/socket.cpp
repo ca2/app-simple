@@ -24,6 +24,8 @@ namespace simple_webserver
 
       string strHtml;
 
+      __pointer(::aura::system) psystem = get_system();
+
       strHtml += "<html>";
       strHtml += "<head>";
       strHtml += "<meta charset=\"UTF-8\">";

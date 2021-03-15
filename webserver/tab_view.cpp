@@ -149,6 +149,8 @@ namespace simple_webserver
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
+      auto papplication = get_application();
+
       if (papplication->has_property("notabs"))
       {
 

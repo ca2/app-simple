@@ -31,7 +31,7 @@ namespace simple_webserver
             fork([this]()
                {
 
-                  m_pimage1 = papplication->image().get_image("matter://pat1.jpg");
+                  m_pimage1 = m_papplication->image().get_image("matter://pat1.jpg");
 
                   if (::is_ok(m_pimage1))
                   {
@@ -87,7 +87,7 @@ namespace simple_webserver
 
          pgraphics->set(font);
 
-         strTitle = ThisApp.m_strMainTitle;
+         strTitle = m_papplication->m_strMainTitle;
 
          size = pgraphics->GetTextExtent(strTitle);
 
@@ -123,7 +123,7 @@ namespace simple_webserver
             
       }
 
-      auto& echeckSimple = ThisApp.m_echeckSimple;
+      auto& echeckSimple = m_papplication->m_echeckSimple;
 
       if (__bool(echeckSimple))
       {
@@ -147,7 +147,7 @@ namespace simple_webserver
       else
       {
 
-         if (__bool(ThisApp.m_echeckSimple))
+         if (__bool(m_papplication->m_echeckSimple))
          {
 
             brush->create_solid(argb(255, 255, 255, 200));
@@ -187,7 +187,7 @@ namespace simple_webserver
       else if (m_iDrawing == 3)
       {
 
-         if (__bool(ThisApp.m_echeckSimple))
+         if (__bool(m_papplication->m_echeckSimple))
          {
 
             brush->create_solid(m_hlsText);
@@ -215,7 +215,7 @@ namespace simple_webserver
       else
       {
 
-         if (__bool(ThisApp.m_echeckSimple))
+         if (__bool(m_papplication->m_echeckSimple))
          {
 
             brush->create_solid(m_hlsText);

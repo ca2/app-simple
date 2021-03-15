@@ -104,9 +104,11 @@ namespace simple_webserver
         // {
 
             //::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
-      ::hyperlink::open_link("https://localwebserver.app:" + __str(m_psocketthread->m_iPort) + "/");
+      auto phyperlink = __create_new <::hyperlink >();
 
-         //});
+      phyperlink->m_strLink = "https://localwebserver.app:" + __str(m_psocketthread->m_iPort) + "/";
+      
+      phyperlink->open_link();
 
       return estatus;
 

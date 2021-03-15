@@ -172,7 +172,7 @@ namespace simple_os_drag_and_drop
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = ThisApp.create_simple_os_drag_and_drop_view(this, pimpactdata);
+         auto pview = m_papplication->create_simple_os_drag_and_drop_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

@@ -70,7 +70,7 @@ namespace simple_webserver
 
       pgraphics->set(brush);
 
-      if (__bool(ThisApp.m_echeckSimple))
+      if (__bool(m_papplication->m_echeckSimple))
       {
 
          if (angleAngle < 0.0)
@@ -196,7 +196,7 @@ namespace simple_webserver
 
       ::rectangle_i32 rClient(m_rectangle);
 
-      if (__bool(ThisApp.m_echeckSimple))
+      if (__bool(m_papplication->m_echeckSimple))
       {
 
          pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
