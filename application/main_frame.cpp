@@ -10,7 +10,7 @@ namespace simple_application
 
       //m_bFramePayloadFlags = true;
 
-      set_bitmap_source("Simple Application!!");
+      set_bitmap_source("Simple papplication!!");
 
       m_bDefaultCreateToolbar = false;
 

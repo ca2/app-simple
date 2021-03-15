@@ -102,7 +102,7 @@ namespace simple_form
 
       string strInitialText;
 
-      strInitialText = Application.data_get("last_text");
+      strInitialText = papplication->data_get("last_text");
 
       m_pedit->_001SetText(strInitialText, ::e_source_initialize);
 
@@ -183,7 +183,7 @@ namespace simple_form
 
                m_pedit->_001GetText(strText);
 
-               Application.data_set("last_text", strText);
+               papplication->data_set("last_text", strText);
 
             }
 

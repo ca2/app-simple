@@ -54,7 +54,7 @@ namespace simple_drawing
 
       }
 
-      //Application.m_ptabview = this;
+      //papplication->m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("001", "drawing1");
@@ -149,7 +149,7 @@ namespace simple_drawing
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (Application.has_property("notabs"))
+      if (papplication->has_property("notabs"))
       {
 
          return;

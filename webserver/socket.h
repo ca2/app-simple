@@ -12,7 +12,7 @@ namespace simple_webserver
    public:
 
 
-      socket(::sockets::base_socket_handler & h);
+      socket();
       virtual ~socket();
 
 

@@ -87,9 +87,9 @@ namespace simple_drawing
       //m_hlsText.m_dL = 0.5;
       //m_hlsText.m_dS = 0.9;
 
-      //Application.data_set(strDataId, m_hlsText);
+      //papplication->data_set(strDataId, m_hlsText);
 
-      if(!Application.data_get(strDataId +".color", m_hlsText))
+      if(!papplication->data_get(strDataId +".color", m_hlsText))
       {
 
          m_hlsText = color.get_hls();
@@ -156,7 +156,7 @@ namespace simple_drawing
 
       strDataId = m_pview->m_id;
 
-      if (!Application.data_set(strDataId + ".font_family", m_strFont1))
+      if (!papplication->data_set(strDataId + ".font_family", m_strFont1))
       {
 
          return error_failed;
@@ -194,7 +194,7 @@ namespace simple_drawing
 
          strDataId = m_pview->m_id;
 
-         if (!Application.data_get(strDataId + ".font_family", m_strFont1)
+         if (!papplication->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

@@ -70,7 +70,7 @@ namespace simple_shader
 
       pgraphics->set(brush);
 
-      if (__bool(Application.m_echeckSimple))
+      if (__bool(papplication->m_echeckSimple))
       {
 
          if (dAngle < 0.0)
@@ -195,7 +195,7 @@ namespace simple_shader
 
       ::rect rClient(m_rect);
 
-      if (__bool(Application.m_echeckSimple))
+      if (__bool(papplication->m_echeckSimple))
       {
 
          pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));

@@ -54,7 +54,7 @@ namespace simple_webserver
 
       }
 
-      //Application.m_ptabview = this;
+      //papplication->m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("001", "drawing1");
@@ -149,7 +149,7 @@ namespace simple_webserver
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (Application.has_property("notabs"))
+      if (papplication->has_property("notabs"))
       {
 
          return;
@@ -172,7 +172,7 @@ namespace simple_webserver
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = ThisApp.create_simple_drawing_view(this, pimpactdata);
+         auto pview = application()->create_simple_drawing_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 

@@ -31,7 +31,7 @@ namespace simple_webserver
             fork([this]()
                {
 
-                  m_pimage1 = Application.image().get_image("matter://pat1.jpg");
+                  m_pimage1 = papplication->image().get_image("matter://pat1.jpg");
 
                   if (::is_ok(m_pimage1))
                   {

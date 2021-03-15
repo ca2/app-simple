@@ -102,9 +102,9 @@ namespace simple_shader
 
          });
 
-      Application.add_routine(id_simple_checkbox, pprocedureRedraw);
+      papplication->add_routine(id_simple_checkbox, pprocedureRedraw);
 
-      Application.add_routine(id_no_client_frame, pprocedureRedraw);
+      papplication->add_routine(id_no_client_frame, pprocedureRedraw);
 
       auto estatus = __construct_new(m_prender);
 
@@ -146,20 +146,20 @@ namespace simple_shader
 
          ::id id = id_simple_text;
 
-         auto pproperty = Application.fetch_property(id);
+         auto pproperty = papplication->fetch_property(id);
 
          ::payload payload;
 
-         if (Application.data_get(id, payload))
+         if (papplication->data_get(id, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = Application.translate_property_id(id);
+         auto idRunnable = papplication->translate_property_id(id);
 
-         Application.add_routine(idRunnable, __routine([this, id]()
+         papplication->add_routine(idRunnable, __routine([this, id]()
          {
 
             auto pproperty = fetch_property(id);
@@ -253,9 +253,9 @@ namespace simple_shader
 
                saveimage.m_eformat = ::draw2d::format_png;
 
-               string strDate = System->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
-               Application.image().save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
+               papplication->image().save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
             });
 

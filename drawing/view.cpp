@@ -89,9 +89,9 @@ namespace simple_drawing
       }
 
 
-      Application.delivery_for(id_simple_checkbox, this);
+      papplication->delivery_for(id_simple_checkbox, this);
 
-      Application.delivery_for(id_no_client_frame, this);
+      papplication->delivery_for(id_no_client_frame, this);
 
       auto estatus = __construct_new(m_prender);
 

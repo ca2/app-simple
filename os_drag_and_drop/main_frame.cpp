@@ -16,9 +16,9 @@ namespace simple_os_drag_and_drop
 
       window_enable_full_screen();
 
-      //m_bWindowFrame = !Application.has_property("client_only");
+      //m_bWindowFrame = !papplication->has_property("client_only");
 
-      //if (Application.has_property("opaque"))
+      //if (papplication->has_property("opaque"))
       //{
 
       //   m_bExplicitTranslucency = true;
