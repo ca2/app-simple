@@ -77,7 +77,7 @@ namespace simple_shader
 
       m_ptemplateSimpleShaderMain = pdoctemplate;
 
-      auto puser = User;
+      auto puser = user();
 
       puser->document_manager()->add_document_template(pdoctemplate);
 

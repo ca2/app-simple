@@ -102,6 +102,8 @@ namespace simple_shader
 
          });
 
+      __pointer(::core::application) papplication = get_application();
+
       papplication->add_routine(id_simple_checkbox, pprocedureRedraw);
 
       papplication->add_routine(id_no_client_frame, pprocedureRedraw);
@@ -120,6 +122,8 @@ namespace simple_shader
       m_prender->initialize_application_consumer();
 
       m_prender->m_pinteraction = this;
+
+      __pointer(::core::application) papplication = get_application();
 
       string strId = get_document()->m_pimpactsystem->m_strMatter;
 

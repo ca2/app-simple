@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "base/user/user/tab_pane.h"
 
 
 namespace simple_drawing
