@@ -108,7 +108,7 @@ namespace simple_webserver
 
       phyperlink->m_strLink = "https://localwebserver.app:" + __str(m_psocketthread->m_iPort) + "/";
       
-      phyperlink->open_link();
+      phyperlink->run();
 
       return estatus;
 

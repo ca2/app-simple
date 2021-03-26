@@ -102,7 +102,7 @@ namespace simple_shader
 
          });
 
-      __pointer(::core::application) papplication = get_application();
+      auto papplication = get_application();
 
       papplication->add_routine(id_simple_checkbox, pprocedureRedraw);
 
@@ -122,8 +122,6 @@ namespace simple_shader
       m_prender->initialize_application_consumer();
 
       m_prender->m_pinteraction = this;
-
-      __pointer(::core::application) papplication = get_application();
 
       string strId = get_document()->m_pimpactsystem->m_strMatter;
 
@@ -257,7 +255,11 @@ namespace simple_shader
 
                saveimage.m_eformat = ::draw2d::format_png;
 
+               auto psystem = get_system();
+
                string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+
+               auto papplication = get_application();
 
                papplication->image().save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 

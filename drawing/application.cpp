@@ -15,6 +15,9 @@ namespace simple_drawing
       m_strMainTitle(topic(id_main_title))
    {
 
+      m_textAppTitle = __text("text://app-simple/drawing/:application_title");
+
+
       m_pstrHoverFontFamilyName = nullptr;
 
       auto pproperty1 = find_property(id_simple_checkbox);

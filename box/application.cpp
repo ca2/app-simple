@@ -45,7 +45,7 @@ namespace simple_message_box
       //      else
       //      {
 
-      //         finish(get_context());
+      //         finish();
 
       //      }
 
