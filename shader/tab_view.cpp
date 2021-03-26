@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "base/user/user/tab_pane.h"
 
 
 namespace simple_shader
@@ -144,6 +145,8 @@ namespace simple_shader
 
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
+
+      auto papplication = get_application();
 
       if (papplication->has_property("notabs"))
       {

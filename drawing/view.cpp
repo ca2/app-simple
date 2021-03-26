@@ -88,6 +88,8 @@ namespace simple_drawing
 
       }
 
+      initialize_application_consumer();
+
       m_papplication->delivery_for(id_simple_checkbox, this);
 
       m_papplication->delivery_for(id_no_client_frame, this);
