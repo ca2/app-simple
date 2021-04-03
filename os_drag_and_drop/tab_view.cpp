@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "base/user/user/tab_pane.h"
 
 
 namespace simple_os_drag_and_drop
@@ -148,6 +149,8 @@ namespace simple_os_drag_and_drop
 
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
+
+      auto papplication = get_application();
 
       if (papplication->has_property("notabs"))
       {

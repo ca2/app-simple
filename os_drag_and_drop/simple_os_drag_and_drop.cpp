@@ -94,7 +94,11 @@ namespace simple_os_drag_and_drop
 
       ::write_text::font_pointer font(e_create);
 
-      font->create_pixel_font(os_font_name(e_font_sans_ex), 100.0, 800);
+      auto psystem = get_system();
+
+      auto pnode = psystem->node();
+
+      font->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
 
       pgraphics->set(font);
 
@@ -113,6 +117,8 @@ namespace simple_os_drag_and_drop
       rectangle.offset_x(-iSize/5 * 3);
 
       rectangle.offset_x(iSize/5 * m_iDragAndDrop);
+
+      auto papplication = get_application()->m_pauraapplication;
 
       if(m_iDragAndDrop == 3)
       {
@@ -307,7 +313,11 @@ namespace simple_os_drag_and_drop
 
       ::write_text::font_pointer font(e_create);
 
-      font->create_point_font(os_font_name(e_font_sans), 14.0, e_font_weight_light);
+      auto psystem = get_system();
+
+      auto pnode = psystem->node();
+
+      font->create_point_font(pnode->font_name(e_font_sans), 14.0, e_font_weight_light);
 
       pgraphics->set_text_color(argb(255, 0, 0, 0));
 

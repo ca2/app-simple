@@ -119,7 +119,7 @@ namespace simple_shader
 
       }
 
-      m_prender->initialize_application_consumer();
+      //m_prender->initialize_application_consumer();
 
       m_prender->m_pinteraction = this;
 

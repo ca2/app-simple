@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "aura/update.h"
+#include "base/user/user/tab_pane.h"
 
 
 namespace simple_form
@@ -57,6 +58,8 @@ namespace simple_form
       add_tab("002", "form2");
 
       string strForm;
+
+      auto papplication = get_application();
 
       strForm = papplication->payload("tab");
 

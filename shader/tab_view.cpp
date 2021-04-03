@@ -55,6 +55,8 @@ namespace simple_shader
 
       }
 
+      //initialize_application_consumer();
+
       m_papplication->m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);

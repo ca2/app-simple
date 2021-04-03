@@ -150,7 +150,7 @@ namespace simple_drawing
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      initialize_application_consumer();
+      //initialize_application_consumer();
 
       if (m_papplication->has_property("notabs"))
       {
