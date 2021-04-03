@@ -75,11 +75,9 @@ namespace simple_shader
                                __type(main_frame),
                                __type(tab_view)));
 
+      add_document_template(pdoctemplate);
+
       m_ptemplateSimpleShaderMain = pdoctemplate;
-
-      auto puser = user();
-
-      puser->document_manager()->add_document_template(pdoctemplate);
 
       return true;
 

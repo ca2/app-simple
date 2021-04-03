@@ -88,7 +88,7 @@ namespace simple_drawing
 
       }
 
-      initialize_application_consumer();
+      //initialize_application_consumer();
 
       m_papplication->delivery_for(id_simple_checkbox, this);
 

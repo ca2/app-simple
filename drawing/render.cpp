@@ -58,7 +58,7 @@ namespace simple_drawing
    void render::initialize_simple_drawing(int iDrawing)
    {
 
-      initialize_application_consumer();
+      //initialize_application_consumer();
 
       m_iDrawing = iDrawing;
 

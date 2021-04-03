@@ -88,6 +88,8 @@ namespace simple_webserver
 
       }
 
+      //initialize_application_composer();
+
       m_papplication->create_webserver();
 
       m_papplication->delivery_for(id_simple_checkbox, this);

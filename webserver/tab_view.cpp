@@ -150,7 +150,9 @@ namespace simple_webserver
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      auto papplication = get_application();
+      //initialize_application_consumer();
+
+      auto papplication = m_papplication;
 
       if (papplication->has_property("notabs"))
       {
@@ -175,7 +177,7 @@ namespace simple_webserver
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = application()->create_simple_drawing_view(this, pimpactdata);
+         auto pview = papplication->create_simple_drawing_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 
