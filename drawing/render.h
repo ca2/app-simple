@@ -6,7 +6,7 @@ namespace simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING render :
-      virtual public __application_consumer
+      virtual public application_consumer < application >
    {
    public:
 

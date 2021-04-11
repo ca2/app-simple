@@ -6,9 +6,8 @@ namespace simple_webserver
 
 
    class CLASS_DECL_APP_SIMPLE_WEBSERVER tab_view :
-      virtual public ::user::tab_view,
-      virtual public ::user::form_callback,
-      virtual public __application_consumer
+      virtual public ::application_consumer < application, ::user::tab_view > ,
+      virtual public ::user::form_callback
    {
    public:
 
@@ -34,7 +33,7 @@ namespace simple_webserver
       virtual void dump(dump_context & dumpcontext) const override;
 
 
-      DECL_GEN_SIGNAL(on_message_create);
+      DECLARE_MESSAGE_HANDLER(on_message_create);
       bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
       void on_change_cur_sel() override;
 

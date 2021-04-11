@@ -54,9 +54,9 @@ namespace simple_webserver
 
       m_ptabview = nullptr;
 
-      m_strAppId = "app-simple/drawing";
+      m_strAppId = "app-simple/webserver";
 
-      m_strAppName = "app-simple/drawing";
+      m_strAppName = "app-simple/webserver";
 
       m_strBaseSupportId = "ca2_flag";
 

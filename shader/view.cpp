@@ -255,13 +255,17 @@ namespace simple_shader
 
                saveimage.m_eformat = ::draw2d::format_png;
 
-               auto psystem = get_system();
+               auto psystem = m_psystem;
 
-               string strDate = psystem->datetime().international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               auto pdatetime = psystem->datetime();
 
-               auto papplication = get_application();
+               string strDate = pdatetime->international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
-               papplication->image().save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
+               auto pcontext = m_pcontext;
+
+               auto pcontextimage = pcontext->context_image();
+
+               pcontextimage->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
             });
 
