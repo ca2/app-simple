@@ -29,7 +29,11 @@ namespace simple_drawing
             fork([this]()
                {
 
-                  m_pimage1 = m_papplication->image().get_image("matter://pat1.jpg");
+               auto pcontext = m_pcontext;
+
+               auto pcontextimage = pcontext->context_image();
+
+                  m_pimage1 = pcontextimage->get_image("matter://pat1.jpg");
 
                   if (::is_ok(m_pimage1))
                   {
@@ -98,8 +102,6 @@ namespace simple_drawing
             int iHeight = rectangle.height();
 
             double dMaxDimension = size.get_maximum_dimension();
-
-            ::write_text::font_pointer font2(e_create);
 
             if (m_iDrawing == 1)
             {

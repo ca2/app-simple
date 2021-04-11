@@ -6,7 +6,7 @@ namespace simple_webserver
 
 
    class CLASS_DECL_APP_SIMPLE_WEBSERVER render :
-      virtual public __application_consumer
+      virtual public ::application_consumer < application >
    {
    public:
 

@@ -6,8 +6,7 @@ namespace simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING view :
-      virtual public ::user::impact,
-      virtual public __application_consumer
+      virtual public application_consumer < application, ::user::impact >
    {
    public:
 
@@ -38,8 +37,8 @@ namespace simple_drawing
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      DECL_GEN_SIGNAL(on_message_create);
-      DECL_GEN_SIGNAL(_001OnDestroy);
+      DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(_001OnDestroy);
 
    };
 

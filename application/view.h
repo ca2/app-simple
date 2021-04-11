@@ -6,13 +6,13 @@ namespace simple_application
 
 
    class CLASS_DECL_APP_SIMPLE_APPLICATION view :
-      virtual public ::user::impact,
-      virtual public __application_consumer
+      virtual public ::application_consumer < application, ::user::impact >
    {
    public:
 
-      ::write_text::font_pointer     m_pfontThomasBS_;
-      string         m_strFont1;
+
+      ::write_text::font_pointer       m_pfontThomasBS_;
+      string                           m_strFont1;
 
       view();
       virtual ~view();
@@ -35,8 +35,8 @@ namespace simple_application
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      DECL_GEN_SIGNAL(on_message_create);
-      DECL_GEN_SIGNAL(_001OnDestroy);
+      DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(_001OnDestroy);
 
    };
 

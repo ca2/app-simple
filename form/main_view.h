@@ -6,8 +6,7 @@ namespace simple_form
 
 
    class CLASS_DECL_APP_SIMPLE_FORM main_view:
-      virtual public ::user::split_view,
-      virtual public __application_consumer
+      virtual public ::application_consumer < application, ::user::split_view >
    {
    public:
 

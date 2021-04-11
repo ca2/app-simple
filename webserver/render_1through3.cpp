@@ -31,7 +31,11 @@ namespace simple_webserver
             fork([this]()
                {
 
-                  m_pimage1 = m_papplication->image().get_image("matter://pat1.jpg");
+               auto pcontext = m_pcontext;
+
+               auto pcontextimage = pcontext->context_image();
+
+                  m_pimage1 = pcontextimage->get_image("matter://pat1.jpg");
 
                   if (::is_ok(m_pimage1))
                   {
