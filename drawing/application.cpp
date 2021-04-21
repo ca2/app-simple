@@ -24,12 +24,12 @@ namespace simple_drawing
 
       bool bCheckOk = false;
 
-      if(pproperty1->m_etype == type_enum_check)
+      if(pproperty1->m_etype == e_type_enum_check)
       {
 
          auto pproperty = pproperty1;
 
-         if(pproperty->m_etype == type_enum_check)
+         if(pproperty->m_etype == e_type_enum_check)
          {
 
             auto & echeck = pproperty->m_echeck;
