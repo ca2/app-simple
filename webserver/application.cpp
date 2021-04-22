@@ -22,12 +22,12 @@ namespace simple_webserver
 
       bool bCheckOk = false;
 
-      if(pproperty1->m_etype == type_enum_check)
+      if(pproperty1->m_etype == e_type_enum_check)
       {
 
          auto pproperty = pproperty1;
 
-         if(pproperty->m_etype == type_enum_check)
+         if(pproperty->m_etype == e_type_enum_check)
          {
 
             auto & echeck = pproperty->m_echeck;
@@ -93,7 +93,7 @@ namespace simple_webserver
       m_psocketthread->m_strCipherList = "ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-RC4-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:RSA:SHA:3DES:!aNULL:!eNULL:!EXP:!LOW:!MD5:@STRENGTH";
       m_psocketthread->m_iSsl = 1;
 
-      if (!m_psocketthread->begin())
+      if (!m_psocketthread->branch())
       {
 
          return ::error_failed;
