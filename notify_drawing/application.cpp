@@ -1,5 +1,4 @@
 #include "framework.h"
-#include "aura/application.h"
 
 
 namespace notify_drawing
@@ -169,24 +168,7 @@ namespace notify_drawing
    }
 
    
-   __namespace_application_factory("app-simple/notify_drawing");
-
-
 } // namespace notify_drawing
 
 
-
-
-
-//extern "C"
-//::acme::library * app_simple_notify_drawing_get_new_library()
-//{
-//
-//   return new ::apex::single_application_library < ::notify_drawing::application >("app-simple/notify_drawing");
-//
-//}
-//
-//
-//aura_app aura_app_simple_notify_drawing("app-simple/notify_drawing", &app_simple_notify_drawing_get_new_library);
-//
 

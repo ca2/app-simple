@@ -1,17 +1,15 @@
 #include "framework.h"
-#define NO_IMAGING
 #include "aura/application.h"
 
 
-namespace simple_application
+namespace notify_drawing
 {
 
 
-   __namespace_application_factory("app-simple/application");
+   __namespace_application_factory("app-simple/notify_drawing");
 
 
-} // namespace simple_application
-
+} // namespace notify_drawing
 
 
 

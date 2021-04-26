@@ -18,28 +18,42 @@ list(APPEND app_simple_application_source
         view.h)
 
 
+list(APPEND library_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   )
+
+
 add_executable(app_simple_application ${app_simple_application_source} )
+
 
 target_precompile_headers(app_simple_application PRIVATE framework.h)
 
+
 set_target_properties(app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
+
 
 if (MSVC)
     target_compile_options(app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_libraries(app_simple_application PRIVATE ${library_references})
     target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
-    add_dependencies(app_simple_application draw2d_gdiplus imaging_wic)
 elseif(LINUX)
     target_compile_options(app_simple_application PRIVATE -fpermissive)
     target_link_options(app_simple_application PRIVATE -Wl,-rpath=\$ORIGIN)
-    target_link_libraries(app_simple_application PRIVATE acme apex aqua aura axis base)
+    target_link_libraries(app_simple_application PRIVATE ${library_references})
     target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
-    add_dependencies(app_simple_application draw2d_cairo imaging_freeimage write_text_pango)
 endif()
 
 
 add_dependencies(app_simple_application experience_core)
+add_dependencies(app_simple_application ${default_draw2d})
+add_dependencies(app_simple_application ${default_imaging})
+add_dependencies(app_simple_application ${default_write_text})
 add_dependencies(app_simple_application ${app_common_dependencies})
 
 
