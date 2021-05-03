@@ -2,14 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_form CXX)
 
 
-add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
-
-
-set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
-
-
-list(APPEND app_simple_application_source
+list(APPEND app_simple_form_source
    _.h
    001.cpp
    002.cpp
@@ -33,23 +26,11 @@ list(APPEND app_simple_application_source
    view.h
    )
 
-
-if (MSVC)
-   set(LIBCXX_TARGETING_MSVC ON)
-else ()
-   set(LIBCXX_TARGETING_MSVC OFF)
-endif ()
-
-
-add_executable(app_simple_form ${app_simple_application_source})
+add_executable(app_simple_form ${app_simple_form_source})
 
 target_precompile_headers(app_simple_form PRIVATE framework.h)
 
 set_target_properties(app_simple_form PROPERTIES LINKER_LANGUAGE CXX)
-
-
-#target_compile_definitions(app_simple_form PRIVATE _APP_ID="app-simple/form")
-
 
 if (MSVC)
    target_compile_options(app_simple_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
@@ -71,8 +52,12 @@ elseif (LINUX)
 endif ()
 
 
-add_dependencies(app_simple_form ${default_draw2d} ${default_imaging} ${default_write_text})
 add_dependencies(app_simple_form experience_tranquillum)
+add_dependencies(app_simple_form ${default_draw2d})
+add_dependencies(app_simple_form ${default_imaging})
+add_dependencies(app_simple_form ${default_write_text})
+add_dependencies(app_simple_form ${app_common_dependencies})
+
 
 
 target_link_directories(app_simple_form PRIVATE ${LIBRARY_OUTPUT_PATH})
