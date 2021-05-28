@@ -89,8 +89,14 @@ namespace simple_application
          return;
 
       }
+      
+      auto psystem = m_psystem->m_paurasystem;
+      
+      auto pnode = psystem->draw2d();
+      
+      auto pwritetext = pnode->write_text();
 
-      m_pfontThomasBS_ = ::write_text::point_font("Fira Code", 24);
+      m_pfontThomasBS_ = pwritetext->point_font("Fira Code", 24);
 
    }
 
