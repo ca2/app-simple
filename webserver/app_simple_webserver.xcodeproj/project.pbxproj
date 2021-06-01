@@ -32,7 +32,7 @@
 		9A8F90D4240C09F10097E249 /* view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* view.h */; };
 		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
-		9AE24EA11904CFFD001AEFFB /* libapp_simple_webserver_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_webserver_app.a */; };
+		9AE24EA11904CFFD001AEFFB /* libios_app_simple_webserver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24E8A1904CFFD001AEFFB /* libios_app_simple_webserver.a */; };
 		9AEB75DE16F78E600085103B /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75BF16F78E600085103B /* framework.h */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +91,9 @@
 		9A8F90C8240C09F10097E249 /* view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = view.h; sourceTree = "<group>"; };
 		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libapp_simple_webserver_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_simple_webserver_app.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libios_app_simple_webserver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_webserver.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AEB75A316F78DF10085103B /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; name = libapp_simple_drawing.dylib; path = libapp_simple_webserver_app.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEB75A316F78DF10085103B /* libapp_simple_webserver.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_webserver.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75BF16F78E600085103B /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE24EA11904CFFD001AEFFB /* libapp_simple_webserver_app.a in Frameworks */,
+				9AE24EA11904CFFD001AEFFB /* libios_app_simple_webserver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +151,8 @@
 		9AEB75A416F78DF10085103B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AEB75A316F78DF10085103B /* libapp_simple_drawing.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libapp_simple_webserver_app.a */,
+				9AEB75A316F78DF10085103B /* libapp_simple_webserver.dylib */,
+				9AE24E8A1904CFFD001AEFFB /* libios_app_simple_webserver.a */,
 				9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */,
 			);
 			name = Products;
@@ -205,9 +205,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9AE24E891904CFFD001AEFFB /* ios_app_simple_drawing */ = {
+		9AE24E891904CFFD001AEFFB /* ios_app_simple_webserver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_simple_drawing" */;
+			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_simple_webserver" */;
 			buildPhases = (
 				9AE24E861904CFFD001AEFFB /* Sources */,
 				9AE24E871904CFFD001AEFFB /* Frameworks */,
@@ -217,9 +217,9 @@
 			);
 			dependencies = (
 			);
-			name = ios_app_simple_drawing;
+			name = ios_app_simple_webserver;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_webserver_app.a */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_app_simple_webserver.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */ = {
@@ -240,9 +240,9 @@
 			productReference = 9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9AEB75A216F78DF10085103B /* app_simple_drawing */ = {
+		9AEB75A216F78DF10085103B /* app_simple_webserver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_drawing" */;
+			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_webserver" */;
 			buildPhases = (
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
@@ -254,9 +254,9 @@
 			dependencies = (
 				9A18FD65251B100F0064BCDE /* PBXTargetDependency */,
 			);
-			name = app_simple_drawing;
+			name = app_simple_webserver;
 			productName = app_core_hellomultiverse;
-			productReference = 9AEB75A316F78DF10085103B /* libapp_simple_drawing.dylib */;
+			productReference = 9AEB75A316F78DF10085103B /* libapp_simple_webserver.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_webserver_app" */;
+			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_webserver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,8 +292,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				9AEB75A216F78DF10085103B /* app_simple_drawing */,
-				9AE24E891904CFFD001AEFFB /* ios_app_simple_drawing */,
+				9AEB75A216F78DF10085103B /* app_simple_webserver */,
+				9AE24E891904CFFD001AEFFB /* ios_app_simple_webserver */,
 				9AE24E981904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 			);
 		};
@@ -389,7 +389,7 @@
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AE24E891904CFFD001AEFFB /* ios_app_simple_drawing */;
+			target = 9AE24E891904CFFD001AEFFB /* ios_app_simple_webserver */;
 			targetProxy = 9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -652,7 +652,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_simple_drawing" */ = {
+		9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_simple_webserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AE24EAA1904CFFD001AEFFB /* Debug */,
@@ -670,7 +670,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_webserver_app" */ = {
+		9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_webserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AEB75A516F78DF10085103B /* Debug */,
@@ -679,7 +679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_drawing" */ = {
+		9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_webserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AEB75A816F78DF10085103B /* Debug */,

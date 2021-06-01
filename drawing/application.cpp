@@ -1,4 +1,5 @@
 #include "framework.h"
+#define _APP_ID "app-simple/drawing"
 #include "aura/application.h"
 #include "aura/update.h"
 

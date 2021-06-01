@@ -9,6 +9,9 @@ namespace simple_application
       public ::user::document
    {
    public:
+      
+      
+      string_array   m_straLine;
 
 
       document();

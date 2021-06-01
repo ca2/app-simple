@@ -11,18 +11,24 @@ namespace simple_drawing
 
    void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, angle angleStart, angle angleAngle, bool bPath)
    {
+      
+      auto psystem = m_psystem->m_paurasystem;
+      
+      auto pdraw2d = psystem->draw2d();
+      
+      auto pwritetext = pdraw2d->write_text();
 
-      ::write_text::font_pointer font(e_create);
+      auto pfont = pwritetext->create_font();
 
       string strFontFamily = get_font();
 
-      font->create_pixel_font(strFontFamily, 14.0, e_font_weight_light);
+      pfont->create_pixel_font(strFontFamily, 14.0, e_font_weight_light);
 
       ::color::color color(m_hlsText);
 
       pgraphics->set_text_color(color);
 
-      pgraphics->set(font);
+      pgraphics->set(pfont);
 
       string str1;
 

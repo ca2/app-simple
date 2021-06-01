@@ -35,8 +35,15 @@ namespace simple_application
 
    bool document::on_new_document()
    {
+      
+      auto papplication = get_application();
+      
+      auto & file = papplication->file();
+      
+      file.lines(m_straLine, "dropbox://app_simple_application.txt");
 
-      return ::user::document::on_new_document();
+      return true;
+      //return ::user::document::on_new_document();
 
    }
 

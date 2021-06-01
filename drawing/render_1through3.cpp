@@ -81,16 +81,22 @@ namespace simple_drawing
       
       string strTitle;
       
-      ::write_text::font_pointer font1(e_create);
-
-      ::write_text::font_pointer font2(e_create);
+      auto psystem = m_psystem->m_paurasystem;
+      
+      auto pdraw2d = psystem->draw2d();
+      
+      auto pwritetext = pdraw2d->write_text();
+      
+      auto pfont1 = pwritetext->create_font();
+      
+      auto pfont2 = pwritetext->create_font();
 
       if(bDrawText)
       {
 
-         font1->create_pixel_font(strFontFamily, 100.0, 800);
+         pfont1->create_pixel_font(strFontFamily, 100.0, 800);
 
-         pgraphics->set(font1);
+         pgraphics->set(pfont1);
 
          strTitle = m_papplication->m_strMainTitle;
 
@@ -108,7 +114,7 @@ namespace simple_drawing
 
                float fSize = (float) (iHeight * 80.0 / dMaxDimension);
 
-               font2->create_pixel_font(strFontFamily, fSize, 800);
+               pfont2->create_pixel_font(strFontFamily, fSize, 800);
 
             }
             else
@@ -116,13 +122,13 @@ namespace simple_drawing
 
                float fSize = (float) (iHeight * 160.0 / dMaxDimension);
 
-               font2->create_pixel_font(strFontFamily, fSize, 800);
+               pfont2->create_pixel_font(strFontFamily, fSize, 800);
 
             }
 
          }
 
-         pgraphics->set(font2);
+         pgraphics->set(pfont2);
 
          size = pgraphics->GetTextExtent(strTitle);
             
@@ -170,6 +176,10 @@ namespace simple_drawing
       pgraphics->set(pen);
 
       pgraphics->set(brush);
+      
+      //pgraphics->draw_ellipse(rectangle);
+      
+      //pgraphics->fill_ellipse(rectangle);
 
       pgraphics->ellipse(rectangle);
 

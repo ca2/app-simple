@@ -11,6 +11,8 @@ namespace simple_application
    {
 
       //m_bLocalization = true;
+      
+      m_bImaging = false;
 
       m_ppaneview = nullptr;
 

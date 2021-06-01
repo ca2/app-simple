@@ -1,5 +1,4 @@
 #include "framework.h"
-#define NO_IMAGING
 #define _APP_ID "app-simple/application"
 #include "aura/application.h"
 

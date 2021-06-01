@@ -31,7 +31,7 @@ namespace simple_application
 
       virtual void on_subject(::subject::subject * psubject, ::subject::context * pcontext) override;
 
-      ::user::document * get_document();
+      document * get_document();
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
