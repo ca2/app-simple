@@ -9,6 +9,8 @@ namespace simple_message_box
 
    application::application()
    {
+      
+      m_bImaging = false;
 
       m_strAppId = "app-simple/box";
 

@@ -16,7 +16,7 @@ namespace simple_form
 
       m_strAppId                 = "app-simple/form";
       m_strAppName               = "app-simple/form";
-      m_strBaseSupportId         = "ca2_flag";
+      m_strBaseSupportId         = "app-simple/form";
       m_bLicense                 = false;
 
       m_bMultiverseChat          = true;

@@ -10,6 +10,8 @@
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
+		9AA80272266574D500A6B449 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A00E5242661209900517464 /* libacme.dylib */; };
+		9AA80273266574D500A6B449 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A00E5572661209B00517464 /* libapex.dylib */; };
 		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
 /* End PBXBuildFile section */
 
@@ -168,27 +170,6 @@
 			remoteGlobalIDString = 9AE24E151904CF99001AEFFB;
 			remoteInfo = draw2d_quartz2d_iosTests;
 		};
-		9A00E5722661209C00517464 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
-			remoteInfo = app_simple_drawing;
-		};
-		9A00E5742661209C00517464 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
-			remoteInfo = ios_app_simple_drawing;
-		};
-		9A00E5762661209C00517464 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
-			remoteInfo = app_core_hellomultiverse_iosTests;
-		};
 		9A00E57C2661209C00517464 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A00E5782661209C00517464 /* acme_apple.xcodeproj */;
@@ -266,22 +247,80 @@
 			remoteGlobalIDString = 9A64C1712660C62C0074030F;
 			remoteInfo = write_text_quartz2d;
 		};
+		9A353E47266228800060257B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353E23266228800060257B /* experience_core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75F416F78EDC0085103B;
+			remoteInfo = experience_core;
+		};
+		9A353E49266228800060257B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353E23266228800060257B /* experience_core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E5A1904CFE2001AEFFB;
+			remoteInfo = ios_experience_core;
+		};
+		9A353E4B266228800060257B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353E23266228800060257B /* experience_core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E691904CFE2001AEFFB;
+			remoteInfo = experience_lite_iosTests;
+		};
+		9AA802742665752000A6B449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteInfo = draw2d_quartz2d;
+		};
+		9AA802762665752000A6B449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353E23266228800060257B /* experience_core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75F316F78EDC0085103B;
+			remoteInfo = experience_core;
+		};
+		9AA802782665752000A6B449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E5A22661209D00517464 /* node_macos.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC2D16E26542E1000CC8096;
+			remoteInfo = node_macos;
+		};
+		9AA8027A2665752000A6B449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A64C1702660C62C0074030F;
+			remoteInfo = write_text_quartz2d;
+		};
+		9AEE92402661FCEE00FCA5EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AEB75A316F78DF10085103B;
+			remoteInfo = app_simple_drawing;
+		};
+		9AEE92422661FCEE00FCA5EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E8A1904CFFD001AEFFB;
+			remoteInfo = ios_app_simple_drawing;
+		};
+		9AEE92442661FCEE00FCA5EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24E991904CFFD001AEFFB;
+			remoteInfo = app_core_hellomultiverse_iosTests;
+		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		076A24D91B6E799300BF6C7D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		070B8EEA1B6E53F900D26137 /* app_simple_webserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = app_simple_webserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_webserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hello Multiverse!!Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8F021B6E53FA00D26137 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
@@ -300,7 +339,7 @@
 		9A00E5512661209A00517464 /* apex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex.xcodeproj; path = ../../app/apex/apex.xcodeproj; sourceTree = "<group>"; };
 		9A00E55A2661209B00517464 /* apex_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_posix.xcodeproj; path = "../../../archive/platform-posix/apex_posix/apex_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../archive/platform-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_simple_webserver_app.xcodeproj; sourceTree = "<group>"; };
+		9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_simple_webserver.xcodeproj; sourceTree = "<group>"; };
 		9A00E5782661209C00517464 /* acme_apple.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_apple.xcodeproj; path = "../../../archive/platform-apple/acme_apple/acme_apple.xcodeproj"; sourceTree = "<group>"; };
 		9A00E57E2661209C00517464 /* apex_apple.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_apple.xcodeproj; path = "../../../archive/platform-apple/apex_apple/apex_apple.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5842661209C00517464 /* aura_apple.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_apple.xcodeproj; path = "../../../archive/platform-apple/aura_apple/aura_apple.xcodeproj"; sourceTree = "<group>"; };
@@ -308,6 +347,7 @@
 		9A00E5962661209D00517464 /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../../archive/platform-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A22661209D00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../archive/platform-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../archive/platform-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
+		9A353E23266228800060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,6 +356,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA80272266574D500A6B449 /* libacme.dylib in Frameworks */,
+				9AA80273266574D500A6B449 /* libapex.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +384,13 @@
 				9A00E5062661209800517464 /* apex_macos.xcodeproj */,
 				9A00E55A2661209B00517464 /* apex_posix.xcodeproj */,
 				9A00E5512661209A00517464 /* apex.xcodeproj */,
-				9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */,
+				9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */,
 				9A00E5272661209900517464 /* aqua.xcodeproj */,
 				9A00E5842661209C00517464 /* aura_apple.xcodeproj */,
 				9A00E58A2661209C00517464 /* aura_macos.xcodeproj */,
 				9A00E5962661209D00517464 /* aura_posix.xcodeproj */,
 				9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */,
+				9A353E23266228800060257B /* experience_core.xcodeproj */,
 				9A00E4FD2661209800517464 /* idn.xcodeproj */,
 				9A00E5A22661209D00517464 /* node_macos.xcodeproj */,
 				9A00E4F72661209800517464 /* windowing_macos.xcodeproj */,
@@ -364,7 +407,7 @@
 		070B8EEB1B6E53F900D26137 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070B8EEA1B6E53F900D26137 /* app_simple_webserver.app */,
+				070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */,
 				070B8EFD1B6E53FA00D26137 /* Hello Multiverse!!Tests.xctest */,
 			);
 			name = Products;
@@ -503,16 +546,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A00E56D2661209B00517464 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A00E5732661209C00517464 /* libapp_simple_drawing.dylib */,
-				9A00E5752661209C00517464 /* libapp_simple_webserver_app.a */,
-				9A00E5772661209C00517464 /* app_core_hellomultiverse_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9A00E5792661209C00517464 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +606,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A353E24266228800060257B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A353E48266228800060257B /* libexperience_core.dylib */,
+				9A353E4A266228800060257B /* libios_experience_core.a */,
+				9A353E4C266228800060257B /* experience_lite_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9A3E0BA12309FBD400B5459B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,25 +638,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9AEE92312661FCEE00FCA5EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE92412661FCEE00FCA5EC /* libapp_simple_drawing.dylib */,
+				9AEE92432661FCEE00FCA5EC /* libapp_simple_webserver_app.a */,
+				9AEE92452661FCEE00FCA5EC /* app_core_hellomultiverse_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		070B8EE91B6E53F900D26137 /* app_simple_webserver */ = {
+		070B8EE91B6E53F900D26137 /* _app_simple_webserver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "app_simple_webserver" */;
+			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_webserver" */;
 			buildPhases = (
 				070B8EE61B6E53F900D26137 /* Sources */,
 				070B8EE71B6E53F900D26137 /* Frameworks */,
 				070B8EE81B6E53F900D26137 /* Resources */,
-				076A24D91B6E799300BF6C7D /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9AA802752665752000A6B449 /* PBXTargetDependency */,
+				9AA802772665752000A6B449 /* PBXTargetDependency */,
+				9AA802792665752000A6B449 /* PBXTargetDependency */,
+				9AA8027B2665752000A6B449 /* PBXTargetDependency */,
 			);
-			name = app_simple_webserver;
+			name = _app_simple_webserver;
 			productName = "Hello Multiverse!!";
-			productReference = 070B8EEA1B6E53F900D26137 /* app_simple_webserver.app */;
+			productReference = 070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */;
 			productType = "com.apple.product-type.application";
 		};
 		070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */ = {
@@ -654,7 +710,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "app_simple_webserver" */;
+			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "_app_simple_webserver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -699,8 +755,8 @@
 					ProjectRef = 9A00E55A2661209B00517464 /* apex_posix.xcodeproj */;
 				},
 				{
-					ProductGroup = 9A00E56D2661209B00517464 /* Products */;
-					ProjectRef = 9A00E56C2661209B00517464 /* app_simple_webserver_app.xcodeproj */;
+					ProductGroup = 9AEE92312661FCEE00FCA5EC /* Products */;
+					ProjectRef = 9A00E56C2661209B00517464 /* app_simple_webserver.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A00E5282661209900517464 /* Products */;
@@ -731,6 +787,10 @@
 					ProjectRef = 9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */;
 				},
 				{
+					ProductGroup = 9A353E24266228800060257B /* Products */;
+					ProjectRef = 9A353E23266228800060257B /* experience_core.xcodeproj */;
+				},
+				{
 					ProductGroup = 9A00E4FE2661209800517464 /* Products */;
 					ProjectRef = 9A00E4FD2661209800517464 /* idn.xcodeproj */;
 				},
@@ -749,7 +809,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				070B8EE91B6E53F900D26137 /* app_simple_webserver */,
+				070B8EE91B6E53F900D26137 /* _app_simple_webserver */,
 				070B8EFC1B6E53FA00D26137 /* Hello Multiverse!!Tests */,
 			);
 		};
@@ -903,28 +963,6 @@
 			remoteRef = 9A00E56A2661209B00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A00E5732661209C00517464 /* libapp_simple_drawing.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			name = libapp_simple_drawing.dylib;
-			path = libapp_simple_webserver_app.dylib;
-			remoteRef = 9A00E5722661209C00517464 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A00E5752661209C00517464 /* libapp_simple_webserver_app.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libapp_simple_webserver_app.a;
-			remoteRef = 9A00E5742661209C00517464 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A00E5772661209C00517464 /* app_core_hellomultiverse_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = app_core_hellomultiverse_iosTests.xctest;
-			remoteRef = 9A00E5762661209C00517464 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		9A00E57D2661209C00517464 /* libacme_apple.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -1002,6 +1040,49 @@
 			remoteRef = 9A00E5AC2661209D00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9A353E48266228800060257B /* libexperience_core.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libexperience_core.dylib;
+			remoteRef = 9A353E47266228800060257B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A353E4A266228800060257B /* libios_experience_core.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_experience_core.a;
+			remoteRef = 9A353E49266228800060257B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A353E4C266228800060257B /* experience_lite_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = experience_lite_iosTests.xctest;
+			remoteRef = 9A353E4B266228800060257B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AEE92412661FCEE00FCA5EC /* libapp_simple_drawing.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapp_simple_drawing.dylib;
+			remoteRef = 9AEE92402661FCEE00FCA5EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AEE92432661FCEE00FCA5EC /* libapp_simple_webserver_app.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libapp_simple_webserver_app.a;
+			path = libios_app_simple_drawing.a;
+			remoteRef = 9AEE92422661FCEE00FCA5EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AEE92452661FCEE00FCA5EC /* app_core_hellomultiverse_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = app_core_hellomultiverse_iosTests.xctest;
+			remoteRef = 9AEE92442661FCEE00FCA5EC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1045,8 +1126,28 @@
 /* Begin PBXTargetDependency section */
 		070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 070B8EE91B6E53F900D26137 /* app_simple_webserver */;
+			target = 070B8EE91B6E53F900D26137 /* _app_simple_webserver */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
+		};
+		9AA802752665752000A6B449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = draw2d_quartz2d;
+			targetProxy = 9AA802742665752000A6B449 /* PBXContainerItemProxy */;
+		};
+		9AA802772665752000A6B449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = experience_core;
+			targetProxy = 9AA802762665752000A6B449 /* PBXContainerItemProxy */;
+		};
+		9AA802792665752000A6B449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = node_macos;
+			targetProxy = 9AA802782665752000A6B449 /* PBXContainerItemProxy */;
+		};
+		9AA8027B2665752000A6B449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = write_text_quartz2d;
+			targetProxy = 9AA8027A2665752000A6B449 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1107,7 +1208,7 @@
 					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PLATFORM_MODIFIER = macos;
@@ -1170,7 +1271,7 @@
 					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-$(PLATFORM_MODIFIER)/third/library/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1191,9 +1292,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.webserver";
+				PRODUCT_NAME = _app_simple_webserver;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -1208,9 +1309,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.webserver";
+				PRODUCT_NAME = _app_simple_webserver;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
@@ -1256,7 +1357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "app_simple_webserver" */ = {
+		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "_app_simple_webserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F051B6E53FA00D26137 /* Debug */,
@@ -1265,7 +1366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "app_simple_webserver" */ = {
+		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_webserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				070B8F081B6E53FA00D26137 /* Debug */,

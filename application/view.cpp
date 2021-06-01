@@ -115,10 +115,10 @@ namespace simple_application
    }
 
 
-   ::user::document * view::get_document()
+   document * view::get_document()
    {
 
-      return ::user::impact::get_document();
+      return dynamic_cast < document * >(::user::impact::get_document());
 
    }
 
@@ -161,11 +161,25 @@ namespace simple_application
 
       //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pview->_001OnDraw(pgraphics);");
       
+      string_array & stra = get_document()->m_straLine;
+      
+//      stra.add("<3");
+//      stra.add("T");
+//      stra.add("+");
+//      stra.add("homasBS_!!");
+//      stra.add(">");
+      
+      bool bWhite  = true;
+      
+      int x = 0;
+      
+      int y = 0;
+      
+      ::point_i32 point;
+
       string strText = "psimpleapplication->m_pview->_001OnDraw(pgraphics);";
 
       auto size = pgraphics->GetTextExtent(strText);
-
-      ::point_i32 point;
 
       bool bFixedPosition = true;
 
@@ -179,11 +193,77 @@ namespace simple_application
       {
        
          point.x = __random(0, (int)(rectClient.width() - size.cx));
-         point.y = __random(0, (int)(rectClient.height() - size.cy));
+         point.y = __random(0, (int)(rectClient.height() - size.cy*2));
 
       }
+      
+      for(auto & strItem : stra)
+      {
+         
+         if(strItem.is_empty())
+         {
+            
+            x = 0;
+            
+            y += size.cy;
+            
+            bWhite = true;
+         
+            continue;
+         
+         }
+         
+         if(bWhite)
+         {
+            
+            pgraphics->set_text_color(color::white);
+            
+         }
+         else
+         {
+            
+            pgraphics->set_text_color(color_dk);
+            
+         }
+         
+         pgraphics->text_out(point.x + x, point.y + y, strItem);
+         
+         auto s = pgraphics->GetTextExtent(strItem);
 
-      pgraphics->text_out(point.x, point.y, strText);
+         x += s.cx;
+         
+         bWhite = !bWhite;
+         
+      }
+//      string strText = "<3";
+//
+//
+//
+//
+//
+//
+//      point.x += size.cx;
+//
+//      pgraphics->set_text_color(color_dk);
+//
+//      size = pgraphics->GetTextExtent("TBS_");
+//
+//      pgraphics->text_out(point.x, point.y, strText);
+//
+//      point.x += size.cx;
+//
+//      pgraphics->set_text_color(color_dk);
+//
+//      pgraphics->set_text_color(color::white);
+//
+//      pgraphics->text_out(point.x, point.y, strText);
+//
+      
+      pgraphics->set_text_color(color_dk);
+
+
+
+      pgraphics->text_out(point.x, point.y + y + size.cy, strText);
 
    }
 
