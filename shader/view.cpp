@@ -18,6 +18,8 @@ namespace simple_shader
 
       m_flagNonClient.erase(non_client_focus_rect);
 
+      m_bClickDefaultMouseHandling = true;
+
    }
 
 
@@ -69,7 +71,7 @@ namespace simple_shader
    {
 
       ::user::impact::install_message_routing(psender);
-      ::user::interaction::install_simple_ui_default_mouse_handling(psender);
+
       MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
       MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
       MESSAGE_LINK(e_message_key_down, psender, this, &view::_001OnKeyDown);
