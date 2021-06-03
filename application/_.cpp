@@ -1,5 +1,5 @@
 #include "framework.h"
-#define _APP_ID "app-simple/application"
+//#define _APP_ID "app-simple/application"
 #include "aura/application.h"
 
 
