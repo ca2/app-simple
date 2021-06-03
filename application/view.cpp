@@ -171,9 +171,9 @@ namespace simple_application
       
       bool bWhite  = true;
       
-      int x = 0;
+      double x = 0.;
       
-      int y = 0;
+      double y = 0.;
       
       ::point_i32 point;
 
