@@ -51,7 +51,12 @@ namespace simple_form
    {
 
       if(get_pane_count() > 0)
+      {
+
          return;
+
+      }
+
 
       int iPane;
 

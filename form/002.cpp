@@ -99,6 +99,8 @@ namespace simple_form
 
       m_pbutton->create_control(this, "send_button");
 
+      m_pbutton->add_control_event_handler(this);
+
       m_pstill->set_window_text("Enter new text:");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";

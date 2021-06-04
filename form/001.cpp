@@ -94,7 +94,11 @@ namespace simple_form
 
       m_pbuttonClear->create_control(this, "clear_button");
 
+      m_pbuttonClear->add_control_event_handler(this);
+
       m_pbuttonSend->create_control(this, "send_button");
+
+      m_pbuttonSend->add_control_event_handler(this);
 
       m_pstill->set_window_text("Enter new text:");
 
