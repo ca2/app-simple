@@ -9,7 +9,7 @@ namespace simple_shader
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rect& r, double dStart, double dAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle& r, double dStart, double dAngle, bool bPath)
    {
 
       ::write_text::font_pointer font(e_create);
@@ -50,7 +50,7 @@ namespace simple_shader
 
       size = size1.maximum(size2);
 
-      ::rect rectBack(r);
+      ::rectangle rectBack(r);
 
       rectBack.deflate(2, 2);
 
@@ -193,7 +193,7 @@ namespace simple_shader
       daStart.add(45.0);
       daAngle.add(-100.0);
 
-      ::rect rClient(m_rect);
+      ::rectangle rClient(m_rect);
 
       if (__bool(papplication->m_echeckSimple))
       {
@@ -210,7 +210,7 @@ namespace simple_shader
 
       int iColumnCount = 8;
 
-      rect r;
+      rectangle r;
 
       r.top = 0;
 
