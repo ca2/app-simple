@@ -100,7 +100,7 @@ namespace simple_drawing
 
          strTitle = m_papplication->m_strMainTitle;
 
-         size = pgraphics->GetTextExtent(strTitle);
+         size = pgraphics->get_text_extent(strTitle);
 
          if (!size.is_empty())
          {
@@ -130,7 +130,7 @@ namespace simple_drawing
 
          pgraphics->set(pfont2);
 
-         size = pgraphics->GetTextExtent(strTitle);
+         size = pgraphics->get_text_extent(strTitle);
             
       }
 

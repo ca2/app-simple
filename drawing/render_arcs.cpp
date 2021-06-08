@@ -38,13 +38,13 @@ namespace simple_drawing
 
       str2.Format("Angle: %0.0f", angleAngle.degree());
 
-      auto size1 = pgraphics->GetTextExtent(str1);
+      auto size1 = pgraphics->get_text_extent(str1);
 
       size1.cx += 32;
 
       size1.cy += 4;
 
-      auto size2 = pgraphics->GetTextExtent(str2);
+      auto size2 = pgraphics->get_text_extent(str2);
 
       size2.cx += 32;
 

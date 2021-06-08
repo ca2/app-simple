@@ -93,7 +93,7 @@ namespace simple_webserver
 
          strTitle = m_papplication->m_strMainTitle;
 
-         size = pgraphics->GetTextExtent(strTitle);
+         size = pgraphics->get_text_extent(strTitle);
 
          if (!size.is_empty())
          {
@@ -123,7 +123,7 @@ namespace simple_webserver
 
          pgraphics->set(font);
 
-         size = pgraphics->GetTextExtent(strTitle);
+         size = pgraphics->get_text_extent(strTitle);
             
       }
 

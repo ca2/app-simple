@@ -130,11 +130,11 @@ namespace simple_application
 
       //return;
 
-      ::rectangle_i32 rectClient;
+      ::rectangle_i32 rectangleClient;
 
-      get_client_rect(rectClient);
+      get_client_rect(rectangleClient);
 
-      if (rectClient.is_empty())
+      if (rectangleClient.is_empty())
       {
 
          return;
@@ -179,7 +179,7 @@ namespace simple_application
 
       string strText = "psimpleapplication->m_pview->_001OnDraw(pgraphics);";
 
-      auto size = pgraphics->GetTextExtent(strText);
+      auto size = pgraphics->get_text_extent(strText);
 
       bool bFixedPosition = true;
 
@@ -192,8 +192,8 @@ namespace simple_application
       else
       {
        
-         point.x = __random(0, (int)(rectClient.width() - size.cx));
-         point.y = __random(0, (int)(rectClient.height() - size.cy*2));
+         point.x = __random(0, (int)(rectangleClient.width() - size.cx));
+         point.y = __random(0, (int)(rectangleClient.height() - size.cy*2));
 
       }
       
@@ -228,7 +228,7 @@ namespace simple_application
          
          pgraphics->text_out(point.x + x, point.y + y, strItem);
          
-         auto s = pgraphics->GetTextExtent(strItem);
+         auto s = pgraphics->get_text_extent(strItem);
 
          x += s.cx;
          
@@ -246,7 +246,7 @@ namespace simple_application
 //
 //      pgraphics->set_text_color(color_dk);
 //
-//      size = pgraphics->GetTextExtent("TBS_");
+//      size = pgraphics->get_text_extent("TBS_");
 //
 //      pgraphics->text_out(point.x, point.y, strText);
 //
@@ -271,9 +271,9 @@ namespace simple_application
    void view::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectClient = get_client_rect();
+      auto rectangleClient = get_client_rect();
 
-      if(rectClient.is_empty())
+      if(rectangleClient.is_empty())
       {
 
          return;
