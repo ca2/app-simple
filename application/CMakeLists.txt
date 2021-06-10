@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_application CXX)
 
 
-list(APPEND app_simple_application_source
+list(APPEND library_source
         _.cpp
         _.h
         _user.h
@@ -28,7 +28,7 @@ list(APPEND library_references
    )
 
 
-add_executable(app_simple_application ${app_simple_application_source} )
+add_executable(app_simple_application ${library_source} )
 
 
 target_precompile_headers(app_simple_application PRIVATE framework.h)
