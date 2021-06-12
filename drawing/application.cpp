@@ -4,7 +4,6 @@
 #include "aura/update.h"
 
 
-
 namespace simple_drawing
 {
 
@@ -61,6 +60,8 @@ namespace simple_drawing
 
       m_strAppName = "app-simple/drawing";
 
+      m_strDatabaseAppId = "app-simple/drawing";
+
       m_strBaseSupportId = "ca2_flag";
 
       m_bLicense = false;
@@ -84,14 +85,6 @@ namespace simple_drawing
       return __type(tab_view);
 
    }
-
-
- /*  string application::get_hover_font() const
-   {
-
-      return "Helvetica";
-
-   }*/
 
 
    ::e_status application::init_instance()

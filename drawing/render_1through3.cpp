@@ -98,7 +98,14 @@ namespace simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = m_papplication->m_strMainTitle;
+         strTitle = m_papplication->m_strSimple;
+
+         if(strTitle.is_empty())
+         {
+         
+            strTitle = m_papplication->m_strMainTitle;
+         
+         }
 
          size = pgraphics->get_text_extent(strTitle);
 
