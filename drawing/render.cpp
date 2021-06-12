@@ -170,9 +170,6 @@ namespace simple_drawing
    }
 
 
-
-
-
    string render::get_font()
    {
 
@@ -207,28 +204,6 @@ namespace simple_drawing
       return m_strFont1;
 
    }
-
-
-
-   //string application::get_main_title() const
-   //{
-
-   //   string strSimple(m_strSimple);
-
-   //   if (strSimple.trimmed().has_char())
-   //   {
-
-   //      return m_strSimple;
-
-   //   }
-   //   else
-   //   {
-
-   //      return m_strMainTitle;
-
-   //   }
-
-   //}
 
 
 } // namespace simple_drawing

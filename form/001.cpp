@@ -92,6 +92,8 @@ namespace simple_form
 
       m_pedit->create_control(this, "edit");
 
+      m_pedit->add_control_event_handler(this);
+
       m_pbuttonClear->create_control(this, "clear_button");
 
       m_pbuttonClear->add_control_event_handler(this);
