@@ -11,6 +11,10 @@
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
 		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
+		9AFFC7BB26786ED500C4104F /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B726786ED500C4104F /* libssl.1.1.dylib */; };
+		9AFFC7BC26786ED500C4104F /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B826786ED500C4104F /* libcrypto.1.1.dylib */; };
+		9AFFC7BD26786ED500C4104F /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B926786ED500C4104F /* libcrypto.1.1.dylib */; };
+		9AFFC7BE26786ED500C4104F /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7BA26786ED500C4104F /* libssl.1.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +146,10 @@
 		9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../archive/platform-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A353E23266228800060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		9AFFC7B726786ED500C4104F /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../archive/storage-macos/library/libssl.1.1.dylib"; sourceTree = "<group>"; };
+		9AFFC7B826786ED500C4104F /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
+		9AFFC7B926786ED500C4104F /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
+		9AFFC7BA26786ED500C4104F /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../archive/storage-macos/library/libssl.1.1.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AFFC7BB26786ED500C4104F /* libssl.1.1.dylib in Frameworks */,
+				9AFFC7BE26786ED500C4104F /* libssl.1.1.dylib in Frameworks */,
+				9AFFC7BC26786ED500C4104F /* libcrypto.1.1.dylib in Frameworks */,
+				9AFFC7BD26786ED500C4104F /* libcrypto.1.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +274,10 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AFFC7BA26786ED500C4104F /* libssl.1.1.dylib */,
+				9AFFC7B826786ED500C4104F /* libcrypto.1.1.dylib */,
+				9AFFC7B926786ED500C4104F /* libcrypto.1.1.dylib */,
+				9AFFC7B726786ED500C4104F /* libssl.1.1.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

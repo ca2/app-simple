@@ -24,26 +24,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A00E28926611E0700517464 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E26C26611E0700517464 /* base.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AD117F324F51BE400177261;
-			remoteInfo = base;
-		};
-		9AE12F3C2661F765009F476A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E26C26611E0700517464 /* base.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AD117F224F51BE400177261;
-			remoteInfo = base;
-		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
 			remoteInfo = app_core_hellomultiverse_ios;
+		};
+		9AFFC79526786E4200C4104F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AFFC78F26786E4200C4104F /* aura.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A98A6151771D67E000AE16E;
+			remoteInfo = aura;
+		};
+		9AFFC79726786E4200C4104F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AFFC78F26786E4200C4104F /* aura.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A20198A24772E9000A31CBF;
+			remoteInfo = ios_aura;
+		};
+		9AFFC79926786E4200C4104F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AFFC78F26786E4200C4104F /* aura.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE24D431904CEFE001AEFFB;
+			remoteInfo = aura_iosTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A00E26C26611E0700517464 /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
 		9A85299C212F93A80073FBAB /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A8529A9212F93AA0073FBAB /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9AE12F3A2661F713009F476A /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 		9AEB75A316F78DF10085103B /* libapp_simple_box.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_box.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75BE16F78E600085103B /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9AEB75BF16F78E600085103B /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9AFFC78F26786E4200C4104F /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../app/aura/aura.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A00E26D26611E0700517464 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A00E28A26611E0700517464 /* libbase.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +147,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9A00E26C26611E0700517464 /* base.xcodeproj */,
+				9AFFC78F26786E4200C4104F /* aura.xcodeproj */,
 				9AEB75AA16F78E600085103B /* simple_box */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AEB75A416F78DF10085103B /* Products */,
@@ -176,6 +175,16 @@
 				9AEB75BF16F78E600085103B /* framework.h */,
 			);
 			name = simple_box;
+			sourceTree = "<group>";
+		};
+		9AFFC79026786E4200C4104F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AFFC79626786E4200C4104F /* libaura.dylib */,
+				9AFFC79826786E4200C4104F /* libios_aura.a */,
+				9AFFC79A26786E4200C4104F /* aura_iosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +249,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AE12F3D2661F765009F476A /* PBXTargetDependency */,
 			);
 			name = app_simple_box;
 			productName = app_core_hellomultiverse;
@@ -274,8 +282,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A00E26D26611E0700517464 /* Products */;
-					ProjectRef = 9A00E26C26611E0700517464 /* base.xcodeproj */;
+					ProductGroup = 9AFFC79026786E4200C4104F /* Products */;
+					ProjectRef = 9AFFC78F26786E4200C4104F /* aura.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -288,11 +296,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A00E28A26611E0700517464 /* libbase.dylib */ = {
+		9AFFC79626786E4200C4104F /* libaura.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
-			remoteRef = 9A00E28926611E0700517464 /* PBXContainerItemProxy */;
+			path = libaura.dylib;
+			remoteRef = 9AFFC79526786E4200C4104F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AFFC79826786E4200C4104F /* libios_aura.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libios_aura.a;
+			remoteRef = 9AFFC79726786E4200C4104F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AFFC79A26786E4200C4104F /* aura_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = aura_iosTests.xctest;
+			remoteRef = 9AFFC79926786E4200C4104F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -338,11 +360,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9AE12F3D2661F765009F476A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = base;
-			targetProxy = 9AE12F3C2661F765009F476A /* PBXContainerItemProxy */;
-		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE24E891904CFFD001AEFFB /* ios_app_simple_box */;
@@ -515,7 +532,7 @@
 					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
@@ -587,7 +604,7 @@
 					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-$(PLATFORM_MODIFIER)/third/library/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
