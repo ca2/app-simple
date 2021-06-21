@@ -13,8 +13,8 @@ namespace simple_change_grub_default_entry
 
       __composite(::user::still)             m_pstill;
       __composite(::user::plain_edit)        m_pedit;
-      __composite(::user::button)            m_pbuttonClear;
-      __composite(::user::button)            m_pbuttonSend;
+      //__composite(::user::button)            m_pbuttonClear;
+      __composite(::user::button)            m_pbuttonRestart;
       __composite(::user::list_box)          m_plistbox;
 
 
