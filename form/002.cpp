@@ -109,13 +109,13 @@ namespace simple_form
 
       m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
 
-      m_pcombobox->AddString("Combo1", "ComboData001");
+      m_pcombobox->add_string("Combo1", "ComboData001");
 
-      m_pcombobox->AddString("Combo2", "ComboData002");
+      m_pcombobox->add_string("Combo2", "ComboData002");
 
-      m_pcombobox->AddString("Combo3", "ComboData003");
+      m_pcombobox->add_string("Combo3", "ComboData003");
 
-      m_pcombobox->AddString("Combo4", "ComboData004");
+      m_pcombobox->add_string("Combo4", "ComboData004");
 
    }
 
