@@ -86,9 +86,7 @@ namespace simple_change_grub_default_entry
 
       __compose_new(m_plistbox);
 
-      //__compose_new(m_pbuttonClear);
-
-      //__compose_new(m_pbuttonSend);
+      __compose_new(m_pbuttonRestart);
 
       m_pstill->create_control(this, "still");
 
@@ -100,29 +98,23 @@ namespace simple_change_grub_default_entry
 
       m_plistbox->add_control_event_handler(this);
 
-      //m_pbuttonClear->create_control(this, "clear_button");
+      m_pbuttonRestart->create_control(this, "restart_button");
 
-      //m_pbuttonClear->add_control_event_handler(this);
-
-      //m_pbuttonSend->create_control(this, "send_button");
-
-      //m_pbuttonSend->add_control_event_handler(this);
+      m_pbuttonRestart->add_control_event_handler(this);
 
       m_pstill->set_window_text("Grub Folder:");
 
       m_pedit->m_strEmtpyText = "Enter Grub Folder Here";
 
-      string strInitialText;
-
       auto papplication = get_application();
 
-      strInitialText = papplication->data_get("last_text");
+      string strFolderPath;
 
-      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+      strFolderPath = papplication->data_get("grub_folder_path");
 
-      //m_pbuttonClear->set_window_text("Clear");
+      m_pedit->_001SetText(strFolderPath, ::e_source_initialize);
 
-      //m_pbuttonSend->set_window_text("Send");
+      m_pbuttonRestart->set_window_text("Restart Now");
 
    }
 
@@ -160,6 +152,31 @@ namespace simple_change_grub_default_entry
 
       m_pedit->display_child(::rectd_dim(iLeft, y, 600, sizeEdit.cy));
 
+
+      //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
+
+      auto sizeButtonRestart = m_pbuttonRestart->_001CalculateAdjustedFittingSize(pgraphics);
+
+      //auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
+
+      auto sizeButtonMarginRestart = m_pbuttonRestart->get_margin(m_pedit->get_style(pgraphics));
+
+      //y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
+
+      auto button_width = sizeButtonRestart.cx + 32;
+
+      auto button_height = sizeButtonRestart.cy;
+
+      //m_pbuttonClear->display_child(::rectd_dim(iLeft, y, button_width, button_height));
+
+      y += sizeButtonMarginRestart.top;
+
+      m_pbuttonRestart->display_child(::rectd_dim(rectangleClient.right - iLeft - button_width, y, button_width, button_height));
+
+      y += sizeButtonMarginRestart.bottom;
+
+      y += button_height;
+
       y += sizeEdit.cy;
 
       y += rectEditMargin.bottom;
@@ -167,25 +184,6 @@ namespace simple_change_grub_default_entry
       m_plistbox->display_child(::rectd_dim(iLeft, y, rectangleClient.width() - iLeft * 2, rectangleClient.bottom - iLeft - y));
 
       m_plistbox->set_need_layout();
-
-      //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
-
-      //auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
-
-      //auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
-
-      //auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
-
-      //y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
-
-      //auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
-
-      //auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
-
-      //m_pbuttonClear->display_child(::rectd_dim(iLeft, y, button_width, button_height));
-
-      //m_pbuttonSend->display_child(::rectd_dim(iLeft + button_width + 32, y, button_width, button_height));
-
    }
 
 
@@ -237,14 +235,14 @@ namespace simple_change_grub_default_entry
             m_pedit->_001SetText("", ::e_source_user);
 
          }
-         else if (pevent->m_id == "send_button")
+         else if (pevent->m_id == "restart_button")
          {
 
-            string strText;
+            auto psystem = m_psystem->m_papexsystem;
 
-            m_pedit->_001GetText(strText);
+            auto & os = psystem->os();
 
-            message_box("send_button clicked\nText: " + strText);
+            os.reboot();
 
             pevent->m_bRet = true;
 
@@ -372,6 +370,16 @@ namespace simple_change_grub_default_entry
          iFind++;
 
       }
+
+      auto strSavedEntry = get_grub_saved_entry(pathGrubFolder);
+
+      m_plistbox->set_current_item_by_string_value(strSavedEntry, ::e_source_initialize);
+
+      m_plistbox->set_need_layout();
+
+      m_plistbox->set_need_redraw();
+
+      m_plistbox->post_redraw();
 
       return ::success;
 
