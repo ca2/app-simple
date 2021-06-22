@@ -8,10 +8,6 @@ namespace simple_change_grub_default_entry
    main_view::main_view()
    {
 
-      //m_ptopview = NULL;
-      m_pview    = NULL;
-      m_flagNonClient.add(non_client_background);
-      m_flagNonClient.add(non_client_focus_rect);
 
 
    }
