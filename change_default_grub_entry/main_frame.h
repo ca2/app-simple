@@ -11,9 +11,6 @@ namespace simple_change_grub_default_entry
    public:
 
 
-      bool                       m_bExplicitTranslucency;
-
-
       main_frame();
       virtual ~main_frame();
 
@@ -22,10 +19,7 @@ namespace simple_change_grub_default_entry
       virtual void dump(dump_context & dumpcontext) const override;
 
 
-      //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
       virtual ::experience::frame * experience_get_frame() override;
-
-      virtual bool has_pending_graphical_update() override;
 
    };
 

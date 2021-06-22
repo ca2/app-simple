@@ -12,8 +12,6 @@ namespace simple_change_grub_default_entry
 
       m_bDefaultNotifyIcon = true;
 
-      window_enable_full_screen();
-
    }
 
 
@@ -49,49 +47,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
-
-      return true;
-
-   }
-
-
-   //bool main_frame::get_translucency(::user::enum_translucency & etranslucency, ::user::enum_element eelement, ::user::style_context * pcontext)
-   //{
-
-   //   if (m_bExplicitTranslucency)
-   //   {
-
-   //      etranslucency = m_etranslucency;
-
-   //      return true;
-
-   //   }
-
-   //   //if (userstyle() != NULL)
-   //   //{
-
-   //   //   if (m_puserstyle->_001GetMainFrameTranslucency(etranslucency))
-   //   //      return true;
-
-   //   //}
-   //   //etranslucency = ::user::e_translucency_present;
-
-   //   ////      etranslucency = ::user::e_translucency_none;
-
-   //   //return true;
-
-   //   return ::user::style::get_translucency(etranslucency, eelement, pcontext);
-
-   //}
-
-
 } // namespace simple_change_grub_default_entry
-
-
-
-
 
 
 
