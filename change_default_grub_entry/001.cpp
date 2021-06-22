@@ -196,16 +196,21 @@ namespace simple_change_grub_default_entry
       if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
       {
 
-         string strSavedEntry = m_plistbox->get_current_item_string_value();
-
-         if(strSavedEntry.has_char())
+         if (pevent->m_id == "list_box")
          {
 
-            auto pcontext = m_pcontext->m_papexcontext;
+            string strSavedEntry = m_plistbox->get_current_item_string_value();
 
-            auto pathGrubFolder = get_grub_folder_path();
+            if (strSavedEntry.has_char())
+            {
 
-            set_grub_saved_entry(pathGrubFolder, strSavedEntry);
+               auto pcontext = m_pcontext->m_papexcontext;
+
+               auto pathGrubFolder = get_grub_folder_path();
+
+               set_grub_saved_entry(pathGrubFolder, strSavedEntry);
+
+            }
 
          }
 
