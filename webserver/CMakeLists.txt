@@ -2,24 +2,8 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_drawing CXX)
 
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_EXTENSIONS OFF)
-add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
 
-if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-   set(LINUX TRUE)
-   set(PLATFORM_NAME "linux")
-   include(FindPkgConfig)
-elseif (WIN32)
-   set(PLATFORM_NAME "windows")
-endif ()
-
-
-set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../../time-${PLATFORM_NAME}/cmake)
-
-
-list(APPEND app_simple_application_source
+list(APPEND library_source
    _.h
    _drawing.h
    application.cpp
@@ -50,7 +34,7 @@ else ()
 endif ()
 
 
-add_library(app_simple_drawing SHARED ${app_simple_application_source})
+add_library(app_simple_drawing SHARED ${library_source})
 
 target_precompile_headers(app_simple_drawing PRIVATE framework.h)
 
@@ -93,22 +77,10 @@ list(APPEND library_link_directories
 target_link_directories(app_simple_drawing PRIVATE ${library_link_directories})
 
 
-list(APPEND library_include_directories
-   .
-   $ENV{HOME}/__config
-   ${CMAKE_CURRENT_SOURCE_DIR}/../..
-   ${CMAKE_CURRENT_SOURCE_DIR}/..
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../source
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/app/_include
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../source/include
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME}
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/platform-${PLATFORM_NAME}/_include
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/include
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/third-${PLATFORM_NAME}/third/include/include
-   ${CMAKE_CURRENT_SOURCE_DIR}
-   )
+target_include_directories(${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+target_include_directories(${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_include_directories(${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
 
 
 target_include_directories(app_simple_drawing PRIVATE ${library_include_directories})

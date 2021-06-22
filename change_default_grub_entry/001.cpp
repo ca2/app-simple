@@ -238,11 +238,9 @@ namespace simple_change_grub_default_entry
          else if (pevent->m_id == "restart_button")
          {
 
-            auto psystem = m_psystem->m_papexsystem;
+            auto pnode = m_psystem->node();
 
-            auto & os = psystem->os();
-
-            os.reboot();
+            pnode->reboot();
 
             pevent->m_bRet = true;
 

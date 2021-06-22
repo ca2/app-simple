@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(app_simple_notify_drawing CXX)
 
 
-list(APPEND app_simple_notify_drawing_source
+list(APPEND library_source
     _.cpp
     _.h
     application.cpp
@@ -26,7 +26,7 @@ list(APPEND library_references
    )
 
 
-add_executable(app_simple_notify_drawing ${app_simple_notify_drawing_source})
+add_executable(app_simple_notify_drawing ${library_source})
 
 
 target_precompile_headers(app_simple_notify_drawing PRIVATE framework.h)

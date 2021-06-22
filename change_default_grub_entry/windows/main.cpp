@@ -2,11 +2,6 @@
 // Created by camilo on 2020-11-26. <3tbs__
 //
 #include "framework.h"
-#include "apex/application.h"
+#define _APP_ID "app-simple/change_default_grub_entry"
+#include "aura/application.h"
 
-#ifdef _WIN32
-
-// Use discrete GPU by default.
-
-
-#endif
