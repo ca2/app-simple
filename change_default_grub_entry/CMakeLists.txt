@@ -88,7 +88,7 @@ endif ()
 
 add_dependencies(_app_simple_change_grub_default_entry app_simple_change_grub_default_entry)
 add_dependencies(_app_simple_change_grub_default_entry ${app_common_dependencies})
-add_dependencies(_app_simple_change_grub_default_entry experience_core)
+add_dependencies(_app_simple_change_grub_default_entry experience_tranquillum)
 add_dependencies(_app_simple_change_grub_default_entry ${default_draw2d})
 add_dependencies(_app_simple_change_grub_default_entry ${default_imaging})
 add_dependencies(_app_simple_change_grub_default_entry ${default_write_text})
