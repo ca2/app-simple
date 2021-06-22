@@ -2,6 +2,9 @@
 #include <math.h>
 
 
+::e_status grub_set_variable(memory& memoryGrubEnv, const ::block& blockVariablePrefix, const block& blockValue);
+
+
 namespace simple_change_grub_default_entry
 {
 
@@ -431,7 +434,7 @@ namespace simple_change_grub_default_entry
 
       auto memory = pcontext->file().as_memory(pathGrubEnv);
 
-      auto estatus = memory.patch_line_suffix("saved_entry=", strSavedEntry);
+      auto estatus = grub_set_variable(memory, "saved_entry=", strSavedEntry);
 
       if (!estatus)
       {
@@ -455,6 +458,96 @@ namespace simple_change_grub_default_entry
 
 
 } // namespace simple_change_grub_default_entry
+
+
+::e_status grub_set_variable(memory & memoryGrubEnv, const ::block& blockVariablePrefix, const block& blockValue)
+{
+
+   auto iStart = memoryGrubEnv.find_line_prefix_index(blockVariablePrefix);
+
+   if (iStart < 0)
+   {
+
+      return error_not_found;
+
+   }
+
+   auto iFindEol = memoryGrubEnv.find_index('\n', iStart);
+
+   if (iFindEol < 0)
+   {
+
+      iFindEol = memoryGrubEnv.get_size();
+
+   }
+
+   auto iFindEnd = memoryGrubEnv.reverse_find_index('#', iStart);
+
+   if (iFindEnd <= 0)
+   {
+
+      iFindEnd = memoryGrubEnv.get_size();
+
+   }
+   else
+   {
+
+      iFindEnd = memoryGrubEnv.reverse_find_index_of_byte_not_in_block("#", iFindEnd);
+
+   }
+
+   auto iOldLen = iFindEol - iStart;
+
+   auto iNewLen = blockValue.get_size();
+
+   auto iSize = memoryGrubEnv.get_size();
+
+   auto pdata = (byte*)memoryGrubEnv.get_data();
+
+   if (iNewLen != iOldLen)
+   {
+
+      auto ptarget = pdata + iStart + iNewLen;
+
+      auto psource = pdata + iStart + iOldLen;
+
+      auto c = abs(iNewLen - iOldLen);
+
+      memmove(ptarget, psource, iSize - iStart - iNewLen);
+
+   }
+
+   if (iNewLen < iOldLen)
+   {
+      
+      auto ptarget = pdata + iStart + iNewLen;
+
+      auto psource = pdata + iStart + iOldLen;
+
+      auto c = iOldLen - iNewLen;
+
+      memset(pdata + iFindEnd - c, '#', c);
+
+   }
+
+   if (iNewLen > 0)
+   {
+
+      auto ptarget = pdata + iStart;
+
+      auto psource = (const char*)blockValue.get_data();
+
+      auto c = blockValue.get_size();
+
+      memcpy(ptarget, psource, c);
+
+      output_debug_string(" ");
+
+   }
+
+   return ::success;
+
+}
 
 
 
