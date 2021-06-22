@@ -523,13 +523,11 @@ namespace simple_change_grub_default_entry
    if (iNewLen < iOldLen)
    {
       
-      auto ptarget = pdata + iStart + iNewLen;
-
-      auto psource = pdata + iStart + iOldLen;
-
       auto c = iOldLen - iNewLen;
 
-      memset(pdata + iFindEnd - c, '#', c);
+      auto pemptypadding = pdata + memoryGrubEnv.get_size() - c;
+
+      memset(pemptypadding, '#', c);
 
    }
 
@@ -543,8 +541,6 @@ namespace simple_change_grub_default_entry
       auto c = blockValue.get_size();
 
       memcpy(ptarget, psource, c);
-
-      output_debug_string(" ");
 
    }
 
