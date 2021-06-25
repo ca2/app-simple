@@ -88,11 +88,21 @@ namespace simple_drawing
 
       }
 
-      //initialize_application_consumer();
+      {
 
-      m_papplication->delivery_for(id_simple_checkbox, this);
+         auto psubject = m_papplication->subject(id_simple_checkbox);
 
-      m_papplication->delivery_for(id_no_client_frame, this);
+         psubject->add_listener(this);
+
+      }
+
+      {
+
+         auto psubject = m_papplication->subject(id_no_client_frame);
+
+         psubject->add_listener(this);
+
+      }
 
       auto estatus = __construct_new(m_prender);
 
