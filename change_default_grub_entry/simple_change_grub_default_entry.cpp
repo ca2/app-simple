@@ -107,9 +107,9 @@ namespace simple_change_grub_default_entry
    void simple_change_grub_default_entry::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
-
-      pgraphics->fill_rectangle(rectangleClient, argb(127, 245, 250, 255));
+//      auto rectangleClient = get_client_rect();
+//
+//      pgraphics->fill_rectangle(rectangleClient, argb(127, 245, 250, 255));
 
    }
 
