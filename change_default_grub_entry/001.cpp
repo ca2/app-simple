@@ -358,10 +358,18 @@ namespace simple_change_grub_default_entry
 
             if (iBracket >= 0)
             {
+
+               auto iMenuEntry = straLines.find_first_begins("menuentry", iBracket);
                
                auto iSubMenu = straLines.find_first_begins("submenu", iBracket);
 
-               if (iSubMenu >= 0)
+               if(iMenuEntry >= 0 && (iMenuEntry < iSubMenu || iSubMenu < 0))
+               {
+
+                  iFind = iBracket;
+
+               }
+               else if (iSubMenu >= 0)
                {
 
                   iFind = straLines.find_first_begins("}", iSubMenu);
@@ -369,7 +377,6 @@ namespace simple_change_grub_default_entry
                }
 
             }
-
 
          }
 
