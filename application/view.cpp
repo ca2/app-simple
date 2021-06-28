@@ -3,7 +3,7 @@
 #include "acme/const/id.h"
 
 
-CLASS_DECL_AURA color32_t dk_red(); // <3 tbs
+CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
 
 
 //#define DEBUG_WORK
