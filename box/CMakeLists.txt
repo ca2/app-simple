@@ -34,7 +34,7 @@ elseif(LINUX)
 
 
     target_compile_options(app_simple_box PRIVATE -fpermissive)
-    target_link_options(app_simple_box PRIVATE -Wl,-rpath=\$ORIGIN)
+    #target_link_options(app_simple_box PRIVATE -Wl,-rpath=$ORIGIN)
     target_link_libraries(app_simple_box PRIVATE acme apex aqua aura axis base)
     target_link_options(app_simple_box PRIVATE -Wl,-z,defs)
 
