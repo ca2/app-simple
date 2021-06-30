@@ -53,7 +53,7 @@ if (MSVC)
 elseif (LINUX)
 
    target_compile_options(app_simple_drawing PRIVATE -fpermissive)
-   target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   #target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_simple_drawing PRIVATE ${library_references})
    target_link_options(app_simple_drawing PRIVATE -Wl,-z,defs)
 
@@ -92,7 +92,7 @@ if (MSVC)
 elseif (LINUX)
 
    target_compile_options(_app_simple_drawing PRIVATE -fpermissive)
-   target_link_options(_app_simple_drawing PRIVATE -Wl,-rpath=\$ORIGIN)
+   #target_link_options(_app_simple_drawing PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(_app_simple_drawing PRIVATE ${library_references})
    target_link_options(_app_simple_drawing PRIVATE -Wl,-z,defs)
 
