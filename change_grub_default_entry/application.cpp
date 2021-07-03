@@ -14,7 +14,7 @@ namespace simple_change_grub_default_entry
       m_ptemplateChangeGrubDefaultEntryMain  = NULL;
 
       m_strAppId                 = "app-simple/change_grub_default_entry";
-      m_strAppName               = "app-simple/change_grub_default_entry";
+      m_strAppName               = "Change GRUB default entry";
       m_strBaseSupportId         = "app-simple/change_grub_default_entry";
       m_bLicense                 = false;
 
