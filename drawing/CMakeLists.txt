@@ -104,6 +104,7 @@ add_dependencies(_app_simple_drawing ${default_draw2d})
 add_dependencies(_app_simple_drawing ${default_imaging})
 add_dependencies(_app_simple_drawing ${default_write_text})
 add_dependencies(_app_simple_drawing ${app_common_dependencies})
+add_dependencies(_app_simple_drawing experience_core)
 
 
 target_include_directories(_app_simple_drawing PRIVATE ${library_include_directories})
