@@ -131,25 +131,25 @@ namespace simple_form
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pstill->display_child(::rectd_dim(iLeft, y, 200, sizeStill.cy));
+      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeStill.cy));
 
       y += sizeStill.cy * 1.25;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pedit->display_child(::rectd_dim(iLeft-30.0, y, 200.0, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy));
 
       y += sizeEdit.cy * 1.25;
 
       auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pcombobox->display_child(::rectd_dim(iLeft, y, 200., sizeCombo.cy));
+      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeCombo.cy));
 
       y += sizeCombo.cy * 1.25;
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pbutton->display_child(::rectd_dim(iLeft-30., y, 200., sizeButton.cy));
+      m_pbutton->display_child(::rectangle_f64_dimension(iLeft-30., y, 200., sizeButton.cy));
 
    }
 
