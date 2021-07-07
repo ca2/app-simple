@@ -136,7 +136,7 @@ namespace simple_form
 
       y += rectStillMargin.top;
 
-      m_pstill->display_child(::rectd_dim(iLeft, y, sizeStill.cx, sizeStill.cy));
+      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
       y += sizeStill.cy;
 
@@ -148,7 +148,7 @@ namespace simple_form
 
       y += rectEditMargin.top;
 
-      m_pedit->display_child(::rectd_dim(iLeft, y, 600, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
 
       y += sizeEdit.cy;
 
@@ -168,9 +168,9 @@ namespace simple_form
 
       auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
-      m_pbuttonClear->display_child(::rectd_dim(iLeft, y, button_width, button_height));
+      m_pbuttonClear->display_child(::rectangle_f64_dimension(iLeft, y, button_width, button_height));
 
-      m_pbuttonSend->display_child(::rectd_dim(iLeft + button_width + 32, y, button_width, button_height));
+      m_pbuttonSend->display_child(::rectangle_f64_dimension(iLeft + button_width + 32, y, button_width, button_height));
 
    }
 
