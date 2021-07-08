@@ -73,8 +73,8 @@ namespace simple_shader
       ::user::impact::install_message_routing(psender);
 
       MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &view::_001OnDestroy);
-      MESSAGE_LINK(e_message_key_down, psender, this, &view::_001OnKeyDown);
+      MESSAGE_LINK(e_message_destroy, psender, this, &view::on_message_destroy);
+      MESSAGE_LINK(e_message_key_down, psender, this, &view::on_message_key_down);
 
    }
 
@@ -178,13 +178,13 @@ namespace simple_shader
    }
 
 
-   void view::_001OnDestroy(::message::message * pmessage)
+   void view::on_message_destroy(::message::message * pmessage)
    {
 
    }
 
 
-   void view::_001OnKeyDown(::message::message* pmessage)
+   void view::on_message_key_down(::message::message* pmessage)
    {
 
       __pointer(::message::key) pkey(pmessage);
