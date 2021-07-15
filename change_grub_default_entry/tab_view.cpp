@@ -71,13 +71,13 @@ namespace simple_change_grub_default_entry
       if(straForm.contains(strForm))
       {
 
-         set_cur_tab_by_id(strForm);
+         set_current_tab_by_id(strForm);
 
       }
       else
       {
 
-         set_cur_tab_by_id("form1");
+         set_current_tab_by_id("form1");
 
       }
 
