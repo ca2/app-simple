@@ -62,7 +62,7 @@ namespace simple_drawing
       set_tab("text://app-simple/drawing/:arcs", "drawing4");
       set_tab("text://app-simple/drawing/:arcpths", "drawing5");
 
-      set_cur_tab_by_id("drawing1");
+      set_current_tab_by_id("drawing1");
 
    }
 
