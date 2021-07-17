@@ -15,8 +15,7 @@ namespace simple_drawing
       m_strMainTitle(topic(id_main_title))
    {
 
-      m_textAppTitle = __text("text://app-simple/drawing/:application_title");
-
+      m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
 
       m_pstrHoverFontFamilyName = nullptr;
 
