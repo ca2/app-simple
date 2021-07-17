@@ -130,19 +130,19 @@ namespace simple_change_grub_default_entry
       if(get_view_id() == ::impact_simple_change_grub_default_entry)
       {
 
-         if(get_pane_by_id(FILEMANAGER_IMPACT) != nullptr
-               && get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder != nullptr)
+         if(ptabpaneFileManager != nullptr
+               && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FILEMANAGER_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->hide();
 
          }
 
-         if (get_pane_by_id(FONTSEL_IMPACT) != nullptr
-               && get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder != nullptr)
+         if (ptabpaneFontSel != nullptr
+               && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            get_pane_by_id(FONTSEL_IMPACT)->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->hide();
 
          }
 

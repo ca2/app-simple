@@ -92,9 +92,21 @@ namespace simple_webserver
 
       m_papplication->create_webserver();
 
-      m_papplication->delivery_for(id_simple_checkbox, this);
+      {
 
-      m_papplication->delivery_for(id_no_client_frame, this);
+         auto psubject = m_papplication->subject(id_simple_checkbox);
+
+         psubject->add_listener(this);
+
+      }
+
+      {
+
+         auto psubject = m_papplication->subject(id_no_client_frame);
+
+         psubject->add_listener(this);
+
+      }
 
       auto estatus = __construct_new(m_prender);
 
