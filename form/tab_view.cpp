@@ -126,9 +126,10 @@ namespace simple_form
 
       }
 
-
       if(get_view_id() == ::impact_simple_form)
       {
+
+         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
 
          if(ptabpaneFileManager != nullptr
                && ptabpaneFileManager->m_pplaceholder != nullptr)
@@ -137,6 +138,8 @@ namespace simple_form
             ptabpaneFileManager->m_pplaceholder->hide();
 
          }
+
+         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
 
          if (ptabpaneFontSel != nullptr
                && ptabpaneFontSel->m_pplaceholder != nullptr)

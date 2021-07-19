@@ -107,7 +107,7 @@ namespace simple_drawing
 
          ::rectangle_i32 rectangle(m_rectangle);
 
-         pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
          for (index i = 0; i < 5; i++)
          {
