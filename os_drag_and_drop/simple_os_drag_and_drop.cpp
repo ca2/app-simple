@@ -152,7 +152,7 @@ namespace simple_os_drag_and_drop
 
          rectText.inflate(100, 100);
 
-         pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
          if(m_iDragAndDrop == 3)
          {
@@ -209,7 +209,7 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::alpha_mode_blend);
+      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::array < angle > angleaStart;
 

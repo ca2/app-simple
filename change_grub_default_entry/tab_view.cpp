@@ -130,6 +130,8 @@ namespace simple_change_grub_default_entry
       if(get_view_id() == ::impact_simple_change_grub_default_entry)
       {
 
+         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+
          if(ptabpaneFileManager != nullptr
                && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
@@ -137,6 +139,8 @@ namespace simple_change_grub_default_entry
             ptabpaneFileManager->m_pplaceholder->hide();
 
          }
+
+         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
 
          if (ptabpaneFontSel != nullptr
                && ptabpaneFontSel->m_pplaceholder != nullptr)
