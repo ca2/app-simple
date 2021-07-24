@@ -59,26 +59,47 @@ namespace simple_shader
 
       m_papplication->m_ptabview = this;
 
+      _001SetVertical();
+
+      auto papplication = get_application();
+
+      ::file::listing listing;
+
+      papplication->get_shader_listing(listing);
+
       set_tab("Menu", MENU_IMPACT);
-      set_tab("1", "shader1");
-      set_tab("2", "shader2");
-      set_tab("3", "shader3");
-      set_tab("4", "shader4");
-      set_tab("5", "shader5");
-      set_tab("6", "shader6");
-      set_tab("7", "shader7");
-      set_tab("8", "shader8");
-      set_tab("9", "shader9");
-      set_tab("10", "shader10");
-      set_tab("11", "shader11");
-      set_tab("12", "shader12");
-      set_tab("13", "shader13");
-      set_tab("14", "shader14");
+
+      for (auto& path : listing)
+      {
+
+         string strTitle = path.title();
+
+         string strPath = path;
+
+         set_tab(strTitle, "shader://" + strPath);
+
+      }
+
+      //set_tab("1", "shader1");
+      //set_tab("2", "shader2");
+      //set_tab("3", "shader3");
+      //set_tab("4", "shader4");
+      //set_tab("5", "shader5");
+      //set_tab("6", "shader6");
+      //set_tab("7", "shader7");
+      //set_tab("8", "shader8");
+      //set_tab("9", "shader9");
+      //set_tab("10", "shader10");
+      //set_tab("11", "shader11");
+      //set_tab("12", "shader12");
+      //set_tab("13", "shader13");
+      //set_tab("14", "shader14");
+
       set_tab("Font", FONTSEL_IMPACT);
       set_tab("Color", COLORSEL_IMPACT);
       set_tab("Open", FILEMANAGER_IMPACT);
 
-      set_current_tab_by_id("shader1");
+      set_current_tab_by_index(1);
 
    }
 
@@ -119,10 +140,10 @@ namespace simple_shader
 
        }
 
-      string strShaderPrefix = get_view_id().to_string();
-
-      if(::str::begins_eat_ci(strShaderPrefix, "shader"))
+      if(::str::begins_eat_ci(strId, "shader://"))
       {
+
+         string strShaderPath = strId;
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
 
@@ -174,18 +195,20 @@ namespace simple_shader
 
       string strId = pimpactdata->m_id;
 
-      if(::str::begins_eat_ci(strId, "shader"))
+      if(::str::begins_eat_ci(strId, "shader://"))
       {
+
+         string strShaderPath = strId;
 
          auto pview = m_papplication->create_simple_shader_view(this, pimpactdata);
 
          pview->m_id = pimpactdata->m_id;
 
-         pview->m_iView = atoi(strId);
+         pview->m_iView = (int) pimpactdata->m_iIndex;
 
          __pointer(view) pviewShader = pview;
 
-         pviewShader->m_prender->m_strShaderPrefix = strId;
+         pviewShader->m_prender->m_strShaderPath = strShaderPath;
 
          pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
 
