@@ -200,7 +200,7 @@ namespace simple_form
          }
 
       }
-      else if (pevent->m_eevent == ::user::e_event_button_clicked)
+      else if (pevent->m_eevent == ::user::e_event_click)
       {
 
          if (pevent->m_id == "clear_button")
