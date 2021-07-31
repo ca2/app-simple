@@ -119,7 +119,7 @@ namespace simple_form
 
          message_box("m=1");
 
-         finish();
+         _001TryCloseApplication();
 
          return;
 

@@ -47,6 +47,8 @@ namespace simple_drawing
 
                         m_pimage2->transform(image_grayscale);
 
+                        m_pimage2->set_ok();
+
                         m_pview->set_need_redraw();
 
                         m_pview->post_redraw();
