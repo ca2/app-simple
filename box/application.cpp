@@ -75,7 +75,7 @@ namespace simple_message_box
          if (future->m_edialogresult == e_dialog_result_yes)
          {
 
-            finish();
+            _001TryCloseApplication();
 
          }
          else
