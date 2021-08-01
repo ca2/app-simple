@@ -10,11 +10,10 @@
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
+		9A8D0E3826B68F62000D2AD6 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0E3726B68F62000D2AD6 /* libacme.dylib */; };
+		9A8D0E3A26B68F62000D2AD6 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0E3926B68F62000D2AD6 /* libapex.dylib */; };
+		9A8D0E3B26B68F80000D2AD6 /* libapp_simple_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; };
 		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
-		9AFFC7B326786EC700C4104F /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7AF26786EC700C4104F /* libcrypto.1.1.dylib */; };
-		9AFFC7B426786EC700C4104F /* libcrypto.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B026786EC700C4104F /* libcrypto.1.1.dylib */; };
-		9AFFC7B526786EC700C4104F /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B126786EC700C4104F /* libssl.1.1.dylib */; };
-		9AFFC7B626786EC700C4104F /* libssl.1.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7B226786EC700C4104F /* libssl.1.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +80,41 @@
 			remoteGlobalIDString = 9AE24E691904CFE2001AEFFB;
 			remoteInfo = experience_lite_iosTests;
 		};
+		9A8D0E3C26B68FB9000D2AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEE929B2661FD2700FCA5EC /* app_simple_shader.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_simple_shader;
+		};
+		9A8D0E3E26B68FB9000D2AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E47E26611FDA00517464 /* draw2d_quartz2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteInfo = draw2d_quartz2d;
+		};
+		9A8D0E4026B68FB9000D2AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353DF4266228680060257B /* experience_core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75F316F78EDC0085103B;
+			remoteInfo = experience_core;
+		};
+		9A8D0E4226B68FB9000D2AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E48A26611FDA00517464 /* node_macos.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC2D16E26542E1000CC8096;
+			remoteInfo = node_macos;
+		};
+		9A8D0E4426B68FB9000D2AD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A00E4A526611FDB00517464 /* write_text_quartz2d.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A64C1702660C62C0074030F;
+			remoteInfo = write_text_quartz2d;
+		};
 		9AEE92AB2661FD2700FCA5EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEE929B2661FD2700FCA5EC /* app_simple_shader.xcodeproj */;
@@ -116,6 +150,8 @@
 		9A00E48A26611FDA00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../archive/platform-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E4A526611FDB00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../archive/platform-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A353DF4266228680060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
+		9A8D0E3726B68F62000D2AD6 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8D0E3926B68F62000D2AD6 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9AEE929B2661FD2700FCA5EC /* app_simple_shader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_simple_shader.xcodeproj; sourceTree = "<group>"; };
 		9AFFC7AF26786EC700C4104F /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
@@ -129,10 +165,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AFFC7B326786EC700C4104F /* libcrypto.1.1.dylib in Frameworks */,
-				9AFFC7B626786EC700C4104F /* libssl.1.1.dylib in Frameworks */,
-				9AFFC7B426786EC700C4104F /* libcrypto.1.1.dylib in Frameworks */,
-				9AFFC7B526786EC700C4104F /* libssl.1.1.dylib in Frameworks */,
+				9A8D0E3B26B68F80000D2AD6 /* libapp_simple_shader.dylib in Frameworks */,
+				9A8D0E3826B68F62000D2AD6 /* libacme.dylib in Frameworks */,
+				9A8D0E3A26B68F62000D2AD6 /* libapex.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +281,8 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A8D0E3726B68F62000D2AD6 /* libacme.dylib */,
+				9A8D0E3926B68F62000D2AD6 /* libapex.dylib */,
 				9AFFC7B126786EC700C4104F /* libssl.1.1.dylib */,
 				9AFFC7B226786EC700C4104F /* libssl.1.1.dylib */,
 				9AFFC7B026786EC700C4104F /* libcrypto.1.1.dylib */,
@@ -286,6 +323,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A8D0E3D26B68FB9000D2AD6 /* PBXTargetDependency */,
+				9A8D0E3F26B68FB9000D2AD6 /* PBXTargetDependency */,
+				9A8D0E4126B68FB9000D2AD6 /* PBXTargetDependency */,
+				9A8D0E4326B68FB9000D2AD6 /* PBXTargetDependency */,
+				9A8D0E4526B68FB9000D2AD6 /* PBXTargetDependency */,
 			);
 			name = _app_simple_shader;
 			productName = "Hello Multiverse!!";
@@ -497,6 +539,31 @@
 			target = 070B8EE91B6E53F900D26137 /* _app_simple_shader */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
 		};
+		9A8D0E3D26B68FB9000D2AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_simple_shader;
+			targetProxy = 9A8D0E3C26B68FB9000D2AD6 /* PBXContainerItemProxy */;
+		};
+		9A8D0E3F26B68FB9000D2AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = draw2d_quartz2d;
+			targetProxy = 9A8D0E3E26B68FB9000D2AD6 /* PBXContainerItemProxy */;
+		};
+		9A8D0E4126B68FB9000D2AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = experience_core;
+			targetProxy = 9A8D0E4026B68FB9000D2AD6 /* PBXContainerItemProxy */;
+		};
+		9A8D0E4326B68FB9000D2AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = node_macos;
+			targetProxy = 9A8D0E4226B68FB9000D2AD6 /* PBXContainerItemProxy */;
+		};
+		9A8D0E4526B68FB9000D2AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = write_text_quartz2d;
+			targetProxy = 9A8D0E4426B68FB9000D2AD6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -553,10 +620,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/archive",
-					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/x64/basis",
+					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PLATFORM_MODIFIER = macos;
@@ -619,7 +686,7 @@
 					"$(WorkspaceDir)/archive/platform-$(PLATFORM_MODIFIER)/storage-$(PLATFORM_MODIFIER)/third/library/$(CONFIGURATION)",
 					"$(WorkspaceDir)/time/$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,7 +707,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.shader";
 				PRODUCT_NAME = _app_simple_shader;
@@ -658,7 +725,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.shader";
 				PRODUCT_NAME = _app_simple_shader;
