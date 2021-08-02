@@ -193,6 +193,13 @@ namespace simple_form
 
                auto papplication = get_application();
 
+               if (strText == "This is a test. This is a test")
+               {
+
+                  output_debug_string("");
+
+               }
+
                papplication->data_set("last_text", strText);
 
             }
