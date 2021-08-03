@@ -12,7 +12,7 @@ namespace simple_webserver
 
 
    render::render() :
-      m_strHoverFontFamilyName(topic(id_hover_font_family_name))
+      m_strHoverFontFamilyName(payload_reference(topic(id_hover_font_family_name)))
    {
 
       m_iDrawing = 1;
@@ -144,7 +144,7 @@ namespace simple_webserver
    }
 
 
-   ::e_status render::set_font(const string & strFont)
+   ::e_status render::set_font(const ::string & strFont)
    {
 
       if (strFont.is_empty())

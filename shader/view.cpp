@@ -168,7 +168,7 @@ namespace simple_shader
 
             auto pproperty = fetch_property(id);
 
-            m_prender->defer_load_fragment(pproperty->get_string());
+            m_prender->defer_load_fragment(pproperty->string());
 
          }));
 
