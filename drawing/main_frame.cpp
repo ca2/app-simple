@@ -44,7 +44,7 @@ namespace simple_drawing
    ::experience::frame * main_frame::experience_get_frame()
    {
 
-      auto pframe = get_frame_experience(NULL, "013", "LightBlue");
+      auto pframe = get_frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 

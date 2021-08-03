@@ -42,7 +42,7 @@ namespace simple_change_grub_default_entry
 
       virtual string get_grub_saved_entry(const ::file::path& pathGrubFolder);
 
-      virtual ::e_status set_grub_saved_entry(const ::file::path& pathGrubFolder, const string & strSavedEntry);
+      virtual ::e_status set_grub_saved_entry(const ::file::path& pathGrubFolder, const ::string & strSavedEntry);
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 

@@ -11,10 +11,10 @@ namespace simple_webserver
 
 
    application::application() :
-      m_echeckSimple(topic(id_simple_checkbox)),
-      m_echeckNoClientFrame(topic(id_no_client_frame)),
-      m_strSimple(topic(id_simple_text)),
-      m_strMainTitle(topic(id_main_title))
+      m_echeckSimple(payload_reference(topic(id_simple_checkbox))),
+      m_echeckNoClientFrame(payload_reference(topic(id_no_client_frame))),
+      m_strSimple(payload_reference(topic(id_simple_text))),
+      m_strMainTitle(payload_reference(topic(id_main_title)))
    {
 
       m_pstrHoverFontFamilyName = nullptr;

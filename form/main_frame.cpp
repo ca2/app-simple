@@ -40,7 +40,7 @@ namespace simple_form
    ::experience::frame * main_frame::experience_get_frame()
    {
 
-      auto pframe = get_frame_experience(NULL, "008", "LightBlue");
+      auto pframe = get_frame_experience(nullptr, "008", "LightBlue");
 
       return pframe;
 
