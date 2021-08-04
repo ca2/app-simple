@@ -1,6 +1,4 @@
 #include "framework.h"
-#define _APP_ID "app-simple/drawing"
-#include "aura/application.h"
 #include "aura/update.h"
 
 
@@ -257,8 +255,6 @@ namespace simple_drawing
 
    }
 
-
-   __namespace_application_factory("app-simple/drawing");
 
 
 } // namespace simple_drawing

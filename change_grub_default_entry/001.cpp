@@ -543,7 +543,7 @@ namespace simple_change_grub_default_entry
 
       auto ptarget = pdata + iStart;
 
-      auto psource = (const char*)blockValue.get_data();
+      auto psource = (const ::string &)blockValue.get_data();
 
       auto c = blockValue.get_size();
 
