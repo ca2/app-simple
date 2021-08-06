@@ -3,6 +3,7 @@ project(app_simple_drawing CXX)
 
 
 list(APPEND library_source
+   _.cpp
    _.h
    _drawing.h
    application.cpp
