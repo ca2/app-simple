@@ -9,7 +9,7 @@
 #include "_.h"
 
 
-#include "_shader.h"
+#include "_app_simple_shader.h"
 
 
 #include "aura/_defer.h"

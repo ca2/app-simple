@@ -36,13 +36,6 @@ namespace opengl
 } // namespace opengl
 
 
-//#include "aura/gpu/gpu/_.h"
-
-
-//#include "render.h"
-
-
-#include "application.h"
 
 
 
