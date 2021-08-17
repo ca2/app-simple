@@ -1,4 +1,3 @@
-
 #pragma once
 
 
@@ -21,5 +20,9 @@ namespace user
 #include "main_frame.h"
 
 #include "tab_view.h"
+
+
+#include "application.h"
+
 
 
