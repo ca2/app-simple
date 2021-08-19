@@ -10,6 +10,7 @@
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
 		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
+		9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE12EC52661EA22009F476A /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0DBD26B640C1000D2AD6 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DBB26B640C1000D2AD6 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0DBE26B640C1000D2AD6 /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DBC26B640C1000D2AD6 /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA802A32665789E00A6B449 /* libapp_simple_application.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A95D67026624EF100B2461B /* libapp_simple_application.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -126,6 +127,13 @@
 			remoteGlobalIDString = 9AEB75F316F78EDC0085103B;
 			remoteInfo = experience_core;
 		};
+		9A23A7D326CEEA5600F98012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE12EC02661EA22009F476A /* database_sqlite3.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE12E772661E97E009F476A;
+			remoteInfo = database_sqlite3;
+		};
 		9A95D66F26624EF100B2461B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A00E1A126611D8700517464 /* app_simple_application.xcodeproj */;
@@ -189,6 +197,7 @@
 				9AFFC73E26786C6B00C4104F /* libapex_apple.dylib in Embed Libraries */,
 				9AFFC74D26786C8700C4104F /* libaura_macos.dylib in Embed Libraries */,
 				9AFFC74F26786C8700C4104F /* libaura_posix.dylib in Embed Libraries */,
+				9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9AFFC73A26786C6B00C4104F /* libacme_posix.dylib in Embed Libraries */,
 				9AFFC74226786C6B00C4104F /* libapex_posix.dylib in Embed Libraries */,
 				9AFFC73C26786C6B00C4104F /* libapex.dylib in Embed Libraries */,
@@ -431,6 +440,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A23A7D426CEEA5600F98012 /* PBXTargetDependency */,
 				9AA8027D2665787800A6B449 /* PBXTargetDependency */,
 				9A00E652266171C800517464 /* PBXTargetDependency */,
 				9A00E64326616FAE00517464 /* PBXTargetDependency */,
@@ -687,6 +697,11 @@
 			isa = PBXTargetDependency;
 			name = experience_core;
 			targetProxy = 9A00E651266171C800517464 /* PBXContainerItemProxy */;
+		};
+		9A23A7D426CEEA5600F98012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = database_sqlite3;
+			targetProxy = 9A23A7D326CEEA5600F98012 /* PBXContainerItemProxy */;
 		};
 		9AA8027D2665787800A6B449 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
