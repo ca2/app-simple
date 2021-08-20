@@ -11,6 +11,7 @@
 		9A16E08D24BC037D00C3DD5B /* render_arcs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A16E08924BC037D00C3DD5B /* render_arcs.cpp */; };
 		9A16E08E24BC037D00C3DD5B /* render.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A16E08A24BC037D00C3DD5B /* render.h */; };
 		9A16E08F24BC037D00C3DD5B /* render_1through3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A16E08B24BC037D00C3DD5B /* render_1through3.cpp */; };
+		9A23A7E026CF2A3100F98012 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A23A7DF26CF2A3100F98012 /* _.cpp */; };
 		9A258B8224DA56270013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B8024DA56270013F50E /* tab_view.cpp */; };
 		9A258B8324DA56270013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B8124DA56270013F50E /* tab_view.h */; };
 		9A353DCE266227480060257B /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A353DCD266227480060257B /* libacme.dylib */; };
@@ -85,6 +86,7 @@
 		9A16E08A24BC037D00C3DD5B /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = render.h; sourceTree = "<group>"; };
 		9A16E08B24BC037D00C3DD5B /* render_1through3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = render_1through3.cpp; sourceTree = "<group>"; };
 		9A18FD5E251B10010064BCDE /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
+		9A23A7DF26CF2A3100F98012 /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 		9A258B8024DA56270013F50E /* tab_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_view.cpp; sourceTree = "<group>"; };
 		9A258B8124DA56270013F50E /* tab_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_view.h; sourceTree = "<group>"; };
 		9A353DCD266227480060257B /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 		9AEB75AA16F78E600085103B /* simple_drawing */ = {
 			isa = PBXGroup;
 			children = (
+				9A23A7DF26CF2A3100F98012 /* _.cpp */,
 				9A449BB624775E110002A827 /* _.h */,
 				9A449BB024775E110002A827 /* _drawing.h */,
 				9A8F90C6240C09F00097E249 /* application.cpp */,
@@ -376,6 +379,7 @@
 				9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */,
 				9A258B8224DA56270013F50E /* tab_view.cpp in Sources */,
 				9A16E08C24BC037D00C3DD5B /* render.cpp in Sources */,
+				9A23A7E026CF2A3100F98012 /* _.cpp in Sources */,
 				9A8F90CE240C09F10097E249 /* view.cpp in Sources */,
 				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
