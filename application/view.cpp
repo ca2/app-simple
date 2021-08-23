@@ -141,6 +141,7 @@ namespace simple_application
 
       }
 
+
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::color::color color_dk(dk_red());
@@ -264,6 +265,14 @@ namespace simple_application
 
 
       pgraphics->text_out(point.x, point.y + y + size.cy, strText);
+
+      pgraphics->set_smooth_mode(::draw2d::smooth_mode_none);
+
+      //pgraphics->fill_rectangle({ 100, 200, 200, 300 }, argb(127, 255, 255, 0));
+      pgraphics->fill_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 255, 255, 0));
+
+    //  pgraphics->draw_inset_rectangle({ 99, 199, 201, 301 }, argb(127, 0, 255, 255));
+      pgraphics->draw_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 0, 255, 255));
 
    }
 
