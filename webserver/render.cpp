@@ -114,7 +114,7 @@ namespace simple_webserver
          for (index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw_rectangle(rectangle, argb(127, 225, 225, 225));
+            pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225));
 
             rectangle.deflate(1, 1);
 
