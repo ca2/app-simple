@@ -482,7 +482,7 @@ namespace simple_change_grub_default_entry
 
    }
 
-   auto iFindEol = memoryGrubEnv.find_index(__block('\n'), iStart);
+   auto iFindEol = memoryGrubEnv.find_index(memory_block('\n'), iStart);
 
    if (iFindEol < 0)
    {
@@ -491,7 +491,7 @@ namespace simple_change_grub_default_entry
 
    }
 
-   auto iFindEnd = memoryGrubEnv.reverse_find_index(__block('#'), iStart);
+   auto iFindEnd = memoryGrubEnv.reverse_find_index(memory_block('#'), iStart);
 
    if (iFindEnd <= 0)
    {

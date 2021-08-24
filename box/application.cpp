@@ -12,7 +12,7 @@ namespace simple_message_box
       
       m_bImaging = false;
       
-      m_bWriteText = false;
+      //m_bWriteText = false;
       
       m_strAppId = "app-simple/box";
 
