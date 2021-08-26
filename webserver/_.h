@@ -20,7 +20,7 @@ namespace simple_webserver
    class application;
    class tab_view;
    class document;
-   class view;
+   class impact;
    //class socket_thread;
 
 

@@ -29,7 +29,7 @@ namespace notify_drawing
       set_local_data();
 
       create_factory <::notify_drawing::main_frame >();
-      create_factory <::notify_drawing::view >();
+      create_factory <::notify_drawing::impact >();
 
       if (!::simple_drawing::application::init_instance())
       {
@@ -54,7 +54,7 @@ namespace notify_drawing
 //                          "main",
 //                          __type(simple_drawing::document),
 //                          __type(simple_drawing::frame),
-//                          __type(simple_drawing::main_view)));
+//                          __type(simple_drawing::main_impact)));
 //
 //      m_ptemplateNotifyDrawingView = pdoctemplate;
 //
@@ -160,10 +160,10 @@ namespace notify_drawing
 #endif
 
 
-   __pointer(simple_drawing::view) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
+   __pointer(simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
    {
 
-      return pimpactParent->create_view < view >(pimpactdata);
+      return pimpactParent->create_view < impact >(pimpactdata);
 
    }
 

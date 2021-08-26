@@ -11,8 +11,8 @@ list(APPEND library_source
     framework.h
     main_frame.cpp
     main_frame.h
-    view.cpp
-    view.h)
+    impact.cpp
+    impact.h)
 
 
 list(APPEND library_references

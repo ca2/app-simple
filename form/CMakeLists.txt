@@ -16,14 +16,14 @@ list(APPEND library_source
    framework.h
    main_frame.cpp
    main_frame.h
-   main_view.cpp
-   main_view.h
+   main_impact.cpp
+   main_impact.h
    simple_form.cpp
    simple_form.h
    tab_view.cpp
    tab_view.h
-   view.cpp
-   view.h
+   impact.cpp
+   impact.h
    )
 
 add_executable(app_simple_form ${library_source})

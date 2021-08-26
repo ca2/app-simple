@@ -93,7 +93,7 @@ namespace simple_drawing
       create_factory <::simple_drawing::frame >();
       create_factory <::simple_drawing::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_drawing::view >();
+      create_factory <::simple_drawing::impact >();
       create_factory <::simple_drawing::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
@@ -221,10 +221,10 @@ namespace simple_drawing
 #endif
 
 
-   __pointer(view) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < view >(pimpactdata);
+      return pimpactParent->create_view < impact >(pimpactdata);
 
    }
 

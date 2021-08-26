@@ -17,16 +17,16 @@ list(APPEND library_source
    framework.h
    main_frame.cpp
    main_frame.h
-   main_view.cpp
-   main_view.h
+   main_impact.cpp
+   main_impact.h
    simple_change_grub_default_entry.cpp
    simple_change_grub_default_entry.h
    simple_change_grub_default_entry_001.h
    simple_change_grub_default_entry_002.h
    tab_view.cpp
    tab_view.h
-   view.cpp
-   view.h
+   impact.cpp
+   impact.h
    )
 
 add_library(app_simple_change_grub_default_entry SHARED ${library_source})

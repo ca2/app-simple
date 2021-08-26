@@ -13,7 +13,7 @@ namespace simple_os_drag_and_drop
 
 
       ::user::split_view *                            m_ptopviewLast;
-      view *                                          m_pviewTopic;
+      impact *                                          m_pviewTopic;
       string                                          m_strTopicTitle;
 
 
