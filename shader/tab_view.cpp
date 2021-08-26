@@ -95,9 +95,9 @@ namespace simple_shader
       //set_tab("13", "shader13");
       //set_tab("14", "shader14");
 
-      set_tab("Font", FONTSEL_IMPACT);
-      set_tab("Color", COLORSEL_IMPACT);
-      set_tab("Open", FILEMANAGER_IMPACT);
+      //set_tab("Font", FONTSEL_IMPACT);
+      //set_tab("Color", COLORSEL_IMPACT);
+      //set_tab("Open", FILEMANAGER_IMPACT);
 
       set_current_tab_by_index(1);
 
@@ -206,7 +206,7 @@ namespace simple_shader
 
          pview->m_iView = (int) pimpactdata->m_iIndex;
 
-         __pointer(impact) pviewShader = pview;
+         __pointer(simple_shader::impact) pviewShader = pview;
 
          pviewShader->m_prender->m_strShaderPath = strShaderPath;
 
