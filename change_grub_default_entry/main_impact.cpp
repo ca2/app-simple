@@ -5,7 +5,7 @@ namespace simple_change_grub_default_entry
 {
 
 
-   main_view::main_view()
+   main_impact::main_impact()
    {
 
 
@@ -13,13 +13,13 @@ namespace simple_change_grub_default_entry
    }
 
 
-   main_view::~main_view()
+   main_impact::~main_impact()
    {
 
    }
 
 
-   void main_view::assert_valid() const
+   void main_impact::assert_valid() const
    {
 
       ::user::split_view::assert_valid();
@@ -27,7 +27,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_view::dump(dump_context & dumpcontext) const
+   void main_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::split_view::dump(dumpcontext);
@@ -35,7 +35,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void main_impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
       ::user::split_view::on_subject(psubject, pcontext);
@@ -43,7 +43,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_view::on_create_split_impact()
+   void main_impact::on_create_split_impact()
    {
 
       if(get_pane_count() > 0)
@@ -72,7 +72,7 @@ namespace simple_change_grub_default_entry
       //   if (m_ptopview == NULL)
       //   {
 
-      //      message_box("Could not create folder edit view");
+      //      message_box("Could not create folder edit impact");
 
       //   }
 
@@ -90,11 +90,11 @@ namespace simple_change_grub_default_entry
 
       }
 
-      //m_pview = create_view < lite_view >();
+      //m_pimpact = create_view < lite_view >();
 
-      m_pview = host_view < view >(iPane, "simple_change_grub_default_entry_view");
+      m_pimpact = host_view < impact >(iPane, "simple_change_grub_default_entry_view");
 
-      if(m_pview == NULL)
+      if(m_pimpact == NULL)
       {
 
          message_box("Could not create file list ::user::impact");
@@ -114,12 +114,12 @@ namespace simple_change_grub_default_entry
 //
 //      }
 //
-////      SetPane(iPane,m_pview,false);
+////      SetPane(iPane,m_pimpact,false);
 
    }
 
 
-   void main_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void main_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::split_view::_001OnNcDraw(pgraphics);
@@ -127,7 +127,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void main_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::split_view::_001OnDraw(pgraphics);
@@ -135,7 +135,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   bool main_view::BaseOnControlEvent(::user::control_event * pevent)
+   bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
    {
 
       if(pevent->m_eevent == ::user::e_event_click)
@@ -144,7 +144,7 @@ namespace simple_change_grub_default_entry
          if(pevent->m_puserinteraction->m_id == "simple_change_grub_default_entry_toggle")
          {
 
-            m_pview->set_need_layout();
+            m_pimpact->set_need_layout();
 
             return true;
 

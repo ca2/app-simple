@@ -1,22 +1,22 @@
 #pragma once
 
 
-namespace simple_change_grub_default_entry
+namespace simple_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM main_view:
+   class CLASS_DECL_APP_SIMPLE_FORM main_impact:
       virtual public ::application_consumer < application, ::user::split_view >
    {
    public:
 
 
       //::userex::top_view *    m_ptopview;
-      view *                  m_pview;
+      impact *                  m_pimpact;
 
 
-      main_view();
-      virtual ~main_view();
+      main_impact();
+      virtual ~main_impact();
 
 
       virtual void assert_valid() const override;
@@ -38,7 +38,7 @@ namespace simple_change_grub_default_entry
    };
 
 
-} // namespace simple_change_grub_default_entry
+} // namespace simple_form
 
 
 

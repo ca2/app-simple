@@ -5,7 +5,7 @@ namespace simple_application
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_APPLICATION view :
+   class CLASS_DECL_APP_SIMPLE_APPLICATION impact :
       virtual public ::application_consumer < application, ::user::impact >
    {
    public:
@@ -14,8 +14,8 @@ namespace simple_application
       ::write_text::font_pointer       m_pfontThomasBS_;
       string                           m_strFont1;
 
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;

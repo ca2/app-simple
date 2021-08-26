@@ -1,12 +1,12 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace simple_webserver
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING view :
-      virtual public application_consumer < application, ::user::impact >
+   class CLASS_DECL_APP_SIMPLE_WEBSERVER impact :
+      virtual public ::application_consumer < application, ::user::impact >
    {
    public:
 
@@ -14,17 +14,16 @@ namespace simple_drawing
       __pointer(render)          m_prender;
 
 
-      view();
-      ~view() override;
+      impact();
+      virtual ~impact();
 
-      
-      void assert_valid() const override;
-      void dump(dump_context & dumpcontext) const override;
+      virtual void assert_valid() const override;
+      virtual void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG
-      int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
-      int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
 
@@ -44,6 +43,6 @@ namespace simple_drawing
    };
 
 
-} // namespace simple_drawing
+} // namespace simple_webserver
 
 
