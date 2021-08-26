@@ -160,6 +160,10 @@ namespace simple_application
 
       pgraphics->set(m_pfontThomasBS_);
 
+      pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+
+      pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+
       //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
       
       string_array & stra = get_document()->m_straLine;
