@@ -1,21 +1,27 @@
 #pragma once
 
 
-namespace simple_change_grub_default_entry
+namespace simple_shader
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM view :
-      virtual public ::user::impact
+   class CLASS_DECL_APP_SIMPLE_SHADER impact :
+      virtual public ::application_consumer < application, ::user::impact >
    {
    public:
 
 
-      view();
-      virtual ~view();
+      int                                 m_iView;
+      __pointer(::app_shader::render)     m_prender;
+      bool                                m_bSaveFrame;
+
+
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;
+
 
 #ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
@@ -34,10 +40,14 @@ namespace simple_change_grub_default_entry
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(on_message_destroy);
+      DECLARE_MESSAGE_HANDLER(on_message_key_down);
+
+      virtual bool keyboard_focus_is_focusable() const override;
 
    };
 
 
-} // namespace simple_change_grub_default_entry
+} // namespace simple_shader
 
 

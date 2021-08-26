@@ -5,20 +5,20 @@ namespace notify_drawing
 {
 
 
-   view::view()
+   impact::impact()
    {
 
 
    }
 
 
-   view::~view()
+   impact::~impact()
    {
 
    }
 
 
-   void view::assert_valid() const
+   void impact::assert_valid() const
    {
 
       user::box::assert_valid();
@@ -26,7 +26,7 @@ namespace notify_drawing
    }
 
 
-   void view::dump(dump_context & dumpcontext) const
+   void impact::dump(dump_context & dumpcontext) const
    {
 
       user::box::dump(dumpcontext);
@@ -34,10 +34,10 @@ namespace notify_drawing
    }
 
 
-   void view::install_message_routing(::channel * psender)
+   void impact::install_message_routing(::channel * psender)
    {
 
-      ::simple_drawing::view::install_message_routing(psender);
+      ::simple_drawing::impact::install_message_routing(psender);
 
    }
 
@@ -46,7 +46,7 @@ namespace notify_drawing
 
 
 
-   void view::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       auto rectangleClient = get_client_rect();

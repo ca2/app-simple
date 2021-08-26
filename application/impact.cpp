@@ -13,7 +13,7 @@ namespace simple_application
 {
 
 
-   view::view()
+   impact::impact()
    {
 
       m_flagNonClient -= non_client_background;
@@ -21,7 +21,7 @@ namespace simple_application
    }
 
 
-   view::~view()
+   impact::~impact()
    {
 
    }
@@ -30,7 +30,7 @@ namespace simple_application
 #ifdef _DEBUG
 
 
-   int64_t view::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -38,7 +38,7 @@ namespace simple_application
    }
 
 
-   int64_t view::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -49,7 +49,7 @@ namespace simple_application
 #endif
 
 
-   void view::assert_valid() const
+   void impact::assert_valid() const
    {
 
       user::box::assert_valid();
@@ -57,7 +57,7 @@ namespace simple_application
    }
 
 
-   void view::dump(dump_context & dumpcontext) const
+   void impact::dump(dump_context & dumpcontext) const
    {
 
       user::box::dump(dumpcontext);
@@ -65,18 +65,18 @@ namespace simple_application
    }
 
 
-   void view::install_message_routing(::channel * psender)
+   void impact::install_message_routing(::channel * psender)
    {
 
       ::user::impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&view::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &view::on_message_destroy);
+      MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
+      MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
 
    }
 
 
-   void view::on_message_create(::message::message * pmessage)
+   void impact::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -101,13 +101,13 @@ namespace simple_application
    }
 
 
-   void view::on_message_destroy(::message::message * pmessage)
+   void impact::on_message_destroy(::message::message * pmessage)
    {
 
    }
 
 
-   void view::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
    {
 
       ::user::impact::on_subject(psubject, pcontext);
@@ -115,7 +115,7 @@ namespace simple_application
    }
 
 
-   document * view::get_document()
+   document * impact::get_document()
    {
 
       return dynamic_cast < document * >(::user::impact::get_document());
@@ -123,7 +123,7 @@ namespace simple_application
    }
 
 
-   void view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
       //pgraphics->fill_rectangle(rectangle_f64_dimension(100, 100, 100, 100), color::magenta);
@@ -160,7 +160,7 @@ namespace simple_application
 
       pgraphics->set(m_pfontThomasBS_);
 
-      //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pview->_001OnDraw(pgraphics);");
+      //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
       
       string_array & stra = get_document()->m_straLine;
       
@@ -178,7 +178,7 @@ namespace simple_application
       
       ::point_i32 point;
 
-      string strText = "psimpleapplication->m_pview->_001OnDraw(pgraphics);";
+      string strText = "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);";
 
       auto size = pgraphics->get_text_extent(strText);
 
@@ -275,7 +275,7 @@ namespace simple_application
    }
 
 
-   void view::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       auto rectangleClient = get_client_rect();

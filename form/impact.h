@@ -1,25 +1,21 @@
 #pragma once
 
 
-namespace simple_webserver
+namespace simple_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WEBSERVER view :
-      virtual public ::application_consumer < application, ::user::impact >
+   class CLASS_DECL_APP_SIMPLE_FORM impact :
+      virtual public ::user::impact
    {
    public:
 
 
-      __pointer(render)          m_prender;
-
-
-      view();
-      virtual ~view();
+      impact();
+      virtual ~impact();
 
       virtual void assert_valid() const override;
       virtual void dump(dump_context & dumpcontext) const override;
-
 
 #ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
@@ -38,11 +34,10 @@ namespace simple_webserver
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
    };
 
 
-} // namespace simple_webserver
+} // namespace simple_form
 
 
