@@ -22,8 +22,8 @@ list(APPEND library_source
    #render_arcs.cpp
    tab_view.cpp
    tab_view.h
-   view.cpp
-   view.h
+   impact.cpp
+   impact.h
    )
 
 

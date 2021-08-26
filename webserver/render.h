@@ -14,7 +14,7 @@ namespace simple_webserver
       string   & m_strHoverFontFamilyName;
 
       rectangle_i32                                m_rectangle;
-      ::user::impact *                    m_pview;
+      ::user::impact *                    m_pimpact;
       string                              m_strFont1;
       int                                 m_iDrawing;
       string_map < ::image_pointer >      m_pimagemap;

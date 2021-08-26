@@ -17,7 +17,7 @@ namespace simple_drawing
    class application;
    class tab_view;
    class document;
-   class view;
+   class impact;
 
 } // namespace flag
 

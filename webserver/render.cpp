@@ -81,7 +81,7 @@ namespace simple_webserver
 
       string strDataId;
 
-      strDataId = m_pview->m_id;
+      strDataId = m_pimpact->m_id;
 
       //m_hlsText.m_dH = 0.1;
       //m_hlsText.m_dL = 0.5;
@@ -156,7 +156,7 @@ namespace simple_webserver
 
       string strDataId;
 
-      strDataId = m_pview->m_id;
+      strDataId = m_pimpact->m_id;
 
       auto m_papplication = get_application();
 
@@ -193,7 +193,7 @@ namespace simple_webserver
 
          string strDataId;
 
-         strDataId = m_pview->m_id;
+         strDataId = m_pimpact->m_id;
 
          if (!m_papplication->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())

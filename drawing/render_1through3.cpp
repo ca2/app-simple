@@ -49,9 +49,9 @@ namespace simple_drawing
 
                         m_pimage2->set_ok();
 
-                        m_pview->set_need_redraw();
+                        m_pimpact->set_need_redraw();
 
-                        m_pview->post_redraw();
+                        m_pimpact->post_redraw();
 
                      }
 

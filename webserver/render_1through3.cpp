@@ -49,9 +49,9 @@ namespace simple_webserver
 
                         m_pimage2->transform(image_grayscale);
 
-                        m_pview->set_need_redraw();
+                        m_pimpact->set_need_redraw();
 
-                        m_pview->post_redraw();
+                        m_pimpact->post_redraw();
 
                      }
 

@@ -206,7 +206,7 @@ namespace simple_shader
 
          pview->m_iView = (int) pimpactdata->m_iIndex;
 
-         __pointer(view) pviewShader = pview;
+         __pointer(impact) pviewShader = pview;
 
          pviewShader->m_prender->m_strShaderPath = strShaderPath;
 
