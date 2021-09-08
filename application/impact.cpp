@@ -141,8 +141,16 @@ namespace simple_application
 
       }
 
+      //pgraphics->fill_rectangle(rectangle_f64_dimension(100, 100, 100, 100), color::magenta);
+
+      //return;
+
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+
+      pgraphics->fill_rectangle(rectangleClient, argb(128, 128, 128, 128));
+
+      //return;
 
       ::color::color color_dk(dk_red());
 
