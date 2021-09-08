@@ -42,6 +42,13 @@ namespace simple_application
       
       file.lines(m_straLine, "dropbox://app_simple_application.txt");
 
+      if (m_straLine.is_empty())
+      {
+
+         file.lines(m_straLine, "document://app_simple_application.txt");
+
+      }
+
       return true;
       //return ::user::document::on_new_document();
 
