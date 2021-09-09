@@ -113,7 +113,7 @@ namespace simple_form
 
       m_pstillResponse->set_window_text("(Waiting for data to be sent...)");
 
-      m_pstillResponse->m_etext += ::user::e_text_wrap;
+      m_pstillResponse->m_etextwrap = e_text_wrap_character;
 
       m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
 
