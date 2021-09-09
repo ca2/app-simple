@@ -1,8 +1,7 @@
 #pragma once
 
 
-#include "aura/_.h"
-//#include "core/user/userex/_userex.h"
+#include "base/_.h"
 
 
 #ifdef _APP_SIMPLE_BOX_LIBRARY
@@ -12,25 +11,14 @@
 #endif
 
 
-namespace user
+namespace app_simple_box
 {
 
-   class button;
-
-   //typedef ::user::show < ::user::button > button_view;
-
-} // namespace user
-
-
-namespace simple_message_box
-{
-
+   
    class application;
 
-} // namespace simple_message_box
 
-
-#include "application.h"
+} // namespace app_simple_box
 
 
 

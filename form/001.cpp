@@ -226,7 +226,7 @@ namespace simple_form
             //main_async(__routine([this, strText]()
               // {
 
-                  message_box("send_button clicked\nText: " + strText);
+                  output_message_box_error("send_button clicked\nText: " + strText);
 
                //}));
 
