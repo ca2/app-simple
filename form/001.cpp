@@ -88,6 +88,8 @@ namespace simple_form
 
       __compose_new(m_pbuttonSend);
 
+      __compose_new(m_pstillReceiver);
+
       m_pstill->create_control(this, "still");
 
       m_pedit->create_control(this, "edit");
@@ -103,6 +105,10 @@ namespace simple_form
       m_pbuttonSend->add_control_event_handler(this);
 
       m_pstill->set_window_text("Enter new text:");
+
+      m_pstillReceiver->create_control(this, "still");
+
+      m_pstillReceiver->set_window_text("(Waiting to receive...)");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 
@@ -172,6 +178,10 @@ namespace simple_form
 
       m_pbuttonSend->display_child(::rectangle_f64_dimension(iLeft + button_width + 32, y, button_width, button_height));
 
+      y += button_height + 20;
+
+      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy * 5));
+
    }
 
 
@@ -229,6 +239,10 @@ namespace simple_form
                   output_message_box_error("send_button clicked\nText: " + strText);
 
                //}));
+
+                  m_pstillReceiver->set_window_text(strText);
+
+                  m_pstillReceiver->post_redraw();
 
             pevent->m_bRet = true;
 

@@ -15,6 +15,7 @@ namespace simple_form
       __composite(::user::plain_edit)           m_pedit;
       __composite(::user::combo_box)            m_pcombobox;
       __composite(::user::button)               m_pbutton;
+      __composite(::user::still)                m_pstillResponse;
 
 
       simple_form_002();

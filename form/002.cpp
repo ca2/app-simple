@@ -91,6 +91,8 @@ namespace simple_form
 
       __compose_new(m_pbutton);
 
+      __compose_new(m_pstillResponse);
+
       m_pstill->create_control(this, "still");
 
       m_pedit->create_control(this, "edit");
@@ -105,7 +107,11 @@ namespace simple_form
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 
+      m_pstillResponse->create_control(this, "still_response");
+
       m_pbutton->set_window_text("Send");
+
+      m_pstillResponse->set_window_text("(Waiting for data to be sent...)");
 
       m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
 
@@ -137,7 +143,7 @@ namespace simple_form
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeEdit.cy));
 
       y += sizeEdit.cy * 1.25;
 
@@ -149,7 +155,11 @@ namespace simple_form
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pbutton->display_child(::rectangle_f64_dimension(iLeft-30., y, 200., sizeButton.cy));
+      m_pbutton->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeButton.cy));
+
+      y += sizeButton.cy * 1.25;
+
+      m_pstillResponse->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeEdit.cy * 8));
 
    }
 
@@ -181,7 +191,7 @@ namespace simple_form
 
             //auto routine = [this, strText, strData]()
             //{
-
+            string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
                output_message_box_error("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
 
             //};
@@ -189,6 +199,10 @@ namespace simple_form
             //auto proutine = __routine(routine);
 
             //main_async(proutine);
+
+               m_pstillResponse->set_window_text(strMessage);
+
+               m_pstillResponse->post_redraw();
 
          }
 
