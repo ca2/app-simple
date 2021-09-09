@@ -9,6 +9,9 @@
 #include "_.h"
 
 
+#include "_app_simple_box.h"
+
+
 #include "aura/_defer.h"
 
 

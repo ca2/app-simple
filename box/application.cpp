@@ -1,9 +1,7 @@
 #include "framework.h"
-#include "apex/future.h"
-#include "aura/application.h"
 
 
-namespace simple_message_box
+namespace app_simple_box
 {
 
 
@@ -11,6 +9,7 @@ namespace simple_message_box
    {
       
       m_bImaging = false;
+      m_ptemplateAppSimpleBoxMain = nullptr;
       
       //m_bWriteText = false;
       
@@ -30,78 +29,61 @@ namespace simple_message_box
    }
 
 
+   ::e_status application::init_instance()
+   {
+
+      set_local_data();
+
+      create_factory <::app_simple_box::document >();
+      create_factory <::app_simple_box::main_frame >();
+      create_factory <::app_simple_box::impact >();
+
+      if (!::base::application::init_instance())
+      {
+
+         return false;
+
+      }
+
+      auto pdoctemplate = __new(::user::single_document_template(
+         "main",
+         __type(document),
+         __type(main_frame),
+         __type(impact)));
+
+      m_ptemplateAppSimpleBoxMain = pdoctemplate;
+
+      add_document_template(pdoctemplate);
+
+      default_data_save_handling(id_simple_checkbox);
+
+      default_data_save_handling(id_no_client_frame);
+
+      default_data_save_handling(id_simple_text);
+
+      return true;
+
+   }
+
+
+
+
    void application::on_request(::create * pcreate)
    {
 
       m_strAppName = "Simple Message Box!!";
 
-      show_message_box();
-
-      //add_process(e_process_finish, __process([=](const ::payload & payload)
-      //   {
-
-      //      auto pprocessa = processa(e_process_finish);
-
-      //      if (payload == e_dialog_result_no)
-      //      {
-
-      //      }
-      //      else
-      //      {
-
-      //         finish();
-
-      //      }
-
-      //   }));
-
-      //::id id(e_process_finish);
-
-      //::payload payload(e_dialog_result_no);
-
-      //send_payload(id, payload);
-
-   }
-
-
-   void application::show_message_box()
-   {
-
-      message_box(
-         "Simple Message Box!! (message_box).<br><br>Finish?",
-         nullptr,
-         e_message_box_yes_no | e_message_box_icon_information
-      )->then([this](auto future)
+      if (m_ptemplateAppSimpleBoxMain->get_document_count() <= 0)
       {
 
-         if (future->m_edialogresult == e_dialog_result_yes)
-         {
+         m_ptemplateAppSimpleBoxMain->do_request(pcreate);
 
-            _001TryCloseApplication();
-
-         }
-         else
-         {
-
-            show_message_box();
-
-         }
-
-      });
-
-      
-
-
+      }
 
    }
 
 
-   __namespace_application_factory("app-simple/box");
-
-
-} // namespace simple_message_box
-
-
+} // namespace app_simple_box
 
 
 

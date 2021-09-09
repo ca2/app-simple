@@ -45,7 +45,7 @@ namespace simple_drawing
       if(!bCheckOk)
       {
 
-         message_box("simple_check_box is not ok");
+         output_debug_string("ERROR: simple_check_box is not ok");
 
       }
 

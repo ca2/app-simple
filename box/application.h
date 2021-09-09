@@ -1,33 +1,35 @@
 ﻿#pragma once
 
 
-
-namespace simple_message_box
+namespace app_simple_box
 {
 
 
    class CLASS_DECL_APP_SIMPLE_BOX application :
-      virtual public ::aura::application
+      virtual public ::base::application
    {
    public:
 
 
-      ::payload      m_varMessage;
+      ::payload                           m_varMessage;
+      ::user::single_document_template *  m_ptemplateAppSimpleBoxMain;
+
 
 
       application();
-      virtual ~application();
-
-      virtual void on_request(::create * pcreate) override;
+      ~application() override;
 
 
-      virtual void show_message_box();
+      ::e_status init_instance() override;
+
+      
+      void on_request(::create * pcreate) override;
 
 
    };
 
 
-} // namespace simple_message_box
+} // namespace app_simple_box
 
 
 

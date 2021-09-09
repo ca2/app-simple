@@ -182,7 +182,7 @@ namespace simple_form
             //auto routine = [this, strText, strData]()
             //{
 
-               message_box("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
+               output_message_box_error("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
 
             //};
 

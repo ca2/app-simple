@@ -72,7 +72,7 @@ namespace simple_change_grub_default_entry
       //   if (m_ptopview == NULL)
       //   {
 
-      //      message_box("Could not create folder edit impact");
+      //      output_message_box_error("Could not create folder edit impact");
 
       //   }
 
@@ -97,7 +97,7 @@ namespace simple_change_grub_default_entry
       if(m_pimpact == NULL)
       {
 
-         message_box("Could not create file list ::user::impact");
+         output_message_box_error("Could not create file list ::user::impact");
 
       }
 
