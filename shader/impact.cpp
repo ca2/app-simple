@@ -244,7 +244,7 @@ namespace simple_shader
 
          auto rectangleClient = get_client_rect();
 
-         auto pimage = create_image(rectangleClient);
+         auto pimage = m_pcontext->context_image()->create_image(rectangleClient);
 
          ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
 
