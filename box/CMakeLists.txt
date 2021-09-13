@@ -6,11 +6,18 @@ set(LIBRARY_NAME app_simple_box)
 
 
 list(APPEND library_source
+        _.cpp
         _.h
         application.cpp
         application.h
+        document.cpp
+        document.h
         framework.cpp
         framework.h
+        impact.cpp
+        impact.h
+        main_frame.cpp
+        main_frame.h
    )
 
 
