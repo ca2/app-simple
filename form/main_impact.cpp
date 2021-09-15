@@ -76,7 +76,7 @@ namespace simple_form
       //   if (m_ptopview == NULL)
       //   {
 
-      //      output_message_box_error("Could not create folder edit impact");
+      //      output_error_message("Could not create folder edit impact");
 
       //   }
 
@@ -101,7 +101,7 @@ namespace simple_form
       if(m_pimpact == NULL)
       {
 
-         output_message_box_error("Could not create file list ::user::impact");
+         output_error_message("Could not create file list ::user::impact");
 
       }
 
