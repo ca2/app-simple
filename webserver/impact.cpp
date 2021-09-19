@@ -148,7 +148,7 @@ namespace simple_webserver
    }
 
 
-   void impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void impact::handle(::subject * psubject, ::context * pcontext)
    {
 
       if (psubject->id() == id_simple_checkbox
@@ -159,7 +159,7 @@ namespace simple_webserver
 
       }
 
-      ::user::impact::on_subject(psubject, pcontext);
+      ::user::impact::handle(psubject, pcontext);
    }
 
 

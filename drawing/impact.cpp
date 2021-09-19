@@ -90,17 +90,17 @@ namespace simple_drawing
 
       {
 
-         auto psubject = m_papplication->subject(id_simple_checkbox);
+         auto psignal = m_papplication->get_signal(id_simple_checkbox);
 
-         psubject->add_listener(this);
+         psignal->add_handler(this);
 
       }
 
       {
 
-         auto psubject = m_papplication->subject(id_no_client_frame);
+         auto psignal = m_papplication->get_signal(id_no_client_frame);
 
-         psubject->add_listener(this);
+         psignal->add_handler(this);
 
       }
 
@@ -144,7 +144,7 @@ namespace simple_drawing
    }
 
 
-   void impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void impact::handle(::subject * psubject, ::context * pcontext)
    {
 
       if (psubject->id() == id_simple_checkbox
@@ -155,7 +155,7 @@ namespace simple_drawing
 
       }
 
-      ::user::impact::on_subject(psubject, pcontext);
+      ::user::impact::handle(psubject, pcontext);
    }
 
 
