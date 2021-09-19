@@ -149,7 +149,7 @@ namespace simple_change_grub_default_entry
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::user::e_element_none);
+      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
 
       y += rectEditMargin.top;
 
@@ -190,13 +190,13 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_001::on_control_event(::user::control_event * pevent)
+   void simple_change_grub_default_entry_001::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if (pevent->m_eevent == ::user::e_event_after_change_cur_sel)
+      if (psubject->m_id == ::e_subject_after_change_cur_sel)
       {
 
-         if (pevent->m_id == "list_box")
+         if (psubject->m_puserelement->m_id == "list_box")
          {
 
             string strSavedEntry = m_plistbox->get_current_item_string_value();
@@ -215,10 +215,10 @@ namespace simple_change_grub_default_entry
          }
 
       }
-      else if (pevent->m_eevent == ::user::e_event_after_change_text)
+      else if (psubject->m_id == ::e_subject_after_change_text)
       {
 
-         if (pevent->m_id == "edit")
+         if (psubject->m_puserelement->m_id == "edit")
          {
 
             string strText;
@@ -234,23 +234,23 @@ namespace simple_change_grub_default_entry
          }
 
       }
-      else if (pevent->m_eevent == ::user::e_event_click)
+      else if (psubject->m_id == ::e_subject_click)
       {
 
-         if (pevent->m_id == "clear_button")
+         if (psubject->m_puserelement->m_id == "clear_button")
          {
 
             m_pedit->_001SetText("", ::e_source_user);
 
          }
-         else if (pevent->m_id == "restart_button")
+         else if (psubject->m_puserelement->m_id == "restart_button")
          {
 
             auto pnode = m_psystem->node();
 
             pnode->reboot();
 
-            pevent->m_bRet = true;
+            psubject->m_bRet = true;
 
          }
 

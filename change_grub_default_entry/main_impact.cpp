@@ -35,10 +35,10 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_impact::on_subject(::subject::subject * psubject, ::subject::context * pcontext)
+   void main_impact::handle(::subject * psubject, ::context * pcontext)
    {
 
-      ::user::split_view::on_subject(psubject, pcontext);
+      ::user::split_view::handle(psubject, pcontext);
 
    }
 
@@ -138,10 +138,10 @@ namespace simple_change_grub_default_entry
    bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
    {
 
-      if(pevent->m_eevent == ::user::e_event_click)
+      if(psubject->m_id == ::e_subject_click)
       {
 
-         if(pevent->m_puserinteraction->m_id == "simple_change_grub_default_entry_toggle")
+         if(psubject->m_puserinteraction->m_id == "simple_change_grub_default_entry_toggle")
          {
 
             m_pimpact->set_need_layout();

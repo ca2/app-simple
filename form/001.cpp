@@ -150,7 +150,7 @@ namespace simple_form
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::user::e_element_none);
+      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
 
       y += rectEditMargin.top;
 
@@ -185,16 +185,16 @@ namespace simple_form
    }
 
 
-   void simple_form_001::on_control_event(::user::control_event * pevent)
+   void simple_form_001::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if (pevent->m_eevent == ::user::e_event_after_change_text)
+      if (psubject->m_id == ::e_subject_after_change_text)
       {
 
-         if (pevent->m_actioncontext.is_user_source())
+         if (psubject->m_actioncontext.is_user_source())
          {
 
-            if (pevent->m_id == "edit")
+            if (psubject->m_puserelement->m_id == "edit")
             {
 
                string strText;
@@ -217,16 +217,16 @@ namespace simple_form
          }
 
       }
-      else if (pevent->m_eevent == ::user::e_event_click)
+      else if (psubject->m_id == ::e_subject_click)
       {
 
-         if (pevent->m_id == "clear_button")
+         if (psubject->m_puserelement->m_id == "clear_button")
          {
 
             m_pedit->_001SetText("", ::e_source_user);
 
          }
-         else if (pevent->m_id == "send_button")
+         else if (psubject->m_puserelement->m_id == "send_button")
          {
 
             string strText;
@@ -244,7 +244,7 @@ namespace simple_form
 
                   m_pstillReceiver->post_redraw();
 
-            pevent->m_bRet = true;
+            psubject->m_bRet = true;
 
          }
 
