@@ -27,37 +27,45 @@ namespace simple_drawing
             m_pimage1.create();
 
             fork([this]()
-               {
+            {
 
                auto pcontext = m_pcontext;
 
                auto pcontextimage = pcontext->context_image();
 
-                  m_pimage1 = pcontextimage->get_image("matter://pat1.jpg");
+               auto pimage1 = pcontextimage->get_image("matter://pat1.jpg");
 
-                  if (::is_ok(m_pimage1))
+               if (::is_ok(pimage1))
+               {
+
+                  __pointer(::image) pimage2;
+
+                  __construct(pimage2);
+
+                  pimage2->copy_from(pimage1);
+
+                  m_pimage1 = pimage1;
+
+                  if (::is_set(pimage2))
                   {
 
-                     __construct(m_pimage2);
+                     pimage2->transform(image_grayscale);
 
-                     m_pimage2->copy_from(m_pimage1);
+                     pimage2->unmap();
 
-                     if (::is_ok(m_pimage2))
-                     {
+                     pimage2->set_ok();
 
-                        m_pimage2->transform(image_grayscale);
+                     m_pimage2 = pimage2;
 
-                        m_pimage2->set_ok();
+                     m_pimpact->set_need_redraw();
 
-                        m_pimpact->set_need_redraw();
-
-                        m_pimpact->post_redraw();
-
-                     }
+                     m_pimpact->post_redraw();
 
                   }
 
-               });
+               }
+
+            });
 
          }
 
