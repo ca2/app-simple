@@ -21,7 +21,7 @@ namespace simple_form
 
 
       tab_view();
-      virtual ~tab_view();
+      ~tab_view() override;
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;
@@ -33,10 +33,10 @@ namespace simple_form
       virtual void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
+      void handle(::subject * psubject, ::context * pcontext);
       void on_change_cur_sel() override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      //virtual void handle(::subject * psubject, ::context * pcontext) override;
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

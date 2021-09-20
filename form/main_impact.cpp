@@ -42,7 +42,23 @@ namespace simple_form
    void main_impact::handle(::subject * psubject, ::context * pcontext)
    {
 
+      if (psubject->m_id == ::e_subject_click)
+      {
+
+         if (psubject->user_interaction()->m_id == "simple_form_toggle")
+         {
+
+            m_pimpact->set_need_layout();
+
+            return;
+
+         }
+
+      }
+
       ::user::split_view::handle(psubject, pcontext);
+
+
 
    }
 
@@ -139,26 +155,26 @@ namespace simple_form
    }
 
 
-   bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
-   {
+   //bool main_impact::handle(::subject * psubject, ::context * pcontext)
+   //{
 
-      if(psubject->m_id == ::e_subject_click)
-      {
+   //   if(psubject->m_id == ::e_subject_click)
+   //   {
 
-         if(psubject->m_puserinteraction->m_id == "simple_form_toggle")
-         {
+   //      if(psubject->m_puserinteraction->m_id == "simple_form_toggle")
+   //      {
 
-            m_pimpact->set_need_layout();
+   //         m_pimpact->set_need_layout();
 
-            return true;
+   //         return true;
 
-         }
+   //      }
 
-      }
+   //   }
 
-      return false;
+   //   return false;
 
-   }
+   //}
 
 
 } // namespace simple_form
