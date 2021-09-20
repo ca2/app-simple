@@ -215,45 +215,45 @@ namespace simple_form
    }
 
 
-   bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
-   {
+   //bool tab_view::handle(::subject * psubject, ::context * pcontext)
+   //{
 
-      if(m_pdocMenu != nullptr
-            && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
-            && psubject->m_puserinteraction != nullptr)
-      {
+   //   if(m_pdocMenu != nullptr
+   //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
+   //         && psubject->m_puserinteraction != nullptr)
+   //   {
 
-         if(psubject->m_id == ::e_subject_after_change_text)
-         {
+   //      if(psubject->m_id == ::e_subject_after_change_text)
+   //      {
 
 
-         }
-         else if (psubject->m_id == ::e_subject_set_check && psubject->m_puserinteraction != NULL)
-         {
+   //      }
+   //      else if (psubject->m_id == ::e_subject_set_check && psubject->m_puserinteraction != NULL)
+   //      {
 
-            string strCheck = psubject->m_puserinteraction->m_id;
+   //         string strCheck = psubject->m_puserinteraction->m_id;
 
-            if (::str::begins_eat_ci(strCheck, "bilbo"))
-            {
+   //         if (::str::begins_eat_ci(strCheck, "bilbo"))
+   //         {
 
-               if (psubject->m_puserinteraction != NULL && psubject->m_actioncontext.is_user_source())
-               {
+   //            if (psubject->m_puserinteraction != NULL && psubject->m_actioncontext.is_user_source())
+   //            {
 
-                  //int iCheck = atoi(strCheck);
+   //               //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = psubject->m_puserinteraction;
+   //               //__pointer(::user::check) pcheck = psubject->m_puserinteraction;
 
-               }
+   //            }
 
-            }
+   //         }
 
-         }
+   //      }
 
-      }
+   //   }
 
-      return false;
+   //   return false;
 
-   }
+   //}
 
 
    void tab_view::handle(::subject * psubject, ::context * pcontext)
@@ -283,6 +283,38 @@ namespace simple_form
       //   }
 
       //}
+      if (m_pdocMenu != nullptr
+         && psubject->get_form() == m_pdocMenu->get_view(0)
+         && ::is_set(psubject->m_puserelement))
+      {
+
+         if (psubject->m_id == ::e_subject_after_change_text)
+         {
+
+
+         }
+         else if (psubject->m_id == ::e_subject_set_check && ::is_set(psubject->m_puserelement))
+         {
+
+            string strCheck = psubject->m_puserelement->m_id;
+
+            if (::str::begins_eat_ci(strCheck, "bilbo"))
+            {
+
+               if (::is_set(psubject->m_puserelement) && psubject->m_actioncontext.is_user_source())
+               {
+
+                  //int iCheck = atoi(strCheck);
+
+                  //__pointer(::user::check) pcheck = psubject->m_puserinteraction;
+
+               }
+
+            }
+
+         }
+
+      }
 
 //      ::userex::pane_tab_view::handle(psubject, pcontext);
       ::user::tab_view::handle(psubject, pcontext);

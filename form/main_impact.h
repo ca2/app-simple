@@ -27,7 +27,7 @@ namespace simple_form
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-      virtual bool BaseOnControlEvent(::user::control_event * pevent);
+//      virtual bool BaseOnControlEvent(::user::control_event * pevent);
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
