@@ -158,9 +158,9 @@ namespace simple_application
 
 #ifdef DEBUG_WORK
 
-      ::rectangle_i32 rectDryProWithLove_Work(100, 100, 200, 200);
+      ::rectangle_i32 rectangleDryProWithLove_Work(100, 100, 200, 200);
 
-      pgraphics->fill_rectangle(rectDryProWithLove_Work, argb(255, 150, 200, 255));
+      pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
 #endif
 

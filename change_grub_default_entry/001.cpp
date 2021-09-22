@@ -137,21 +137,21 @@ namespace simple_change_grub_default_entry
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto rectStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
+      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += rectStillMargin.top;
+      y += rectangleStillMargin.top;
 
       m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
       y += sizeStill.cy;
 
-      y += rectStillMargin.bottom;
+      y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto rectEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
+      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
 
-      y += rectEditMargin.top;
+      y += rectangleEditMargin.top;
 
       m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
 
@@ -182,7 +182,7 @@ namespace simple_change_grub_default_entry
 
       y += sizeEdit.cy;
 
-      y += rectEditMargin.bottom;
+      y += rectangleEditMargin.bottom;
 
       m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleClient.width() - iLeft * 2, rectangleClient.bottom - iLeft - y));
 

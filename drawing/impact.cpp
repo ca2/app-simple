@@ -117,7 +117,11 @@ namespace simple_drawing
 
       m_prender->m_pimpact = this;
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      auto pdocument = get_document();
+
+      auto pimpactsystem = pdocument->m_pimpactsystem;
+
+      string strId = pimpactsystem->m_strMatter;
 
       string strText;
 
