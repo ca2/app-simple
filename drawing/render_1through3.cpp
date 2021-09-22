@@ -14,9 +14,9 @@ namespace simple_drawing
 
       string strFontFamily = get_font();
 
-      ::draw2d::pen_pointer pen(e_create);
+      auto ppen = __create < ::draw2d::pen > ();
 
-      ::draw2d::brush_pointer brush(e_create);
+      auto pbrush = __create < ::draw2d::brush >();
 
       if (m_iDrawing == 3)
       {
@@ -156,20 +156,20 @@ namespace simple_drawing
       if (__bool(echeckSimple))
       {
 
-         pen->create_null();
+         ppen->create_null();
 
       }
       else
       {
 
-         pen->create_solid(4.0, argb(255, 50, 180, 255));
+         ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
       }
 
       if (m_iDrawing == 3 && ::is_ok(m_pimage1))
       {
 
-         brush->CreatePatternBrush(m_pimage1);
+         pbrush->CreatePatternBrush(m_pimage1);
 
       }
       else
@@ -178,21 +178,21 @@ namespace simple_drawing
          if (__bool(m_papplication->m_echeckSimple))
          {
 
-            brush->create_solid(argb(255, 255, 255, 200));
+            pbrush->create_solid(argb(255, 255, 255, 200));
 
          }
          else
          {
 
-            brush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
+            pbrush->CreateLinearGradientBrush(rectangle.top_left(), rectangle.bottom_right(), argb(255, 255, 255, 200), argb(255, 255, 125, 100));
 
          }
 
       }
 
-      pgraphics->set(pen);
+      pgraphics->set(ppen);
 
-      pgraphics->set(brush);
+      pgraphics->set(pbrush);
       
       //pgraphics->draw_ellipse(rectangle);
       
@@ -200,20 +200,20 @@ namespace simple_drawing
 
       pgraphics->ellipse(rectangle);
 
-      ::rectangle_i32 rectText;
+      ::rectangle_i32 rectangleText;
 
-      rectText.set_size(size);
+      rectangleText.set_size(size);
 
-      rectText.inflate(10, 10);
+      rectangleText.inflate(10, 10);
 
-      rectText.Align(e_align_center, rectangle);
+      rectangleText.Align(e_align_center, rectangle);
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       if (m_iDrawing == 1)
       {
 
-         brush->create_solid(m_hlsText);
+         pbrush->create_solid(m_hlsText);
 
       }
       else if (m_iDrawing == 3)
@@ -222,7 +222,7 @@ namespace simple_drawing
          if (__bool(m_papplication->m_echeckSimple))
          {
 
-            brush->create_solid(m_hlsText);
+            pbrush->create_solid(m_hlsText);
 
          }
          else
@@ -231,13 +231,13 @@ namespace simple_drawing
             if (::is_ok(m_pimage2))
             {
 
-               brush->CreatePatternBrush(m_pimage2);
+               pbrush->CreatePatternBrush(m_pimage2);
 
             }
             else
             {
 
-               brush->create_solid(m_hlsText);
+               pbrush->create_solid(m_hlsText);
 
             }
 
@@ -250,24 +250,24 @@ namespace simple_drawing
          if (__bool(m_papplication->m_echeckSimple))
          {
 
-            brush->create_solid(m_hlsText);
+            pbrush->create_solid(m_hlsText);
 
          }
          else
          {
 
-            brush->CreateLinearGradientBrush(rectText.top_left(), rectText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
+            pbrush->CreateLinearGradientBrush(rectangleText.top_left(), rectangleText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
 
          }
 
       }
 
-      pgraphics->set(brush);
+      pgraphics->set(pbrush);
 
       if(bDrawText)
       {
       
-         pgraphics->draw_text(strTitle, rectText, e_align_center);
+         pgraphics->draw_text(strTitle, rectangleText, e_align_center);
          
       }
 
