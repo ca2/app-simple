@@ -227,13 +227,13 @@ namespace simple_shader
    }
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
-   {
-
-
-      ::user::tab_view::handle(psubject, pcontext);
-
-   }
+//   void tab_view::handle(::subject * psubject, ::context * pcontext)
+//   {
+//
+//
+//      ::user::tab_view::handle(psubject, pcontext);
+//
+//   }
 
 
 } // namespace simple_shader

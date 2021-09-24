@@ -12,8 +12,6 @@ namespace simple_shader
 
       m_iView = -1;
 
-      payload(FONTSEL_IMPACT) = true;
-
       m_flagNonClient.erase(non_client_background);
 
       m_flagNonClient.erase(non_client_focus_rect);
@@ -92,6 +90,8 @@ namespace simple_shader
          return;
 
       }
+
+      payload(FONTSEL_IMPACT) = true;
 
       top_level_frame()->set_prodevian();
 
