@@ -15,7 +15,7 @@ namespace simple_shader
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
       virtual void assert_valid() const override;
@@ -26,6 +26,12 @@ namespace simple_shader
       virtual ::experience::frame * experience_get_frame() override;
 
       virtual bool has_pending_graphical_update() override;
+
+      void install_message_routing(::channel * pchannel) override;
+
+
+      DECLARE_MESSAGE_HANDLER(on_message_create);
+
 
    };
 

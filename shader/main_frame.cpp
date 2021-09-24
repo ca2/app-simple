@@ -8,10 +8,6 @@ namespace simple_shader
    main_frame::main_frame()
    {
 
-      //m_ewindowflag += window_flag_miniaturizable;
-
-      set_bitmap_source("Simple Drawing!!");
-
       m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
@@ -59,41 +55,25 @@ namespace simple_shader
    }
 
 
-   //bool main_frame::get_translucency(::user::enum_translucency & etranslucency, ::enum_element eelement, ::user::style_context * pcontext)
-   //{
+   void main_frame::install_message_routing(::channel * pchannel)
+   {
 
-   //   if (m_bExplicitTranslucency)
-   //   {
+      simple_frame_window::install_message_routing(pchannel);
 
-   //      etranslucency = m_etranslucency;
+      MESSAGE_LINK(e_message_create,pchannel,this,&simple_main_frame::on_message_create);
 
-   //      return true;
+   }
 
-   //   }
 
-   //   //if (userstyle() != NULL)
-   //   //{
+   void main_frame::on_message_create(::message::message * pmessage)
+   {
 
-   //   //   if (m_puserstyle->_001GetMainFrameTranslucency(etranslucency))
-   //   //      return true;
+      set_bitmap_source("Simple Shader!!");
 
-   //   //}
-   //   //etranslucency = ::user::e_translucency_present;
-
-   //   ////      etranslucency = ::user::e_translucency_none;
-
-   //   //return true;
-
-   //   return ::user::style::get_translucency(etranslucency, eelement, pcontext);
-
-   //}
+   }
 
 
 } // namespace simple_shader
-
-
-
-
 
 
 
