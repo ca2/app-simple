@@ -1,6 +1,7 @@
 #pragma once
 
 
+
 namespace simple_drawing
 {
 
@@ -11,11 +12,15 @@ namespace simple_drawing
    public:
 
 
-      ::enum_check &                         m_echeckSimple;
-      ::enum_check &                         m_echeckNoClientFrame;
-      string &                               m_strSimple;
+      __PROPERTIES(application)
+         __PROPERTY(::enum_check, m_echeckSimple, id_simple_checkbox);
+         __PROPERTY(::enum_check, m_echeckNoClientFrame, id_no_client_frame);
+         __PROPERTY(string, m_strSimple, id_simple_text);
+         __PROPERTY(string, m_strMainTitle, id_main_title);
+      __END_PROPERTIES(application);
+
+
       string *                               m_pstrHoverFontFamilyName;
-      string &                               m_strMainTitle;
 
       bool                                   m_bMultiverseChat;
 

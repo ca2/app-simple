@@ -15,17 +15,25 @@ namespace simple_drawing
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
-      virtual void assert_valid() const override;
-      virtual void dump(dump_context & dumpcontext) const override;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
       //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
-      virtual ::experience::frame * experience_get_frame() override;
+      ::experience::frame * experience_get_frame() override;
 
-      virtual bool has_pending_graphical_update() override;
+
+      bool has_pending_graphical_update() override;
+
+
+      void install_message_routing(::channel * pchannel) override;
+
+
+      DECLARE_MESSAGE_HANDLER(on_message_create);
+
 
    };
 

@@ -6,48 +6,8 @@ namespace simple_drawing
 {
 
 
-   application::application() :
-      m_echeckSimple(payload_reference(topic(id_simple_checkbox))),
-      m_echeckNoClientFrame(payload_reference(topic(id_no_client_frame))),
-      m_strSimple(payload_reference(topic(id_simple_text))),
-      m_strMainTitle(payload_reference(topic(id_main_title)))
+   application::application()
    {
-
-      m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
-
-      m_pstrHoverFontFamilyName = nullptr;
-
-      auto pproperty1 = find_property(id_simple_checkbox);
-
-      bool bCheckOk = false;
-
-      if(pproperty1->m_etype == e_type_enum_check)
-      {
-
-         auto pproperty = pproperty1;
-
-         if(pproperty->m_etype == e_type_enum_check)
-         {
-
-            auto & echeck = pproperty->m_echeck;
-
-            if(echeck == check_undefined)
-            {
-
-               bCheckOk = true;
-
-            }
-
-         }
-
-      }
-
-      if(!bCheckOk)
-      {
-
-         output_debug_string("ERROR: simple_check_box is not ok");
-
-      }
 
       m_ptemplateSimpleDrawingMain = nullptr;
 
@@ -64,8 +24,6 @@ namespace simple_drawing
       m_bLicense = false;
 
       m_bMultiverseChat = true;
-
-      m_strMainTitle = "Simple Drawing";
 
    }
 
@@ -86,6 +44,46 @@ namespace simple_drawing
 
    ::e_status application::init_instance()
    {
+
+      create_object_properties();
+
+      m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
+
+      m_pstrHoverFontFamilyName = nullptr;
+
+      auto pproperty1 = properties().find_property(id_simple_checkbox);
+
+      bool bCheckOk = false;
+
+      if (pproperty1->m_etype == e_type_enum_check)
+      {
+
+         auto pproperty = pproperty1;
+
+         if (pproperty->m_etype == e_type_enum_check)
+         {
+
+            auto & echeck = pproperty->m_echeck;
+
+            if (echeck == check_undefined)
+            {
+
+               bCheckOk = true;
+
+            }
+
+         }
+
+      }
+
+      if (!bCheckOk)
+      {
+
+         output_debug_string("ERROR: simple_check_box is not ok");
+
+      }
+
+      properties().m_strMainTitle = "Simple Drawing";
 
       set_local_data();
 

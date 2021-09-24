@@ -24,7 +24,7 @@ namespace simple_drawing
          if (!m_pimage1)
          {
 
-            m_pimage1.create();
+            __construct(m_pimage1);
 
             fork([this]()
             {
@@ -108,12 +108,12 @@ namespace simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = m_papplication->m_strSimple;
+         strTitle = m_papplication->properties().m_strSimple;
 
          if(strTitle.is_empty())
          {
          
-            strTitle = m_papplication->m_strMainTitle;
+            strTitle = m_papplication->properties().m_strMainTitle;
          
          }
 
@@ -151,7 +151,7 @@ namespace simple_drawing
             
       }
 
-      auto& echeckSimple = m_papplication->m_echeckSimple;
+      auto & echeckSimple = m_papplication->properties().m_echeckSimple;
 
       if (__bool(echeckSimple))
       {
@@ -175,7 +175,7 @@ namespace simple_drawing
       else
       {
 
-         if (__bool(m_papplication->m_echeckSimple))
+         if (__bool(m_papplication->properties().m_echeckSimple))
          {
 
             pbrush->create_solid(argb(255, 255, 255, 200));
@@ -219,7 +219,7 @@ namespace simple_drawing
       else if (m_iDrawing == 3)
       {
 
-         if (__bool(m_papplication->m_echeckSimple))
+         if (__bool(m_papplication->properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);
@@ -247,7 +247,7 @@ namespace simple_drawing
       else
       {
 
-         if (__bool(m_papplication->m_echeckSimple))
+         if (__bool(m_papplication->properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);
