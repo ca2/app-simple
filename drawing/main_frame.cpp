@@ -10,8 +10,6 @@ namespace simple_drawing
 
       //m_ewindowflag += window_flag_miniaturizable;
 
-      set_bitmap_source("Simple Drawing!!");
-
       m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
@@ -87,6 +85,24 @@ namespace simple_drawing
    //   return ::user::style::get_translucency(etranslucency, eelement, pcontext);
 
    //}
+
+
+   void main_frame::install_message_routing(::channel * pchannel)
+   {
+
+      simple_frame_window::install_message_routing(pchannel);
+
+      MESSAGE_LINK(e_message_create, pchannel, this, &simple_main_frame::on_message_create);
+
+   }
+
+
+   void main_frame::on_message_create(::message::message * pmessage)
+   {
+
+      set_bitmap_source("Simple Drawing!!");
+
+   }
 
 
 } // namespace simple_drawing

@@ -1,6 +1,31 @@
 #pragma once
 
 
+//
+//
+//#define __PROPERTIES2(xxx)\
+//class xxx ## _properties: \
+//   public property_set \
+//{ \
+//public: \
+//
+//
+//#define __PROPERTY2(type, name, ID) type & name = payload_reference(topic(ID))
+//
+//
+//
+//#define __END_PROPERTIES2(xxx) }; \
+//xxx ## _properties & properties() {return *m_pobjectproperties;} \
+//inline void create_object_properties() { m_pobjectproperties = m_ppropertyset = __new(xxx ## _properties(this));} \
+//__pointer(xxx ## _properties) m_pobjectproperties
+//
+//
+//
+//
+
+
+
+
 namespace simple_drawing
 {
 
@@ -11,16 +36,19 @@ namespace simple_drawing
    public:
 
 
-      string   & m_strHoverFontFamilyName;
+      __PROPERTIES(render)
+         __PROPERTY(string, m_strHoverFontFamilyName, id_hover_font_family_name);
+      __END_PROPERTIES(render);
 
-      rectangle_i32                                m_rectangle;
+
+      rectangle_i32                       m_rectangle;
       ::user::impact *                    m_pimpact;
       string                              m_strFont1;
       int                                 m_iDrawing;
       string_map < ::image_pointer >      m_pimagemap;
       ::image_pointer                     m_pimage1;
       ::image_pointer                     m_pimage2;
-      ::color::hls                               m_hlsText;
+      ::color::hls                        m_hlsText;
 
       render();
       virtual ~render();

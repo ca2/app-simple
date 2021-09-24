@@ -10,8 +10,6 @@ namespace simple_drawing
    impact::impact()
    {
 
-      payload(FONTSEL_IMPACT) = true;
-
       m_flagNonClient.erase(non_client_background);
 
       m_flagNonClient.erase(non_client_focus_rect);
@@ -76,6 +74,8 @@ namespace simple_drawing
 
    void impact::on_message_create(::message::message * pmessage)
    {
+
+      payload(FONTSEL_IMPACT) = true;
 
       __pointer(::message::create) pcreate(pmessage);
 
@@ -174,7 +174,7 @@ namespace simple_drawing
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_papplication->m_echeckNoClientFrame != ::check_checked)
+      if (m_papplication->properties().m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle = get_client_rect();

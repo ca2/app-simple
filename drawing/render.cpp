@@ -10,9 +10,7 @@ namespace simple_drawing
 {
 
 
-
-   render::render() :
-      m_strHoverFontFamilyName(payload_reference(topic(id_hover_font_family_name)))
+   render::render()
    {
 
       m_iDrawing = 1;
@@ -60,6 +58,8 @@ namespace simple_drawing
 
       //initialize_application_consumer();
 
+      create_object_properties();
+
       m_iDrawing = iDrawing;
 
       color32_t crText = argb(255, 55, 210, 120);
@@ -102,7 +102,7 @@ namespace simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_papplication->m_echeckNoClientFrame != ::check_checked)
+      if (m_papplication->properties().m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
@@ -175,7 +175,7 @@ namespace simple_drawing
 
       string strFont;
 
-      strFont = m_strHoverFontFamilyName;
+      strFont = properties().m_strHoverFontFamilyName;
 
       if (strFont.has_char())
       {

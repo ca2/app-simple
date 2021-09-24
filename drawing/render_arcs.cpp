@@ -76,7 +76,7 @@ namespace simple_drawing
 
       pgraphics->set(pbrush);
 
-      if (__bool(m_papplication->m_echeckSimple))
+      if (__bool(m_papplication->properties().m_echeckSimple))
       {
 
          if (angleAngle < 0.0)
@@ -202,7 +202,7 @@ namespace simple_drawing
 
       ::rectangle_i32 rClient(m_rectangle);
 
-      if (__bool(m_papplication->m_echeckSimple))
+      if (__bool(m_papplication->properties().m_echeckSimple))
       {
 
          pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));

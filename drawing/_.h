@@ -23,6 +23,35 @@ namespace simple_drawing
 
 
 
+class object_properties :
+   virtual public property_object
+{
+public:
+
+
+   ::object * m_pobject;
+
+
+   object_properties(::object * pobject)
+   {
+
+      initialize(pobject);
+
+      m_pobject = pobject;
+
+   }
+
+
+   ::property_object * parent_property_set_holder() const override
+   {
+
+      return m_pobject;
+
+   }
+
+};
+
+
 #include "render.h"
 
 
