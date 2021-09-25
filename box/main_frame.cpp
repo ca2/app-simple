@@ -8,8 +8,6 @@ namespace app_simple_box
    main_frame::main_frame()
    {
 
-      set_bitmap_source("Simple papplication!!");
-
       m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
@@ -55,6 +53,24 @@ namespace app_simple_box
    {
 
       return ::simple_frame_window::has_pending_graphical_update();
+
+   }
+
+
+   void main_frame::install_message_routing(::channel * pchannel)
+   {
+
+      simple_main_frame::install_message_routing(pchannel);
+
+      MESSAGE_LINK(e_message_create, pchannel, this, &simple_main_frame::on_message_create);
+
+   }
+
+
+   void main_frame::on_message_create(::message::message * pmessage)
+   {
+
+      set_bitmap_source("Simple Box!!");
 
    }
 
