@@ -141,7 +141,7 @@ namespace simple_change_grub_default_entry
       if(psubject->m_id == ::e_subject_click)
       {
 
-         if(psubject->m_puserinteraction->m_id == "simple_change_grub_default_entry_toggle")
+         if(psubject->user_element_id() == "simple_change_grub_default_entry_toggle")
          {
 
             m_pimpact->set_need_layout();
