@@ -95,15 +95,15 @@ namespace simple_change_grub_default_entry
 
       m_pedit->create_control(this, "edit");
 
-      m_pedit->add_control_event_handler(this);
+      m_pedit->add_handler(this);
 
       m_plistbox->create_control(this, "list_box");
 
-      m_plistbox->add_control_event_handler(this);
+      m_plistbox->add_handler(this);
 
       m_pbuttonRestart->create_control(this, "restart_button");
 
-      m_pbuttonRestart->add_control_event_handler(this);
+      m_pbuttonRestart->add_handler(this);
 
       m_pstill->set_window_text("Grub Folder:");
 
