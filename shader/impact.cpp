@@ -125,7 +125,7 @@ namespace simple_shader
 
       m_prender->m_pinteraction = this;
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      string strId = get_document()->m_pimpactsystem->m_id;
 
       string strText;
 
