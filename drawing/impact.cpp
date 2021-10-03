@@ -121,7 +121,7 @@ namespace simple_drawing
 
       auto pimpactsystem = pdocument->m_pimpactsystem;
 
-      string strId = pimpactsystem->m_strMatter;
+      string strId = pimpactsystem->m_id;
 
       string strText;
 
