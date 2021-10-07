@@ -237,7 +237,7 @@ namespace simple_shader
       //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
       //glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-      m_millisStart.Now();
+      m_durationStart.Now();
 
       return ::success;
 
@@ -297,7 +297,7 @@ namespace simple_shader
 
             {
 
-               double dElapsed = __double(m_millisStart.elapsed());
+               double dElapsed = __double(m_durationStart.elapsed());
 
                double dTime = dElapsed / 1000.0;
 

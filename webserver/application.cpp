@@ -104,10 +104,10 @@ namespace simple_webserver
       //fork([this]()
         // {
 
-            //::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __str(m_psocketthread->m_iPort) + "/");
+            //::hyperlink::open_link("http://" + m_psocketthread->m_strIp + ":" + __string(m_psocketthread->m_iPort) + "/");
       auto phyperlink = __create_new <::hyperlink >();
 
-      phyperlink->m_strLink = "https://localwebserver.app:" + __str(m_psocketthread->m_iPort) + "/";
+      phyperlink->m_strLink = "https://localwebserver.app:" + __string(m_psocketthread->m_iPort) + "/";
       
       phyperlink->run();
 
@@ -213,13 +213,13 @@ namespace simple_webserver
          if(pcreate->m_bMakeVisible)
          {
 
-            INFO("pcreate->m_bMakeVisible");
+            INFORMATION("pcreate->m_bMakeVisible");
 
          }
          else
          {
 
-            INFO("NOT pcreate->m_bMakeVisible");
+            INFORMATION("NOT pcreate->m_bMakeVisible");
 
          }
 

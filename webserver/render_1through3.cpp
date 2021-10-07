@@ -26,7 +26,7 @@ namespace simple_webserver
          if (!m_pimage1)
          {
 
-            m_pimage1.create();
+            m_pimage1.create(this);
 
             fork([this]()
                {
