@@ -94,17 +94,17 @@ namespace simple_webserver
 
       {
 
-         auto psubject = m_papplication->subject(id_simple_checkbox);
+         auto psignal = m_papplication->get_signal(id_simple_checkbox);
 
-         psubject->add_listener(this);
+         psignal->add_handler(this);
 
       }
 
       {
 
-         auto psubject = m_papplication->subject(id_no_client_frame);
+         auto psignal = m_papplication->get_signal(id_no_client_frame);
 
-         psubject->add_listener(this);
+         psignal->add_handler(this);
 
       }
 
@@ -121,7 +121,7 @@ namespace simple_webserver
 
       m_prender->m_pimpact = this;
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      string strId = get_document()->m_pimpactsystem->m_id;
 
       string strText;
 

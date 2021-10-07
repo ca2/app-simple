@@ -39,7 +39,7 @@ namespace simple_webserver
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      //virtual void handle(::subject * psubject, ::context * pcontext) override;
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
