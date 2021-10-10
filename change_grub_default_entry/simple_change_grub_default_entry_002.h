@@ -20,8 +20,8 @@ namespace simple_change_grub_default_entry
       simple_change_grub_default_entry_002();
       virtual ~simple_change_grub_default_entry_002();
 
-      virtual void assert_valid() const override;
-      virtual void dump(dump_context & dumpcontext) const override;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG

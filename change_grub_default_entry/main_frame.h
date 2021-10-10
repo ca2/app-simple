@@ -15,8 +15,8 @@ namespace simple_change_grub_default_entry
       virtual ~main_frame();
 
 
-      virtual void assert_valid() const override;
-      virtual void dump(dump_context & dumpcontext) const override;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
       virtual ::experience::frame * experience_get_frame() override;
