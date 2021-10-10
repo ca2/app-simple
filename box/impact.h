@@ -18,8 +18,8 @@ namespace app_simple_box
       ~impact() override;
 
       
-      virtual void assert_valid() const override;
-      virtual void dump(dump_context & dumpcontext) const override;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG

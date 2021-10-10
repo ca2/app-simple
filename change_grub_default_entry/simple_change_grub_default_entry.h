@@ -19,8 +19,8 @@ namespace simple_change_grub_default_entry
       simple_change_grub_default_entry();
       virtual ~simple_change_grub_default_entry();
 
-      virtual void assert_valid() const override;
-      virtual void dump(dump_context & dumpcontext) const override;
+      void assert_valid() const override;
+      void dump(dump_context & dumpcontext) const override;
 
 
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
