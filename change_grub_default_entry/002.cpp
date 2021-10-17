@@ -99,7 +99,7 @@ namespace simple_change_grub_default_entry
 
       m_pbutton->create_control(this, "send_button");
 
-      m_pbutton->add_control_event_handler(this);
+      m_pbutton->add_handler(this);
 
       m_pstill->set_window_text("Enter new text:");
 

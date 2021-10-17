@@ -103,7 +103,7 @@ namespace simple_os_drag_and_drop
 
       m_psimpleosdraganddrop->m_pimpact = this;
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      string strId = get_document()->m_pimpactsystem->m_id;
 
       string strText;
 
