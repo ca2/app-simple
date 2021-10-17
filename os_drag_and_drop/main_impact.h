@@ -16,7 +16,7 @@ namespace simple_os_drag_and_drop
 
 
       main_impact();
-      virtual ~main_impact();
+      ~main_impact() override;
 
 
       void assert_valid() const override;
@@ -27,7 +27,7 @@ namespace simple_os_drag_and_drop
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-      virtual bool BaseOnControlEvent(::user::control_event * pevent);
+      //virtual bool BaseOnControlEvent(::user::control_event * pevent);
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

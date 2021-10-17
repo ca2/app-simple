@@ -85,7 +85,7 @@ namespace simple_change_grub_default_entry
 
       }
 
-      string strId = get_document()->m_pimpactsystem->m_strMatter;
+      string strId = get_document()->m_pimpactsystem->m_id;
 
       string strText;
 

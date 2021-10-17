@@ -42,7 +42,25 @@ namespace simple_os_drag_and_drop
    void main_impact::handle(::subject * psubject, ::context * pcontext)
    {
 
-      ::user::split_view::handle(psubject, pcontext);
+      //::user::split_view::handle(psubject, pcontext);
+      if (psubject->m_id == ::e_subject_click)
+      {
+
+         if (psubject->user_element_id() == "simple_drag_and_drop_toggle")
+         {
+
+            m_pimpact->set_need_layout();
+
+            return;
+
+            //return true;
+
+         }
+
+      }
+
+      //return false;
+
 
    }
 
@@ -119,26 +137,26 @@ namespace simple_os_drag_and_drop
    }
 
 
-   bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
-   {
+   //bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
+   //{
 
-      if(psubject->m_id == ::e_subject_click)
-      {
+   //   if(psubject->m_id == ::e_subject_click)
+   //   {
 
-         if(psubject->user_element_id() == "simple_drag_and_drop_toggle")
-         {
+   //      if(psubject->user_element_id() == "simple_drag_and_drop_toggle")
+   //      {
 
-            m_pimpact->set_need_layout();
+   //         m_pimpact->set_need_layout();
 
-            return true;
+   //         return true;
 
-         }
+   //      }
 
-      }
+   //   }
 
-      return false;
+   //   return false;
 
-   }
+   //}
 
 } // namespace simple_os_drag_and_drop
 

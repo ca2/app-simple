@@ -195,44 +195,44 @@ namespace simple_os_drag_and_drop
    }
 
 
-   bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
-   {
+   //bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
+   //{
 
-      if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && psubject->user_interaction() != nullptr)
-      {
+   //   if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && psubject->user_interaction() != nullptr)
+   //   {
 
-         if(psubject->m_id == ::e_subject_after_change_text)
-         {
-
-
-         }
-         else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
-         {
-
-            string strCheck = psubject->user_element_id();
+   //      if(psubject->m_id == ::e_subject_after_change_text)
+   //      {
 
 
-            if (::str::begins_eat_ci(strCheck, "bilbo"))
-            {
+   //      }
+   //      else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
+   //      {
 
-               if (psubject->user_interaction() != nullptr && psubject->m_actioncontext.is_user_source())
-               {
+   //         string strCheck = psubject->user_element_id();
 
-                  //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = psubject->user_interaction();
+   //         if (::str::begins_eat_ci(strCheck, "bilbo"))
+   //         {
 
-               }
+   //            if (psubject->user_interaction() != nullptr && psubject->m_actioncontext.is_user_source())
+   //            {
 
-            }
+   //               //int iCheck = atoi(strCheck);
 
-         }
+   //               //__pointer(::user::check) pcheck = psubject->user_interaction();
 
-      }
+   //            }
 
-      return false;
+   //         }
 
-   }
+   //      }
+
+   //   }
+
+   //   return false;
+
+   //}
 
 
    void tab_view::handle(::subject * psubject, ::context * pcontext)
@@ -264,6 +264,39 @@ namespace simple_os_drag_and_drop
       //}
 
 //      ::userex::pane_tab_view::handle(psubject, pcontext);
+
+      if (m_pdocMenu != nullptr && dynamic_cast <::user::impact*> (psubject->m_pform) == m_pdocMenu->get_view(0) && psubject->user_interaction() != nullptr)
+      {
+
+         if (psubject->m_id == ::e_subject_after_change_text)
+         {
+
+
+         }
+         else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != nullptr)
+         {
+
+            string strCheck = psubject->user_element_id();
+
+
+            if (::str::begins_eat_ci(strCheck, "bilbo"))
+            {
+
+               if (psubject->user_interaction() != nullptr && psubject->m_actioncontext.is_user_source())
+               {
+
+                  //int iCheck = atoi(strCheck);
+
+                  //__pointer(::user::check) pcheck = psubject->user_interaction();
+
+               }
+
+            }
+
+         }
+
+      }
+
       ::user::tab_view::handle(psubject, pcontext);
 
    }

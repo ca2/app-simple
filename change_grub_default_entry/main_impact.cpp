@@ -35,12 +35,12 @@ namespace simple_change_grub_default_entry
    }
 
 
-   void main_impact::handle(::subject * psubject, ::context * pcontext)
-   {
+   //void main_impact::handle(::subject * psubject, ::context * pcontext)
+   //{
 
-      ::user::split_view::handle(psubject, pcontext);
+   //   ::user::split_view::handle(psubject, pcontext);
 
-   }
+   //}
 
 
    void main_impact::on_create_split_impact()
@@ -135,7 +135,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   bool main_impact::BaseOnControlEvent(::user::control_event * pevent)
+   void main_impact::handle(::subject * psubject, ::context * pcontext)
    {
 
       if(psubject->m_id == ::e_subject_click)
@@ -146,13 +146,17 @@ namespace simple_change_grub_default_entry
 
             m_pimpact->set_need_layout();
 
-            return true;
+            //return true;
+
+            psubject->m_bRet = true;
+
+            return;
 
          }
 
       }
 
-      return false;
+      //return false;
 
    }
 
