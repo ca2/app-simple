@@ -39,7 +39,7 @@
 		9AFFC805267875AB00C4104F /* libimaging_coreimage.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A353E9226624E960060257B /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC807267875AB00C4104F /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E32B26611EB000517464 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC80C267875D200C4104F /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC80A267875D200C4104F /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AFFC80E267875D300C4104F /* lib.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E2A426611EAB00517464 /* lib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AFFC80E267875D300C4104F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E2A426611EAB00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,7 +231,7 @@
 				9AFFC7E82678757600C4104F /* libaura_apple.dylib in Embed Libraries */,
 				9AFFC7E02678757600C4104F /* libapex_posix.dylib in Embed Libraries */,
 				9AFFC801267875AB00C4104F /* libexperience_core.dylib in Embed Libraries */,
-				9AFFC80E267875D300C4104F /* lib.dylib in Embed Libraries */,
+				9AFFC80E267875D300C4104F /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9AFFC7FD267875AB00C4104F /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9AFFC7DE2678757600C4104F /* libapex_macos.dylib in Embed Libraries */,
 				9AFFC7F5267875AA00C4104F /* libaxis.dylib in Embed Libraries */,
@@ -375,7 +375,7 @@
 		9A00E2A026611EAB00517464 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A00E2A426611EAB00517464 /* lib.dylib */,
+				9A00E2A426611EAB00517464 /* libwrite_text_quartz2d.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -522,7 +522,7 @@
 		070B8EE21B6E53F900D26137 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -607,10 +607,9 @@
 			remoteRef = 9A00E29D26611EAA00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A00E2A426611EAB00517464 /* lib.dylib */ = {
+		9A00E2A426611EAB00517464 /* libwrite_text_quartz2d.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libwrite_text_quartz2d.dylib;
 			remoteRef = 9A00E2A326611EAB00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -915,6 +914,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
@@ -933,6 +933,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
