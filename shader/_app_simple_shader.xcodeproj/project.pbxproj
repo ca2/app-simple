@@ -36,7 +36,7 @@
 		9A5A877626D26309004AF957 /* libimaging_coreimage.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A876B26D26309004AF957 /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A877826D2630A004AF957 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E48F26611FDB00517464 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A877E26D2630A004AF957 /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A876E26D26309004AF957 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A5A878026D2630A004AF957 /* lib.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E4AA26611FDC00517464 /* lib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A5A878026D2630A004AF957 /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E4AA26611FDC00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A878126D26350004AF957 /* libapp_simple_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; };
 		9A5A879326D264A0004AF957 /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879126D264A0004AF957 /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A879426D264A0004AF957 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879226D264A0004AF957 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -185,7 +185,7 @@
 				9A5A875E26D262ED004AF957 /* libaura_macos.dylib in Embed Libraries */,
 				9A5A875126D262D7004AF957 /* libaqua.dylib in Embed Libraries */,
 				9A5A877626D26309004AF957 /* libimaging_coreimage.dylib in Embed Libraries */,
-				9A5A878026D2630A004AF957 /* lib.dylib in Embed Libraries */,
+				9A5A878026D2630A004AF957 /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9A5A877E26D2630A004AF957 /* libwindowing_macos.dylib in Embed Libraries */,
 				9A5A876026D262ED004AF957 /* libaura_posix.dylib in Embed Libraries */,
 				9A5A876426D262EE004AF957 /* libbase.dylib in Embed Libraries */,
@@ -345,7 +345,7 @@
 		9A00E4A626611FDB00517464 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A00E4AA26611FDC00517464 /* lib.dylib */,
+				9A00E4AA26611FDC00517464 /* libwrite_text_quartz2d.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,7 +466,7 @@
 		070B8EE21B6E53F900D26137 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -550,10 +550,9 @@
 			remoteRef = 9A00E48E26611FDB00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A00E4AA26611FDC00517464 /* lib.dylib */ = {
+		9A00E4AA26611FDC00517464 /* libwrite_text_quartz2d.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libwrite_text_quartz2d.dylib;
 			remoteRef = 9A00E4A926611FDC00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -814,6 +813,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
@@ -832,6 +832,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
