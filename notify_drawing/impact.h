@@ -12,14 +12,14 @@ namespace notify_drawing
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;
 
-      virtual void install_message_routing(::channel * psender);
+      void install_message_routing(::channel * psender) override;
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
    };
 

@@ -12,7 +12,7 @@ namespace simple_change_grub_default_entry
 
 //      ON_WM_RBUTTONUP
 //      {
-//         //auto pmouse = pmessage->m_pmouse;
+//         //auto pmouse = pmessage->m_union.m_pmouse;
 //         //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
 //         //index iLine;
 //         //index iToken;
