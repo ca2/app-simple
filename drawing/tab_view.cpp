@@ -99,7 +99,7 @@ namespace simple_drawing
 
          __pointer(::user::menu_list_view) pmenuview = get_view_uie();
 
-         pmenuview->destroy_menu();
+         pmenuview->destroy();
 
          if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
          {
