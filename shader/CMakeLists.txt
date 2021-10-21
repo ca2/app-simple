@@ -107,6 +107,7 @@ add_dependencies(_app_simple_shader app_simple_shader)
 add_dependencies(_app_simple_shader ${default_draw2d})
 add_dependencies(_app_simple_shader ${default_imaging})
 add_dependencies(_app_simple_shader ${default_write_text})
+add_dependencies(_app_simple_shader ${default_gpu})
 add_dependencies(_app_simple_shader ${app_common_dependencies})
 add_dependencies(_app_simple_shader experience_core)
 
