@@ -94,21 +94,21 @@ namespace simple_drawing
 
       stra.explode("->:<-",strId);
 
-      if (get_view_id() == MENU_IMPACT)
-      {
-
-         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
-
-         pmenuview->destroy();
-
-         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
-         {
-
-            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
-
-         }
-
-      }
+//      if (get_view_id() == MENU_IMPACT)
+//      {
+//
+//         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
+//
+//         pmenuview->destroy();
+//
+//         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
+//         {
+//
+//            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
+//
+//         }
+//
+//      }
 
       string strViewId = get_view_id().to_string();
 

@@ -131,14 +131,14 @@ namespace simple_shader
 
       stra.explode("->:<-",strId);
 
-      if (get_view_id() == MENU_IMPACT)
-      {
-
-         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
-
-         pmenuview->destroy_menu();
-
-       }
+//      if (get_view_id() == MENU_IMPACT)
+//      {
+//
+//         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
+//
+//         pmenuview->destroy_menu();
+//
+//       }
 
       if(::str::begins_eat_ci(strId, "shader://"))
       {
