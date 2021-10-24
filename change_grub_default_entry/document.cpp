@@ -66,7 +66,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-   bool document::on_open_document(const ::payload & varFile)
+   bool document::on_open_document(const ::payload & payloadFile)
    {
 
       impact * pview = get_typed_view < impact >();
@@ -78,7 +78,7 @@ namespace simple_change_grub_default_entry
 
       }
 
-      string strPath = varFile.get_file_path();
+      string strPath = payloadFile.get_file_path();
 
 
       return true;

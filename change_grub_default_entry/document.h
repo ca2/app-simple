@@ -19,7 +19,7 @@ namespace simple_change_grub_default_entry
 	   void dump(dump_context & dumpcontext) const override;
 
       bool on_new_document() override;
-      virtual bool on_open_document(const ::payload & varFile) override;
+      virtual bool on_open_document(const ::payload & payloadFile) override;
 
 
 #ifdef _DEBUG
