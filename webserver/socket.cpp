@@ -40,7 +40,7 @@ namespace simple_webserver
       strHtml += "🌌 🌍 [ ca2/C++/Windows ] Creating Simple Local Webserver";
       strHtml += "</h1>";
       strHtml += "<h4><a href=\"https://ca2.software/camilo\">cs</a><a href=\"https://ca2.io\">&lt;3</a><a href=\"https://thomasbs.com/\">tbs</a>!!</h4>";
-      strHtml += "&lt;3TBS - ∞ - "+pdatetime->international().get_gmt_date_time() +"- +∞ - CA2(THWOASONE)";
+      strHtml += "&lt;3TBS - ∞ - "+pdatetime->international().get_date_time() +"- +∞ - CA2(THWOASONE)";
       strHtml += "</body>";
       strHtml += "</html>";
 

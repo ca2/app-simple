@@ -40,12 +40,12 @@ namespace simple_application
       
       auto & file = papplication->file();
       
-      file.lines(m_straLine, "dropbox://app_simple_application.txt");
+      file.get_lines(m_straLine, "dropbox://app_simple_application.txt");
 
       if (m_straLine.is_empty())
       {
 
-         file.lines(m_straLine, "document://app_simple_application.txt");
+         file.get_lines(m_straLine, "document://app_simple_application.txt");
 
       }
 
