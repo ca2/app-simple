@@ -261,7 +261,7 @@ namespace simple_shader
 
                auto pdatetime = psystem->datetime();
 
-               string strDate = pdatetime->international().get_gmt_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = pdatetime->international().get_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
                auto pcontext = m_pcontext;
 

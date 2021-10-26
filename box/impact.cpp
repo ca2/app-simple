@@ -310,7 +310,6 @@ namespace app_simple_box
    {
 
       message_box(
-         this,
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          e_message_box_yes_no | e_message_box_icon_information
