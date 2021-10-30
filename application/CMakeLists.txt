@@ -28,7 +28,7 @@ list(APPEND library_references
    )
 
 
-add_executable(app_simple_application ${library_source} )
+add_library(app_simple_application ${library_source} )
 
 
 target_precompile_headers(app_simple_application PRIVATE framework.h)
@@ -64,6 +64,43 @@ target_include_directories(app_simple_application PRIVATE ${CMAKE_CURRENT_SOURCE
 
 
 target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+
+
+add_executable(_app_simple_application _.cpp)
+
+
+if (MSVC)
+
+    target_compile_options(_app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(_app_simple_application PRIVATE ${library_references})
+
+elseif (LINUX)
+
+    target_compile_options(_app_simple_application PRIVATE -fpermissive)
+    #target_link_options(_app_simple_application PRIVATE -Wl,-rpath=$ORIGIN)
+    target_link_libraries(_app_simple_application PRIVATE ${library_references})
+    target_link_options(_app_simple_application PRIVATE -Wl,-z,defs)
+
+endif ()
+
+
+add_dependencies(_app_simple_application ${default_draw2d})
+add_dependencies(_app_simple_application ${default_imaging})
+add_dependencies(_app_simple_application ${default_write_text})
+add_dependencies(_app_simple_application ${app_common_dependencies})
+add_dependencies(_app_simple_application experience_core)
+add_dependencies(_app_simple_application gpu_opengl)
+
+
+target_include_directories(_app_simple_application PRIVATE ${library_include_directories})
+
+target_link_directories(_app_simple_application PRIVATE ${library_link_directories})
+
+target_link_libraries(_app_simple_application PRIVATE acme apex app_simple_application)
+
+set_target_properties(_app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
 
 
 

@@ -1,17 +1,17 @@
 // Create by camilo on 2021-08-04 00:56 BRT <3ThomasBorregaardSorensen!!
 #include "framework.h"
-#define _APP_ID "app-simple/drawing"
+#define __APP_ID "app-simple/form"
 #include "aura/application.h"
 
 
-namespace simple_drawing
+namespace simple_form
 {
 
 
-   __namespace_application_factory("app-simple/drawing");
+   __namespace_application_factory(__APP_ID);
 
 
-} // namespace simple_drawing
+} // namespace simple_form
 
 
 

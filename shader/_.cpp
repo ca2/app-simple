@@ -1,12 +1,12 @@
 #include "framework.h"
-#define _APP_ID "app-simple/shader"
+#define __APP_ID "app-simple/shader"
 #include "aura/application.h"
 
 
 namespace simple_shader
 {
 
-   __namespace_application_factory("app-simple/shader");
+   __namespace_application_factory(__APP_ID);
 
 
 } // namespace simple_shader

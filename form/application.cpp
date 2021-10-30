@@ -1,5 +1,5 @@
 #include "framework.h"
-#include "aura/application.h"
+//#include "aura/application.h"
 
 
 #define new ACME_NEW
@@ -185,7 +185,7 @@ namespace simple_form
 
 
    
-   __namespace_application_factory("app-simple/form");
+//   __namespace_application_factory("app-simple/form");
 
 
 } // namespace simple_form
