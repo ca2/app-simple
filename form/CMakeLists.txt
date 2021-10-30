@@ -26,7 +26,7 @@ list(APPEND library_source
    impact.h
    )
 
-add_executable(app_simple_form ${library_source})
+add_library(app_simple_form ${library_source})
 
 target_precompile_headers(app_simple_form PRIVATE framework.h)
 
@@ -63,6 +63,46 @@ target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
+
+
+add_executable(_app_simple_form _.cpp)
+
+
+if (MSVC)
+
+   target_compile_options(_app_simple_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(_app_simple_form PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(_app_simple_form PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(_app_simple_form PRIVATE ${library_references})
+
+elseif (LINUX)
+
+   target_compile_options(_app_simple_form PRIVATE -fpermissive)
+   #target_link_options(_app_simple_form PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(_app_simple_form PRIVATE ${library_references})
+   target_link_options(_app_simple_form PRIVATE -Wl,-z,defs)
+
+endif ()
+
+
+add_dependencies(_app_simple_form ${default_draw2d})
+add_dependencies(_app_simple_form ${default_imaging})
+add_dependencies(_app_simple_form ${default_write_text})
+add_dependencies(_app_simple_form ${default_gpu})
+add_dependencies(_app_simple_form ${app_common_dependencies})
+add_dependencies(_app_simple_form experience_core)
+
+
+target_include_directories(_app_simple_form PRIVATE ${library_include_directories})
+
+target_link_directories(_app_simple_form PRIVATE ${library_link_directories})
+
+target_link_libraries(_app_simple_form PRIVATE acme apex app_simple_form)
+
+set_target_properties(_app_simple_form PROPERTIES LINKER_LANGUAGE CXX)
+
+
+
 
 
 

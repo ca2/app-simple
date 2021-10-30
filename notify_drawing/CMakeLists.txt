@@ -26,7 +26,7 @@ list(APPEND library_references
    )
 
 
-add_executable(app_simple_notify_drawing ${library_source})
+add_library(app_simple_notify_drawing ${library_source})
 
 
 target_precompile_headers(app_simple_notify_drawing PRIVATE framework.h)
@@ -62,6 +62,46 @@ target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOU
 
 
 target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY)
+
+
+
+
+
+add_executable(_app_simple_notify_drawing _.cpp)
+
+
+if (MSVC)
+
+    target_compile_options(_app_simple_notify_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_notify_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_notify_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(_app_simple_notify_drawing PRIVATE ${library_references})
+
+elseif (LINUX)
+
+    target_compile_options(_app_simple_notify_drawing PRIVATE -fpermissive)
+    #target_link_options(_app_simple_notify_drawing PRIVATE -Wl,-rpath=$ORIGIN)
+    target_link_libraries(_app_simple_notify_drawing PRIVATE ${library_references})
+    target_link_options(_app_simple_notify_drawing PRIVATE -Wl,-z,defs)
+
+endif ()
+
+
+add_dependencies(_app_simple_notify_drawing ${default_draw2d})
+add_dependencies(_app_simple_notify_drawing ${default_imaging})
+add_dependencies(_app_simple_notify_drawing ${default_write_text})
+add_dependencies(_app_simple_notify_drawing ${app_common_dependencies})
+add_dependencies(_app_simple_notify_drawing experience_core)
+add_dependencies(_app_simple_notify_drawing gpu_opengl)
+
+
+target_include_directories(_app_simple_notify_drawing PRIVATE ${library_include_directories})
+
+target_link_directories(_app_simple_notify_drawing PRIVATE ${library_link_directories})
+
+target_link_libraries(_app_simple_notify_drawing PRIVATE acme apex app_simple_notify_drawing)
+
+set_target_properties(_app_simple_notify_drawing PROPERTIES LINKER_LANGUAGE CXX)
 
 
 

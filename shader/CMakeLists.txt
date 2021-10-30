@@ -3,7 +3,6 @@ project(app_simple_shader CXX)
 
 
 list(APPEND library_source
-   _.cpp
    _.h
    _app_simple_shader.h
    application.cpp
@@ -80,10 +79,7 @@ target_include_directories(app_simple_shader PRIVATE ${library_include_directori
 target_compile_definitions(app_simple_shader PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
-add_executable(_app_simple_shader ${PLATFORM_NAME}/main.cpp)
-
-
-target_compile_definitions(_app_simple_shader PRIVATE _APP_ID="app-simple/shader")
+add_executable(_app_simple_shader _.cpp)
 
 
 if (MSVC)
@@ -103,7 +99,6 @@ elseif (LINUX)
 endif ()
 
 
-add_dependencies(_app_simple_shader app_simple_shader)
 add_dependencies(_app_simple_shader ${default_draw2d})
 add_dependencies(_app_simple_shader ${default_imaging})
 add_dependencies(_app_simple_shader ${default_write_text})
@@ -116,7 +111,9 @@ target_include_directories(_app_simple_shader PRIVATE ${library_include_director
 
 target_link_directories(_app_simple_shader PRIVATE ${library_link_directories})
 
-target_link_libraries(_app_simple_shader PRIVATE acme apex)
+target_link_libraries(_app_simple_shader PRIVATE acme apex app_simple_shader)
 
 set_target_properties(_app_simple_shader PROPERTIES LINKER_LANGUAGE CXX)
+
+
 
