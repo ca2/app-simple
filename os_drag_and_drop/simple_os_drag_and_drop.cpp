@@ -63,7 +63,7 @@ namespace simple_os_drag_and_drop
    void simple_os_drag_and_drop::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //INFORMATION("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
+      //FORMATTED_INFORMATION("simple_os_drag_and_drop::_001OnDraw (%d, %d)", m_rectangle.width(), m_rectangle.height());
 
       if(m_iDragAndDrop <= 3)
       {
@@ -331,11 +331,11 @@ namespace simple_os_drag_and_drop
 
       string str;
 
-      str.Format("Start: %0.0f", angleStart.degree());
+      str.format("Start: %0.0f", angleStart.degree());
 
       pgraphics->text_out(r.left, r.top, str);
 
-      str.Format("Angle: %0.0f", angleAngle.degree());
+      str.format("Angle: %0.0f", angleAngle.degree());
 
       pgraphics->text_out(r.left, r.top + 20, str);
 

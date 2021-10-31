@@ -63,6 +63,9 @@ namespace simple_form
 
       MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
 
+      add_command_handler("send_button", this, &form_001::_001OnSendButton);
+      add_command_handler("clear_button", this, &form_001::_001OnClearButton);
+
    }
 
 
@@ -217,38 +220,66 @@ namespace simple_form
          }
 
       }
-      else if (psubject->m_id == ::e_subject_click)
-      {
+//      else if (psubject->m_id == ::e_subject_click)
+//      {
+//
+//         if (psubject->m_puserelement->m_id == "clear_button")
+//         {
+//
+//            m_pedit->_001SetText("", ::e_source_user);
+//
+//         }
+//         else if (psubject->m_puserelement->m_id == "send_button")
+//         {
+//
+//            string strText;
+//
+//            m_pedit->_001GetText(strText);
+//
+//            //main_async(__routine([this, strText]()
+//              // {
+//
+//                  output_error_message("send_button clicked\nText: " + strText);
+//
+//               //}));
+//
+//                  m_pstillReceiver->set_window_text(strText);
+//
+//                  m_pstillReceiver->post_redraw();
+//
+//            psubject->m_bRet = true;
+//
+//         }
+//
+//      }
 
-         if (psubject->m_puserelement->m_id == "clear_button")
-         {
+   }
 
-            m_pedit->_001SetText("", ::e_source_user);
 
-         }
-         else if (psubject->m_puserelement->m_id == "send_button")
-         {
+   void form_001::_001OnClearButton(::message::message * pmessage)
+   {
 
-            string strText;
+      m_pedit->_001SetText("", ::e_source_user);
 
-            m_pedit->_001GetText(strText);
+      pmessage->m_bRet = true;
 
-            //main_async(__routine([this, strText]()
-              // {
+   }
 
-                  output_error_message("send_button clicked\nText: " + strText);
 
-               //}));
+   void form_001::_001OnSendButton(::message::message * pmessage)
+   {
 
-                  m_pstillReceiver->set_window_text(strText);
+      string strText;
 
-                  m_pstillReceiver->post_redraw();
+      m_pedit->_001GetText(strText);
 
-            psubject->m_bRet = true;
+      output_error_message("send_button clicked\nText: " + strText);
 
-         }
+      m_pstillReceiver->set_window_text(strText);
 
-      }
+      m_pstillReceiver->post_redraw();
+
+      pmessage->m_bRet = true;
 
    }
 

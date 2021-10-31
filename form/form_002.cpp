@@ -64,6 +64,8 @@ namespace simple_form
 
       MESSAGE_LINK(e_message_create, psender, this, &form_002::on_message_create);
 
+      add_command_handler("send_button", this, &form_002::_001OnSendButton);
+
    }
 
 
@@ -169,46 +171,93 @@ namespace simple_form
    void form_002::handle(::subject * psubject, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::e_subject_click)
-      {
+//      if (psubject->m_id == ::e_subject_click)
+//      {
+//
+//         if (psubject->m_puserelement->m_id == "send_button")
+//         {
+//
+//            string strText1;
+//
+//            m_pedit->_001GetText(strText1);
+//
+//            string strText2;
+//
+//            m_pcombobox->_001GetText(strText2);
+//
+//            string strText;
+//
+//            strText = strText1 + ";" + strText2;
+//
+//            string strData;
+//
+//            strData = m_pcombobox->get_current_item_string_value();
+//
+//            //auto routine = [this, strText, strData]()
+//            //{
+//            string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
+//               output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
+//
+//            //};
+//
+//            //auto proutine = __routine(routine);
+//
+//            //main_async(proutine);
+//
+//               m_pstillResponse->set_window_text(strMessage);
+//
+//               m_pstillResponse->post_redraw();
+//
+//         }
+//
+//      }
 
-         if (psubject->m_puserelement->m_id == "send_button")
-         {
+   }
 
-            string strText1;
-            
-            m_pedit->_001GetText(strText1);
 
-            string strText2;
+   void form_002::_001OnSendButton(::message::message * pmessage)
+   {
 
-            m_pcombobox->_001GetText(strText2);
+//      if (psubject->m_id == ::e_subject_click)
+//      {
+//
+//         if (psubject->m_puserelement->m_id == "send_button")
+//         {
 
-            string strText;
+         string strText1;
 
-            strText = strText1 + ";" + strText2;
+         m_pedit->_001GetText(strText1);
 
-            string strData;
+         string strText2;
 
-            strData = m_pcombobox->get_current_item_string_value();
+         m_pcombobox->_001GetText(strText2);
 
-            //auto routine = [this, strText, strData]()
-            //{
-            string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
-               output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
+         string strText;
 
-            //};
+         strText = strText1 + ";" + strText2;
 
-            //auto proutine = __routine(routine);
+         string strData;
 
-            //main_async(proutine);
+         strData = m_pcombobox->get_current_item_string_value();
 
-               m_pstillResponse->set_window_text(strMessage);
+         //auto routine = [this, strText, strData]()
+         //{
+         string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
+         output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
 
-               m_pstillResponse->post_redraw();
+         //};
 
-         }
+         //auto proutine = __routine(routine);
 
-      }
+         //main_async(proutine);
+
+         m_pstillResponse->set_window_text(strMessage);
+
+         m_pstillResponse->post_redraw();
+
+//         }
+//
+//      }
 
    }
 
