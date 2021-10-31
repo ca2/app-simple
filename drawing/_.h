@@ -21,12 +21,3 @@ namespace simple_drawing
 
 } // namespace flag
 
-
-#include "render.h"
-
-
-
-#include "application.h"
-
-
-

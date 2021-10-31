@@ -84,23 +84,6 @@ namespace simple_form
    }
 
 
-   void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
-   {
-
-      //::userex::pane_tab_view::_001OnNcDraw(pgraphics);
-      ::user::tab_view::_001OnNcDraw(pgraphics);
-
-   }
-
-
-   void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
-   {
-
-      ::user::tab_view::_001OnDraw(pgraphics);
-
-   }
-
-
    void tab_view::on_change_cur_sel()
    {
 
@@ -175,7 +158,7 @@ namespace simple_form
       if(::str::begins_eat_ci(strId, "form"))
       {
 
-         __pointer(simple_form) pform;
+         __pointer(form) pform;
 
          index iId = atoi(strId);
 
@@ -183,13 +166,13 @@ namespace simple_form
          {
          case 1:
 
-            pform = create_view<simple_form_001>(pimpactdata);
+            pform = create_view<form_001>(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_view<simple_form_002>(pimpactdata);
+            pform = create_view<form_002>(pimpactdata);
 
             break;
 
@@ -205,10 +188,11 @@ namespace simple_form
 
          pform->m_id = pimpactdata->m_id;
 
+         return;
+
       }
 
       ::user::tab_view::on_create_impact(pimpactdata);
-//      ::userex::pane_tab_view::on_create_impact(pimpactdata);
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 

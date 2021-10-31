@@ -5,8 +5,8 @@ namespace simple_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM simple_form_002 :
-      virtual public simple_form
+   class CLASS_DECL_APP_SIMPLE_FORM form_002 :
+      virtual public form
    {
    public:
 
@@ -18,8 +18,8 @@ namespace simple_form
       __composite(::user::still)                m_pstillResponse;
 
 
-      simple_form_002();
-      virtual ~simple_form_002();
+      form_002();
+      ~form_002() override;
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;

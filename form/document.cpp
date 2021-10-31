@@ -17,9 +17,6 @@ namespace simple_form
    }
 
 
-
-
-
    void document::assert_valid() const
    {
 

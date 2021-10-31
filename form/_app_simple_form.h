@@ -1,8 +1,9 @@
 #pragma once
 
 
-#include "app-simple/form/_form.h"
-#include "core/user/userex/_userex.h"
+#include "base/user/user/_user.h"
+#include "base/user/simple/_simple.h"
+#include "base/user/menu/_menu.h"
 
 
 #include "form.h"

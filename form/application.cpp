@@ -67,8 +67,8 @@ namespace simple_form
       create_factory <::simple_form::impact >();
       create_factory <::simple_form::main_impact >();
       create_factory <::simple_form::tab_view >();
-      create_factory <::simple_form::simple_form_001 >();
-      create_factory <::simple_form::simple_form_002 >();
+      create_factory <::simple_form::form_001 >();
+      create_factory <::simple_form::form_002 >();
 
       if (!::base::application::init_instance())
       {

@@ -6,30 +6,30 @@ namespace simple_form
 {
 
 
-   simple_form_001::simple_form_001()
+   form_001::form_001()
    {
 
    }
 
 
-   simple_form_001::~simple_form_001()
+   form_001::~form_001()
    {
 
    }
 
 
-   void simple_form_001::assert_valid() const
+   void form_001::assert_valid() const
    {
 
-      simple_form::assert_valid();
+      form::assert_valid();
 
    }
 
 
-   void simple_form_001::dump(dump_context & dumpcontext) const
+   void form_001::dump(dump_context & dumpcontext) const
    {
 
-      simple_form::dump(dumpcontext);
+      form::dump(dumpcontext);
 
    }
 
@@ -37,7 +37,7 @@ namespace simple_form
 #ifdef _DEBUG
 
 
-   int64_t simple_form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -45,7 +45,7 @@ namespace simple_form
    }
 
 
-   int64_t simple_form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -56,17 +56,17 @@ namespace simple_form
 #endif
 
 
-   void simple_form_001::install_message_routing(::channel * psender)
+   void form_001::install_message_routing(::channel * psender)
    {
 
-      simple_form::install_message_routing(psender);
+      form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_form_001::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
 
    }
 
 
-   void simple_form_001::on_message_create(::message::message * pmessage)
+   void form_001::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -127,7 +127,7 @@ namespace simple_form
    }
 
 
-   void simple_form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::form_view::on_layout(pgraphics);
@@ -185,7 +185,7 @@ namespace simple_form
    }
 
 
-   void simple_form_001::handle(::subject * psubject, ::context * pcontext)
+   void form_001::handle(::subject * psubject, ::context * pcontext)
    {
 
       if (psubject->m_id == ::e_subject_after_change_text)

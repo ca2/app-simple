@@ -33,14 +33,11 @@ namespace simple_form
       void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+
       void handle(::subject * psubject, ::context * pcontext) override;
+
       void on_change_cur_sel() override;
 
-      //virtual void handle(::subject * psubject, ::context * pcontext) override;
-
-
-      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
    };
 

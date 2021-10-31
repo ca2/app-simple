@@ -67,22 +67,6 @@ namespace simple_drawing
    }
 
 
-   void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
-   {
-
-      ::user::tab_view::_001OnNcDraw(pgraphics);
-
-   }
-
-
-   void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
-   {
-
-      ::user::tab_view::_001OnDraw(pgraphics);
-
-   }
-
-
    void tab_view::on_change_cur_sel()
    {
 
@@ -93,22 +77,6 @@ namespace simple_drawing
       string_array stra;
 
       stra.explode("->:<-",strId);
-
-//      if (get_view_id() == MENU_IMPACT)
-//      {
-//
-//         __pointer(::user::menu_list_view) pmenuview = get_view_uie();
-//
-//         pmenuview->destroy();
-//
-//         if (pmenuview->load_xml_menu("matter://simple_menu.xml"))
-//         {
-//
-//            pmenuview->create_inline_menu(this, m_pimpactdata->m_pplaceholder);
-//
-//         }
-//
-//      }
 
       string strViewId = get_view_id().to_string();
 
@@ -133,23 +101,15 @@ namespace simple_drawing
 
          }
 
-         __refer(m_pviewTopic,m_pimpactdata->m_pplaceholder->get_hold());
+         __refer(m_pimpactTopic,m_pimpactdata->m_pplaceholder->get_hold());
 
       }
-      //else if (get_view_id() == MENU_IMPACT)
-      //{
-
-      //   m_pdocMenu->open_document("matter://menu.html");
-
-      //}
 
    }
 
 
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
-
-      //initialize_application_consumer();
 
       if (m_papplication->has_property("notabs"))
       {
@@ -189,22 +149,11 @@ namespace simple_drawing
    }
 
 
-
-
    void tab_view::handle(::subject * psubject, ::context * pcontext)
    {
 
 
    }
-
-
-   //void tab_view::handle(::subject * psubject, ::context * pcontext)
-   //{
-
-
-   //   ::user::tab_view::handle(psubject, pcontext);
-
-   //}
 
 
 } // namespace simple_drawing

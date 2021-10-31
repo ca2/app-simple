@@ -5,8 +5,8 @@ namespace simple_form
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM simple_form_001 :
-      virtual public simple_form
+   class CLASS_DECL_APP_SIMPLE_FORM form_001 :
+      virtual public ::simple_form::form
    {
    public:
 
@@ -18,8 +18,9 @@ namespace simple_form
       __composite(::user::still)             m_pstillReceiver;
 
 
-      simple_form_001();
-      virtual ~simple_form_001();
+      form_001();
+      ~form_001() override;
+
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;

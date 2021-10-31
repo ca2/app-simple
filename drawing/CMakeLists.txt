@@ -4,7 +4,7 @@ project(app_simple_drawing CXX)
 
 list(APPEND library_source
    _.h
-   _drawing.h
+   _app_simple_drawing.h
    application.cpp
    application.h
    document.cpp
@@ -96,7 +96,6 @@ elseif (LINUX)
 endif ()
 
 
-add_dependencies(_app_simple_drawing app_simple_drawing)
 add_dependencies(_app_simple_drawing ${default_draw2d})
 add_dependencies(_app_simple_drawing ${default_imaging})
 add_dependencies(_app_simple_drawing ${default_write_text})

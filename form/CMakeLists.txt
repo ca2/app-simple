@@ -4,26 +4,29 @@ project(app_simple_form CXX)
 
 list(APPEND library_source
    _.h
-   001.cpp
-   002.cpp
+   _app_simple_form.h
    application.cpp
    application.h
    document.cpp
    document.h
+   form.cpp
+   form.h
+   form_001.cpp
+   form_001.h
+   form_002.cpp
+   form_002.h
    frame.cpp
    frame.h
+   impact.cpp
+   impact.h
    framework.cpp
    framework.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp
    main_impact.h
-   simple_form.cpp
-   simple_form.h
    tab_view.cpp
    tab_view.h
-   impact.cpp
-   impact.h
    )
 
 add_library(app_simple_form ${library_source})
