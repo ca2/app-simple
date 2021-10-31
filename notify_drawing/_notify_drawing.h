@@ -1,7 +1,8 @@
 #pragma once
 
 
-#include "app-simple/drawing/_drawing.h"
+#include "app-simple/drawing/_app_simple_drawing.h"
+#include "core/user/userex/_userex.h"
 
 
 #ifdef _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY

@@ -1,8 +1,7 @@
 #pragma once
 
 
-#include "base/_.h"
-#include "base/user/simple/_simple.h"
+#include "core/_.h"
 
 
 #ifdef _APP_SIMPLE_FORM_LIBRARY
@@ -30,27 +29,6 @@ namespace simple_form
    class tab_view;
 
 } // namespace flag
-
-
-#undef APP_TYPE
-#define APP_TYPE ::simple_form::application
-
-
-#include "simple_form.h"
-#include "simple_form_001.h"
-#include "simple_form_002.h"
-
-
-#include "document.h"
-#include "impact.h"
-#include "main_impact.h"
-#include "frame.h"
-#include "main_frame.h"
-
-#include "tab_view.h"
-
-
-#include "application.h"
 
 
 
