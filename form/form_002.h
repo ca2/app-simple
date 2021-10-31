@@ -34,6 +34,7 @@ namespace simple_form
 
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(_001OnSendButton);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
