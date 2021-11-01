@@ -21,7 +21,4 @@ namespace notify_drawing
 } // namespace flag
 
 
-#include "application.h"
-
-
 
