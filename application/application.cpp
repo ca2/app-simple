@@ -42,7 +42,7 @@ namespace simple_application
       create_factory <::simple_application::main_frame >();
       create_factory <::simple_application::impact >();
 
-      if (!::aura::application::init_instance())
+      if (!::base::application::init_instance())
       {
 
          return false;

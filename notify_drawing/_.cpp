@@ -1,16 +1,11 @@
 #include "framework.h"
-#define _APP_ID "app-simple/notify_drawing"
+#define SYSTEM base
+#define APPLICATION notify_drawing
+#define __APP_ID "app-simple/notify_drawing"
+#if defined(WINDOWS_DESKTOP) && defined(CUBE)
+#include "_static_factory_exchange.inl"
+#endif
 #include "aura/application.h"
-
-
-namespace notify_drawing
-{
-
-
-   __namespace_application_factory("app-simple/notify_drawing");
-
-
-} // namespace notify_drawing
 
 
 

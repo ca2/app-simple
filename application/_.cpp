@@ -1,17 +1,11 @@
 #include "framework.h"
-//#define _APP_ID "app-simple/application"
+#define SYSTEM base
+#define APPLICATION simple_application
+#define __APP_ID "app-simple/application"
+#if defined(WINDOWS_DESKTOP) && defined(CUBE)
+#include "_static_factory_exchange.inl"
+#endif
 #include "aura/application.h"
-
-
-namespace simple_application
-{
-
-
-   __namespace_application_factory("app-simple/application");
-
-
-} // namespace simple_application
-
 
 
 
