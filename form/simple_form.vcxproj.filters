@@ -16,12 +16,6 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="001.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="002.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -37,13 +31,19 @@
     <ClCompile Include="main_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="simple_form.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tab_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="form.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="form_001.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="form_002.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -84,8 +84,28 @@
     <ClInclude Include="tab_view.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="form.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="form_001.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="form_002.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_app_simple_form.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="deps.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="matter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
