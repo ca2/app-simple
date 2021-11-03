@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace simple_drawing
+namespace app_simple_drawing
 {
 
 
@@ -13,7 +13,7 @@ namespace simple_drawing
 
 
       ::user::split_view *                            m_ptopviewLast;
-      __reference(::simple_drawing::impact)     m_pimpactTopic;
+      __reference(::app_simple_drawing::impact)     m_pimpactTopic;
       string                                          m_strTopicTitle;
 
 

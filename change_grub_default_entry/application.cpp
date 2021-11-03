@@ -3,7 +3,7 @@
 
 #define new ACME_NEW
 
-namespace simple_change_grub_default_entry
+namespace app_simple_change_grub_default_entry
 {
 
 
@@ -55,15 +55,15 @@ namespace simple_change_grub_default_entry
 
       set_local_data();
 
-      create_factory <::simple_change_grub_default_entry::document >();
-      create_factory <::simple_change_grub_default_entry::frame >();
-      create_factory <::simple_change_grub_default_entry::main_frame >();
+      create_factory <::app_simple_change_grub_default_entry::document >();
+      create_factory <::app_simple_change_grub_default_entry::frame >();
+      create_factory <::app_simple_change_grub_default_entry::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_change_grub_default_entry::impact >();
-      create_factory <::simple_change_grub_default_entry::main_impact >();
-      create_factory <::simple_change_grub_default_entry::tab_view >();
-      create_factory <::simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
-      create_factory <::simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
+      create_factory <::app_simple_change_grub_default_entry::impact >();
+      create_factory <::app_simple_change_grub_default_entry::main_impact >();
+      create_factory <::app_simple_change_grub_default_entry::tab_view >();
+      create_factory <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
+      create_factory <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
 
       if (!::base::application::init_instance())
       {
@@ -119,7 +119,7 @@ namespace simple_change_grub_default_entry
    }
 
    
-} // namespace simple_change_grub_default_entry
+} // namespace app_simple_change_grub_default_entry
 
 
 

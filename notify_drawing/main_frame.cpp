@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 

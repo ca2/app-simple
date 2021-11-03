@@ -5,7 +5,7 @@
 ::e_status grub_set_variable(memory& memoryGrubEnv, const ::block& blockVariablePrefix, const block& blockValue);
 
 
-namespace simple_change_grub_default_entry
+namespace app_simple_change_grub_default_entry
 {
 
 
@@ -467,7 +467,7 @@ namespace simple_change_grub_default_entry
    }
 
 
-} // namespace simple_change_grub_default_entry
+} // namespace app_simple_change_grub_default_entry
 
 
 ::e_status grub_set_variable(memory & memoryGrubEnv, const ::block& blockVariablePrefix, const block& blockValue)

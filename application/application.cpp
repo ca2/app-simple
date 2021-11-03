@@ -3,7 +3,7 @@
 #include "aura/update.h"
 
 
-namespace simple_application
+namespace app_simple_application
 {
 
 
@@ -38,9 +38,9 @@ namespace simple_application
 
       set_local_data();
 
-      create_factory <::simple_application::document >();
-      create_factory <::simple_application::main_frame >();
-      create_factory <::simple_application::impact >();
+      create_factory <::app_simple_application::document >();
+      create_factory <::app_simple_application::main_frame >();
+      create_factory <::app_simple_application::impact >();
 
       if (!::base::application::init_instance())
       {

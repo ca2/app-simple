@@ -3,7 +3,7 @@
 #include "base/user/user/tab_pane.h"
 
 
-namespace simple_shader
+namespace app_simple_shader
 {
 
 
@@ -206,7 +206,7 @@ namespace simple_shader
 
          pview->m_iView = (int) pimpactdata->m_iIndex;
 
-         __pointer(simple_shader::impact) pviewShader = pview;
+         __pointer(app_simple_shader::impact) pviewShader = pview;
 
          pviewShader->m_prender->m_strShaderPath = strShaderPath;
 

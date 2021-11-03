@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace simple_application
+namespace app_simple_application
 {
 
 

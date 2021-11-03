@@ -1,12 +1,12 @@
 #pragma once
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 
    class CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING main_frame :
-      virtual public simple_drawing::main_frame
+      virtual public app_simple_drawing::main_frame
    {
    public:
 

@@ -9,7 +9,7 @@ CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
 //#define DEBUG_WORK
 
 
-namespace simple_application
+namespace app_simple_application
 {
 
 

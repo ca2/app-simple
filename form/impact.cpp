@@ -2,7 +2,7 @@
 #include <math.h>
 
 
-namespace simple_form
+namespace app_simple_form
 {
 
 

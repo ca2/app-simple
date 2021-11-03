@@ -3,7 +3,7 @@
 #include "aura/application.h"
 
 
-namespace simple_shader
+namespace app_simple_shader
 {
 
    __namespace_application_factory(__APP_ID);

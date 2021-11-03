@@ -12,7 +12,7 @@
 #endif
 
 
-namespace simple_shader
+namespace app_simple_shader
 {
 
    class application;

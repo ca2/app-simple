@@ -2,12 +2,12 @@
 
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 
    class CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING application :
-      virtual public ::simple_drawing::application
+      virtual public ::app_simple_drawing::application
    {
    public:
 
@@ -31,7 +31,7 @@ namespace notify_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(simple_drawing::impact) create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
+      virtual __pointer(app_simple_drawing::impact) create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
 
    };
 

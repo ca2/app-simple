@@ -3,7 +3,7 @@
 #include "acme/constant/id.h"
 
 
-namespace simple_shader
+namespace app_simple_shader
 {
 
 

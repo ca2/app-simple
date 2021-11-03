@@ -20,7 +20,7 @@ namespace user
 } // namespace user
 
 
-namespace simple_change_grub_default_entry
+namespace app_simple_change_grub_default_entry
 {
 
    class application;

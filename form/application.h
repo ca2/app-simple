@@ -2,7 +2,7 @@
 
 
 
-namespace simple_form
+namespace app_simple_form
 {
 
 

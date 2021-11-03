@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 
@@ -28,10 +28,10 @@ namespace notify_drawing
 
       set_local_data();
 
-      create_factory <::notify_drawing::main_frame >();
-      create_factory <::notify_drawing::impact >();
+      create_factory <::app_simple_notify_drawing::main_frame >();
+      create_factory <::app_simple_notify_drawing::impact >();
 
-      if (!::simple_drawing::application::init_instance())
+      if (!::app_simple_drawing::application::init_instance())
       {
 
          return false;
@@ -42,9 +42,9 @@ namespace notify_drawing
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(simple_drawing::document),
+                               __type(app_simple_drawing::document),
                                __type(main_frame),
-                               __type(simple_drawing::tab_view)));
+                               __type(app_simple_drawing::tab_view)));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -119,7 +119,7 @@ namespace notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < simple_drawing::document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < app_simple_drawing::document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 
@@ -160,7 +160,7 @@ namespace notify_drawing
 #endif
 
 
-   __pointer(simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
+   __pointer(app_simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
    {
 
       return pimpactParent->create_view < impact >(pimpactdata);

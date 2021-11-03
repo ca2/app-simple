@@ -1,12 +1,12 @@
 #pragma once
 
 
-namespace simple_form
+namespace app_simple_form
 {
 
 
    class CLASS_DECL_APP_SIMPLE_FORM form_001 :
-      virtual public ::simple_form::form
+      virtual public ::app_simple_form::form
    {
    public:
 
