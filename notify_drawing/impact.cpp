@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 
@@ -37,7 +37,7 @@ namespace notify_drawing
    void impact::install_message_routing(::channel * psender)
    {
 
-      ::simple_drawing::impact::install_message_routing(psender);
+      ::app_simple_drawing::impact::install_message_routing(psender);
 
    }
 

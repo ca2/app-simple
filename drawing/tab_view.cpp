@@ -3,7 +3,7 @@
 #include "base/user/user/tab_pane.h"
 
 
-namespace simple_drawing
+namespace app_simple_drawing
 {
 
 

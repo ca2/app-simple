@@ -2,7 +2,7 @@
 #include "aura/update.h"
 
 
-namespace simple_shader
+namespace app_simple_shader
 {
 
 
@@ -51,12 +51,12 @@ namespace simple_shader
 
       //puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::simple_shader::document >();
-      create_factory <::simple_shader::frame >();
-      create_factory <::simple_shader::main_frame >();
+      create_factory <::app_simple_shader::document >();
+      create_factory <::app_simple_shader::frame >();
+      create_factory <::app_simple_shader::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_shader::impact >();
-      create_factory <::simple_shader::tab_view >();
+      create_factory <::app_simple_shader::impact >();
+      create_factory <::app_simple_shader::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

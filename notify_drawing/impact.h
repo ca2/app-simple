@@ -1,12 +1,12 @@
 #pragma once
 
 
-namespace notify_drawing
+namespace app_simple_notify_drawing
 {
 
 
    class CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING impact :
-      virtual public ::simple_drawing::impact
+      virtual public ::app_simple_drawing::impact
    {
    public:
 

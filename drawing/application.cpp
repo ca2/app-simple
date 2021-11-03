@@ -2,7 +2,7 @@
 #include "aura/update.h"
 
 
-namespace simple_drawing
+namespace app_simple_drawing
 {
 
 
@@ -87,12 +87,12 @@ namespace simple_drawing
 
       set_local_data();
 
-      create_factory <::simple_drawing::document >();
-      create_factory <::simple_drawing::frame >();
-      create_factory <::simple_drawing::main_frame >();
+      create_factory <::app_simple_drawing::document >();
+      create_factory <::app_simple_drawing::frame >();
+      create_factory <::app_simple_drawing::main_frame >();
       create_factory <::user::button_view >();
-      create_factory <::simple_drawing::impact >();
-      create_factory <::simple_drawing::tab_view >();
+      create_factory <::app_simple_drawing::impact >();
+      create_factory <::app_simple_drawing::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

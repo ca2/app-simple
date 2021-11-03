@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-namespace simple_change_grub_default_entry
+namespace app_simple_change_grub_default_entry
 {
 
 
@@ -88,7 +88,7 @@ namespace simple_change_grub_default_entry
 
 
 
-} // namespace simple_change_grub_default_entry
+} // namespace app_simple_change_grub_default_entry
 
 
 

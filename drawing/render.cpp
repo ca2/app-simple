@@ -6,7 +6,7 @@
 CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
 
 
-namespace simple_drawing
+namespace app_simple_drawing
 {
 
 

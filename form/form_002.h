@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace simple_form
+namespace app_simple_form
 {
 
 
