@@ -194,11 +194,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>uwp_app_simple_application_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>0EF2D9DED1D056997D06CCD8817E39D76257D04B</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
@@ -515,57 +518,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libcrypto-1_1.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libcrypto-1_1.dll">
       <DeploymentContent>true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libssl-1_1.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libssl-1_1.dll">
       <DeploymentContent>true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\zlib.dll">
+      <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
@@ -618,114 +578,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
-      <DeploymentContent>true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
-      <DeploymentContent>true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
-      <DeploymentContent>true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
-      <DeploymentContent>true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='stage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|x64'">true</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|ARM'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cover|x64'">false</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='stage|x64'">false</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\bzip2.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">true</ExcludedFromBuild>
@@ -887,7 +739,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="universal_windows\main.cpp" />
+    <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\archive\platform-universal_windows\acme_universal_windows\u_acme_universal_windows.vcxproj">

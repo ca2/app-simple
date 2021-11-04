@@ -60,9 +60,6 @@
     <Filter Include="UWP">
       <UniqueIdentifier>{505be0c3-4167-4a15-8ec8-dcd1ca3afcb5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\universal_windows">
-      <UniqueIdentifier>{8c061cb3-1996-4f9b-bec3-3f6c06917e41}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Library\x64">
       <UniqueIdentifier>{ee3dbdb0-8789-4648-88d2-e84a70ef15b8}</UniqueIdentifier>
     </Filter>
@@ -126,10 +123,10 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="universal_windows\main.cpp">
-      <Filter>Source Files\universal_windows</Filter>
-    </ClCompile>
     <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

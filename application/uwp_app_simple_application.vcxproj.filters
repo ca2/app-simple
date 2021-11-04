@@ -54,18 +54,6 @@
     <None Include="uwp_app_simple_application_TemporaryKey.pfx">
       <Filter>UWP</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\bzip2.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\pcre.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\sqlite.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
-    <None Include="..\..\..\archive\storage-universal_windows\third\binary\Win32\basis\zlib.dll">
-      <Filter>Library\Win32\basis</Filter>
-    </None>
     <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
@@ -84,10 +72,13 @@
     <None Include="..\..\..\archive\storage-universal_windows\third\binary\x64\basis\zlib.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libcrypto-1_1.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libcrypto-1_1.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
-    <None Include="..\..\..\archive\storage-universal_windows\binary\Win32\basis\libssl-1_1.dll">
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libssl-1_1.dll">
+      <Filter>Library\Win32\basis</Filter>
+    </None>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\zlib.dll">
       <Filter>Library\Win32\basis</Filter>
     </None>
   </ItemGroup>
@@ -110,9 +101,6 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{322fb022-14d5-4dc3-bb42-5f3a912473dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\universal_windows">
-      <UniqueIdentifier>{3dabddb4-e57b-4675-bd7d-3a65de76dc95}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Library\x64">
       <UniqueIdentifier>{3bd24373-cf35-4110-800e-a8ac642f120d}</UniqueIdentifier>
     </Filter>
@@ -126,10 +114,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="universal_windows\main.cpp">
-      <Filter>Source Files\universal_windows</Filter>
-    </ClCompile>
     <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
