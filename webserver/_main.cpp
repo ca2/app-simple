@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #define APPLICATION app_simple_webserver
 #define __APP_ID "app-simple/webserver"
 #if defined(WINDOWS_DESKTOP) && defined(CUBE)
