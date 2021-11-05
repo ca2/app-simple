@@ -3,6 +3,7 @@ project(app_simple_shader CXX)
 
 
 list(APPEND library_source
+   _.cpp
    _.h
    _app_simple_shader.h
    application.cpp
@@ -79,7 +80,7 @@ target_include_directories(app_simple_shader PRIVATE ${library_include_directori
 target_compile_definitions(app_simple_shader PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
-add_executable(_app_simple_shader _.cpp)
+add_executable(_app_simple_shader _main.cpp)
 
 
 if (MSVC)

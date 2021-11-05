@@ -3,6 +3,7 @@ project(app_simple_drawing CXX)
 
 
 list(APPEND library_source
+   _.cpp
    _.h
    _app_simple_drawing.h
    application.cpp
@@ -76,7 +77,7 @@ target_include_directories(app_simple_drawing PRIVATE ${library_include_director
 target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
-add_executable(_app_simple_drawing _.cpp)
+add_executable(_app_simple_drawing _main.cpp)
 
 
 if (MSVC)

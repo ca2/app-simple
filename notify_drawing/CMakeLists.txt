@@ -67,7 +67,7 @@ target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_NOTIFY_
 
 
 
-add_executable(_app_simple_notify_drawing _.cpp)
+add_executable(_app_simple_notify_drawing _main.cpp)
 
 
 if (MSVC)
