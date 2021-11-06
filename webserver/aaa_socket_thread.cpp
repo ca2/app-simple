@@ -1,4 +1,4 @@
-﻿// cs<3tbs!! 2020-11-28 21:20 BRT
+// cs<3tbs!! 2020-11-28 21:20 BRT
 #include "framework.h"
 #include "_webserver.h"
 

@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #define __APP_ID "app-simple/shader"
 #include "aura/application.h"
 

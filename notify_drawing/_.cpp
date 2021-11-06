@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #define SYSTEM base
 #define APPLICATION notify_drawing
 #define __APP_ID "app-simple/notify_drawing"
