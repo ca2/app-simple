@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #define SYSTEM base
 #define APPLICATION simple_application
 #define __APP_ID "app-simple/application"
