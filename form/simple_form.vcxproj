@@ -230,8 +230,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -302,7 +301,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -325,8 +325,7 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -398,7 +397,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -421,8 +421,7 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -493,7 +492,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -516,8 +516,7 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -599,7 +598,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -623,8 +623,7 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -707,7 +706,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -731,8 +731,7 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -816,13 +815,13 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -907,13 +906,13 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cover|x64'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -997,13 +996,13 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -1095,13 +1094,13 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
     <PreBuildEvent>
-      <Command>build_helper "static_factory_exchange" $(ProjectDir)deps.txt $(ProjectDir)_static_factory_exchange.inl
-build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -1194,7 +1193,8 @@ build_helper "matter" $(ProjectDir)matter.txt $(ProjectDir)_matter.zip</Command>
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
