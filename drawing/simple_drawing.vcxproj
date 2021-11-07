@@ -230,8 +230,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -303,7 +302,8 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -326,8 +326,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -399,7 +398,8 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -422,8 +422,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cover|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -518,8 +517,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -600,7 +598,8 @@
       <PreserveSBR>false</PreserveSBR>
     </Bscmake>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <CustomBuildStep>
       <Command>
@@ -624,8 +623,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -732,8 +730,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -816,13 +813,13 @@
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -910,8 +907,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cover|x64'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -1001,8 +997,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
@@ -1093,13 +1088,13 @@
       </Inputs>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>build_helper $(ProjectDir)</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
     <PreBuildEvent>
-      <Command>
-      </Command>
+      <Command>$(__toolsbin)application_build_helper $(ProjectDir)</Command>
     </PreBuildEvent>
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
