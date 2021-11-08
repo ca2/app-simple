@@ -64,7 +64,7 @@ target_compile_definitions(app_simple_change_grub_default_entry PRIVATE _APP_SIM
 
 
 
-add_executable(_app_simple_change_grub_default_entry ${PLATFORM_NAME}/main.cpp)
+add_executable(_app_simple_change_grub_default_entry _.cpp)
 
 
 

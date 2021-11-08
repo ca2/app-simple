@@ -69,7 +69,7 @@ target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
 
 
-add_executable(_app_simple_form _main.cpp)
+add_executable(_app_simple_form _app_simple_form.cpp)
 
 
 list(APPEND executable_references

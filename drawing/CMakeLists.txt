@@ -77,7 +77,7 @@ target_include_directories(app_simple_drawing PRIVATE ${library_include_director
 target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
-add_executable(_app_simple_drawing _main.cpp)
+add_executable(_app_simple_drawing _app_simple_drawing.cpp)
 
 
 list(APPEND executable_references
