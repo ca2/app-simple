@@ -7,7 +7,9 @@
 #define IDD_ABOUTBOX			   103
 #define IDM_ABOUT				   104
 #define IDM_EXIT				   105
+#define IDR_MATTER				   1024
 #define IDC_MYICON				2
+
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
 #endif
