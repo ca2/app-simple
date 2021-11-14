@@ -684,14 +684,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libcrypto-1_1.dll">
-      <DeploymentContent>true</DeploymentContent>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libcrypto-3.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
     </None>
-    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libssl-1_1.dll">
-      <DeploymentContent>true</DeploymentContent>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\binary\libssl-3.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\sqlite.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\..\archive\storage-universal_windows\Win32\basis\third\binary\zlib.dll">
-      <DeploymentContent>true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">true</DeploymentContent>
     </None>
     <None Include="..\..\..\archive\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">true</ExcludedFromBuild>
@@ -992,6 +995,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\bred\u_bred.vcxproj">
       <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\app\crypto_openssl\u_crypto_openssl.vcxproj">
+      <Project>{bc919186-f67a-4ffc-b6be-0e63dc652a63}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\experience_core\u_experience_core.vcxproj">
       <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
