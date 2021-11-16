@@ -183,7 +183,7 @@
     <ResourceCompile Include="main.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\_matter\hellomultiverse\_std\_std\main\icon.ico" />
+    <Image Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\archive\platform-windows\acme_windows\acme_windows.vcxproj">
@@ -231,6 +231,9 @@
     <ProjectReference Include="notify_drawing.vcxproj">
       <Project>{fb53e729-33d8-4c20-a4a0-b61d225e8ecd}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_matter.zip" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
