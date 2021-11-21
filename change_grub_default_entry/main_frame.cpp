@@ -40,7 +40,7 @@ namespace app_simple_change_grub_default_entry
    ::experience::frame * main_frame::experience_get_frame()
    {
 
-      auto pframe = get_frame_experience(nullptr, "008", "LightBlue");
+      auto pframe = frame_experience(nullptr, "008", "LightBlue");
 
       return pframe;
 

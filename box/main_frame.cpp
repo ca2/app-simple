@@ -42,7 +42,7 @@ namespace app_simple_box
    ::experience::frame * main_frame::experience_get_frame()
    {
 
-      auto pframe = get_frame_experience("", "013", "LightBlue");
+      auto pframe = frame_experience("", "013", "LightBlue");
 
       return pframe;
 

@@ -38,9 +38,9 @@ namespace app_simple_application
 
       set_local_data();
 
-      create_factory <::app_simple_application::document >();
-      create_factory <::app_simple_application::main_frame >();
-      create_factory <::app_simple_application::impact >();
+      ::factory::add_factory_item <::app_simple_application::document >();
+      ::factory::add_factory_item <::app_simple_application::main_frame >();
+      ::factory::add_factory_item <::app_simple_application::impact >();
 
       if (!::base::application::init_instance())
       {

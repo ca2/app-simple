@@ -55,15 +55,15 @@ namespace app_simple_change_grub_default_entry
 
       set_local_data();
 
-      create_factory <::app_simple_change_grub_default_entry::document >();
-      create_factory <::app_simple_change_grub_default_entry::frame >();
-      create_factory <::app_simple_change_grub_default_entry::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::app_simple_change_grub_default_entry::impact >();
-      create_factory <::app_simple_change_grub_default_entry::main_impact >();
-      create_factory <::app_simple_change_grub_default_entry::tab_view >();
-      create_factory <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
-      create_factory <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::document >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::frame >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_frame >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::impact >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_impact >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::tab_view >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
 
       if (!::base::application::init_instance())
       {
