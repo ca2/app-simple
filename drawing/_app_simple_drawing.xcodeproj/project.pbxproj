@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		070B8F041B6E53FA00D26137 /* Hello_Multiverse__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */; };
 		07C6AA1C1CA4F16B00B4E555 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C6AA191CA4F16B00B4E555 /* Images.xcassets */; };
-		07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C6AA261CA4F3A700B4E555 /* main.cpp */; };
 		9A8D0DD326B642E5000D2AD6 /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DD226B642D3000D2AD6 /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0DD426B642E7000D2AD6 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DD126B642D3000D2AD6 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AC01E6D2748D6FE006BEBCC /* _app_simple_drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01E6C2748D6E8006BEBCC /* _app_simple_drawing.cpp */; };
+		9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libbase.dylib */; };
 		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
 		9AFFC7D12678757600C4104F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7C42678757600C4104F /* libacme.dylib */; };
 		9AFFC7D22678757600C4104F /* libacme.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7C42678757600C4104F /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -204,6 +206,20 @@
 			remoteGlobalIDString = 07B65773190F3CA2002DAADE;
 			remoteInfo = math_iosTests;
 		};
+		9AC01E452748D26D006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC019342748A002006BEBCC;
+			remoteInfo = crypto_openssl;
+		};
+		9AC01E662748D29A006BEBCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC019332748A002006BEBCC;
+			remoteInfo = crypto_openssl;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -213,6 +229,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */,
 				9AFFC7D82678757600C4104F /* libacme_posix.dylib in Embed Libraries */,
 				9AFFC7FF267875AB00C4104F /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9A8D0DD426B642E7000D2AD6 /* libssl.1.1.dylib in Embed Libraries */,
@@ -252,7 +269,6 @@
 		070B8F031B6E53FA00D26137 /* Hello_Multiverse__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hello_Multiverse__Tests.m; sourceTree = "<group>"; };
 		07C6AA191CA4F16B00B4E555 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = macos/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		07C6AA1A1CA4F16B00B4E555 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macos/Info.plist; sourceTree = SOURCE_ROOT; };
-		07C6AA261CA4F3A700B4E555 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = macos/main.cpp; sourceTree = SOURCE_ROOT; };
 		9A00E29326611EAA00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../archive/platform-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E29F26611EAB00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../archive/platform-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E32626611EB000517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../archive/platform-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
@@ -266,6 +282,8 @@
 		9A353E8B26624E960060257B /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../archive/platform-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9A8D0DD126B642D3000D2AD6 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.1.1.dylib"; sourceTree = "<group>"; };
 		9A8D0DD226B642D3000D2AD6 /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
+		9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
+		9AC01E6C2748D6E8006BEBCC /* _app_simple_drawing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_drawing.cpp; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9AFFC7C42678757600C4104F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC7C52678757600C4104F /* libacme_apple.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_apple.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */,
 				9AFFC7D12678757600C4104F /* libacme.dylib in Frameworks */,
 				9AFFC7E12678757600C4104F /* libapp_simple_drawing.dylib in Frameworks */,
 				9AFFC7D92678757600C4104F /* libapex.dylib in Frameworks */,
@@ -309,8 +328,10 @@
 		070B8EE11B6E53F900D26137 = {
 			isa = PBXGroup;
 			children = (
+				9AC01E6C2748D6E8006BEBCC /* _app_simple_drawing.cpp */,
 				9A353D1F2661FD8F0060257B /* app_simple_drawing.xcodeproj */,
 				9A353E5426622AB90060257B /* database_sqlite3.xcodeproj */,
+				9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */,
 				9A00E29326611EAA00517464 /* draw2d_quartz2d.xcodeproj */,
 				9A353DDC266228100060257B /* experience_core.xcodeproj */,
 				9A353E8B26624E960060257B /* imaging_coreimage.xcodeproj */,
@@ -339,7 +360,6 @@
 			children = (
 				07C6AA191CA4F16B00B4E555 /* Images.xcassets */,
 				07C6AA1A1CA4F16B00B4E555 /* Info.plist */,
-				07C6AA261CA4F3A700B4E555 /* main.cpp */,
 			);
 			name = macos;
 			path = "Hello Multiverse!!";
@@ -433,6 +453,14 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		9AC01E402748D26D006BEBCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,6 +513,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AC01E672748D29A006BEBCC /* PBXTargetDependency */,
 				9A0705F426625499004E8CB4 /* PBXTargetDependency */,
 				9A353E5B26622AE30060257B /* PBXTargetDependency */,
 				9A353E5326622A000060257B /* PBXTargetDependency */,
@@ -551,6 +580,10 @@
 				{
 					ProductGroup = 9A353D202661FD8F0060257B /* Products */;
 					ProjectRef = 9A353D1F2661FD8F0060257B /* app_simple_drawing.xcodeproj */;
+				},
+				{
+					ProductGroup = 9AC01E402748D26D006BEBCC /* Products */;
+					ProjectRef = 9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A353E5526622AB90060257B /* Products */;
@@ -691,6 +724,13 @@
 			remoteRef = 9A353E9526624E960060257B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libcrypto_openssl.dylib;
+			remoteRef = 9AC01E452748D26D006BEBCC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -717,7 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C6AA271CA4F3A700B4E555 /* main.cpp in Sources */,
+				9AC01E6D2748D6FE006BEBCC /* _app_simple_drawing.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +811,11 @@
 			isa = PBXTargetDependency;
 			name = database_sqlite3;
 			targetProxy = 9A353E5A26622AE30060257B /* PBXContainerItemProxy */;
+		};
+		9AC01E672748D29A006BEBCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = crypto_openssl;
+			targetProxy = 9AC01E662748D29A006BEBCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
