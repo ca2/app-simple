@@ -1,11 +1,5 @@
 #include "framework.h"
-#define SYSTEM base
-#define APPLICATION simple_application
-#define __APP_ID "app-simple/application"
-#if defined(WINDOWS_DESKTOP) && defined(CUBE)
-#include "([a-z0-9_]+)_factory.inl"
-#endif
-#include "aura/application.h"
+#include "aura/library.h"
 
 
 

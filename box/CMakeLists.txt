@@ -37,7 +37,7 @@ if (MSVC)
     target_link_libraries(app_simple_box PRIVATE acme apex aqua aura axis base)
 
 
-elseif(LINUX)
+elseif(LINUX OR FREEBSD)
 
 
     target_compile_options(app_simple_box PRIVATE -fpermissive)
