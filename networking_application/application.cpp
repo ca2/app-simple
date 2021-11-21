@@ -72,11 +72,11 @@ namespace app_simple_networking_application
 
       set_local_data();
 
-      create_factory <::app_simple_networking_application::document >();
-      create_factory <::app_simple_networking_application::frame >();
-      create_factory <::app_simple_networking_application::main_frame >();
-      create_factory <::app_simple_networking_application::impact >();
-      create_factory <::app_simple_networking_application::tab_view >();
+      ::factory::add_factory_item <::app_simple_networking_application::document >();
+      ::factory::add_factory_item <::app_simple_networking_application::frame >();
+      ::factory::add_factory_item <::app_simple_networking_application::main_frame >();
+      ::factory::add_factory_item <::app_simple_networking_application::impact >();
+      ::factory::add_factory_item <::app_simple_networking_application::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

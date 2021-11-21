@@ -51,12 +51,12 @@ namespace app_simple_shader
 
       //puser->will_use_view_hint(FONTSEL_IMPACT);
 
-      create_factory <::app_simple_shader::document >();
-      create_factory <::app_simple_shader::frame >();
-      create_factory <::app_simple_shader::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::app_simple_shader::impact >();
-      create_factory <::app_simple_shader::tab_view >();
+      ::factory::add_factory_item <::app_simple_shader::document >();
+      ::factory::add_factory_item <::app_simple_shader::frame >();
+      ::factory::add_factory_item <::app_simple_shader::main_frame >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_simple_shader::impact >();
+      ::factory::add_factory_item <::app_simple_shader::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

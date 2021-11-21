@@ -28,8 +28,8 @@ namespace app_simple_notify_drawing
 
       set_local_data();
 
-      create_factory <::app_simple_notify_drawing::main_frame >();
-      create_factory <::app_simple_notify_drawing::impact >();
+      ::factory::add_factory_item <::app_simple_notify_drawing::main_frame >();
+      ::factory::add_factory_item <::app_simple_notify_drawing::impact >();
 
       if (!::app_simple_drawing::application::init_instance())
       {
