@@ -41,10 +41,10 @@ namespace app_simple_application
    }
 
 
-   ::experience::frame * main_frame::experience_get_frame()
+   ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = frame_experience("", "013", "LightBlue");
+      auto pframe = ::simple_main_frame::frame_experience("", "013", "LightBlue");
 
       return pframe;
 
