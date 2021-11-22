@@ -22,7 +22,7 @@ namespace app_simple_box
       void dump(dump_context & dumpcontext) const override;
 
 
-      ::experience::frame * experience_get_frame() override;
+      ::experience::frame * frame_experience() override;
 
       bool has_pending_graphical_update() override;
 
