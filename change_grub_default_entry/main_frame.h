@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace app_simple_change_grub_default_entry
@@ -19,7 +19,7 @@ namespace app_simple_change_grub_default_entry
       void dump(dump_context & dumpcontext) const override;
 
 
-      virtual ::experience::frame * experience_get_frame() override;
+      virtual ::experience::frame * frame_experience() override;
 
    };
 

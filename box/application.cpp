@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace app_simple_box
@@ -34,9 +34,9 @@ namespace app_simple_box
 
       set_local_data();
 
-      create_factory <::app_simple_box::document >();
-      create_factory <::app_simple_box::main_frame >();
-      create_factory <::app_simple_box::impact >();
+      ::factory::add_factory_item <::app_simple_box::document >();
+      ::factory::add_factory_item <::app_simple_box::main_frame >();
+      ::factory::add_factory_item <::app_simple_box::impact >();
 
       if (!::base::application::init_instance())
       {

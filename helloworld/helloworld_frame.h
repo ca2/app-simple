@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace helloworld
@@ -20,7 +20,7 @@ namespace helloworld
 
 
       virtual bool get_translucency(::user::ETranslucency & etranslucency);
-      virtual ::experience::frame * experience_get_frame();
+      virtual ::experience::frame * frame_experience();
 
       virtual bool has_pending_graphical_update() override;
 

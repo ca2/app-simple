@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "aura/application.h"
 
 
@@ -31,14 +31,14 @@ namespace simple_os_drag_and_drop
       set_local_data();
 
       //puser->will_use_view_hint(FONTSEL_IMPACT);
-
-      create_factory <::simple_os_drag_and_drop::document >();
-      create_factory <::simple_os_drag_and_drop::frame >();
-      create_factory <::simple_os_drag_and_drop::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::simple_os_drag_and_drop::impact >();
-      create_factory <::simple_os_drag_and_drop::main_impact >();
-      create_factory <::simple_os_drag_and_drop::tab_view >();
+      
+      ::factory::add_factory_item <::simple_os_drag_and_drop::document >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::frame >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::main_frame >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::impact >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::main_impact >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::tab_view >();
 
       if (!::aura::application::init_instance())
       {

@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace app_simple_change_grub_default_entry
