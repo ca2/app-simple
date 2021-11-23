@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace app_simple_shader
@@ -37,10 +37,10 @@ namespace app_simple_shader
    }
 
 
-   ::experience::frame * main_frame::experience_get_frame()
+   ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = get_frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 

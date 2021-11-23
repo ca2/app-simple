@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 
 namespace app_simple_drawing
@@ -23,7 +23,7 @@ namespace app_simple_drawing
 
 
       //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
-      ::experience::frame * experience_get_frame() override;
+      ::experience::frame * frame_experience() override;
 
 
       bool has_pending_graphical_update() override;

@@ -51,7 +51,7 @@ if (MSVC)
    target_link_options(app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(app_simple_drawing PRIVATE ${library_references})
 
-elseif (LINUX)
+elseif(LINUX OR FREEBSD)
 
    target_compile_options(app_simple_drawing PRIVATE -fpermissive)
    #target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=$ORIGIN)
@@ -77,7 +77,20 @@ target_include_directories(app_simple_drawing PRIVATE ${library_include_director
 target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
-add_executable(_app_simple_drawing _main.cpp)
+add_executable(_app_simple_drawing _app_simple_drawing.cpp)
+
+
+add_custom_command(
+   TARGET ${PROJECT_NAME}
+   POST_BUILD
+   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+   COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
+)
+
+list(APPEND executable_references ${PROJECT_BINARY_DIR}/_matter.zip.o)
+
+
 
 
 list(APPEND executable_references
@@ -99,7 +112,7 @@ if (MSVC)
    target_link_options(_app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(_app_simple_drawing PRIVATE ${executable_references})
 
-elseif (LINUX)
+elseif(LINUX OR FREEBSD)
 
    target_compile_options(_app_simple_drawing PRIVATE -fpermissive)
    #target_link_options(_app_simple_drawing PRIVATE -Wl,-rpath=$ORIGIN)

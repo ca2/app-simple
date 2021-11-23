@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "aura/update.h"
 
 
@@ -87,12 +87,12 @@ namespace app_simple_drawing
 
       set_local_data();
 
-      create_factory <::app_simple_drawing::document >();
-      create_factory <::app_simple_drawing::frame >();
-      create_factory <::app_simple_drawing::main_frame >();
-      create_factory <::user::button_view >();
-      create_factory <::app_simple_drawing::impact >();
-      create_factory <::app_simple_drawing::tab_view >();
+      ::factory::add_factory_item <::app_simple_drawing::document >();
+      ::factory::add_factory_item <::app_simple_drawing::frame >();
+      ::factory::add_factory_item <::app_simple_drawing::main_frame >();
+      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::app_simple_drawing::impact >();
+      ::factory::add_factory_item <::app_simple_drawing::tab_view >();
 
       default_toggle_check_handling(id_simple_checkbox);
 

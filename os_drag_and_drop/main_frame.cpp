@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 
 
 namespace simple_os_drag_and_drop
@@ -16,7 +16,7 @@ namespace simple_os_drag_and_drop
 
       window_enable_full_screen();
 
-      //m_bWindowFrame = !papplication->has_property("client_only");
+      //m_bWindowFrame = !papplication->m_bExperienceMainFrame;
 
       //if (papplication->has_property("opaque"))
       //{
@@ -60,10 +60,10 @@ namespace simple_os_drag_and_drop
    }
 
 
-   ::experience::frame * main_frame::experience_get_frame()
+   ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = get_frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 

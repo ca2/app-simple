@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include <math.h>
 
 
@@ -13,7 +13,7 @@ namespace helloworld
 
       window_enable_full_screen();
 
-      m_bWindowFrame = !papplication->has_property("client_only");
+      m_bWindowFrame = !papplication->m_bExperienceMainFrame;
 
    }
 
@@ -40,10 +40,10 @@ namespace helloworld
    }
 
 
-   ::experience::frame * frame::experience_get_frame()
+   ::experience::frame * frame::frame_experience()
    {
 
-      auto pframe = papplication->experience().experience_get_frame(NULL, "001");
+      auto pframe = papplication->experience().frame_experience(NULL, "001");
 
       pframe->set_style("StyleLightBlue");
 
