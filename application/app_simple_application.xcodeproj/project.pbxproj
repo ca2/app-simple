@@ -256,9 +256,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_application" */;
 			buildPhases = (
+				9A2293232472D7BA00B1A4EC /* ShellScript */,
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
-				9A2293232472D7BA00B1A4EC /* ShellScript */,
 				9AEB75A116F78DF10085103B /* Headers */,
 				9A00E0EE26611AF200517464 /* Embed Libraries */,
 			);
@@ -341,15 +341,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/deps.txt",
+				"$(SRCROOT)/matter.txt",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellPath = /bin/bash;
+			shellScript = "$HOME/solution/basis/archive/tool-macos/bin/application_build_helper $SRCROOT\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
