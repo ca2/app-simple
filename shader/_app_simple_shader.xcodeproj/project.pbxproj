@@ -69,13 +69,6 @@
 			remoteGlobalIDString = 07E25F501B4FFC2100752DE1;
 			remoteInfo = ios_draw2d_quartz2d;
 		};
-		9A00E48826611FDA00517464 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A00E47E26611FDA00517464 /* draw2d_quartz2d.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24E151904CF99001AEFFB;
-			remoteInfo = draw2d_quartz2d_iosTests;
-		};
 		9A00E48E26611FDB00517464 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A00E48A26611FDA00517464 /* node_macos.xcodeproj */;
@@ -89,6 +82,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9A64C1712660C62C0074030F;
 			remoteInfo = write_text_quartz2d;
+		};
+		9A1D5F732751C402003D9B5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AEE929B2661FD2700FCA5EC /* app_simple_shader.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_simple_shader;
 		};
 		9A353E18266228680060257B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -282,7 +282,6 @@
 			children = (
 				9A00E48526611FDA00517464 /* libdraw2d_quartz2d.dylib */,
 				9A00E48726611FDA00517464 /* libios_draw2d_quartz2d.a */,
-				9A00E48926611FDA00517464 /* draw2d_quartz2d_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -401,6 +400,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A1D5F742751C402003D9B5F /* PBXTargetDependency */,
 				9A8D0E3F26B68FB9000D2AD6 /* PBXTargetDependency */,
 				9A8D0E4126B68FB9000D2AD6 /* PBXTargetDependency */,
 				9A8D0E4326B68FB9000D2AD6 /* PBXTargetDependency */,
@@ -505,13 +505,6 @@
 			remoteRef = 9A00E48626611FDA00517464 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A00E48926611FDA00517464 /* draw2d_quartz2d_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = draw2d_quartz2d_iosTests.xctest;
-			remoteRef = 9A00E48826611FDA00517464 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		9A00E48F26611FDB00517464 /* libnode_macos.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -600,6 +593,11 @@
 			isa = PBXTargetDependency;
 			target = 070B8EE91B6E53F900D26137 /* _app_simple_shader */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
+		};
+		9A1D5F742751C402003D9B5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_simple_shader;
+			targetProxy = 9A1D5F732751C402003D9B5F /* PBXContainerItemProxy */;
 		};
 		9A8D0E3F26B68FB9000D2AD6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
