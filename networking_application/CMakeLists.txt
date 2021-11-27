@@ -37,7 +37,6 @@ target_precompile_headers(app_simple_networking_application PRIVATE framework.h)
 set_target_properties(app_simple_networking_application PROPERTIES LINKER_LANGUAGE CXX)
 
 
-
 list(APPEND app_simple_networking_application_references
    acme
    apex
@@ -89,10 +88,19 @@ target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
 
 
 add_executable(_app_simple_networking_application _app_simple_networking_application.cpp)
-
-
 target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
+
+
+add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/_matter.zip.o
+   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+   COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
+   DEPENDS deps.txt matter.txt
+   )
+
+target_sources(_${PROJECT_NAME} PRIVATE ${PROJECT_BINARY_DIR}/_matter.zip.o)
+
 
 if (MSVC)
    target_compile_options(_app_simple_networking_application PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
