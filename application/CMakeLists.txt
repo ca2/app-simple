@@ -68,29 +68,53 @@ target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATIO
 add_executable(_app_simple_application _app_simple_application.cpp)
 
 
-add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/_matter.zip.o
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
-   DEPENDS deps.txt matter.txt
-)
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_application
+   )
 
-target_sources(_${PROJECT_NAME} PRIVATE ${PROJECT_BINARY_DIR}/_matter.zip.o)
+
+add_custom_target(${PROJECT_NAME}_matter
+   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+   DEPENDS deps.txt matter.txt
+   VERBATIM
+   )
+
+
+if(LINUX OR FREEBSD)
+
+
+    list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+
+
+endif()
+
+
+add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
 
 
 if (MSVC)
 
+
     target_compile_options(_app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(_app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(_app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(_app_simple_application PRIVATE ${library_references})
+    target_link_libraries(_app_simple_application PRIVATE ${executable_references})
+
 
 elseif(LINUX OR FREEBSD)
 
+
     target_compile_options(_app_simple_application PRIVATE -fpermissive)
-    #target_link_options(_app_simple_application PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(_app_simple_application PRIVATE ${library_references})
+    target_link_libraries(_app_simple_application PRIVATE ${executable_references})
     target_link_options(_app_simple_application PRIVATE -Wl,-z,defs)
+
 
 endif ()
 
