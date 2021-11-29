@@ -52,7 +52,6 @@ endif()
 
 add_dependencies(app_simple_application experience_core)
 add_dependencies(app_simple_application ${default_draw2d})
-add_dependencies(app_simple_application ${default_imaging})
 add_dependencies(app_simple_application ${default_write_text})
 add_dependencies(app_simple_application ${app_common_dependencies})
 add_dependencies(app_simple_application database_sqlite3)
