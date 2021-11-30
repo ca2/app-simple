@@ -79,18 +79,19 @@ target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRAR
 
 add_executable(_app_simple_drawing _app_simple_drawing.cpp)
 
+
 add_custom_target(${PROJECT_NAME}_matter
-   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-   DEPENDS deps.txt matter.txt
-   VERBATIM
-   )
+    COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    DEPENDS deps.txt matter.txt
+    VERBATIM
+    )
 
 
 if(LINUX OR FREEBSD)
 
 
-   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+    list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
 
 
 endif()

@@ -82,18 +82,32 @@ target_compile_definitions(app_simple_shader PRIVATE _APP_SIMPLE_DRAWING_LIBRARY
 
 add_executable(_app_simple_shader _main.cpp)
 
-add_custom_target(${PROJECT_NAME}_matter
-   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-   DEPENDS deps.txt matter.txt
-   VERBATIM
+
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   bred
+   core
+   app_simple_shader
    )
+
+
+add_custom_target(${PROJECT_NAME}_matter
+    COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    DEPENDS deps.txt matter.txt
+    VERBATIM
+    )
 
 
 if(LINUX OR FREEBSD)
 
 
-   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+    list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
 
 
 endif()
@@ -105,17 +119,20 @@ add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
 
 if (MSVC)
 
+
    target_compile_options(_app_simple_shader PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_shader PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_shader PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_simple_shader PRIVATE ${library_references})
+   target_link_libraries(_app_simple_shader PRIVATE ${executable_references})
+
 
 elseif(LINUX OR FREEBSD)
 
+
    target_compile_options(_app_simple_shader PRIVATE -fpermissive)
-   #target_link_options(_app_simple_shader PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(_app_simple_shader PRIVATE ${library_references})
+   target_link_libraries(_app_simple_shader PRIVATE ${executable_references})
    target_link_options(_app_simple_shader PRIVATE -Wl,-z,defs)
+
 
 endif ()
 
