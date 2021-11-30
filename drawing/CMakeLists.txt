@@ -79,15 +79,24 @@ target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRAR
 
 add_executable(_app_simple_drawing _app_simple_drawing.cpp)
 
-
-add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/_matter.zip.o
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+add_custom_target(${PROJECT_NAME}_matter
    COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
+   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
    DEPENDS deps.txt matter.txt
-)
+   VERBATIM
+   )
 
-target_sources(_${PROJECT_NAME} PRIVATE ${PROJECT_BINARY_DIR}/_matter.zip.o)
+
+if(LINUX OR FREEBSD)
+
+
+   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+
+
+endif()
+
+
+add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
 
 
 
