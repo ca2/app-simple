@@ -64,23 +64,33 @@ target_include_directories(app_simple_notify_drawing PRIVATE ${CMAKE_CURRENT_SOU
 target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY)
 
 
-
-
-
 add_executable(_app_simple_notify_drawing _main.cpp)
 
-add_custom_target(${PROJECT_NAME}_matter
-   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-   DEPENDS deps.txt matter.txt
-   VERBATIM
+
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_drawing
+   app_simple_notify_drawing
    )
+
+
+add_custom_target(${PROJECT_NAME}_matter
+    COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    DEPENDS deps.txt matter.txt
+    VERBATIM
+    )
 
 
 if(LINUX OR FREEBSD)
 
 
-   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+    list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
 
 
 endif()
@@ -92,17 +102,20 @@ add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
 
 if (MSVC)
 
+
     target_compile_options(_app_simple_notify_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
     target_link_options(_app_simple_notify_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
     target_link_options(_app_simple_notify_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(_app_simple_notify_drawing PRIVATE ${library_references})
+    target_link_libraries(_app_simple_notify_drawing PRIVATE ${executable_references})
+
 
 elseif(LINUX OR FREEBSD)
 
+
     target_compile_options(_app_simple_notify_drawing PRIVATE -fpermissive)
-    #target_link_options(_app_simple_notify_drawing PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(_app_simple_notify_drawing PRIVATE ${library_references})
+    target_link_libraries(_app_simple_notify_drawing PRIVATE ${executable_references})
     target_link_options(_app_simple_notify_drawing PRIVATE -Wl,-z,defs)
+
 
 endif ()
 
