@@ -5,7 +5,7 @@ namespace app_simple_networking_application
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WEBSERVER main_frame :
+   class CLASS_DECL_APP_SIMPLE_NETWORKING_APPLICATION main_frame :
       virtual public simple_main_frame
    {
    public:
