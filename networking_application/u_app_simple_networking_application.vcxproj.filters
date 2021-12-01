@@ -30,16 +30,7 @@
     <ClInclude Include="main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pane_view.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="simple_drawing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="impact.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="render.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tab_view.h">
@@ -65,22 +56,11 @@
     <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="render_arcs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="render_1through3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="render.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tab_view.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="u_app_simple_drawing.def">
+    <ClCompile Include="_.cpp">
       <Filter>Source Files</Filter>
-    </None>
+    </ClCompile>
   </ItemGroup>
 </Project>
