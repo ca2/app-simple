@@ -21,7 +21,7 @@ list(APPEND library_source
    )
 
 
-add_executable(app_simple_box ${library_source})
+add_library(app_simple_box ${library_source})
 
 target_precompile_headers(app_simple_box PRIVATE framework.h)
 
@@ -63,6 +63,78 @@ target_include_directories(${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 target_compile_definitions(app_simple_box PRIVATE _APP_SIMPLE_BOX_LIBRARY)
+
+
+add_executable(_app_simple_box _app_simple_box.cpp)
+
+
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_box
+   )
+
+
+add_custom_target(${PROJECT_NAME}_matter
+   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+   DEPENDS deps.txt matter.txt
+   VERBATIM
+   )
+
+
+if(LINUX OR FREEBSD)
+
+
+    list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+
+
+endif()
+
+
+add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
+
+
+if (MSVC)
+
+
+    target_compile_options(_app_simple_box PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_box PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_libraries(_app_simple_box PRIVATE acme apex)
+    target_link_libraries(_app_simple_box PRIVATE ${executable_references})
+
+
+elseif(LINUX OR FREEBSD)
+
+
+    target_compile_options(_app_simple_box PRIVATE -fpermissive)
+    target_link_libraries(_app_simple_box PRIVATE ${executable_references})
+    target_link_options(_app_simple_box PRIVATE -Wl,-z,defs)
+
+
+endif ()
+
+
+add_dependencies(_app_simple_box app_simple_box)
+add_dependencies(_app_simple_box ${app_common_dependencies})
+add_dependencies(_app_simple_box experience_tranquillum)
+add_dependencies(_app_simple_box ${default_draw2d})
+add_dependencies(_app_simple_box ${default_imaging})
+add_dependencies(_app_simple_box ${default_write_text})
+add_dependencies(_app_simple_box database_sqlite3)
+
+
+target_include_directories(_app_simple_box PRIVATE ${library_include_directories})
+
+target_link_directories(_app_simple_box PRIVATE ${library_link_directories})
+
+set_target_properties(_app_simple_box PROPERTIES LINKER_LANGUAGE CXX)
+
+
 
 
 

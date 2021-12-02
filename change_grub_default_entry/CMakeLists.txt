@@ -64,7 +64,20 @@ target_compile_definitions(app_simple_change_grub_default_entry PRIVATE _APP_SIM
 
 
 
-add_executable(_app_simple_change_grub_default_entry _.cpp)
+add_executable(_app_simple_change_grub_default_entry _app_simple_change_grub_default_entry.cpp)
+
+
+
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_change_grub_default_entry
+   )
+
 
 
 add_custom_target(${PROJECT_NAME}_matter
@@ -102,6 +115,7 @@ elseif(LINUX OR FREEBSD)
    target_compile_options(_app_simple_change_grub_default_entry PRIVATE -fpermissive)
    #target_link_options(_app_simple_change_grub_default_entry PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(_app_simple_change_grub_default_entry PRIVATE acme apex)
+   target_link_libraries(_app_simple_change_grub_default_entry PRIVATE ${executable_references})
    target_link_options(_app_simple_change_grub_default_entry PRIVATE -Wl,-z,defs)
 
 endif ()
