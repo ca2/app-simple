@@ -92,27 +92,56 @@ target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
 
 
-add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/_matter.zip.o
-   WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-   COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
-   COMMAND ld -r -b binary -o ${PROJECT_BINARY_DIR}/_matter.zip.o _matter.zip
-   DEPENDS deps.txt matter.txt
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_networking_application)
+
+
+if(LINUX OR FREEBSD)
+
+   add_custom_command(
+      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
+      COMMAND ${CMAKE_COMMAND} -E touch ${CMAKE_BINARY_DIR}/matter_zip.generated_for_unix_shit_maydein
+      OUTPUT ${CMAKE_BINARY_DIR}/matter_zip.generated_for_unix_shit_maydein
+      WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+      BYPRODUCTS ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o 
+      DEPENDS deps.txt matter.txt
+      VERBATIM
+      )
+
+   add_custom_target(${PROJECT_NAME}_matter
+      DEPENDS ${CMAKE_BINARY_DIR}/matter_zip.generated_for_unix_shit_maydein
    )
 
-target_sources(_${PROJECT_NAME} PRIVATE ${PROJECT_BINARY_DIR}/_matter.zip.o)
+   list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+
+   add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME}_matter)
+
+endif()
 
 
 if (MSVC)
+   
+
    target_compile_options(_app_simple_networking_application PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
    target_compile_options(_app_simple_networking_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_networking_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(_app_simple_networking_application PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(_app_simple_networking_application PRIVATE ${app_simple_networking_application_references} app_simple_networking_application)
+   target_link_libraries(_app_simple_networking_application PRIVATE ${executable_references})
    add_dependencies(_app_simple_networking_application draw2d_gdiplus imaging_wic)
+
+
 elseif(LINUX OR FREEBSD)
+
+
    target_compile_options(_app_simple_networking_application PRIVATE -fpermissive)
    #target_link_options(_app_simple_networking_application PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(_app_simple_networking_application PRIVATE ${app_simple_networking_application_references} app_simple_networking_application)
+   target_link_libraries(_app_simple_networking_application PRIVATE ${executable_references})
    target_link_options(_app_simple_networking_application PRIVATE -Wl,-z,defs)
    add_dependencies(_app_simple_networking_application draw2d_cairo imaging_freeimage)
 
