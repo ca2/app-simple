@@ -35,8 +35,8 @@
 		9A5A877E26D2630A004AF957 /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A876E26D26309004AF957 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A878026D2630A004AF957 /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E4AA26611FDC00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A878126D26350004AF957 /* libapp_simple_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; };
-		9A5A879326D264A0004AF957 /* libcrypto.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879126D264A0004AF957 /* libcrypto.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A5A879426D264A0004AF957 /* libssl.1.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879226D264A0004AF957 /* libssl.1.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A5A879326D264A0004AF957 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879126D264A0004AF957 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A5A879426D264A0004AF957 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879226D264A0004AF957 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A7F3F9F274D6E0E00D914CC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5A873426D2628A004AF957 /* libcore.dylib */; };
 		9A7F3FA6274D6F1B00D914CC /* libapp_simple_shader.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0E3826B68F62000D2AD6 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0E3726B68F62000D2AD6 /* libacme.dylib */; };
@@ -186,8 +186,8 @@
 			dstSubfolderSpec = 6;
 			files = (
 				9A7F3FA6274D6F1B00D914CC /* libapp_simple_shader.dylib in Embed Libraries */,
-				9A5A879326D264A0004AF957 /* libcrypto.1.1.dylib in Embed Libraries */,
-				9A5A879426D264A0004AF957 /* libssl.1.1.dylib in Embed Libraries */,
+				9A5A879326D264A0004AF957 /* libcrypto.dylib in Embed Libraries */,
+				9A5A879426D264A0004AF957 /* libssl.dylib in Embed Libraries */,
 				9A5A872E26D2627B004AF957 /* libapp_shader.dylib in Embed Libraries */,
 				9A99044C2753350000B13F01 /* libgpu_opengl.dylib in Embed Libraries */,
 				9A5A877026D26309004AF957 /* libdraw2d_quartz2d.dylib in Embed Libraries */,
@@ -248,8 +248,8 @@
 		9A5A876A26D26309004AF957 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A876B26D26309004AF957 /* libimaging_coreimage.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libimaging_coreimage.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A876E26D26309004AF957 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A5A879126D264A0004AF957 /* libcrypto.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.1.1.dylib"; sourceTree = "<group>"; };
-		9A5A879226D264A0004AF957 /* libssl.1.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.1.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.1.1.dylib"; sourceTree = "<group>"; };
+		9A5A879126D264A0004AF957 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.dylib"; sourceTree = "<group>"; };
+		9A5A879226D264A0004AF957 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.dylib"; sourceTree = "<group>"; };
 		9A8D0E3726B68F62000D2AD6 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8D0E3926B68F62000D2AD6 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A990439275334D400B13F01 /* gpu_opengl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gpu_opengl.xcodeproj; path = ../../app/gpu_opengl/gpu_opengl.xcodeproj; sourceTree = "<group>"; };
@@ -374,8 +374,8 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A5A879126D264A0004AF957 /* libcrypto.1.1.dylib */,
-				9A5A879226D264A0004AF957 /* libssl.1.1.dylib */,
+				9A5A879126D264A0004AF957 /* libcrypto.dylib */,
+				9A5A879226D264A0004AF957 /* libssl.dylib */,
 				9A5A876A26D26309004AF957 /* libidn.dylib */,
 				9A5A876B26D26309004AF957 /* libimaging_coreimage.dylib */,
 				9A5A876E26D26309004AF957 /* libwindowing_macos.dylib */,
@@ -761,7 +761,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/archive",
-					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"\"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)\"",
+					"\"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/$(ARCHS)/$(CONFIGURATION)\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -821,7 +822,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/archive",
-					"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)",
+					"\"$(WorkspaceDir)/archive/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)/$(CONFIGURATION)\"",
+					"\"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/$(ARCHS)/$(CONFIGURATION)\"",
 					"$(WorkspaceDir)/archive",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
