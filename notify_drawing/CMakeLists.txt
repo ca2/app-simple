@@ -131,7 +131,6 @@ add_dependencies(_${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(_${PROJECT_NAME} crypto_openssl)
 add_dependencies(_${PROJECT_NAME} experience_core)
 add_dependencies(_${PROJECT_NAME} folder_zip)
-add_dependencies(_${PROJECT_NAME} gpu_opengl)
 
 
 target_include_directories(_app_simple_notify_drawing PRIVATE ${library_include_directories})
