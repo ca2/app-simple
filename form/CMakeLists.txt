@@ -50,17 +50,6 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-add_dependencies(app_simple_form experience_tranquillum)
-add_dependencies(app_simple_form ${default_draw2d})
-add_dependencies(app_simple_form ${default_imaging})
-add_dependencies(app_simple_form ${default_write_text})
-add_dependencies(app_simple_form ${app_common_dependencies})
-add_dependencies(app_simple_form database_sqlite3)
-add_dependencies(app_simple_form regular_expression_pcre2)
-
-
-
-
 target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
 target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
