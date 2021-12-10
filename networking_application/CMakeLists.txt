@@ -149,7 +149,12 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-add_dependencies(_app_simple_networking_application app_simple_networking_application)
+add_dependencies(_${PROJECT_NAME} ${PROJECT_NAME})
+add_dependencies(_${PROJECT_NAME} ${default_draw2d})
+add_dependencies(_${PROJECT_NAME} ${default_write_text})
+add_dependencies(_${PROJECT_NAME} ${app_common_dependencies})
+add_dependencies(_${PROJECT_NAME} ${default_node})
+add_dependencies(_${PROJECT_NAME} experience_core)
 
 target_include_directories(_app_simple_networking_application PRIVATE ${library_include_directories})
 
