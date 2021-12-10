@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{876E1DB0-ADF2-4320-9D97-970725113871}</ProjectGuid>
-    <RootNamespace>appcorehellomultiverse</RootNamespace>
+    <RootNamespace>app-simple</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -227,6 +227,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\app\core\core.vcxproj">
       <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\drawing\simple_drawing.vcxproj">
+      <Project>{bfe8a4c4-1614-4ab7-b311-721c8daf1f6c}</Project>
     </ProjectReference>
     <ProjectReference Include="notify_drawing.vcxproj">
       <Project>{fb53e729-33d8-4c20-a4a0-b61d225e8ecd}</Project>
