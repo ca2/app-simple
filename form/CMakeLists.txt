@@ -114,12 +114,12 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-add_dependencies(_app_simple_form ${app_common_dependencies})
-add_dependencies(_app_simple_form experience_core)
-add_dependencies(_app_simple_form ${default_draw2d})
-add_dependencies(_app_simple_form ${default_imaging})
-add_dependencies(_app_simple_form ${default_write_text})
-add_dependencies(_app_simple_form ${default_gpu})
+add_dependencies(_${PROJECT_NAME} ${app_common_dependencies})
+add_dependencies(_${PROJECT_NAME} ${default_draw2d})
+add_dependencies(_${PROJECT_NAME} ${default_imaging})
+add_dependencies(_${PROJECT_NAME} ${default_write_text})
+add_dependencies(_${PROJECT_NAME} ${default_gpu})
+add_dependencies(_${PROJECT_NAME} experience_tranquillum)
 
 
 target_include_directories(_app_simple_form PRIVATE ${library_include_directories})
