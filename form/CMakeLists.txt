@@ -30,11 +30,15 @@ list(APPEND library_source
    tab_view.h
    )
 
+
 add_library(app_simple_form ${library_source})
+
 
 target_precompile_headers(app_simple_form PRIVATE framework.h)
 
+
 set_target_properties(app_simple_form PROPERTIES LINKER_LANGUAGE CXX)
+
 
 if (MSVC)
    target_compile_options(app_simple_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
