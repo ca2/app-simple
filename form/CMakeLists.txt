@@ -120,6 +120,7 @@ add_dependencies(_${PROJECT_NAME} ${default_imaging})
 add_dependencies(_${PROJECT_NAME} ${default_write_text})
 add_dependencies(_${PROJECT_NAME} ${default_node})
 add_dependencies(_${PROJECT_NAME} crypto_openssl)
+add_dependencies(_${PROJECT_NAME} database_sqlite3)
 add_dependencies(_${PROJECT_NAME} experience_tranquillum)
 add_dependencies(_${PROJECT_NAME} folder_zip)
 
