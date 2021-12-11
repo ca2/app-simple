@@ -114,8 +114,10 @@ add_dependencies(_${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(_${PROJECT_NAME} ${default_draw2d})
 add_dependencies(_${PROJECT_NAME} ${default_imaging})
 add_dependencies(_${PROJECT_NAME} ${default_write_text})
-add_dependencies(_${PROJECT_NAME} ${default_gpu})
+add_dependencies(_${PROJECT_NAME} ${default_node})
+add_dependencies(_${PROJECT_NAME} crypto_openssl)
 add_dependencies(_${PROJECT_NAME} experience_tranquillum)
+add_dependencies(_${PROJECT_NAME} folder_zip)
 
 
 target_include_directories(_app_simple_form PRIVATE ${library_include_directories})
@@ -123,9 +125,6 @@ target_include_directories(_app_simple_form PRIVATE ${library_include_directorie
 target_link_directories(_app_simple_form PRIVATE ${library_link_directories})
 
 set_target_properties(_app_simple_form PROPERTIES LINKER_LANGUAGE CXX)
-
-
-
 
 
 
