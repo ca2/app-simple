@@ -97,8 +97,6 @@ if(LINUX OR FREEBSD)
 endif()
 
 
-
-
 if (MSVC)
 
    target_compile_options(_app_simple_form PRIVATE "/MD$<$<CONFIG:Debug>:d>")
