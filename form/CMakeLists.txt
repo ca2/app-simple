@@ -65,6 +65,15 @@ target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
 add_executable(_app_simple_form _app_simple_form.cpp)
 
 
+list(APPEND executable_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base
+   app_simple_form)
+
 if(LINUX OR FREEBSD)
 
    add_custom_command(
@@ -88,14 +97,6 @@ if(LINUX OR FREEBSD)
 endif()
 
 
-list(APPEND executable_references
-   acme
-   apex
-   aqua
-   aura
-   axis
-   base
-   app_simple_form)
 
 
 if (MSVC)
