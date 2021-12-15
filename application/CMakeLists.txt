@@ -65,7 +65,7 @@ target_include_directories(app_simple_application PRIVATE ${CMAKE_CURRENT_SOURCE
 target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
 
 
-add_executable(_app_simple_application _app_simple_application.cpp)
+add_executable(_${PROJECT_NAME} _${PROJECT_NAME}_${UNDERSCORE_PLATFORM}.cpp)
 
 
 list(APPEND executable_references

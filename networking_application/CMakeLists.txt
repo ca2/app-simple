@@ -87,7 +87,7 @@ target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
 
 
 
-add_executable(_app_simple_networking_application _app_simple_networking_application.cpp)
+add_executable(_${PROJECT_NAME} _${PROJECT_NAME}_${UNDERSCORE_PLATFORM}.cpp)
 target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
 
@@ -109,7 +109,7 @@ if(LINUX OR FREEBSD)
       COMMAND ${CMAKE_COMMAND} -E touch ${PROJECT_BINARY_DIR}/matter.timestamp
       OUTPUT ${PROJECT_BINARY_DIR}/matter.timestamp
       WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-      BYPRODUCTS ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o 
+      BYPRODUCTS ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o
       DEPENDS application_matter.txt deps.txt matter.txt _console_application_build_helper
       VERBATIM
       )
