@@ -54,15 +54,18 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
-target_include_directories(app_simple_form PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
+
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
 target_compile_definitions(app_simple_form PRIVATE _APP_SIMPLE_FORM_LIBRARY)
 
 
-add_executable(_${PROJECT_NAME} _${PROJECT_NAME}_${UNDERSCORE_PLATFORM}.cpp)
+add_executable(_${PROJECT_NAME} platform/${SLASHED_PLATFORM}/_${PROJECT_NAME}.cpp)
 
 
 list(APPEND executable_references

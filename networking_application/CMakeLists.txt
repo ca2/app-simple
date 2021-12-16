@@ -72,9 +72,12 @@ list(APPEND library_link_directories
 target_link_directories(app_simple_networking_application PRIVATE ${library_link_directories})
 
 
-target_include_directories(app_simple_networking_application PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-target_include_directories(app_simple_networking_application PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
-target_include_directories(app_simple_networking_application PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
+
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
 
@@ -87,7 +90,7 @@ target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
 
 
 
-add_executable(_${PROJECT_NAME} _${PROJECT_NAME}_${UNDERSCORE_PLATFORM}.cpp)
+add_executable(_${PROJECT_NAME} platform/${SLASHED_PLATFORM}/_${PROJECT_NAME}.cpp)
 target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
 
