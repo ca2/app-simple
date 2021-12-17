@@ -1,6 +1,6 @@
 #define DO_FACTORY(do) \
-do(draw2d_gdiplus); \
+do(default_draw2d); \
 do(experience_core); \
-do(node_windows); \
-do(windowing_win32);
+do(default_node); \
+do(default_windowing);
 
