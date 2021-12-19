@@ -3,5 +3,6 @@ do(draw2d_gdiplus); \
 do(experience_core); \
 do(node_windows); \
 do(windowing_win32); \
-do(write_text_win32);
-
+do(write_text_win32); \
+do(crypto_openssl); \
+do(folder_zip);

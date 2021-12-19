@@ -1,3 +1,4 @@
+app-simple/form
 draw2d_gdiplus
 experience_core
 node_windows
