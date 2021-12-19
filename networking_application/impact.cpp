@@ -195,7 +195,7 @@ namespace app_simple_networking_application
 
       auto phyperlink = __create_new <::hyperlink >();
 
-      phyperlink->m_strLink.format("http://127.0.0.1:%d/", get_application()->networking_application()->wait_get_current_port(1_min));
+      phyperlink->m_strLink.format("http://localhost.ca2.software:%d/", get_application()->networking_application()->wait_get_current_port(1_min));
 
       phyperlink->run();
 
