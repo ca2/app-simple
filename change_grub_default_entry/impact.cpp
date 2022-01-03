@@ -1,5 +1,6 @@
 #include "framework.h"
 #include <math.h>
+#include "aura/graphics/draw2d/_draw2d.h"
 
 
 namespace app_simple_change_grub_default_entry
