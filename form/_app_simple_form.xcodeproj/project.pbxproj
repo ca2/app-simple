@@ -84,6 +84,13 @@
 			remoteGlobalIDString = 9AEB75F316F78EDC0085103B;
 			remoteInfo = experience_tranquillum;
 		};
+		9A8C84C02784C3E2000C8587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA8045F26657AF400A6B449 /* app_simple_form.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_simple_form;
+		};
 		9A9905BE2753372200B13F01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A9905BA2753372200B13F01 /* folder_zip.xcodeproj */;
@@ -530,6 +537,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A8C84C12784C3E2000C8587 /* PBXTargetDependency */,
 				9A9905C12753373A00B13F01 /* PBXTargetDependency */,
 				9AC01EAE2748DF15006BEBCC /* PBXTargetDependency */,
 				9A42D7D0266598A00011645D /* PBXTargetDependency */,
@@ -803,6 +811,11 @@
 			isa = PBXTargetDependency;
 			name = experience_tranquillum;
 			targetProxy = 9A42D7CF266598A00011645D /* PBXContainerItemProxy */;
+		};
+		9A8C84C12784C3E2000C8587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_simple_form;
+			targetProxy = 9A8C84C02784C3E2000C8587 /* PBXContainerItemProxy */;
 		};
 		9A9905C12753373A00B13F01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

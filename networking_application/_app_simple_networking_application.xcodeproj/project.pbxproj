@@ -107,6 +107,20 @@
 			remoteGlobalIDString = 9AC09A2D274DFC67008B042E;
 			remoteInfo = folder_zip;
 		};
+		9A8C83A1278468F5000C8587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8C818327844A71000C8587 /* crypto_openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC019332748A002006BEBCC;
+			remoteInfo = crypto_openssl;
+		};
+		9A8C83A3278468FF000C8587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8C818927844A7B000C8587 /* folder_zip.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC09A2C274DFC67008B042E;
+			remoteInfo = folder_zip;
+		};
 		9A9902B827532B0F00B13F01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AED78C22751989E00397A57 /* app_simple_networking_application.xcodeproj */;
@@ -437,6 +451,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A8C83A4278468FF000C8587 /* PBXTargetDependency */,
+				9A8C83A2278468F5000C8587 /* PBXTargetDependency */,
 				9A9902BC27532B6000B13F01 /* PBXTargetDependency */,
 				9AA802752665752000A6B449 /* PBXTargetDependency */,
 				9AA802772665752000A6B449 /* PBXTargetDependency */,
@@ -638,6 +654,16 @@
 			isa = PBXTargetDependency;
 			target = 070B8EE91B6E53F900D26137 /* _app_simple_networking_application */;
 			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
+		};
+		9A8C83A2278468F5000C8587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = crypto_openssl;
+			targetProxy = 9A8C83A1278468F5000C8587 /* PBXContainerItemProxy */;
+		};
+		9A8C83A4278468FF000C8587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = folder_zip;
+			targetProxy = 9A8C83A3278468FF000C8587 /* PBXContainerItemProxy */;
 		};
 		9A9902BC27532B6000B13F01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
