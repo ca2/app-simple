@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A8D0DC526B641C3000D2AD6 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DC326B641C2000D2AD6 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D0DC626B641C3000D2AD6 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DC426B641C2000D2AD6 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D0DC526B641C3000D2AD6 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DC326B641C2000D2AD6 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D0DC626B641C3000D2AD6 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DC426B641C2000D2AD6 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A3C27519C0F0094A04C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A3327519C0F0094A04C /* MainMenu.xib */; };
 		9A9E4A3D27519C0F0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A3527519C0F0094A04C /* Images.xcassets */; };
 		9AA802A92665793600A6B449 /* libapp_simple_box.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A95D64726624EF000B2461B /* libapp_simple_box.dylib */; };
@@ -113,8 +113,8 @@
 			dstSubfolderSpec = 6;
 			files = (
 				9AFFC76A26786DCC00C4104F /* libacme_posix.dylib in Embed Libraries */,
-				9A8D0DC526B641C3000D2AD6 /* libssl.dylib in Embed Libraries */,
-				9A8D0DC626B641C3000D2AD6 /* libcrypto.dylib in Embed Libraries */,
+				9A8D0DC526B641C3000D2AD6 /* libssl.3.dylib in Embed Libraries */,
+				9A8D0DC626B641C3000D2AD6 /* libcrypto.3.dylib in Embed Libraries */,
 				9AFFC76426786DCC00C4104F /* libacme.dylib in Embed Libraries */,
 				9AFFC76626786DCC00C4104F /* libacme_apple.dylib in Embed Libraries */,
 				9AFFC78426786DEF00C4104F /* libaura_posix.dylib in Embed Libraries */,
@@ -141,8 +141,8 @@
 		9A00E1D926611DDB00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../archive/platform-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E22426611DDD00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../archive/platform-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E26626611DDF00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../archive/platform-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A8D0DC326B641C2000D2AD6 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libssl.dylib"; sourceTree = "<group>"; };
-		9A8D0DC426B641C2000D2AD6 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../archive/storage-macos/library/x86_64/Debug/libcrypto.dylib"; sourceTree = "<group>"; };
+		9A8D0DC326B641C2000D2AD6 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../archive/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
+		9A8D0DC426B641C2000D2AD6 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../archive/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9A9E4A3427519C0F0094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A3527519C0F0094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A3627519C0F0094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 				9AFFC75F26786DCC00C4104F /* libapex_posix.dylib */,
 				9AFFC76026786DCC00C4104F /* libaqua.dylib */,
 				9AFFC76126786DCC00C4104F /* libaura.dylib */,
-				9A8D0DC426B641C2000D2AD6 /* libcrypto.dylib */,
-				9A8D0DC326B641C2000D2AD6 /* libssl.dylib */,
+				9A8D0DC426B641C2000D2AD6 /* libcrypto.3.dylib */,
+				9A8D0DC326B641C2000D2AD6 /* libssl.3.dylib */,
 				9AFFC76226786DCC00C4104F /* libaura_apple.dylib */,
 			);
 			name = Frameworks;
