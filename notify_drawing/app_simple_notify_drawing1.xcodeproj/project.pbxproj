@@ -332,54 +332,6 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		9A81F10A274F442F003F38EC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/application_matter.txt",
-				"$(SRCROOT)/matter.txt",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "$HOME/bin/application_build_helper $SRCROOT\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		9AE24E861904CFFD001AEFFB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A415C0B2473938E00EF2BCD /* application.cpp in Sources */,
-				9A415C0C2473938E00EF2BCD /* main_frame.cpp in Sources */,
-				9A415C0D2473938E00EF2BCD /* impact.cpp in Sources */,
-				07B65520190F3001002DAADE /* framework.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AEB759F16F78DF10085103B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AE12EF62661F238009F476A /* _.cpp in Sources */,
-				9A8EB4C624498F1B0056E362 /* main_frame.cpp in Sources */,
-				9A8EB4C124498F1B0056E362 /* application.cpp in Sources */,
-				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
-				9A8EB4C324498F1B0056E362 /* impact.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
 /* Begin PBXTargetDependency section */
 		9AA6234A22BA3B940090BD40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
