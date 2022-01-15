@@ -20,7 +20,7 @@ namespace app_simple_box
       ~application() override;
 
 
-      ::e_status init_instance() override;
+      void init_instance() override;
 
       
       void on_request(::create * pcreate) override;

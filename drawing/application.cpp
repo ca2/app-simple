@@ -42,7 +42,7 @@ namespace app_simple_drawing
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       create_object_properties();

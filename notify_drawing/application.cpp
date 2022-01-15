@@ -23,7 +23,7 @@ namespace app_simple_notify_drawing
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();

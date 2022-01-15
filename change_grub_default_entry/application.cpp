@@ -50,7 +50,7 @@ namespace app_simple_change_grub_default_entry
 #endif
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();
