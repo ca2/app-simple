@@ -38,12 +38,14 @@ namespace app_simple_box
       ::factory::add_factory_item <::app_simple_box::main_frame >();
       ::factory::add_factory_item <::app_simple_box::impact >();
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
          "main",
@@ -61,7 +63,7 @@ namespace app_simple_box
 
       default_data_save_handling(id_simple_text);
 
-      return true;
+      //return true;
 
    }
 
