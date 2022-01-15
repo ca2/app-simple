@@ -67,7 +67,7 @@ namespace app_simple_networking_application
    }*/
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();

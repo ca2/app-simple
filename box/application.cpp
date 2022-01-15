@@ -29,7 +29,7 @@ namespace app_simple_box
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();
