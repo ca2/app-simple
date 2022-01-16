@@ -112,16 +112,18 @@ namespace app_simple_shader
 
       papplication->add_routine(id_no_client_frame, pprocedureRedraw);
 
-      auto estatus = __construct_new(m_prender);
+      //auto estatus = 
+      
+      __construct_new(m_prender);
 
-      if(!estatus)
-      {
+      //if(!estatus)
+      //{
 
-         pcreate->set_fail();
+      //   pcreate->set_fail();
 
-         return;
+      //   return;
 
-      }
+      //}
 
       //m_prender->initialize_application_consumer();
 
