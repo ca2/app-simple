@@ -31,12 +31,14 @@ namespace app_simple_notify_drawing
       ::factory::add_factory_item <::app_simple_notify_drawing::main_frame >();
       ::factory::add_factory_item <::app_simple_notify_drawing::impact >();
 
-      if (!::app_simple_drawing::application::init_instance())
-      {
+      ::app_simple_drawing::application::init_instance();
 
-         return false;
+      //if (!::app_simple_drawing::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       add_matter_locator("app-simple/drawing");
 
@@ -60,7 +62,7 @@ namespace app_simple_notify_drawing
 //
 //      add_document_template(pdoctemplate);
 
-      return true;
+      //return true;
 
    }
 

@@ -62,12 +62,14 @@ namespace app_simple_shader
 
       default_toggle_check_handling(id_no_client_frame);
 
-      if (!::aura::application::init_instance())
-      {
+      ::aura::application::init_instance();
 
-         return false;
+      //if (!::aura::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -79,7 +81,7 @@ namespace app_simple_shader
 
       m_ptemplateSimpleShaderMain = pdoctemplate;
 
-      return true;
+      //return true;
 
    }
 

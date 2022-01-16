@@ -188,7 +188,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -282,7 +281,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -376,7 +374,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -472,7 +469,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -578,7 +574,6 @@
     </Xdcmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='basis|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -667,7 +662,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>Disabled</Optimization>
@@ -756,7 +750,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stage|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -843,7 +836,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
-
     <ClCompile>
       <AdditionalOptions>/bigobj -Zm512</AdditionalOptions>
       <Optimization>MaxSpeed</Optimization>
@@ -973,36 +965,36 @@
     <ResourceCompile Include="..\..\..\archive\platform-windows\version.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\app\acme\acme.vcxproj">
+    <Text Include="deps.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\app\acme\acme.vcxproj">
       <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\apex\apex.vcxproj">
+    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\aqua\aqua.vcxproj">
+    <ProjectReference Include="..\..\app\aqua\aqua.vcxproj">
       <Project>{1b06fe5f-f783-41a1-ac68-0e02880dbbac}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">
+    <ProjectReference Include="..\..\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\axis\axis.vcxproj">
+    <ProjectReference Include="..\..\app\axis\axis.vcxproj">
       <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\base\base.vcxproj">
+    <ProjectReference Include="..\..\app\base\base.vcxproj">
       <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\core\core.vcxproj">
-      <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\bred\bred.vcxproj">
       <Project>{dfbf067f-aff9-4bd6-a5e1-72af984d1476}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\core\core.vcxproj">
+      <Project>{29c1eb5b-060e-4021-ae12-d1bcfb1b1359}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\app\shader\app_shader.vcxproj">
       <Project>{1b31139b-7cd2-44d7-9765-6e438ae15d9f}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="deps.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
