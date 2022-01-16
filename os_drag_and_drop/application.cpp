@@ -40,12 +40,14 @@ namespace simple_os_drag_and_drop
       ::factory::add_factory_item <::simple_os_drag_and_drop::main_impact >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::tab_view >();
 
-      if (!::aura::application::init_instance())
-      {
+      ::aura::application::init_instance();
 
-         return false;
+      //if (!::aura::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       add_matter_locator("app-simple/drawing");
 
@@ -68,10 +70,7 @@ namespace simple_os_drag_and_drop
       m_ptemplateSimpleDrawingView = pdoctemplate;
       add_document_template(pdoctemplate);
 
-
-
-
-      return true;
+      //return true;
 
    }
 

@@ -453,16 +453,18 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      estatus = pcontext->file().set(pathGrubEnv, memory);
+      //estatus =
+      
+      pcontext->file().set(pathGrubEnv, memory);
 
-      if (!estatus)
-      {
+      //if (!estatus)
+      //{
 
-         return estatus;
+      //   return estatus;
 
-      }
+      //}
 
-      return estatus;
+      //return estatus;
 
    }
 

@@ -88,18 +88,18 @@ namespace simple_os_drag_and_drop
 
       }
 
-      auto estatus = __construct_new(m_psimpleosdraganddrop);
+      //auto estatus = 
+      
+      __construct_new(m_psimpleosdraganddrop);
 
-      if (!estatus)
-      {
+      //if (!estatus)
+      //{
 
-         pcreate->set_fail();
+      //   pcreate->set_fail();
 
+      //   return;
 
-         return;
-
-
-      }
+      //}
 
       m_psimpleosdraganddrop->m_pimpact = this;
 

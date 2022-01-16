@@ -70,12 +70,14 @@ namespace app_simple_form
       ::factory::add_factory_item <::app_simple_form::form_001 >();
       ::factory::add_factory_item <::app_simple_form::form_002 >();
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -97,7 +99,7 @@ namespace app_simple_form
 
 
 
-      return true;
+      //return true;
 
    }
 
