@@ -10,7 +10,7 @@ namespace app_simple_application
 
       //m_bFramePayloadFlags = true;
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
 

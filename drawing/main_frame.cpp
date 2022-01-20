@@ -10,7 +10,7 @@ namespace app_simple_drawing
 
       //m_ewindowflag += window_flag_miniaturizable;
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
 
