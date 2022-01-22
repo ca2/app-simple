@@ -105,16 +105,18 @@ namespace app_simple_drawing
 
       }
 
-      auto estatus = __construct_new(m_prender);
+      //auto estatus = 
+      
+      __construct_new(m_prender);
 
-      if(!estatus)
-      {
+      //if(!estatus)
+      //{
 
-         pcreate->set_fail();
+      //   pcreate->set_fail();
 
-         return;
+      //   return;
 
-      }
+      //}
 
       m_prender->m_pimpact = this;
 

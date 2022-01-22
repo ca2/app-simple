@@ -34,19 +34,21 @@ namespace app_simple_networking_application
    }
 
 
-   ::e_status application::create_networking_application()
+   void application::create_networking_application()
    {
 
-      auto estatus = ::base::application::create_networking_application();
+      //auto estatus = 
+      
+      ::base::application::create_networking_application();
 
-      if (!estatus)
-      {
+      //if (!estatus)
+      //{
 
-         return estatus;
+      //   return estatus;
 
-      }
+      //}
 
-      return estatus;
+      //return estatus;
 
    }
 
@@ -67,7 +69,7 @@ namespace app_simple_networking_application
    }*/
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();
@@ -82,12 +84,14 @@ namespace app_simple_networking_application
 
       default_toggle_check_handling(id_no_client_frame);
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -105,7 +109,7 @@ namespace app_simple_networking_application
 
       default_data_save_handling(id_simple_text);
 
-      return true;
+      //return true;
 
    }
 

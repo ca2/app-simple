@@ -8,7 +8,7 @@ namespace app_simple_networking_application
    frame::frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
    }
 

@@ -157,12 +157,14 @@ namespace app_simple_drawing
 
       strDataId = m_pimpact->m_id;
 
-      if (!m_papplication->data_set(strDataId + ".font_family", m_strFont1))
-      {
+      m_papplication->data_set(strDataId + ".font_family", m_strFont1);
 
-         return error_failed;
+      //if (!m_papplication->data_set(strDataId + ".font_family", m_strFont1))
+      //{
 
-      }
+      //   return error_failed;
+
+      //}
 
       m_strFont1 = strFont;
 

@@ -10,7 +10,7 @@ namespace app_simple_networking_application
 
 //      set_bitmap_source("Simple Drawing!!");
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
 

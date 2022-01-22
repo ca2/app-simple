@@ -8,7 +8,7 @@ namespace app_simple_change_grub_default_entry
    main_frame::main_frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       m_bDefaultNotifyIcon = true;
 
