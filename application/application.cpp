@@ -10,6 +10,8 @@ namespace app_simple_application
    application::application()
    {
 
+      //os_message_box("Message", "Title", e_message_box_yes_no_cancel);
+
       //m_bLocalization = true;
       
       m_bImaging = false;

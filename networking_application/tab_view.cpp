@@ -158,7 +158,7 @@ namespace app_simple_networking_application
 
       }
 
-      switch(pimpactdata->m_id)
+      switch(pimpactdata->m_id.i64())
       {
       case MENU_IMPACT:
       {
