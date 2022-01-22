@@ -8,7 +8,7 @@ namespace app_simple_shader
    frame::frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
    }
 

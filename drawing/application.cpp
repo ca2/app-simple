@@ -42,7 +42,7 @@ namespace app_simple_drawing
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       create_object_properties();
@@ -98,12 +98,14 @@ namespace app_simple_drawing
 
       default_toggle_check_handling(id_no_client_frame);
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -121,7 +123,7 @@ namespace app_simple_drawing
 
       default_data_save_handling(id_simple_text);
 
-      return true;
+      //return true;
 
    }
 

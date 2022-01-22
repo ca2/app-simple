@@ -8,7 +8,7 @@ namespace app_simple_drawing
    frame::frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
    }
 

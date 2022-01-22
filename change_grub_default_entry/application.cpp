@@ -50,7 +50,7 @@ namespace app_simple_change_grub_default_entry
 #endif
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();
@@ -65,12 +65,14 @@ namespace app_simple_change_grub_default_entry
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                               "main",
@@ -83,7 +85,7 @@ namespace app_simple_change_grub_default_entry
 
       add_document_template(pdoctemplate);
 
-      return true;
+      //return true;
 
    }
 

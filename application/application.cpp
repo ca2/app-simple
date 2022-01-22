@@ -10,6 +10,8 @@ namespace app_simple_application
    application::application()
    {
 
+      //os_message_box("Message", "Title", e_message_box_yes_no_cancel);
+
       //m_bLocalization = true;
       
       m_bImaging = false;
@@ -33,7 +35,7 @@ namespace app_simple_application
    }
 
 
-   ::e_status application::init_instance()
+   void application::init_instance()
    {
 
       set_local_data();
@@ -42,12 +44,14 @@ namespace app_simple_application
       ::factory::add_factory_item <::app_simple_application::main_frame >();
       ::factory::add_factory_item <::app_simple_application::impact >();
 
-      if (!::base::application::init_instance())
-      {
+      ::base::application::init_instance();
 
-         return false;
+      //if (!::base::application::init_instance())
+      //{
 
-      }
+      //   return false;
+
+      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
@@ -63,7 +67,7 @@ namespace app_simple_application
 
       puser->document_manager()->add_document_template(pdoctemplate);
 
-      return true;
+      //return true;
 
    }
 
