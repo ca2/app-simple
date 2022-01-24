@@ -64,8 +64,8 @@ add_dependencies(app_simple_networking_application experience_core)
 
 list(APPEND library_link_directories
    ${LIBRARY_OUTPUT_PATH}
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/library/x64/basis
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../archive/storage-${PLATFORM_NAME}/third/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${PLATFORM_NAME}/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${PLATFORM_NAME}/third/library/x64/basis
    )
 
 

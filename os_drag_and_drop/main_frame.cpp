@@ -12,7 +12,7 @@ namespace simple_os_drag_and_drop
 
       set_bitmap_source("Simple Drag'n'Drop!!");
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
       window_enable_full_screen();
 
