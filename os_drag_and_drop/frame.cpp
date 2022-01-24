@@ -8,7 +8,7 @@ namespace simple_os_drag_and_drop
    frame::frame()
    {
 
-      m_bDefaultCreateToolbar = false;
+      //m_bDefaultCreateToolbar = false;
 
    }
 
