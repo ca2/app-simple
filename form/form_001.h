@@ -42,7 +42,7 @@ namespace app_simple_form
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
 
-
+      
    };
 
 

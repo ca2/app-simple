@@ -13,8 +13,10 @@ namespace app_simple_shortcut
 
       __composite(::user::still)             m_pstillFolder;
       __composite(::user::plain_edit)        m_peditFolder;
-      __composite(::user::still)             m_pstill;
-      __composite(::user::plain_edit)        m_pedit;
+      __composite(::user::still)             m_pstillSource;
+      __composite(::user::plain_edit)        m_peditSource;
+      __composite(::user::still)             m_pstillTarget;
+      __composite(::user::plain_edit)        m_peditTarget;
       __composite(::user::button)            m_pbuttonClear;
       __composite(::user::button)            m_pbuttonSend;
       __composite(::user::still)             m_pstillReceiver;
@@ -43,6 +45,8 @@ namespace app_simple_shortcut
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       virtual void handle(::subject * psubject, ::context * pcontext) override;
+
+      virtual string get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bPreview);
 
 
    };
