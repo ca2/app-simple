@@ -12,10 +12,12 @@ namespace app_simple_shortcut
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
+
 
       void assert_valid() const override;
       void dump(dump_context & dumpcontext) const override;
+
 
 #ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;

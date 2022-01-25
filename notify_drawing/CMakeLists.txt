@@ -67,7 +67,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories
 target_compile_definitions(app_simple_notify_drawing PRIVATE _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY)
 
 
-add_executable(_${PROJECT_NAME} platform/${SLASHED_PLATFORM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
 
 
 list(APPEND executable_references

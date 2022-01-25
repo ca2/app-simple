@@ -64,8 +64,8 @@ add_dependencies(app_simple_networking_application experience_core)
 
 list(APPEND library_link_directories
    ${LIBRARY_OUTPUT_PATH}
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${PLATFORM_NAME}/library/x64/basis
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${PLATFORM_NAME}/third/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${OPERATING_SYSTEM_NAME}/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${OPERATING_SYSTEM_NAME}/third/library/x64/basis
    )
 
 
@@ -90,7 +90,7 @@ target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
 
 
 
-add_executable(_${PROJECT_NAME} platform/${SLASHED_PLATFORM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
 target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
 

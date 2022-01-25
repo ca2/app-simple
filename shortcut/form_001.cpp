@@ -1,4 +1,6 @@
 #include "framework.h"
+#include "acme/filesystem/filesystem/acme_dir.h"
+#include "acme/filesystem/filesystem/acme_file.h"
 #include <math.h>
 
 
@@ -87,9 +89,13 @@ namespace app_simple_shortcut
 
       __compose_new(m_peditFolder);
 
-      __compose_new(m_pstill);
+      __compose_new(m_pstillSource);
 
-      __compose_new(m_pedit);
+      __compose_new(m_peditSource);
+
+      __compose_new(m_pstillTarget);
+
+      __compose_new(m_peditTarget);
 
       __compose_new(m_pbuttonClear);
 
@@ -103,11 +109,17 @@ namespace app_simple_shortcut
 
       m_peditFolder->add_handler(this);
 
-      m_pstill->create_control(this, "still");
+      m_pstillSource->create_control(this, "still_source");
 
-      m_pedit->create_control(this, "edit");
+      m_peditSource->create_control(this, "edit_source");
 
-      m_pedit->add_handler(this);
+      m_peditSource->add_handler(this);
+
+      m_pstillTarget->create_control(this, "still_target");
+
+      m_peditTarget->create_control(this, "edit_target");
+
+      m_peditTarget->add_handler(this);
 
       m_pbuttonClear->create_control(this, "clear_button");
 
@@ -119,25 +131,39 @@ namespace app_simple_shortcut
 
       m_pstillFolder->set_window_text("Folder:");
 
-      m_pstill->set_window_text("Enter new text:");
+      m_pstillSource->set_window_text("Source:");
+
+      m_pstillTarget->set_window_text("Target:");
 
       m_pstillReceiver->create_control(this, "still");
 
       m_pstillReceiver->set_window_text("(Waiting to receive...)");
 
-      m_pedit->m_strEmtpyText = "Enter New Text Here";
+      m_peditFolder->m_strEmtpyText = "Enter folder where to fix links";
 
-      string strInitialText;
+      m_peditSource->m_strEmtpyText = "Enter text to search for";
+
+      m_peditTarget->m_strEmtpyText = "Enter text do substitution";
+
+      
 
       auto papplication = get_application();
 
-      strInitialText = papplication->data_get("last_text");
+      auto strLastFolder = papplication->data_get("last_folder");
 
-      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+      m_peditFolder->_001SetText(strLastFolder, ::e_source_initialize);
+
+      auto strLastSource = papplication->data_get("last_source");
+
+      m_peditSource->_001SetText(strLastSource, ::e_source_initialize);
+
+      auto strLastTarget = papplication->data_get("last_target");
+
+      m_peditTarget->_001SetText(strLastTarget, ::e_source_initialize);
 
       m_pbuttonClear->set_window_text("Clear");
 
-      m_pbuttonSend->set_window_text("Send");
+      m_pbuttonSend->set_window_text("Preview");
 
    }
 
@@ -151,54 +177,115 @@ namespace app_simple_shortcut
 
       double y = 10.;
 
-      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+      auto rectangleClient = get_client_rect();
 
-      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
+      {
 
-      y += rectangleStillMargin.top;
+         auto sizeStill = m_pstillFolder->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pstillFolder->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+         auto rectangleStillMargin = m_pstillFolder->get_margin(m_pstillFolder->get_style(pgraphics));
 
-      y += sizeStill.cy;
+         y += rectangleStillMargin.top;
 
-      y += rectangleStillMargin.bottom;
+         m_pstillFolder->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+         y += sizeStill.cy;
 
-      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
+         y += rectangleStillMargin.bottom;
 
-      y += rectangleEditMargin.top;
+      }
 
-      m_peditFolder->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+      {
 
-      y += sizeEdit.cy;
+         auto sizeEdit = m_peditFolder->_001CalculateAdjustedFittingSize(pgraphics);
 
-      y += rectangleEditMargin.bottom;
+         auto rectangleEditMargin = m_peditFolder->get_margin(m_peditFolder->get_style(pgraphics), ::e_element_none);
+
+         y += rectangleEditMargin.top;
+
+         m_peditFolder->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+
+         y += sizeEdit.cy;
+
+         y += rectangleEditMargin.bottom;
+
+      }
 
 
-      y += rectangleStillMargin.top;
+      {
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+         auto sizeStill = m_pstillSource->_001CalculateAdjustedFittingSize(pgraphics);
 
-      y += sizeStill.cy;
+         auto rectangleStillMargin = m_pstillSource->get_margin(m_pstillSource->get_style(pgraphics));
 
-      y += rectangleStillMargin.bottom;
+         y += rectangleStillMargin.top;
 
-      y += rectangleEditMargin.top;
+         m_pstillSource->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+         y += sizeStill.cy;
 
-      y += sizeEdit.cy;
+         y += rectangleStillMargin.bottom;
 
-      y += rectangleEditMargin.bottom;
+      }
+
+      {
+
+         auto sizeEdit = m_peditSource->_001CalculateAdjustedFittingSize(pgraphics);
+
+         auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pgraphics), ::e_element_none);
+
+         y += rectangleEditMargin.top;
+
+         m_peditSource->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+
+         y += sizeEdit.cy;
+
+         y += rectangleEditMargin.bottom;
+
+      }
+
+      {
+
+         auto sizeStill = m_pstillTarget->_001CalculateAdjustedFittingSize(pgraphics);
+
+         auto rectangleStillMargin = m_pstillTarget->get_margin(m_pstillTarget->get_style(pgraphics));
+
+         y += rectangleStillMargin.top;
+
+         m_pstillTarget->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+
+         y += sizeStill.cy;
+
+         y += rectangleStillMargin.bottom;
+
+      }
+
+      ::size_i32 sizeEdit;
+
+      {
+
+         sizeEdit = m_peditTarget->_001CalculateAdjustedFittingSize(pgraphics);
+
+         auto rectangleEditMargin = m_peditTarget->get_margin(m_peditTarget->get_style(pgraphics), ::e_element_none);
+
+         y += rectangleEditMargin.top;
+
+         m_peditTarget->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+
+         y += sizeEdit.cy;
+
+         y += rectangleEditMargin.bottom;
+
+      }
+
 
       auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
 
       auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
+      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditTarget->get_style(pgraphics));
 
-      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
+      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditTarget->get_style(pgraphics));
 
       y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
@@ -212,7 +299,9 @@ namespace app_simple_shortcut
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy * 5));
+      m_pstillReceiver->m_ealignText = e_align_top_left;
+
+      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, 4000, sizeEdit.cy * 100));
 
    }
 
@@ -226,12 +315,12 @@ namespace app_simple_shortcut
          if (psubject->m_actioncontext.is_user_source())
          {
 
-            if (psubject->m_puserelement->m_id == "edit")
+            if (psubject->m_puserelement->m_id == "edit_folder")
             {
 
                string strText;
 
-               m_pedit->_001GetText(strText);
+               m_peditFolder->_001GetText(strText);
 
                auto papplication = get_application();
 
@@ -242,7 +331,51 @@ namespace app_simple_shortcut
 
                }
 
-               papplication->data_set("last_text", strText);
+               papplication->data_set("last_folder", strText);
+
+               m_pbuttonSend->set_window_text("Preview");
+
+            }
+            else if (psubject->m_puserelement->m_id == "edit_source")
+            {
+
+               string strText;
+
+               m_peditSource->_001GetText(strText);
+
+               auto papplication = get_application();
+
+               if (strText == "This is a test. This is a test")
+               {
+
+                  output_debug_string("");
+
+               }
+
+               papplication->data_set("last_source", strText);
+
+               m_pbuttonSend->set_window_text("Preview");
+
+            }
+            else if (psubject->m_puserelement->m_id == "edit_target")
+            {
+
+               string strText;
+
+               m_peditTarget->_001GetText(strText);
+
+               auto papplication = get_application();
+
+               if (strText == "This is a test. This is a test")
+               {
+
+                  output_debug_string("");
+
+               }
+
+               papplication->data_set("last_target", strText);
+
+               m_pbuttonSend->set_window_text("Preview");
 
             }
 
@@ -288,7 +421,9 @@ namespace app_simple_shortcut
    void form_001::_001OnClearButton(::message::message * pmessage)
    {
 
-      m_pedit->_001SetText("", ::e_source_user);
+      m_peditSource->_001SetText("", ::e_source_user);
+
+      m_peditTarget->_001SetText("", ::e_source_user);
 
       pmessage->m_bRet = true;
 
@@ -298,17 +433,127 @@ namespace app_simple_shortcut
    void form_001::_001OnSendButton(::message::message * pmessage)
    {
 
-      string strText;
+      string strSend;
 
-      m_pedit->_001GetText(strText);
+      m_pbuttonSend->get_window_text(strSend);
 
-      output_error_message("send_button clicked\nText: " + strText);
+      bool bPreview = strSend == "Preview";
 
-      m_pstillReceiver->set_window_text(strText);
+      string strFolder;
+
+      m_peditFolder->_001GetText(strFolder);
+
+      string strSource;
+
+      m_peditSource->_001GetText(strSource);
+
+      string strTarget;
+
+      m_peditTarget->_001GetText(strTarget);
+
+
+      string strMessage;
+
+      strMessage.format("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
+         strSource.c_str(), strFolder.c_str(), strTarget.c_str());
+
+      string strAction = get_windows_file_action(strTarget, strFolder, strSource, bPreview);
+
+      strMessage += strAction;
+
+      m_pstillReceiver->set_window_text(strMessage);
 
       m_pstillReceiver->post_redraw();
 
+      if (bPreview)
+      {
+
+         m_pbuttonSend->set_window_text("Replace");
+
+      }
+
       pmessage->m_bRet = true;
+
+
+
+   }
+
+   
+   string form_001::get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bPreview)
+   {
+
+      file::listing listing;
+
+      m_pcontext->m_papexcontext->dir().ls_file_pattern(listing, strFolder, { "*.lnk" });
+
+      string strAction;
+
+      if (listing.is_empty())
+      {
+
+         strAction = "No link files in Folder '" + strFolder + "'";
+
+         return strAction;
+
+      }
+
+      for (auto & path : listing)
+      {
+
+         ::file::path pathLinkTarget;
+
+         string strLinkFolder;
+
+         m_pcontext->m_papexcontext->os_context()->resolve_link(pathLinkTarget, path, &strLinkFolder);
+
+         ::file::path pathNewTarget(pathLinkTarget);
+
+         string strNewFolder(strLinkFolder);
+         
+         pathNewTarget.replace_with(strTarget, strSource);
+
+         strNewFolder.replace_with(strTarget, strSource);
+
+         if (pathNewTarget != pathLinkTarget)
+         {
+
+            bool bIsDirTarget = m_psystem->m_pacmedir->is(pathNewTarget);
+
+            bool bIsFileTarget = m_psystem->m_pacmefile->exists(pathNewTarget);
+
+            bool bIs = bIsDirTarget || bIsFileTarget;
+
+            strAction += (!bIs ? "xxx " : "") + path + ": " + pathNewTarget + " <== " + pathLinkTarget + "\n";
+
+            if (!bIsDirTarget && !bPreview)
+            {
+
+               m_pcontext->m_papexcontext->os_context()->edit_link_target(pathNewTarget, path);
+
+            }
+
+         }
+           
+         if (strNewFolder != strLinkFolder)
+         {
+
+            bool bIsDirTarget = m_psystem->m_pacmedir->is(strNewFolder);
+
+            strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewFolder + " <== " + strLinkFolder + "\n";
+
+            if (!bIsDirTarget && !bPreview)
+            {
+
+               m_pcontext->m_papexcontext->os_context()->edit_link_folder(strNewFolder, path);
+
+            }
+
+         }
+
+      }
+
+      return strAction;
+
 
    }
 

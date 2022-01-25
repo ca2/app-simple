@@ -67,7 +67,7 @@ target_compile_definitions(app_simple_change_grub_default_entry PRIVATE _APP_SIM
 
 
 
-add_executable(_${PROJECT_NAME} platform/${SLASHED_PLATFORM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
 
 
 
