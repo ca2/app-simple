@@ -44,7 +44,7 @@ namespace app_simple_shortcut
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
       virtual string get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bPreview);
 

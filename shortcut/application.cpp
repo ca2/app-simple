@@ -164,7 +164,7 @@ namespace app_simple_shortcut
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 

@@ -151,7 +151,7 @@ namespace app_simple_drawing
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       if (psubject->id() == id_simple_checkbox

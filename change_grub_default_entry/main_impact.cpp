@@ -35,7 +35,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   //void main_impact::handle(::subject * psubject, ::context * pcontext)
+   //void main_impact::handle(::topic * psubject, ::context * pcontext)
    //{
 
    //   ::user::split_view::handle(psubject, pcontext);
@@ -135,10 +135,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void main_impact::handle(::subject * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * psubject, ::context * pcontext)
    {
 
-      if(psubject->m_id == ::e_subject_click)
+      if(psubject->m_id == ::id_click)
       {
 
          if(psubject->user_element_id() == "simple_change_grub_default_entry_toggle")

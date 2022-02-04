@@ -38,7 +38,7 @@ namespace app_simple_form
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
 
    };

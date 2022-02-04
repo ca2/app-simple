@@ -78,9 +78,9 @@ namespace app_simple_drawing
 
       stra.explode("->:<-",strId);
 
-      string strViewId = get_view_id().to_string();
+      string strImpactId = get_view_id().to_string();
 
-      if(::str::begins(strViewId, "drawing"))
+      if(::str::begins(strImpactId, "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -140,7 +140,7 @@ namespace app_simple_drawing
 
          pview->m_prender->initialize_simple_drawing(atoi(strId));
 
-         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
@@ -149,7 +149,7 @@ namespace app_simple_drawing
    }
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
 

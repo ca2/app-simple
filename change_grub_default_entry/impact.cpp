@@ -108,7 +108,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void impact::handle(::subject * psubject, ::context * pcontext)
+   void impact::handle(::topic * psubject, ::context * pcontext)
    {
 
       ::user::impact::handle(psubject, pcontext);

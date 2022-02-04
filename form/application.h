@@ -17,7 +17,7 @@ namespace app_simple_form
       ::user::document *                     m_pdocMenu;
       ::user::plain_edit_view *              m_prollfps;
       ::user::single_document_template *     m_ptemplateBeatMapperMain;
-      ::user::single_document_template *     m_ptemplateBeatMapperView;
+      ::user::single_document_template *     m_ptemplateBeatMapperImpact;
 
 
       application();

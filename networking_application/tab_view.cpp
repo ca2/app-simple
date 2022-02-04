@@ -178,7 +178,7 @@ namespace app_simple_networking_application
 
          pview->m_id = pimpactdata->m_id;
 
-         pimpactdata->m_eflag.add(::user::e_flag_hide_topic_on_show);
+         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
       }
 
@@ -189,14 +189,14 @@ namespace app_simple_networking_application
 
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
 
    }
 
 
-   //void tab_view::handle(::subject * psubject, ::context * pcontext)
+   //void tab_view::handle(::topic * psubject, ::context * pcontext)
    //{
 
 

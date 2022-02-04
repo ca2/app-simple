@@ -199,7 +199,7 @@ namespace app_simple_shortcut
    }
 
 
-   //bool tab_view::handle(::subject * psubject, ::context * pcontext)
+   //bool tab_view::handle(::topic * psubject, ::context * pcontext)
    //{
 
    //   if(m_pdocMenu != nullptr
@@ -207,12 +207,12 @@ namespace app_simple_shortcut
    //         && psubject->user_interaction() != nullptr)
    //   {
 
-   //      if(psubject->m_id == ::e_subject_after_change_text)
+   //      if(psubject->m_id == ::id_after_change_text)
    //      {
 
 
    //      }
-   //      else if (psubject->m_id == ::e_subject_set_check && psubject->user_interaction() != NULL)
+   //      else if (psubject->m_id == ::id_set_check && psubject->user_interaction() != NULL)
    //      {
 
    //         string strCheck = psubject->user_element_id();
@@ -240,7 +240,7 @@ namespace app_simple_shortcut
    //}
 
 
-   void tab_view::handle(::subject * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * psubject, ::context * pcontext)
    {
 
       //////__update(::update)
@@ -251,13 +251,13 @@ namespace app_simple_shortcut
       //         && m_pviewLast != NULL)
       //   {
 
-      //      if(pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_sel)
+      //      if(pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_sel)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
 
       //      }
-      //      else if (pupdate->m_pcontrolevent->m_eevent == ::e_subject_after_change_cur_hover)
+      //      else if (pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_hover)
       //      {
 
       //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
@@ -272,12 +272,12 @@ namespace app_simple_shortcut
          && ::is_set(psubject->m_puserelement))
       {
 
-         if (psubject->m_id == ::e_subject_after_change_text)
+         if (psubject->m_id == ::id_after_change_text)
          {
 
 
          }
-         else if (psubject->m_id == ::e_subject_set_check && ::is_set(psubject->m_puserelement))
+         else if (psubject->m_id == ::id_set_check && ::is_set(psubject->m_puserelement))
          {
 
             string strCheck = psubject->m_puserelement->m_id;
