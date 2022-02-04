@@ -31,7 +31,7 @@ namespace app_simple_networking_application
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
       ::user::document * get_document();
 

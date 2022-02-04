@@ -168,10 +168,10 @@ namespace app_simple_shortcut
    }
 
 
-   void form_002::handle(::subject * psubject, ::context * pcontext)
+   void form_002::handle(::topic * psubject, ::context * pcontext)
    {
 
-//      if (psubject->m_id == ::e_subject_click)
+//      if (psubject->m_id == ::id_click)
 //      {
 //
 //         if (psubject->m_puserelement->m_id == "send_button")
@@ -218,7 +218,7 @@ namespace app_simple_shortcut
    void form_002::_001OnSendButton(::message::message * pmessage)
    {
 
-//      if (psubject->m_id == ::e_subject_click)
+//      if (psubject->m_id == ::id_click)
 //      {
 //
 //         if (psubject->m_puserelement->m_id == "send_button")

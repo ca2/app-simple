@@ -36,7 +36,7 @@ namespace app_simple_change_grub_default_entry
       bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
       void on_change_cur_sel() override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

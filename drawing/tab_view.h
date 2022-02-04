@@ -38,7 +38,7 @@ namespace app_simple_drawing
 
       void on_change_cur_sel() override;
 
-      void handle(::subject * psubject, ::context * pcontext) override;
+      void handle(::topic * psubject, ::context * pcontext) override;
 
 
    };

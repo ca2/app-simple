@@ -12,7 +12,7 @@ namespace app_simple_form
    {
 
       m_ptemplateBeatMapperMain  = NULL;
-      m_ptemplateBeatMapperView  = NULL;
+      m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-simple/form";
       m_strAppName               = "app-simple/form";
@@ -93,7 +93,7 @@ namespace app_simple_form
                           __type(document),
                           __type(frame),
                           __type(main_impact)));
-      m_ptemplateBeatMapperView = pdoctemplate;
+      m_ptemplateBeatMapperImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
@@ -157,14 +157,14 @@ namespace app_simple_form
       if (pcreate->m_pcommandline->m_varFile.has_char())
       {
 
-         m_ptemplateBeatMapperView->do_request(pcreate);
+         m_ptemplateBeatMapperImpact->do_request(pcreate);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_typed_view < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 

@@ -25,7 +25,7 @@ namespace app_simple_shortcut
 
       void on_create_split_impact() override;
 
-      virtual void handle(::subject * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * psubject, ::context * pcontext) override;
 
 //      virtual bool BaseOnControlEvent(::user::control_event * pevent);
 

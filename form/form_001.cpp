@@ -188,10 +188,10 @@ namespace app_simple_form
    }
 
 
-   void form_001::handle(::subject * psubject, ::context * pcontext)
+   void form_001::handle(::topic * psubject, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::e_subject_after_change_text)
+      if (psubject->m_id == ::id_after_change_text)
       {
 
          if (psubject->m_actioncontext.is_user_source())
@@ -220,7 +220,7 @@ namespace app_simple_form
          }
 
       }
-//      else if (psubject->m_id == ::e_subject_click)
+//      else if (psubject->m_id == ::id_click)
 //      {
 //
 //         if (psubject->m_puserelement->m_id == "clear_button")

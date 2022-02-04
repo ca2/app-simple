@@ -190,10 +190,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_001::handle(::subject * psubject, ::context * pcontext)
+   void simple_change_grub_default_entry_001::handle(::topic * psubject, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::e_subject_after_change_cur_sel)
+      if (psubject->m_id == ::id_after_change_cur_sel)
       {
 
          if (psubject->m_puserelement->m_id == "list_box")
@@ -215,7 +215,7 @@ namespace app_simple_change_grub_default_entry
          }
 
       }
-      else if (psubject->m_id == ::e_subject_after_change_text)
+      else if (psubject->m_id == ::id_after_change_text)
       {
 
          if (psubject->m_puserelement->m_id == "edit")
@@ -234,7 +234,7 @@ namespace app_simple_change_grub_default_entry
          }
 
       }
-      else if (psubject->m_id == ::e_subject_click)
+      else if (psubject->m_id == ::id_click)
       {
 
          if (psubject->m_puserelement->m_id == "clear_button")
