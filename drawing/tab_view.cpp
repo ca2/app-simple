@@ -149,7 +149,7 @@ namespace app_simple_drawing
    }
 
 
-   void tab_view::handle(::topic * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
 

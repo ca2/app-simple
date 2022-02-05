@@ -29,7 +29,7 @@ namespace app_simple_application
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::topic * psubject, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::context * pcontext) override;
 
       document * get_document();
 

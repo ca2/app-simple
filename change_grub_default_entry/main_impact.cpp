@@ -35,10 +35,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   //void main_impact::handle(::topic * psubject, ::context * pcontext)
+   //void main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   ::user::split_view::handle(psubject, pcontext);
+   //   ::user::split_view::handle(ptopic, pcontext);
 
    //}
 
@@ -135,20 +135,20 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void main_impact::handle(::topic * psubject, ::context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(psubject->m_id == ::id_click)
+      if(ptopic->m_id == ::id_click)
       {
 
-         if(psubject->user_element_id() == "simple_change_grub_default_entry_toggle")
+         if(ptopic->user_element_id() == "simple_change_grub_default_entry_toggle")
          {
 
             m_pimpact->set_need_layout();
 
             //return true;
 
-            psubject->m_bRet = true;
+            ptopic->m_bRet = true;
 
             return;
 

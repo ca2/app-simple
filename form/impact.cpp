@@ -108,10 +108,10 @@ namespace app_simple_form
    }
 
 
-   void impact::handle(::topic * psubject, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      ::user::impact::handle(psubject, pcontext);
+      ::user::impact::handle(ptopic, pcontext);
    }
 
 
