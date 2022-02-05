@@ -57,10 +57,10 @@ namespace app_simple_shortcut
    }
 
 
-   void form::assert_valid() const
+   void form::assert_ok() const
    {
 
-      ::user::form_view::assert_valid();
+      ::user::form_view::assert_ok();
 
    }
 

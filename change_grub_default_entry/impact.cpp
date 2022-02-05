@@ -24,10 +24,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 

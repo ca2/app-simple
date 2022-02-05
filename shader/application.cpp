@@ -185,23 +185,23 @@ namespace app_simple_shader
    }
 
 
-   ::id application::translate_property_id(const ::id & id)
+   ::atom application::translate_property_id(const ::atom & atom)
    {
 
-      if(id == "simple_checkbox")
+      if(atom == "simple_checkbox")
       {
 
          return id_simple_checkbox;
 
       }
-      else if(id == "simple_text")
+      else if(atom == "simple_text")
       {
 
          return id_simple_text;
 
       }
 
-      return id;
+      return atom;
 
    }
 

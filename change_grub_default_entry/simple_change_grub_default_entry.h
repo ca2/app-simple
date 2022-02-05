@@ -19,7 +19,7 @@ namespace app_simple_change_grub_default_entry
       simple_change_grub_default_entry();
       virtual ~simple_change_grub_default_entry();
 
-      void assert_valid() const override;
+      void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;
 
 

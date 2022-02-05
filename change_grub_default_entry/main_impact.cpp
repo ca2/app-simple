@@ -19,10 +19,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void main_impact::assert_valid() const
+   void main_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_valid();
+      ::user::split_view::assert_ok();
 
    }
 
@@ -148,7 +148,7 @@ namespace app_simple_change_grub_default_entry
 
             //return true;
 
-            ptopic->m_bRet = true;
+            ptopic->m_pextendedtopic->m_bRet = true;
 
             return;
 
