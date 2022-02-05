@@ -18,10 +18,10 @@ namespace app_simple_notify_drawing
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 

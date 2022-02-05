@@ -1,6 +1,6 @@
 #include "framework.h"
 #include <math.h>
-#include "acme/constant/id.h"
+#include "acme/id.h"
 #include "aura/graphics/draw2d/_draw2d.h"
 #include "acme/platform/hyperlink.h"
 
@@ -29,10 +29,10 @@ namespace app_simple_networking_application
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 

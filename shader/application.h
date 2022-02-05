@@ -60,7 +60,7 @@ namespace app_simple_shader
       //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
 
-      virtual ::id translate_property_id(const ::id& id) override;
+      virtual ::atom translate_property_id(const ::atom& atom) override;
    };
 
 

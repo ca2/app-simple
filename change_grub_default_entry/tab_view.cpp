@@ -21,10 +21,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void tab_view::assert_valid() const
+   void tab_view::assert_ok() const
    {
 
-      ::user::impact::assert_valid();
+      ::user::impact::assert_ok();
 
    }
 
@@ -221,7 +221,7 @@ namespace app_simple_change_grub_default_entry
 
    //   if(m_pdocMenu != nullptr
    //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
-   //         && ptopic->user_interaction() != nullptr)
+   //         && ptopic->m_pextendedtopic->user_interaction() != nullptr)
    //   {
 
    //      if(ptopic->m_id == ::id_after_change_text)
@@ -229,7 +229,7 @@ namespace app_simple_change_grub_default_entry
 
 
    //      }
-   //      else if (ptopic->m_id == ::id_set_check && ptopic->user_interaction() != NULL)
+   //      else if (ptopic->m_id == ::id_set_check && ptopic->m_pextendedtopic->user_interaction() != NULL)
    //      {
 
    //         string strCheck = ptopic->user_element_id();
@@ -237,12 +237,12 @@ namespace app_simple_change_grub_default_entry
    //         if (::str::begins_eat_ci(strCheck, "bilbo"))
    //         {
 
-   //            if (ptopic->user_interaction() != NULL && ptopic->m_actioncontext.is_user_source())
+   //            if (ptopic->m_pextendedtopic->user_interaction() != NULL && ptopic->m_pextendedtopic->m_actioncontext.is_user_source())
    //            {
 
    //               //int iCheck = atoi(strCheck);
 
-   //               //__pointer(::user::check) pcheck = ptopic->user_interaction();
+   //               //__pointer(::user::check) pcheck = ptopic->m_pextendedtopic->user_interaction();
 
    //            }
 
@@ -264,7 +264,7 @@ namespace app_simple_change_grub_default_entry
       //{
 
       //   if (ptopic->m_id == id_control_event
-      //         && ptopic->user_interaction() == m_pfontview
+      //         && ptopic->m_pextendedtopic->user_interaction() == m_pfontview
       //         && m_pviewLast != NULL)
       //   {
 
@@ -287,7 +287,7 @@ namespace app_simple_change_grub_default_entry
 
       if (m_pdocMenu != nullptr
          && dynamic_cast <::user::impact*> (ptopic->m_pform) == m_pdocMenu->get_view(0)
-         && ptopic->user_interaction() != nullptr)
+         && ptopic->m_pextendedtopic->user_interaction() != nullptr)
       {
 
          if (ptopic->m_id == ::id_after_change_text)
@@ -295,7 +295,7 @@ namespace app_simple_change_grub_default_entry
 
 
          }
-         else if (ptopic->m_id == ::id_set_check && ptopic->user_interaction() != NULL)
+         else if (ptopic->m_id == ::id_set_check && ptopic->m_pextendedtopic->user_interaction() != NULL)
          {
 
             string strCheck = ptopic->user_element_id();
@@ -303,12 +303,12 @@ namespace app_simple_change_grub_default_entry
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (ptopic->user_interaction() != NULL && ptopic->m_actioncontext.is_user_source())
+               if (ptopic->m_pextendedtopic->user_interaction() != NULL && ptopic->m_pextendedtopic->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->m_pextendedtopic->user_interaction();
 
                }
 

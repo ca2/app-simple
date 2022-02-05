@@ -19,10 +19,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_002::assert_valid() const
+   void simple_change_grub_default_entry_002::assert_ok() const
    {
 
-      simple_change_grub_default_entry::assert_valid();
+      simple_change_grub_default_entry::assert_ok();
 
    }
 
@@ -160,7 +160,7 @@ namespace app_simple_change_grub_default_entry
       if (ptopic->m_id == ::id_click)
       {
 
-         if (ptopic->m_puserelement->m_id == "send_button")
+         if (ptopic->m_pextendedtopic->m_puserelement->m_id == "send_button")
          {
 
             string strText1;

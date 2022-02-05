@@ -1,6 +1,6 @@
 #include "framework.h"
 #include <math.h>
-#include "acme/constant/id.h"
+#include "acme/id.h"
 #include "aura/graphics/draw2d/_draw2d.h"
 #include "aura/graphics/draw2d/save_image.h"
 
@@ -29,10 +29,10 @@ namespace app_simple_shader
    }
 
 
-   void impact::assert_valid() const
+   void impact::assert_ok() const
    {
 
-      user::box::assert_valid();
+      user::box::assert_ok();
 
    }
 
@@ -152,25 +152,25 @@ namespace app_simple_shader
 
       {
 
-         ::id id = id_simple_text;
+         ::atom atom = id_simple_text;
 
-         auto pproperty = papplication->fetch_property(id);
+         auto pproperty = papplication->fetch_property(atom);
 
          ::payload payload;
 
-         if (papplication->data_get(id, payload))
+         if (papplication->data_get(atom, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = papplication->translate_property_id(id);
+         auto idRunnable = papplication->translate_property_id(atom);
 
-         papplication->add_routine(idRunnable, __routine([this, id]()
+         papplication->add_routine(idRunnable, __routine([this, atom]()
          {
 
-            auto pproperty = fetch_property(id);
+            auto pproperty = fetch_property(atom);
 
             m_prender->defer_load_fragment(pproperty->string());
 

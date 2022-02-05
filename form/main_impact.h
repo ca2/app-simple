@@ -19,7 +19,7 @@ namespace app_simple_form
       virtual ~main_impact();
 
 
-      void assert_valid() const override;
+      void assert_ok() const override;
 
       void dump(dump_context & dumpcontext) const override;
 

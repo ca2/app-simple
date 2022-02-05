@@ -56,10 +56,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry::assert_valid() const
+   void simple_change_grub_default_entry::assert_ok() const
    {
 
-      ::user::form_view::assert_valid();
+      ::user::form_view::assert_ok();
 
    }
 

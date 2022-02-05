@@ -19,10 +19,10 @@ namespace app_simple_shader
    }
 
 
-   void tab_view::assert_valid() const
+   void tab_view::assert_ok() const
    {
 
-      ::user::impact::assert_valid();
+      ::user::impact::assert_ok();
 
    }
 

@@ -19,7 +19,7 @@ namespace app_simple_change_grub_default_entry
       ~main_impact() override;
 
 
-      void assert_valid() const override;
+      void assert_ok() const override;
 
       void dump(dump_context & dumpcontext) const override;
 
