@@ -151,18 +151,18 @@ namespace app_simple_drawing
    }
 
 
-   void impact::handle(::topic * psubject, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (psubject->id() == id_simple_checkbox
-         || psubject->id() == id_no_client_frame)
+      if (ptopic->m_id == id_simple_checkbox
+         || ptopic->m_id == id_no_client_frame)
       {
 
          set_need_redraw();
 
       }
 
-      ::user::impact::handle(psubject, pcontext);
+      ::user::impact::handle(ptopic, pcontext);
    }
 
 

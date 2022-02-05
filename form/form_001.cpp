@@ -188,16 +188,16 @@ namespace app_simple_form
    }
 
 
-   void form_001::handle(::topic * psubject, ::context * pcontext)
+   void form_001::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (psubject->m_id == ::id_after_change_text)
+      if (ptopic->m_id == ::id_after_change_text)
       {
 
-         if (psubject->m_actioncontext.is_user_source())
+         if (ptopic->m_actioncontext.is_user_source())
          {
 
-            if (psubject->m_puserelement->m_id == "edit")
+            if (ptopic->m_puserelement->m_id == "edit")
             {
 
                string strText;
@@ -220,16 +220,16 @@ namespace app_simple_form
          }
 
       }
-//      else if (psubject->m_id == ::id_click)
+//      else if (ptopic->m_id == ::id_click)
 //      {
 //
-//         if (psubject->m_puserelement->m_id == "clear_button")
+//         if (ptopic->m_puserelement->m_id == "clear_button")
 //         {
 //
 //            m_pedit->_001SetText("", ::e_source_user);
 //
 //         }
-//         else if (psubject->m_puserelement->m_id == "send_button")
+//         else if (ptopic->m_puserelement->m_id == "send_button")
 //         {
 //
 //            string strText;
@@ -247,7 +247,7 @@ namespace app_simple_form
 //
 //                  m_pstillReceiver->post_redraw();
 //
-//            psubject->m_bRet = true;
+//            ptopic->m_bRet = true;
 //
 //         }
 //

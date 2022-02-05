@@ -34,7 +34,7 @@ namespace app_simple_form
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      void handle(::topic * psubject, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
       void on_change_cur_sel() override;
 

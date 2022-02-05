@@ -219,7 +219,7 @@ namespace app_simple_shader
    }
 
 
-   void tab_view::handle(::topic * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
 
@@ -227,11 +227,11 @@ namespace app_simple_shader
    }
 
 
-//   void tab_view::handle(::topic * psubject, ::context * pcontext)
+//   void tab_view::handle(::topic * ptopic, ::context * pcontext)
 //   {
 //
 //
-//      ::user::tab_view::handle(psubject, pcontext);
+//      ::user::tab_view::handle(ptopic, pcontext);
 //
 //   }
 

@@ -189,18 +189,18 @@ namespace app_simple_networking_application
 
 
 
-   void tab_view::handle(::topic * psubject, ::context * pcontext)
+   void tab_view::handle(::topic * ptopic, ::context * pcontext)
    {
 
 
    }
 
 
-   //void tab_view::handle(::topic * psubject, ::context * pcontext)
+   //void tab_view::handle(::topic * ptopic, ::context * pcontext)
    //{
 
 
-   //   ::user::tab_view::handle(psubject, pcontext);
+   //   ::user::tab_view::handle(ptopic, pcontext);
 
    //}
 
