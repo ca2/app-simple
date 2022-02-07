@@ -113,7 +113,7 @@ namespace app_simple_networking_application
       }
 
 
-      string strId = get_document()->m_pimpactsystem->m_id;
+      string strId = get_document()->m_pimpactsystem->m_atom;
 
       string strText;
 
@@ -143,8 +143,8 @@ namespace app_simple_networking_application
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_id == id_simple_checkbox
-         || ptopic->m_id == id_no_client_frame)
+      if (ptopic->m_atom == id_simple_checkbox
+         || ptopic->m_atom == id_no_client_frame)
       {
 
          set_need_redraw();

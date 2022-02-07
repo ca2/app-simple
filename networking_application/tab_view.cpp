@@ -158,7 +158,7 @@ namespace app_simple_networking_application
 
       }
 
-      switch(pimpactdata->m_id.i64())
+      switch(pimpactdata->m_atom.i64())
       {
       case MENU_IMPACT:
       {
@@ -169,14 +169,14 @@ namespace app_simple_networking_application
       break;
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
          auto pview = papplication->create_simple_drawing_view(this, pimpactdata);
 
-         pview->m_id = pimpactdata->m_id;
+         pview->m_atom = pimpactdata->m_atom;
 
          pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 

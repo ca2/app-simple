@@ -317,7 +317,7 @@ namespace app_simple_box
       )->then([this](auto pconversation)
          {
 
-            if (pconversation->m_idResult == e_dialog_result_yes)
+            if (pconversation->m_atomResult == e_dialog_result_yes)
             {
 
                get_application()->_001TryCloseApplication();
