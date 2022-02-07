@@ -118,7 +118,7 @@ namespace app_simple_drawing
 
       }
 
-      switch(pimpactdata->m_id)
+      switch(pimpactdata->m_atom)
       {
       case MENU_IMPACT:
       {
@@ -129,14 +129,14 @@ namespace app_simple_drawing
       break;
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
          auto pview = m_papplication->create_simple_drawing_view(this, pimpactdata);
 
-         pview->m_id = pimpactdata->m_id;
+         pview->m_atom = pimpactdata->m_atom;
 
          pview->m_prender->initialize_simple_drawing(atoi(strId));
 

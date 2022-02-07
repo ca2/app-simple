@@ -142,7 +142,7 @@ namespace app_simple_shortcut
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->m_id)
+      switch(pimpactdata->m_atom)
       {
       case MENU_IMPACT:
       {
@@ -153,7 +153,7 @@ namespace app_simple_shortcut
       break;
       }
 
-      string strId = pimpactdata->m_id;
+      string strId = pimpactdata->m_atom;
 
       if(::str::begins_eat_ci(strId, "form"))
       {
@@ -186,7 +186,7 @@ namespace app_simple_shortcut
 
          pform->m_iId = (int)iId;
 
-         pform->m_id = pimpactdata->m_id;
+         pform->m_atom = pimpactdata->m_atom;
 
          return;
 
@@ -204,15 +204,15 @@ namespace app_simple_shortcut
 
    //   if(m_pdocMenu != nullptr
    //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
-   //         && ptopic->m_pextendedtopic->user_interaction() != nullptr)
+   //         && ptopic->get_extended_topic()->user_interaction() != nullptr)
    //   {
 
-   //      if(ptopic->m_id == ::id_after_change_text)
+   //      if(ptopic->m_atom == ::id_after_change_text)
    //      {
 
 
    //      }
-   //      else if (ptopic->m_id == ::id_set_check && ptopic->m_pextendedtopic->user_interaction() != NULL)
+   //      else if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != NULL)
    //      {
 
    //         string strCheck = ptopic->user_element_id();
@@ -220,12 +220,12 @@ namespace app_simple_shortcut
    //         if (::str::begins_eat_ci(strCheck, "bilbo"))
    //         {
 
-   //            if (ptopic->m_pextendedtopic->user_interaction() != NULL && ptopic->m_pextendedtopic->m_actioncontext.is_user_source())
+   //            if (ptopic->get_extended_topic()->user_interaction() != NULL && ptopic->get_extended_topic()->m_actioncontext.is_user_source())
    //            {
 
    //               //int iCheck = atoi(strCheck);
 
-   //               //__pointer(::user::check) pcheck = ptopic->m_pextendedtopic->user_interaction();
+   //               //__pointer(::user::check) pcheck = ptopic->get_extended_topic()->user_interaction();
 
    //            }
 
@@ -246,8 +246,8 @@ namespace app_simple_shortcut
       //////__update(::update)
       //{
 
-      //   if (ptopic->m_id == id_control_event
-      //         && ptopic->m_pextendedtopic->user_interaction() == m_pfontview
+      //   if (ptopic->m_atom == id_control_event
+      //         && ptopic->get_extended_topic()->user_interaction() == m_pfontview
       //         && m_pviewLast != NULL)
       //   {
 
@@ -269,28 +269,28 @@ namespace app_simple_shortcut
       //}
       if (m_pdocMenu != nullptr
          && ptopic->get_form() == m_pdocMenu->get_view(0)
-         && ::is_set(ptopic->m_pextendedtopic->m_puserelement))
+         && ::is_set(ptopic->get_extended_topic()->m_puserelement))
       {
 
-         if (ptopic->m_id == ::id_after_change_text)
+         if (ptopic->m_atom == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_id == ::id_set_check && ::is_set(ptopic->m_pextendedtopic->m_puserelement))
+         else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->get_extended_topic()->m_puserelement))
          {
 
-            string strCheck = ptopic->m_pextendedtopic->m_puserelement->m_id;
+            string strCheck = ptopic->get_extended_topic()->m_puserelement->m_atom;
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
 
-               if (::is_set(ptopic->m_pextendedtopic->m_puserelement) && ptopic->m_pextendedtopic->m_actioncontext.is_user_source())
+               if (::is_set(ptopic->get_extended_topic()->m_puserelement) && ptopic->get_extended_topic()->m_actioncontext.is_user_source())
                {
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->m_pextendedtopic->user_interaction();
+                  //__pointer(::user::check) pcheck = ptopic->get_extended_topic()->user_interaction();
 
                }
 
