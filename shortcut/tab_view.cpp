@@ -268,7 +268,7 @@ namespace app_simple_shortcut
 
       //}
       if (m_pdocMenu != nullptr
-         && ptopic->get_form() == m_pdocMenu->get_view(0)
+         && ptopic->get_extended_topic()->get_form() == m_pdocMenu->get_view(0)
          && ::is_set(ptopic->get_extended_topic()->m_puserelement))
       {
 

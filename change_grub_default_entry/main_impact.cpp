@@ -141,7 +141,7 @@ namespace app_simple_change_grub_default_entry
       if(ptopic->m_atom == ::id_click)
       {
 
-         if(ptopic->user_element_id() == "simple_change_grub_default_entry_toggle")
+         if(ptopic->get_extended_topic()->user_element_id() == "simple_change_grub_default_entry_toggle")
          {
 
             m_pimpact->set_need_layout();
