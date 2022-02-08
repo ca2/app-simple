@@ -265,7 +265,7 @@ namespace simple_os_drag_and_drop
 
 //      ::userex::pane_tab_view::handle(ptopic, pcontext);
 
-      if (m_pdocMenu != nullptr && dynamic_cast <::user::impact*> (ptopic->m_pform) == m_pdocMenu->get_view(0) && ptopic->get_extended_topic()->user_interaction() != nullptr)
+      if (m_pdocMenu != nullptr && dynamic_cast <::user::impact*> (ptopic->get_extended_topic()->m_pform) == m_pdocMenu->get_view(0) && ptopic->get_extended_topic()->user_interaction() != nullptr)
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
@@ -276,8 +276,7 @@ namespace simple_os_drag_and_drop
          else if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != nullptr)
          {
 
-            string strCheck = ptopic->user_element_id();
-
+            string strCheck = ptopic->get_extended_topic()->user_element_id();
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {

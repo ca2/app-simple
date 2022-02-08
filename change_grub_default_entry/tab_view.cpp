@@ -286,7 +286,7 @@ namespace app_simple_change_grub_default_entry
       //}
 
       if (m_pdocMenu != nullptr
-         && dynamic_cast <::user::impact*> (ptopic->m_pform) == m_pdocMenu->get_view(0)
+         && dynamic_cast <::user::impact*> (ptopic->get_extended_topic()->m_pform) == m_pdocMenu->get_view(0)
          && ptopic->get_extended_topic()->user_interaction() != nullptr)
       {
 
@@ -298,7 +298,7 @@ namespace app_simple_change_grub_default_entry
          else if (ptopic->m_atom == ::id_set_check && ptopic->get_extended_topic()->user_interaction() != NULL)
          {
 
-            string strCheck = ptopic->user_element_id();
+            string strCheck = ptopic->get_extended_topic()->user_element_id();
 
             if (::str::begins_eat_ci(strCheck, "bilbo"))
             {
