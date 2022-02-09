@@ -174,6 +174,8 @@ namespace app_simple_application
       pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
 
       //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
+
+      ::synchronous_lock synchronouslockDocument(get_document()->mutex());
       
       string_array & stra = get_document()->m_straLine;
       
