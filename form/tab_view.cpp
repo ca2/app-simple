@@ -268,8 +268,8 @@ namespace app_simple_form
 
       //}
       if (m_pdocMenu != nullptr
-         && ptopic->get_form() == m_pdocMenu->get_view(0)
-         && ::is_set(ptopic->m_puserelement))
+         && ::is_set(ptopic->m_puserelement)
+         && ptopic->m_puserelement->get_form() == m_pdocMenu->get_view(0))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
