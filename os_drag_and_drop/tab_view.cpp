@@ -265,7 +265,7 @@ namespace simple_os_drag_and_drop
 
 //      ::userex::pane_tab_view::handle(ptopic, pcontext);
 
-      if (m_pdocMenu != nullptr && dynamic_cast <::user::impact*> (ptopic->m_pform) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
+      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
