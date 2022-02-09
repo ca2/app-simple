@@ -285,9 +285,7 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      if (m_pdocMenu != nullptr
-         && dynamic_cast <::user::impact*> (ptopic->m_pform) == m_pdocMenu->get_view(0)
-         && ptopic->user_interaction() != nullptr)
+      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
