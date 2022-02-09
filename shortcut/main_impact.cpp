@@ -45,7 +45,7 @@ namespace app_simple_shortcut
       if (ptopic->m_atom == ::id_click)
       {
 
-         if (ptopic->get_extended_topic()->user_interaction()->m_atom == "simple_shortcut_toggle")
+         if (ptopic->user_interaction()->m_atom == "simple_shortcut_toggle")
          {
 
             m_pimpact->set_need_layout();

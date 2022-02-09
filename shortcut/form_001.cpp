@@ -312,10 +312,10 @@ namespace app_simple_shortcut
       if (ptopic->m_atom == ::id_after_change_text)
       {
 
-         if (ptopic->get_extended_topic()->m_actioncontext.is_user_source())
+         if (ptopic->m_actioncontext.is_user_source())
          {
 
-            if (ptopic->get_extended_topic()->m_puserelement->m_atom == "edit_folder")
+            if (ptopic->m_puserelement->m_atom == "edit_folder")
             {
 
                string strText;
@@ -336,7 +336,7 @@ namespace app_simple_shortcut
                m_pbuttonSend->set_window_text("Preview");
 
             }
-            else if (ptopic->get_extended_topic()->m_puserelement->m_atom == "edit_source")
+            else if (ptopic->m_puserelement->m_atom == "edit_source")
             {
 
                string strText;
@@ -357,7 +357,7 @@ namespace app_simple_shortcut
                m_pbuttonSend->set_window_text("Preview");
 
             }
-            else if (ptopic->get_extended_topic()->m_puserelement->m_atom == "edit_target")
+            else if (ptopic->m_puserelement->m_atom == "edit_target")
             {
 
                string strText;
@@ -385,13 +385,13 @@ namespace app_simple_shortcut
 //      else if (ptopic->m_atom == ::id_click)
 //      {
 //
-//         if (ptopic->get_extended_topic()->m_puserelement->m_atom == "clear_button")
+//         if (ptopic->m_puserelement->m_atom == "clear_button")
 //         {
 //
 //            m_pedit->_001SetText("", ::e_source_user);
 //
 //         }
-//         else if (ptopic->get_extended_topic()->m_puserelement->m_atom == "send_button")
+//         else if (ptopic->m_puserelement->m_atom == "send_button")
 //         {
 //
 //            string strText;
@@ -409,7 +409,7 @@ namespace app_simple_shortcut
 //
 //                  m_pstillReceiver->post_redraw();
 //
-//            ptopic->get_extended_topic()->m_bRet = true;
+//            ptopic->m_bRet = true;
 //
 //         }
 //
