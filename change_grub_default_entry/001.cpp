@@ -196,7 +196,7 @@ namespace app_simple_change_grub_default_entry
       if (ptopic->m_atom == ::id_after_change_cur_sel)
       {
 
-         if (ptopic->get_extended_topic()->m_puserelement->m_atom == "list_box")
+         if (ptopic->m_puserelement->m_atom == "list_box")
          {
 
             string strSavedEntry = m_plistbox->get_current_item_string_value();
@@ -218,7 +218,7 @@ namespace app_simple_change_grub_default_entry
       else if (ptopic->m_atom == ::id_after_change_text)
       {
 
-         if (ptopic->get_extended_topic()->m_puserelement->m_atom == "edit")
+         if (ptopic->m_puserelement->m_atom == "edit")
          {
 
             string strText;
@@ -237,20 +237,20 @@ namespace app_simple_change_grub_default_entry
       else if (ptopic->m_atom == ::id_click)
       {
 
-         if (ptopic->get_extended_topic()->m_puserelement->m_atom == "clear_button")
+         if (ptopic->m_puserelement->m_atom == "clear_button")
          {
 
             m_pedit->_001SetText("", ::e_source_user);
 
          }
-         else if (ptopic->get_extended_topic()->m_puserelement->m_atom == "restart_button")
+         else if (ptopic->m_puserelement->m_atom == "restart_button")
          {
 
             auto pnode = m_psystem->node();
 
             pnode->reboot();
 
-            ptopic->get_extended_topic()->m_bRet = true;
+            ptopic->m_bRet = true;
 
          }
 
