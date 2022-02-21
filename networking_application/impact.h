@@ -41,7 +41,7 @@ namespace app_simple_networking_application
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
 
-      bool on_click(const ::item& item) override;
+      bool on_click(::item * pitem) override;
 
 
    };

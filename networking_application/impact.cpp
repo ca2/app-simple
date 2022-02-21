@@ -192,7 +192,7 @@ namespace app_simple_networking_application
    }
 
 
-   bool impact::on_click(const ::item& item)
+   bool impact::on_click(::item * pitem)
    {
 
       auto phyperlink = __create_new <::hyperlink >();
