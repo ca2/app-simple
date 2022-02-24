@@ -72,7 +72,7 @@ namespace app_simple_application
    void main_frame::on_message_create(::message::message * pmessage)
    {
 
-      set_bitmap_source("Simple papplication!!");
+      set_bitmap_source("Simple papp!!");
 
    }
 

@@ -154,9 +154,9 @@ namespace simple_os_drag_and_drop
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      if (papplication->has_property("notabs"))
+      if (papp->has_property("notabs"))
       {
 
          return;
@@ -179,7 +179,7 @@ namespace simple_os_drag_and_drop
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = m_papplication->create_simple_os_drag_and_drop_view(this, pimpactdata);
+         auto pview = m_papp->create_simple_os_drag_and_drop_view(this, pimpactdata);
 
          pview->m_atom = pimpactdata->m_atom;
 

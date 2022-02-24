@@ -6,7 +6,7 @@ namespace app_simple_shader
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER tab_view :
-      virtual public ::application_consumer < application, ::user::tab_view, ::user::form_callback >
+      virtual public ::app_consumer < application, ::user::tab_view, ::user::form_callback >
    {
    public:
 

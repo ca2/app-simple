@@ -56,7 +56,7 @@ namespace app_simple_change_grub_default_entry
 
       int iPane;
 
-      //if (papplication->m_bMultiverseChat)
+      //if (papp->m_bMultiverseChat)
       //{
 
       //   SetPaneCount(2);
@@ -108,7 +108,7 @@ namespace app_simple_change_grub_default_entry
 //
 //         string strText;
 //
-//         papplication->data_get("cur_text",strText);
+//         papp->data_get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

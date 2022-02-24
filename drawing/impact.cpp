@@ -91,7 +91,7 @@ namespace app_simple_drawing
 
       {
 
-         auto psignal = m_papplication->get_signal(id_simple_checkbox);
+         auto psignal = m_papp->get_signal(id_simple_checkbox);
 
          psignal->add_handler(this);
 
@@ -99,7 +99,7 @@ namespace app_simple_drawing
 
       {
 
-         auto psignal = m_papplication->get_signal(id_no_client_frame);
+         auto psignal = m_papp->get_signal(id_no_client_frame);
 
          psignal->add_handler(this);
 
@@ -177,7 +177,7 @@ namespace app_simple_drawing
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_papplication->properties().m_echeckNoClientFrame != ::check_checked)
+      if (m_papp->application_properties().m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle = get_client_rect();

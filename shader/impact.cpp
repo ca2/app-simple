@@ -106,11 +106,11 @@ namespace app_simple_shader
 
          });
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      papplication->add_routine(id_simple_checkbox, pprocedureRedraw);
+      papp->add_routine(id_simple_checkbox, pprocedureRedraw);
 
-      papplication->add_routine(id_no_client_frame, pprocedureRedraw);
+      papp->add_routine(id_no_client_frame, pprocedureRedraw);
 
       //auto estatus = 
       
@@ -154,20 +154,20 @@ namespace app_simple_shader
 
          ::atom atom = id_simple_text;
 
-         auto pproperty = papplication->fetch_property(atom);
+         auto pproperty = papp->fetch_property(atom);
 
          ::payload payload;
 
-         if (papplication->data_get(atom, payload))
+         if (papp->data_get(atom, payload))
          {
 
             pproperty->convert(payload);
 
          }
 
-         auto idRunnable = papplication->translate_property_id(atom);
+         auto idRunnable = papp->translate_property_id(atom);
 
-         papplication->add_routine(idRunnable, __routine([this, atom]()
+         papp->add_routine(idRunnable, __routine([this, atom]()
          {
 
             auto pproperty = fetch_property(atom);

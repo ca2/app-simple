@@ -6,7 +6,7 @@ namespace app_simple_application
 
 
    class CLASS_DECL_APP_SIMPLE_APPLICATION impact :
-      virtual public ::application_consumer < application, ::user::impact >
+      virtual public ::app_consumer < application, ::user::impact >
    {
    public:
 

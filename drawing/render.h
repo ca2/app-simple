@@ -31,19 +31,15 @@ namespace app_simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING render :
-      virtual public application_consumer < application >
+      virtual public app_consumer < application >
    {
    public:
-
-
-      __PROPERTIES(render)
-         __PROPERTY(string, m_strHoverFontFamilyName, id_hover_font_family_name);
-      __END_PROPERTIES(render);
 
 
       rectangle_i32                       m_rectangle;
       ::user::impact *                    m_pimpact;
       string                              m_strFont1;
+      string                              m_strHoverFont;
       int                                 m_iDrawing;
       string_map < ::image_pointer >      m_pimagemap;
       ::image_pointer                     m_pimage1;
@@ -59,7 +55,10 @@ namespace app_simple_drawing
 #endif
 
       string get_font();
+
       ::e_status set_font(const string& strFont);
+
+      ::e_status set_hover_font(const string& strHoverFont);
 
       virtual void initialize_simple_drawing(int iDrawing);
 

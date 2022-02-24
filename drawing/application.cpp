@@ -45,13 +45,13 @@ namespace app_simple_drawing
    void application::init_instance()
    {
 
-      create_object_properties();
+      create_application_properties();
 
       m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
 
-      m_pstrHoverFontFamilyName = nullptr;
+      //m_pstrHoverFontFamilyName = nullptr;
 
-      auto pproperty1 = properties().find_property(id_simple_checkbox);
+      auto pproperty1 = application_properties().find_property(id_simple_checkbox);
 
       bool bCheckOk = false;
 
@@ -83,7 +83,7 @@ namespace app_simple_drawing
 
       }
 
-      properties().m_strMainTitle = "Simple Drawing";
+      application_properties().m_strMainTitle = "Simple Drawing";
 
       set_local_data();
 

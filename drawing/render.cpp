@@ -57,10 +57,6 @@ namespace app_simple_drawing
    void render::initialize_simple_drawing(int iDrawing)
    {
 
-      //initialize_application_consumer();
-
-      create_object_properties();
-
       m_iDrawing = iDrawing;
 
       color32_t crText = argb(255, 55, 210, 120);
@@ -90,7 +86,7 @@ namespace app_simple_drawing
 
       //papplication->data_set(strDataId, m_hlsText);
 
-      if(!m_papplication->data_get(strDataId +".color", m_hlsText))
+      if(!m_papp->data_get(strDataId +".color", m_hlsText))
       {
 
          m_hlsText = color.get_hls();
@@ -103,7 +99,7 @@ namespace app_simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_papplication->properties().m_echeckNoClientFrame != ::check_checked)
+      if (m_papp->application_properties().m_echeckNoClientFrame != ::check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
@@ -157,16 +153,19 @@ namespace app_simple_drawing
 
       strDataId = m_pimpact->m_atom;
 
-      m_papplication->data_set(strDataId + ".font_family", m_strFont1);
-
-      //if (!m_papplication->data_set(strDataId + ".font_family", m_strFont1))
-      //{
-
-      //   return error_failed;
-
-      //}
+      m_papp->data_set(strDataId + ".font_family", m_strFont1);
 
       m_strFont1 = strFont;
+
+      return ::success;
+
+   }
+
+
+   ::e_status render::set_hover_font(const ::string & strHoverFont)
+   {
+
+      m_strHoverFont = strHoverFont;
 
       return ::success;
 
@@ -178,7 +177,7 @@ namespace app_simple_drawing
 
       string strFont;
 
-      strFont = properties().m_strHoverFontFamilyName;
+      strFont = m_strHoverFont;
 
       if (strFont.has_char())
       {
@@ -194,7 +193,7 @@ namespace app_simple_drawing
 
          strDataId = m_pimpact->m_atom;
 
-         if (!m_papplication->data_get(strDataId + ".font_family", m_strFont1)
+         if (!m_papp->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

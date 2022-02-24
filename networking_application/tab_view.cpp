@@ -55,7 +55,7 @@ namespace app_simple_networking_application
 
       }
 
-      //papplication->m_ptabview = this;
+      //papp->m_ptabview = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("001", "drawing1");
@@ -149,9 +149,9 @@ namespace app_simple_networking_application
 
       //initialize_application_consumer();
 
-      auto papplication = m_papplication;
+      auto papp = m_papp;
 
-      if (papplication->has_property("notabs"))
+      if (papp->has_property("notabs"))
       {
 
          return;
@@ -174,7 +174,7 @@ namespace app_simple_networking_application
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = papplication->create_simple_drawing_view(this, pimpactdata);
+         auto pview = papp->create_simple_drawing_view(this, pimpactdata);
 
          pview->m_atom = pimpactdata->m_atom;
 

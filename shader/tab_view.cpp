@@ -57,15 +57,15 @@ namespace app_simple_shader
 
       //initialize_application_consumer();
 
-      m_papplication->m_ptabview = this;
+      m_papp->m_ptabview = this;
 
       _001SetVertical();
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
       ::file::listing listing;
 
-      papplication->get_shader_listing(listing);
+      papp->get_shader_listing(listing);
 
       set_tab("Menu", MENU_IMPACT);
 
@@ -173,9 +173,9 @@ namespace app_simple_shader
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      if (papplication->has_property("notabs"))
+      if (papp->has_property("notabs"))
       {
 
          return;
@@ -200,7 +200,7 @@ namespace app_simple_shader
 
          string strShaderPath = strId;
 
-         auto pview = m_papplication->create_simple_shader_view(this, pimpactdata);
+         auto pview = m_papp->create_simple_shader_view(this, pimpactdata);
 
          pview->m_atom = pimpactdata->m_atom;
 

@@ -6,7 +6,7 @@ namespace app_simple_change_grub_default_entry
 
 
    class CLASS_DECL_APP_SIMPLE_FORM main_impact:
-      virtual public ::application_consumer < application, ::user::split_view >
+      virtual public ::app_consumer < application, ::user::split_view >
    {
    public:
 

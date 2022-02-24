@@ -6,7 +6,7 @@ namespace app_simple_networking_application
 
 
    class CLASS_DECL_APP_SIMPLE_NETWORKING_APPLICATION tab_view :
-      virtual public ::application_consumer < application, ::user::tab_view > ,
+      virtual public ::app_consumer < application, ::user::tab_view > ,
       virtual public ::user::form_callback
    {
    public:

@@ -121,7 +121,7 @@ namespace simple_os_drag_and_drop
 
       rectangle.offset_x(iSize/5 * m_iDragAndDrop);
 
-      auto papplication = get_application()->m_pauraapplication;
+      auto papp = get_app()->m_pauraapplication;
 
       auto pcontext = m_pcontext;
 

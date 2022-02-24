@@ -6,7 +6,7 @@ namespace app_simple_shortcut
 
 
    class CLASS_DECL_APP_SIMPLE_SHORTCUT main_impact:
-      virtual public ::application_consumer < application, ::user::split_view >
+      virtual public ::app_consumer < application, ::user::split_view >
    {
    public:
 
