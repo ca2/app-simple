@@ -90,7 +90,7 @@ target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
 
 
 
-add_executable(_${PROJECT_NAME} operating-system/${SLASHED_OPERATING_SYSTEM}/_${PROJECT_NAME}.cpp)
+add_executable(_${PROJECT_NAME} _main.cpp)
 target_compile_definitions(_app_simple_networking_application PRIVATE UNICODE)
 target_compile_definitions(_app_simple_networking_application PRIVATE _UNICODE)
 

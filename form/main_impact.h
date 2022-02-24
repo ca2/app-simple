@@ -6,7 +6,7 @@ namespace app_simple_form
 
 
    class CLASS_DECL_APP_SIMPLE_FORM main_impact:
-      virtual public ::application_consumer < application, ::user::split_view >
+      virtual public ::app_consumer < application, ::user::split_view >
    {
    public:
 

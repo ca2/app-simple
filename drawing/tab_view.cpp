@@ -101,7 +101,7 @@ namespace app_simple_drawing
 
          }
 
-         __refer(m_pimpactTopic,m_pimpactdata->m_pplaceholder->get_hold());
+         __refer(m_pimpactDrawing,m_pimpactdata->m_pplaceholder->get_hold());
 
       }
 
@@ -111,7 +111,7 @@ namespace app_simple_drawing
    void tab_view::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      if (m_papplication->has_property("notabs"))
+      if (get_app()->has_property("notabs"))
       {
 
          return;
@@ -134,7 +134,7 @@ namespace app_simple_drawing
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = m_papplication->create_simple_drawing_view(this, pimpactdata);
+         auto pview = get_app()->create_simple_drawing_view(this, pimpactdata);
 
          pview->m_atom = pimpactdata->m_atom;
 

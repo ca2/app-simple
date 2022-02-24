@@ -6,7 +6,7 @@ namespace simple_os_drag_and_drop
 
 
    class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP tab_view :
-      virtual public ::application_consumer < application, ::user::tab_view >,
+      virtual public ::app_consumer < application, ::user::tab_view >,
       virtual public ::user::form_callback
    {
    public:

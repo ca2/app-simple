@@ -147,17 +147,17 @@ namespace app_simple_shortcut
 
       
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      auto strLastFolder = papplication->data_get("last_folder");
+      auto strLastFolder = papp->data_get("last_folder");
 
       m_peditFolder->_001SetText(strLastFolder, ::e_source_initialize);
 
-      auto strLastSource = papplication->data_get("last_source");
+      auto strLastSource = papp->data_get("last_source");
 
       m_peditSource->_001SetText(strLastSource, ::e_source_initialize);
 
-      auto strLastTarget = papplication->data_get("last_target");
+      auto strLastTarget = papp->data_get("last_target");
 
       m_peditTarget->_001SetText(strLastTarget, ::e_source_initialize);
 
@@ -322,7 +322,7 @@ namespace app_simple_shortcut
 
                m_peditFolder->_001GetText(strText);
 
-               auto papplication = get_application();
+               auto papp = get_app();
 
                if (strText == "This is a test. This is a test")
                {
@@ -331,7 +331,7 @@ namespace app_simple_shortcut
 
                }
 
-               papplication->data_set("last_folder", strText);
+               papp->data_set("last_folder", strText);
 
                m_pbuttonSend->set_window_text("Preview");
 
@@ -343,7 +343,7 @@ namespace app_simple_shortcut
 
                m_peditSource->_001GetText(strText);
 
-               auto papplication = get_application();
+               auto papp = get_app();
 
                if (strText == "This is a test. This is a test")
                {
@@ -352,7 +352,7 @@ namespace app_simple_shortcut
 
                }
 
-               papplication->data_set("last_source", strText);
+               papp->data_set("last_source", strText);
 
                m_pbuttonSend->set_window_text("Preview");
 
@@ -364,7 +364,7 @@ namespace app_simple_shortcut
 
                m_peditTarget->_001GetText(strText);
 
-               auto papplication = get_application();
+               auto papp = get_app();
 
                if (strText == "This is a test. This is a test")
                {
@@ -373,7 +373,7 @@ namespace app_simple_shortcut
 
                }
 
-               papplication->data_set("last_target", strText);
+               papp->data_set("last_target", strText);
 
                m_pbuttonSend->set_window_text("Preview");
 

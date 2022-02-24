@@ -59,9 +59,9 @@ namespace app_simple_shortcut
 
       string strForm;
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
-      strForm = papplication->payload("tab");
+      strForm = papp->payload("tab");
 
       string_array straForm;
 

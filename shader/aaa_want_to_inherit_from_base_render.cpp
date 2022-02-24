@@ -352,7 +352,7 @@ namespace simple_shader
 
       strDataId = m_pimpact->m_atom;
 
-      if (!papplication->data_set(strDataId + ".font_family", m_strFont1))
+      if (!papp->data_set(strDataId + ".font_family", m_strFont1))
       {
 
          return error_failed;
@@ -371,7 +371,7 @@ namespace simple_shader
 
       string strFont;
 
-      strFont = papplication->get_hover_font();
+      strFont = papp->get_hover_font();
 
       if (strFont.has_char())
       {
@@ -387,7 +387,7 @@ namespace simple_shader
 
          strDataId = m_pimpact->m_atom;
 
-         if (!papplication->data_get(strDataId + ".font_family", m_strFont1)
+         if (!papp->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

@@ -109,11 +109,11 @@ namespace app_simple_change_grub_default_entry
 
       m_pedit->m_strEmtpyText = "Enter Grub Folder Here";
 
-      auto papplication = get_application();
+      auto papp = get_app();
 
       string strFolderPath;
 
-      strFolderPath = papplication->data_get("grub_folder_path");
+      strFolderPath = papp->data_get("grub_folder_path");
 
       m_pedit->_001SetText(strFolderPath, ::e_source_initialize);
 
@@ -225,9 +225,9 @@ namespace app_simple_change_grub_default_entry
 
             m_pedit->_001GetText(strText);
 
-            auto papplication = get_application();
+            auto papp = get_app();
 
-            papplication->data_set("grub_folder_path", strText);
+            papp->data_set("grub_folder_path", strText);
 
             update_grub_entry_list(strText);
 
@@ -464,7 +464,7 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      //return estatus;
+      return estatus;
 
    }
 

@@ -13,7 +13,7 @@ namespace app_simple_drawing
 
 
       ::user::split_view *                            m_ptopviewLast;
-      __reference(::app_simple_drawing::impact)     m_pimpactTopic;
+      __reference(::app_simple_drawing::impact)       m_pimpactDrawing;
       string                                          m_strTopicTitle;
 
 

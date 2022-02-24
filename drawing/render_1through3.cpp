@@ -109,12 +109,12 @@ namespace app_simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = m_papplication->properties().m_strSimple;
+         strTitle = get_app()->application_properties().m_strSimple;
 
          if(strTitle.is_empty())
          {
          
-            strTitle = m_papplication->properties().m_strMainTitle;
+            strTitle = get_app()->application_properties().m_strMainTitle;
          
          }
 
@@ -152,7 +152,7 @@ namespace app_simple_drawing
             
       }
 
-      auto & echeckSimple = m_papplication->properties().m_echeckSimple;
+      auto & echeckSimple = m_papp->application_properties().m_echeckSimple;
 
       if (__bool(echeckSimple))
       {
@@ -176,7 +176,7 @@ namespace app_simple_drawing
       else
       {
 
-         if (__bool(m_papplication->properties().m_echeckSimple))
+         if (__bool(m_papp->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(argb(255, 255, 255, 200));
@@ -220,7 +220,7 @@ namespace app_simple_drawing
       else if (m_iDrawing == 3)
       {
 
-         if (__bool(m_papplication->properties().m_echeckSimple))
+         if (__bool(m_papp->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);
@@ -248,7 +248,7 @@ namespace app_simple_drawing
       else
       {
 
-         if (__bool(m_papplication->properties().m_echeckSimple))
+         if (__bool(m_papp->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);

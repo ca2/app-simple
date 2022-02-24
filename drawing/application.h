@@ -20,8 +20,6 @@ namespace app_simple_drawing
       __END_PROPERTIES(application);
 
 
-      string *                               m_pstrHoverFontFamilyName;
-
       bool                                   m_bMultiverseChat;
 
       ::user::document *                     m_pdocMenu;

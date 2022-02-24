@@ -36,9 +36,9 @@ namespace app_simple_box
    bool document::on_new_document()
    {
       
-      auto papplication = get_application();
+      auto papp = get_app();
       
-      auto & file = papplication->file();
+      auto & file = papp->file();
       
       file.lines(m_straLine, "dropbox://app_simple_application.txt");
 
