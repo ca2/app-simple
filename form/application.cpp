@@ -116,7 +116,7 @@ namespace app_simple_form
    {
 
 //#if 1
-      if (pcreate->m_pcommandline->m_varQuery.has_property("m"))
+      if (pcreate->m_pcommandline->has_property("m"))
       {
 
          //output_error_message("m=1");
@@ -154,7 +154,7 @@ namespace app_simple_form
 
       }
 
-      if (pcreate->m_pcommandline->m_varFile.has_char())
+      if (pcreate->m_pcommandline->m_payloadFile.has_char())
       {
 
          m_ptemplateBeatMapperImpact->do_request(pcreate);
@@ -164,7 +164,7 @@ namespace app_simple_form
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 

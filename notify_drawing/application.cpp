@@ -121,7 +121,7 @@ namespace app_simple_notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->m_varQuery["document"].cast < app_simple_drawing::document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
+         pcreate->m_pcommandline->payload("document").cast < app_simple_drawing::document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->sketch_prepare_window_maximize();
 
       }
 
