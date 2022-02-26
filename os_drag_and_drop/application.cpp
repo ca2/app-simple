@@ -13,8 +13,8 @@ namespace simple_os_drag_and_drop
       m_ptemplateSimpleDrawingView = NULL;
 
       m_strAppId = "app-simple/drag_and_drop";
-      m_strAppName = "app-simple/drag_and_drop";
       m_strBaseSupportId = "ca2_flag";
+      m_strAppName = "Simple Drag and Drop";
       m_bLicense = false;
 
    }

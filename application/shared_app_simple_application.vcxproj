@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ABDFF656-2F2C-4EE5-970A-75FFA444F767}</ProjectGuid>
+    <ProjectGuid>{17A1FD59-DA1D-42FE-AC6B-8F42031E27DB}</ProjectGuid>
     <RootNamespace>app-simple</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -212,6 +212,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="_app_simple_application.cpp" />
+    <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />

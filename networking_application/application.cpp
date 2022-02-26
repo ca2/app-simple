@@ -19,9 +19,9 @@ namespace app_simple_networking_application
 
       m_strAppId = "app-simple/networking_application";
 
-      m_strAppName = "app-simple/networking_application";
-
       m_strBaseSupportId = "ca2_flag";
+
+      m_strAppName = "Networking Application";
 
       m_bLicense = false;
 

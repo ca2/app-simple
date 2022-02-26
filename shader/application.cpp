@@ -17,9 +17,9 @@ namespace app_simple_shader
 
       m_strAppId = "app-simple/shader";
 
-      m_strAppName = "app-simple/shader";
-
       m_strBaseSupportId = "app-simple/shader";
+
+      m_strAppName = "Simple Shader";
 
       m_bLicense = false;
 

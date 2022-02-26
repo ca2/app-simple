@@ -15,19 +15,18 @@ namespace app_simple_form
       m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-simple/form";
-      m_strAppName               = "app-simple/form";
       m_strBaseSupportId         = "app-simple/form";
+      m_strAppName               = "Simple Form";
       m_bLicense                 = false;
 
       m_bMultiverseChat          = true;
-
-//auto test = new int;
 
    }
 
 
    application::~application()
    {
+      
    }
 
 
