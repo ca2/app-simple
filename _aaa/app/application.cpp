@@ -13,7 +13,7 @@ namespace simple_app
 
       m_strAppId = "app-simple/app";
 
-      m_strAppName = "app-simple/app";
+      m_strAppName = "Simple Application!!";
 
       m_strBaseSupportId = "app_simple_app";
 

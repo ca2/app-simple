@@ -15,11 +15,11 @@ namespace app_simple_drawing
 
       m_strAppId = "app-simple/drawing";
 
-      m_strAppName = "app-simple/drawing";
-
       m_strDatabaseAppId = "app-simple/drawing";
 
       m_strBaseSupportId = "ca2_flag";
+
+      m_strAppName = "Simple Drawing";
 
       m_bLicense = false;
 

@@ -11,8 +11,8 @@ namespace app_simple_notify_drawing
       m_ptemplateNotifyDrawingMain = NULL;
 
       m_strAppId = "app-simple/notify_drawing";
-      m_strAppName = "app-simple/notify_drawing";
       m_strBaseSupportId = "ca2_flag";
+      m_strAppName = "Notify Drawing";
       m_bLicense = false;
 
    }

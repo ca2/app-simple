@@ -15,8 +15,8 @@ namespace app_simple_shortcut
       m_ptemplateBeatMapperView  = NULL;
 
       m_strAppId                 = "app-simple/shortcut";
-      m_strAppName               = "app-simple/shortcut";
       m_strBaseSupportId         = "app-simple/shortcut";
+      m_strAppName               = "Shortcut Amender";
       m_bLicense                 = false;
 
       m_bMultiverseChat          = true;
