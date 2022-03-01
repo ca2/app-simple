@@ -64,8 +64,6 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-
-
 target_link_directories(app_simple_shader PRIVATE ${library_link_directories})
 
 
