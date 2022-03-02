@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A22749727CF40EB0042BAC2 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749627CF40EB0042BAC2 /* _main.cpp */; };
 		9A8C50D52783DA80000C8587 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C50D72783DA83000C8587 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D22783DA28000C8587 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8C5F662783E87E000C8587 /* _app_simple_drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C5F302783E87E000C8587 /* _app_simple_drawing.cpp */; };
 		9A9902AC275328F100B13F01 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A9902A6275328F100B13F01 /* _matter.zip */; };
 		9A9902B627532A0700B13F01 /* libfolder_zip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9902B3275329C600B13F01 /* libfolder_zip.dylib */; };
 		9A9902B727532A0700B13F01 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9902B3275329C600B13F01 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -251,6 +251,7 @@
 		9A00E29326611EAA00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../operating-system/operating-system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E29F26611EAB00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../operating-system/operating-system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E32626611EB000517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../operating-system/operating-system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
+		9A22749627CF40EB0042BAC2 /* _main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
 		9A353D1F2661FD8F0060257B /* app_simple_drawing.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_simple_drawing.xcodeproj; sourceTree = "<group>"; };
 		9A353DAC266225570060257B /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A353DAD266225570060257B /* libdatabase_sqlite3.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdatabase_sqlite3.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,7 +262,6 @@
 		9A353E8B26624E960060257B /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../operating-system/operating-system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9A8C50D22783DA28000C8587 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../operating-system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../operating-system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
-		9A8C5F302783E87E000C8587 /* _app_simple_drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_drawing.cpp; sourceTree = "<group>"; };
 		9A9902A6275328F100B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A9902AD275329C500B13F01 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
 		9A9E4A4127519C320094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -406,22 +406,6 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		9A8C5F2E2783E87E000C8587 /* platform */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C5F2F2783E87E000C8587 /* macos */,
-			);
-			path = platform;
-			sourceTree = "<group>";
-		};
-		9A8C5F2F2783E87E000C8587 /* macos */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C5F302783E87E000C8587 /* _app_simple_drawing.cpp */,
-			);
-			path = macos;
-			sourceTree = "<group>";
-		};
 		9A9902AE275329C500B13F01 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,7 +472,7 @@
 		9AED7547275196FA00397A57 /* drawing */ = {
 			isa = PBXGroup;
 			children = (
-				9A8C5F2E2783E87E000C8587 /* platform */,
+				9A22749627CF40EB0042BAC2 /* _main.cpp */,
 				9A9E4A3F27519C320094A04C /* macos */,
 				9A9902A6275328F100B13F01 /* _matter.zip */,
 			);
@@ -739,7 +723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C5F662783E87E000C8587 /* _app_simple_drawing.cpp in Sources */,
+				9A22749727CF40EB0042BAC2 /* _main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,7 +849,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -910,6 +893,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -925,7 +909,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -948,7 +931,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;
@@ -967,7 +949,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PLATFORM_MODIFIER = macos;

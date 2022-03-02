@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9A1D5ECB2751AC11003D9B5F /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A22748B27CF40980042BAC2 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748A27CF40980042BAC2 /* _main.cpp */; };
 		9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE12EC52661EA22009F476A /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96A12785379F00B74C76 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E13326611D5A00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E1A026611D5E00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8C5F062783E84B000C8587 /* _app_simple_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C5ED32783E84B000C8587 /* _app_simple_application.cpp */; };
 		9A8C816D2783F879000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816C2783F879000C8587 /* _matter.zip */; };
 		9A9E4A3127519BFA0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A2927519BC10094A04C /* Images.xcassets */; };
 		9AA802A32665789E00A6B449 /* libapp_simple_application.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A95D67026624EF100B2461B /* libapp_simple_application.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -239,10 +239,10 @@
 		9A00E1A126611D8700517464 /* app_simple_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = app_simple_application.xcodeproj; sourceTree = "<group>"; };
 		9A00E644266170F400517464 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A22748A27CF40980042BAC2 /* _main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
 		9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8C5ED32783E84B000C8587 /* _app_simple_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_application.cpp; sourceTree = "<group>"; };
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A9E4A2827519BC10094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A2927519BC10094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -374,22 +374,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A8C5ED12783E84B000C8587 /* platform */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C5ED22783E84B000C8587 /* macos */,
-			);
-			path = platform;
-			sourceTree = "<group>";
-		};
-		9A8C5ED22783E84B000C8587 /* macos */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C5ED32783E84B000C8587 /* _app_simple_application.cpp */,
-			);
-			path = macos;
-			sourceTree = "<group>";
-		};
 		9A95D66026624EF000B2461B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,8 +457,8 @@
 		9AED730D2751963A00397A57 /* application */ = {
 			isa = PBXGroup;
 			children = (
+				9A22748A27CF40980042BAC2 /* _main.cpp */,
 				9A8C816C2783F879000C8587 /* _matter.zip */,
-				9A8C5ED12783E84B000C8587 /* platform */,
 				9A9E4A2627519BC10094A04C /* macos */,
 			);
 			name = application;
@@ -709,7 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C5F062783E84B000C8587 /* _app_simple_application.cpp in Sources */,
+				9A22748B27CF40980042BAC2 /* _main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +819,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -895,7 +878,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					"",
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -918,7 +900,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.application";

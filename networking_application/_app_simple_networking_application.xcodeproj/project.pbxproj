@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A8C5A052783E698000C8587 /* _app_simple_networking_application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C59CF2783E698000C8587 /* _app_simple_networking_application.cpp */; };
+		9A22749A27CF41110042BAC2 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749927CF41110042BAC2 /* _main.cpp */; };
 		9A8C816B2783F856000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816A2783F856000C8587 /* _matter.zip */; };
 		9A8C819027844A9E000C8587 /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C818827844A71000C8587 /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C819227844AA7000C8587 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C818E27844A7C000C8587 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -213,8 +213,8 @@
 		9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../operating-system/operating-system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A22661209D00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../operating-system/operating-system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../operating-system/operating-system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
+		9A22749927CF41110042BAC2 /* _main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
 		9A353E23266228800060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
-		9A8C59CF2783E698000C8587 /* _app_simple_networking_application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_networking_application.cpp; sourceTree = "<group>"; };
 		9A8C816A2783F856000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A8C818327844A71000C8587 /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
 		9A8C818927844A7B000C8587 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
@@ -339,22 +339,6 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
-		9A8C59CD2783E698000C8587 /* platform */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C59CE2783E698000C8587 /* macos */,
-			);
-			path = platform;
-			sourceTree = "<group>";
-		};
-		9A8C59CE2783E698000C8587 /* macos */ = {
-			isa = PBXGroup;
-			children = (
-				9A8C59CF2783E698000C8587 /* _app_simple_networking_application.cpp */,
-			);
-			path = macos;
-			sourceTree = "<group>";
-		};
 		9A8C818427844A71000C8587 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,8 +413,8 @@
 		9AED78CF275198AD00397A57 /* networking_application */ = {
 			isa = PBXGroup;
 			children = (
+				9A22749927CF41110042BAC2 /* _main.cpp */,
 				9A8C816A2783F856000C8587 /* _matter.zip */,
-				9A8C59CD2783E698000C8587 /* platform */,
 				9A9E4A4727519C560094A04C /* macos */,
 			);
 			name = networking_application;
@@ -636,7 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C5A052783E698000C8587 /* _app_simple_networking_application.cpp in Sources */,
+				9A22749A27CF41110042BAC2 /* _main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +741,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -817,7 +800,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
