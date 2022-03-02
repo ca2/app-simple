@@ -1,5 +1,5 @@
-#define APPLICATION app_simple_change_grub_default_entry
-#define __APP_ID "app-simple/change_grub_default_entry"
+#define APPLICATION app_simple_shortcut
+#define __APP_ID "app-simple/shortcut"
 #if defined(WINDOWS_DESKTOP) && defined(CUBE)
 #include "_static_factory.inl"
 #endif
