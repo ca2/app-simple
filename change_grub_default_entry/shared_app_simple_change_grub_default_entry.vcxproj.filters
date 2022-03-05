@@ -4,6 +4,9 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="operating-system\windows\_app_simple_change_grub_default_entry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -15,10 +18,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="main.rc">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </ResourceCompile>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
@@ -28,10 +31,13 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{aff3c6ba-3dd1-46fc-a951-2bd68ce53a9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{2a89b469-99f5-4253-98a5-6bc145326be3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="icon.ico">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
 </Project>
