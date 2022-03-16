@@ -16,7 +16,7 @@ namespace app_simple_application
       
       m_bImaging = false;
 
-      m_ppaneview = nullptr;
+      m_ppaneimpact = nullptr;
 
       m_strAppId = "app-simple/application";
 

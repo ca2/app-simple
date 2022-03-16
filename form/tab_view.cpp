@@ -87,7 +87,7 @@ namespace app_simple_form
    void tab_view::on_change_cur_sel()
    {
 
-      //::userex::pane_tab_view::on_change_cur_sel();
+      //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_view::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
@@ -182,7 +182,7 @@ namespace app_simple_form
 
          }
 
-         pform->m_ptabview = this;
+         pform->m_ptabimpact = this;
 
          pform->m_iId = (int)iId;
 
@@ -203,7 +203,7 @@ namespace app_simple_form
    //{
 
    //   if(m_pdocMenu != nullptr
-   //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
+   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0)
    //         && ptopic->user_interaction() != nullptr)
    //   {
 
@@ -300,7 +300,7 @@ namespace app_simple_form
 
       }
 
-//      ::userex::pane_tab_view::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
       ::user::tab_view::handle(ptopic, pcontext);
 
    }

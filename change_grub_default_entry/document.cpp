@@ -69,9 +69,9 @@ namespace app_simple_change_grub_default_entry
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
-      impact * pview = get_type_impact < impact >();
+      impact * pimpact = get_type_impact < impact >();
 
-      if(pview == NULL)
+      if(pimpact == NULL)
       {
 
          return true;

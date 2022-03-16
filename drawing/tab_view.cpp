@@ -134,11 +134,11 @@ namespace app_simple_drawing
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = get_app()->create_simple_drawing_view(this, pimpactdata);
+         auto pimpact = get_app()->create_simple_drawing_view(this, pimpactdata);
 
-         pview->m_atom = pimpactdata->m_atom;
+         pimpact->m_atom = pimpactdata->m_atom;
 
-         pview->m_prender->initialize_simple_drawing(atoi(strId));
+         pimpact->m_prender->initialize_simple_drawing(atoi(strId));
 
          pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 

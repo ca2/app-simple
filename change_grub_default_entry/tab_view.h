@@ -33,7 +33,7 @@ namespace app_simple_change_grub_default_entry
       void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      bool BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent);
+      bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);
       void on_change_cur_sel() override;
 
       virtual void handle(::topic * ptopic, ::context * pcontext) override;

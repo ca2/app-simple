@@ -11,7 +11,7 @@ namespace app_simple_drawing
 
       m_ptemplateSimpleDrawingMain = nullptr;
 
-      m_ptabview = nullptr;
+      m_ptabimpact = nullptr;
 
       m_strAppId = "app-simple/drawing";
 

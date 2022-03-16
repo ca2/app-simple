@@ -57,7 +57,7 @@ namespace app_simple_shader
 
       //initialize_application_consumer();
 
-      m_papp->m_ptabview = this;
+      m_papp->m_ptabimpact = this;
 
       _001SetVertical();
 
@@ -200,13 +200,13 @@ namespace app_simple_shader
 
          string strShaderPath = strId;
 
-         auto pview = m_papp->create_simple_shader_view(this, pimpactdata);
+         auto pimpact = m_papp->create_simple_shader_view(this, pimpactdata);
 
-         pview->m_atom = pimpactdata->m_atom;
+         pimpact->m_atom = pimpactdata->m_atom;
 
-         pview->m_iView = (int) pimpactdata->m_iIndex;
+         pimpact->m_iView = (int) pimpactdata->m_iIndex;
 
-         __pointer(app_simple_shader::impact) pviewShader = pview;
+         __pointer(app_simple_shader::impact) pviewShader = pimpact;
 
          pviewShader->m_prender->m_strShaderPath = strShaderPath;
 

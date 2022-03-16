@@ -15,7 +15,7 @@ namespace app_simple_networking_application
 
       m_ptemplateSimpleDrawingMain = nullptr;
 
-      m_ptabview = nullptr;
+      m_ptabimpact = nullptr;
 
       m_strAppId = "app-simple/networking_application";
 

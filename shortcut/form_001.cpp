@@ -1,5 +1,5 @@
 #include "framework.h"
-#include "acme/filesystem/filesystem/acme_dir.h"
+#include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
 #include <math.h>
 
@@ -517,7 +517,7 @@ namespace app_simple_shortcut
          if (pathNewTarget != pathLinkTarget)
          {
 
-            bool bIsDirTarget = m_psystem->m_pacmedir->is(pathNewTarget);
+            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(pathNewTarget);
 
             bool bIsFileTarget = m_psystem->m_pacmefile->exists(pathNewTarget);
 
@@ -537,7 +537,7 @@ namespace app_simple_shortcut
          if (strNewFolder != strLinkFolder)
          {
 
-            bool bIsDirTarget = m_psystem->m_pacmedir->is(strNewFolder);
+            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(strNewFolder);
 
             strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewFolder + " <== " + strLinkFolder + "\n";
 
