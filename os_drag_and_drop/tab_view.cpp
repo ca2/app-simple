@@ -40,7 +40,7 @@ namespace simple_os_drag_and_drop
    void tab_view::install_message_routing(::channel * pchannel)
    {
 
-      //::userex::pane_tab_view::install_message_routing(pchannel);
+      //::userex::pane_tab_impact::install_message_routing(pchannel);
 
       ::user::tab_view::install_message_routing(pchannel);
 
@@ -72,7 +72,7 @@ namespace simple_os_drag_and_drop
    void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //::userex::pane_tab_view::_001OnNcDraw(pgraphics);
+      //::userex::pane_tab_impact::_001OnNcDraw(pgraphics);
       ::user::tab_view::_001OnNcDraw(pgraphics);
 
    }
@@ -81,7 +81,7 @@ namespace simple_os_drag_and_drop
    void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //::userex::pane_tab_view::_001OnDraw(pgraphics);
+      //::userex::pane_tab_impact::_001OnDraw(pgraphics);
       ::user::tab_view::_001OnDraw(pgraphics);
 
    }
@@ -90,7 +90,7 @@ namespace simple_os_drag_and_drop
    void tab_view::on_change_cur_sel()
    {
 
-      //::userex::pane_tab_view::on_change_cur_sel();
+      //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_view::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
@@ -179,26 +179,26 @@ namespace simple_os_drag_and_drop
       if(::str::begins_eat_ci(strId, "drawing"))
       {
 
-         auto pview = m_papp->create_simple_os_drag_and_drop_view(this, pimpactdata);
+         auto pimpact = m_papp->create_simple_os_drag_and_drop_view(this, pimpactdata);
 
-         pview->m_atom = pimpactdata->m_atom;
+         pimpact->m_atom = pimpactdata->m_atom;
 
-         pview->m_psimpleosdraganddrop->initialize_drag_and_drop(atoi(strId));
+         pimpact->m_psimpleosdraganddrop->initialize_drag_and_drop(atoi(strId));
 
       }
 
       pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 
-      //::userex::pane_tab_view::on_create_impact(pimpactdata);
+      //::userex::pane_tab_impact::on_create_impact(pimpactdata);
       ::user::tab_view::on_create_impact(pimpactdata);
 
    }
 
 
-   //bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
+   //bool tab_view::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
    //{
 
-   //   if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
+   //   if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0) && ptopic->user_interaction() != nullptr)
    //   {
 
    //      if(ptopic->m_atom == ::id_after_change_text)
@@ -263,7 +263,7 @@ namespace simple_os_drag_and_drop
 
       //}
 
-//      ::userex::pane_tab_view::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
 
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
       {

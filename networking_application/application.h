@@ -15,7 +15,7 @@ namespace app_simple_networking_application
       ::user::document *                              m_pdocMenu;
       ::user::plain_edit_view *                       m_prollfps;
       ::user::single_document_template *              m_ptemplateSimpleDrawingMain;
-      tab_view *                                      m_ptabview;
+      tab_view *                                      m_ptabimpact;
 
 
       application();

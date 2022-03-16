@@ -13,7 +13,7 @@ namespace app_simple_shader
 
       m_ptemplateSimpleShaderMain = nullptr;
 
-      m_ptabview = nullptr;
+      m_ptabimpact = nullptr;
 
       m_strAppId = "app-simple/shader";
 

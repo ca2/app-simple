@@ -11,7 +11,7 @@ namespace app_simple_shortcut
    public:
 
 
-      tab_view *                          m_ptabview;
+      tab_view *                          m_ptabimpact;
       string                              m_strFont;
       int                                 m_iId;
 

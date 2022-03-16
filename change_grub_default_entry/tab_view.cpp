@@ -87,7 +87,7 @@ namespace app_simple_change_grub_default_entry
    void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //::userex::pane_tab_view::_001OnNcDraw(pgraphics);
+      //::userex::pane_tab_impact::_001OnNcDraw(pgraphics);
       ::user::tab_view::_001OnNcDraw(pgraphics);
 
    }
@@ -104,7 +104,7 @@ namespace app_simple_change_grub_default_entry
    void tab_view::on_change_cur_sel()
    {
 
-      //::userex::pane_tab_view::on_change_cur_sel();
+      //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_view::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
@@ -200,7 +200,7 @@ namespace app_simple_change_grub_default_entry
 
          }
 
-         pform->m_ptabview = this;
+         pform->m_ptabimpact = this;
 
          pform->m_iId = (int)iId;
 
@@ -209,18 +209,18 @@ namespace app_simple_change_grub_default_entry
       }
 
       ::user::tab_view::on_create_impact(pimpactdata);
-//      ::userex::pane_tab_view::on_create_impact(pimpactdata);
+//      ::userex::pane_tab_impact::on_create_impact(pimpactdata);
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
    }
 
 
-   //bool tab_view::BaseOnControlEvent(::user::form_window * pview,::user::control_event * pevent)
+   //bool tab_view::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
    //{
 
    //   if(m_pdocMenu != nullptr
-   //         && dynamic_cast < ::user::impact * > (pview) == m_pdocMenu->get_view(0)
+   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0)
    //         && ptopic->user_interaction() != nullptr)
    //   {
 
@@ -316,7 +316,7 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-//      ::userex::pane_tab_view::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
       ::user::tab_view::handle(ptopic, pcontext);
 
    }
