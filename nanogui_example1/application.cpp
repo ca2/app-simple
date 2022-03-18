@@ -119,7 +119,7 @@ namespace app_simple_nanogui_example1
    string application::preferred_experience()
    {
 
-      return ::aura::application::preferred_experience();
+      return "nanogui";
 
    }
 
