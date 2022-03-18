@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8e5d91c7-edc0-4d92-b733-aeffca5af850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{06aedfbf-5bb8-479a-ad0c-0cf2f5f4da26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\nanogui">
+      <UniqueIdentifier>{bf5f1595-1440-44f6-9f74-e6c167f85085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nanogui">
+      <UniqueIdentifier>{06f473cb-dd33-4a75-8312-702e748ac04e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="impact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="example1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\Widget.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\Screen.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\Window.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\Layout.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\Label.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanogui\_nanogui_main_frame.cpp">
+      <Filter>Source Files\nanogui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="example1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_app_simple_nanogui_example1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Screen.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\_nanogui.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\vector.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\common.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\traits.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Widget.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Object.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Theme.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Window.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Layout.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\Label.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+    <ClInclude Include="nanogui\_nanogui_main_frame.h">
+      <Filter>Header Files\nanogui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="matter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
