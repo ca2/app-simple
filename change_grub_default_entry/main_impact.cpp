@@ -92,7 +92,7 @@ namespace app_simple_change_grub_default_entry
 
       //m_pimpact = create_view < lite_view >();
 
-      m_pimpact = host_view < impact >(iPane, "simple_change_grub_default_entry_view");
+      m_pimpact = host_view < impact >(iPane);
 
       if(m_pimpact == NULL)
       {

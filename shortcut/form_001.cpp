@@ -484,7 +484,9 @@ namespace app_simple_shortcut
 
       file::listing listing;
 
-      m_pcontext->m_papexcontext->dir().ls_file_pattern(listing, strFolder, { "*.lnk" });
+      listing.set_pattern_file_listing(strFolder, { "*.lnk" });
+
+      m_pcontext->m_papexcontext->dir().enumerate(listing);
 
       string strAction;
 
