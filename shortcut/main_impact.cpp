@@ -112,7 +112,7 @@ namespace app_simple_shortcut
 
       //m_pimpact = create_view < lite_view >();
 
-      m_pimpact = host_view < impact >(iPane, "simple_shortcut_view");
+      m_pimpact = host_view < impact >(iPane);
 
       if(m_pimpact == NULL)
       {
