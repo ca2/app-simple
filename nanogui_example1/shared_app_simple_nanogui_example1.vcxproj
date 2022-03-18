@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ABDFF656-2F2C-4EE5-970A-75FFA444F767}</ProjectGuid>
+    <ProjectGuid>{17A1FD59-DA1D-42FE-AC6B-8F42031E27DB}</ProjectGuid>
     <RootNamespace>app-simple</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -211,7 +211,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="operating-system\windows\_app_simple_application.cpp" />
+    <ClCompile Include="operating-system\windows\_app_simple_nanogui_example1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
@@ -238,6 +238,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\app\base\base.vcxproj">
       <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
+    </ProjectReference>
+    <ProjectReference Include="app_simple_nanogui_example1.vcxproj">
+      <Project>{4eeb9763-3caf-4436-8654-a583351353e2}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
