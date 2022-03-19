@@ -11,12 +11,6 @@
     <Filter Include="Resource Files">
       <UniqueIdentifier>{06aedfbf-5bb8-479a-ad0c-0cf2f5f4da26}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\nanogui">
-      <UniqueIdentifier>{bf5f1595-1440-44f6-9f74-e6c167f85085}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\nanogui">
-      <UniqueIdentifier>{06f473cb-dd33-4a75-8312-702e748ac04e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -33,24 +27,6 @@
     </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\Widget.cpp">
-      <Filter>Source Files\nanogui</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\Screen.cpp">
-      <Filter>Source Files\nanogui</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\Window.cpp">
-      <Filter>Source Files\nanogui</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\Layout.cpp">
-      <Filter>Source Files\nanogui</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\Label.cpp">
-      <Filter>Source Files\nanogui</Filter>
-    </ClCompile>
-    <ClCompile Include="nanogui\_nanogui_main_frame.cpp">
-      <Filter>Source Files\nanogui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,48 +51,15 @@
     <ClInclude Include="_app_simple_nanogui_example1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="nanogui\Screen.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\_nanogui.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\vector.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\common.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\traits.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Widget.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Object.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Theme.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Window.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Layout.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\Label.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
-    <ClInclude Include="nanogui\_nanogui_main_frame.h">
-      <Filter>Header Files\nanogui</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="matter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="_references.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>

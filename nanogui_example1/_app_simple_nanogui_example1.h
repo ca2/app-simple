@@ -3,6 +3,7 @@
 
 #include "app-simple/application/_.h"
 #include "base/user/simple/_simple.h"
+#include "nanogui/_nanogui.h"
 
 
 namespace user
@@ -13,7 +14,7 @@ namespace user
 
 } // namespace user
 
-#include "nanogui/_nanogui.h"
+
 
 #include "example1.h"
 
