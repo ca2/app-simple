@@ -948,28 +948,10 @@
     </ClCompile>
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="example1.cpp" />
-    <ClCompile Include="nanogui\Label.cpp" />
-    <ClCompile Include="nanogui\Layout.cpp" />
-    <ClCompile Include="nanogui\_nanogui_main_frame.cpp" />
-    <ClCompile Include="nanogui\Screen.cpp" />
-    <ClCompile Include="nanogui\Widget.cpp" />
-    <ClCompile Include="nanogui\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
-    <ClInclude Include="nanogui\common.h" />
-    <ClInclude Include="nanogui\Label.h" />
-    <ClInclude Include="nanogui\Layout.h" />
-    <ClInclude Include="nanogui\_nanogui_main_frame.h" />
-    <ClInclude Include="nanogui\Object.h" />
-    <ClInclude Include="nanogui\Screen.h" />
-    <ClInclude Include="nanogui\Theme.h" />
-    <ClInclude Include="nanogui\traits.h" />
-    <ClInclude Include="nanogui\vector.h" />
-    <ClInclude Include="nanogui\Widget.h" />
-    <ClInclude Include="nanogui\Window.h" />
-    <ClInclude Include="nanogui\_nanogui.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="example1.h" />
     <ClInclude Include="framework.h" />
@@ -998,9 +980,13 @@
     <ProjectReference Include="..\..\app\axis\axis.vcxproj">
       <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\nanogui\nanogui.vcxproj">
+      <Project>{4fc273f2-a70c-444e-8952-adfbb6575a3f}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Text Include="matter.txt" />
+    <Text Include="_references.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,10 +24,11 @@ NAMESPACE_BEGIN(nanogui)
  * The font and color can be customized. When \ref Widget::set_fixed_width()
  * is used, the text is wrapped when it surpasses the specified width.
  */
-   class NANOGUI_EXPORT Label : public Widget {
+   class NANOGUI_EXPORT Label :
+      public Widget,
+      virtual public ::appearance::still
+   {
    public:
-
-      __pointer(::user::still)         m_pstill;
 
 
          std::string m_caption;
@@ -57,10 +58,10 @@ NAMESPACE_BEGIN(nanogui)
       virtual void set_theme(Theme * theme) override;
 
       /// Compute the size needed to fully display the label
-      //virtual Vector2i preferred_size(NVGcontext * ctx) const override;
+      virtual Vector2i preferred_size(NVGcontext * ctx) const override;
 
       /// Draw the label
-      //virtual void draw(NVGcontext * ctx) override;
+      virtual void draw(NVGcontext * ctx) override;
    protected:
       //std::string m_caption;
       //std::string m_font;

@@ -30,7 +30,10 @@ enum class Cursor; // do not put a docstring, this is already documented
  * also be used as an panel to arrange an arbitrary number of child
  * widgets using a layout generator (see \ref Layout).
  */
-class NANOGUI_EXPORT Widget : public Object {
+class NANOGUI_EXPORT Widget : 
+   public Object,
+   virtual public ::appearance::appearance
+{
 public:
 
 
@@ -250,17 +253,25 @@ public:
 //   /// Handle text input (UTF-32 format) (default implementation: do nothing)
 //   virtual bool keyboard_character_event(unsigned int codepoint);
 //
+
+   virtual ::size_i32 preferred_size(::draw2d::graphics_pointer & pointer) const override;
+
+   virtual void perform_layout::draw2d::graphics_pointer & pointer) override;
+
+   virtual void _001OnDraw(::draw2d::graphics_pointer & pointer);
+
+
    /// Compute the preferred size of the widget
-   //virtual Vector2i preferred_size(NVGcontext * ctx) const;
-//
-//   /// Invoke the associated layout generator to properly place child widgets, if any
-//   virtual void perform_layout(NVGcontext * ctx);
-//
-//   /// Draw the widget (and all child widgets)
-//   virtual void draw(NVGcontext * ctx);
-//
-//protected:
-//   /// Free all resources used by the widget and any children
+   virtual Vector2i preferred_size(NVGcontext * ctx) const;
+
+   /// Invoke the associated layout generator to properly place child widgets, if any
+   virtual void perform_layout(NVGcontext * ctx);
+
+   /// Draw the widget (and all child widgets)
+   virtual void draw(NVGcontext * ctx);
+
+protected:
+   /// Free all resources used by the widget and any children
    virtual ~Widget();
 //
 //   /**
