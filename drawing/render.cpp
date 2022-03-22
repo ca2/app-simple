@@ -99,7 +99,7 @@ namespace app_simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (m_papp->application_properties().m_echeckNoClientFrame != ::check_checked)
+      if (m_papp->application_properties().m_echeckNoClientFrame != ::e_check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
