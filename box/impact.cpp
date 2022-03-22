@@ -281,7 +281,7 @@ namespace app_simple_box
 
       pgraphics->text_out(point.x, point.y + y + size.cy, strText);
 
-      pgraphics->set_smooth_mode(::draw2d::smooth_mode_none);
+      pgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
 
       //pgraphics->fill_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 255, 255, 0));
 

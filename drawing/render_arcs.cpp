@@ -138,7 +138,7 @@ namespace app_simple_drawing
 
       pgraphics->clear_current_point();
 
-      pgraphics->Arc(r, angleStart, angleAngle);
+      pgraphics->arc(r, angleStart, angleAngle);
 
    }
 

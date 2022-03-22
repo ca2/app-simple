@@ -380,7 +380,7 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set(ppen);
 
-      pgraphics->Arc(r, angleStart, angleAngle);
+      pgraphics->arc(r, angleStart, angleAngle);
 
 
    }

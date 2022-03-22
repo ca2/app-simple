@@ -65,7 +65,7 @@ namespace app_simple_drawing
 
             auto & echeck = pproperty->m_echeck;
 
-            if (echeck == check_undefined)
+            if (echeck == e_check_undefined)
             {
 
                bCheckOk = true;
