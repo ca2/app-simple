@@ -1,19 +1,24 @@
 cmake_minimum_required(VERSION 3.16)
-project(app_simple_application CXX)
+project(app_simple_nanogui_example CXX)
 
 
 list(APPEND library_source
         _.cpp
         _.h
-        _user.h
+        _app_simple_nanogui_example.h
         application.cpp
         application.h
+   example1.cpp
+   example1.h
+   example2.cpp
+   example2.h
+   example_icons.cpp
+   example_icons.h
         document.cpp
         document.h
         framework.cpp
         framework.h
-        main_frame.cpp
-        main_frame.h
+
         impact.cpp
         impact.h)
 
@@ -28,33 +33,33 @@ list(APPEND library_references
    )
 
 
-add_library(app_simple_application SHARED ${library_source})
+add_library(app_simple_nanogui_example SHARED ${library_source})
 
 
-target_precompile_headers(app_simple_application PRIVATE framework.h)
+target_precompile_headers(app_simple_nanogui_example PRIVATE framework.h)
 
 
-set_target_properties(app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(app_simple_nanogui_example PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
-    target_compile_options(app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_libraries(app_simple_application PRIVATE ${library_references})
-    target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_compile_options(app_simple_nanogui_example PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(app_simple_nanogui_example PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_libraries(app_simple_nanogui_example PRIVATE ${library_references})
+    target_link_options(app_simple_nanogui_example PRIVATE "/SUBSYSTEM:WINDOWS")
 elseif(LINUX OR FREEBSD)
-    target_compile_options(app_simple_application PRIVATE -fpermissive)
-    #target_link_options(app_simple_application PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(app_simple_application PRIVATE ${library_references})
-    target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
+    target_compile_options(app_simple_nanogui_example PRIVATE -fpermissive)
+    #target_link_options(app_simple_nanogui_example PRIVATE -Wl,-rpath=$ORIGIN)
+    target_link_libraries(app_simple_nanogui_example PRIVATE ${library_references})
+    target_link_options(app_simple_nanogui_example PRIVATE -Wl,-z,defs)
 endif()
 
 
-add_dependencies(app_simple_application experience_core)
-add_dependencies(app_simple_application ${default_draw2d})
-add_dependencies(app_simple_application ${default_write_text})
-add_dependencies(app_simple_application ${app_common_dependencies})
-add_dependencies(app_simple_application database_sqlite3)
+add_dependencies(app_simple_nanogui_example experience_core)
+add_dependencies(app_simple_nanogui_example ${default_draw2d})
+add_dependencies(app_simple_nanogui_example ${default_write_text})
+add_dependencies(app_simple_nanogui_example ${app_common_dependencies})
+add_dependencies(app_simple_nanogui_example database_sqlite3)
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
@@ -65,7 +70,7 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(app_simple_nanogui_example PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
 
 
 add_executable(_${PROJECT_NAME} _main.cpp)
@@ -78,7 +83,7 @@ list(APPEND executable_references
    aura
    axis
    base
-   app_simple_application
+   app_simple_nanogui_example
    )
 
 
@@ -108,35 +113,35 @@ endif()
 if (MSVC)
 
 
-    target_compile_options(_app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(_app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_options(_app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(_app_simple_application PRIVATE ${executable_references})
+    target_compile_options(_app_simple_nanogui_example PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_nanogui_example PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(_app_simple_nanogui_example PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(_app_simple_nanogui_example PRIVATE ${executable_references})
 
 
 elseif(LINUX OR FREEBSD)
 
 
-    target_compile_options(_app_simple_application PRIVATE -fpermissive)
-    target_link_libraries(_app_simple_application PRIVATE ${executable_references})
-    target_link_options(_app_simple_application PRIVATE -Wl,-z,defs)
+    target_compile_options(_app_simple_nanogui_example PRIVATE -fpermissive)
+    target_link_libraries(_app_simple_nanogui_example PRIVATE ${executable_references})
+    target_link_options(_app_simple_nanogui_example PRIVATE -Wl,-z,defs)
 
 
 endif ()
 
 
-add_dependencies(_app_simple_application ${default_draw2d})
-add_dependencies(_app_simple_application ${default_write_text})
-add_dependencies(_app_simple_application ${app_common_dependencies})
-add_dependencies(_app_simple_application experience_core)
-add_dependencies(_app_simple_application gpu_opengl)
+add_dependencies(_app_simple_nanogui_example ${default_draw2d})
+add_dependencies(_app_simple_nanogui_example ${default_write_text})
+add_dependencies(_app_simple_nanogui_example ${app_common_dependencies})
+add_dependencies(_app_simple_nanogui_example experience_core)
+add_dependencies(_app_simple_nanogui_example gpu_opengl)
 
 
-target_include_directories(_app_simple_application PRIVATE ${library_include_directories})
+target_include_directories(_app_simple_nanogui_example PRIVATE ${library_include_directories})
 
-target_link_directories(_app_simple_application PRIVATE ${library_link_directories})
+target_link_directories(_app_simple_nanogui_example PRIVATE ${library_link_directories})
 
-set_target_properties(_app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(_app_simple_nanogui_example PROPERTIES LINKER_LANGUAGE CXX)
 
 
 
