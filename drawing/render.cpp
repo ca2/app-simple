@@ -126,10 +126,16 @@ namespace app_simple_drawing
       else if(m_iDrawing == 4)
       {
 
+         _001OnDrawBoxGradient(pgraphics);
+
+      }
+      else if(m_iDrawing == 5)
+      {
+
          _001OnDrawArcs(pgraphics, false);
 
       }
-      else
+      else if(m_iDrawing == 6)
       {
 
          _001OnDrawArcs(pgraphics, true);

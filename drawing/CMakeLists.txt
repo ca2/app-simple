@@ -20,6 +20,7 @@ list(APPEND library_source
    render.h
    render_1through3.cpp
    render_arcs.cpp
+   render_box.cpp
    tab_view.cpp
    tab_view.h
    impact.cpp

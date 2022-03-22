@@ -1,3 +1,5 @@
+
+
 #include "framework.h"
 #include <math.h>
 #include "aura/graphics/draw2d/_draw2d.h"
@@ -12,11 +14,11 @@ namespace app_simple_drawing
 
    void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, angle angleStart, angle angleAngle, bool bPath)
    {
-      
+
       auto psystem = m_psystem->m_paurasystem;
-      
+
       auto pdraw2d = psystem->draw2d();
-      
+
       auto pwritetext = pdraw2d->write_text();
 
       auto pfont = pwritetext->create_font();
