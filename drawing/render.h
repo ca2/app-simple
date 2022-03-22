@@ -68,6 +68,8 @@ namespace app_simple_drawing
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
+      virtual void _001OnDrawBoxGradient(::draw2d::graphics_pointer & pgraphics);
+
       virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, angle angleStart, angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
