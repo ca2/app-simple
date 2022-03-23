@@ -36,9 +36,9 @@ namespace app_simple_nanogui_example
    bool document::on_new_document()
    {
       
-      auto papp = get_app();
+      //auto papp = get_app();
       
-      auto & file = papp->file();
+      //auto & file = papp->file();
       
       return true;
       //return ::user::document::on_new_document();
