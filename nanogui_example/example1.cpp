@@ -187,7 +187,7 @@ namespace app_simple_nanogui_example
                tools->set_layout(new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
                b = new Button(tools, "Open");
-               b->set_callback([=] {
+               b->set_callback([this,image_view] {
                   ::string str = file_dialog(
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, false).c_str();
 
@@ -195,7 +195,7 @@ namespace app_simple_nanogui_example
                   });
 
                b = new Button(tools, "Save");
-               b->set_callback([=] {
+               b->set_callback([this,image_view] {
                   auto path = file_dialog(
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, true);
 
