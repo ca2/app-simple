@@ -155,7 +155,7 @@ namespace app_simple_nanogui_example
    void impact::next_application()
    {
 
-      int iNextApplication = m_iCurrentApplication + 1;
+      auto iNextApplication = m_iCurrentApplication + 1;
 
       if (iNextApplication >= m_exampleapplicationa.get_size())
       {
@@ -172,7 +172,7 @@ namespace app_simple_nanogui_example
    void impact::previous_application()
    {
 
-      int iPreviousApplication = m_iCurrentApplication - 1;
+      auto iPreviousApplication = m_iCurrentApplication - 1;
 
       if (iPreviousApplication < 0)
       {

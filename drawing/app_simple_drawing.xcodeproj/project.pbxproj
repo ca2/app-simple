@@ -39,6 +39,7 @@
 		9A8F90D4240C09F10097E249 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* impact.h */; };
 		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
+		9AA1168B27EB54530000DEEC /* render_box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA1168A27EB54530000DEEC /* render_box.cpp */; };
 		9AC01E722748DB1C006BEBCC /* _app_simple_drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01E712748DB1B006BEBCC /* _app_simple_drawing.h */; };
 		9AEB75DE16F78E600085103B /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75BF16F78E600085103B /* framework.h */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		9A8F90C8240C09F10097E249 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		9AA1168A27EB54530000DEEC /* render_box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = render_box.cpp; sourceTree = "<group>"; };
 		9AC01E712748DB1B006BEBCC /* _app_simple_drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _app_simple_drawing.h; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libios_app_simple_drawing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_drawing.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75A316F78DF10085103B /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 		9AEB75AA16F78E600085103B /* simple_drawing */ = {
 			isa = PBXGroup;
 			children = (
+				9AA1168A27EB54530000DEEC /* render_box.cpp */,
 				9AC01E712748DB1B006BEBCC /* _app_simple_drawing.h */,
 				9A23A7DF26CF2A3100F98012 /* _.cpp */,
 				9A449BB624775E110002A827 /* _.h */,
@@ -325,6 +328,7 @@
 				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
 				9A16E08F24BC037D00C3DD5B /* render_1through3.cpp in Sources */,
+				9AA1168B27EB54530000DEEC /* render_box.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

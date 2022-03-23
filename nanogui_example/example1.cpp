@@ -188,19 +188,29 @@ namespace app_simple_nanogui_example
                   Alignment::Middle, 0, 6));
                b = new Button(tools, "Open");
                b->set_callback([this,image_view] {
+                  
+                  m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
+                             {
                   ::string str = file_dialog(
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, false).c_str();
 
                   image_view->set_image(___load_image(m_puserinteraction, str));
+                     
+                  }));
+                  
                   });
 
                b = new Button(tools, "Save");
                b->set_callback([this,image_view] {
+                  
+                  m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
+                             {
+
                   auto path = file_dialog(
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, true);
 
                   ___save_image(m_puserinteraction, path.c_str(), image_view->image());
-
+                  }));
                   });
       
                new Label(window, "Combo box", "sans-bold");
