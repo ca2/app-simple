@@ -29,7 +29,7 @@ namespace app_simple_drawing
 
       pgraphics->set(pbrush);
 
-      pgraphics->fill_rectangle(m_rectangle);
+      pgraphics->fill_round_rect(r, pbrush, radius);
 
 
 

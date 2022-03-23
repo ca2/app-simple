@@ -30,6 +30,7 @@ list(APPEND library_references
    aura
    axis
    base
+   nanogui
    )
 
 
@@ -133,7 +134,7 @@ endif ()
 add_dependencies(_app_simple_nanogui_example ${default_draw2d})
 add_dependencies(_app_simple_nanogui_example ${default_write_text})
 add_dependencies(_app_simple_nanogui_example ${app_common_dependencies})
-add_dependencies(_app_simple_nanogui_example experience_core)
+add_dependencies(_app_simple_nanogui_example experience_nanogui)
 add_dependencies(_app_simple_nanogui_example gpu_opengl)
 
 
