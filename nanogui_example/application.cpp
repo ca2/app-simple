@@ -16,9 +16,9 @@ namespace app_simple_nanogui_example
       
       m_ppaneimpact = nullptr;
 
-      m_strAppId = "app-simple/nanogui_example1";
+      m_strAppId = "app-simple/nanogui_example";
 
-      m_strAppName = "app-simple/nanogui_example1";
+      m_strAppName = "app-simple/nanogui_example";
 
       m_strBaseSupportId = "app_simple_nanogui_example";
 

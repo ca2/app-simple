@@ -51,9 +51,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="uwp_app_simple_application_TemporaryKey.pfx">
-      <Filter>UWP</Filter>
-    </None>
     <None Include="..\..\..\operating-system\storage-universal_windows\binary\x64\basis\libcrypto-1_1-x64.dll">
       <Filter>Library\x64\basis</Filter>
     </None>
@@ -86,6 +83,9 @@
     </None>
     <None Include="_matter.zip">
       <Filter>Source Files</Filter>
+    </None>
+    <None Include="uwp_app_simple_nanogui_example_TemporaryKey.pfx">
+      <Filter>UWP</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +123,7 @@
     <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_app_simple_application.cpp">
+    <ClCompile Include="_app_simple_nanogui_example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

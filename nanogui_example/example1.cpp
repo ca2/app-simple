@@ -20,8 +20,8 @@ namespace app_simple_nanogui_example
       window->set_position(Vector2i(15, 15));
       window->set_layout(new GroupLayout());
 
-      /* No need to store a pointer, the data structure will be automatically
-         freed when the parent window is deleted */
+      ///* No need to store a pointer, the data structure will be automatically
+      //   freed when the parent window is deleted */
       new Label(window, "Push buttons", "sans-bold");
 
 
@@ -29,7 +29,7 @@ namespace app_simple_nanogui_example
       b->set_callback([this] { os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */});
       b->set_tooltip("short tooltip");
 
-      /* Alternative construction notation using variadic template */
+      ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", FA_ROCKET);
       b->set_background_color(Color(0, 0, 255, 25));
       b->set_callback([this] { os_message_box(nullptr, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
@@ -474,7 +474,7 @@ namespace app_simple_nanogui_example
 
 
                   });
-               //b->set_tooltip("short tooltip");
+               b->set_tooltip("short tooltip");
 
 
    }

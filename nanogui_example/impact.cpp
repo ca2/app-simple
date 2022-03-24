@@ -81,7 +81,6 @@ namespace app_simple_nanogui_example
    void impact::on_message_create(::message::message * pmessage)
    {
 
-
       __pointer(::message::create) pcreate(pmessage);
 
       pcreate->previous();
@@ -136,10 +135,14 @@ namespace app_simple_nanogui_example
 
       m_pappearance = papplication;
 
+#ifdef _UWP
+
       int cx = papplication->m_size.x() + 20;
       int cy = papplication->m_size.y() + 48;
 
       get_top_level()->set_size(cx, cy);
+
+#endif
 
       get_top_level()->set_need_layout();
 

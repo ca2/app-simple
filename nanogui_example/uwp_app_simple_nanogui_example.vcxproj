@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{851D4041-37B0-48E6-8931-6FAA920FD805}</ProjectGuid>
+    <ProjectGuid>{B0F73836-FE37-4559-A654-016242409D24}</ProjectGuid>
     <RootNamespace>app-simple</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
@@ -11,7 +11,7 @@
     <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
-    <ProjectName>uwp_app_simple_application</ProjectName>
+    <ProjectName>uwp_app_simple_nanogui_example</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
@@ -245,7 +245,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <PackageCertificateKeyFile>uwp_app_simple_application_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>uwp_app_simple_nanogui_example_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
@@ -912,7 +912,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='cube_basis|ARM'">true</ExcludedFromBuild>
     </None>
-    <None Include="uwp_app_simple_application_TemporaryKey.pfx" />
+    <None Include="uwp_app_simple_nanogui_example_TemporaryKey.pfx" />
     <None Include="_matter.zip">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">true</DeploymentContent>
@@ -990,7 +990,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="_app_simple_application.cpp">
+    <ClCompile Include="_app_simple_nanogui_example.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">Create</PrecompiledHeader>
@@ -1022,6 +1022,9 @@
     <ProjectReference Include="..\..\..\operating-system\operating-system-windows_common\direct2d\u_direct2d.vcxproj">
       <Project>{91608259-0b1f-4deb-a867-873618075395}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\operating-system\operating-system-windows_common\imaging_wic\u_imaging_wic.vcxproj">
+      <Project>{b3a245f9-c92f-4487-aef7-cb0531f665bd}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\acme\u_acme.vcxproj">
       <Project>{74a3ea71-9358-4441-a0cc-d5771df8dfbd}</Project>
     </ProjectReference>
@@ -1046,14 +1049,14 @@
     <ProjectReference Include="..\..\app\crypto_openssl\u_crypto_openssl.vcxproj">
       <Project>{bc919186-f67a-4ffc-b6be-0e63dc652a63}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\app\experience_core\u_experience_core.vcxproj">
-      <Project>{b2d7833b-9b59-4826-bbdf-c270a2115e86}</Project>
+    <ProjectReference Include="..\..\app\experience_nanogui\u_experience_nanogui.vcxproj">
+      <Project>{837a7917-7682-4000-8dfb-f4c5e53f760e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\folder_zip\u_folder_zip.vcxproj">
       <Project>{fc96f9e0-d65e-4286-95b1-f1ff4873dace}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\drawing\u_app_simple_drawing.vcxproj">
-      <Project>{cac77a44-c0fa-49ed-8373-1e101f53d2d6}</Project>
+    <ProjectReference Include="..\..\app\nanogui\u_nanogui.vcxproj">
+      <Project>{dec5db00-b299-4e96-929d-c90e7140b0c7}</Project>
     </ProjectReference>
     <ProjectReference Include="C:\basis\operating-system\operating-system-universal_windows\aura_universal_windows\u_aura_universal_windows.vcxproj">
       <Project>{05c4cf3f-fcb7-4017-a39b-1a03158ec0f3}</Project>
@@ -1082,8 +1085,8 @@
     <ProjectReference Include="C:\basis\source\app\database_sqlite3\u_database_sqlite3.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="u_app_simple_application.vcxproj">
-      <Project>{615b44c0-20d0-46ea-932d-847a142644bd}</Project>
+    <ProjectReference Include="u_app_simple_nanogui_example.vcxproj">
+      <Project>{c15a23d9-41e8-462c-a9fa-b4762764a3bf}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
