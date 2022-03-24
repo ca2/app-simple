@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="basis|ARM">
       <Configuration>basis</Configuration>
@@ -106,6 +107,8 @@
     <ClCompile Include="render.cpp" />
     <ClCompile Include="render_1through3.cpp" />
     <ClCompile Include="render_arcs.cpp" />
+    <ClCompile Include="render_box.cpp" />
+    <ClCompile Include="render_circle_path.cpp" />
     <ClCompile Include="tab_view.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="_.cpp" />
@@ -132,6 +135,9 @@
     <ProjectReference Include="..\..\..\source\app\bred\u_bred.vcxproj">
       <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B198613A-71EE-49B6-B066-ABC8E8538DC9}</ProjectGuid>
@@ -431,7 +437,6 @@
       </ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">
     <ClCompile>
@@ -486,7 +491,6 @@
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|Win32'">
     <ClCompile>
@@ -560,7 +564,6 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|arm'">
     <ClCompile>
@@ -666,7 +669,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\..\operating-system\storage-universal_windows\$(PlatformName)\$(Configuration)\third\library\;$(SolutionDir)..\..\..\..\operating-system\storage-universal_windows\$(PlatformName)\$(Configuration)\library\;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|arm'">
     <ClCompile>
@@ -763,7 +765,6 @@
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">
     <ClCompile>
@@ -817,7 +818,6 @@
       <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\..\operating-system\storage-universal_windows\$(PlatformName)\$(Configuration)\third\library\;$(SolutionDir)..\..\..\..\operating-system\storage-universal_windows\$(PlatformName)\$(Configuration)\library\;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>u_$(TargetName).def</ModuleDefinitionFile>
     </Link>
-
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">
     <ClCompile>
@@ -843,5 +843,13 @@
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props'))" />
+    <Error Condition="!Exists('..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\operating-system\operating-system-universal_windows\_seed\packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets'))" />
+  </Target>
 </Project>

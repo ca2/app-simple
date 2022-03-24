@@ -17,9 +17,17 @@ namespace app_simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
+      pgraphics->text_out(100, 50, "Round Rectangle (100, 100) - (900, 500) r = 100");
+
       ::rectangle_f64 r(100, 100, 900, 500);
 
       double radius = 100;
+
+      ::draw2d::pen_pointer ppen;
+
+      __construct(ppen);
+      ppen->create_solid(5.0, ::color::green);
+
 
       ::draw2d::brush_pointer pbrush;
 
@@ -27,9 +35,10 @@ namespace app_simple_drawing
 
       pbrush->CreateBoxGradientBrush(r.top_left(), r.size(), radius, ::dk_red(), ::color::transparent);
 
-      pgraphics->set(pbrush);
 
-      pgraphics->fill_round_rect(r, pbrush, radius);
+      pgraphics->fill_round_rectangle(r, pbrush, radius);
+
+      pgraphics->::draw2d::graphics::draw_round_rectangle(r, ppen, radius);
 
 
 

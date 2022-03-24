@@ -129,13 +129,19 @@ namespace app_simple_drawing
          _001OnDrawBoxGradient(pgraphics);
 
       }
-      else if(m_iDrawing == 5)
+      else if (m_iDrawing == 5)
+      {
+
+         _001OnDrawCirclePath(pgraphics);
+
+      }
+      else if(m_iDrawing == 6)
       {
 
          _001OnDrawArcs(pgraphics, false);
 
       }
-      else if(m_iDrawing == 6)
+      else if(m_iDrawing == 7)
       {
 
          _001OnDrawArcs(pgraphics, true);

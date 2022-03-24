@@ -60,8 +60,9 @@ namespace app_simple_drawing
       set_tab("text://app-simple/drawing/:002", "drawing2");
       set_tab("text://app-simple/drawing/:003", "drawing3");
       set_tab("text://app-simple/drawing/:box gradient", "drawing4");
-      set_tab("text://app-simple/drawing/:arcs", "drawing5");
-      set_tab("text://app-simple/drawing/:arcpths", "drawing6");
+      set_tab("text://app-simple/drawing/:circle path", "drawing5");
+      set_tab("text://app-simple/drawing/:arcs", "drawing6");
+      set_tab("text://app-simple/drawing/:arcpths", "drawing7");
 
 
       set_current_tab_by_id("drawing1");
