@@ -11,8 +11,6 @@ namespace app_simple_drawing
 {
 
 
-
-
    void render::_001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics)
    {
 
