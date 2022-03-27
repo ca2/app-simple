@@ -14,13 +14,15 @@ list(APPEND library_source
    example2.h
    example_icons.cpp
    example_icons.h
-        document.cpp
+        #document.cpp
         document.h
         framework.cpp
         framework.h
 
-        impact.cpp
-        impact.h)
+        #impact.cpp
+   main_window.cpp
+   main_window.h
+   )
 
 
 list(APPEND library_references
@@ -28,8 +30,6 @@ list(APPEND library_references
    apex
    aqua
    aura
-   axis
-   base
    nanogui
    )
 
@@ -134,8 +134,6 @@ endif ()
 add_dependencies(_app_simple_nanogui_example ${default_draw2d})
 add_dependencies(_app_simple_nanogui_example ${default_write_text})
 add_dependencies(_app_simple_nanogui_example ${app_common_dependencies})
-add_dependencies(_app_simple_nanogui_example experience_nanogui)
-add_dependencies(_app_simple_nanogui_example gpu_opengl)
 
 
 target_include_directories(_app_simple_nanogui_example PRIVATE ${library_include_directories})

@@ -1,4 +1,4 @@
-// Created by camilo on 2022-03-23 11:55 PM <3ThomasBorregaardSørensen!! (Thomas likes number 5!!)
+// Created by camilo on 2022-03-23 11:55 PM <3ThomasBorregaardSï¿½rensen!! (Thomas likes number 5!!)
 #include "framework.h"
 #include <math.h>
 #include "aura/graphics/draw2d/_draw2d.h"
@@ -20,6 +20,14 @@ namespace app_simple_drawing
 
       ::rectangle_f64 r(300, 300, 800, 800);
 
+      double dx = m_rectangle.width() / 1000.0;
+
+      double dy = m_rectangle.height() / 900.0;
+
+      double d = minimum(dx, dy);
+
+      r *= d;
+
       ::draw2d::path_pointer ppath;
 
       __construct(ppath);
@@ -30,7 +38,7 @@ namespace app_simple_drawing
 
       ppath->close_figure();
 
-      double radius = 100;
+      double radius = 100 * d;
 
       ::draw2d::pen_pointer ppen;
 
