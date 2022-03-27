@@ -134,9 +134,7 @@ namespace app_simple_nanogui_example
 
       auto papplication = m_exampleapplicationa[iIndex].get();
 
-      set_appearance(papplication);
-
-#ifdef _UWP
+#if !defined(_UWP)
 
       int cx = papplication->m_size.x() + 20;
       int cy = papplication->m_size.y() + 48;
@@ -144,6 +142,8 @@ namespace app_simple_nanogui_example
       get_top_level()->set_size(cx, cy);
 
 #endif
+
+      set_appearance(papplication);
 
       get_top_level()->set_need_layout();
 
@@ -193,6 +193,7 @@ namespace app_simple_nanogui_example
    void main_window::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
+      ::user::main_window::_001OnDraw(pgraphics);
 
    }
 
