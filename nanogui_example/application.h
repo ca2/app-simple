@@ -7,18 +7,17 @@ namespace app_simple_nanogui_example
 
 
    class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE application :
-      virtual public ::base::application
+      virtual public ::aura::application
    {
    public:
 
 
+      __composite(::app_simple_nanogui_example::main_window)       m_pmainwindow;
 
-      ::user::document *                              m_pdocMenu;
-      __composite(::user::single_document_template)   m_ptemplateSimpleDrawingMain;
-      pane_impact *                                     m_ppaneimpact;
 
       application();
       ~application() override;
+
 
       virtual string preferred_experience() override;
       virtual void init_instance() override;

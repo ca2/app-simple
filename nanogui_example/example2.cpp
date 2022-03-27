@@ -18,7 +18,7 @@
 ////#include <iostream>
 //
 //
-//using namespace nanogui;
+using namespace nanogui;
 //
 //enum test_enum {
 //   Item1 = 0,
@@ -40,9 +40,9 @@ namespace app_simple_nanogui_example
 {
 
 
-   ExampleApplication2::ExampleApplication2(impact * pimpact) :
-      Screen(Vector2i(500, 900), "NanoGUI Test"),
-      m_pimpact(pimpact)
+   ExampleApplication2::ExampleApplication2(main_window * pmainwindow) :
+      Screen(::nanogui::Vector2i(500, 900), "NanoGUI Test"),
+      m_pmainwindow(pmainwindow)
    {
 
       //nanogui::init();
@@ -65,8 +65,8 @@ namespace app_simple_nanogui_example
          //}
 
          bool enabled = true;
-         nanogui::FormHelper * gui = new FormHelper(this);
-         m_window = gui->add_window(Vector2i(10, 10), "Form helper example");
+         nanogui::FormHelper * gui = new ::nanogui::FormHelper(this);
+         m_window = gui->add_window(::nanogui::Vector2i(10, 10), "Form helper example");
          gui->add_group("Basic types");
          gui->add_variable("bool", bvar);
          gui->add_variable("string", strval);
@@ -112,7 +112,7 @@ namespace app_simple_nanogui_example
 
                //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
-               m_pimpact->next_application();
+               m_pmainwindow->next_application();
 
 
             });
@@ -123,7 +123,7 @@ namespace app_simple_nanogui_example
 
                //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
-               m_pimpact->previous_application();
+               m_pmainwindow->previous_application();
 
 
             });

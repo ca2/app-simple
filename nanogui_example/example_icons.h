@@ -1,6 +1,7 @@
 // From nanogui by camilo on 2022/03/22 2:01 AM <3ThomasBorregaardSørensen!!
 #pragma once
 
+
 using namespace nanogui;
 
 
@@ -8,12 +9,13 @@ namespace app_simple_nanogui_example
 {
 
 
-
    class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE ExampleApplicationIcons : public nanogui::Screen
    {
    public:
 
-      __pointer(impact) m_pimpact;
+
+      __pointer(main_window) m_pmainwindow;
+
 
       ref<Window> m_window;
 
@@ -35,7 +37,7 @@ namespace app_simple_nanogui_example
 
       ::nanogui::Color colval = { 0.5f, 0.5f, 0.7f, 1.f };
 
-      ExampleApplicationIcons(impact * pimpact);
+      ExampleApplicationIcons(main_window * pmainwindow);
 
       void perform_layout(NVGcontext * pcontext) override;
 

@@ -11,7 +11,7 @@ namespace app_simple_nanogui_example
 {
 
 
-   impact::impact()
+   main_window::main_window()
    {
 
       //m_pexampleapplication = nullptr;
@@ -22,7 +22,7 @@ namespace app_simple_nanogui_example
    }
 
 
-   impact::~impact()
+   main_window::~main_window()
    {
 
       
@@ -33,18 +33,18 @@ namespace app_simple_nanogui_example
 #ifdef _DEBUG
 
 
-   int64_t impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::user::main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
 
-   int64_t impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t main_window::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::user::main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
@@ -52,34 +52,34 @@ namespace app_simple_nanogui_example
 #endif
 
 
-   void impact::assert_ok() const
+   void main_window::assert_ok() const
    {
 
-      user::box::assert_ok();
+      user::main_window::assert_ok();
 
    }
 
 
-   void impact::dump(dump_context & dumpcontext) const
+   void main_window::dump(dump_context & dumpcontext) const
    {
 
-      user::box::dump(dumpcontext);
+      user::main_window::dump(dumpcontext);
 
    }
 
 
-   void impact::install_message_routing(::channel * psender)
+   void main_window::install_message_routing(::channel * psender)
    {
 
-      ::user::impact::install_message_routing(psender);
+      ::user::main_window::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
+      MESSAGE_LINK(e_message_create,psender,this,&main_window::on_message_create);
+      MESSAGE_LINK(e_message_destroy, psender, this, &main_window::on_message_destroy);
 
    }
 
 
-   void impact::on_message_create(::message::message * pmessage)
+   void main_window::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -103,13 +103,13 @@ namespace app_simple_nanogui_example
    }
 
 
-   void impact::on_message_destroy(::message::message * pmessage)
+   void main_window::on_message_destroy(::message::message * pmessage)
    {
 
    }
 
 
-   bool impact::keyboard_focus_is_focusable() const
+   bool main_window::keyboard_focus_is_focusable() const
    {
 
       return true;
@@ -117,23 +117,15 @@ namespace app_simple_nanogui_example
    }
 
 
-   void impact::handle(::topic * ptopic, ::context * pcontext)
+   void main_window::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::main_window::handle(ptopic, pcontext);
 
    }
 
 
-   document * impact::get_document()
-   {
-
-      return dynamic_cast < document * >(::user::impact::get_document());
-
-   }
-
-
-   void impact::set_current_application(int iIndex)
+   void main_window::set_current_application(int iIndex)
    {
 
       m_iCurrentApplication = iIndex;
@@ -164,7 +156,7 @@ namespace app_simple_nanogui_example
    }
 
 
-   void impact::next_application()
+   void main_window::next_application()
    {
 
       auto iNextApplication = m_iCurrentApplication + 1;
@@ -181,7 +173,7 @@ namespace app_simple_nanogui_example
    }
 
 
-   void impact::previous_application()
+   void main_window::previous_application()
    {
 
       auto iPreviousApplication = m_iCurrentApplication - 1;
@@ -198,14 +190,14 @@ namespace app_simple_nanogui_example
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void main_window::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void main_window::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       auto rectangleClient = get_client_rect();
@@ -217,7 +209,7 @@ namespace app_simple_nanogui_example
 
       }
 
-      ::user::impact::on_layout(pgraphics);
+      ::user::main_window::on_layout(pgraphics);
 
    }
 

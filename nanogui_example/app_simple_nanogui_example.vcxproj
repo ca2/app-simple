@@ -935,7 +935,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
-    <ClCompile Include="document.cpp" />
     <ClCompile Include="example2.cpp" />
     <ClCompile Include="example_icons.cpp" />
     <ClCompile Include="framework.cpp">
@@ -948,7 +947,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_stage|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="impact.cpp" />
+    <ClCompile Include="main_window.cpp" />
     <ClCompile Include="example1.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -959,7 +958,7 @@
     <ClInclude Include="_.h" />
     <ClInclude Include="example1.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="impact.h" />
+    <ClInclude Include="main_window.h" />
     <ClInclude Include="_app_simple_nanogui_example.h" />
   </ItemGroup>
   <ItemGroup>
@@ -977,12 +976,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\aura\aura.vcxproj">
       <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\base\base.vcxproj">
-      <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\axis\axis.vcxproj">
-      <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\app\nanogui\nanogui.vcxproj">
       <Project>{4fc273f2-a70c-444e-8952-adfbb6575a3f}</Project>
