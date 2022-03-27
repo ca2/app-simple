@@ -17,6 +17,7 @@ namespace app_simple_nanogui_example
       //m_pexampleapplication = nullptr;
       m_flagNonClient -= non_client_background;
       m_bClickDefaultMouseHandling = true;
+      m_bEditDefaultHandling = true;
 
    }
 
@@ -108,6 +109,14 @@ namespace app_simple_nanogui_example
    }
 
 
+   bool impact::keyboard_focus_is_focusable() const
+   {
+
+      return true;
+
+   }
+
+
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
@@ -133,7 +142,7 @@ namespace app_simple_nanogui_example
 
       auto papplication = m_exampleapplicationa[iIndex].get();
 
-      m_pappearance = papplication;
+      set_appearance(papplication);
 
 #ifdef _UWP
 
