@@ -13,16 +13,23 @@ namespace app_simple_nanogui_example
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE impact :
-      virtual public ::app_consumer < application, ::user::impact >
+   class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE main_window :
+      virtual public ::user::main_window
    {
    public:
+
+
+      int               m_iCloseButtonDraw;
+
+
 
       array < ::nanogui::ref < nanogui::Screen > > m_exampleapplicationa;
       int         m_iCurrentApplication;
 
-      impact();
-      ~impact() override;
+
+      main_window();
+      ~main_window() override;
+
 
       void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;
@@ -36,11 +43,7 @@ namespace app_simple_nanogui_example
 
       void install_message_routing(::channel * psender) override;
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
-
       void handle(::topic * ptopic, ::context * pcontext) override;
-
-      document * get_document();
 
       virtual void set_current_application(int iIndex);
 
@@ -55,6 +58,15 @@ namespace app_simple_nanogui_example
 
 
       virtual bool keyboard_focus_is_focusable() const;
+
+
+
+
+      //virtual void on_create_user_interaction() override;
+
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+
+      //virtual void _001DrawItem(::draw2d::graphics_pointer & pgraphics, ::item * pitem) override;
 
 
    };

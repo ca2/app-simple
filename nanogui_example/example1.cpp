@@ -10,9 +10,9 @@ namespace app_simple_nanogui_example
 {
 
 
-   ExampleApplication1::ExampleApplication1(impact * pimpact) :
+   ExampleApplication1::ExampleApplication1(main_window * pmainwindow) :
       Screen(Vector2i(1024, 768), "NanoGUI Test") ,
-      m_pimpact(pimpact)
+      m_pmainwindow(pmainwindow)
    {
 
       inc_ref();
@@ -459,7 +459,7 @@ namespace app_simple_nanogui_example
                      
                      //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
-                     m_pimpact->next_application();
+                     m_pmainwindow->next_application();
 
 
                   });
@@ -470,7 +470,7 @@ namespace app_simple_nanogui_example
 
                      //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
-                     m_pimpact->previous_application();
+                     m_pmainwindow->previous_application();
 
 
                   });

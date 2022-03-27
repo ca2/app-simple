@@ -9,16 +9,18 @@ namespace app_simple_nanogui_example
 
 
 
-   class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE ExampleApplication1   : public nanogui::Screen {
+   class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE ExampleApplication1 :
+      public nanogui::Screen 
+   {
    public:
 
-      __pointer(impact) m_pimpact;
+      __pointer(main_window)  m_pmainwindow;
 
       int m_current_image;
 
       ProgressBar * m_progress;
 
-      ExampleApplication1(impact * pimpact);
+      ExampleApplication1(main_window * pmainwindow);
 
    };
 

@@ -1,24 +1,14 @@
 #pragma once
 
 
-#include "app-simple/application/_.h"
-#include "base/user/simple/_simple.h"
+#include "_.h"
 #include "nanogui/_nanogui.h"
 
 
-namespace user
-{
+#include "main_window.h"
 
 
-   typedef ::user::show < ::user::button > button_view;
-
-} // namespace user
-
-
-
-#include "document.h"
-#include "impact.h"
-
+#include "application.h"
 
 
 
