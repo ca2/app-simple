@@ -54,6 +54,9 @@ namespace app_simple_nanogui_example
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
 
+      virtual bool keyboard_focus_is_focusable() const;
+
+
    };
 
 
