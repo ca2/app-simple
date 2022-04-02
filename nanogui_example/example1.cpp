@@ -108,7 +108,7 @@ namespace app_simple_nanogui_example
       
       #if defined(_WIN32)
                /// Executable is in the Debug/Release/.. subdirectory
-               std::string resources_folder_path("../icons");
+               std::string resources_folder_path("matter://icons");
       #else
                std::string resources_folder_path("./icons");
       #endif
@@ -131,7 +131,7 @@ namespace app_simple_nanogui_example
                popup = image_panel_btn->popup();
                VScrollPanel * vscroll = new VScrollPanel(popup);
                ImagePanel * img_panel = new ImagePanel(vscroll);
-               img_panel->load_image_directory("icons");
+               img_panel->load_image_directory("matter://icons");
                popup->set_fixed_size(Vector2i(245, 150));
       
                auto image_window = new Window(this, "Selected image");
