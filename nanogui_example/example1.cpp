@@ -6,7 +6,6 @@
 #include "nanogui/ColorPicker.h"
 #include "nanogui/nano2d/_nano2d.h"
 
-
 namespace app_simple_nanogui_example
 {
 
@@ -190,29 +189,52 @@ namespace app_simple_nanogui_example
                b = new Button(tools, "Open");
                b->set_callback([this,image_view] {
                   
-                  m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
-                             {
-                  ::string str = file_dialog(
-                     { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, false).c_str();
+                  //m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
+                    //         {
+                  auto pwindow = m_puserinteraction->window();
+                  auto poswindow = pwindow->get_os_data();
+                  pick_single_file(poswindow,
+                              { {"png", "Portable Network Graphics"},
+                     {"jpeg", "JPEG file"},
+                     {"jpg", "JPG file"},{"txt", "Text file"} },
+                              [this, image_view](const ::std::string & str)
+                              {
+                                 
+                                 if(str.size() > 0)
+                                 {
+                         
+                                    image_view->set_image(___load_image(m_puserinteraction, str.c_str()));
+                      
+                                 }
 
-                  image_view->set_image(___load_image(m_puserinteraction, str));
+                              }, false);
                      
-                  }));
-                  
                   });
+                  
+                 // });
 
                b = new Button(tools, "Save");
-               b->set_callback([this,image_view] {
+               b->set_callback([this,image_view]
+               {
                   
-                  m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
-                             {
+                  auto pwindow = m_puserinteraction->window();
+                  auto poswindow = pwindow->get_os_data();
+                  pick_single_file(
+                     poswindow,
+                     { {"png", "Portable Network Graphics"}, {"txt", "Text file"} },
+                     [this, image_view](const ::std::string & str)
+                     {
 
-                  auto path = file_dialog(
-                     { {"png", "Portable Network Graphics"}, {"txt", "Text file"} }, true);
+                        if(str.size() > 0)
+                        {
+                     
+                           ___save_image(m_puserinteraction, str.c_str(), image_view->image());
+                        
+                        }
 
-                  ___save_image(m_puserinteraction, path.c_str(), image_view->image());
-                  }));
-                  });
+                     }, true);
+
+               });
       
                new Label(window, "Combo box", "sans-bold");
                new ComboBox(window, { "Combo box item 1", "Combo box item 2", "Combo box item 3" });
