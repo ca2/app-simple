@@ -183,7 +183,7 @@ namespace app_simple_nanogui_example
       if (iPreviousApplication < 0)
       {
 
-         iPreviousApplication = m_exampleapplicationa.get_upper_bound();
+         iPreviousApplication =  (int) m_exampleapplicationa.get_upper_bound();
 
       }
 
