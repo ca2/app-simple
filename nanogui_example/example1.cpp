@@ -4,6 +4,7 @@
 #include "nanogui/ToolButton.h"
 #include "nanogui/Graph.h"
 #include "nanogui/ColorPicker.h"
+#include "nanogui/nano2d/_nano2d.h"
 
 
 namespace app_simple_nanogui_example
@@ -476,7 +477,6 @@ namespace app_simple_nanogui_example
                   });
                b->set_tooltip("short tooltip");
 
-
    }
 
    //
@@ -496,6 +496,39 @@ namespace app_simple_nanogui_example
    //   ::acme::del(papplication);
 
    //}
+
+   void ExampleApplication1::draw_contents(NVGcontext * ctx)
+   {
+
+      Screen::draw_contents(ctx);
+
+
+      int iSize = minimum(m_size.x(), m_size.y());
+
+      iSize = iSize / 2;
+
+      int centerX = m_size.x() / 2.0;
+
+      int centerY = m_size.y() / 2.0;
+
+      nvgSave(ctx);
+
+      nvgFillColor(ctx, {1.0, 1.0, 1.0, 0.5});
+
+      auto angle = fmod(get_floating_second().m_d, 2.0 *MATH_PI);
+
+      nvgTranslate(ctx, centerX, centerY);
+      nvgRotate(ctx, angle);
+
+      nvgBeginPath(ctx);
+      nvgRect(ctx, -iSize / 2, -iSize / 2, iSize, iSize);
+      nvgFill(ctx);
+
+
+      nvgRestore(ctx);
+
+
+   }
 
 
 } // namespace simple_application
