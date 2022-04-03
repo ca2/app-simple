@@ -22,18 +22,15 @@
 		9A3CA6DA27EAE7F8009ADCD2 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3CA6D927EAE7F8009ADCD2 /* libbase.dylib */; };
 		9A3CA84427EAE9CE009ADCD2 /* libnanogui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3CA84327EAE9C6009ADCD2 /* libnanogui.dylib */; };
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
-		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
-		9A415C2E247393C100EF2BCD /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* impact.cpp */; };
+		9A4AE70927F9580F00A4B000 /* main_window.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A4AE70727F9580F00A4B000 /* main_window.h */; };
+		9A4AE70A27F9580F00A4B000 /* main_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A4AE70827F9580F00A4B000 /* main_window.cpp */; };
 		9A7D920F251AF32C00DE81AE /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D920E251AF32C00DE81AE /* libacme.dylib */; };
 		9A7D9211251AF32C00DE81AE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D9210251AF32C00DE81AE /* libapex.dylib */; };
 		9A833BE124F544B200C079FB /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A833BDF24F544B200C079FB /* _.h */; };
 		9A833BE924F544EA00C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A258BD424DA5DD30013F50E /* libaura.dylib */; };
 		9A833BEB24F544EF00C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BEA24F544EF00C079FB /* libaxis.dylib */; };
-		9A8F90CE240C09F10097E249 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* impact.cpp */; };
 		9A8F90D1240C09F10097E249 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C5240C09F00097E249 /* document.h */; };
 		9A8F90D2240C09F10097E249 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
-		9A8F90D4240C09F10097E249 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* impact.h */; };
-		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
 		9A922FDE27EAC81C00B5A78D /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A922FDD27EAC81C00B5A78D /* libacme.dylib */; };
 		9A922FE027EAC83100B5A78D /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A922FDF27EAC83100B5A78D /* libapex.dylib */; };
@@ -90,15 +87,14 @@
 		9A3CA6CC27EAE750009ADCD2 /* example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example1.cpp; sourceTree = "<group>"; };
 		9A3CA6CD27EAE750009ADCD2 /* example_icons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example_icons.cpp; sourceTree = "<group>"; };
 		9A3CA6D927EAE7F8009ADCD2 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4AE70727F9580F00A4B000 /* main_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_window.h; sourceTree = "<group>"; };
+		9A4AE70827F9580F00A4B000 /* main_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_window.cpp; sourceTree = "<group>"; };
 		9A7D920E251AF32C00DE81AE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D9210251AF32C00DE81AE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A833BDF24F544B200C079FB /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 		9A833BEA24F544EF00C079FB /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8F90C2240C09F00097E249 /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
 		9A8F90C5240C09F00097E249 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		9A8F90C6240C09F00097E249 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
-		9A8F90C8240C09F10097E249 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
-		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9A922E9227EAC63300B5A78D /* nanogui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nanogui.xcodeproj; path = ../../app/nanogui/nanogui.xcodeproj; sourceTree = "<group>"; };
 		9A922FDD27EAC81C00B5A78D /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,12 +181,13 @@
 		9AEB75AA16F78E600085103B /* nanogui_example */ = {
 			isa = PBXGroup;
 			children = (
+				9A4AE70827F9580F00A4B000 /* main_window.cpp */,
+				9A4AE70727F9580F00A4B000 /* main_window.h */,
 				9A00E5C52661320400517464 /* _.cpp */,
 				9A833BDF24F544B200C079FB /* _.h */,
 				9A92318827EAE54700B5A78D /* _app_simple_nanogui_example.h */,
 				9A8F90C6240C09F00097E249 /* application.cpp */,
 				9A8F90CA240C09F10097E249 /* application.h */,
-				9A8F90C9240C09F10097E249 /* document.cpp */,
 				9A8F90C5240C09F00097E249 /* document.h */,
 				9A3CA6CD27EAE750009ADCD2 /* example_icons.cpp */,
 				9A3CA6C827EAE750009ADCD2 /* example_icons.h */,
@@ -200,8 +197,6 @@
 				9A3CA6CA27EAE750009ADCD2 /* example2.h */,
 				9AEB75BE16F78E600085103B /* framework.cpp */,
 				9AEB75BF16F78E600085103B /* framework.h */,
-				9A8F90C2240C09F00097E249 /* impact.cpp */,
-				9A8F90C8240C09F10097E249 /* impact.h */,
 			);
 			name = nanogui_example;
 			sourceTree = "<group>";
@@ -214,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A833BE124F544B200C079FB /* _.h in Headers */,
-				9A8F90D4240C09F10097E249 /* impact.h in Headers */,
 				9A3CA6D227EAE750009ADCD2 /* example1.h in Headers */,
 				9A8F90D6240C09F10097E249 /* application.h in Headers */,
 				9AEB75DE16F78E600085103B /* framework.h in Headers */,
@@ -222,6 +216,7 @@
 				9A8F90D1240C09F10097E249 /* document.h in Headers */,
 				9A3CA6D127EAE750009ADCD2 /* example2.h in Headers */,
 				9A92318927EAE54700B5A78D /* _app_simple_nanogui_example.h in Headers */,
+				9A4AE70927F9580F00A4B000 /* main_window.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
-				9A415C2A247393C100EF2BCD /* document.cpp in Sources */,
-				9A415C2E247393C100EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,9 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8F90CE240C09F10097E249 /* impact.cpp in Sources */,
 				9A3CA6D427EAE750009ADCD2 /* example_icons.cpp in Sources */,
-				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
+				9A4AE70A27F9580F00A4B000 /* main_window.cpp in Sources */,
 				9A00E5C62661320500517464 /* _.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
