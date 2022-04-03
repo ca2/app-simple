@@ -93,6 +93,8 @@ namespace app_simple_nanogui_example
 
       }
 
+      set_prodevian();
+
       m_exampleapplicationa.add(new ExampleApplication1(this));
       m_exampleapplicationa.add(new ExampleApplication2(this));
       m_exampleapplicationa.add(new ExampleApplicationIcons(this));

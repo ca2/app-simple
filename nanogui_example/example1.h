@@ -1,4 +1,4 @@
-// From nanogui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSørensen!!
+// From nanogui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSï¿½rensen!!
 #pragma once
 
 using namespace nanogui;
@@ -21,6 +21,10 @@ namespace app_simple_nanogui_example
       ProgressBar * m_progress;
 
       ExampleApplication1(main_window * pmainwindow);
+
+
+      void draw_contents(NVGcontext * ctx) override;
+
 
    };
 
