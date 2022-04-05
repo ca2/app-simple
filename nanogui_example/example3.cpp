@@ -142,7 +142,7 @@ namespace app_simple_nanogui_example
 
     gui->add_group("Other widgets");
     gui->add_button("A button", []()
-       { os_message_box(nullptr, "Button pressed."); }
+       { message_box_synchronous(nullptr, "Button pressed."); }
     )
        ->set_tooltip("Testing a much longer tooltip, that will wrap around to new lines multiple times.");;
 

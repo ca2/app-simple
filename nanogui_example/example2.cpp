@@ -83,8 +83,8 @@ namespace app_simple_nanogui_example
          gui->add_variable("Color", colval);
 
          gui->add_group("Other widgets");
-         gui->add_button("A button", []() 
-            { os_message_box(nullptr, "Button pressed."); 
+         gui->add_button("A button", [this]() 
+            { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Button pressed.");
             });
 
          set_visible(true);
@@ -110,7 +110,7 @@ namespace app_simple_nanogui_example
             [this]
             {
 
-               //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+               //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->next_application();
 
@@ -121,7 +121,7 @@ namespace app_simple_nanogui_example
             [this]
             {
 
-               //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+               //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->previous_application();
 

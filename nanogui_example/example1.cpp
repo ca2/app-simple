@@ -26,24 +26,24 @@ namespace app_simple_nanogui_example
 
 
       Button * b = new Button(window, "Plain button");
-      b->set_callback([this] { os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */});
+      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */});
       b->set_tooltip("short tooltip");
 
       ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", FA_ROCKET);
       b->set_background_color(Color(0, 0, 255, 25));
-      b->set_callback([this] { os_message_box(nullptr, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
+      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
       
       new Label(window, "Toggle buttons", "sans-bold");
       b = new Button(window, "Toggle me");
       b->set_flags(Button::ToggleButton);
-      b->set_change_callback([](bool state)
+      b->set_change_callback([this](bool state)
          {
             string_stream str;
             str << "Toggle button state: " << state;
-            os_message_box(nullptr, (::string &) str);
+            message_box_asynchronous(nullptr, screen()->m_puserinteraction, (::string &) str);
             
          
          });
@@ -93,17 +93,17 @@ namespace app_simple_nanogui_example
                b = new Button(tools, "Info");
                b->set_callback([&] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
-                  dlg->set_callback([](int result) { os_message_box(nullptr, "Dialog result: " + __string(result)); });
+                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
                b = new Button(tools, "Warn");
                b->set_callback([&] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
-                  dlg->set_callback([](int result) { os_message_box(nullptr, "Dialog result: " + __string(result)); });
+                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
                b = new Button(tools, "Ask");
-               b->set_callback([&] {
+               b->set_callback([&, this] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
-                  dlg->set_callback([](int result) { os_message_box(nullptr, "Dialog result: " + __string(result)); });
+                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
       
       #if defined(_WIN32)
@@ -240,20 +240,20 @@ namespace app_simple_nanogui_example
                new ComboBox(window, { "Combo box item 1", "Combo box item 2", "Combo box item 3" });
                new Label(window, "Check box", "sans-bold");
                CheckBox * cb = new CheckBox(window, "Flag 1",
-                  [](bool state) { 
+                  [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
-                     os_message_box(nullptr, str.get_string());
+                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
 
                   }
                );
                cb->set_checked(true);
                cb = new CheckBox(window, "Flag 2",
-                  [](bool state) { 
+                  [this](bool state) {
                      
                      string_stream str;
                      str << "Check box 2 state: " << state;
-                     os_message_box(nullptr, str.get_string());
+                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
 
                   }
                );
@@ -281,7 +281,7 @@ namespace app_simple_nanogui_example
                   string str;
                   
                   str.format("Final slider value: %d", (int)(value * 100));
-                  os_message_box(nullptr, str);
+                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str);
                   });
                text_box->set_fixed_size(Vector2i(60, 25));
                text_box->set_font_size(20);
@@ -422,14 +422,14 @@ namespace app_simple_nanogui_example
                new Label(window, "Color picker :", "sans-bold");
                auto cp = new ColorPicker(window, { 255, 120, 0, 255 });
                cp->set_fixed_size({ 100, 20 });
-               cp->set_final_callback([](const Color & c) {
+               cp->set_final_callback([this](const Color & c) {
                   string_stream str;
                   str << "ColorPicker final callback: ["
                      << c.r() << ", "
                      << c.g() << ", "
                      << c.b() << ", "
                      << c.w() << "]";
-                  os_message_box(nullptr, str.get_string());
+                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
                   });
                // setup a fast callback for the color picker widget on a new window
                // for demonstrative purposes
@@ -480,7 +480,7 @@ namespace app_simple_nanogui_example
                   [this] 
                   { 
                      
-                     //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+                     //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->next_application();
 
@@ -491,7 +491,7 @@ namespace app_simple_nanogui_example
                   [this]
                   {
 
-                     //os_message_box(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+                     //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->previous_application();
 
