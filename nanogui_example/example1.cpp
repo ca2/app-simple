@@ -11,7 +11,7 @@ namespace app_simple_nanogui_example
 
 
    ExampleApplication1::ExampleApplication1(main_window * pmainwindow) :
-      Screen(Vector2i(1024, 768), "NanoGUI Test") ,
+      Screen(pmainwindow, Vector2i(1024, 768), "NanoGUI Test") ,
       m_pmainwindow(pmainwindow)
    {
 

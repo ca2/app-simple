@@ -33,7 +33,7 @@ namespace app_simple_nanogui_example
 
 
    ExampleApplicationIcons::ExampleApplicationIcons(main_window * pmainwindow) :
-      Screen(Vector2i(1000, 800), "NanoGUI Icons"),
+      Screen(pmainwindow, Vector2i(1000, 800), "NanoGUI Icons"),
       m_pmainwindow(pmainwindow)
    {
 
