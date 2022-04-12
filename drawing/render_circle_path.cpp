@@ -44,7 +44,20 @@ namespace app_simple_drawing
 
       __construct(ppen);
 
-      ppen->create_solid(5.0, ::color::green);
+      auto & echeckSimple = m_papp->application_properties().m_echeckSimple;
+
+      if (__bool(echeckSimple))
+      {
+
+         ppen->create_null();
+
+      }
+      else
+      {
+
+         ppen->create_solid(5.0, ::color::green);
+
+      }
 
       ::draw2d::brush_pointer pbrush;
 
@@ -55,9 +68,6 @@ namespace app_simple_drawing
       pgraphics->fill(ppath, pbrush);
 
       pgraphics->draw(ppath, ppen);
-
-
-
 
    }
 
