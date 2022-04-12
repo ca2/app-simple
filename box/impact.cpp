@@ -320,7 +320,9 @@ namespace app_simple_box
             if (pconversation->m_atomResult == e_dialog_result_yes)
             {
 
-               get_app()->_001TryCloseApplication();
+               auto papp = get_app();
+
+               papp->_001TryCloseApplication();
 
             }
             else
