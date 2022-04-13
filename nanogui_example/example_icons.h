@@ -39,7 +39,7 @@ namespace app_simple_nanogui_example
 
       ExampleApplicationIcons(main_window * pmainwindow);
 
-      void perform_layout(NVGcontext * pcontext) override;
+      void perform_layout(NVGcontext * pcontext, bool bRecalcTextSize = true) override;
 
 
    };

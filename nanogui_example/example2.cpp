@@ -133,10 +133,10 @@ namespace app_simple_nanogui_example
    }
 
 
-   void ExampleApplication2::perform_layout(NVGcontext * pcontext)
+   void ExampleApplication2::perform_layout(NVGcontext * pcontext, bool bRecalcTextSize)
    {
 
-      Screen::perform_layout(pcontext);
+      Screen::perform_layout(pcontext, bRecalcTextSize);
 
       m_window->center();
 
