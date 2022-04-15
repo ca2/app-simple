@@ -91,17 +91,17 @@ namespace app_simple_nanogui_example
                tools->set_layout(new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
                b = new Button(tools, "Info");
-               b->set_callback([&] {
+               b->set_callback([this] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
                b = new Button(tools, "Warn");
-               b->set_callback([&] {
+               b->set_callback([this] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
                b = new Button(tools, "Ask");
-               b->set_callback([&, this] {
+               b->set_callback([this] {
                   auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
