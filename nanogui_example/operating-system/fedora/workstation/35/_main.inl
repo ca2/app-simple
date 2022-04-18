@@ -1,6 +1,4 @@
-#define APPLICATION app_simple_application
-#define __APP_ID "app-simple/application"
-#if defined(WINDOWS_DESKTOP) && defined(CUBE)
+#define APPLICATION app_simple_nanogui_example
+#define __APP_ID "app-simple/nanogui_example"
 #include "_static_factory.inl"
-#endif
 #include "acme/application.h"
