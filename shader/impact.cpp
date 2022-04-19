@@ -108,9 +108,9 @@ namespace app_simple_shader
 
       auto papp = get_app();
 
-      papp->add_routine(id_simple_checkbox, pprocedureRedraw);
+      papp->add_procedure(id_simple_checkbox, pprocedureRedraw);
 
-      papp->add_routine(id_no_client_frame, pprocedureRedraw);
+      papp->add_procedure(id_no_client_frame, pprocedureRedraw);
 
       //auto estatus = 
       
@@ -167,7 +167,7 @@ namespace app_simple_shader
 
          auto idRunnable = papp->translate_property_id(atom);
 
-         papp->add_routine(idRunnable, __routine([this, atom]()
+         papp->add_procedure(idRunnable, __routine([this, atom]()
          {
 
             auto pproperty = fetch_property(atom);
