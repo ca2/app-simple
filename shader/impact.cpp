@@ -97,14 +97,14 @@ namespace app_simple_shader
 
       top_level_frame()->set_prodevian();
 
-      auto pprocedureRedraw = __routine([this]()
+      auto pprocedureRedraw = [this]()
          {
 
             set_need_redraw();
 
             post_redraw();
 
-         });
+         };
 
       auto papp = get_app();
 
@@ -167,14 +167,14 @@ namespace app_simple_shader
 
          auto idRunnable = papp->translate_property_id(atom);
 
-         papp->add_procedure(idRunnable, __routine([this, atom]()
+         papp->add_procedure(idRunnable, [this, atom]()
          {
 
             auto pproperty = fetch_property(atom);
 
             m_prender->defer_load_fragment(pproperty->string());
 
-         }));
+         });
 
       }
 
