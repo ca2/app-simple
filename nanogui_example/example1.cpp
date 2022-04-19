@@ -26,7 +26,7 @@ namespace app_simple_nanogui_example
 
 
       Button * b = new Button(window, "Plain button");
-      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */});
+      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */ });
       b->set_tooltip("short tooltip");
 
       ///* Alternative construction notation using variadic template */
