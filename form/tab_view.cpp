@@ -10,7 +10,7 @@ namespace app_simple_form
    tab_view::tab_view()
    {
 
-      m_pviewLast = NULL;
+      m_pimpactLast = NULL;
 
    }
 
@@ -132,7 +132,7 @@ namespace app_simple_form
 
          }
 
-         m_pviewLast = nullptr;
+         m_pimpactLast = nullptr;
 
       }
 
@@ -248,7 +248,7 @@ namespace app_simple_form
 
       //   if (ptopic->m_atom == id_control_event
       //         && ptopic->user_interaction() == m_pfontview
-      //         && m_pviewLast != NULL)
+      //         && m_pimpactLast != NULL)
       //   {
 
       //      if(pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_sel)

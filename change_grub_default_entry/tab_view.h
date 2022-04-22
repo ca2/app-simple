@@ -13,7 +13,7 @@ namespace app_simple_change_grub_default_entry
 
 
       ::user::split_view *                            m_ptopviewLast;
-      impact *                                          m_pviewLast;
+      impact *                                          m_pimpactLast;
       string                                          m_strTopicTitle;
 
 
