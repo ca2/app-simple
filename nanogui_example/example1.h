@@ -1,4 +1,4 @@
-// From nanogui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardS�rensen!!
+// From nanogui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSørensen!!
 #pragma once
 
 using namespace nanogui;
