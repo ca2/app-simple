@@ -3,7 +3,7 @@
 #include "aura/graphics/draw2d/_draw2d.h"
 
 
-CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
+CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs
 
 
 namespace app_simple_drawing
