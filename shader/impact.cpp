@@ -127,7 +127,7 @@ namespace app_simple_shader
 
       //m_prender->initialize_application_consumer();
 
-      m_prender->m_pinteraction = this;
+      //m_prender->m_pinteraction = this;
 
       string strId = get_document()->m_pimpactsystem->m_atom;
 
