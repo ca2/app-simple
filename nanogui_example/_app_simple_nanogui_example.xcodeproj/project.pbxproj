@@ -18,6 +18,8 @@
 		9A92318527EAE4F000B5A78D /* libapp_simple_nanogui_example.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A922E8F27EAC61500B5A78D /* libapp_simple_nanogui_example.dylib */; };
 		9A93B0F427FCD3D70042D6C8 /* libapp_simple_nanogui_example.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A922E8F27EAC61500B5A78D /* libapp_simple_nanogui_example.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A3127519BFA0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A2927519BC10094A04C /* Images.xcassets */; };
+		9AA14D4D282A119900B1621E /* libnanogui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA14D4C282A119900B1621E /* libnanogui.dylib */; };
+		9AA14D4E282A119900B1621E /* libnanogui.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA14D4C282A119900B1621E /* libnanogui.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB3DE84278386270025099F /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE82278386270025099F /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB3DE85278386270025099F /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE83278386270025099F /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E2D2748D03C006BEBCC /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC73026786C6A00C4104F /* libaqua.dylib */; };
@@ -210,6 +212,7 @@
 				9AFFC73C26786C6B00C4104F /* libapex.dylib in Embed Libraries */,
 				9AFFC74926786C6B00C4104F /* libaura_apple.dylib in Embed Libraries */,
 				9AFFC74526786C6B00C4104F /* libaqua.dylib in Embed Libraries */,
+				9AA14D4E282A119900B1621E /* libnanogui.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +236,7 @@
 		9A9E4A2827519BC10094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A2927519BC10094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A2A27519BC10094A04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA14D4C282A119900B1621E /* libnanogui.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnanogui.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB3DE82278386270025099F /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../operating-system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9AB3DE83278386270025099F /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../operating-system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9AC01E312748D069006BEBCC /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA14D4D282A119900B1621E /* libnanogui.dylib in Frameworks */,
 				9A92318527EAE4F000B5A78D /* libapp_simple_nanogui_example.dylib in Frameworks */,
 				9A3CA85E27EAEFAA009ADCD2 /* libimaging_coreimage.dylib in Frameworks */,
 				9AC01E2E2748D046006BEBCC /* libaura.dylib in Frameworks */,
@@ -387,6 +392,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AA14D4C282A119900B1621E /* libnanogui.dylib */,
 				9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */,
 				9AC01E312748D069006BEBCC /* libbred.dylib */,
 				9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */,
