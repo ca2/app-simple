@@ -18,6 +18,7 @@ namespace app_simple_application
    {
 
       m_flagNonClient -= non_client_background;
+      m_iSequence = 0;
 
    }
 
@@ -159,7 +160,7 @@ namespace app_simple_application
 
 #ifdef DEBUG_WORK
 
-      ::rectangle_i32 rectangleDryProWithLove_Work(100, 100, 200, 200);
+      ::rectangle_i32 rectangleDryProWithLove_Work(5, 5, 1915, 1075);
 
       pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
@@ -178,6 +179,7 @@ namespace app_simple_application
       ::synchronous_lock synchronouslockDocument(get_document()->mutex());
       
       string_array & stra = get_document()->m_straLine;
+
       
 //      stra.add("<3");
 //      stra.add("T");
@@ -193,7 +195,11 @@ namespace app_simple_application
       
       ::point_i32 point;
 
-      string strText = "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);";
+      string strText;
+
+      m_iSequence++;
+      
+      strText.format("psimpleapplication->m_pimpact->_001OnDraw(pgraphics); %d", m_iSequence);
 
       auto size = pgraphics->get_text_extent(strText);
 
