@@ -129,7 +129,7 @@ add_dependencies(_app_simple_application ${default_draw2d})
 add_dependencies(_app_simple_application ${default_write_text})
 add_dependencies(_app_simple_application ${app_common_dependencies})
 add_dependencies(_app_simple_application experience_core)
-add_dependencies(_app_simple_application gpu_opengl)
+#add_dependencies(_app_simple_application gpu_opengl)
 
 
 target_include_directories(_app_simple_application PRIVATE ${library_include_directories})
