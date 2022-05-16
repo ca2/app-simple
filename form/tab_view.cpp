@@ -188,6 +188,8 @@ namespace app_simple_form
 
          pform->m_atom = pimpactdata->m_atom;
 
+         pimpactdata->m_bOk = true;
+
          return;
 
       }
