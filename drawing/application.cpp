@@ -2,8 +2,12 @@
 #include "aura/update.h"
 
 
+
 namespace app_simple_drawing
 {
+
+
+    
 
 
    application::application()
