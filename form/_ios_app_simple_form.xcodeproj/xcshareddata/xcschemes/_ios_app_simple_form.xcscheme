@@ -4,7 +4,23 @@
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "NO">
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "078C352E1921758500354453"
+               BuildableName = "_ios_app_simple_form.app"
+               BlueprintName = "_ios_app_simple_form"
+               ReferencedContainer = "container:_ios_app_simple_form.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -28,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "070B8EE91B6E53F900D26137"
-            BuildableName = "_app_simple_application.app"
-            BlueprintName = "_app_simple_application"
-            ReferencedContainer = "container:_app_simple_application.xcodeproj">
+            BlueprintIdentifier = "078C352E1921758500354453"
+            BuildableName = "_ios_app_simple_form.app"
+            BlueprintName = "_ios_app_simple_form"
+            ReferencedContainer = "container:_ios_app_simple_form.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -41,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "078C352E1921758500354453"
+            BuildableName = "_ios_app_simple_form.app"
+            BlueprintName = "_ios_app_simple_form"
+            ReferencedContainer = "container:_ios_app_simple_form.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

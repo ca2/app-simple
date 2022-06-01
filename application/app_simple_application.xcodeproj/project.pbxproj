@@ -29,6 +29,8 @@
 		9A8F90D4240C09F10097E249 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* impact.h */; };
 		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
+		9A93B5132846E6F6005ACD11 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B5122846E6F6005ACD11 /* _factory.cpp */; };
+		9A93B5142846E701005ACD11 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B5122846E6F6005ACD11 /* _factory.cpp */; };
 		9AEB75DD16F78E600085103B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9AEB75DE16F78E600085103B /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75BF16F78E600085103B /* framework.h */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,7 @@
 		9A8F90C8240C09F10097E249 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
+		9A93B5122846E6F6005ACD11 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libios_app_simple_application.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_application.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75A316F78DF10085103B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75BE16F78E600085103B /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		9AEB75AA16F78E600085103B /* simple_application */ = {
 			isa = PBXGroup;
 			children = (
+				9A93B5122846E6F6005ACD11 /* _factory.cpp */,
 				9A00E5C52661320400517464 /* _.cpp */,
 				9A833BDF24F544B200C079FB /* _.h */,
 				9A833BE024F544B200C079FB /* _user.h */,
@@ -220,7 +224,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_application" */;
 			buildPhases = (
-				9A2293232472D7BA00B1A4EC /* ShellScript */,
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
 				9AEB75A116F78DF10085103B /* Headers */,
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A93B5142846E701005ACD11 /* _factory.cpp in Sources */,
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
 				9A415C2A247393C100EF2BCD /* document.cpp in Sources */,
 				9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */,
@@ -301,6 +305,7 @@
 				9A8F90CE240C09F10097E249 /* impact.cpp in Sources */,
 				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
 				9A00E5C62661320500517464 /* _.cpp in Sources */,
+				9A93B5132846E6F6005ACD11 /* _factory.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
 			);
@@ -399,7 +404,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
@@ -468,7 +472,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-				
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
