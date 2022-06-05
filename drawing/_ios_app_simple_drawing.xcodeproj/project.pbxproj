@@ -33,7 +33,7 @@
 		9A93B9362847171E005ACD11 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91C2847171A005ACD11 /* libios_axis.a */; };
 		9A93B9382847171F005ACD11 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91D2847171A005ACD11 /* libios_base.a */; };
 		9A93B93A2847171F005ACD11 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5572846EA04005ACD11 /* libios_crypto_openssl.a */; };
-		9A93B93C28471720005ACD11 /* libios_database_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */; };
+		9A93B93C28471720005ACD11 /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5692846EA05005ACD11 /* lib.a */; };
 		9A93B93E28471720005ACD11 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B57B2846EA05005ACD11 /* libios_draw2d_quartz2d.a */; };
 		9A93B94028471721005ACD11 /* libios_experience_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B54E2846EA04005ACD11 /* libios_experience_core.a */; };
 		9A93B94228471721005ACD11 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5722846EA05005ACD11 /* libios_folder_zip.a */; };
@@ -41,7 +41,7 @@
 		9A93B94628471722005ACD11 /* libios_imaging_coreimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5342846EA03005ACD11 /* libios_imaging_coreimage.a */; };
 		9A93B94728471723005ACD11 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5812846EA26005ACD11 /* libnode_ios.a */; };
 		9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91F2847171A005ACD11 /* libwindowing_ios.a */; };
-		9A93B94B28471724005ACD11 /* libios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */; };
+		9A93B94B28471724005ACD11 /* ios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */; };
 		9A93B94E28471858005ACD11 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B94D28471858005ACD11 /* _main.cpp */; };
 		9A93B96C284720EA005ACD11 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A93B96B284720E9005ACD11 /* _matter.zip */; };
 		9AAC20ED247566B50013AB72 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EB247566B50013AB72 /* libcrypto.a */; };
@@ -407,7 +407,7 @@
 				9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */,
 				9A93B92A2847171C005ACD11 /* libios_apex_posix.a in Frameworks */,
 				9A93B92D2847171D005ACD11 /* libios_aqua.a in Frameworks */,
-				9A93B94B28471724005ACD11 /* libios_write_text_quartz2d.a in Frameworks */,
+				9A93B94B28471724005ACD11 /* ios_write_text_quartz2d.a in Frameworks */,
 				9A93B94628471722005ACD11 /* libios_imaging_coreimage.a in Frameworks */,
 				9A93B93E28471720005ACD11 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9A2F609C2474F2CC00D392E8 /* libsqlite3.tbd in Frameworks */,
@@ -421,7 +421,7 @@
 				9A93B9202847171B005ACD11 /* libacme_ios.a in Frameworks */,
 				9A93B94228471721005ACD11 /* libios_folder_zip.a in Frameworks */,
 				9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */,
-				9A93B93C28471720005ACD11 /* libios_database_sqlite3.a in Frameworks */,
+				9A93B93C28471720005ACD11 /* lib.a in Frameworks */,
 				9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */,
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
@@ -682,7 +682,7 @@
 			isa = PBXGroup;
 			children = (
 				9A93B5432846EA04005ACD11 /* libwrite_text_quartz2d.dylib */,
-				9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */,
+				9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -717,8 +717,8 @@
 		9A93B5622846EA05005ACD11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A93B5672846EA05005ACD11 /* libdatabase_sqlite3.dylib */,
-				9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */,
+				9A93B5672846EA05005ACD11 /* lib.dylib */,
+				9A93B5692846EA05005ACD11 /* lib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -910,9 +910,10 @@
 			remoteRef = 9A93B5422846EA04005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */ = {
+		9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
+			name = ios_write_text_quartz2d.a;
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9A93B5442846EA04005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -959,17 +960,17 @@
 			remoteRef = 9A93B55F2846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5672846EA05005ACD11 /* libdatabase_sqlite3.dylib */ = {
+		9A93B5672846EA05005ACD11 /* lib.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libdatabase_sqlite3.dylib;
+			path = lib.dylib;
 			remoteRef = 9A93B5662846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */ = {
+		9A93B5692846EA05005ACD11 /* lib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_database_sqlite3.a;
+			path = lib.a;
 			remoteRef = 9A93B5682846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1125,7 +1126,6 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1155,7 +1155,6 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				INFOPLIST_FILE = ios/Info.plist;
 				OTHER_LDFLAGS = "-all_load";
@@ -1272,6 +1271,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1284,7 +1289,7 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
+				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
 				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Debug;
@@ -1332,6 +1337,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1342,7 +1353,7 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
+				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
 				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Release;
