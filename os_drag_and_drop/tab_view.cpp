@@ -176,7 +176,7 @@ namespace simple_os_drag_and_drop
 
       string strId = pimpactdata->m_atom;
 
-      if(::str::begins_eat_ci(strId, "drawing"))
+      if(::::str::ch().begins_eat_ci(strId, "drawing"))
       {
 
          auto pimpact = m_papp->create_simple_os_drag_and_drop_view(this, pimpactdata);
@@ -212,7 +212,7 @@ namespace simple_os_drag_and_drop
    //         string strCheck = ptopic->user_element_id();
 
 
-   //         if (::str::begins_eat_ci(strCheck, "bilbo"))
+   //         if (::::str::ch().begins_eat_ci(strCheck, "bilbo"))
    //         {
 
    //            if (ptopic->user_interaction() != nullptr && ptopic->m_actioncontext.is_user_source())
@@ -278,7 +278,7 @@ namespace simple_os_drag_and_drop
 
             string strCheck = ptopic->user_element_id();
 
-            if (::str::begins_eat_ci(strCheck, "bilbo"))
+            if (::::str::ch().begins_eat_ci(strCheck, "bilbo"))
             {
 
                if (ptopic->user_interaction() != nullptr && ptopic->m_actioncontext.is_user_source())
