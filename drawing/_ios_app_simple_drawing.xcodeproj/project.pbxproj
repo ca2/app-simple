@@ -12,8 +12,6 @@
 		9A2F609E2474F53900D392E8 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F609D2474F53900D392E8 /* CoreServices.framework */; };
 		9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4972092001905400B9C9B2 /* ImageIO.framework */; };
 		9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5752BB16AAE1D2000CC4EF /* Foundation.framework */; };
-		9A6716F81D15D8C10069A961 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A6716F41D15D8C10069A961 /* InfoPlist.strings */; };
-		9A6716F91D15D8C10069A961 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6716F61D15D8C10069A961 /* Images.xcassets */; };
 		9A93B908284716AA005ACD11 /* libios_acme.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B904284716AA005ACD11 /* libios_acme.a */; };
 		9A93B90A284716AA005ACD11 /* libios_acme_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B905284716AA005ACD11 /* libios_acme_apple.a */; };
 		9A93B90C284716AA005ACD11 /* libacme_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B906284716AA005ACD11 /* libacme_ios.a */; };
@@ -42,8 +40,6 @@
 		9A93B94728471723005ACD11 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5812846EA26005ACD11 /* libnode_ios.a */; };
 		9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91F2847171A005ACD11 /* libwindowing_ios.a */; };
 		9A93B94B28471724005ACD11 /* ios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */; };
-		9A93B94E28471858005ACD11 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B94D28471858005ACD11 /* _main.cpp */; };
-		9A93B96C284720EA005ACD11 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A93B96B284720E9005ACD11 /* _matter.zip */; };
 		9AAC20ED247566B50013AB72 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EB247566B50013AB72 /* libcrypto.a */; };
 		9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EC247566B50013AB72 /* libssl.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
@@ -187,13 +183,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9AC2D16F26542E1000CC8096;
 			remoteInfo = node_ios;
-		};
-		9A93B7072846EBF1005ACD11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A93B5582846EA04005ACD11 /* app_simple_drawing.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
-			remoteInfo = ios_app_simple_drawing;
 		};
 		9A93B7092846EBFC005ACD11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -348,8 +337,11 @@
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9A5752BA16AAE1D2000CC4EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9A5752BB16AAE1D2000CC4EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9A6716F51D15D8C10069A961 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9A6716F61D15D8C10069A961 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9A734820284F3858003986C7 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
+		9A734827284F3858003986C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A734828284F3858003986C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9A734829284F3858003986C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A73482C284F3858003986C7 /* _main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
 		9A8181BE1F21C2F000FDAF74 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		9A8181C21F21C33500FDAF74 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -382,13 +374,10 @@
 		9A93B91D2847171A005ACD11 /* libios_base.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_base.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A93B91E2847171A005ACD11 /* libios_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A93B91F2847171A005ACD11 /* libwindowing_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A93B94D28471858005ACD11 /* _main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = SOURCE_ROOT; };
-		9A93B96B284720E9005ACD11 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = SOURCE_ROOT; };
 		9A9578301F6220D600623508 /* libios_sphere.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libios_sphere.a; path = "../../../../macos/app/sphere/build/Debug-iphoneos/libios_sphere.a"; sourceTree = "<group>"; };
 		9AAC20EB247566B50013AB72 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../operating-system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libcrypto.a"; sourceTree = "<group>"; };
 		9AAC20EC247566B50013AB72 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../operating-system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libssl.a"; sourceTree = "<group>"; };
 		9AAC2144247571180013AB72 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		9AAC21D12475D7260013AB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -584,7 +573,7 @@
 				9A93B52B2846EA03005ACD11 /* imaging_coreimage.xcodeproj */,
 				9A93B57C2846EA26005ACD11 /* node_ios.xcodeproj */,
 				9A93B53D2846EA04005ACD11 /* write_text_quartz2d.xcodeproj */,
-				9A6716F31D15D8C10069A961 /* ios */,
+				9A734779284F3857003986C7 /* drawing */,
 				9A5752B516AAE1D2000CC4EF /* Frameworks */,
 				9A5752B316AAE1D2000CC4EF /* Products */,
 			);
@@ -656,14 +645,22 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		9A6716F31D15D8C10069A961 /* ios */ = {
+		9A734779284F3857003986C7 /* drawing */ = {
 			isa = PBXGroup;
 			children = (
-				9A93B96B284720E9005ACD11 /* _matter.zip */,
-				9A93B94D28471858005ACD11 /* _main.cpp */,
-				9A6716F41D15D8C10069A961 /* InfoPlist.strings */,
-				9A6716F61D15D8C10069A961 /* Images.xcassets */,
-				9AAC21D12475D7260013AB72 /* Info.plist */,
+				9A734825284F3858003986C7 /* ios */,
+				9A734820284F3858003986C7 /* _matter.zip */,
+				9A73482C284F3858003986C7 /* _main.cpp */,
+			);
+			name = drawing;
+			sourceTree = "<group>";
+		};
+		9A734825284F3858003986C7 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				9A734826284F3858003986C7 /* InfoPlist.strings */,
+				9A734828284F3858003986C7 /* Images.xcassets */,
+				9A734829284F3858003986C7 /* Info.plist */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -771,7 +768,6 @@
 				9A93B70E2846EC13005ACD11 /* PBXTargetDependency */,
 				9A93B70C2846EC07005ACD11 /* PBXTargetDependency */,
 				9A93B70A2846EBFC005ACD11 /* PBXTargetDependency */,
-				9A93B7082846EBF1005ACD11 /* PBXTargetDependency */,
 			);
 			name = _ios_app_simple_drawing;
 			productName = wiossimple_drawing_simple_drawing;
@@ -963,14 +959,16 @@
 		9A93B5672846EA05005ACD11 /* lib.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = lib.dylib;
+			name = lib.dylib;
+			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9A93B5662846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9A93B5692846EA05005ACD11 /* lib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = lib.a;
+			name = lib.a;
+			path = libios_database_sqlite3.a;
 			remoteRef = 9A93B5682846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1016,9 +1014,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6716F81D15D8C10069A961 /* InfoPlist.strings in Resources */,
-				9A93B96C284720EA005ACD11 /* _matter.zip in Resources */,
-				9A6716F91D15D8C10069A961 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,7 +1031,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A93B94E28471858005ACD11 /* _main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,11 +1048,6 @@
 			isa = PBXTargetDependency;
 			target = 078C352E1921758500354453 /* _ios_app_simple_drawing */;
 			targetProxy = 078C35491921758600354453 /* PBXContainerItemProxy */;
-		};
-		9A93B7082846EBF1005ACD11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_app_simple_drawing;
-			targetProxy = 9A93B7072846EBF1005ACD11 /* PBXContainerItemProxy */;
 		};
 		9A93B70A2846EBFC005ACD11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1103,10 +1092,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A6716F41D15D8C10069A961 /* InfoPlist.strings */ = {
+		9A734826284F3858003986C7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9A6716F51D15D8C10069A961 /* en */,
+				9A734827284F3858003986C7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1118,7 +1107,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_ENTITLEMENTS = simple_drawing.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
@@ -1135,9 +1123,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.drawing";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SEPARATE_STRIP = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1146,7 +1132,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_ENTITLEMENTS = simple_drawing.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
@@ -1160,9 +1145,7 @@
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.drawing";
-				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SEPARATE_STRIP = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
