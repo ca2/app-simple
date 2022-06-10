@@ -5,10 +5,9 @@
 
 
 
-#include "form.h"
-#include "form_001.h"
-#include "form_002.h"
-
+#include "simple_change_grub_default_entry.h"
+#include "simple_change_grub_default_entry_001.h"
+#include "simple_change_grub_default_entry_002.h"
 
 
 #include "document.h"
