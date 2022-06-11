@@ -4,7 +4,9 @@ project(app_simple_nanogui_example CXX)
 
 list(APPEND library_source
         _.cpp
+
         _.h
+   _factory.cpp
         _app_simple_nanogui_example.h
         application.cpp
         application.h
