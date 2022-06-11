@@ -5,6 +5,7 @@ project(app_simple_notify_drawing CXX)
 list(APPEND library_source
     _.cpp
     _.h
+   _factory.cpp
     application.cpp
     application.h
     framework.cpp
