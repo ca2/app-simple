@@ -36,6 +36,12 @@
 		9A42D7EF2665A4EB0011645D /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42D7EE2665A4EB0011645D /* libaqua.dylib */; };
 		9A42D7F12665A4EB0011645D /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42D7F02665A4EB0011645D /* libaura.dylib */; };
 		9A42D7F32665A55C0011645D /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42D7F22665A55C0011645D /* libaxis.dylib */; };
+		9AA203B92847FF4700A747A1 /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB12748E273006BEBCC /* form_001.cpp */; };
+		9AA203BA2847FF4B00A747A1 /* form_002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB42748E274006BEBCC /* form_002.cpp */; };
+		9AA203BB2847FF4F00A747A1 /* form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB22748E273006BEBCC /* form.cpp */; };
+		9AA203BC2847FF5E00A747A1 /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258BD924DA5E460013F50E /* tab_view.cpp */; };
+		9AA2F48B2847E11200A747A1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2F4872847E11200A747A1 /* _factory.cpp */; };
+		9AA2F48D2847E11A00A747A1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2F4872847E11200A747A1 /* _factory.cpp */; };
 		9AC01EB52748E274006BEBCC /* form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01EAF2748E273006BEBCC /* form_002.h */; };
 		9AC01EB62748E274006BEBCC /* form_001.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01EB02748E273006BEBCC /* form_001.h */; };
 		9AC01EB72748E274006BEBCC /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB12748E273006BEBCC /* form_001.cpp */; };
@@ -63,6 +69,20 @@
 			remoteGlobalIDString = 9AD117F324F51BE400177261;
 			remoteInfo = base;
 		};
+		9AA2F4892847E11200A747A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A833C1524F573DD00C079FB /* base.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A93B6FA2846EB33005ACD11;
+			remoteInfo = ios_base;
+		};
+		9AA2F5DF2847E46400A747A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A833C1524F573DD00C079FB /* base.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A93B6992846EB33005ACD11;
+			remoteInfo = ios_base;
+		};
 		9AE24E9F1904CFFD001AEFFB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AEB759B16F78DF10085103B /* Project object */;
@@ -71,18 +91,6 @@
 			remoteInfo = app_core_hellomultiverse_ios;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9AE24E881904CFFD001AEFFB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9A258BD824DA5E460013F50E /* tab_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_view.h; sourceTree = "<group>"; };
@@ -107,13 +115,14 @@
 		9A42D7F02665A4EB0011645D /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42D7F22665A55C0011645D /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A833C1524F573DD00C079FB /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
+		9AA2F4872847E11200A747A1 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AC01EAF2748E273006BEBCC /* form_002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_002.h; sourceTree = "<group>"; };
 		9AC01EB02748E273006BEBCC /* form_001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_001.h; sourceTree = "<group>"; };
 		9AC01EB12748E273006BEBCC /* form_001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form_001.cpp; sourceTree = "<group>"; };
 		9AC01EB22748E273006BEBCC /* form.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form.cpp; sourceTree = "<group>"; };
 		9AC01EB32748E274006BEBCC /* form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form.h; sourceTree = "<group>"; };
 		9AC01EB42748E274006BEBCC /* form_002.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form_002.cpp; sourceTree = "<group>"; };
-		9AE24E8A1904CFFD001AEFFB /* libapp_simple_form.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_simple_form.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libapp_simple_form.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libapp_simple_form.a; path = libios_app_simple_form.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -123,13 +132,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9AE24E871904CFFD001AEFFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9AE24E961904CFFD001AEFFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9A833C1A24F573DD00C079FB /* libbase.dylib */,
+				9AA2F48A2847E11200A747A1 /* libios_base.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 		9AEB75AA16F78E600085103B /* simple_form */ = {
 			isa = PBXGroup;
 			children = (
+				9AA2F4872847E11200A747A1 /* _factory.cpp */,
 				9AC01EB12748E273006BEBCC /* form_001.cpp */,
 				9AC01EB02748E273006BEBCC /* form_001.h */,
 				9AC01EB42748E274006BEBCC /* form_002.cpp */,
@@ -273,12 +277,11 @@
 			buildConfigurationList = 9AE24EBA1904CFFD001AEFFB /* Build configuration list for PBXNativeTarget "ios_app_simple_form" */;
 			buildPhases = (
 				9AE24E861904CFFD001AEFFB /* Sources */,
-				9AE24E871904CFFD001AEFFB /* Frameworks */,
-				9AE24E881904CFFD001AEFFB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9AA2F5E02847E46400A747A1 /* PBXTargetDependency */,
 			);
 			name = ios_app_simple_form;
 			productName = app_core_hellomultiverse_ios;
@@ -307,7 +310,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AEB75A716F78DF10085103B /* Build configuration list for PBXNativeTarget "app_simple_form" */;
 			buildPhases = (
-				9A81F138274F44AF003F38EC /* ShellScript */,
 				9AEB75A116F78DF10085103B /* Headers */,
 				9AEB759F16F78DF10085103B /* Sources */,
 				9AEB75A016F78DF10085103B /* Frameworks */,
@@ -370,6 +372,13 @@
 			remoteRef = 9A833C1924F573DD00C079FB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9AA2F48A2847E11200A747A1 /* libios_base.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_base.a;
+			remoteRef = 9AA2F4892847E11200A747A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -388,13 +397,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA203BA2847FF4B00A747A1 /* form_002.cpp in Sources */,
+				9AA203BB2847FF4F00A747A1 /* form.cpp in Sources */,
 				9A415C122473939C00EF2BCD /* application.cpp in Sources */,
 				9A415C132473939C00EF2BCD /* document.cpp in Sources */,
 				9A415C142473939C00EF2BCD /* frame.cpp in Sources */,
 				9A415C152473939C00EF2BCD /* main_frame.cpp in Sources */,
+				9AA203BC2847FF5E00A747A1 /* tab_view.cpp in Sources */,
+				9AA2F48D2847E11A00A747A1 /* _factory.cpp in Sources */,
 				9A415C162473939C00EF2BCD /* main_impact.cpp in Sources */,
 				9A415C192473939C00EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
+				9AA203B92847FF4700A747A1 /* form_001.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA2F48B2847E11200A747A1 /* _factory.cpp in Sources */,
 				9A39EA62243364EC000FECDA /* document.cpp in Sources */,
 				9AC01EBA2748E274006BEBCC /* form_002.cpp in Sources */,
 				9A39EA73243364EC000FECDA /* main_frame.cpp in Sources */,
@@ -431,6 +446,11 @@
 			isa = PBXTargetDependency;
 			name = base;
 			targetProxy = 9A42D77926657DCA0011645D /* PBXContainerItemProxy */;
+		};
+		9AA2F5E02847E46400A747A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_base;
+			targetProxy = 9AA2F5DF2847E46400A747A1 /* PBXContainerItemProxy */;
 		};
 		9AE24EA01904CFFD001AEFFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -601,18 +621,16 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PLATFORM_MODIFIER = macos;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/source/app";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/source/app";
+				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
@@ -671,17 +689,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-all_load";
-				PLATFORM_MODIFIER = macos;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/source/app";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/third/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
+				SYSTEM_HEADER_SEARCH_PATHS = "$(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/source/app";
+				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/_include $(WorkspaceDir)/operating-system $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/_include $(WorkspaceDir)/source/port/include $(WorkspaceDir)/source/port $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include $(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include $(PROJECT_DIR) $(HOME)/sensitive/sensitive/include";
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;
 				WorkspaceDir = "$(SRCROOT)/../../..";

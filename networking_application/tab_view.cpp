@@ -110,7 +110,7 @@ namespace app_simple_networking_application
 
       string strViewId = get_view_id().to_string();
 
-      if(::str::begins(strViewId, "drawing"))
+      if(::str().begins(strViewId, "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -171,7 +171,7 @@ namespace app_simple_networking_application
 
       string strId = pimpactdata->m_atom;
 
-      if(::str::begins_eat_ci(strId, "drawing"))
+      if(::str().begins_eat_ci(strId, "drawing"))
       {
 
          auto pimpact = papp->create_simple_drawing_view(this, pimpactdata);

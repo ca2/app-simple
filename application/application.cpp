@@ -106,7 +106,7 @@ namespace app_simple_application
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->m_pcommandline->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
 
       }
 

@@ -155,7 +155,7 @@ namespace app_simple_form
 
       string strId = pimpactdata->m_atom;
 
-      if(::str::begins_eat_ci(strId, "form"))
+      if(::str().begins_eat_ci(strId, "form"))
       {
 
          __pointer(form) pform;
@@ -188,6 +188,8 @@ namespace app_simple_form
 
          pform->m_atom = pimpactdata->m_atom;
 
+         pimpactdata->m_bOk = true;
+
          return;
 
       }
@@ -217,7 +219,7 @@ namespace app_simple_form
 
    //         string strCheck = ptopic->user_element_id();
 
-   //         if (::str::begins_eat_ci(strCheck, "bilbo"))
+   //         if (::str().begins_eat_ci(strCheck, "bilbo"))
    //         {
 
    //            if (ptopic->user_interaction() != NULL && ptopic->m_actioncontext.is_user_source())
@@ -282,7 +284,7 @@ namespace app_simple_form
 
             string strCheck = ptopic->m_puserelement->m_atom;
 
-            if (::str::begins_eat_ci(strCheck, "bilbo"))
+            if (::str().begins_eat_ci(strCheck, "bilbo"))
             {
 
                if (::is_set(ptopic->m_puserelement) && ptopic->m_actioncontext.is_user_source())

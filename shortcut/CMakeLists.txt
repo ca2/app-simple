@@ -6,6 +6,7 @@ list(APPEND library_source
    _.cpp
    _.h
    _app_simple_shortcut.h
+   _factory.cpp
    application.cpp
    application.h
    document.cpp
