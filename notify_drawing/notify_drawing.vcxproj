@@ -39,7 +39,7 @@
     <RootNamespace>app-simple</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <ProjectName>app_simple_notify_drawing</ProjectName>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='basis|Win32'" Label="Configuration">
@@ -965,6 +965,7 @@
     </ClCompile>
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="main_frame.cpp" />
+    <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />

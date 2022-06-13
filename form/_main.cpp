@@ -1,16 +1,10 @@
 #include "framework.h"
-//#define APPLICATION app_simple_form
-//#define __APP_ID "app-simple/form"
-//#if defined(WINDOWS_DESKTOP) && defined(CUBE)
-//#include "([a-z0-9_]+)_factory.inl"
-//#endif
-//#include "acme/application.h"
+#include "_main.inl"
+#include "acme/asset/new.cpp"
 
 
-::app_simple_form::application g_app;
+__embed_resource;
 
-
-__embed_resource(g_app)
 
 
 

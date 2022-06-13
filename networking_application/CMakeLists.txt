@@ -6,6 +6,7 @@ project(app_simple_networking_application CXX)
 list(APPEND library_source
    _.h
    _app_simple_networking_application.h
+   _factory.cpp
    application.cpp
    application.h
    document.cpp
