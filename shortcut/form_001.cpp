@@ -510,7 +510,7 @@ namespace app_simple_shortcut
 
          int iIcon = 0;
 
-         m_pcontext->m_papexcontext->os_context()->resolve_link(pathLinkTarget, path, &strLinkFolder, &strIconLocation, &iIcon);
+         m_pcontext->m_papexcontext->os_context()->resolve_link(pathLinkTarget, path, &strLinkFolder,nullptr, &strIconLocation, &iIcon);
 
          ::file::path pathNewTarget(pathLinkTarget);
 
