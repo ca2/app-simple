@@ -506,15 +506,23 @@ namespace app_simple_shortcut
 
          string strLinkFolder;
 
-         m_pcontext->m_papexcontext->os_context()->resolve_link(pathLinkTarget, path, &strLinkFolder);
+         string strIconLocation;
+
+         int iIcon = 0;
+
+         m_pcontext->m_papexcontext->os_context()->resolve_link(pathLinkTarget, path, &strLinkFolder, &strIconLocation, &iIcon);
 
          ::file::path pathNewTarget(pathLinkTarget);
 
          string strNewFolder(strLinkFolder);
+
+         string strNewIconLocation(strIconLocation);
          
          pathNewTarget.replace_with(strTarget, strSource);
 
          strNewFolder.replace_with(strTarget, strSource);
+
+         strNewIconLocation.replace_with(strTarget, strSource);
 
          if (pathNewTarget != pathLinkTarget)
          {
@@ -547,6 +555,22 @@ namespace app_simple_shortcut
             {
 
                m_pcontext->m_papexcontext->os_context()->edit_link_folder(strNewFolder, path);
+
+            }
+
+         }
+
+         if (strNewIconLocation != strIconLocation)
+         {
+
+            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(strNewIconLocation);
+
+            strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewIconLocation + " <== " + strIconLocation + "\n";
+
+            if (!bIsDirTarget && !bPreview)
+            {
+
+               m_pcontext->m_papexcontext->os_context()->edit_link_icon(strNewIconLocation, iIcon, path);
 
             }
 
