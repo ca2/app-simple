@@ -44,6 +44,10 @@
 		9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EC247566B50013AB72 /* libssl.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
+		9AE86B382858908E00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A734828284F3858003986C7 /* Images.xcassets */; };
+		9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */; };
+		9AE86B3A2858909800F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A734820284F3858003986C7 /* _matter.zip */; };
+		9AE86D21285896A800F88364 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A73482C284F3858003986C7 /* _main.cpp */; };
 		9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B5903518866047002C6FEC /* CoreFoundation.framework */; };
 		9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077A02081B4D5758001C85FF /* UIKit.framework */; };
 		9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */; };
@@ -240,6 +244,13 @@
 			remoteGlobalIDString = 9A882EC82844AA66004113D1;
 			remoteInfo = ios_write_text_quartz2d;
 		};
+		9AE86D22285896E300F88364 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A93B5582846EA04005ACD11 /* app_simple_drawing.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE24E891904CFFD001AEFFB;
+			remoteInfo = ios_app_simple_drawing;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -379,6 +390,7 @@
 		9AAC20EC247566B50013AB72 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../operating-system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libssl.a"; sourceTree = "<group>"; };
 		9AAC2144247571180013AB72 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -661,6 +673,7 @@
 				9A734826284F3858003986C7 /* InfoPlist.strings */,
 				9A734828284F3858003986C7 /* Images.xcassets */,
 				9A734829284F3858003986C7 /* Info.plist */,
+				9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -760,6 +773,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AE86D23285896E300F88364 /* PBXTargetDependency */,
 				9A93B7182846EC44005ACD11 /* PBXTargetDependency */,
 				9A93B7162846EC39005ACD11 /* PBXTargetDependency */,
 				9A93B7142846EC2F005ACD11 /* PBXTargetDependency */,
@@ -1014,6 +1028,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE86B382858908E00F88364 /* Images.xcassets in Resources */,
+				9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */,
+				9AE86B3A2858909800F88364 /* _matter.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +1048,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE86D21285896A800F88364 /* _main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,6 +1106,11 @@
 			isa = PBXTargetDependency;
 			name = ios_write_text_quartz2d;
 			targetProxy = 9A93B7172846EC44005ACD11 /* PBXContainerItemProxy */;
+		};
+		9AE86D23285896E300F88364 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_app_simple_drawing;
+			targetProxy = 9AE86D22285896E300F88364 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1264,7 +1287,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system",
-					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)",
+					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1330,7 +1353,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system",
-					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)",
+					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
