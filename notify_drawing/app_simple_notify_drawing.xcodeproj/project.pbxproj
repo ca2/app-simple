@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1CEC38285F94CF001ED6E1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A1CEC36285F94CF001ED6E1 /* _factory.cpp */; };
 		9A8C832B278458D8000C8587 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C81D2278458CF000C8587 /* main_frame.cpp */; };
 		9A8C832E278458D8000C8587 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C81E2278458D0000C8587 /* framework.cpp */; };
 		9A8C832F278458D8000C8587 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8C81E3278458D0000C8587 /* application.h */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A1CEC36285F94CF001ED6E1 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9A8C81A0278457DB000C8587 /* libapp_simple_notify_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_notify_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C81D2278458CF000C8587 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
 		9A8C81D8278458CF000C8587 /* _main.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _main.inl; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				9A8C82B8278458D3000C8587 /* _.cpp */,
 				9A8C8318278458D6000C8587 /* _.h */,
+				9A1CEC36285F94CF001ED6E1 /* _factory.cpp */,
 				9A8C829E278458D2000C8587 /* _main.cpp */,
 				9A8C81D8278458CF000C8587 /* _main.inl */,
 				9A8C82D7278458D5000C8587 /* application.cpp */,
@@ -177,7 +180,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A8C81A4278457DB000C8587 /* Build configuration list for PBXNativeTarget "app_simple_notify_drawing" */;
 			buildPhases = (
-				9A4E96132785132C00B74C76 /* ShellScript */,
 				9A8C819C278457DB000C8587 /* Headers */,
 				9A8C819D278457DB000C8587 /* Sources */,
 				9A8C819E278457DB000C8587 /* Frameworks */,
@@ -256,6 +258,7 @@
 				9A8C8347278458D8000C8587 /* _.cpp in Sources */,
 				9A8C8344278458D8000C8587 /* _main.cpp in Sources */,
 				9A8C834E278458D8000C8587 /* application.cpp in Sources */,
+				9A1CEC38285F94CF001ED6E1 /* _factory.cpp in Sources */,
 				9A8C832B278458D8000C8587 /* main_frame.cpp in Sources */,
 				9A8C8345278458D8000C8587 /* impact.cpp in Sources */,
 			);
@@ -336,7 +339,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -429,7 +431,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
-					
 					"$(WorkspaceDir)/operating-system",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
