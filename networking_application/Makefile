@@ -159,6 +159,33 @@ app_simple_networking_application/fast:
 	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build
 .PHONY : app_simple_networking_application/fast
 
+_factory.o: _factory.cpp.o
+
+.PHONY : _factory.o
+
+# target to build an object file
+_factory.cpp.o:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.o
+.PHONY : _factory.cpp.o
+
+_factory.i: _factory.cpp.i
+
+.PHONY : _factory.i
+
+# target to preprocess a source file
+_factory.cpp.i:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.i
+.PHONY : _factory.cpp.i
+
+_factory.s: _factory.cpp.s
+
+.PHONY : _factory.s
+
+# target to generate assembly for a file
+_factory.cpp.s:
+	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.s
+.PHONY : _factory.cpp.s
+
 _main.o: _main.cpp.o
 
 .PHONY : _main.o
@@ -400,6 +427,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... _app_simple_networking_application"
 	@echo "... app_simple_networking_application"
+	@echo "... _factory.o"
+	@echo "... _factory.i"
+	@echo "... _factory.s"
 	@echo "... _main.o"
 	@echo "... _main.i"
 	@echo "... _main.s"
