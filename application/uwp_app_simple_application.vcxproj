@@ -989,6 +989,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_basis|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='stage|x64'">Create</PrecompiledHeader>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='basis|Win32'">false</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='basis|ARM64'">false</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='basis|ARM'">false</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='basis|x64'">false</MultiProcessorCompilation>
     </ClCompile>
     <ClCompile Include="_app_simple_application.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='cube_basis|Win32'">Create</PrecompiledHeader>
@@ -1051,9 +1055,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\app\folder_zip\u_folder_zip.vcxproj">
       <Project>{fc96f9e0-d65e-4286-95b1-f1ff4873dace}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\drawing\u_app_simple_drawing.vcxproj">
-      <Project>{cac77a44-c0fa-49ed-8373-1e101f53d2d6}</Project>
     </ProjectReference>
     <ProjectReference Include="C:\basis\operating-system\operating-system-universal_windows\aura_universal_windows\u_aura_universal_windows.vcxproj">
       <Project>{05c4cf3f-fcb7-4017-a39b-1a03158ec0f3}</Project>
