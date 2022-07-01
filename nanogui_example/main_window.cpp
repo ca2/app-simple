@@ -147,7 +147,7 @@ namespace app_simple_nanogui_example
 
       set_appearance(papplication);
 
-      get_top_level()->set_need_layout();
+      top_level()->set_need_layout();
 
       set_need_layout();
 
