@@ -141,7 +141,7 @@ namespace app_simple_nanogui_example
       int cx = papplication->m_size.x() + 20;
       int cy = papplication->m_size.y() + 48;
 
-      get_top_level()->set_size({cx, cy});
+      top_level()->set_size({cx, cy});
 
 #endif
 
