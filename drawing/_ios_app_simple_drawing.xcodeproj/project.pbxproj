@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0A8A9428737E6500D1904E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A8A8A28737E6500D1904E /* QuartzCore.framework */; };
 		9A2F609B2474F2C400D392E8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C21F21C33500FDAF74 /* libz.tbd */; };
 		9A2F609C2474F2CC00D392E8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */; };
 		9A2F609E2474F53900D392E8 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F609D2474F53900D392E8 /* CoreServices.framework */; };
@@ -31,7 +32,7 @@
 		9A93B9362847171E005ACD11 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91C2847171A005ACD11 /* libios_axis.a */; };
 		9A93B9382847171F005ACD11 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91D2847171A005ACD11 /* libios_base.a */; };
 		9A93B93A2847171F005ACD11 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5572846EA04005ACD11 /* libios_crypto_openssl.a */; };
-		9A93B93C28471720005ACD11 /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5692846EA05005ACD11 /* lib.a */; };
+		9A93B93C28471720005ACD11 /* libios_database_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */; };
 		9A93B93E28471720005ACD11 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B57B2846EA05005ACD11 /* libios_draw2d_quartz2d.a */; };
 		9A93B94028471721005ACD11 /* libios_experience_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B54E2846EA04005ACD11 /* libios_experience_core.a */; };
 		9A93B94228471721005ACD11 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5722846EA05005ACD11 /* libios_folder_zip.a */; };
@@ -192,7 +193,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A93B5612846EA05005ACD11 /* database_sqlite3.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A93B4A92846E5EF005ACD11;
+			remoteGlobalIDString = 9A0DB3D62864314500D061F7;
 			remoteInfo = ios_database_sqlite3;
 		};
 		9A93B70B2846EC07005ACD11 /* PBXContainerItemProxy */ = {
@@ -258,6 +259,7 @@
 		078C352F1921758500354453 /* _ios_app_simple_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _ios_app_simple_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078C35451921758600354453 /* ios_simple_drawing_simple_drawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_simple_drawing_simple_drawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B5903518866047002C6FEC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9A0A8A8A28737E6500D1904E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9A2F60932474F2BD00D392E8 /* libapp_simple_application.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libapp_simple_application.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2F60952474F2BD00D392E8 /* libios_aura.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_aura.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2F60972474F2BD00D392E8 /* libios_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,6 +403,7 @@
 			files = (
 				9A93B94028471721005ACD11 /* libios_experience_core.a in Frameworks */,
 				9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */,
+				9A0A8A9428737E6500D1904E /* QuartzCore.framework in Frameworks */,
 				9A93B908284716AA005ACD11 /* libios_acme.a in Frameworks */,
 				9A93B9322847171E005ACD11 /* libaura_ios.a in Frameworks */,
 				9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */,
@@ -422,7 +425,7 @@
 				9A93B9202847171B005ACD11 /* libacme_ios.a in Frameworks */,
 				9A93B94228471721005ACD11 /* libios_folder_zip.a in Frameworks */,
 				9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */,
-				9A93B93C28471720005ACD11 /* lib.a in Frameworks */,
+				9A93B93C28471720005ACD11 /* libios_database_sqlite3.a in Frameworks */,
 				9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */,
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
@@ -603,6 +606,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A0A8A8A28737E6500D1904E /* QuartzCore.framework */,
 				9A93B9102847171A005ACD11 /* libacme_ios.a */,
 				9A93B9112847171A005ACD11 /* libios_acme_posix.a */,
 				9A93B9122847171A005ACD11 /* libios_apex.a */,
@@ -727,8 +731,8 @@
 		9A93B5622846EA05005ACD11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A93B5672846EA05005ACD11 /* lib.dylib */,
-				9A93B5692846EA05005ACD11 /* lib.a */,
+				9A93B5672846EA05005ACD11 /* libdatabase_sqlite3.dylib */,
+				9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -970,18 +974,16 @@
 			remoteRef = 9A93B55F2846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5672846EA05005ACD11 /* lib.dylib */ = {
+		9A93B5672846EA05005ACD11 /* libdatabase_sqlite3.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9A93B5662846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5692846EA05005ACD11 /* lib.a */ = {
+		9A93B5692846EA05005ACD11 /* libios_database_sqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.a;
 			path = libios_database_sqlite3.a;
 			remoteRef = 9A93B5682846EA05005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;

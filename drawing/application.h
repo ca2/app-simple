@@ -13,10 +13,10 @@ namespace app_simple_drawing
 
 
       __PROPERTIES(application)
-         __PROPERTY(::enum_check, m_echeckSimple, id_simple_checkbox);
-         __PROPERTY(::enum_check, m_echeckNoClientFrame, id_no_client_frame);
-         __PROPERTY(string, m_strSimple, id_simple_text);
-         __PROPERTY(string, m_strMainTitle, id_main_title);
+         __PROPERTY(::enum_check, m_echeckSimple, "simple_checkbox");
+         __PROPERTY(::enum_check, m_echeckNoClientFrame, "no_client_frame");
+         __PROPERTY(string, m_strSimple, "simple_text");
+         __PROPERTY(string, m_strMainTitle, "main_title");
       __END_PROPERTIES(application);
 
 
