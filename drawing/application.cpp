@@ -55,7 +55,7 @@ namespace app_simple_drawing
 
       //m_pstrHoverFontFamilyName = nullptr;
 
-      auto pproperty1 = application_properties().find_property(id_simple_checkbox);
+      auto pproperty1 = application_properties().find_property("simple_checkbox");
 
       bool bCheckOk = false;
 
@@ -98,9 +98,9 @@ namespace app_simple_drawing
       ::factory::add_factory_item <::app_simple_drawing::impact >();
       ::factory::add_factory_item <::app_simple_drawing::tab_view >();
 
-      default_toggle_check_handling(id_simple_checkbox);
+      default_toggle_check_handling("simple_checkbox");
 
-      default_toggle_check_handling(id_no_client_frame);
+      default_toggle_check_handling("no_client_frame");
 
       ::base::application::init_instance();
 
@@ -121,11 +121,11 @@ namespace app_simple_drawing
 
       add_document_template(pdoctemplate);
 
-      default_data_save_handling(id_simple_checkbox);
+      default_data_save_handling("simple_checkbox");
 
-      default_data_save_handling(id_no_client_frame);
+      default_data_save_handling("no_client_frame");
 
-      default_data_save_handling(id_simple_text);
+      default_data_save_handling("simple_text");
 
       //return true;
 
@@ -235,27 +235,29 @@ namespace app_simple_drawing
 
    ::atom application::translate_property_id(const ::atom & atom)
    {
-
-      if(atom == "simple_checkbox")
-      {
-
-         return id_simple_checkbox;
-
-      }
-      else if(atom == "simple_text")
-      {
-
-         return id_simple_text;
-
-      }
-      else if (atom == "no_client_frame")
-      {
-
-         return id_no_client_frame;
-
-      }
-
+      
       return atom;
+
+//      if(atom == "simple_checkbox")
+//      {
+//
+//         return id_simple_checkbox;
+//
+//      }
+//      else if(atom == "simple_text")
+//      {
+//
+//         return id_simple_text;
+//
+//      }
+//      else if (atom == "no_client_frame")
+//      {
+//
+//         return id_no_client_frame;
+//
+//      }
+//
+//      return atom;
 
    }
 
