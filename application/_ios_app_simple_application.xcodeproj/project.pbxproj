@@ -29,7 +29,7 @@
 		9A93B8ED284711AD005ACD11 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8CF284711A8005ACD11 /* libios_axis.a */; };
 		9A93B8EF284711AD005ACD11 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8D0284711A8005ACD11 /* libios_base.a */; };
 		9A93B8F1284711AD005ACD11 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B4862846E5BA005ACD11 /* libios_crypto_openssl.a */; };
-		9A93B8F3284711AE005ACD11 /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B4C82846E62A005ACD11 /* lib.a */; };
+		9A93B8F3284711AE005ACD11 /* libios_database_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B4C82846E62A005ACD11 /* libios_database_sqlite3.a */; };
 		9A93B8F5284711AE005ACD11 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B49B2846E5BB005ACD11 /* libios_draw2d_quartz2d.a */; };
 		9A93B8F7284711AF005ACD11 /* libios_experience_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B4FE2846E684005ACD11 /* libios_experience_core.a */; };
 		9A93B8F9284711AF005ACD11 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B47D2846E5BA005ACD11 /* libios_folder_zip.a */; };
@@ -154,7 +154,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A93B46F2846E5BA005ACD11 /* database_sqlite3.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A93B4A92846E5EF005ACD11;
+			remoteGlobalIDString = 9A0DB3D62864314500D061F7;
 			remoteInfo = ios_database_sqlite3;
 		};
 		9A93B4C72846E62A005ACD11 /* PBXContainerItemProxy */ = {
@@ -389,7 +389,7 @@
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
 				9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */,
 				9A93B8E5284711AB005ACD11 /* libios_aqua.a in Frameworks */,
-				9A93B8F3284711AE005ACD11 /* lib.a in Frameworks */,
+				9A93B8F3284711AE005ACD11 /* libios_database_sqlite3.a in Frameworks */,
 				9A93B8F9284711AF005ACD11 /* libios_folder_zip.a in Frameworks */,
 				9A93B8E8284711AB005ACD11 /* libios_aura_apple.a in Frameworks */,
 				9AF7615D1F84388800FDE7CC /* CoreText.framework in Frameworks */,
@@ -630,7 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				9A93B4742846E5BA005ACD11 /* lib.dylib */,
-				9A93B4C82846E62A005ACD11 /* lib.a */,
+				9A93B4C82846E62A005ACD11 /* libios_database_sqlite3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -854,7 +854,6 @@
 		9A93B4742846E5BA005ACD11 /* lib.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9A93B4732846E5BA005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -923,10 +922,9 @@
 			remoteRef = 9A93B4A32846E5BB005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B4C82846E62A005ACD11 /* lib.a */ = {
+		9A93B4C82846E62A005ACD11 /* libios_database_sqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.a;
 			path = libios_database_sqlite3.a;
 			remoteRef = 9A93B4C72846E62A005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1211,7 +1209,6 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PLATFORM_MODIFIER = ios;
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1271,7 +1268,6 @@
 					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library/$(ARCHS)",
 				);
 				PLATFORM_MODIFIER = ios;
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
