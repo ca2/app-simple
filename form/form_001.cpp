@@ -135,15 +135,23 @@ namespace app_simple_form
 
       ::user::form_view::on_layout(pgraphics);
 
-      double iLeft = 100.;
+      auto rectClient = get_client_rect();
+      
+      double iLeft = minimum(100.0, rectClient.width() * 0.05);
 
-      double y = 100.;
+      double iRight = iLeft;
 
+      double y = iLeft * 2.0;
+      
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+      
+      int cx = rectClient.width() - iLeft - iRight;
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
       y += rectangleStillMargin.top;
+      
+      m_pstill->m_ealignText = e_align_left;
 
       m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
@@ -152,12 +160,16 @@ namespace app_simple_form
       y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+      
+      sizeEdit.cx = cx;
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
-
+      
+      //y += 1;
+      
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy));
 
       y += sizeEdit.cy;
 
@@ -173,17 +185,40 @@ namespace app_simple_form
 
       y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
+      y += 4;
+      
       auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
 
       auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
-      m_pbuttonClear->display_child(::rectangle_f64_dimension(iLeft, y, button_width, button_height));
+      ::rectangle rectangleSend;
+      
+      rectangleSend.right = rectClient.right - iRight;
+      
+      rectangleSend.left = rectangleSend.right - button_width;
+      
+      rectangleSend.top = y;
+      
+      rectangleSend.bottom = y + button_height;
+      
+      m_pbuttonSend->display_child(rectangleSend);
+      
+      ::rectangle rectangleClear;
+      
+      rectangleClear.right = rectangleSend.left - iLeft;
+      
+      rectangleClear.left = rectangleClear.right - button_width;
+      
+      rectangleClear.top = rectangleSend.top;
+      
+      rectangleClear.bottom = rectangleSend.bottom;
 
-      m_pbuttonSend->display_child(::rectangle_f64_dimension(iLeft + button_width + 32, y, button_width, button_height));
+      m_pbuttonClear->display_child(rectangleClear);
+
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy * 5));
+      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy * 5));
 
    }
 

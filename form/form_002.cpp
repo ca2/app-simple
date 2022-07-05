@@ -135,33 +135,59 @@ namespace app_simple_form
 
       ::user::form_view::on_layout(pgraphics);
 
-      double iLeft = 100.;
+      auto rectClient = get_client_rect();
+      
+      double iLeft = minimum(100.0, rectClient.width() * 0.05);
 
-      double y = 100.;
+      double iRight = iLeft;
+
+      double y = iLeft * 2.0;
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+      
+      int cx = rectClient.width() - iLeft - iRight;
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeStill.cy));
+      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += sizeStill.cy * 1.25;
+      y += rectangleStillMargin.top;
+      
+      m_pstill->m_ealignText = e_align_left;
+
+      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+
+      y += sizeStill.cy;
+
+      y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+      
+      sizeEdit.cx = cx;
+
+      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
+      
+      //y += 1;
+      
+      y += rectangleEditMargin.top;
 
       m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeEdit.cy));
 
-      y += sizeEdit.cy * 1.25;
+      y += sizeEdit.cy;
+
+      y += rectangleEditMargin.bottom;
+
+      y += 4;
 
       auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeCombo.cy));
+      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeCombo.cy));
 
-      y += sizeCombo.cy * 1.25;
+      y += sizeCombo.cy + 4;
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
 
       m_pbutton->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeButton.cy));
 
-      y += sizeButton.cy * 1.25;
+      y += sizeButton.cy + 4;
 
       m_pstillResponse->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeEdit.cy * 8));
 
