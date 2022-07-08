@@ -57,11 +57,11 @@ namespace app_simple_box
 
       add_document_template(pdoctemplate);
 
-      default_data_save_handling(id_simple_checkbox);
+      default_data_save_handling("simple_checkbox");
 
-      default_data_save_handling(id_no_client_frame);
+      default_data_save_handling("no_client_frame");
 
-      default_data_save_handling(id_simple_text);
+      default_data_save_handling("simple_text");
 
       //return true;
 

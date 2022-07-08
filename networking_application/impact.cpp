@@ -98,7 +98,7 @@ namespace app_simple_networking_application
 
       {
 
-         auto psignal = m_papp->get_signal(id_simple_checkbox);
+         auto psignal = m_papp->get_signal("simple_checkbox");
 
          psignal->add_handler(this);
 
@@ -106,7 +106,7 @@ namespace app_simple_networking_application
 
       {
 
-         auto psignal = m_papp->get_signal(id_no_client_frame);
+         auto psignal = m_papp->get_signal("no_client_frame");
 
          psignal->add_handler(this);
 
@@ -143,8 +143,8 @@ namespace app_simple_networking_application
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == id_simple_checkbox
-         || ptopic->m_atom == id_no_client_frame)
+      if (ptopic->m_atom == "simple_checkbox"
+         || ptopic->m_atom == "no_client_frame")
       {
 
          set_need_redraw();
