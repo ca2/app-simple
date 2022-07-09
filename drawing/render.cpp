@@ -99,6 +99,13 @@ namespace app_simple_drawing
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
+      if (m_rectangle.is_empty())
+      {
+
+         return;
+
+      }
+
       if (m_papp->application_properties().m_echeckNoClientFrame != ::e_check_checked)
       {
 
