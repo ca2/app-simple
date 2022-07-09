@@ -143,7 +143,8 @@ namespace app_simple_networking_application
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == "simple_checkbox" || ptopic->m_atom == "no_client_frame")
+      if (ptopic->m_atom == "simple_checkbox"
+         || ptopic->m_atom == "no_client_frame")
       {
 
          set_need_redraw();
