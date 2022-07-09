@@ -220,6 +220,172 @@ namespace app_simple_drawing
    }
 
 
+   void render::draw_text(::draw2d::graphics_pointer & pgraphics)
+   {
+      //Text
+
+      rectangle_i32 rectangle;
+
+      int iSize = minimum(m_rectangle.width(), m_rectangle.height());
+
+      iSize = iSize * 3 / 4;
+
+
+      rectangle.set_size(iSize, iSize);
+
+      rectangle.Align(e_align_center, m_rectangle);
+
+      rectangle.offset_x(-iSize / 5 * 3);
+
+      rectangle.offset_x(iSize / 5 * m_iDrawing);
+
+      ::size_f64 size(0., 0.);
+
+      bool bDrawText = true;
+
+      string strTitle;
+
+      auto pbrush = __create < ::draw2d::brush >();
+
+      auto psystem = m_psystem->m_paurasystem;
+
+      auto pdraw2d = psystem->draw2d();
+
+      auto pwritetext = pdraw2d->write_text();
+
+      auto pfont1 = pwritetext->create_font();
+
+      auto pfont2 = pwritetext->create_font();
+
+      string strFontFamily = get_font();
+
+      if(bDrawText)
+      {
+
+         pfont1->create_pixel_font(strFontFamily, 100.0, 800);
+
+         pgraphics->set(pfont1);
+
+         strTitle = get_app()->application_properties().m_strSimple;
+
+         if(strTitle.is_empty())
+         {
+
+            strTitle = get_app()->application_properties().m_strMainTitle;
+
+         }
+
+         size = pgraphics->get_text_extent(strTitle);
+
+         if (!size.is_empty())
+         {
+
+            int iHeight = rectangle.height();
+
+            double dMaxDimension = size.get_maximum_dimension();
+
+            if (m_iDrawing == 1)
+            {
+
+               float fSize = (float) (iHeight * 80.0 / dMaxDimension);
+
+               pfont2->create_pixel_font(strFontFamily, fSize, 800);
+
+            }
+            else
+            {
+
+               float fSize = (float) (iHeight * 160.0 / dMaxDimension);
+
+               pfont2->create_pixel_font(strFontFamily, fSize, 800);
+
+            }
+
+         }
+
+         pgraphics->set(pfont2);
+
+         size = pgraphics->get_text_extent(strTitle);
+
+         ::rectangle_i32 rectangleText;
+
+         rectangleText.set_size(size);
+
+         rectangleText.inflate(10, 10);
+
+         rectangleText.Align(e_align_center, rectangle);
+
+         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+
+
+         if (m_iDrawing == 4)
+         {
+
+            pbrush->create_solid(m_hlsText);
+
+         }
+         else if (m_iDrawing == 3)
+         {
+
+            if (__bool(m_papp->application_properties().m_echeckSimple))
+            {
+
+               pbrush->create_solid(m_hlsText);
+
+            }
+            else
+            {
+
+               if (::is_ok(m_pimage2))
+               {
+
+                  pbrush->CreatePatternBrush(m_pimage2);
+
+               }
+               else
+               {
+
+                  pbrush->create_solid(m_hlsText);
+
+               }
+
+            }
+
+         }
+         else
+         {
+
+            if (__bool(m_papp->application_properties().m_echeckSimple))
+            {
+
+               pbrush->create_solid(m_hlsText);
+
+            }
+            else
+            {
+
+               pbrush->CreateLinearGradientBrush(rectangleText.top_left(), rectangleText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
+
+            }
+
+         }
+
+         pgraphics->set(pbrush);
+
+         if(bDrawText)
+         {
+
+            pgraphics->draw_text(strTitle, rectangleText, e_align_center);
+
+         }
+
+
+      }
+
+
+   }
+
+
 } // namespace simple_drawing
 
 

@@ -77,7 +77,7 @@ namespace app_simple_drawing
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
 
-
+   virtual void draw_text(::draw2d::graphics_pointer & pgraphics);
 
       
 
