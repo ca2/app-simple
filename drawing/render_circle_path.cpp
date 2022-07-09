@@ -68,6 +68,7 @@ namespace app_simple_drawing
       pgraphics->fill(ppath, pbrush);
 
       pgraphics->draw(ppath, ppen);
+      draw_text(pgraphics);
 
    }
 

@@ -62,7 +62,7 @@ namespace app_simple_drawing
       pgraphics->::draw2d::graphics::draw_round_rectangle(r, ppen, radius);
 
 
-
+draw_text(pgraphics);
 
    }
 
