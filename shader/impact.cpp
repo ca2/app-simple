@@ -108,9 +108,9 @@ namespace app_simple_shader
 
       auto papp = get_app();
 
-      papp->add_procedure(id_simple_checkbox, pprocedureRedraw);
+      papp->add_procedure("simple_checkbox", pprocedureRedraw);
 
-      papp->add_procedure(id_no_client_frame, pprocedureRedraw);
+      papp->add_procedure("no_client_frame", pprocedureRedraw);
 
       //auto estatus = 
       
@@ -152,7 +152,7 @@ namespace app_simple_shader
 
       {
 
-         ::atom atom = id_simple_text;
+         ::atom atom = "simple_text";
 
          auto pproperty = papp->fetch_property(atom);
 
@@ -210,7 +210,7 @@ namespace app_simple_shader
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == id_simple_checkbox || ptopic->m_atom == id_no_client_frame)
+      if (ptopic->m_atom == "simple_checkbox" || ptopic->m_atom == "no_client_frame")
       {
 
          set_need_redraw();
