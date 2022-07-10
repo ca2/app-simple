@@ -58,9 +58,9 @@ namespace app_simple_shader
       ::factory::add_factory_item <::app_simple_shader::impact >();
       ::factory::add_factory_item <::app_simple_shader::tab_view >();
 
-      default_toggle_check_handling(id_simple_checkbox);
+      default_toggle_check_handling("simple_checkbox");
 
-      default_toggle_check_handling(id_no_client_frame);
+      default_toggle_check_handling("no_client_frame");
 
       ::aura::application::init_instance();
 
@@ -188,20 +188,22 @@ namespace app_simple_shader
    ::atom application::translate_property_id(const ::atom & atom)
    {
 
-      if(atom == "simple_checkbox")
-      {
-
-         return id_simple_checkbox;
-
-      }
-      else if(atom == "simple_text")
-      {
-
-         return id_simple_text;
-
-      }
-
       return atom;
+
+      //if(atom == "simple_checkbox")
+      //{
+
+      //   return id_simple_checkbox;
+
+      //}
+      //else if(atom == "simple_text")
+      //{
+
+      //   return id_simple_text;
+
+      //}
+
+      //return atom;
 
    }
 
