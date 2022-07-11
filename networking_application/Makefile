@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/solution/basis
+CMAKE_SOURCE_DIR = /home/camilo/solution/basis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/solution/basis
+CMAKE_BINARY_DIR = /home/camilo/solution/basis
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,14 +99,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/pi/solution/basis && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/solution/basis/CMakeFiles /home/pi/solution/basis/source/app-simple/networking_application//CMakeFiles/progress.marks
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/solution/basis/CMakeFiles 0
+	cd /home/camilo/solution/basis && $(CMAKE_COMMAND) -E cmake_progress_start /home/camilo/solution/basis/CMakeFiles /home/camilo/solution/basis/source/app-simple/networking_application//CMakeFiles/progress.marks
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/camilo/solution/basis/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/clean
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/clean
 .PHONY : clean
 
 # The main clean target
@@ -116,22 +116,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/preinstall
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/preinstall
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/pi/solution/basis && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/camilo/solution/basis && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/rule:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/rule
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/rule
 .PHONY : source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/rule
 
 # Convenience name for target.
@@ -141,12 +141,12 @@ _app_simple_networking_application: source/app-simple/networking_application/CMa
 
 # fast build rule for target.
 _app_simple_networking_application/fast:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build
 .PHONY : _app_simple_networking_application/fast
 
 # Convenience name for target.
 source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/rule:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/rule
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/rule
 .PHONY : source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/rule
 
 # Convenience name for target.
@@ -156,7 +156,7 @@ app_simple_networking_application: source/app-simple/networking_application/CMak
 
 # fast build rule for target.
 app_simple_networking_application/fast:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build
 .PHONY : app_simple_networking_application/fast
 
 _factory.o: _factory.cpp.o
@@ -165,7 +165,7 @@ _factory.o: _factory.cpp.o
 
 # target to build an object file
 _factory.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.o
 .PHONY : _factory.cpp.o
 
 _factory.i: _factory.cpp.i
@@ -174,7 +174,7 @@ _factory.i: _factory.cpp.i
 
 # target to preprocess a source file
 _factory.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.i
 .PHONY : _factory.cpp.i
 
 _factory.s: _factory.cpp.s
@@ -183,7 +183,7 @@ _factory.s: _factory.cpp.s
 
 # target to generate assembly for a file
 _factory.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/_factory.cpp.s
 .PHONY : _factory.cpp.s
 
 _main.o: _main.cpp.o
@@ -192,7 +192,7 @@ _main.o: _main.cpp.o
 
 # target to build an object file
 _main.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.o
 .PHONY : _main.cpp.o
 
 _main.i: _main.cpp.i
@@ -201,7 +201,7 @@ _main.i: _main.cpp.i
 
 # target to preprocess a source file
 _main.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.i
 .PHONY : _main.cpp.i
 
 _main.s: _main.cpp.s
@@ -210,7 +210,7 @@ _main.s: _main.cpp.s
 
 # target to generate assembly for a file
 _main.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/_app_simple_networking_application.dir/_main.cpp.s
 .PHONY : _main.cpp.s
 
 application.o: application.cpp.o
@@ -219,7 +219,7 @@ application.o: application.cpp.o
 
 # target to build an object file
 application.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.o
 .PHONY : application.cpp.o
 
 application.i: application.cpp.i
@@ -228,7 +228,7 @@ application.i: application.cpp.i
 
 # target to preprocess a source file
 application.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.i
 .PHONY : application.cpp.i
 
 application.s: application.cpp.s
@@ -237,22 +237,22 @@ application.s: application.cpp.s
 
 # target to generate assembly for a file
 application.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/application.cpp.s
 .PHONY : application.cpp.s
 
 # target to build an object file
 cmake_pch.hxx.gch:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.gch
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.gch
 .PHONY : cmake_pch.hxx.gch
 
 # target to preprocess a source file
 cmake_pch.hxx.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.i
 .PHONY : cmake_pch.hxx.i
 
 # target to generate assembly for a file
 cmake_pch.hxx.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
 document.o: document.cpp.o
@@ -261,7 +261,7 @@ document.o: document.cpp.o
 
 # target to build an object file
 document.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.o
 .PHONY : document.cpp.o
 
 document.i: document.cpp.i
@@ -270,7 +270,7 @@ document.i: document.cpp.i
 
 # target to preprocess a source file
 document.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.i
 .PHONY : document.cpp.i
 
 document.s: document.cpp.s
@@ -279,7 +279,7 @@ document.s: document.cpp.s
 
 # target to generate assembly for a file
 document.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/document.cpp.s
 .PHONY : document.cpp.s
 
 frame.o: frame.cpp.o
@@ -288,7 +288,7 @@ frame.o: frame.cpp.o
 
 # target to build an object file
 frame.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.o
 .PHONY : frame.cpp.o
 
 frame.i: frame.cpp.i
@@ -297,7 +297,7 @@ frame.i: frame.cpp.i
 
 # target to preprocess a source file
 frame.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.i
 .PHONY : frame.cpp.i
 
 frame.s: frame.cpp.s
@@ -306,7 +306,7 @@ frame.s: frame.cpp.s
 
 # target to generate assembly for a file
 frame.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/frame.cpp.s
 .PHONY : frame.cpp.s
 
 framework.o: framework.cpp.o
@@ -315,7 +315,7 @@ framework.o: framework.cpp.o
 
 # target to build an object file
 framework.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.o
 .PHONY : framework.cpp.o
 
 framework.i: framework.cpp.i
@@ -324,7 +324,7 @@ framework.i: framework.cpp.i
 
 # target to preprocess a source file
 framework.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.i
 .PHONY : framework.cpp.i
 
 framework.s: framework.cpp.s
@@ -333,7 +333,7 @@ framework.s: framework.cpp.s
 
 # target to generate assembly for a file
 framework.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/framework.cpp.s
 .PHONY : framework.cpp.s
 
 impact.o: impact.cpp.o
@@ -342,7 +342,7 @@ impact.o: impact.cpp.o
 
 # target to build an object file
 impact.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.o
 .PHONY : impact.cpp.o
 
 impact.i: impact.cpp.i
@@ -351,7 +351,7 @@ impact.i: impact.cpp.i
 
 # target to preprocess a source file
 impact.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.i
 .PHONY : impact.cpp.i
 
 impact.s: impact.cpp.s
@@ -360,7 +360,7 @@ impact.s: impact.cpp.s
 
 # target to generate assembly for a file
 impact.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/impact.cpp.s
 .PHONY : impact.cpp.s
 
 main_frame.o: main_frame.cpp.o
@@ -369,7 +369,7 @@ main_frame.o: main_frame.cpp.o
 
 # target to build an object file
 main_frame.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.o
 .PHONY : main_frame.cpp.o
 
 main_frame.i: main_frame.cpp.i
@@ -378,7 +378,7 @@ main_frame.i: main_frame.cpp.i
 
 # target to preprocess a source file
 main_frame.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.i
 .PHONY : main_frame.cpp.i
 
 main_frame.s: main_frame.cpp.s
@@ -387,7 +387,7 @@ main_frame.s: main_frame.cpp.s
 
 # target to generate assembly for a file
 main_frame.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/main_frame.cpp.s
 .PHONY : main_frame.cpp.s
 
 tab_view.o: tab_view.cpp.o
@@ -396,7 +396,7 @@ tab_view.o: tab_view.cpp.o
 
 # target to build an object file
 tab_view.cpp.o:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.o
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.o
 .PHONY : tab_view.cpp.o
 
 tab_view.i: tab_view.cpp.i
@@ -405,7 +405,7 @@ tab_view.i: tab_view.cpp.i
 
 # target to preprocess a source file
 tab_view.cpp.i:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.i
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.i
 .PHONY : tab_view.cpp.i
 
 tab_view.s: tab_view.cpp.s
@@ -414,7 +414,7 @@ tab_view.s: tab_view.cpp.s
 
 # target to generate assembly for a file
 tab_view.cpp.s:
-	cd /home/pi/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.s
+	cd /home/camilo/solution/basis && $(MAKE) $(MAKESILENT) -f source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/build.make source/app-simple/networking_application/CMakeFiles/app_simple_networking_application.dir/tab_view.cpp.s
 .PHONY : tab_view.cpp.s
 
 # Help Target
@@ -468,6 +468,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/pi/solution/basis && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/camilo/solution/basis && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
