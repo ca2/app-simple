@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by app_core_hellomultiverse.rc
+// Used by app_core_hello_multiverse.rc
 
 #define IDS_APP_TITLE			103
 #define IDR_MAIN			      128
