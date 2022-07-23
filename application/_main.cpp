@@ -1,5 +1,5 @@
 #include "framework.h"
-#include !BROAD_PRECOMPILED_HEADER
+#if !BROAD_PRECOMPILED_HEADER
 #include "_library.h"
 #endif
 #include "_main.inl"
