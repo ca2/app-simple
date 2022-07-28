@@ -19,6 +19,10 @@
 #include "framework.h"
 #include "example_icons.h"
 #include "nanogui/Icons.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
+
 using namespace nanogui;
 
 // add a button to the wrapper with a fixed size
