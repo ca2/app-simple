@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "aura/_.h"
+#include "nanogui/_.h"
 
 
 #ifdef _APP_SIMPLE_NANOGUI_EXAMPLE_LIBRARY

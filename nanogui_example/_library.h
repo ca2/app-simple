@@ -1,8 +1,7 @@
 #pragma once
 
 
-#include "_.h"
-#include "nanogui/_nanogui.h"
+#include "nanogui/_library.h"
 
 
 #include "main_window.h"
