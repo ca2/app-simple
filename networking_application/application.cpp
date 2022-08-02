@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 //#define _APP_ID "app-simple/webserver"
 //#include "aura/application.h"
 //#include "aura/update.h"
