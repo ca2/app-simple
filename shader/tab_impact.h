@@ -5,8 +5,8 @@ namespace app_simple_shader
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_SHADER tab_view :
-      virtual public ::app_consumer < application, ::user::tab_view, ::user::form_callback >
+   class CLASS_DECL_APP_SIMPLE_SHADER tab_impact :
+      virtual public ::app_consumer < application, ::user::tab_impact, ::user::form_callback >
    {
    public:
 
@@ -19,8 +19,8 @@ namespace app_simple_shader
       __pointer(::user::document)                            m_pdocMenu;
 
 
-      tab_view();
-      virtual ~tab_view();
+      tab_impact();
+      virtual ~tab_impact();
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

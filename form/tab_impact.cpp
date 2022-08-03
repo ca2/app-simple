@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "aura/update.h"
 #include "base/user/user/tab_pane.h"
 
@@ -7,7 +10,7 @@ namespace app_simple_form
 {
 
 
-   tab_view::tab_view()
+   tab_impact::tab_impact()
    {
 
       m_pimpactLast = NULL;
@@ -15,13 +18,13 @@ namespace app_simple_form
    }
 
 
-   tab_view::~tab_view()
+   tab_impact::~tab_impact()
    {
 
    }
 
 
-   void tab_view::assert_ok() const
+   void tab_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -29,7 +32,7 @@ namespace app_simple_form
    }
 
 
-   void tab_view::dump(dump_context & dumpcontext) const
+   void tab_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -37,17 +40,17 @@ namespace app_simple_form
    }
 
 
-   void tab_view::install_message_routing(::channel * pchannel)
+   void tab_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::user::tab_view::install_message_routing(pchannel);
+      ::user::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_impact::on_message_create);
 
    }
 
 
-   void tab_view::on_message_create(::message::message * pmessage)
+   void tab_impact::on_message_create(::message::message * pmessage)
    {
 
       if(pmessage->previous())
@@ -84,11 +87,11 @@ namespace app_simple_form
    }
 
 
-   void tab_view::on_change_cur_sel()
+   void tab_impact::on_change_cur_sel()
    {
 
       //::userex::pane_tab_impact::on_change_cur_sel();
-      ::user::tab_view::on_change_cur_sel();
+      ::user::tab_impact::on_change_cur_sel();
       string strId = get_view_id();
       string_array stra;
 
@@ -139,7 +142,7 @@ namespace app_simple_form
    }
 
 
-   void tab_view::on_create_impact(::user::impact_data * pimpactdata)
+   void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       switch(pimpactdata->m_atom)
@@ -194,14 +197,14 @@ namespace app_simple_form
 
       }
 
-      ::user::tab_view::on_create_impact(pimpactdata);
+      ::user::tab_impact::on_create_impact(pimpactdata);
 
       pimpactdata->m_eflag.add(::user::e_flag_hide_all_others_on_show);
 
    }
 
 
-   //bool tab_view::handle(::topic * ptopic, ::context * pcontext)
+   //bool tab_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
    //   if(m_pdocMenu != nullptr
@@ -242,7 +245,7 @@ namespace app_simple_form
    //}
 
 
-   void tab_view::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
       //////__update(::update)
@@ -303,7 +306,7 @@ namespace app_simple_form
       }
 
 //      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_view::handle(ptopic, pcontext);
+      ::user::tab_impact::handle(ptopic, pcontext);
 
    }
 

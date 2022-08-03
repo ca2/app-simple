@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "aura/update.h"
 
 
@@ -41,7 +44,7 @@ namespace app_simple_drawing
    ::type application::get_pane_view_type() const
    {
 
-      return __type(tab_view);
+      return __type(tab_impact);
 
    }
 
@@ -96,7 +99,7 @@ namespace app_simple_drawing
       ::factory::add_factory_item <::app_simple_drawing::main_frame >();
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_simple_drawing::impact >();
-      ::factory::add_factory_item <::app_simple_drawing::tab_view >();
+      ::factory::add_factory_item <::app_simple_drawing::tab_impact >();
 
       default_toggle_check_handling("simple_checkbox");
 
@@ -186,7 +189,7 @@ namespace app_simple_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

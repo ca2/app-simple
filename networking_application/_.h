@@ -16,7 +16,7 @@ namespace app_simple_networking_application
 
    
    class application;
-   class tab_view;
+   class tab_impact;
    class document;
    class impact;
    //class socket_thread;
