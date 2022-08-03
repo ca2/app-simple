@@ -68,7 +68,7 @@ namespace app_simple_form
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_simple_form::impact >();
       ::factory::add_factory_item <::app_simple_form::main_impact >();
-      ::factory::add_factory_item <::app_simple_form::tab_view >();
+      ::factory::add_factory_item <::app_simple_form::tab_impact >();
       ::factory::add_factory_item <::app_simple_form::form_001 >();
       ::factory::add_factory_item <::app_simple_form::form_002 >();
 
@@ -85,7 +85,7 @@ namespace app_simple_form
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(tab_impact)));
       m_ptemplateBeatMapperMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -166,7 +166,7 @@ namespace app_simple_form
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

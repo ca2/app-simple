@@ -17,7 +17,7 @@
 #include "frame.h"
 #include "main_frame.h"
 
-#include "tab_view.h"
+#include "tab_impact.h"
 
 
 #include "application.h"
