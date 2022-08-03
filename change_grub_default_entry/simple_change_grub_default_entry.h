@@ -6,7 +6,7 @@ namespace app_simple_change_grub_default_entry
 
 
    class CLASS_DECL_APP_SIMPLE_FORM simple_change_grub_default_entry :
-      virtual public ::user::form_view
+      virtual public ::user::form_impact
    {
    public:
 

@@ -128,7 +128,7 @@ namespace app_simple_change_grub_default_entry
    void simple_change_grub_default_entry_001::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::form_view::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pgraphics);
 
       double iLeft = 10.;
 

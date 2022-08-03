@@ -6,7 +6,7 @@ namespace app_simple_shortcut
 
 
    class CLASS_DECL_APP_SIMPLE_SHORTCUT form :
-      virtual public ::user::form_view
+      virtual public ::user::form_impact
    {
    public:
 
