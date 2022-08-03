@@ -5,8 +5,8 @@ namespace app_simple_change_grub_default_entry
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM tab_view :
-      virtual public ::user::tab_view,
+   class CLASS_DECL_APP_SIMPLE_FORM tab_impact :
+      virtual public ::user::tab_impact,
       virtual public ::user::form_callback
    {
    public:
@@ -20,8 +20,8 @@ namespace app_simple_change_grub_default_entry
       __pointer(::user::document)                            m_pdocMenu;
 
 
-      tab_view();
-      virtual ~tab_view();
+      tab_impact();
+      virtual ~tab_impact();
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

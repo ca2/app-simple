@@ -11,7 +11,7 @@ namespace app_simple_form
    public:
 
 
-      tab_view *                          m_ptabimpact;
+      tab_impact *                          m_ptabimpact;
       string                              m_strFont;
       int                                 m_iId;
 

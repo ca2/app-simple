@@ -1,5 +1,8 @@
 // cs<3tbs!! 2020-11-28 21:20 BRT
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "_webserver.h"
 
 

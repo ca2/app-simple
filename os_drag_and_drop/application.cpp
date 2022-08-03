@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "aura/application.h"
 
 
@@ -38,7 +41,7 @@ namespace simple_os_drag_and_drop
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::impact >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::main_impact >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::tab_view >();
+      ::factory::add_factory_item <::simple_os_drag_and_drop::tab_impact >();
 
       ::aura::application::init_instance();
 
@@ -55,7 +58,7 @@ namespace simple_os_drag_and_drop
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(tab_impact)));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
@@ -145,7 +148,7 @@ namespace simple_os_drag_and_drop
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
