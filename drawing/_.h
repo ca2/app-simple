@@ -15,7 +15,7 @@ namespace app_simple_drawing
 {
 
    class application;
-   class tab_view;
+   class tab_impact;
    class document;
    class impact;
 

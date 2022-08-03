@@ -10,19 +10,19 @@ namespace app_simple_networking_application
 {
 
 
-   tab_view::tab_view()
+   tab_impact::tab_impact()
    {
 
    }
 
 
-   tab_view::~tab_view()
+   tab_impact::~tab_impact()
    {
 
    }
 
 
-   void tab_view::assert_ok() const
+   void tab_impact::assert_ok() const
    {
 
       ::user::impact::assert_ok();
@@ -30,7 +30,7 @@ namespace app_simple_networking_application
    }
 
 
-   void tab_view::dump(dump_context & dumpcontext) const
+   void tab_impact::dump(dump_context & dumpcontext) const
    {
 
       ::user::impact::dump(dumpcontext);
@@ -38,17 +38,17 @@ namespace app_simple_networking_application
    }
 
 
-   void tab_view::install_message_routing(::channel * pchannel)
+   void tab_impact::install_message_routing(::channel * pchannel)
    {
 
-      ::user::tab_view::install_message_routing(pchannel);
+      ::user::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &tab_view::on_message_create);
+      MESSAGE_LINK(e_message_create, pchannel, this, &tab_impact::on_message_create);
 
    }
 
 
-   void tab_view::on_message_create(::message::message * pmessage)
+   void tab_impact::on_message_create(::message::message * pmessage)
    {
 
       if(pmessage->previous())
@@ -68,26 +68,26 @@ namespace app_simple_networking_application
    }
 
 
-   void tab_view::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::tab_view::_001OnNcDraw(pgraphics);
+      ::user::tab_impact::_001OnNcDraw(pgraphics);
 
    }
 
 
-   void tab_view::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::tab_view::_001OnDraw(pgraphics);
+      ::user::tab_impact::_001OnDraw(pgraphics);
 
    }
 
 
-   void tab_view::on_change_cur_sel()
+   void tab_impact::on_change_cur_sel()
    {
 
-      ::user::tab_view::on_change_cur_sel();
+      ::user::tab_impact::on_change_cur_sel();
 
       string strId = get_view_id();
 
@@ -147,7 +147,7 @@ namespace app_simple_networking_application
    }
 
 
-   void tab_view::on_create_impact(::user::impact_data * pimpactdata)
+   void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
       //initialize_application_consumer();
@@ -185,25 +185,25 @@ namespace app_simple_networking_application
 
       }
 
-      ::user::tab_view::on_create_impact(pimpactdata);
+      ::user::tab_impact::on_create_impact(pimpactdata);
 
    }
 
 
 
 
-   void tab_view::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
 
    }
 
 
-   //void tab_view::handle(::topic * ptopic, ::context * pcontext)
+   //void tab_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
 
-   //   ::user::tab_view::handle(ptopic, pcontext);
+   //   ::user::tab_impact::handle(ptopic, pcontext);
 
    //}
 

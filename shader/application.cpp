@@ -59,7 +59,7 @@ namespace app_simple_shader
       ::factory::add_factory_item <::app_simple_shader::main_frame >();
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_simple_shader::impact >();
-      ::factory::add_factory_item <::app_simple_shader::tab_view >();
+      ::factory::add_factory_item <::app_simple_shader::tab_impact >();
 
       default_toggle_check_handling("simple_checkbox");
 
@@ -78,7 +78,7 @@ namespace app_simple_shader
                                "main",
                                __type(document),
                                __type(main_frame),
-                               __type(tab_view)));
+                               __type(tab_impact)));
 
       add_document_template(pdoctemplate);
 
@@ -141,7 +141,7 @@ namespace app_simple_shader
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

@@ -22,7 +22,7 @@ namespace app_simple_shader
       //::user::document *                     m_pdocMenu;
       //::user::plain_edit_view *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleShaderMain;
-      tab_view *                             m_ptabimpact;
+      tab_impact *                             m_ptabimpact;
 
       string                                 m_strMainTitle;
 
