@@ -2,7 +2,7 @@
 
 
 #include "app/shader/_library.h"
-#include "core/user/simple/_simple.h"
+#include "core/user/simple/_component.h"
 
 
 namespace user
