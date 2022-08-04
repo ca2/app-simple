@@ -129,7 +129,7 @@ namespace app_simple_drawing
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         //::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;

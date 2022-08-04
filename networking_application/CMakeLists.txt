@@ -17,8 +17,8 @@ list(APPEND library_source
    frame.h
    main_frame.cpp
    main_frame.h
-   tab_view.cpp
-   tab_view.h
+   tab_impact.cpp
+   tab_impact.h
    impact.cpp
    impact.h
    )

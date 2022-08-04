@@ -117,7 +117,7 @@ namespace app_simple_change_grub_default_entry
       if (get_view_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_view) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
 
          //pmenuview->load_xml_menu("matter://simple_menu.xml");
 
@@ -168,7 +168,7 @@ namespace app_simple_change_grub_default_entry
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_view >(pimpactdata);
+         //::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;

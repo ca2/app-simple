@@ -12,7 +12,7 @@ namespace app_simple_form
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       impact *                                          m_pimpactLast;
       string                                          m_strTopicTitle;
 

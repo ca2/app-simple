@@ -12,7 +12,7 @@ namespace app_simple_drawing
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       __reference(::app_simple_drawing::impact)       m_pimpactDrawing;
       string                                          m_strTopicTitle;
 
