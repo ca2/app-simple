@@ -23,8 +23,8 @@ list(APPEND library_source
    render_arcs.cpp
    render_box.cpp
    render_circle_path.cpp
-   tab_view.cpp
-   tab_view.h
+   tab_impact.cpp
+   tab_impact.h
    impact.cpp
    impact.h
    )

@@ -1,17 +1,17 @@
 #pragma once
 
 
-namespace simple_shader
+namespace simple_drawing
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_SHADER main_impact:
-      virtual public ::userex::split_view
+   class CLASS_DECL_APP_SIMPLE_DRAWING main_impact:
+      virtual public ::userex::split_impact
    {
    public:
 
 
-      ::userex::top_view *    m_ptopview;
+      ::userex::top_impact *    m_ptopview;
       impact *                  m_pimpact;
 
 
@@ -38,7 +38,7 @@ namespace simple_shader
    };
 
 
-} // namespace simple_shader
+} // namespace simple_drawing
 
 
 

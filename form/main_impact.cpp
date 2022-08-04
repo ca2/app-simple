@@ -29,7 +29,7 @@ namespace app_simple_form
    void main_impact::assert_ok() const
    {
 
-      ::user::split_view::assert_ok();
+      ::user::split_impact::assert_ok();
 
    }
 
@@ -37,7 +37,7 @@ namespace app_simple_form
    void main_impact::dump(dump_context & dumpcontext) const
    {
 
-      ::user::split_view::dump(dumpcontext);
+      ::user::split_impact::dump(dumpcontext);
 
    }
 
@@ -59,7 +59,7 @@ namespace app_simple_form
 
       }
 
-      ::user::split_view::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, pcontext);
 
 
 
@@ -90,7 +90,7 @@ namespace app_simple_form
 
       //   initialize_split_layout();
 
-      //   m_ptopview = host_view < ::userex::top_view >(0, "top_view");
+      //   m_ptopview = host_view < ::userex::top_impact >(0, "top_impact");
 
       //   if (m_ptopview == NULL)
       //   {
@@ -124,7 +124,7 @@ namespace app_simple_form
 
       }
 
-//      __pointer(::userex::top_edit_view) peditview = get_child_by_id("top_edit_view");
+//      __pointer(::userex::top_edit_impact) peditview = get_child_by_id("top_edit_impact");
 //
 //      if(peditview.is_set())
 //      {
@@ -145,7 +145,7 @@ namespace app_simple_form
    void main_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::split_view::_001OnNcDraw(pgraphics);
+      ::user::split_impact::_001OnNcDraw(pgraphics);
 
    }
 
@@ -153,7 +153,7 @@ namespace app_simple_form
    void main_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::split_view::_001OnDraw(pgraphics);
+      ::user::split_impact::_001OnDraw(pgraphics);
 
    }
 

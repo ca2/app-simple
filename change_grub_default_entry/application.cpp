@@ -64,7 +64,7 @@ namespace app_simple_change_grub_default_entry
       ::factory::add_factory_item <::user::button_view >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::impact >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::tab_view >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::tab_impact >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
 

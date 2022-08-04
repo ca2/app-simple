@@ -24,8 +24,8 @@ list(APPEND library_source
    simple_change_grub_default_entry.h
    simple_change_grub_default_entry_001.h
    simple_change_grub_default_entry_002.h
-   tab_view.cpp
-   tab_view.h
+   tab_impact.cpp
+   tab_impact.h
    impact.cpp
    impact.h
    )
