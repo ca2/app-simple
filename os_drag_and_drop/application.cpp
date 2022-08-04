@@ -33,12 +33,12 @@ namespace simple_os_drag_and_drop
 
       set_local_data();
 
-      //puser->will_use_view_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint(FONTSEL_IMPACT);
       
       ::factory::add_factory_item <::simple_os_drag_and_drop::document >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::frame >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::main_frame >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::impact >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::main_impact >();
       ::factory::add_factory_item <::simple_os_drag_and_drop::tab_impact >();
@@ -187,10 +187,10 @@ namespace simple_os_drag_and_drop
 #endif
 
 
-   __pointer(impact) application::create_simple_os_drag_and_drop_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_os_drag_and_drop_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

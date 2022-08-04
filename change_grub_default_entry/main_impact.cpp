@@ -70,7 +70,7 @@ namespace app_simple_change_grub_default_entry
 
       //   initialize_split_layout();
 
-      //   m_ptopview = host_view < ::userex::top_impact >(0, "top_impact");
+      //   m_ptopview = host_impact < ::userex::top_impact >(0, "top_impact");
 
       //   if (m_ptopview == NULL)
       //   {
@@ -93,9 +93,9 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      //m_pimpact = create_view < lite_view >();
+      //m_pimpact = create_impact < lite_impact >();
 
-      m_pimpact = host_view < impact >(iPane);
+      m_pimpact = host_impact < impact >(iPane);
 
       if(m_pimpact == NULL)
       {

@@ -92,15 +92,15 @@ namespace app_simple_form
 
       //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_impact::on_change_cur_sel();
-      string strId = get_view_id();
+      string strId = get_impact_id();
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-      if (get_view_id() == MENU_IMPACT)
+      if (get_impact_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
 
          //pmenuview->load_xml_menu("matter://simple_menu.xml");
 
@@ -108,11 +108,11 @@ namespace app_simple_form
 
          //}
 
-         //hide_all_except({ get_view_id(), ::impact_karaoke });
+         //hide_all_except({ get_impact_id(), ::impact_karaoke });
 
       }
 
-      if(get_view_id() == ::impact_simple_form)
+      if(get_impact_id() == ::impact_simple_form)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -150,7 +150,7 @@ namespace app_simple_form
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
+         //::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -169,13 +169,13 @@ namespace app_simple_form
          {
          case 1:
 
-            pform = create_view<form_001>(pimpactdata);
+            pform = create_impact<form_001>(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_view<form_002>(pimpactdata);
+            pform = create_impact<form_002>(pimpactdata);
 
             break;
 
@@ -208,7 +208,7 @@ namespace app_simple_form
    //{
 
    //   if(m_pdocMenu != nullptr
-   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0)
+   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_impact(0)
    //         && ptopic->user_interaction() != nullptr)
    //   {
 
@@ -274,7 +274,7 @@ namespace app_simple_form
       //}
       if (m_pdocMenu != nullptr
          && ::is_set(ptopic->m_puserelement)
-         && ptopic->m_puserelement->get_form() == m_pdocMenu->get_view(0))
+         && ptopic->m_puserelement->get_form() == m_pdocMenu->get_impact(0))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)

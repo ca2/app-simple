@@ -165,10 +165,10 @@ namespace app_simple_notify_drawing
 #endif
 
 
-   __pointer(app_simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
+   __pointer(app_simple_drawing::impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

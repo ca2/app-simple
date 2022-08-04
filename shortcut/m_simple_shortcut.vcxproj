@@ -133,17 +133,17 @@
     <ClInclude Include="simple_shortcut.h" />
     <ClInclude Include="simple_shortcut_application.h" />
     <ClInclude Include="simple_shortcut_document.h" />
-    <ClInclude Include="simple_shortcut_edit_view.h" />
+    <ClInclude Include="simple_shortcut_edit_impact.h" />
     <ClInclude Include="simple_shortcut_frame.h" />
-    <ClInclude Include="simple_shortcut_full_view.h" />
-    <ClInclude Include="simple_shortcut_lite_view.h" />
-    <ClInclude Include="simple_shortcut_main_view.h" />
-    <ClInclude Include="simple_shortcut_pane_view.h" />
+    <ClInclude Include="simple_shortcut_full_impact.h" />
+    <ClInclude Include="simple_shortcut_lite_impact.h" />
+    <ClInclude Include="simple_shortcut_main_impact.h" />
+    <ClInclude Include="simple_shortcut_pane_impact.h" />
 
-    <ClInclude Include="simple_shortcut_switcher_view.h" />
-    <ClInclude Include="simple_shortcut_toggle_view.h" />
-    <ClInclude Include="simple_shortcut_top_view.h" />
-    <ClInclude Include="simple_shortcut_view.h" />
+    <ClInclude Include="simple_shortcut_switcher_impact.h" />
+    <ClInclude Include="simple_shortcut_toggle_impact.h" />
+    <ClInclude Include="simple_shortcut_top_impact.h" />
+    <ClInclude Include="simple_shortcut_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="framework.cpp">
@@ -154,17 +154,17 @@
     <ClCompile Include="simple_shortcut.cpp" />
     <ClCompile Include="simple_shortcut_application.cpp" />
     <ClCompile Include="simple_shortcut_document.cpp" />
-    <ClCompile Include="simple_shortcut_edit_view.cpp" />
+    <ClCompile Include="simple_shortcut_edit_impact.cpp" />
     <ClCompile Include="simple_shortcut_frame.cpp" />
-    <ClCompile Include="simple_shortcut_full_view.cpp" />
-    <ClCompile Include="simple_shortcut_lite_view.cpp" />
-    <ClCompile Include="simple_shortcut_main_view.cpp" />
-    <ClCompile Include="simple_shortcut_pane_view.cpp" />
+    <ClCompile Include="simple_shortcut_full_impact.cpp" />
+    <ClCompile Include="simple_shortcut_lite_impact.cpp" />
+    <ClCompile Include="simple_shortcut_main_impact.cpp" />
+    <ClCompile Include="simple_shortcut_pane_impact.cpp" />
 
-    <ClCompile Include="simple_shortcut_switcher_view.cpp" />
-    <ClCompile Include="simple_shortcut_toggle_view.cpp" />
-    <ClCompile Include="simple_shortcut_top_view.cpp" />
-    <ClCompile Include="simple_shortcut_view.cpp" />
+    <ClCompile Include="simple_shortcut_switcher_impact.cpp" />
+    <ClCompile Include="simple_shortcut_toggle_impact.cpp" />
+    <ClCompile Include="simple_shortcut_top_impact.cpp" />
+    <ClCompile Include="simple_shortcut_impact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\aura\m_aura.vcxproj">

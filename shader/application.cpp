@@ -52,12 +52,12 @@ namespace app_simple_shader
 
       set_local_data();
 
-      //puser->will_use_view_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint(FONTSEL_IMPACT);
 
       ::factory::add_factory_item <::app_simple_shader::document >();
       ::factory::add_factory_item <::app_simple_shader::frame >();
       ::factory::add_factory_item <::app_simple_shader::main_frame >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_simple_shader::impact >();
       ::factory::add_factory_item <::app_simple_shader::tab_impact >();
 
@@ -180,10 +180,10 @@ namespace app_simple_shader
 //#endif
 
 
-   __pointer(impact) application::create_simple_shader_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_shader_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 

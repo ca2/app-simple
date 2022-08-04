@@ -109,15 +109,15 @@ namespace app_simple_change_grub_default_entry
 
       //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_impact::on_change_cur_sel();
-      string strId = get_view_id();
+      string strId = get_impact_id();
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-      if (get_view_id() == MENU_IMPACT)
+      if (get_impact_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_impact) pmenuview = get_view_uie();
+         //__pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
 
          //pmenuview->load_xml_menu("matter://simple_menu.xml");
 
@@ -125,12 +125,12 @@ namespace app_simple_change_grub_default_entry
 
          //}
 
-         //hide_all_except({ get_view_id(), ::impact_karaoke });
+         //hide_all_except({ get_impact_id(), ::impact_karaoke });
 
       }
 
 
-      if(get_view_id() == ::impact_simple_change_grub_default_entry)
+      if(get_impact_id() == ::impact_simple_change_grub_default_entry)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -168,7 +168,7 @@ namespace app_simple_change_grub_default_entry
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
+         //::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -187,13 +187,13 @@ namespace app_simple_change_grub_default_entry
          {
          case 1:
 
-            pform = create_view<simple_change_grub_default_entry_001>(pimpactdata);
+            pform = create_impact<simple_change_grub_default_entry_001>(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_view<simple_change_grub_default_entry_002>(pimpactdata);
+            pform = create_impact<simple_change_grub_default_entry_002>(pimpactdata);
 
             break;
 
@@ -223,7 +223,7 @@ namespace app_simple_change_grub_default_entry
    //{
 
    //   if(m_pdocMenu != nullptr
-   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_view(0)
+   //         && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_impact(0)
    //         && ptopic->user_interaction() != nullptr)
    //   {
 
@@ -288,7 +288,7 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_view(0)))
+      if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
          if (ptopic->m_atom == ::id_after_change_text)
