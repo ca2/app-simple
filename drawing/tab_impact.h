@@ -5,14 +5,14 @@ namespace app_simple_drawing
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_DRAWING tab_view :
-      virtual public application_interaction < application, ::user::tab_view >,
+   class CLASS_DECL_APP_SIMPLE_DRAWING tab_impact :
+      virtual public application_interaction < application, ::user::tab_impact >,
       virtual public ::user::form_callback
    {
    public:
 
 
-      ::user::split_view *                            m_ptopviewLast;
+      ::user::split_impact *                            m_ptopviewLast;
       __reference(::app_simple_drawing::impact)       m_pimpactDrawing;
       string                                          m_strTopicTitle;
 
@@ -20,8 +20,8 @@ namespace app_simple_drawing
       __pointer(::user::document)               m_pdocMenu;
 
 
-      tab_view();
-      ~tab_view() override;
+      tab_impact();
+      ~tab_impact() override;
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;

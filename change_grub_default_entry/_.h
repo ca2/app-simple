@@ -27,7 +27,7 @@ namespace app_simple_change_grub_default_entry
    class main_impact;
    class document;
    class impact;
-   class tab_view;
+   class tab_impact;
 
 } // namespace flag
 
