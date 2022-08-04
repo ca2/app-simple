@@ -2,7 +2,7 @@
 #if !BROAD_PRECOMPILED_HEADER
 #include "_library.h"
 #endif
-#include "base/user/user/_user.h"
+#include "base/user/user/_component.h"
 #include "aura/update.h"
 
 

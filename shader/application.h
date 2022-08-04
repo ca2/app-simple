@@ -20,7 +20,7 @@ namespace app_simple_shader
       //bool                                   m_bMultiverseChat;
 
       //::user::document *                     m_pdocMenu;
-      //::user::plain_edit_view *              m_prollfps;
+      //::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleShaderMain;
       tab_impact *                             m_ptabimpact;
 
