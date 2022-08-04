@@ -166,7 +166,7 @@ namespace app_simple_shortcut
 
       m_pbuttonClear->set_window_text("Clear");
 
-      m_pbuttonSend->set_window_text("Preview");
+      m_pbuttonSend->set_window_text("Thumbnail");
 
    }
 
@@ -336,7 +336,7 @@ namespace app_simple_shortcut
 
                papp->data_set("last_folder", strText);
 
-               m_pbuttonSend->set_window_text("Preview");
+               m_pbuttonSend->set_window_text("Thumbnail");
 
             }
             else if (ptopic->m_puserelement->m_atom == "edit_source")
@@ -357,7 +357,7 @@ namespace app_simple_shortcut
 
                papp->data_set("last_source", strText);
 
-               m_pbuttonSend->set_window_text("Preview");
+               m_pbuttonSend->set_window_text("Thumbnail");
 
             }
             else if (ptopic->m_puserelement->m_atom == "edit_target")
@@ -378,7 +378,7 @@ namespace app_simple_shortcut
 
                papp->data_set("last_target", strText);
 
-               m_pbuttonSend->set_window_text("Preview");
+               m_pbuttonSend->set_window_text("Thumbnail");
 
             }
 
@@ -440,7 +440,7 @@ namespace app_simple_shortcut
 
       m_pbuttonSend->get_window_text(strSend);
 
-      bool bPreview = strSend == "Preview";
+      bool bThumbnail = strSend == "Thumbnail";
 
       string strFolder;
 
@@ -460,7 +460,7 @@ namespace app_simple_shortcut
       strMessage.format("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
          strSource.c_str(), strFolder.c_str(), strTarget.c_str());
 
-      string strAction = get_windows_file_action(strTarget, strFolder, strSource, bPreview);
+      string strAction = get_windows_file_action(strTarget, strFolder, strSource, bThumbnail);
 
       strMessage += strAction;
 
@@ -468,7 +468,7 @@ namespace app_simple_shortcut
 
       m_pstillReceiver->post_redraw();
 
-      if (bPreview)
+      if (bThumbnail)
       {
 
          m_pbuttonSend->set_window_text("Replace");
@@ -482,7 +482,7 @@ namespace app_simple_shortcut
    }
 
    
-   string form_001::get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bPreview)
+   string form_001::get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bThumbnail)
    {
 
       file::listing listing;
@@ -538,7 +538,7 @@ namespace app_simple_shortcut
 
             strAction += (!bIs ? "xxx " : "") + path + ": " + pathNewTarget + " <== " + pathLinkTarget + "\n";
 
-            if (!bIsDirTarget && !bPreview)
+            if (!bIsDirTarget && !bThumbnail)
             {
 
                m_pcontext->m_papexcontext->os_context()->edit_link_target(pathNewTarget, path);
@@ -554,7 +554,7 @@ namespace app_simple_shortcut
 
             strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewFolder + " <== " + strLinkFolder + "\n";
 
-            if (!bIsDirTarget && !bPreview)
+            if (!bIsDirTarget && !bThumbnail)
             {
 
                m_pcontext->m_papexcontext->os_context()->edit_link_folder(strNewFolder, path);
@@ -570,7 +570,7 @@ namespace app_simple_shortcut
 
             strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewIconLocation + " <== " + strIconLocation + "\n";
 
-            if (!bIsDirTarget && !bPreview)
+            if (!bIsDirTarget && !bThumbnail)
             {
 
                m_pcontext->m_papexcontext->os_context()->edit_link_icon(strNewIconLocation, iIcon, path);

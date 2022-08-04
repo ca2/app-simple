@@ -46,7 +46,7 @@ namespace app_simple_shortcut
 
       virtual void handle(::topic * ptopic, ::context * pcontext) override;
 
-      virtual string get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bPreview);
+      virtual string get_windows_file_action(const string & strTarget, const ::string & strFolder, const string & strSource, bool bThumbnail);
 
 
    };
