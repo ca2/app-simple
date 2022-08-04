@@ -78,13 +78,13 @@ namespace app_simple_drawing
 
       ::user::tab_impact::on_change_cur_sel();
 
-      string strId = get_view_id();
+      string strId = get_impact_id();
 
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-      string strImpactId = get_view_id().to_string();
+      string strImpactId = get_impact_id().to_string();
 
       if(::str().begins(strImpactId, "drawing"))
       {
@@ -129,7 +129,7 @@ namespace app_simple_drawing
       case MENU_IMPACT:
       {
 
-         //::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
+         //::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -140,7 +140,7 @@ namespace app_simple_drawing
       if(::str().begins_eat_ci(strId, "drawing"))
       {
 
-         auto pimpact = get_app()->create_simple_drawing_view(this, pimpactdata);
+         auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 

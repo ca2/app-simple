@@ -128,16 +128,16 @@ namespace app_simple_shader
 
       ::user::tab_impact::on_change_cur_sel();
 
-      string strId = get_view_id();
+      string strId = get_impact_id();
 
       string_array stra;
 
       stra.explode("->:<-",strId);
 
-//      if (get_view_id() == MENU_IMPACT)
+//      if (get_impact_id() == MENU_IMPACT)
 //      {
 //
-//         __pointer(::user::menu_list_impact) pmenuview = get_view_uie();
+//         __pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
 //
 //         pmenuview->destroy_menu();
 //
@@ -190,7 +190,7 @@ namespace app_simple_shader
       case MENU_IMPACT:
       {
 
-         ::user::impact::create_view < ::user::menu_list_impact >(pimpactdata);
+         ::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
 
       }
       break;
@@ -203,7 +203,7 @@ namespace app_simple_shader
 
          string strShaderPath = strId;
 
-         auto pimpact = m_papp->create_simple_shader_view(this, pimpactdata);
+         auto pimpact = m_papp->create_simple_shader_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 

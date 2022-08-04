@@ -17,7 +17,7 @@ namespace app_simple_form
 //      ON_WM_RBUTTONUP
 //      {
 //         //auto pmouse = pmessage->m_union.m_pmouse;
-//         //::karaoke::lyric_view_lines & lyriclines = GetLyricLines();
+//         //::karaoke::lyric_impact_lines & lyriclines = GetLyricLines();
 //         //index iLine;
 //         //index iToken;
 //         //strsize iChar;

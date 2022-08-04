@@ -41,7 +41,7 @@ namespace app_simple_drawing
    }
 
 
-   ::type application::get_pane_view_type() const
+   ::type application::get_pane_impact_type() const
    {
 
       return __type(tab_impact);
@@ -97,7 +97,7 @@ namespace app_simple_drawing
       ::factory::add_factory_item <::app_simple_drawing::document >();
       ::factory::add_factory_item <::app_simple_drawing::frame >();
       ::factory::add_factory_item <::app_simple_drawing::main_frame >();
-      ::factory::add_factory_item <::user::button_view >();
+      ::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_simple_drawing::impact >();
       ::factory::add_factory_item <::app_simple_drawing::tab_impact >();
 
@@ -118,7 +118,7 @@ namespace app_simple_drawing
                                "main",
                                __type(document),
                                __type(main_frame),
-                               get_pane_view_type()));
+                               get_pane_impact_type()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
 
@@ -228,10 +228,10 @@ namespace app_simple_drawing
 #endif
 
 
-   __pointer(impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 
