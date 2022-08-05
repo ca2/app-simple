@@ -207,7 +207,7 @@ namespace app_simple_shader
 
          pimpact->m_atom = pimpactdata->m_atom;
 
-         pimpact->m_iView = (int) pimpactdata->m_iIndex;
+         pimpact->m_iImpact = (int) pimpactdata->m_iIndex;
 
          __pointer(app_simple_shader::impact) pviewShader = pimpact;
 

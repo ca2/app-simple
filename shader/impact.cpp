@@ -15,7 +15,7 @@ namespace app_simple_shader
    impact::impact()
    {
 
-      m_iView = -1;
+      m_iImpact = -1;
 
       m_flagNonClient.erase(non_client_background);
 

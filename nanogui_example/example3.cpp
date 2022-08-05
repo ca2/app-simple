@@ -121,7 +121,7 @@ namespace app_simple_nanogui_example
 //#if defined(NANOGUI_USE_OPENGL) || defined(NANOGUI_USE_GLES)
 //    int width, height;
 //    glfwGetFramebufferSize(window, &width, &height);
-//    glViewport(0, 0, width, height);
+//    glContext(0, 0, width, height);
 //    glfwSwapInterval(0);
 //    glfwSwapBuffers(window);
 //#endif

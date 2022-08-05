@@ -111,9 +111,9 @@ namespace app_simple_networking_application
 
       }
 
-      string strViewId = get_impact_id().to_string();
+      string strImpactId = get_impact_id().to_string();
 
-      if(::str().begins(strViewId, "drawing"))
+      if(::str().begins(strImpactId, "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
