@@ -11,7 +11,7 @@ namespace app_simple_shader
    public:
 
 
-      int                                 m_iView;
+      int                                 m_iImpact;
       __pointer(::app_shader::render)     m_prender;
       bool                                m_bSaveFrame;
 

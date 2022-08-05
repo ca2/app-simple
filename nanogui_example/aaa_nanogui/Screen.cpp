@@ -262,7 +262,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   glfwGetFramebufferSize(m_glfw_window, &m_fbsize[0], &m_fbsize[1]);
 //
 //#if defined(NANOGUI_USE_OPENGL) || defined(NANOGUI_USE_GLES)
-//   CHK(glViewport(0, 0, m_fbsize[0], m_fbsize[1]));
+//   CHK(glContext(0, 0, m_fbsize[0], m_fbsize[1]));
 //   CHK(glClearColor(m_background[0], m_background[1],
 //      m_background[2], m_background[3]));
 //   CHK(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT |
@@ -591,7 +591,7 @@ Screen::~Screen() {
 //#endif
 //
 //#if defined(NANOGUI_USE_OPENGL) || defined(NANOGUI_USE_GLES)
-//   CHK(glViewport(0, 0, m_fbsize[0], m_fbsize[1]));
+//   CHK(glContext(0, 0, m_fbsize[0], m_fbsize[1]));
 //#endif
 //}
 //
@@ -632,7 +632,7 @@ Screen::~Screen() {
 //void Screen::nvg_flush() {
 //   NVGparams * params = nvgInternalParams(m_nvg_context);
 //   params->renderFlush(params->userPtr);
-//   params->renderViewport(params->userPtr, m_size[0], m_size[1], m_pixel_ratio);
+//   params->renderContext(params->userPtr, m_size[0], m_size[1], m_pixel_ratio);
 //}
 //
 //void Screen::draw_widgets() {

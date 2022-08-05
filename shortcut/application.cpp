@@ -15,7 +15,7 @@ namespace app_simple_shortcut
    {
 
       m_ptemplateBeatMapperMain  = NULL;
-      m_ptemplateBeatMapperView  = NULL;
+      m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-simple/shortcut";
       m_strBaseSupportId         = "app-simple/shortcut";
@@ -96,7 +96,7 @@ namespace app_simple_shortcut
                           __type(document),
                           __type(frame),
                           __type(main_impact)));
-      m_ptemplateBeatMapperView = pdoctemplate;
+      m_ptemplateBeatMapperImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
@@ -160,7 +160,7 @@ namespace app_simple_shortcut
       if (pcreate->m_payloadFile.has_char())
       {
 
-         m_ptemplateBeatMapperView->do_request(pcreate);
+         m_ptemplateBeatMapperImpact->do_request(pcreate);
 
       }
 
