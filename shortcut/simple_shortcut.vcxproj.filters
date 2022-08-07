@@ -34,7 +34,7 @@
     <ClCompile Include="impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tab_view.cpp">
+    <ClCompile Include="tab_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="form.cpp">
@@ -81,7 +81,7 @@
     <ClInclude Include="simple_shortcut_002.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tab_view.h">
+    <ClInclude Include="tab_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="form.h">
@@ -98,7 +98,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
+    <ResourceCompile Include="deployment.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="deps.txt">

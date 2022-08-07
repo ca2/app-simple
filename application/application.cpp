@@ -1,5 +1,8 @@
 #include "framework.h"
-#include "base/user/user/_user.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
+#include "base/user/user/_component.h"
 #include "aura/update.h"
 
 
@@ -106,7 +109,7 @@ namespace app_simple_application
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

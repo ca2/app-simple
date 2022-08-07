@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/user/simple/_simple.h"
+#include "base/user/simple/_component.h"
 #include "base/user/menu/_menu.h"
 
 
@@ -13,7 +13,7 @@
 #include "main_frame.h"
 
 
-#include "tab_view.h"
+#include "tab_impact.h"
 
 
 

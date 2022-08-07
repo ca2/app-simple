@@ -1178,7 +1178,7 @@
     <ClCompile Include="main_frame.cpp" />
     <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="simple_change_grub_default_entry.cpp" />
-    <ClCompile Include="tab_view.cpp" />
+    <ClCompile Include="tab_impact.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="_.cpp" />
     <ClCompile Include="_factory.cpp" />
@@ -1192,14 +1192,14 @@
     <ClInclude Include="frame.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
-    <ClInclude Include="tab_view.h" />
+    <ClInclude Include="tab_impact.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="_library.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
+    <ResourceCompile Include="deployment.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\source\app\acme\acme.vcxproj">

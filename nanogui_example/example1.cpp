@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "example1.h"
 #include "nanogui/Icons.h"
 #include "nanogui/ToolButton.h"
@@ -159,19 +162,19 @@ namespace app_simple_nanogui_example
                //   m_images.emplace_back(tex, std::move(texture_data));
                //}
       
-               ImageView * image_view = new ImageView(image_window);
+               ImageImpact * image_impact = new ImageImpact(image_window);
                //if (!m_images.empty())
-                 // image_view->set_image(m_images[0].first);
-               image_view->center();
+                 // image_impact->set_image(m_images[0].first);
+               image_impact->center();
                m_current_image = 0;
       
-               img_panel->set_callback([this, image_view, img_panel](int i) {
+               img_panel->set_callback([this, image_impact, img_panel](int i) {
                   //std::cout << "Selected item " << i << std::endl;
-                  image_view->set_image(img_panel->_get_image(i));
+                  image_impact->set_image(img_panel->_get_image(i));
                   m_current_image = i;
                   });
       
-               //image_view->set_pixel_callback(
+               //image_impact->set_pixel_callback(
                //   [this](const Vector2i & index, char ** out, size_t size) {
                //      const Texture * texture = m_images[m_current_image].first.get();
                //      uint8_t * data = m_images[m_current_image].second.get();
@@ -187,9 +190,9 @@ namespace app_simple_nanogui_example
                tools->set_layout(new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
                b = new Button(tools, "Open");
-               b->set_callback([this,image_view] {
+               b->set_callback([this,image_impact] {
                   
-                  //m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_view]()
+                  //m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_impact]()
                     //         {
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
@@ -197,13 +200,13 @@ namespace app_simple_nanogui_example
                               { {"png", "Portable Network Graphics"},
                      {"jpeg", "JPEG file"},
                      {"jpg", "JPG file"},{"txt", "Text file"} },
-                              [this, image_view](const ::std::string & str)
+                              [this, image_impact](const ::std::string & str)
                               {
                                  
                                  if(str.size() > 0)
                                  {
                          
-                                    image_view->set_image(___load_image(m_puserinteraction, str.c_str()));
+                                    image_impact->set_image(___load_image(m_puserinteraction, str.c_str()));
                       
                                  }
 
@@ -214,7 +217,7 @@ namespace app_simple_nanogui_example
                  // });
 
                b = new Button(tools, "Save");
-               b->set_callback([this,image_view]
+               b->set_callback([this,image_impact]
                {
                   
                   auto pwindow = m_puserinteraction->window();
@@ -222,13 +225,13 @@ namespace app_simple_nanogui_example
                   pick_single_file(
                      poswindow,
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} },
-                     [this, image_view](const ::std::string & str)
+                     [this, image_impact](const ::std::string & str)
                      {
 
                         if(str.size() > 0)
                         {
                      
-                           ___save_image(m_puserinteraction, str.c_str(), image_view->image());
+                           ___save_image(m_puserinteraction, str.c_str(), image_impact->image());
                         
                         }
 

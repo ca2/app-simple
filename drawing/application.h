@@ -23,9 +23,9 @@ namespace app_simple_drawing
       bool                                   m_bMultiverseChat;
 
       ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
+      ::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
-      tab_view *                             m_ptabimpact;
+      tab_impact *                             m_ptabimpact;
 
       application();
       ~application() override;
@@ -41,12 +41,12 @@ namespace app_simple_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(impact) create_simple_drawing_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual __pointer(impact) create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
 
 
-      virtual ::type get_pane_view_type() const;
+      virtual ::type get_pane_impact_type() const;
 
 
 

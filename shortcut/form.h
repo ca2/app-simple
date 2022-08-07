@@ -6,12 +6,12 @@ namespace app_simple_shortcut
 
 
    class CLASS_DECL_APP_SIMPLE_SHORTCUT form :
-      virtual public ::user::form_view
+      virtual public ::user::form_impact
    {
    public:
 
 
-      tab_view *                          m_ptabimpact;
+      tab_impact *                          m_ptabimpact;
       string                              m_strFont;
       int                                 m_iId;
 

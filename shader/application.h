@@ -20,9 +20,9 @@ namespace app_simple_shader
       //bool                                   m_bMultiverseChat;
 
       //::user::document *                     m_pdocMenu;
-      //::user::plain_edit_view *              m_prollfps;
+      //::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateSimpleShaderMain;
-      tab_view *                             m_ptabimpact;
+      tab_impact *                             m_ptabimpact;
 
       string                                 m_strMainTitle;
 
@@ -41,7 +41,7 @@ namespace app_simple_shader
 //      virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 //#endif
 
-      virtual __pointer(impact) create_simple_shader_view(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual __pointer(impact) create_simple_shader_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
       //virtual string get_main_title() const;

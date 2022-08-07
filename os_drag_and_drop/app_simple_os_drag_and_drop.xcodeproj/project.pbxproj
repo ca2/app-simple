@@ -10,8 +10,8 @@
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9A248A3424534C4400F23D28 /* simple_os_drag_and_drop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A248A3324534C4400F23D28 /* simple_os_drag_and_drop.cpp */; };
 		9A258B7724DA558F0013F50E /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B7624DA558F0013F50E /* _.h */; };
-		9A258B8624DA56570013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B8424DA56570013F50E /* tab_view.h */; };
-		9A258B8724DA56570013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B8524DA56570013F50E /* tab_view.cpp */; };
+		9A258B8624DA56570013F50E /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B8424DA56570013F50E /* tab_impact.h */; };
+		9A258B8724DA56570013F50E /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B8524DA56570013F50E /* tab_impact.cpp */; };
 		9A2E62B825258F970001CC7E /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2E62B725258F970001CC7E /* libaqua.dylib */; };
 		9A415C032473938100EF2BCD /* simple_os_drag_and_drop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A248A3324534C4400F23D28 /* simple_os_drag_and_drop.cpp */; };
 		9A415C042473938100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA6242222BA43570090BD40 /* application.cpp */; };
@@ -84,8 +84,8 @@
 /* Begin PBXFileReference section */
 		9A248A3324534C4400F23D28 /* simple_os_drag_and_drop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = simple_os_drag_and_drop.cpp; sourceTree = "<group>"; };
 		9A258B7624DA558F0013F50E /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
-		9A258B8424DA56570013F50E /* tab_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_view.h; sourceTree = "<group>"; };
-		9A258B8524DA56570013F50E /* tab_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_view.cpp; sourceTree = "<group>"; };
+		9A258B8424DA56570013F50E /* tab_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_impact.h; sourceTree = "<group>"; };
+		9A258B8524DA56570013F50E /* tab_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_impact.cpp; sourceTree = "<group>"; };
 		9A2E62B725258F970001CC7E /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D9229251AF35E00DE81AE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D922B251AF35E00DE81AE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,8 +242,8 @@
 				9AA6242322BA43570090BD40 /* main_impact.h */,
 				9AA6241522BA43560090BD40 /* simple_drawing_simple_drawing.h */,
 				9A248A3324534C4400F23D28 /* simple_os_drag_and_drop.cpp */,
-				9A258B8524DA56570013F50E /* tab_view.cpp */,
-				9A258B8424DA56570013F50E /* tab_view.h */,
+				9A258B8524DA56570013F50E /* tab_impact.cpp */,
+				9A258B8424DA56570013F50E /* tab_impact.h */,
 				9AA6240622BA43550090BD40 /* impact.cpp */,
 				9AA6242822BA43570090BD40 /* impact.h */,
 			);
@@ -262,7 +262,7 @@
 				9AA624F222BA435C0090BD40 /* simple_drawing_simple_drawing.h in Headers */,
 				9AA624F822BA435C0090BD40 /* impact.h in Headers */,
 				9AA624E522BA435C0090BD40 /* main_frame.h in Headers */,
-				9A258B8624DA56570013F50E /* tab_view.h in Headers */,
+				9A258B8624DA56570013F50E /* tab_impact.h in Headers */,
 				9AEB75DE16F78E600085103B /* framework.h in Headers */,
 				9AA624F522BA435C0090BD40 /* main_impact.h in Headers */,
 				9AA6250822BA435C0090BD40 /* document.h in Headers */,
@@ -418,7 +418,7 @@
 				9AA624E922BA435C0090BD40 /* main_frame.cpp in Sources */,
 				9AA624FA22BA435C0090BD40 /* frame.cpp in Sources */,
 				9AA624EA22BA435C0090BD40 /* impact.cpp in Sources */,
-				9A258B8724DA56570013F50E /* tab_view.cpp in Sources */,
+				9A258B8724DA56570013F50E /* tab_impact.cpp in Sources */,
 				9AA624E722BA435C0090BD40 /* main_impact.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 				9AA6250622BA435C0090BD40 /* document.cpp in Sources */,

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A258B7C24DA55F40013F50E /* tab_view.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B7A24DA55F40013F50E /* tab_view.h */; };
-		9A258B7D24DA55F40013F50E /* tab_view.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B7B24DA55F40013F50E /* tab_view.cpp */; };
+		9A258B7C24DA55F40013F50E /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A258B7A24DA55F40013F50E /* tab_impact.h */; };
+		9A258B7D24DA55F40013F50E /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258B7B24DA55F40013F50E /* tab_impact.cpp */; };
 		9A415C29247393C100EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C6240C09F00097E249 /* application.cpp */; };
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
@@ -91,8 +91,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A258B7A24DA55F40013F50E /* tab_view.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_view.h; sourceTree = "<group>"; };
-		9A258B7B24DA55F40013F50E /* tab_view.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_view.cpp; sourceTree = "<group>"; };
+		9A258B7A24DA55F40013F50E /* tab_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_impact.h; sourceTree = "<group>"; };
+		9A258B7B24DA55F40013F50E /* tab_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_impact.cpp; sourceTree = "<group>"; };
 		9A258B8D24DA574D0013F50E /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = "<group>"; };
 		9A449BB524775E110002A827 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		9A449BB624775E110002A827 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 				9AEB75BF16F78E600085103B /* framework.h */,
 				9A8F90C3240C09F00097E249 /* main_frame.cpp */,
 				9A8F90C7240C09F00097E249 /* main_frame.h */,
-				9A258B7B24DA55F40013F50E /* tab_view.cpp */,
-				9A258B7A24DA55F40013F50E /* tab_view.h */,
+				9A258B7B24DA55F40013F50E /* tab_impact.cpp */,
+				9A258B7A24DA55F40013F50E /* tab_impact.h */,
 				9A8F90C2240C09F00097E249 /* impact.cpp */,
 				9A8F90C8240C09F10097E249 /* impact.h */,
 			);
@@ -242,7 +242,7 @@
 				9A8F90D4240C09F10097E249 /* impact.h in Headers */,
 				9A8F90D6240C09F10097E249 /* application.h in Headers */,
 				9A7F3FA3274D6EB200D914CC /* _app_simple_shader.h in Headers */,
-				9A258B7C24DA55F40013F50E /* tab_view.h in Headers */,
+				9A258B7C24DA55F40013F50E /* tab_impact.h in Headers */,
 				9A8F90D3240C09F10097E249 /* main_frame.h in Headers */,
 				9AEB75DE16F78E600085103B /* framework.h in Headers */,
 				9A8F90D1240C09F10097E249 /* document.h in Headers */,
@@ -403,7 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A449BC324775E120002A827 /* frame.cpp in Sources */,
-				9A258B7D24DA55F40013F50E /* tab_view.cpp in Sources */,
+				9A258B7D24DA55F40013F50E /* tab_impact.cpp in Sources */,
 				9A8F90CF240C09F10097E249 /* main_frame.cpp in Sources */,
 				9AE12EF82661F293009F476A /* _.cpp in Sources */,
 				9A8F90CE240C09F10097E249 /* impact.cpp in Sources */,

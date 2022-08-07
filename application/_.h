@@ -23,7 +23,7 @@ namespace app_simple_application
 } // namespace flag
 
 
-#include "application.h"
+
 
 
 

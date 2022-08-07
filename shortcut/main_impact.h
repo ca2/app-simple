@@ -6,12 +6,12 @@ namespace app_simple_shortcut
 
 
    class CLASS_DECL_APP_SIMPLE_SHORTCUT main_impact:
-      virtual public ::app_consumer < application, ::user::split_view >
+      virtual public ::app_consumer < application, ::user::split_impact >
    {
    public:
 
 
-      //::userex::top_view *    m_ptopview;
+      //::userex::top_impact *    m_ptopview;
       impact *                  m_pimpact;
 
 

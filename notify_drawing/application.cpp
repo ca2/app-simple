@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 
 
 namespace app_simple_notify_drawing
@@ -46,7 +49,7 @@ namespace app_simple_notify_drawing
                                "main",
                                __type(app_simple_drawing::document),
                                __type(main_frame),
-                               __type(app_simple_drawing::tab_view)));
+                               __type(app_simple_drawing::tab_impact)));
       m_ptemplateNotifyDrawingMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
@@ -58,7 +61,7 @@ namespace app_simple_notify_drawing
 //                          __type(simple_drawing::frame),
 //                          __type(simple_drawing::main_impact)));
 //
-//      m_ptemplateNotifyDrawingView = pdoctemplate;
+//      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //
 //      add_document_template(pdoctemplate);
 
@@ -121,7 +124,7 @@ namespace app_simple_notify_drawing
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < app_simple_drawing::document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < app_simple_drawing::document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
@@ -162,10 +165,10 @@ namespace app_simple_notify_drawing
 #endif
 
 
-   __pointer(app_simple_drawing::impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
+   __pointer(app_simple_drawing::impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 
