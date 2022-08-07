@@ -4,7 +4,7 @@
 #endif
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_draw2d.h"
+#include "aura/graphics/draw2d/_component.h"
 
 
 CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs

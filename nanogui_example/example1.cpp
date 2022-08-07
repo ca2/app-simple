@@ -162,7 +162,7 @@ namespace app_simple_nanogui_example
                //   m_images.emplace_back(tex, std::move(texture_data));
                //}
       
-               ImageView * image_impact = new ImageView(image_window);
+               ImageImpact * image_impact = new ImageImpact(image_window);
                //if (!m_images.empty())
                  // image_impact->set_image(m_images[0].first);
                image_impact->center();
