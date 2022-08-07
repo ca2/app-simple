@@ -2,13 +2,13 @@
 
 
 #include "app/shader/_library.h"
-#include "core/user/simple/_simple.h"
+#include "core/user/simple/_component.h"
 
 
 namespace user
 {
 
-   typedef ::user::show < ::user::button > button_view;
+   typedef ::user::show < ::user::button > button_impact;
 
 } // namespace user
 
@@ -19,7 +19,7 @@ namespace user
 #include "frame.h"
 #include "main_frame.h"
 
-#include "tab_view.h"
+#include "tab_impact.h"
 
 
 #include "application.h"

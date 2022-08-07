@@ -15,9 +15,9 @@ namespace app_simple_shortcut
       bool                                   m_bMultiverseChat;
 
       ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_view *              m_prollfps;
+      ::user::plain_edit_impact *              m_prollfps;
       ::user::single_document_template *     m_ptemplateBeatMapperMain;
-      ::user::single_document_template *     m_ptemplateBeatMapperView;
+      ::user::single_document_template *     m_ptemplateBeatMapperImpact;
 
 
       application();

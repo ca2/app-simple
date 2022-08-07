@@ -1,7 +1,10 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include "aura/id.h"
 #include <math.h>
-#include "aura/graphics/draw2d/_draw2d.h"
+#include "aura/graphics/draw2d/_component.h"
 
 
 CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs

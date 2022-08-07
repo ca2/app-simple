@@ -14,7 +14,7 @@
 namespace user
 {
 
-   typedef ::user::show < ::user::button > button_view;
+   typedef ::user::show < ::user::button > button_impact;
 
 } // namespace user
 
@@ -26,7 +26,7 @@ namespace app_simple_form
    class main_impact;
    class document;
    class impact;
-   class tab_view;
+   class tab_impact;
 
 } // namespace flag
 

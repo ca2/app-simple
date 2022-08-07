@@ -31,7 +31,7 @@
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tab_view.cpp">
+    <ClCompile Include="tab_impact.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="_factory.cpp">
@@ -60,7 +60,7 @@
     <ClInclude Include="application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tab_view.h">
+    <ClInclude Include="tab_impact.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="_library.h">
@@ -68,6 +68,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\..\operating-system\operating-system-windows\version.rc" />
+    <ResourceCompile Include="deployment.rc" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 #include <math.h>
 
 
@@ -133,7 +136,7 @@ namespace app_simple_form
    void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::form_view::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pgraphics);
 
       auto rectClient = get_client_rect();
       

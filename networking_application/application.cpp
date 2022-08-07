@@ -1,4 +1,7 @@
 #include "framework.h"
+#if !BROAD_PRECOMPILED_HEADER
+#include "_library.h"
+#endif
 //#define _APP_ID "app-simple/webserver"
 //#include "aura/application.h"
 //#include "aura/update.h"
@@ -53,10 +56,10 @@ namespace app_simple_networking_application
    }
 
 
-   ::type application::get_pane_view_type() const
+   ::type application::get_pane_impact_type() const
    {
 
-      return __type(tab_view);
+      return __type(tab_impact);
 
    }
 
@@ -78,7 +81,7 @@ namespace app_simple_networking_application
       ::factory::add_factory_item <::app_simple_networking_application::frame >();
       ::factory::add_factory_item <::app_simple_networking_application::main_frame >();
       ::factory::add_factory_item <::app_simple_networking_application::impact >();
-      ::factory::add_factory_item <::app_simple_networking_application::tab_view >();
+      ::factory::add_factory_item <::app_simple_networking_application::tab_impact >();
 
       default_toggle_check_handling("simple_checkbox");
 
@@ -97,7 +100,7 @@ namespace app_simple_networking_application
                                "main",
                                __type(document),
                                __type(main_frame),
-                               get_pane_view_type()));
+                               get_pane_impact_type()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
 
@@ -166,7 +169,7 @@ namespace app_simple_networking_application
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_view >()->top_level_frame()->design_window_maximize();
+         pcreate->payload("document").cast < document >()->get_type_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
@@ -205,10 +208,10 @@ namespace app_simple_networking_application
 #endif
 
 
-   __pointer(impact) application::create_simple_drawing_view(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   __pointer(impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
-      return pimpactParent->create_view < impact >(pimpactdata);
+      return pimpactParent->create_impact < impact >(pimpactdata);
 
    }
 
