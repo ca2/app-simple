@@ -4,7 +4,7 @@
 #endif
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_draw2d.h"
+#include "aura/graphics/draw2d/_component.h"
 #include "acme/platform/hyperlink.h"
 
 
