@@ -7,7 +7,7 @@
 #include "nanogui/ToolButton.h"
 #include "nanogui/Graph.h"
 #include "nanogui/ColorPicker.h"
-#include "nanogui/nano2d/_nano2d.h"
+#include "nanogui/nano2d/_component.h"
 
 namespace app_simple_nanogui_example
 {
