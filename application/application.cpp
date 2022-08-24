@@ -3,7 +3,7 @@
 #include "_library.h"
 #endif
 #include "base/user/user/_component.h"
-#include "aura/update.h"
+//#include "aura/update.h"
 
 
 namespace app_simple_application
