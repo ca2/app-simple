@@ -2,7 +2,7 @@
 #if !BROAD_PRECOMPILED_HEADER
 #include "_library.h"
 #endif
-//#include "aura/update.h"
+#include "acme/constant/impact.h"
 #include "base/user/user/tab_pane.h"
 
 
@@ -128,7 +128,6 @@ namespace app_simple_change_grub_default_entry
          //hide_all_except({ get_impact_id(), ::impact_karaoke });
 
       }
-
 
       if(get_impact_id() == ::impact_simple_change_grub_default_entry)
       {
