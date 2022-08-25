@@ -18,7 +18,7 @@ namespace app_simple_nanogui_example
    {
 
       //m_pexampleapplication = nullptr;
-      m_flagNonClient -= non_client_background;
+      m_flagNonClient -= e_non_client_background;
       m_bClickDefaultMouseHandling = true;
       m_bEditDefaultHandling = true;
 
