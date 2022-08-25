@@ -20,7 +20,7 @@ namespace app_simple_application
    impact::impact()
    {
 
-      m_flagNonClient -= non_client_background;
+      m_flagNonClient -= e_non_client_background;
       m_iSequence = 0;
 
    }
