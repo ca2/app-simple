@@ -1,12 +1,15 @@
 #pragma once
 
 
+#include "form.h"
+
+
 namespace app_simple_change_grub_default_entry
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM simple_change_grub_default_entry_001 :
-      virtual public simple_change_grub_default_entry
+   class CLASS_DECL_APP_SIMPLE_FORM form_001 :
+      virtual public form
    {
    public:
 
@@ -18,8 +21,8 @@ namespace app_simple_change_grub_default_entry
       __composite(::user::list_box)          m_plistbox;
 
 
-      simple_change_grub_default_entry_001();
-      virtual ~simple_change_grub_default_entry_001();
+      form_001();
+      ~form_001() override;
 
       void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;

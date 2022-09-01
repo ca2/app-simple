@@ -1,8 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
+#include "form_001.h"
+#include "application.h"
+#include "aura/message/user.h"
+#include "aura/user/user/button.h"
+#include "aura/user/user/still.h"
+#include "aura/user/user/plain_edit.h"
+#include "axis/user/user/list_box.h"
 
 
 ::e_status grub_set_variable(memory& memoryGrubEnv, const ::block& blockVariablePrefix, const block& blockValue);
@@ -12,30 +15,30 @@ namespace app_simple_change_grub_default_entry
 {
 
 
-   simple_change_grub_default_entry_001::simple_change_grub_default_entry_001()
+   form_001::form_001()
    {
 
    }
 
 
-   simple_change_grub_default_entry_001::~simple_change_grub_default_entry_001()
+   form_001::~form_001()
    {
 
    }
 
 
-   void simple_change_grub_default_entry_001::assert_ok() const
+   void form_001::assert_ok() const
    {
 
-      simple_change_grub_default_entry::assert_ok();
+      form::assert_ok();
 
    }
 
 
-   void simple_change_grub_default_entry_001::dump(dump_context & dumpcontext) const
+   void form_001::dump(dump_context & dumpcontext) const
    {
 
-      simple_change_grub_default_entry::dump(dumpcontext);
+      form::dump(dumpcontext);
 
    }
 
@@ -43,7 +46,7 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
 
-   int64_t simple_change_grub_default_entry_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -51,7 +54,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   int64_t simple_change_grub_default_entry_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -62,17 +65,17 @@ namespace app_simple_change_grub_default_entry
 #endif
 
 
-   void simple_change_grub_default_entry_001::install_message_routing(::channel * psender)
+   void form_001::install_message_routing(::channel * psender)
    {
 
-      simple_change_grub_default_entry::install_message_routing(psender);
+      form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_change_grub_default_entry_001::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
 
    }
 
 
-   void simple_change_grub_default_entry_001::on_message_create(::message::message * pmessage)
+   void form_001::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -125,7 +128,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_001::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::form_impact::on_layout(pgraphics);
@@ -193,7 +196,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_001::handle(::topic * ptopic, ::context * pcontext)
+   void form_001::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (ptopic->m_atom == ::id_after_change_cur_sel)
@@ -262,7 +265,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   ::file::path simple_change_grub_default_entry_001::get_grub_folder_path()
+   ::file::path form_001::get_grub_folder_path()
    {
 
       string strGrubFolderPath;
@@ -274,7 +277,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   ::file::path simple_change_grub_default_entry_001::get_grubenv_path(const ::file::path& pathGrubFolder)
+   ::file::path form_001::get_grubenv_path(const ::file::path& pathGrubFolder)
    {
 
       auto pathGrubEnv = pathGrubFolder / "grubenv";
@@ -284,7 +287,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   ::file::path simple_change_grub_default_entry_001::get_grub_cfg_path(const ::file::path& pathGrubFolder)
+   ::file::path form_001::get_grub_cfg_path(const ::file::path& pathGrubFolder)
    {
 
       auto pathGrubEnv = pathGrubFolder / "grub.cfg";
@@ -294,7 +297,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   ::e_status simple_change_grub_default_entry_001::update_grub_entry_list(const ::file::path& pathGrubFolder)
+   ::e_status form_001::update_grub_entry_list(const ::file::path& pathGrubFolder)
    {
 
       auto pcontext = m_pcontext->m_papexcontext;
@@ -402,7 +405,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   string simple_change_grub_default_entry_001::get_grub_saved_entry(const ::file::path& pathGrubFolder)
+   string form_001::get_grub_saved_entry(const ::file::path& pathGrubFolder)
    {
 
       string_array straLines;
@@ -431,7 +434,7 @@ namespace app_simple_change_grub_default_entry
    }
 
    
-   ::e_status simple_change_grub_default_entry_001::set_grub_saved_entry(const ::file::path& pathGrubFolder, const string& strSavedEntry)
+   ::e_status form_001::set_grub_saved_entry(const ::file::path& pathGrubFolder, const string& strSavedEntry)
    {
 
       if (strSavedEntry == get_grub_saved_entry(pathGrubFolder))

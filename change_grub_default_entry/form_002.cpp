@@ -1,39 +1,40 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
+#include "form_002.h"
+#include "aura/message/user.h"
+#include "axis/user/user/combo_box.h"
+#include "aura/user/user/still.h"
+#include "aura/user/user/button.h"
 
 
 namespace app_simple_change_grub_default_entry
 {
 
 
-   simple_change_grub_default_entry_002::simple_change_grub_default_entry_002()
+   form_002::form_002()
    {
 
 
    }
 
 
-   simple_change_grub_default_entry_002::~simple_change_grub_default_entry_002()
+   form_002::~form_002()
    {
 
    }
 
 
-   void simple_change_grub_default_entry_002::assert_ok() const
+   void form_002::assert_ok() const
    {
 
-      simple_change_grub_default_entry::assert_ok();
+      form::assert_ok();
 
    }
 
 
-   void simple_change_grub_default_entry_002::dump(dump_context & dumpcontext) const
+   void form_002::dump(dump_context & dumpcontext) const
    {
 
-      simple_change_grub_default_entry::dump(dumpcontext);
+      form::dump(dumpcontext);
 
    }
 
@@ -41,7 +42,7 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
   
-   int64_t simple_change_grub_default_entry_002::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_002::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -49,7 +50,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   int64_t simple_change_grub_default_entry_002::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_002::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -60,17 +61,17 @@ namespace app_simple_change_grub_default_entry
 #endif
 
 
-   void simple_change_grub_default_entry_002::install_message_routing(::channel * psender)
+   void form_002::install_message_routing(::channel * psender)
    {
 
-      simple_change_grub_default_entry::install_message_routing(psender);
+      form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &simple_change_grub_default_entry_002::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form_002::on_message_create);
 
    }
 
 
-   void simple_change_grub_default_entry_002::on_message_create(::message::message * pmessage)
+   void form_002::on_message_create(::message::message * pmessage)
    {
 
       __pointer(::message::create) pcreate(pmessage);
@@ -123,7 +124,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_002::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_002::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::form_impact::on_layout(pgraphics);
@@ -157,7 +158,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void simple_change_grub_default_entry_002::handle(::topic * ptopic, ::context * pcontext)
+   void form_002::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (ptopic->m_atom == ::id_click)
