@@ -1,7 +1,5 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+
 #include "example1.h"
 #include "nanogui/Icons.h"
 #include "nanogui/ToolButton.h"

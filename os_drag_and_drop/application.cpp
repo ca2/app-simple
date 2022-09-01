@@ -1,10 +1,8 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+
 #include "aura/application.h"
 
-
+IMPLEMENT_APPLICATION(simple_os_drag_and_drop)
 namespace simple_os_drag_and_drop
 {
 

@@ -1,9 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include "aura/graphics/draw2d/_component.h"
-#include <math.h>
+#include "simple_os_drag_and_drop.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/pen.h"
+#include "aura/graphics/draw2d/brush.h"
+#include "aura/graphics/image/context_image.h"
+#include "aura/graphics/write_text/font.h"
+
 
 
 CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs

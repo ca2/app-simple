@@ -1,9 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "tab_impact.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "document.h"
 #include "acme/constant/impact.h"
 #include "base/user/user/tab_pane.h"
+#include "base/platform/application.h"
 
 
 namespace app_simple_change_grub_default_entry
@@ -178,7 +180,7 @@ namespace app_simple_change_grub_default_entry
       if(::str().begins_eat_ci(strId, "form"))
       {
 
-         __pointer(simple_change_grub_default_entry) pform;
+         __pointer(form) pform;
 
          index iId = atoi(strId);
 
@@ -186,13 +188,13 @@ namespace app_simple_change_grub_default_entry
          {
          case 1:
 
-            pform = create_impact<simple_change_grub_default_entry_001>(pimpactdata);
+            pform = create_impact<form_001>(pimpactdata);
 
             break;
 
          case 2:
 
-            pform = create_impact<simple_change_grub_default_entry_002>(pimpactdata);
+            pform = create_impact<form_002>(pimpactdata);
 
             break;
 

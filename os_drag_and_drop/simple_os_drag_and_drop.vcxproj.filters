@@ -74,11 +74,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app_simple_drag_and_drop.def">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="deployment.rc" />
+    <ResourceCompile Include="deployment.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

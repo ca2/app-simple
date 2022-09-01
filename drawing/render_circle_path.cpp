@@ -1,10 +1,12 @@
 // Created by camilo on 2022-03-23 11:55 PM <3ThomasBorregaardSørensen!! (Thomas likes number 5!!)
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "render.h"
+#include "application.h"
 #include <math.h>
-#include "aura/graphics/draw2d/_component.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/brush.h"
+#include "aura/graphics/draw2d/path.h"
+#include "aura/graphics/draw2d/pen.h"
 
 
 CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs

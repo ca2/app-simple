@@ -1,7 +1,5 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "main_frame.h"
 
 
 namespace app_simple_change_grub_default_entry

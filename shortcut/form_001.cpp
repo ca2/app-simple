@@ -1,10 +1,12 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "form_001.h"
+#include "application.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
-#include <math.h>
+#include "aura/message/user.h"
+#include "aura/user/user/still.h"
+#include "aura/user/user/plain_edit.h"
+#include "aura/user/user/button.h"
 
 
 namespace app_simple_shortcut

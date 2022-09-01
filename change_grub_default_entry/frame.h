@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/simple/frame_window.h"
+
+
 namespace app_simple_change_grub_default_entry
 {
 

@@ -1,11 +1,20 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "application.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "document.h"
+#include "tab_impact.h"
+#include "main_impact.h"
+#include "impact.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "aura/user/user/button.h"
+#include "base/user/user/show.h"
+#include "base/user/user/single_document_template.h"
 
 
 #define new ACME_NEW
-
+IMPLEMENT_APPLICATION(app_simple_change_grub_default_entry)
 namespace app_simple_change_grub_default_entry
 {
 
@@ -65,8 +74,8 @@ namespace app_simple_change_grub_default_entry
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::impact >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_impact >();
       ::factory::add_factory_item <::app_simple_change_grub_default_entry::tab_impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_001 >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::simple_change_grub_default_entry_002 >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::form_001 >();
+      ::factory::add_factory_item <::app_simple_change_grub_default_entry::form_002 >();
 
       ::base::application::init_instance();
 
@@ -81,7 +90,7 @@ namespace app_simple_change_grub_default_entry
                               "main",
                               __type(document),
                               __type(main_frame),
-                              __type(simple_change_grub_default_entry_001)
+                              __type(form_001)
                ));
 
       m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;

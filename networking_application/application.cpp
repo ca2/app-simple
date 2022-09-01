@@ -1,12 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-//#define _APP_ID "app-simple/webserver"
-//#include "aura/application.h"
-////#include "aura/update.h"
-//#include "_webserver.h"
 
+#include "application.h"
+#include "document.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "impact.h"
+#include "tab_impact.h"
 
 
 namespace app_simple_networking_application

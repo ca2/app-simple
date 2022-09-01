@@ -1,7 +1,9 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "tab_impact.h"
+#include "application.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "document.h"
 #include "acme/constant/impact.h"
 #include "base/user/user/tab_pane.h"
 

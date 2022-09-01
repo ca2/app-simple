@@ -1,16 +1,19 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-//#include "aura/update.h"
+#include "application.h"
+#include "impact.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "document.h"
+#include "tab_impact.h"
+#include "aura/user/user/button.h"
+#include "base/user/user/show.h"
+#include "base/user/user/single_document_template.h"
 
 
+IMPLEMENT_APPLICATION(app_simple_drawing)
 
 namespace app_simple_drawing
 {
-
-
-    
 
 
    application::application()
@@ -29,6 +32,8 @@ namespace app_simple_drawing
       m_strAppName = "Simple Drawing";
 
       m_bLicense = false;
+
+      m_bNetworking = false;
 
       m_bMultiverseChat = true;
 

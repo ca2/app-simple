@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/simple/main_frame.h"
+
+
 namespace simple_os_drag_and_drop
 {
 
@@ -15,7 +18,7 @@ namespace simple_os_drag_and_drop
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
       void assert_ok() const override;

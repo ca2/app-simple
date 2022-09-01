@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/document.h"
+
+
 namespace app_simple_drawing
 {
 
@@ -12,7 +15,7 @@ namespace app_simple_drawing
 
 
       document();
-	   virtual ~document();
+	   ~document() override;
 
 
 	   void assert_ok() const override;

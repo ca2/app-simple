@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/tab_impact.h"
+
+
 namespace app_simple_networking_application
 {
 

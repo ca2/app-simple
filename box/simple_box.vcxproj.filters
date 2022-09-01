@@ -28,9 +28,6 @@
     <ClCompile Include="main_frame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_factory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -51,11 +48,13 @@
     <ClInclude Include="main_frame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="_app_simple_box.h">
+    <ClInclude Include="..\..\app-core\gcom\_library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="deployment.rc" />
+    <ResourceCompile Include="deployment.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

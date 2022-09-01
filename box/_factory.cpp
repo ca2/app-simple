@@ -1,7 +1,5 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "application.h"
 
 
 __FACTORY_EXPORT void app_simple_box_factory(::factory::factory* pfactory)

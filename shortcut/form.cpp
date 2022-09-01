@@ -1,9 +1,7 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
-#include "aura/graphics/draw2d/_component.h"
+#include "form.h"
+#include "aura/message/user.h"
+#include "aura/graphics/draw2d/graphics.h"
 
 
 namespace app_simple_shortcut

@@ -1,8 +1,10 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
+#include "form_002.h"
+#include "aura/message/user.h"
+#include "axis/user/user/combo_box.h"
+#include "aura/user/user/still.h"
+#include "aura/user/user/plain_edit.h"
+#include "aura/user/user/button.h"
 
 
 namespace app_simple_shortcut

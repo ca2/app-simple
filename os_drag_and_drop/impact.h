@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/impact.h"
+
+
 namespace simple_os_drag_and_drop
 {
 
@@ -15,7 +18,8 @@ namespace simple_os_drag_and_drop
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
+
 
       void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;

@@ -898,16 +898,15 @@
     </ClCompile>
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="main_frame.cpp" />
-    <ClCompile Include="_factory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\app-core\gcom\_library.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="_app_simple_box.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="deployment.rc" />

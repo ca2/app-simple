@@ -1,9 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
-#include "aura/graphics/draw2d/_component.h"
+#include "impact.h"
+#include "document.h"
+#include "main_impact.h"
+#include "application.h"
+#include "aura/message/user.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "base/user/user/impact_system.h"
 
 
 namespace app_simple_form
@@ -93,13 +95,13 @@ namespace app_simple_form
 
       string strText;
 
-      if(GetTypedParent<::user::split_impact>() != nullptr)
+      if(get_typed_parent<::user::split_impact>() != nullptr)
       {
 
-         if(GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
+         if(get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
          {
 
-            auto pinteraction = GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact");
+            auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
             pinteraction->_001SetText(strText,::e_source_initialize);
 

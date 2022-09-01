@@ -1,8 +1,8 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-//#include "aura/update.h"
+#include "tab_impact.h"
+#include "application.h"
+#include "impact.h"
+#include "render.h"
 #include "base/user/user/tab_pane.h"
 
 

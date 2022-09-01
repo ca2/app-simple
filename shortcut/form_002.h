@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "form.h"
+
+
 namespace app_simple_shortcut
 {
 

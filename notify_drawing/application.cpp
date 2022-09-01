@@ -1,9 +1,12 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "application.h"
+#include "main_frame.h"
+#include "impact.h"
+#include "app-simple/drawing/document.h"
+#include "app-simple/drawing/tab_impact.h"
+#include "base/user/user/single_document_template.h"
 
-
+IMPLEMENT_APPLICATION(app_simple_notify_drawing)
 namespace app_simple_notify_drawing
 {
 

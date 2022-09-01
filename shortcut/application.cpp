@@ -1,12 +1,20 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-//#include "aura/application.h"
+#include "application.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "form_001.h"
+#include "form_002.h"
+#include "impact.h"
+#include "document.h"
+#include "tab_impact.h"
+#include "main_impact.h"
+#include "aura/user/user/button.h"
+#include "base/user/user/show.h"
+#include "base/user/user/single_document_template.h"
 
 
 #define new ACME_NEW
-
+IMPLEMENT_APPLICATION(app_simple_shortcut)
 namespace app_simple_shortcut
 {
 
