@@ -28,7 +28,7 @@ namespace app_simple_form
       m_strBaseSupportId         = "app-simple/form";
       m_strAppName               = "Simple Form";
       m_bLicense                 = false;
-
+      m_bNetworking              = false;
       m_bMultiverseChat          = true;
 
    }

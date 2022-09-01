@@ -1,6 +1,8 @@
 #include "framework.h"
+#include "application.h"
+#include "base/user/user/single_document_template.h"
+#include "aura/user/user/button.h"
 
-#include "aura/application.h"
 
 IMPLEMENT_APPLICATION(simple_os_drag_and_drop)
 namespace simple_os_drag_and_drop
@@ -193,11 +195,7 @@ namespace simple_os_drag_and_drop
    }
 
    
-   __namespace_application_factory("app-simple/os_drag_and_drop");
-
-
 } // namespace simple_os_drag_and_drop
-
 
 
 
