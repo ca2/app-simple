@@ -1,7 +1,7 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "impact.h"
+#include "application.h"
+#include "app-simple/drawing/render.h"
 
 
 namespace app_simple_notify_drawing

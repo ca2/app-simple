@@ -200,7 +200,6 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="framework.cpp" />
     <ClCompile Include="_main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -213,21 +212,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\app\acme\acme.vcxproj">
       <Project>{638b242f-0f21-41c3-9f66-724660046133}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\apex\apex.vcxproj">
-      <Project>{e000ffaf-392f-4e32-bf51-777ca238991f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\aqua\aqua.vcxproj">
-      <Project>{1b06fe5f-f783-41a1-ac68-0e02880dbbac}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\aura\aura.vcxproj">
-      <Project>{e000ffaf-392f-4e32-bf51-fd7ed638991f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\axis\axis.vcxproj">
-      <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\app\base\base.vcxproj">
-      <Project>{a216abd4-26c4-4746-96b3-9d30ed28cf92}</Project>
     </ProjectReference>
     <ProjectReference Include="app_simple_shortcut.vcxproj">
       <Project>{c7201a26-86dc-4726-9456-aedcbe98206b}</Project>

@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/platform/application.h"
+
+
 namespace app_simple_networking_application
 {
 

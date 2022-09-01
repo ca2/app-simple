@@ -14,10 +14,13 @@
 namespace app_simple_drawing
 {
 
+
    class application;
    class tab_impact;
    class document;
    class impact;
+   class render;
+
 
 } // namespace flag
 

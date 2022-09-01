@@ -1,10 +1,16 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include "base/user/user/_component.h"
-//#include "aura/update.h"
+#include "application.h"
+#include "main_frame.h"
+#include "document.h"
+#include "impact.h"
+#include "base/user/user/tab_impact.h"
+#include "base/platform/session.h"
+#include "base/user/user/document_manager.h"
+#include "base/user/user/user.h"
+#include "base/user/user/single_document_template.h"
 
+
+IMPLEMENT_APPLICATION(app_simple_application)
 
 namespace app_simple_application
 {
@@ -18,6 +24,8 @@ namespace app_simple_application
       //m_bLocalization = true;
       
       m_bImaging = false;
+
+      m_bNetworking = false;
 
       m_ppaneimpact = nullptr;
 

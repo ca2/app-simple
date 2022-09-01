@@ -19,7 +19,7 @@ namespace simple_os_drag_and_drop
 
 
       simple_os_drag_and_drop();
-      virtual ~simple_os_drag_and_drop();
+      ~simple_os_drag_and_drop() override;
 
 
 #ifdef _DEBUG

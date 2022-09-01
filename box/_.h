@@ -16,6 +16,8 @@ namespace app_simple_box
 
    
    class application;
+   class document;
+   class impact;
 
 
 } // namespace app_simple_box

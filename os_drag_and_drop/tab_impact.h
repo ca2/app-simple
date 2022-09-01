@@ -1,6 +1,10 @@
 #pragma once
 
 
+#include "base/user/user/tab_impact.h"
+#include "aura/user/user/form_callback.h"
+
+
 namespace simple_os_drag_and_drop
 {
 

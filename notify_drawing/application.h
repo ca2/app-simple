@@ -1,6 +1,8 @@
 #pragma once
 
 
+#include "app-simple/drawing/application.h"
+
 
 namespace app_simple_notify_drawing
 {

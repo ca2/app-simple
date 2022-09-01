@@ -1,10 +1,11 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "impact.h"
+#include "document.h"
+#include "application.h"
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_component.h"
+#include "aura/message/user.h"
+#include "aura/graphics/draw2d/draw2d.h"
 
 
 CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
@@ -313,14 +314,16 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      message_box(
+      auto psequencer = create_message_box_sequencer(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          e_message_box_yes_no | e_message_box_icon_information
-      )->then([this](auto pconversation)
+      );
+         
+         psequencer->then([this](auto pconversation)
          {
 
-            if (pconversation->m_atomResult == e_dialog_result_yes)
+            if (pconversation->m_payloadResult == e_dialog_result_yes)
             {
 
                auto papp = get_app();
@@ -336,6 +339,9 @@ namespace app_simple_box
             }
 
          });
+
+
+      psequencer->do_asynchronously();
 
    }
 

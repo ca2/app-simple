@@ -1,9 +1,10 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "render.h"
 #include <math.h>
-#include "aura/graphics/draw2d/_component.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/pen.h"
+#include "aura/graphics/draw2d/brush.h"
+#include "application.h"
 
 
 CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs
@@ -11,8 +12,6 @@ CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs
 
 namespace app_simple_drawing
 {
-
-
 
 
    void render::_001OnDrawBoxGradient(::draw2d::graphics_pointer & pgraphics)

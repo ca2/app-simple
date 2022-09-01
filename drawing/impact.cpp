@@ -1,10 +1,14 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
+#include "impact.h"
+#include "application.h"
+#include "render.h"
+#include "document.h"
+#include "base/user/user/impact_system.h"
+#include "base/user/user/split_impact.h"
+#include "aura/graphics/draw2d/graphics.h"
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_component.h"
+#include "aura/message/user.h"
 
 
 namespace app_simple_drawing
@@ -131,13 +135,13 @@ namespace app_simple_drawing
 
       string strText;
 
-      if(GetTypedParent<::user::split_impact>() != nullptr)
+      if(get_typed_parent<::user::split_impact>() != nullptr)
       {
 
-         if(GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
+         if(get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
          {
 
-            auto pinteraction = GetTypedParent<::user::split_impact>()->get_child_by_id("top_edit_impact");
+            auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
             pinteraction->_001SetText(strText,::e_source_initialize);
 

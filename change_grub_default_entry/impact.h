@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/impact.h"
+
+
 namespace app_simple_change_grub_default_entry
 {
 
@@ -12,7 +15,8 @@ namespace app_simple_change_grub_default_entry
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
+
 
       void assert_ok() const override;
       void dump(dump_context & dumpcontext) const override;

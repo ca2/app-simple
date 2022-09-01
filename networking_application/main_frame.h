@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/simple/main_frame.h"
+
+
 namespace app_simple_networking_application
 {
 
@@ -15,7 +18,7 @@ namespace app_simple_networking_application
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
       void assert_ok() const override;

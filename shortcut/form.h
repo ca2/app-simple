@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/form/impact.h"
+
+
 namespace app_simple_shortcut
 {
 

@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "app-simple/drawing/main_frame.h"
+
+
 namespace app_simple_notify_drawing
 {
 
@@ -13,7 +16,7 @@ namespace app_simple_notify_drawing
 
 
       main_frame();
-      virtual ~main_frame();
+      ~main_frame() override;
 
 
       void assert_ok() const override;

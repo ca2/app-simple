@@ -1,8 +1,10 @@
 #include "framework.h"
-#if !BROAD_PRECOMPILED_HEADER
-#include "_library.h"
-#endif
-#include <math.h>
+#include "form_001.h"
+#include "application.h"
+#include "aura/message/user.h"
+#include "aura/user/user/button.h"
+#include "aura/user/user/still.h"
+#include "aura/user/user/plain_edit.h"
 
 
 namespace app_simple_form
@@ -148,7 +150,7 @@ namespace app_simple_form
       
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
       
-      int cx = rectClient.width() - iLeft - iRight;
+      auto cx = rectClient.width() - iLeft - iRight;
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
