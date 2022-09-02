@@ -268,20 +268,20 @@ namespace app_simple_change_grub_default_entry
       //{
 
       //   if (ptopic->m_atom == id_control_event
-      //         && ptopic->user_interaction() == m_pfontview
+      //         && ptopic->user_interaction() == m_pfontimpact
       //         && m_pimpactLast != NULL)
       //   {
 
       //      if(pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_sel)
       //      {
 
-      //         string strFont = m_pfontview->m_pimpact->get_cur_sel_face_name();
+      //         string strFont = m_pfontimpact->m_pimpact->get_cur_sel_face_name();
 
       //      }
       //      else if (pupdate->m_pcontrolevent->m_eevent == ::id_after_change_cur_hover)
       //      {
 
-      //         string strFont = m_pfontview->m_pimpact->get_cur_hover_face_name();
+      //         string strFont = m_pfontimpact->m_pimpact->get_cur_hover_face_name();
 
       //      }
 
