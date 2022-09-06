@@ -1,6 +1,14 @@
 #include "framework.h"
+#include "application.h"
+#include "frame.h"
+#include "main_frame.h"
+#include "tab_impact.h"
+#include "impact.h"
+#include "document.h"
+#include "base/user/user/single_document_template.h"
 
-//#include "aura/update.h"
+
+IMPLEMENT_APPLICATION(app_simple_shader);
 
 
 namespace app_simple_shader
@@ -55,7 +63,7 @@ namespace app_simple_shader
       ::factory::add_factory_item <::app_simple_shader::document >();
       ::factory::add_factory_item <::app_simple_shader::frame >();
       ::factory::add_factory_item <::app_simple_shader::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
+      //::factory::add_factory_item <::user::button_impact >();
       ::factory::add_factory_item <::app_simple_shader::impact >();
       ::factory::add_factory_item <::app_simple_shader::tab_impact >();
 

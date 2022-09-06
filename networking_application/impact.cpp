@@ -1,10 +1,13 @@
 #include "framework.h"
-
 #include "impact.h"
+#include "application.h"
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_component.h"
+#include "base/user/user/impact_system.h"
+#include "base/user/user/split_impact.h"
+#include "aura/graphics/draw2d/graphics.h"
 #include "acme/platform/hyperlink.h"
+#include "aura/message/user.h"
 
 
 namespace app_simple_networking_application

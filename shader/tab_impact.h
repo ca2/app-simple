@@ -1,6 +1,11 @@
 #pragma once
 
 
+#include "base/user/user/tab_impact.h"
+#include "aura/user/user/form_callback.h"
+
+
+
 namespace app_simple_shader
 {
 

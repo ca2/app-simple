@@ -1,18 +1,21 @@
 #pragma once
 
 
+#include "base/user/user/document.h"
+
+
 namespace app_simple_shader
 {
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER document :
-      public ::user::document
+      virtual public ::user::document
    {
    public:
 
 
       document();
-	   virtual ~document();
+	   ~document() override;
 
 
 	   void assert_ok() const override;

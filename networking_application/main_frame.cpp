@@ -1,5 +1,4 @@
 #include "framework.h"
-
 #include "main_frame.h"
 
 

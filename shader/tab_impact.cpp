@@ -1,6 +1,9 @@
 #include "framework.h"
-
-//#include "aura/update.h"
+#include "tab_impact.h"
+#include "impact.h"
+#include "application.h"
+#include "base/user/menu/list_impact.h"
+#include "app/shader/render.h"
 #include "base/user/user/tab_pane.h"
 
 

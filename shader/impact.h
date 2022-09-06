@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/user/impact.h"
+
+
 namespace app_simple_shader
 {
 

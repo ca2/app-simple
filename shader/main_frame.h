@@ -1,6 +1,9 @@
 #pragma once
 
 
+#include "base/user/simple/main_frame.h"
+
+
 namespace app_simple_shader
 {
 
