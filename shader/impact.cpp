@@ -1,9 +1,17 @@
 #include "framework.h"
-
+#include "impact.h"
+#include "frame.h"
+#include "application.h"
+#include "app/shader/render.h"
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_component.h"
+#include "base/user/user/impact_system.h"
+#include "base/user/user/split_impact.h"
+//#include "aura/graphics/draw2d/_component.h"
+#include "aura/graphics/image/image.h"
 #include "aura/graphics/image/save_image.h"
+#include "aura/graphics/image/context_image.h"
+#include "aura/message/user.h"
 
 
 namespace app_simple_shader
@@ -149,7 +157,6 @@ namespace app_simple_shader
       }
 
       m_prender->update_shader();
-
 
       {
 
