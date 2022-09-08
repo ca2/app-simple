@@ -6,8 +6,8 @@ list(APPEND library_source
    _.cpp
    _.h
    _factory.cpp
-   001.cpp
-   002.cpp
+   form_001.cpp
+   form_002.cpp
    application.cpp
    application.h
    document.cpp
@@ -20,10 +20,10 @@ list(APPEND library_source
    main_frame.h
    main_impact.cpp
    main_impact.h
-   simple_change_grub_default_entry.cpp
-   simple_change_grub_default_entry.h
-   simple_change_grub_default_entry_001.h
-   simple_change_grub_default_entry_002.h
+   form.cpp
+   form.h
+   form_001.h
+   form_002.h
    tab_impact.cpp
    tab_impact.h
    impact.cpp
