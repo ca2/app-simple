@@ -17,9 +17,13 @@
  */
 
 #include "framework.h"
-
+#include "main_window.h"
 #include "example_icons.h"
 #include "nanogui/Icons.h"
+#include "nanogui/Button.h"
+#include "nanogui/Window.h"
+#include "nanogui/Layout.h"
+#include "nanogui/VScrollPanel.h"
 
 
 using namespace nanogui;

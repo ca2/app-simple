@@ -1,11 +1,12 @@
 #include "framework.h"
-
+#include "main_window.h"
 #include <math.h>
 #include "acme/id.h"
-#include "aura/graphics/draw2d/_component.h"
+#include "app/nanogui/Screen.h"
 #include "example1.h"
 #include "example2.h"
 #include "example_icons.h"
+#include "aura/message/user.h"
 
 
 namespace app_simple_nanogui_example

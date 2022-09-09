@@ -1,6 +1,8 @@
 #pragma once
 
 
+#include "aura/platform/application.h"
+
 
 namespace app_simple_nanogui_example
 {
