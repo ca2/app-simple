@@ -8,7 +8,7 @@ set(LIBRARY_NAME app_simple_box)
 list(APPEND library_source
         _.cpp
         _.h
-   _factory.cpp
+   #_factory.cpp
         application.cpp
         application.h
         document.cpp

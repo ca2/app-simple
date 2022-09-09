@@ -1,4 +1,4 @@
-// Created by camilo on 2022/03/18 03:45 AM <3ThomasBorregaardSørensen!! (Thomas Like number 5)
+// Created by camilo on 2022/03/18 03:45 AM <3ThomasBorregaardSï¿½rensen!! (Thomas Like number 5)
 #pragma once
 //Mummi at office during dawn
 //youngmatti_
@@ -7,6 +7,9 @@
 //j_blow
 //rw_grim
 //nanogui freelancing client
+
+
+#include "aura/user/user/main_window.h"
 
 
 namespace app_simple_nanogui_example
@@ -19,12 +22,11 @@ namespace app_simple_nanogui_example
    public:
 
 
-      int               m_iCloseButtonDraw;
+      int                                             m_iCloseButtonDraw;
 
 
-
-      array < ::nanogui::ref < nanogui::Screen > > m_exampleapplicationa;
-      int         m_iCurrentApplication;
+      array < ::nanogui::ref < nanogui::Screen > >    m_exampleapplicationa;
+      int                                             m_iCurrentApplication;
 
 
       main_window();

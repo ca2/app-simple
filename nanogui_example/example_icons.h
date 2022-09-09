@@ -1,5 +1,8 @@
-// From nanogui by camilo on 2022/03/22 2:01 AM <3ThomasBorregaardSørensen!!
+// From nanogui by camilo on 2022/03/22 2:01 AM <3ThomasBorregaardSï¿½rensen!!
 #pragma once
+
+
+#include "app/nanogui/Screen.h"
 
 
 using namespace nanogui;

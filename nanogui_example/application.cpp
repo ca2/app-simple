@@ -1,9 +1,10 @@
 #include "framework.h"
-
-#include "aura/user/user/_component.h"
+#include "application.h"
+#include "main_window.h"
+////#include "aura/user/user/_component.h"
 //#include "aura/update.h"
 
-
+IMPLEMENT_APPLICATION(app_simple_nanogui_example);
 namespace app_simple_nanogui_example
 {
 

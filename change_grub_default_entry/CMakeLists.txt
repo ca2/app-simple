@@ -5,7 +5,7 @@ project(app_simple_change_grub_default_entry CXX)
 list(APPEND library_source
    _.cpp
    _.h
-   _factory.cpp
+   #_factory.cpp
    form_001.cpp
    form_002.cpp
    application.cpp

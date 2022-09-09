@@ -11,9 +11,10 @@
     BSD-style license that can be found in the LICENSE.txt file.
 */
 #include "framework.h"
-
 #include "example2.h"
+#include "main_window.h"
 #include "nanogui/FormHelper.h"
+
 
 ////#include <nanogui/nanogui.h>
 ////#include <iostream>

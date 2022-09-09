@@ -1,11 +1,26 @@
 #include "framework.h"
-
 #include "example1.h"
+#include "main_window.h"
+#include "nanogui/CheckBox.h"
+#include "nanogui/Layout.h"
+#include "nanogui/Screen.h"
+#include "nanogui/Label.h"
 #include "nanogui/Icons.h"
 #include "nanogui/ToolButton.h"
 #include "nanogui/Graph.h"
 #include "nanogui/ColorPicker.h"
-#include "nanogui/nano2d/_component.h"
+#include "nanogui/TextBox.h"
+#include "nanogui/MessageDialog.h"
+#include "nanogui/VScrollPanel.h"
+#include "nanogui/ImagePanel.h"
+#include "nanogui/ImageImpact.h"
+#include "nanogui/ComboBox.h"
+#include "nanogui/ProgressBar.h"
+#include "nanogui/Slider.h"
+#include "nanogui/TabWidget.h"
+#include "nanogui/ColorWheel.h"
+#include "aura/windowing/window.h"
+
 
 namespace app_simple_nanogui_example
 {

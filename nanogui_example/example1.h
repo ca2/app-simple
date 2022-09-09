@@ -1,12 +1,15 @@
 // From nanogui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSørensen!!
 #pragma once
 
+
+#include "app/nanogui/Screen.h"
+
+
 using namespace nanogui;
 
 
 namespace app_simple_nanogui_example
 {
-
 
 
    class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE ExampleApplication1 :
