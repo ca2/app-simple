@@ -29,8 +29,6 @@
 		9A8F90D4240C09F10097E249 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90C8240C09F10097E249 /* impact.h */; };
 		9A8F90D5240C09F10097E249 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A8F90D6240C09F10097E249 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A8F90CA240C09F10097E249 /* application.h */; };
-		9A93B5132846E6F6005ACD11 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B5122846E6F6005ACD11 /* _factory.cpp */; };
-		9A93B5142846E701005ACD11 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A93B5122846E6F6005ACD11 /* _factory.cpp */; };
 		9AEB75DD16F78E600085103B /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9AEB75DE16F78E600085103B /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AEB75BF16F78E600085103B /* framework.h */; };
 /* End PBXBuildFile section */
@@ -42,6 +40,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9AD117F224F51BE400177261;
 			remoteInfo = base;
+		};
+		9A5ECD2928CCC2390084D354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A833BE324F544D600C079FB /* base.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A93B6FA2846EB33005ACD11;
+			remoteInfo = ios_base;
 		};
 		9A833BE724F544D600C079FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -92,7 +97,6 @@
 		9A8F90C8240C09F10097E249 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9A8F90C9240C09F10097E249 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9A8F90CA240C09F10097E249 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
-		9A93B5122846E6F6005ACD11 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AE24E8A1904CFFD001AEFFB /* libios_app_simple_application.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_application.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75A316F78DF10085103B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEB75BE16F78E600085103B /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9A833BE824F544D600C079FB /* libbase.dylib */,
+				9A5ECD2A28CCC2390084D354 /* libios_base.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +170,6 @@
 		9AEB75AA16F78E600085103B /* simple_application */ = {
 			isa = PBXGroup;
 			children = (
-				9A93B5122846E6F6005ACD11 /* _factory.cpp */,
 				9A00E5C52661320400517464 /* _.cpp */,
 				9A833BDF24F544B200C079FB /* _.h */,
 				9A833BE024F544B200C079FB /* _user.h */,
@@ -274,6 +278,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A5ECD2A28CCC2390084D354 /* libios_base.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_base.a;
+			remoteRef = 9A5ECD2928CCC2390084D354 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9A833BE824F544D600C079FB /* libbase.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -288,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A93B5142846E701005ACD11 /* _factory.cpp in Sources */,
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
 				9A415C2A247393C100EF2BCD /* document.cpp in Sources */,
 				9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */,
@@ -305,7 +315,6 @@
 				9A8F90CE240C09F10097E249 /* impact.cpp in Sources */,
 				9A8F90D5240C09F10097E249 /* document.cpp in Sources */,
 				9A00E5C62661320500517464 /* _.cpp in Sources */,
-				9A93B5132846E6F6005ACD11 /* _factory.cpp in Sources */,
 				9AEB75DD16F78E600085103B /* framework.cpp in Sources */,
 				9A8F90D2240C09F10097E249 /* application.cpp in Sources */,
 			);
