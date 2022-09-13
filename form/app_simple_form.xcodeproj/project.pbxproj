@@ -40,8 +40,6 @@
 		9AA203BA2847FF4B00A747A1 /* form_002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB42748E274006BEBCC /* form_002.cpp */; };
 		9AA203BB2847FF4F00A747A1 /* form.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB22748E273006BEBCC /* form.cpp */; };
 		9AA203BC2847FF5E00A747A1 /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A258BD924DA5E460013F50E /* tab_impact.cpp */; };
-		9AA2F48B2847E11200A747A1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2F4872847E11200A747A1 /* _factory.cpp */; };
-		9AA2F48D2847E11A00A747A1 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2F4872847E11200A747A1 /* _factory.cpp */; };
 		9AC01EB52748E274006BEBCC /* form_002.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01EAF2748E273006BEBCC /* form_002.h */; };
 		9AC01EB62748E274006BEBCC /* form_001.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC01EB02748E273006BEBCC /* form_001.h */; };
 		9AC01EB72748E274006BEBCC /* form_001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AC01EB12748E273006BEBCC /* form_001.cpp */; };
@@ -115,7 +113,6 @@
 		9A42D7F02665A4EB0011645D /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A42D7F22665A55C0011645D /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A833C1524F573DD00C079FB /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = "<group>"; };
-		9AA2F4872847E11200A747A1 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AC01EAF2748E273006BEBCC /* form_002.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_002.h; sourceTree = "<group>"; };
 		9AC01EB02748E273006BEBCC /* form_001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = form_001.h; sourceTree = "<group>"; };
 		9AC01EB12748E273006BEBCC /* form_001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = form_001.cpp; sourceTree = "<group>"; };
@@ -219,7 +216,6 @@
 		9AEB75AA16F78E600085103B /* simple_form */ = {
 			isa = PBXGroup;
 			children = (
-				9AA2F4872847E11200A747A1 /* _factory.cpp */,
 				9AC01EB12748E273006BEBCC /* form_001.cpp */,
 				9AC01EB02748E273006BEBCC /* form_001.h */,
 				9AC01EB42748E274006BEBCC /* form_002.cpp */,
@@ -404,7 +400,6 @@
 				9A415C142473939C00EF2BCD /* frame.cpp in Sources */,
 				9A415C152473939C00EF2BCD /* main_frame.cpp in Sources */,
 				9AA203BC2847FF5E00A747A1 /* tab_impact.cpp in Sources */,
-				9AA2F48D2847E11A00A747A1 /* _factory.cpp in Sources */,
 				9A415C162473939C00EF2BCD /* main_impact.cpp in Sources */,
 				9A415C192473939C00EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
@@ -424,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA2F48B2847E11200A747A1 /* _factory.cpp in Sources */,
 				9A39EA62243364EC000FECDA /* document.cpp in Sources */,
 				9AC01EBA2748E274006BEBCC /* form_002.cpp in Sources */,
 				9A39EA73243364EC000FECDA /* main_frame.cpp in Sources */,
