@@ -99,11 +99,11 @@ namespace app_simple_networking_application
 
       //initialize_application_composer();
 
-      m_papp->create_networking_application();
+      get_app()->create_networking_application();
 
       {
 
-         auto psignal = m_papp->get_signal("simple_checkbox");
+         auto psignal = get_app()->get_signal("simple_checkbox");
 
          psignal->add_handler(this);
 
@@ -111,7 +111,7 @@ namespace app_simple_networking_application
 
       {
 
-         auto psignal = m_papp->get_signal("no_client_frame");
+         auto psignal = get_app()->get_signal("no_client_frame");
 
          psignal->add_handler(this);
 
@@ -203,7 +203,7 @@ namespace app_simple_networking_application
 
       auto phyperlink = __create_new <::hyperlink >();
 
-      phyperlink->m_strLink.format("http://localhost.ca2.software:%d/", get_app()->networking_application()->wait_get_current_port(1_min));
+      phyperlink->m_strLink.format("https://localhost.ca2.software:%d/", get_app()->networking_application()->wait_get_current_port(1_min));
 
       phyperlink->run();
 

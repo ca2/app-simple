@@ -160,7 +160,7 @@ namespace app_simple_drawing
             
       }
 
-      auto & echeckSimple = m_papp->application_properties().m_echeckSimple;
+      auto & echeckSimple = get_app()->application_properties().m_echeckSimple;
 
       if (__bool(echeckSimple))
       {
@@ -184,7 +184,7 @@ namespace app_simple_drawing
       else
       {
 
-         if (__bool(m_papp->application_properties().m_echeckSimple))
+         if (__bool(get_app()->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(argb(255, 255, 255, 200));
@@ -228,7 +228,7 @@ namespace app_simple_drawing
       else if (m_iDrawing == 3)
       {
 
-         if (__bool(m_papp->application_properties().m_echeckSimple))
+         if (__bool(get_app()->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);
@@ -256,7 +256,7 @@ namespace app_simple_drawing
       else
       {
 
-         if (__bool(m_papp->application_properties().m_echeckSimple))
+         if (__bool(get_app()->application_properties().m_echeckSimple))
          {
 
             pbrush->create_solid(m_hlsText);

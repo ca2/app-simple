@@ -91,7 +91,7 @@ namespace app_simple_drawing
 
       //papplication->data_set(strDataId, m_hlsText);
 
-      if(!m_papp->data_get(strDataId +".color", m_hlsText))
+      if(!get_app()->data_get(strDataId +".color", m_hlsText))
       {
 
          m_hlsText = color.get_hls();
@@ -111,7 +111,7 @@ namespace app_simple_drawing
 
       }
 
-      if (m_papp->application_properties().m_echeckNoClientFrame != ::e_check_checked)
+      if (get_app()->application_properties().m_echeckNoClientFrame != ::e_check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
@@ -177,7 +177,7 @@ namespace app_simple_drawing
 
       strDataId = m_pimpact->m_atom;
 
-      m_papp->data_set(strDataId + ".font_family", m_strFont1);
+      get_app()->data_set(strDataId + ".font_family", m_strFont1);
 
       m_strFont1 = strFont;
 
@@ -217,7 +217,7 @@ namespace app_simple_drawing
 
          strDataId = m_pimpact->m_atom;
 
-         if (!m_papp->data_get(strDataId + ".font_family", m_strFont1)
+         if (!get_app()->data_get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 
@@ -339,7 +339,7 @@ namespace app_simple_drawing
          else if (m_iDrawing == 3)
          {
 
-            if (__bool(m_papp->application_properties().m_echeckSimple))
+            if (__bool(get_app()->application_properties().m_echeckSimple))
             {
 
                pbrush->create_solid(m_hlsText);
@@ -367,7 +367,7 @@ namespace app_simple_drawing
          else
          {
 
-            if (__bool(m_papp->application_properties().m_echeckSimple))
+            if (__bool(get_app()->application_properties().m_echeckSimple))
             {
 
                pbrush->create_solid(m_hlsText);

@@ -207,7 +207,7 @@ namespace app_simple_drawing
 
       ::rectangle_i32 rClient(m_rectangle);
 
-      if (__bool(m_papp->application_properties().m_echeckSimple))
+      if (__bool(get_app()->application_properties().m_echeckSimple))
       {
 
          pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
