@@ -5,7 +5,7 @@
 __FACTORY_EXPORT void app_simple_box_factory(::factory::factory* pfactory)
 {
 
-   pfactory->add_factory_item < ::app_simple_box::application, ::app >();
+   pfactory->add_factory_item < ::app_simple_box::application, ::acme::application >();
 
 }
 

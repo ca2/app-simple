@@ -152,7 +152,7 @@ namespace app_simple_networking_application
 
       //initialize_application_consumer();
 
-      auto papp = m_papp;
+      auto papp = get_app();
 
       if (papp->has_property("notabs"))
       {

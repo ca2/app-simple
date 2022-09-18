@@ -6,7 +6,7 @@
 #include "app-simple/drawing/tab_impact.h"
 #include "base/user/user/single_document_template.h"
 
-IMPLEMENT_APPLICATION(app_simple_notify_drawing)
+//IMPLEMENT_APPLICATION(app_simple_notify_drawing)
 namespace app_simple_notify_drawing
 {
 

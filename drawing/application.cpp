@@ -10,7 +10,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-IMPLEMENT_APPLICATION(app_simple_drawing)
+//IMPLEMENT_APPLICATION(app_simple_drawing)
 
 namespace app_simple_drawing
 {
