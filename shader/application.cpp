@@ -8,7 +8,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-IMPLEMENT_APPLICATION(app_simple_shader);
+//IMPLEMENT_APPLICATION(app_simple_shader);
 
 
 namespace app_simple_shader

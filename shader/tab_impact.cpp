@@ -61,7 +61,7 @@ namespace app_simple_shader
 
       //initialize_application_consumer();
 
-      m_papp->m_ptabimpact = this;
+      get_app()->m_ptabimpact = this;
 
       _001SetVertical();
 
@@ -204,7 +204,7 @@ namespace app_simple_shader
 
          string strShaderPath = strId;
 
-         auto pimpact = m_papp->create_simple_shader_impact(this, pimpactdata);
+         auto pimpact = get_app()->create_simple_shader_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 
