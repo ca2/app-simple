@@ -12,8 +12,8 @@
 #include "base/user/user/single_document_template.h"
 
 
-#define new ACME_NEW
-IMPLEMENT_APPLICATION(app_simple_form)
+//#define new ACME_NEW
+//IMPLEMENT_APPLICATION(app_simple_form)
 namespace app_simple_form
 {
 
