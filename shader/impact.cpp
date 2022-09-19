@@ -125,6 +125,9 @@ namespace app_simple_shader
       
       __construct_new(m_prender);
 
+
+      m_prender->initialize_render(this);
+
       //if(!estatus)
       //{
 
