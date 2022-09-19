@@ -9,7 +9,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-IMPLEMENT_APPLICATION(app_simple_networking_application);
+//IMPLEMENT_APPLICATION(app_simple_networking_application);
 
 
 namespace app_simple_networking_application
