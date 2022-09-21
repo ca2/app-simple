@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/user/simple/main_frame.h"
+#include "base/user/simple/frame_window.h"
 
 
 namespace app_simple_shader
@@ -9,7 +9,7 @@ namespace app_simple_shader
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER main_frame :
-      virtual public simple_main_frame
+      virtual public simple_frame_window
    {
    public:
 
