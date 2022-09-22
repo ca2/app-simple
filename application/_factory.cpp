@@ -2,7 +2,7 @@
 #include "application.h"
 
 
-IMPLEMENT_APPLICATION(app_simple_application)
+//IMPLEMENT_APPLICATION(app_simple_application)
 
 
 
