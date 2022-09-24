@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = new app_simple_change_grub_default_entry::application();
+   auto papp = new app_simple_box::application();
 
    int iExitCode = papp->__implement();
 
