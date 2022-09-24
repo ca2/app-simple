@@ -1,74 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
-project(app_simple_change_grub_default_entry CXX)
+project(_app_simple_change_grub_default_entry CXX)
 
-
-list(APPEND library_source
-   _.cpp
-   _.h
-   #_factory.cpp
-   form_001.cpp
-   form_002.cpp
-   application.cpp
-   application.h
-   document.cpp
-   document.h
-   frame.cpp
-   frame.h
-   framework.cpp
-   framework.h
-   main_frame.cpp
-   main_frame.h
-   main_impact.cpp
-   main_impact.h
-   form.cpp
-   form.h
-   form_001.h
-   form_002.h
-   tab_impact.cpp
-   tab_impact.h
-   impact.cpp
-   impact.h
-   )
-
-add_library(app_simple_change_grub_default_entry SHARED ${library_source})
-
-target_precompile_headers(app_simple_change_grub_default_entry PRIVATE framework.h)
-
-set_target_properties(app_simple_change_grub_default_entry PROPERTIES LINKER_LANGUAGE CXX)
-
-if (MSVC)
-   target_compile_options(app_simple_change_grub_default_entry PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_change_grub_default_entry PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_change_grub_default_entry PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_simple_change_grub_default_entry PRIVATE acme apex aqua aura axis base)
-elseif(LINUX OR FREEBSD)
-   target_compile_options(app_simple_change_grub_default_entry PRIVATE -fpermissive)
-   #target_link_options(app_simple_change_grub_default_entry PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(app_simple_change_grub_default_entry PRIVATE acme apex aqua aura axis base)
-   target_link_options(app_simple_change_grub_default_entry PRIVATE -Wl,-z,defs)
-endif ()
-
-
-
-
-
-
-list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
-list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
-list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
-
-
-target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
-
-
-target_compile_definitions(app_simple_change_grub_default_entry PRIVATE _APP_SIMPLE_FORM_LIBRARY)
-
-
-
-
-
-
-add_subdirectory(__implement)
 
 
 add_executable(${PROJECT_NAME} __implement.cpp)
@@ -103,7 +35,7 @@ if(LINUX OR FREEBSD)
 #      DEPENDS ${PROJECT_BINARY_DIR}/matter.timestamp
 #   )
 #
-list(APPEND executable_references ${PROJECT_SOURCE_DIR}/.link_object/_matter.zip.o)
+list(APPEND executable_references ${PROJECT_SOURCE_DIR}/../.link_object/_matter.zip.o)
 #
 #   add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_matter)
 #
@@ -140,7 +72,12 @@ add_dependencies(${PROJECT_NAME} ${default_write_text})
 add_dependencies(${PROJECT_NAME} database_sqlite3)
 
 
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
+list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
+
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
+
 
 target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
