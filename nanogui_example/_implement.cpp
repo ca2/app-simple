@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = new app_simple_nanogui_example::application();
+   auto papp = memory_new app_simple_nanogui_example::application();
 
    int iExitCode = papp->__implement();
 
