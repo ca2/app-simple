@@ -41,7 +41,7 @@ public:
     MyCanvas(Widget *parent) : Canvas(parent, 1), m_rotation(0.f) {
         using namespace nanogui;
 
-        m_shader = new Shader(
+        m_shader = memory_new Shader(
             render_pass(),
 
             // An identifying name
@@ -195,25 +195,25 @@ public:
     ExampleApplication() : nanogui::Screen(Vector2i(800, 600), "NanoGUI Test", false) {
         using namespace nanogui;
 
-        Window *window = new Window(this, "Canvas widget demo");
+        Window *window = memory_new Window(this, "Canvas widget demo");
         window->set_position(Vector2i(15, 15));
-        window->set_layout(new GroupLayout());
+        window->set_layout(memory_new GroupLayout());
 
-        m_canvas = new MyCanvas(window);
+        m_canvas = memory_new MyCanvas(window);
         m_canvas->set_background_color({100, 100, 100, 255});
         m_canvas->set_fixed_size({400, 400});
 
-        Widget *tools = new Widget(window);
-        tools->set_layout(new BoxLayout(Orientation::Horizontal,
+        Widget *tools = memory_new Widget(window);
+        tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                                        Alignment::Middle, 0, 5));
 
-        Button *b0 = new Button(tools, "Random Background");
+        Button *b0 = memory_new Button(tools, "Random Background");
         b0->set_callback([this]() {
             m_canvas->set_background_color(
                 Vector4i(rand() % 256, rand() % 256, rand() % 256, 255));
         });
 
-        Button *b1 = new Button(tools, "Random Rotation");
+        Button *b1 = memory_new Button(tools, "Random Rotation");
         b1->set_callback([this]() {
             m_canvas->set_rotation((float) Pi * rand() / (float) RAND_MAX);
         });
@@ -244,7 +244,7 @@ int main(int /* argc */, char ** /* argv */) {
         nanogui::init();
 
         /* scoped variables */ {
-            nanogui::ref<ExampleApplication> app = new ExampleApplication();
+            nanogui::ref<ExampleApplication> app = memory_new ExampleApplication();
             app->draw_all();
             app->set_visible(true);
             nanogui::mainloop(1 / 60.f * 1000);

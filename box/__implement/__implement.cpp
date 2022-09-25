@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = new app_simple_box::application();
+   auto papp = memory_new app_simple_box::application();
 
    int iExitCode = papp->__implement();
 
