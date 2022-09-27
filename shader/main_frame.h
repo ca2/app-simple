@@ -9,7 +9,7 @@ namespace app_simple_shader
 
 
    class CLASS_DECL_APP_SIMPLE_SHADER main_frame :
-      virtual public main_frame
+      virtual public simple_main_frame
    {
    public:
 
