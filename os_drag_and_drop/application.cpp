@@ -4,7 +4,6 @@
 #include "aura/user/user/button.h"
 
 
-IMPLEMENT_APPLICATION(simple_os_drag_and_drop)
 namespace simple_os_drag_and_drop
 {
 
