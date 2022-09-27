@@ -180,7 +180,7 @@ namespace simple_os_drag_and_drop
       if(::str().begins_eat_ci(strId, "drawing"))
       {
 
-         auto pimpact = m_papp->create_simple_os_drag_and_drop_impact(this, pimpactdata);
+         auto pimpact = get_app()->create_simple_os_drag_and_drop_impact(this, pimpactdata);
 
          pimpact->m_atom = pimpactdata->m_atom;
 
