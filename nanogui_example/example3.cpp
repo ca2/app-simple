@@ -113,7 +113,7 @@ namespace app_simple_nanogui_example
 //#endif
 //
 //    // Create a nanogui screen and pass the glfw pointer to initialize
-//    screen = new Screen();
+//    screen = memory_new Screen();
 //    screen->initialize(window, true);
 //
 //#if defined(NANOGUI_USE_OPENGL) || defined(NANOGUI_USE_GLES)
@@ -126,7 +126,7 @@ namespace app_simple_nanogui_example
 //
     // Create nanogui gui
     bool enabled = true;
-    FormHelper *gui = new FormHelper(this);
+    FormHelper *gui = memory_new FormHelper(this);
     m_window = gui->add_window(Vector2i(10, 10), "Form helper example");
     gui->add_group("Basic types");
     gui->add_variable("bool", bvar)->set_tooltip("Test tooltip.");
@@ -145,7 +145,7 @@ namespace app_simple_nanogui_example
     gui->add_button("A button", []()
        { message_box_synchronous(nullptr, "Button pressed."); }
     )
-       ->set_tooltip("Testing a much longer tooltip, that will wrap around to new lines multiple times.");;
+       ->set_tooltip("Testing a much longer tooltip, that will wrap around to memory_new lines multiple times.");;
 
     this->set_visible(true);
     //screen->perform_layout();

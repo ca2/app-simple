@@ -2,7 +2,7 @@
 #include "application.h"
 
 
-IMPLEMENT_APPLICATION(app_simple_application)
+//IMPLEMENT_APPLICATION(app_simple_application)
 
 
 
@@ -10,7 +10,7 @@ IMPLEMENT_APPLICATION(app_simple_application)
 //CLASS_DECL_IMPORT::acme::application * CONCATENATE_ID(new_, APPLICATION)() \
 //{ \
 //  \
-//   return new ::APPLICATION::application();  \
+//   return memory_new ::APPLICATION::application();  \
 //  \
 //}
 

@@ -56,18 +56,18 @@ namespace app_simple_nanogui_example
          //if (use_gl_4_1) {
          //   // NanoGUI presents many options for you to utilize at your discretion.
          //   // See include/nanogui/screen.h for what all of these represent.
-         //   screen = new Screen(Vector2i(500, 700), "NanoGUI test [GL 4.1]",
+         //   screen = memory_new Screen(Vector2i(500, 700), "NanoGUI test [GL 4.1]",
          //      /* resizable */ true, /* fullscreen */ false,
          //      /* depth_buffer */ true, /* stencil_buffer */ true,
          //      /* float_buffer */ false, /* gl_major */ 4,
          //      /* gl_minor */ 1);
          //}
          //else {
-         //   screen = new Screen(Vector2i(500, 700), "NanoGUI test");
+         //   screen = memory_new Screen(Vector2i(500, 700), "NanoGUI test");
          //}
 
          bool enabled = true;
-         nanogui::FormHelper * gui = new ::nanogui::FormHelper(this);
+         nanogui::FormHelper * gui = memory_new ::nanogui::FormHelper(this);
          m_window = gui->add_window(::nanogui::Vector2i(10, 10), "Form helper example");
          gui->add_group("Basic types");
          gui->add_variable("bool", bvar);
@@ -101,13 +101,13 @@ namespace app_simple_nanogui_example
       //return 0;
 
 
-         auto window = new Window(this, "Navigation");
+         auto window = memory_new Window(this, "Navigation");
          window->set_position(Vector2i(15, 680));
-         window->set_layout(new GroupLayout());
+         window->set_layout(memory_new GroupLayout());
 
 
 
-         auto b = new Button(window, "Next Example");
+         auto b = memory_new Button(window, "Next Example");
          b->set_callback(
             [this]
             {
@@ -118,7 +118,7 @@ namespace app_simple_nanogui_example
 
 
             });
-         b = new Button(window, "Previous Example");
+         b = memory_new Button(window, "Previous Example");
          b->set_callback(
             [this]
             {

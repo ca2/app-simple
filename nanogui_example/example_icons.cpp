@@ -32,7 +32,7 @@ using namespace nanogui;
 // `icon` should be the defined constant in nanogui/entypo.h
 // the button label will be the string that represents this
 #define ADD_BUTTON(icon)                                   \
-    auto b_##icon = new Button(wrapper, #icon, icon);      \
+    auto b_##icon = memory_new Button(wrapper, #icon, icon);      \
     b_##icon->set_icon_position(Button::IconPosition::Left); \
     b_##icon->set_fixed_width(half_width);
 namespace app_simple_nanogui_example
@@ -51,21 +51,21 @@ namespace app_simple_nanogui_example
         static constexpr int height     = 800;
 
         // create a fixed size screen with one window
-        //Screen *screen = new Screen({width, height}, "NanoGUI Icons", false);
+        //Screen *screen = memory_new Screen({width, height}, "NanoGUI Icons", false);
 
-        Window *window = new Window(this, "All Icons");
+        Window *window = memory_new Window(this, "All Icons");
         m_window = window;
         window->set_position({0, 0});
         window->set_fixed_size({width, height});
 
         // attach a vertical scroll panel
-        auto vscroll = new VScrollPanel(window);
+        auto vscroll = memory_new VScrollPanel(window);
         vscroll->set_fixed_size({width, height});
 
         // vscroll should only have *ONE* child. this is what `wrapper` is for
-        auto wrapper = new Widget(vscroll);
+        auto wrapper = memory_new Widget(vscroll);
         wrapper->set_fixed_size({width, height});
-        wrapper->set_layout(new GridLayout());// defaults: 2 columns
+        wrapper->set_layout(memory_new GridLayout());// defaults: 2 columns
 
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
