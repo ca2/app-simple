@@ -13,7 +13,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-//#define new ACME_NEW
+////#define memory_new ACME_NEW
 //IMPLEMENT_APPLICATION(app_simple_shortcut)
 
 namespace app_simple_shortcut
@@ -33,7 +33,7 @@ namespace app_simple_shortcut
 
       m_bMultiverseChat          = true;
 
-//auto test = new int;
+//auto test = memory_new int;
 
    }
 
@@ -210,7 +210,7 @@ namespace app_simple_shortcut
 //::acme::library * app_simple_shortcut_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
+//   return memory_new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
 //
 //}
 //

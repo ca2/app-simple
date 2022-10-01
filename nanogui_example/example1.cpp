@@ -32,16 +32,16 @@ namespace app_simple_nanogui_example
    {
 
       inc_ref();
-      Window * window = new Window(this, "Button demo");
+      Window * window = memory_new Window(this, "Button demo");
       window->set_position(Vector2i(15, 15));
-      window->set_layout(new GroupLayout());
+      window->set_layout(memory_new GroupLayout());
 
       ///* No need to store a pointer, the data structure will be automatically
       //   freed when the parent window is deleted */
-      new Label(window, "Push buttons", "sans-bold");
+      memory_new Label(window, "Push buttons", "sans-bold");
 
 
-      Button * b = new Button(window, "Plain button");
+      Button * b = memory_new Button(window, "Plain button");
       b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */ });
       b->set_tooltip("short tooltip");
 
@@ -52,8 +52,8 @@ namespace app_simple_nanogui_example
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
       
-      new Label(window, "Toggle buttons", "sans-bold");
-      b = new Button(window, "Toggle me");
+      memory_new Label(window, "Toggle buttons", "sans-bold");
+      b = memory_new Button(window, "Toggle me");
       b->set_flags(Button::ToggleButton);
       b->set_change_callback([this](bool state)
          {
@@ -64,61 +64,61 @@ namespace app_simple_nanogui_example
          
          });
       
-         new Label(window, "Radio buttons", "sans-bold");
-         b = new Button(window, "Radio button 1");
+         memory_new Label(window, "Radio buttons", "sans-bold");
+         b = memory_new Button(window, "Radio button 1");
          b->set_flags(Button::RadioButton);
-         b = new Button(window, "Radio button 2");
+         b = memory_new Button(window, "Radio button 2");
          b->set_flags(Button::RadioButton);
       
-               new Label(window, "A tool palette", "sans-bold");
-               Widget * tools = new Widget(window);
-               tools->set_layout(new BoxLayout(Orientation::Horizontal,
+               memory_new Label(window, "A tool palette", "sans-bold");
+               Widget * tools = memory_new Widget(window);
+               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
       
-               b = new ToolButton(tools, FA_CLOUD);
-               b = new ToolButton(tools, FA_FAST_FORWARD);
-               b = new ToolButton(tools, FA_COMPASS);
-               b = new ToolButton(tools, FA_UTENSILS);
+               b = memory_new ToolButton(tools, FA_CLOUD);
+               b = memory_new ToolButton(tools, FA_FAST_FORWARD);
+               b = memory_new ToolButton(tools, FA_COMPASS);
+               b = memory_new ToolButton(tools, FA_UTENSILS);
       
-               new Label(window, "Popup buttons", "sans-bold");
-               PopupButton * popup_btn = new PopupButton(window, "Popup", FA_FLASK);
+               memory_new Label(window, "Popup buttons", "sans-bold");
+               PopupButton * popup_btn = memory_new PopupButton(window, "Popup", FA_FLASK);
                Popup * popup = popup_btn->popup();
-               popup->set_layout(new GroupLayout());
-               new Label(popup, "Arbitrary widgets can be placed here");
-               new CheckBox(popup, "A check box");
+               popup->set_layout(memory_new GroupLayout());
+               memory_new Label(popup, "Arbitrary widgets can be placed here");
+               memory_new CheckBox(popup, "A check box");
                // popup right
-               popup_btn = new PopupButton(popup, "Recursive popup", FA_CHART_PIE);
+               popup_btn = memory_new PopupButton(popup, "Recursive popup", FA_CHART_PIE);
                Popup * popup_right = popup_btn->popup();
-               popup_right->set_layout(new GroupLayout());
-               new CheckBox(popup_right, "Another check box");
+               popup_right->set_layout(memory_new GroupLayout());
+               memory_new CheckBox(popup_right, "Another check box");
                // popup left
-               popup_btn = new PopupButton(popup, "Recursive popup", FA_DNA);
+               popup_btn = memory_new PopupButton(popup, "Recursive popup", FA_DNA);
                popup_btn->set_side(Popup::Side::Left);
                Popup * popup_left = popup_btn->popup();
-               popup_left->set_layout(new GroupLayout());
-               new CheckBox(popup_left, "Another check box");
+               popup_left->set_layout(memory_new GroupLayout());
+               memory_new CheckBox(popup_left, "Another check box");
       
-               window = new Window(this, "Basic widgets");
+               window = memory_new Window(this, "Basic widgets");
                window->set_position(Vector2i(200, 15));
-               window->set_layout(new GroupLayout());
+               window->set_layout(memory_new GroupLayout());
       
-               new Label(window, "Message dialog", "sans-bold");
-               tools = new Widget(window);
-               tools->set_layout(new BoxLayout(Orientation::Horizontal,
+               memory_new Label(window, "Message dialog", "sans-bold");
+               tools = memory_new Widget(window);
+               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
-               b = new Button(tools, "Info");
+               b = memory_new Button(tools, "Info");
                b->set_callback([this] {
-                  auto dlg = new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
+                  auto dlg = memory_new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
-               b = new Button(tools, "Warn");
+               b = memory_new Button(tools, "Warn");
                b->set_callback([this] {
-                  auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
+                  auto dlg = memory_new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
-               b = new Button(tools, "Ask");
+               b = memory_new Button(tools, "Ask");
                b->set_callback([this] {
-                  auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
+                  auto dlg = memory_new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + __string(result)); });
                   });
       
@@ -141,18 +141,18 @@ namespace app_simple_nanogui_example
       //         }
       //#endif
       
-               new Label(window, "Image panel & scroll panel", "sans-bold");
-               PopupButton * image_panel_btn = new PopupButton(window, "Image Panel");
+               memory_new Label(window, "Image panel & scroll panel", "sans-bold");
+               PopupButton * image_panel_btn = memory_new PopupButton(window, "Image Panel");
                image_panel_btn->set_icon(FA_IMAGES);
                popup = image_panel_btn->popup();
-               VScrollPanel * vscroll = new VScrollPanel(popup);
-               ImagePanel * img_panel = new ImagePanel(vscroll);
+               VScrollPanel * vscroll = memory_new VScrollPanel(popup);
+               ImagePanel * img_panel = memory_new ImagePanel(vscroll);
                img_panel->load_image_directory("matter://icons");
                popup->set_fixed_size(Vector2i(245, 150));
       
-               auto image_window = new Window(this, "Selected image");
+               auto image_window = memory_new Window(this, "Selected image");
                image_window->set_position(Vector2i(710, 15));
-               image_window->set_layout(new GroupLayout(3));
+               image_window->set_layout(memory_new GroupLayout(3));
       
                //// Create a Texture instance for each object
                //for (auto & icon : icons) {
@@ -163,7 +163,7 @@ namespace app_simple_nanogui_example
                //      stbi_image_free);
                //   assert(n == 4);
       
-               //   Texture * tex = new Texture(
+               //   Texture * tex = memory_new Texture(
                //      Texture::PixelFormat::RGBA,
                //      Texture::ComponentFormat::UInt8,
                //      size,
@@ -175,7 +175,7 @@ namespace app_simple_nanogui_example
                //   m_images.emplace_back(tex, std::move(texture_data));
                //}
       
-               ImageImpact * image_impact = new ImageImpact(image_window);
+               ImageImpact * image_impact = memory_new ImageImpact(image_window);
                //if (!m_images.empty())
                  // image_impact->set_image(m_images[0].first);
                image_impact->center();
@@ -198,11 +198,11 @@ namespace app_simple_nanogui_example
                //   }
                //);
       
-               new Label(window, "File dialog", "sans-bold");
-               tools = new Widget(window);
-               tools->set_layout(new BoxLayout(Orientation::Horizontal,
+               memory_new Label(window, "File dialog", "sans-bold");
+               tools = memory_new Widget(window);
+               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
-               b = new Button(tools, "Open");
+               b = memory_new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
                   //m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_impact]()
@@ -229,7 +229,7 @@ namespace app_simple_nanogui_example
                   
                  // });
 
-               b = new Button(tools, "Save");
+               b = memory_new Button(tools, "Save");
                b->set_callback([this,image_impact]
                {
                   
@@ -252,10 +252,10 @@ namespace app_simple_nanogui_example
 
                });
       
-               new Label(window, "Combo box", "sans-bold");
-               new ComboBox(window, { "Combo box item 1", "Combo box item 2", "Combo box item 3" });
-               new Label(window, "Check box", "sans-bold");
-               CheckBox * cb = new CheckBox(window, "Flag 1",
+               memory_new Label(window, "Combo box", "sans-bold");
+               memory_new ComboBox(window, { "Combo box item 1", "Combo box item 2", "Combo box item 3" });
+               memory_new Label(window, "Check box", "sans-bold");
+               CheckBox * cb = memory_new CheckBox(window, "Flag 1",
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
@@ -264,7 +264,7 @@ namespace app_simple_nanogui_example
                   }
                );
                cb->set_checked(true);
-               cb = new CheckBox(window, "Flag 2",
+               cb = memory_new CheckBox(window, "Flag 2",
                   [this](bool state) {
                      
                      string_stream str;
@@ -273,20 +273,20 @@ namespace app_simple_nanogui_example
 
                   }
                );
-               new Label(window, "Progress bar", "sans-bold");
-               m_progress = new ProgressBar(window);
+               memory_new Label(window, "Progress bar", "sans-bold");
+               m_progress = memory_new ProgressBar(window);
       
-               new Label(window, "Slider and text box", "sans-bold");
+               memory_new Label(window, "Slider and text box", "sans-bold");
       
-               Widget * panel = new Widget(window);
-               panel->set_layout(new BoxLayout(Orientation::Horizontal,
+               Widget * panel = memory_new Widget(window);
+               panel->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 20));
       
-               Slider * slider = new Slider(panel);
+               Slider * slider = memory_new Slider(panel);
                slider->set_value(0.5f);
                slider->set_fixed_width(80);
       
-               TextBox * text_box = new TextBox(panel);
+               TextBox * text_box = memory_new TextBox(panel);
                text_box->set_fixed_size(Vector2i(60, 25));
                text_box->set_value("50");
                text_box->set_units("%");
@@ -303,22 +303,22 @@ namespace app_simple_nanogui_example
                text_box->set_font_size(20);
                text_box->set_alignment(TextBox::Alignment::Right);
       
-               window = new Window(this, "Misc. widgets");
+               window = memory_new Window(this, "Misc. widgets");
                window->set_position(Vector2i(425, 15));
-               window->set_layout(new GroupLayout());
+               window->set_layout(memory_new GroupLayout());
       
                TabWidget * tab_widget = window->add<TabWidget>();
       
-               Widget * layer = new Widget(tab_widget);
-               layer->set_layout(new GroupLayout());
+               Widget * layer = memory_new Widget(tab_widget);
+               layer->set_layout(memory_new GroupLayout());
                tab_widget->append_tab("Color Wheel", layer);
       
                // Use overloaded variadic add to fill the tab widget with Different tabs.
                layer->add<Label>("Color wheel widget", "sans-bold");
                layer->add<ColorWheel>();
       
-               layer = new Widget(tab_widget);
-               layer->set_layout(new GroupLayout());
+               layer = memory_new Widget(tab_widget);
+               layer->set_layout(memory_new GroupLayout());
                tab_widget->append_tab("Function Graph", layer);
       
                layer->add<Label>("Function graph widget", "sans-bold");
@@ -334,18 +334,18 @@ namespace app_simple_nanogui_example
                      0.5f * std::cos(i / 23.f) + 1);
       
                // Dummy tab used to represent the last tab button.
-               int plus_id = tab_widget->append_tab("+", new Widget(tab_widget));
+               int plus_id = tab_widget->append_tab("+", memory_new Widget(tab_widget));
       
                // A simple counter.
                int counter = 1;
                tab_widget->set_callback([tab_widget, this, counter, plus_id](int id) mutable {
                   if (id == plus_id) {
-                     // When the "+" tab has been clicked, simply add a new tab.
+                     // When the "+" tab has been clicked, simply add a memory_new tab.
                      std::string tab_name = "Dynamic " + std::to_string(counter);
-                     Widget * layer_dyn = new Widget(tab_widget);
+                     Widget * layer_dyn = memory_new Widget(tab_widget);
                      int new_id = tab_widget->insert_tab(tab_widget->tab_count() - 1,
                         tab_name, layer_dyn);
-                     layer_dyn->set_layout(new GroupLayout());
+                     layer_dyn->set_layout(memory_new GroupLayout());
                      layer_dyn->add<Label>("Function graph widget", "sans-bold");
                      Graph * graph_dyn = layer_dyn->add<Graph>("Dynamic function");
       
@@ -369,7 +369,7 @@ namespace app_simple_nanogui_example
                // A button to go back to the first tab and scroll the window.
                panel = window->add<Widget>();
                panel->add<Label>("Jump to tab: ");
-               panel->set_layout(new BoxLayout(Orientation::Horizontal,
+               panel->set_layout(memory_new BoxLayout(Orientation::Horizontal,
                   Alignment::Middle, 0, 6));
       
                auto ib = panel->add<IntBox<int>>();
@@ -384,10 +384,10 @@ namespace app_simple_nanogui_example
                      tab_widget->set_selected_index(value);
                   });
       
-               window = new Window(this, "Grid of small widgets");
+               window = memory_new Window(this, "Grid of small widgets");
                window->set_position(Vector2i(425, 300));
                GridLayout * layout =
-                  new GridLayout(Orientation::Horizontal, 2,
+                  memory_new GridLayout(Orientation::Horizontal, 2,
                      Alignment::Middle, 15, 5);
                layout->set_col_alignment(
                   { Alignment::Maximum, Alignment::Fill });
@@ -395,8 +395,8 @@ namespace app_simple_nanogui_example
                window->set_layout(layout);
       
                /* FP widget */ {
-                  new Label(window, "Floating point :", "sans-bold");
-                  text_box = new TextBox(window);
+                  memory_new Label(window, "Floating point :", "sans-bold");
+                  text_box = memory_new TextBox(window);
                   text_box->set_editable(true);
                   text_box->set_fixed_size(Vector2i(100, 20));
                   text_box->set_value("50");
@@ -407,8 +407,8 @@ namespace app_simple_nanogui_example
                }
       
                /* Positive integer widget */ {
-                  new Label(window, "Positive integer :", "sans-bold");
-                  auto int_box = new IntBox<int>(window);
+                  memory_new Label(window, "Positive integer :", "sans-bold");
+                  auto int_box = memory_new IntBox<int>(window);
                   int_box->set_editable(true);
                   int_box->set_fixed_size(Vector2i(100, 20));
                   int_box->set_value(50);
@@ -422,21 +422,21 @@ namespace app_simple_nanogui_example
                }
       
                /* Checkbox widget */ {
-                  new Label(window, "Checkbox :", "sans-bold");
+                  memory_new Label(window, "Checkbox :", "sans-bold");
       
-                  cb = new CheckBox(window, "Check me");
+                  cb = memory_new CheckBox(window, "Check me");
                   cb->set_font_size(16);
                   cb->set_checked(true);
                }
       
-               new Label(window, "Combo box :", "sans-bold");
+               memory_new Label(window, "Combo box :", "sans-bold");
                ComboBox * cobo =
-                  new ComboBox(window, { "Item 1", "Item 2", "Item 3" });
+                  memory_new ComboBox(window, { "Item 1", "Item 2", "Item 3" });
                cobo->set_font_size(16);
                cobo->set_fixed_size(Vector2i(100, 20));
       
-               new Label(window, "Color picker :", "sans-bold");
-               auto cp = new ColorPicker(window, { 255, 120, 0, 255 });
+               memory_new Label(window, "Color picker :", "sans-bold");
+               auto cp = memory_new ColorPicker(window, { 255, 120, 0, 255 });
                cp->set_fixed_size({ 100, 20 });
                cp->set_final_callback([this](const Color & c) {
                   string_stream str;
@@ -447,29 +447,29 @@ namespace app_simple_nanogui_example
                      << c.w() << "]";
                   message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
                   });
-               // setup a fast callback for the color picker widget on a new window
+               // setup a fast callback for the color picker widget on a memory_new window
                // for demonstrative purposes
-               window = new Window(this, "Color Picker Fast Callback");
-               layout = new GridLayout(Orientation::Horizontal, 2,
+               window = memory_new Window(this, "Color Picker Fast Callback");
+               layout = memory_new GridLayout(Orientation::Horizontal, 2,
                   Alignment::Middle, 15, 5);
                layout->set_col_alignment(
                   { Alignment::Maximum, Alignment::Fill });
                layout->set_spacing(0, 10);
                window->set_layout(layout);
                window->set_position(Vector2i(425, 500));
-               new Label(window, "Combined: ");
-               b = new Button(window, "ColorWheel", FA_INFINITY);
-               new Label(window, "Red: ");
-               auto red_int_box = new IntBox<int>(window);
+               memory_new Label(window, "Combined: ");
+               b = memory_new Button(window, "ColorWheel", FA_INFINITY);
+               memory_new Label(window, "Red: ");
+               auto red_int_box = memory_new IntBox<int>(window);
                red_int_box->set_editable(false);
-               new Label(window, "Green: ");
-               auto green_int_box = new IntBox<int>(window);
+               memory_new Label(window, "Green: ");
+               auto green_int_box = memory_new IntBox<int>(window);
                green_int_box->set_editable(false);
-               new Label(window, "Blue: ");
-               auto blue_int_box = new IntBox<int>(window);
+               memory_new Label(window, "Blue: ");
+               auto blue_int_box = memory_new IntBox<int>(window);
                blue_int_box->set_editable(false);
-               new Label(window, "Alpha: ");
-               auto alpha_int_box = new IntBox<int>(window);
+               memory_new Label(window, "Alpha: ");
+               auto alpha_int_box = memory_new IntBox<int>(window);
       
                cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const Color & c) {
                   b->set_background_color(c);
@@ -485,13 +485,13 @@ namespace app_simple_nanogui_example
                   });
       
 
-               window = new Window(this, "Navigation");
+               window = memory_new Window(this, "Navigation");
                window->set_position(Vector2i(15, 680));
-               window->set_layout(new GroupLayout());
+               window->set_layout(memory_new GroupLayout());
 
 
 
-               b = new Button(window, "Next Example");
+               b = memory_new Button(window, "Next Example");
                b->set_callback(
                   [this] 
                   { 
@@ -502,7 +502,7 @@ namespace app_simple_nanogui_example
 
 
                   });
-               b = new Button(window, "Previous Example");
+               b = memory_new Button(window, "Previous Example");
                b->set_callback(
                   [this]
                   {
@@ -521,7 +521,7 @@ namespace app_simple_nanogui_example
    //void start(ExampleApplication *& papplication, ::user::interaction * puserinteraction)
    //{
 
-   //   papplication = new ExampleApplication;
+   //   papplication = memory_new ExampleApplication;
 
    //   papplication->_nanogui_to_user(puserinteraction);
 

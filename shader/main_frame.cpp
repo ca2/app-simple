@@ -41,7 +41,7 @@ namespace app_simple_shader
    ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_frame_window::frame_experience(nullptr, "013", "LightBlue");
 
       return pframe;
 
@@ -61,7 +61,7 @@ namespace app_simple_shader
 
       simple_frame_window::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create,pchannel,this,&simple_main_frame::on_message_create);
+      MESSAGE_LINK(e_message_create,pchannel,this,&main_frame::on_message_create);
 
    }
 

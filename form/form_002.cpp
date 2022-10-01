@@ -110,7 +110,7 @@ namespace app_simple_form
 
       m_pbutton->add_handler(this);
 
-      m_pstill->set_window_text("Enter new text:");
+      m_pstill->set_window_text("Enter memory_new text:");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 

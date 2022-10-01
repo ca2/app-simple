@@ -13,7 +13,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-//#define new ACME_NEW
+////#define memory_new ACME_NEW
 ///IMPLEMENT_APPLICATION(app_simple_change_grub_default_entry)
 namespace app_simple_change_grub_default_entry
 {
