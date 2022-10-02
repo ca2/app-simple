@@ -29,9 +29,9 @@
 		9AA2F2902847DCBF00A747A1 /* libios_axis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA2F2822847DCBC00A747A1 /* libios_axis.a */; };
 		9AA2F2922847DCBF00A747A1 /* libios_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA2F2832847DCBC00A747A1 /* libios_base.a */; };
 		9AA2F2942847DCC000A747A1 /* libios_crypto_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B75D2846ED10005ACD11 /* libios_crypto_openssl.a */; };
-		9AA2F2962847DCC100A747A1 /* lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7662846ED10005ACD11 /* lib.a */; };
+		9AA2F2962847DCC100A747A1 /* libios_database_sqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7662846ED10005ACD11 /* libios_database_sqlite3.a */; };
 		9AA2F2982847DCC100A747A1 /* libios_draw2d_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B73F2846ED0F005ACD11 /* libios_draw2d_quartz2d.a */; };
-		9AA2F29A2847DCC200A747A1 /* libios_experience_tranquillum.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.dylib */; };
+		9AA2F29A2847DCC200A747A1 /* libios_experience_tranquillum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.a */; };
 		9AA2F29B2847DCC200A747A1 /* libios_folder_zip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7482846ED0F005ACD11 /* libios_folder_zip.a */; };
 		9AA2F29D2847DCC300A747A1 /* libios_idn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA2F2842847DCBC00A747A1 /* libios_idn.a */; };
 		9AA2F29F2847DCC400A747A1 /* libios_imaging_coreimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7342846ED0F005ACD11 /* libios_imaging_coreimage.a */; };
@@ -41,7 +41,7 @@
 		9AE86D1C2858924600F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C14285891B400F88364 /* Launch Screen.storyboard */; };
 		9AE86D1D2858924800F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C13285891B400F88364 /* Images.xcassets */; };
 		9AE86D1E2858924A00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C0A285891B400F88364 /* _matter.zip */; };
-		9AE86D4C2858A15700F88364 /* _main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE86C17285891B400F88364 /* _main.cpp */; };
+		9AE86D4C2858A15700F88364 /* __implement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE86C17285891B400F88364 /* __implement.cpp */; };
 		9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B5903518866047002C6FEC /* CoreFoundation.framework */; };
 		9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C41F21C33E00FDAF74 /* libbz2.tbd */; };
 		9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C21F21C33500FDAF74 /* libz.tbd */; };
@@ -204,7 +204,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A93B75E2846ED10005ACD11 /* database_sqlite3.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A93B4A92846E5EF005ACD11;
+			remoteGlobalIDString = 9A0DB3D62864314500D061F7;
 			remoteInfo = ios_database_sqlite3;
 		};
 		9AA2EF262847D88800A747A1 /* PBXContainerItemProxy */ = {
@@ -398,7 +398,7 @@
 		9AE86C13285891B400F88364 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE86C14285891B400F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AE86C15285891B400F88364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AE86C17285891B400F88364 /* _main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _main.cpp; sourceTree = "<group>"; };
+		9AE86C17285891B400F88364 /* __implement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = __implement.cpp; sourceTree = "<group>"; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		9AF761581F84386100FDE7CC /* libios_axisfreeimage.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_axisfreeimage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF7615A1F84386A00FDE7CC /* libios_axisidn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_axisidn.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,7 +435,7 @@
 				9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */,
 				9AF7615D1F84388800FDE7CC /* CoreText.framework in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
-				9AA2F2962847DCC100A747A1 /* lib.a in Frameworks */,
+				9AA2F2962847DCC100A747A1 /* libios_database_sqlite3.a in Frameworks */,
 				9AA2F29B2847DCC200A747A1 /* libios_folder_zip.a in Frameworks */,
 				9AF7615E1F84389000FDE7CC /* libsqlite3.tbd in Frameworks */,
 				9AF7615B1F84387700FDE7CC /* libiconv.tbd in Frameworks */,
@@ -444,7 +444,7 @@
 				9AA2F26E2847DC4F00A747A1 /* libios_acme_apple.a in Frameworks */,
 				9AA2F2922847DCBF00A747A1 /* libios_base.a in Frameworks */,
 				9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */,
-				9AA2F29A2847DCC200A747A1 /* libios_experience_tranquillum.dylib in Frameworks */,
+				9AA2F29A2847DCC200A747A1 /* libios_experience_tranquillum.a in Frameworks */,
 				9AA2F28A2847DCBD00A747A1 /* libios_aura_apple.a in Frameworks */,
 				9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */,
 				9AA2F2722847DC5000A747A1 /* libios_acme_posix.a in Frameworks */,
@@ -725,7 +725,7 @@
 			isa = PBXGroup;
 			children = (
 				9A93B7642846ED10005ACD11 /* lib.dylib */,
-				9A93B7662846ED10005ACD11 /* lib.a */,
+				9A93B7662846ED10005ACD11 /* libios_database_sqlite3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -743,7 +743,7 @@
 			isa = PBXGroup;
 			children = (
 				9A93B77D2846ED14005ACD11 /* libexperience_tranquillum.dylib */,
-				9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.dylib */,
+				9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.a */,
 				9A93B7812846ED14005ACD11 /* experience_lite_iosTests.xctest */,
 			);
 			name = Products;
@@ -762,7 +762,7 @@
 			children = (
 				9AE86C10285891B400F88364 /* ios */,
 				9AE86C0A285891B400F88364 /* _matter.zip */,
-				9AE86C17285891B400F88364 /* _main.cpp */,
+				9AE86C17285891B400F88364 /* __implement.cpp */,
 			);
 			name = form;
 			sourceTree = "<group>";
@@ -998,15 +998,13 @@
 		9A93B7642846ED10005ACD11 /* lib.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.dylib;
 			path = libdatabase_sqlite3.dylib;
 			remoteRef = 9A93B7632846ED10005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B7662846ED10005ACD11 /* lib.a */ = {
+		9A93B7662846ED10005ACD11 /* libios_database_sqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = lib.a;
 			path = libios_database_sqlite3.a;
 			remoteRef = 9A93B7652846ED10005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1033,10 +1031,10 @@
 			remoteRef = 9A93B77C2846ED14005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.dylib */ = {
+		9A93B77F2846ED14005ACD11 /* libios_experience_tranquillum.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_experience_tranquillum.dylib;
+			path = libios_experience_tranquillum.a;
 			remoteRef = 9A93B77E2846ED14005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1081,7 +1079,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE86D4C2858A15700F88364 /* _main.cpp in Sources */,
+				9AE86D4C2858A15700F88364 /* __implement.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
