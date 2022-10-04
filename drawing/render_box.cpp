@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "render.h"
 #include <math.h>
 #include "aura/graphics/draw2d/graphics.h"
