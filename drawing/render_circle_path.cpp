@@ -25,11 +25,11 @@ namespace app_simple_drawing
 
       ::rectangle_f64 r(300, 300, 800, 800);
 
-      double dx = m_rectangle.width() / 1000.0;
+      double Δx = m_rectangle.width() / 1000.0;
 
-      double dy = m_rectangle.height() / 900.0;
+      double Δy = m_rectangle.height() / 900.0;
 
-      double d = minimum(dx, dy);
+      double d = minimum(Δx, Δy);
 
       r *= d;
 
