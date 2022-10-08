@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/user/user/document.h"
@@ -36,7 +36,7 @@ namespace app_simple_box
 #endif
 
 
-      ::stream& write(::stream& stream) const override;
+      //::stream& write(::stream& stream) const override;
 
 
    };

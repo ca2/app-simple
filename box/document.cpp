@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "document.h"
 #include "impact.h"
 #include "application.h"
@@ -96,12 +96,12 @@ namespace app_simple_box
 #endif
 
 
-   stream& document::write(::stream& stream) const
-   {
+   //stream& document::write(::stream& stream) const
+   //{
 
-      return stream;
+   //   return stream;
 
-   }
+   //}
 
 
 } // namespace app_simple_box

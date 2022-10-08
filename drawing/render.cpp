@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "render.h"
 #include "application.h"
 #include "base/user/user/impact.h"
@@ -7,6 +7,7 @@
 #include <math.h>
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/draw2d.h"
+#include "acme/graphics/draw2d/_binary_stream.h"
 
 
 CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs

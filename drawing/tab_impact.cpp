@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "tab_impact.h"
 #include "application.h"
 #include "impact.h"
@@ -84,7 +84,7 @@ namespace app_simple_drawing
 
       stra.explode("->:<-",strId);
 
-      string strImpactId = get_impact_id().to_string();
+      string strImpactId = get_impact_id();
 
       if(::str().begins(strImpactId, "drawing"))
       {
