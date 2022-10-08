@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/user/user/document.h"
@@ -29,7 +29,7 @@ namespace app_simple_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual ::stream& write(::stream& stream) const override;
+      //virtual ::stream& write(::stream& stream) const override;
 
 
    };
