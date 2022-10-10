@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 
 
 
@@ -57,8 +57,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      string strPath = payloadFile.get_file_path();
-
+      string strPath = payloadFile.file_path();
 
       return true;
 
