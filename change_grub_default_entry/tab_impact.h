@@ -21,7 +21,7 @@ namespace app_simple_change_grub_default_entry
       string                                          m_strTopicTitle;
 
 
-      __pointer(::user::document)                            m_pdocMenu;
+      ::pointer<::user::document>                            m_pdocMenu;
 
 
       tab_impact();

@@ -78,7 +78,7 @@ namespace app_simple_change_grub_default_entry
    void form_001::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create> pcreate(pmessage);
 
       pcreate->previous();
 
@@ -89,13 +89,13 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      __compose_new(m_pstill);
+      __construct_new(m_pstill);
 
-      __compose_new(m_pedit);
+      __construct_new(m_pedit);
 
-      __compose_new(m_plistbox);
+      __construct_new(m_plistbox);
 
-      __compose_new(m_pbuttonRestart);
+      __construct_new(m_pbuttonRestart);
 
       m_pstill->create_control(this, "still");
 

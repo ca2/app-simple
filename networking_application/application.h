@@ -36,7 +36,7 @@ namespace app_simple_networking_application
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(impact) create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
       void create_networking_application() override;

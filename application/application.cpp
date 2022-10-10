@@ -70,7 +70,7 @@ namespace app_simple_application
                                __type(main_frame),
                                __type(impact)));
 
-      __compose(m_ptemplateSimpleDrawingMain, pdoctemplate);
+      __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
       auto psession = get_session();
 

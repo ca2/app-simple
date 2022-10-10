@@ -14,15 +14,15 @@ namespace app_simple_shortcut
    public:
 
 
-      __composite(::user::still)             m_pstillFolder;
-      __composite(::user::plain_edit)        m_peditFolder;
-      __composite(::user::still)             m_pstillSource;
-      __composite(::user::plain_edit)        m_peditSource;
-      __composite(::user::still)             m_pstillTarget;
-      __composite(::user::plain_edit)        m_peditTarget;
-      __composite(::user::button)            m_pbuttonClear;
-      __composite(::user::button)            m_pbuttonSend;
-      __composite(::user::still)             m_pstillReceiver;
+      ::pointer<::user::still>             m_pstillFolder;
+      ::pointer<::user::plain_edit>        m_peditFolder;
+      ::pointer<::user::still>             m_pstillSource;
+      ::pointer<::user::plain_edit>        m_peditSource;
+      ::pointer<::user::still>             m_pstillTarget;
+      ::pointer<::user::plain_edit>        m_peditTarget;
+      ::pointer<::user::button>            m_pbuttonClear;
+      ::pointer<::user::button>            m_pbuttonSend;
+      ::pointer<::user::still>             m_pstillReceiver;
 
 
       form_001();

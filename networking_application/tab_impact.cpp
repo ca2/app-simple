@@ -98,7 +98,7 @@ namespace app_simple_networking_application
       if (get_impact_id() == MENU_IMPACT)
       {
 
-         __pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
+         ::pointer<::user::menu_list_impact> pmenuview = get_impact_uie();
 
          pmenuview->destroy();
 
@@ -111,7 +111,7 @@ namespace app_simple_networking_application
 
       }
 
-      string strImpactId = get_impact_id().to_string();
+      string strImpactId = get_impact_id();
 
       if(::str().begins(strImpactId, "drawing"))
       {

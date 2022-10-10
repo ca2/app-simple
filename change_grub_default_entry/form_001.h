@@ -14,11 +14,11 @@ namespace app_simple_change_grub_default_entry
    public:
 
 
-      __composite(::user::still)             m_pstill;
-      __composite(::user::plain_edit)        m_pedit;
-      //__composite(::user::button)            m_pbuttonClear;
-      __composite(::user::button)            m_pbuttonRestart;
-      __composite(::user::list_box)          m_plistbox;
+      ::pointer<::user::still>             m_pstill;
+      ::pointer<::user::plain_edit>        m_pedit;
+      //::pointer<::user::button>            m_pbuttonClear;
+      ::pointer<::user::button>            m_pbuttonRestart;
+      ::pointer<::user::list_box>          m_plistbox;
 
 
       form_001();

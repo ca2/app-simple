@@ -21,7 +21,7 @@ namespace simple_os_drag_and_drop
       string                                          m_strTopicTitle;
 
 
-      __pointer(::user::document)                     m_pdocMenu;
+      ::pointer<::user::document>                     m_pdocMenu;
 
 
       tab_impact();

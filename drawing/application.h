@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/platform/application.h"
@@ -15,8 +15,8 @@ namespace app_simple_drawing
 
 
       __PROPERTIES(application)
-         __PROPERTY(::enum_check, m_echeckSimple, "simple_checkbox");
-         __PROPERTY(::enum_check, m_echeckNoClientFrame, "no_client_frame");
+         __PROPERTY(e_check, m_echeckSimple, "simple_checkbox");
+         __PROPERTY(e_check, m_echeckNoClientFrame, "no_client_frame");
          __PROPERTY(string, m_strSimple, "simple_text");
          __PROPERTY(string, m_strMainTitle, "main_title");
       __END_PROPERTIES(application);
@@ -43,7 +43,7 @@ namespace app_simple_drawing
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual __pointer(impact) create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
 

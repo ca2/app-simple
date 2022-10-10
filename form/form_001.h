@@ -14,11 +14,11 @@ namespace app_simple_form
    public:
 
 
-      __composite(::user::still)             m_pstill;
-      __composite(::user::plain_edit)        m_pedit;
-      __composite(::user::button)            m_pbuttonClear;
-      __composite(::user::button)            m_pbuttonSend;
-      __composite(::user::still)             m_pstillReceiver;
+      ::pointer<::user::still>             m_pstill;
+      ::pointer<::user::plain_edit>        m_pedit;
+      ::pointer<::user::button>            m_pbuttonClear;
+      ::pointer<::user::button>            m_pbuttonSend;
+      ::pointer<::user::still>             m_pstillReceiver;
 
 
       form_001();
