@@ -59,7 +59,7 @@ namespace app_simple_networking_application
 
       }
 
-      string strPath = payloadFile.get_file_path();
+      string strPath = payloadFile.file_path();
 
 
       return true;

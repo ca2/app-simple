@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "tab_impact.h"
 #include "impact.h"
 #include "application.h"
@@ -134,7 +134,7 @@ namespace app_simple_networking_application
 
          }
 
-         __refer(m_pviewTopic,m_pimpactdata->m_pplaceholder->get_hold());
+         m_pviewTopic = m_pimpactdata->m_pplaceholder->get_hold();
 
       }
       //else if (get_impact_id() == MENU_IMPACT)
