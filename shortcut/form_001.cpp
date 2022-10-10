@@ -79,7 +79,7 @@ namespace app_simple_shortcut
    void form_001::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create> pcreate(pmessage);
 
       pcreate->previous();
 
@@ -90,23 +90,23 @@ namespace app_simple_shortcut
 
       }
 
-      __compose_new(m_pstillFolder);
+      __construct_new(m_pstillFolder);
 
-      __compose_new(m_peditFolder);
+      __construct_new(m_peditFolder);
 
-      __compose_new(m_pstillSource);
+      __construct_new(m_pstillSource);
 
-      __compose_new(m_peditSource);
+      __construct_new(m_peditSource);
 
-      __compose_new(m_pstillTarget);
+      __construct_new(m_pstillTarget);
 
-      __compose_new(m_peditTarget);
+      __construct_new(m_peditTarget);
 
-      __compose_new(m_pbuttonClear);
+      __construct_new(m_pbuttonClear);
 
-      __compose_new(m_pbuttonSend);
+      __construct_new(m_pbuttonSend);
 
-      __compose_new(m_pstillReceiver);
+      __construct_new(m_pstillReceiver);
 
       m_pstillFolder->create_control(this, "still_folder");
 

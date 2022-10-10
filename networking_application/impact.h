@@ -14,7 +14,7 @@ namespace app_simple_networking_application
    public:
 
 
-      //__pointer(render)          m_prender;
+      //::pointer<render>          m_prender;
 
 
       impact();

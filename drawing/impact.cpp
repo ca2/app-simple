@@ -85,7 +85,7 @@ namespace app_simple_drawing
 
       payload(FONTSEL_IMPACT) = true;
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create> pcreate(pmessage);
 
       pcreate->previous();
 

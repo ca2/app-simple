@@ -24,7 +24,7 @@ NAMESPACE_BEGIN(nanogui)
    class NANOGUI_EXPORT Window : public Widget {
    public:
 
-      __pointer(::user::form)         m_pform;
+      ::pointer<::user::form>         m_pform;
 
 
 

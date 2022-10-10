@@ -77,7 +77,7 @@ namespace app_simple_shortcut
    void form_002::on_message_create(::message::message * pmessage)
    {
 
-      __pointer(::message::create) pcreate(pmessage);
+      ::pointer<::message::create> pcreate(pmessage);
 
       pcreate->previous();
 
@@ -88,17 +88,17 @@ namespace app_simple_shortcut
 
       }
 
-      __compose_new(m_pstill);
+      __construct_new(m_pstill);
 
-      __compose_new(m_pedit);
+      __construct_new(m_pedit);
 
-      __compose_new(m_pcombobox);
+      __construct_new(m_pcombobox);
 
       m_pcombobox->m_bEdit = false;
 
-      __compose_new(m_pbutton);
+      __construct_new(m_pbutton);
 
-      __compose_new(m_pstillResponse);
+      __construct_new(m_pstillResponse);
 
       m_pstill->create_control(this, "still");
 

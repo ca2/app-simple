@@ -47,7 +47,7 @@ namespace app_simple_drawing
                if (::is_ok(pimage1))
                {
 
-                  __pointer(::image) pimage2;
+                  ::pointer<::image> pimage2;
 
                   __construct(pimage2);
 

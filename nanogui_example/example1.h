@@ -17,7 +17,7 @@ namespace app_simple_nanogui_example
    {
    public:
 
-      __pointer(main_window)  m_pmainwindow;
+      ::pointer<main_window>  m_pmainwindow;
 
       int m_current_image;
 

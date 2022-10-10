@@ -102,7 +102,7 @@ namespace app_simple_form
       if (get_impact_id() == MENU_IMPACT)
       {
 
-         //__pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
+         //::pointer<::user::menu_list_impact> pmenuview = get_impact_uie();
 
          //pmenuview->load_xml_menu("matter://simple_menu.xml");
 
@@ -163,7 +163,7 @@ namespace app_simple_form
       if(::str().begins_eat_ci(strId, "form"))
       {
 
-         __pointer(form) pform;
+         ::pointer<form> pform;
 
          index iId = atoi(strId);
 
@@ -232,7 +232,7 @@ namespace app_simple_form
 
    //               //int iCheck = atoi(strCheck);
 
-   //               //__pointer(::user::check) pcheck = ptopic->user_interaction();
+   //               //::pointer<::user::check> pcheck = ptopic->user_interaction();
 
    //            }
 
@@ -297,7 +297,7 @@ namespace app_simple_form
 
                   //int iCheck = atoi(strCheck);
 
-                  //__pointer(::user::check) pcheck = ptopic->user_interaction();
+                  //::pointer<::user::check> pcheck = ptopic->user_interaction();
 
                }
 

@@ -15,7 +15,7 @@ namespace app_simple_nanogui_example
    public:
 
 
-      __pointer(main_window)                 m_pmainwindow;
+      ::pointer<main_window>                 m_pmainwindow;
 
 
       ::nanogui::ref<::nanogui::Window>      m_window;

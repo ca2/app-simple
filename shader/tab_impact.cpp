@@ -138,7 +138,7 @@ namespace app_simple_shader
 //      if (get_impact_id() == MENU_IMPACT)
 //      {
 //
-//         __pointer(::user::menu_list_impact) pmenuview = get_impact_uie();
+//         ::pointer<::user::menu_list_impact> pmenuview = get_impact_uie();
 //
 //         pmenuview->destroy_menu();
 //
@@ -210,7 +210,7 @@ namespace app_simple_shader
 
          pimpact->m_iImpact = (int) pimpactdata->m_iIndex;
 
-         __pointer(app_simple_shader::impact) pviewShader = pimpact;
+         ::pointer<app_simple_shader::impact> pviewShader = pimpact;
 
          pviewShader->m_prender->m_strShaderPath = strShaderPath;
 

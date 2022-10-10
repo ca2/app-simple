@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "document.h"
 #include "impact.h"
 #include "application.h"
@@ -88,10 +88,8 @@ namespace app_simple_networking_application
 #endif
 
 
-   stream& document::write(::stream& stream) const
+   void document::write(::binary_stream & stream) const
    {
-
-      return stream;
 
    }
 

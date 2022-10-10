@@ -211,7 +211,7 @@ namespace app_simple_networking_application
 #endif
 
 
-   __pointer(impact) application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   ::pointer<impact> application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
    {
 
       return pimpactParent->create_impact < impact >(pimpactdata);

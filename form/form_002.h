@@ -14,11 +14,11 @@ namespace app_simple_form
    public:
 
 
-      __composite(::user::still)                m_pstill;
-      __composite(::user::plain_edit)           m_pedit;
-      __composite(::user::combo_box)            m_pcombobox;
-      __composite(::user::button)               m_pbutton;
-      __composite(::user::still)                m_pstillResponse;
+      ::pointer<::user::still>                m_pstill;
+      ::pointer<::user::plain_edit>           m_pedit;
+      ::pointer<::user::combo_box>            m_pcombobox;
+      ::pointer<::user::button>               m_pbutton;
+      ::pointer<::user::still>                m_pstillResponse;
 
 
       form_002();

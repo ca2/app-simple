@@ -17,11 +17,11 @@ namespace app_simple_networking_application
 
 
       ::user::split_impact *                            m_ptopviewLast;
-      __reference(impact)                               m_pviewTopic;
+      ::pointer<impact>                               m_pviewTopic;
       string                                          m_strTopicTitle;
 
 
-      __pointer(::user::document)                            m_pdocMenu;
+      ::pointer<::user::document>                            m_pdocMenu;
 
 
       tab_impact();

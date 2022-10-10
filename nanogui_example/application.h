@@ -14,7 +14,7 @@ namespace app_simple_nanogui_example
    public:
 
 
-      __composite(::app_simple_nanogui_example::main_window)       m_pmainwindow;
+      ::pointer<::app_simple_nanogui_example::main_window>       m_pmainwindow;
 
 
       application();
