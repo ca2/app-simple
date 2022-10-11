@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "example1.h"
 #include "main_window.h"
 #include "nanogui/CheckBox.h"
@@ -259,7 +259,7 @@ namespace app_simple_nanogui_example
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
-                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
+                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
 
                   }
                );
@@ -269,7 +269,7 @@ namespace app_simple_nanogui_example
                      
                      string_stream str;
                      str << "Check box 2 state: " << state;
-                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
+                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
 
                   }
                );
@@ -445,7 +445,7 @@ namespace app_simple_nanogui_example
                      << c.g() << ", "
                      << c.b() << ", "
                      << c.w() << "]";
-                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.get_string());
+                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
                   });
                // setup a fast callback for the color picker widget on a memory_new window
                // for demonstrative purposes
