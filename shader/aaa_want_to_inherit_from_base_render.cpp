@@ -353,7 +353,7 @@ namespace simple_shader
 
       strDataId = m_pimpact->m_atom;
 
-      if (!papp->data_set(strDataId + ".font_family", m_strFont1))
+      if (!papp->datastream()->set(strDataId + ".font_family", m_strFont1))
       {
 
          return error_failed;
@@ -388,7 +388,7 @@ namespace simple_shader
 
          strDataId = m_pimpact->m_atom;
 
-         if (!papp->data_get(strDataId + ".font_family", m_strFont1)
+         if (!papp->datastream()->get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "main_frame.h"
 #include "document.h"
@@ -9,8 +9,6 @@
 #include "base/user/user/user.h"
 #include "base/user/user/single_document_template.h"
 
-
-//IMPLEMENT_APPLICATION(app_simple_application)
 
 namespace app_simple_application
 {
@@ -77,8 +75,6 @@ namespace app_simple_application
       auto puser = psession->user();
 
       puser->document_manager()->add_document_template(pdoctemplate);
-
-      //return true;
 
    }
 

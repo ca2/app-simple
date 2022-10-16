@@ -1,13 +1,14 @@
 ﻿#include "framework.h"
 #include "render.h"
 #include "application.h"
-#include "base/user/user/impact.h"
-#include "aura/graphics/image/image.h"
 #include "acme/constant/id.h"
-#include <math.h>
+#include "acme/graphics/draw2d/_binary_stream.h"
+#include "apex/database/_binary_stream.h"
+#include "aura/graphics/image/image.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/draw2d.h"
-#include "acme/graphics/draw2d/_binary_stream.h"
+#include "base/user/user/impact.h"
+#include <math.h>
 
 
 CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs
@@ -90,9 +91,9 @@ namespace app_simple_drawing
       //m_hlsText.m_dL = 0.5;
       //m_hlsText.m_dS = 0.9;
 
-      //papplication->data_set(strDataId, m_hlsText);
+      //papplication->datastream()->set(strDataId, m_hlsText);
 
-      if(!get_app()->data_get(strDataId +".color", m_hlsText))
+      if(!get_app()->datastream()->get(strDataId +".color", m_hlsText))
       {
 
          m_hlsText = color.get_hls();
@@ -178,7 +179,7 @@ namespace app_simple_drawing
 
       strDataId = m_pimpact->m_atom;
 
-      get_app()->data_set(strDataId + ".font_family", m_strFont1);
+      get_app()->datastream()->set(strDataId + ".font_family", m_strFont1);
 
       m_strFont1 = strFont;
 
@@ -218,7 +219,7 @@ namespace app_simple_drawing
 
          strDataId = m_pimpact->m_atom;
 
-         if (!get_app()->data_get(strDataId + ".font_family", m_strFont1)
+         if (!get_app()->datastream()->get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())
          {
 

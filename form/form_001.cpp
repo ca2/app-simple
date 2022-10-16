@@ -1,6 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
+#include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"
 #include "aura/user/user/button.h"
 #include "aura/user/user/still.h"
@@ -124,7 +125,7 @@ namespace app_simple_form
 
       auto papp = get_app();
 
-      strInitialText = papp->data_get("last_text");
+      papp->datastream()->get("last_text", strInitialText);
 
       m_pedit->_001SetText(strInitialText, ::e_source_initialize);
 
@@ -253,7 +254,7 @@ namespace app_simple_form
 
                }
 
-               papp->data_set("last_text", strText);
+               papp->datastream()->set("last_text", strText);
 
             }
 
