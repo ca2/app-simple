@@ -169,7 +169,7 @@ namespace app_simple_shader
 
          ::payload payload;
 
-         if (papp->data_get(atom, payload))
+         if (papp->datastream()->get(atom, payload))
          {
 
             pproperty->convert(payload);

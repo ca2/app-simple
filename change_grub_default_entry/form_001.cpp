@@ -1,6 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
+#include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"
 #include "aura/user/user/button.h"
 #include "aura/user/user/still.h"
@@ -119,7 +120,7 @@ namespace app_simple_change_grub_default_entry
 
       string strFolderPath;
 
-      strFolderPath = papp->data_get("grub_folder_path");
+      papp->datastream()->get("grub_folder_path", strFolderPath);
 
       m_pedit->_001SetText(strFolderPath, ::e_source_initialize);
 
@@ -233,7 +234,7 @@ namespace app_simple_change_grub_default_entry
 
             auto papp = get_app();
 
-            papp->data_set("grub_folder_path", strText);
+            papp->datastream()->set("grub_folder_path", strText);
 
             update_grub_entry_list(strText);
 

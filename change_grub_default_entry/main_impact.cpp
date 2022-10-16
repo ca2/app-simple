@@ -111,7 +111,7 @@ namespace app_simple_change_grub_default_entry
 //
 //         string strText;
 //
-//         papp->data_get("cur_text",strText);
+//         papp->datastream()->get("cur_text",strText);
 //
 //         peditview->_001SetText(strText, ::e_source_initialize);
 //

@@ -1,8 +1,9 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
+#include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
 #include "aura/user/user/plain_edit.h"
@@ -154,15 +155,21 @@ namespace app_simple_shortcut
 
       auto papp = get_app();
 
-      auto strLastFolder = papp->data_get("last_folder");
+      ::string strLastFolder;
+      
+      papp->datastream()->get("last_folder", strLastFolder);
 
       m_peditFolder->_001SetText(strLastFolder, ::e_source_initialize);
 
-      auto strLastSource = papp->data_get("last_source");
+      ::string strLastSource;
+      
+      papp->datastream()->get("last_source", strLastFolder);
 
       m_peditSource->_001SetText(strLastSource, ::e_source_initialize);
 
-      auto strLastTarget = papp->data_get("last_target");
+      ::string strLastTarget;
+      
+      papp->datastream()->get("last_target", strLastTarget);
 
       m_peditTarget->_001SetText(strLastTarget, ::e_source_initialize);
 
@@ -336,7 +343,7 @@ namespace app_simple_shortcut
 
                }
 
-               papp->data_set("last_folder", strText);
+               papp->datastream()->set("last_folder", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 
@@ -357,7 +364,7 @@ namespace app_simple_shortcut
 
                }
 
-               papp->data_set("last_source", strText);
+               papp->datastream()->set("last_source", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 
@@ -378,7 +385,7 @@ namespace app_simple_shortcut
 
                }
 
-               papp->data_set("last_target", strText);
+               papp->datastream()->set("last_target", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 

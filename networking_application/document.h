@@ -29,7 +29,7 @@ namespace app_simple_networking_application
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual void write(::binary_stream & stream) const override;
+      //virtual void write(::binary_stream < FILE > & stream) const override;
 
 
    };
