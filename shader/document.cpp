@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "document.h"
 #include "impact.h"
 #include "application.h"
@@ -59,8 +59,7 @@ namespace app_simple_shader
 
       }
 
-      string strPath = payloadFile.get_file_path();
-
+      string strPath = payloadFile.file_path();
 
       return true;
 
@@ -88,29 +87,15 @@ namespace app_simple_shader
 #endif
 
 
-   stream& document::write(::stream& stream) const
-   {
+   //stream& document::write(::stream& stream) const
+   //{
 
-      return stream;
+   //   return stream;
 
-   }
+   //}
 
 
 } // namespace simple_shader
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
