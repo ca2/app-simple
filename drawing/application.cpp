@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "impact.h"
 #include "frame.h"
@@ -9,8 +9,6 @@
 #include "base/user/user/show.h"
 #include "base/user/user/single_document_template.h"
 
-
-//IMPLEMENT_APPLICATION(app_simple_drawing)
 
 namespace app_simple_drawing
 {
@@ -61,8 +59,6 @@ namespace app_simple_drawing
 
       m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
 
-      //m_pstrHoverFontFamilyName = nullptr;
-
       auto pproperty1 = application_properties().find_property("simple_checkbox");
 
       bool bCheckOk = false;
@@ -111,13 +107,6 @@ namespace app_simple_drawing
       default_toggle_check_handling("no_client_frame");
 
       ::base::application::init_instance();
-
-      //if (!::base::application::init_instance())
-      //{
-
-      //   return false;
-
-      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
