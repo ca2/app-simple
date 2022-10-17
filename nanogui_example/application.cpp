@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "main_window.h"
 #include "nanogui/Screen.h"
@@ -16,6 +16,8 @@ namespace app_simple_nanogui_example
       m_strAppName = "app-simple/nanogui_example";
 
       m_strBaseSupportId = "app_simple_nanogui_example";
+
+      m_bNetworking = false;
 
       m_bLicense = false;
 
