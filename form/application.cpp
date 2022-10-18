@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "document.h"
 #include "form_001.h"
@@ -12,8 +12,6 @@
 #include "base/user/user/single_document_template.h"
 
 
-////#define memory_new ACME_NEW
-//IMPLEMENT_APPLICATION(app_simple_form)
 namespace app_simple_form
 {
 
@@ -67,8 +65,6 @@ namespace app_simple_form
 
       set_local_data();
 
-      //puser->will_use_impact_hint(FONTSEL_IMPACT);
-
       ::factory::add_factory_item <::app_simple_form::document >();
       ::factory::add_factory_item <::app_simple_form::frame >();
       ::factory::add_factory_item <::app_simple_form::main_frame >();
@@ -81,19 +77,14 @@ namespace app_simple_form
 
       ::base::application::init_instance();
 
-      //if (!::base::application::init_instance())
-      //{
-
-      //   return false;
-
-      //}
-
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
                                __type(document),
                                __type(main_frame),
                                __type(tab_impact)));
+
       m_ptemplateBeatMapperMain = pdoctemplate;
+
       add_document_template(pdoctemplate);
 
 
@@ -102,13 +93,10 @@ namespace app_simple_form
                           __type(document),
                           __type(frame),
                           __type(main_impact)));
+
       m_ptemplateBeatMapperImpact = pdoctemplate;
+
       add_document_template(pdoctemplate);
-
-
-
-
-      //return true;
 
    }
 
