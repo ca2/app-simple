@@ -1,6 +1,8 @@
-#define DO_FACTORY(do) \
+﻿#define DO_FACTORY(do) \
 do(default_draw2d); \
 do(experience_tranquillum); \
 do(default_node); \
 do(default_write_text);
+
+#error "test"
 
