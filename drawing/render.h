@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 //
@@ -24,6 +24,7 @@
 //
 
 
+#include "acme/primitive/geometry2d/angle.h"
 
 
 namespace app_simple_drawing

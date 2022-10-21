@@ -2,6 +2,7 @@
 #include "form_001.h"
 #include "application.h"
 #include "apex/database/_binary_stream.h"
+#include "apex/filesystem/filesystem/file_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/button.h"
 #include "aura/user/user/still.h"
