@@ -4,6 +4,7 @@
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
 #include "apex/database/_binary_stream.h"
+#include "apex/filesystem/filesystem/dir_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
 #include "aura/user/user/plain_edit.h"
