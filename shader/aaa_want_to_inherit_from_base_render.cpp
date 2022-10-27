@@ -26,10 +26,10 @@ namespace simple_shader
    }
 
 
-   ::e_status render::initialize(::object * pobject)
+   ::e_status render::initialize(::particle * pparticle)
    {
 
-      auto estatus = ::object::initialize(pobject);
+      auto estatus = ::object::initialize(pparticle);
 
       if (!estatus)
       {

@@ -205,7 +205,7 @@ namespace app_simple_nanogui_example
                b = memory_new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
-                  //m_puserinteraction->m_psystem->node()->node_post(__routine([this, image_impact]()
+                  //m_puserinteraction->acmenode()->node_post(__routine([this, image_impact]()
                     //         {
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();

@@ -17,8 +17,8 @@ namespace app_simple_notify_drawing
       impact();
       ~impact() override;
 
-      void assert_ok() const override;
-      void dump(dump_context & dumpcontext) const override;
+//      void assert_ok() const override;
+//      void dump(dump_context & dumpcontext) const override;
 
       void install_message_routing(::channel * psender) override;
 

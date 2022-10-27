@@ -96,7 +96,7 @@ namespace app_simple_application
 
       }
       
-      auto psystem = m_psystem->m_paurasystem;
+      auto psystem = acmesystem()->m_paurasystem;
       
       auto pnode = psystem->draw2d();
       
@@ -180,7 +180,7 @@ namespace app_simple_application
 
       //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
 
-      ::synchronous_lock synchronouslockDocument(get_document()->mutex());
+      ::synchronous_lock synchronouslockDocument(get_document()->synchronization());
       
       string_array & stra = get_document()->m_straLine;
 

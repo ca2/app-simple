@@ -31,7 +31,7 @@ namespace simple_shader
       virtual ~render();
 
 
-      virtual ::e_status initialize(::object * pobject) override;
+      virtual ::e_status initialize(::particle * pparticle) override;
 
 #ifdef _DEBUG
       virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;

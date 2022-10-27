@@ -272,7 +272,7 @@ namespace app_simple_shader
 
                saveimage.m_eformat = ::draw2d::e_format_png;
 
-               auto psystem = m_psystem;
+               auto psystem = acmesystem();
 
                auto pdatetime = psystem->datetime();
 
