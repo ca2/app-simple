@@ -7,7 +7,7 @@ namespace helloworld
 {
 
 
-   impact::impact(::object * pobject) :
+   impact::impact(::particle * pparticle) :
       ::object(papp)
    {
 
@@ -60,7 +60,7 @@ namespace helloworld
    }
 
 
-   void impact::on_update(::user::impact * pimpact, ::user::e_update eupdate, ::object * pobject)
+   void impact::on_update(::user::impact * pimpact, ::user::e_update eupdate, ::particle * pparticle)
    {
 
       __UNREFERENCED_PARAMETER(pSender);

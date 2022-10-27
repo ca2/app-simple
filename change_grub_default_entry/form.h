@@ -22,8 +22,8 @@ namespace app_simple_change_grub_default_entry
       form();
       ~form() override;
 
-      void assert_ok() const override;
-      void dump(dump_context & dumpcontext) const override;
+//      void assert_ok() const override;
+//      void dump(dump_context & dumpcontext) const override;
 
 
       void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;

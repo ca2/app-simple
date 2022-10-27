@@ -223,7 +223,7 @@ namespace app_simple_drawing
             || m_strFont1.is_empty())
          {
 
-            m_strFont1 = m_psystem->m_pnode->font_name(e_font_sans_ex);
+            m_strFont1 = acmesystem()->m_pnode->font_name(e_font_sans_ex);
 
          }
 
@@ -261,7 +261,7 @@ namespace app_simple_drawing
 
       auto pbrush = __create < ::draw2d::brush >();
 
-      auto psystem = m_psystem->m_paurasystem;
+      auto psystem = acmesystem()->m_paurasystem;
 
       auto pdraw2d = psystem->draw2d();
 

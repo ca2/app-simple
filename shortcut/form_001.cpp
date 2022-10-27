@@ -540,9 +540,9 @@ namespace app_simple_shortcut
          if (pathNewTarget != pathLinkTarget)
          {
 
-            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(pathNewTarget);
+            bool bIsDirTarget = acmedirectory()->is(pathNewTarget);
 
-            bool bIsFileTarget = m_psystem->m_pacmefile->exists(pathNewTarget);
+            bool bIsFileTarget = acmefile()->exists(pathNewTarget);
 
             bool bIs = bIsDirTarget || bIsFileTarget;
 
@@ -560,7 +560,7 @@ namespace app_simple_shortcut
          if (strNewFolder != strLinkFolder)
          {
 
-            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(strNewFolder);
+            bool bIsDirTarget = acmedirectory()->is(strNewFolder);
 
             strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewFolder + " <== " + strLinkFolder + "\n";
 
@@ -576,7 +576,7 @@ namespace app_simple_shortcut
          if (strNewIconLocation != strIconLocation)
          {
 
-            bool bIsDirTarget = m_psystem->m_pacmedirectory->is(strNewIconLocation);
+            bool bIsDirTarget = acmedirectory()->is(strNewIconLocation);
 
             strAction += (!bIsDirTarget ? "xxx " : "") + path + ": " + strNewIconLocation + " <== " + strIconLocation + "\n";
 

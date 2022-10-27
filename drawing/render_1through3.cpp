@@ -100,7 +100,7 @@ namespace app_simple_drawing
       
       string strTitle;
       
-      auto psystem = m_psystem->m_paurasystem;
+      auto psystem = acmesystem()->m_paurasystem;
       
       auto pdraw2d = psystem->draw2d();
       
