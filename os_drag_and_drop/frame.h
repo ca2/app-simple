@@ -18,7 +18,7 @@ namespace simple_os_drag_and_drop
       ~frame() override;
 
 
-	   void assert_ok() const override;
+	   // void assert_ok() const override;
 	   void dump(dump_context & dumpcontext) const override;
 
 

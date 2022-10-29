@@ -308,7 +308,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubCfg = get_grub_cfg_path(pathGrubFolder);
       
-      pcontext->file().lines(straLines, pathGrubCfg);
+      pcontext->file()->lines(straLines, pathGrubCfg);
 
       ::index iFind = 0;
 
@@ -416,7 +416,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 
-      pcontext->file().lines(straLines, pathGrubEnv);
+      pcontext->file()->lines(straLines, pathGrubEnv);
 
       string strEntry;
 
@@ -450,7 +450,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 
-      auto memory = pcontext->file().as_memory(pathGrubEnv);
+      auto memory = pcontext->file()->as_memory(pathGrubEnv);
 
       auto estatus = grub_set_variable(memory, "saved_entry=", strSavedEntry);
 
@@ -463,7 +463,7 @@ namespace app_simple_change_grub_default_entry
 
       //estatus =
       
-      pcontext->file().set(pathGrubEnv, memory);
+      pcontext->file()->set(pathGrubEnv, memory);
 
       //if (!estatus)
       //{

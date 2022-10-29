@@ -19,7 +19,7 @@ namespace app_simple_notify_drawing
       ~main_frame() override;
 
 
-//      void assert_ok() const override;
+//      // void assert_ok() const override;
 //      void dump(dump_context & dumpcontext) const override;
 
 

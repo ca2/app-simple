@@ -24,7 +24,7 @@ namespace app_simple_form
       form_002();
       ~form_002() override;
 
-//      void assert_ok() const override;
+//      // void assert_ok() const override;
 //      void dump(dump_context & dumpcontext) const override;
 
 
