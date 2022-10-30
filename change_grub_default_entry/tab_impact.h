@@ -34,7 +34,7 @@ namespace app_simple_change_grub_default_entry
 
       // void assert_ok() const override;
 
-      void dump(dump_context & dumpcontext) const override;
+      // void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);

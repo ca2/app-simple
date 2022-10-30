@@ -25,7 +25,7 @@ namespace app_simple_change_grub_default_entry
       ~form_001() override;
 
 //      // void assert_ok() const override;
-//      void dump(dump_context & dumpcontext) const override;
+//      // void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG

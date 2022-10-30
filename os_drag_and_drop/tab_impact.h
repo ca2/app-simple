@@ -34,7 +34,7 @@ namespace simple_os_drag_and_drop
 
       // void assert_ok() const override;
 
-      void dump(dump_context & dumpcontext) const override;
+      // void dump(dump_context & dumpcontext) const override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);
