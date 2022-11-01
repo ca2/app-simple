@@ -2,9 +2,8 @@
 #include "impact.h"
 #include "document.h"
 #include "application.h"
+#include "acme/constant/message.h"
 #include "aura/message/user.h"
-//#include <math.h>
-//#include "acme/constant/id.h"
 #include "aura/graphics/draw2d/draw2d.h"
 
 
@@ -55,20 +54,20 @@ namespace app_simple_application
 #endif
 
 
-   void impact::assert_ok() const
-   {
-
-      user::box::assert_ok();
-
-   }
-
-
-   void impact::dump(dump_context & dumpcontext) const
-   {
-
-      user::box::dump(dumpcontext);
-
-   }
+//   void impact::assert_ok() const
+//   {
+//
+//      user::box::assert_ok();
+//
+//   }
+//
+//
+//   void impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      user::box::dump(dumpcontext);
+//
+//   }
 
 
    void impact::install_message_routing(::channel * psender)

@@ -2,6 +2,7 @@
 
 
 #include "base/user/user/impact.h"
+#include "apex/platform/app_consumer.h"
 
 
 namespace app_simple_networking_application

@@ -4,7 +4,9 @@
 #include "document.h"
 #include "form_001.h"
 #include "form_002.h"
+#include "acme/constant/id.h"
 #include "acme/constant/impact.h"
+#include "acme/constant/message.h"
 #include "base/user/user/tab_pane.h"
 
 
@@ -26,20 +28,20 @@ namespace app_simple_form
    }
 
 
-   void tab_impact::assert_ok() const
-   {
-
-      ::user::impact::assert_ok();
-
-   }
-
-
-   void tab_impact::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::impact::dump(dumpcontext);
-
-   }
+//   void tab_impact::assert_ok() const
+//   {
+//
+//      ::user::impact::assert_ok();
+//
+//   }
+//
+//
+//   void tab_impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::impact::dump(dumpcontext);
+//
+//   }
 
 
    void tab_impact::install_message_routing(::channel * pchannel)

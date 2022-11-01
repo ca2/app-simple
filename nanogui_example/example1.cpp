@@ -19,6 +19,8 @@
 #include "nanogui/Slider.h"
 #include "nanogui/TabWidget.h"
 #include "nanogui/ColorWheel.h"
+#include "acme/filesystem/file/file_stream1.h"
+#include "acme/filesystem/file/text_stream.h"
 #include "aura/windowing/window.h"
 
 

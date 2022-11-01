@@ -2,6 +2,7 @@
 
 
 #include "base/user/user/split_impact.h"
+#include "apex/platform/app_consumer.h"
 
 
 namespace app_simple_form

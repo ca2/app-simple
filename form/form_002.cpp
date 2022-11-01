@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "form_002.h"
+#include "acme/constant/message.h"
 #include "aura/message/user.h"
 #include "axis/user/user/combo_box.h"
 #include "aura/user/user/button.h"
@@ -24,20 +25,20 @@ namespace app_simple_form
    }
 
 
-   void form_002::assert_ok() const
-   {
-
-      form::assert_ok();
-
-   }
-
-
-   void form_002::dump(dump_context & dumpcontext) const
-   {
-
-      form::dump(dumpcontext);
-
-   }
+//   void form_002::assert_ok() const
+//   {
+//
+//      form::assert_ok();
+//
+//   }
+//
+//
+//   void form_002::dump(dump_context & dumpcontext) const
+//   {
+//
+//      form::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

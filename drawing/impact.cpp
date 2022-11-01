@@ -3,12 +3,12 @@
 #include "application.h"
 #include "render.h"
 #include "document.h"
+#include "acme/constant/id.h"
+#include "acme/constant/message.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/message/user.h"
 #include "base/user/user/impact_system.h"
 #include "base/user/user/split_impact.h"
-#include "aura/graphics/draw2d/graphics.h"
-#include <math.h>
-#include "acme/constant/id.h"
-#include "aura/message/user.h"
 
 
 namespace app_simple_drawing
@@ -31,20 +31,20 @@ namespace app_simple_drawing
    }
 
 
-   void impact::assert_ok() const
-   {
-
-      user::box::assert_ok();
-
-   }
-
-
-   void impact::dump(dump_context & dumpcontext) const
-   {
-
-      user::box::dump(dumpcontext);
-
-   }
+//   void impact::assert_ok() const
+//   {
+//
+//      user::box::assert_ok();
+//
+//   }
+//
+//
+//   void impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      user::box::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

@@ -1,12 +1,15 @@
 #include "framework.h"
 #include "main_window.h"
-#include <math.h>
-#include "acme/constant/id.h"
-#include "app/nanogui/Screen.h"
 #include "example1.h"
 #include "example2.h"
 #include "example_icons.h"
+#include "acme/constant/id.h"
+#include "acme/constant/message.h"
 #include "aura/message/user.h"
+#include "app/nanogui/Screen.h"
+
+
+#include <math.h>
 
 
 namespace app_simple_nanogui_example
@@ -54,20 +57,20 @@ namespace app_simple_nanogui_example
 #endif
 
 
-   void main_window::assert_ok() const
-   {
-
-      user::main_window::assert_ok();
-
-   }
-
-
-   void main_window::dump(dump_context & dumpcontext) const
-   {
-
-      user::main_window::dump(dumpcontext);
-
-   }
+//   void main_window::assert_ok() const
+//   {
+//
+//      user::main_window::assert_ok();
+//
+//   }
+//
+//
+//   void main_window::dump(dump_context & dumpcontext) const
+//   {
+//
+//      user::main_window::dump(dumpcontext);
+//
+//   }
 
 
    void main_window::install_message_routing(::channel * psender)
@@ -113,7 +116,7 @@ namespace app_simple_nanogui_example
    }
 
 
-   bool main_window::keyboard_focus_is_focusable() const
+   bool main_window::keyboard_focus_is_focusable()
    {
 
       return true;

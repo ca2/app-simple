@@ -21,20 +21,20 @@ namespace app_simple_notify_drawing
    }
 
 
-   void impact::assert_ok() const
-   {
-
-      user::box::assert_ok();
-
-   }
-
-
-   void impact::dump(dump_context & dumpcontext) const
-   {
-
-      user::box::dump(dumpcontext);
-
-   }
+//   void impact::assert_ok() const
+//   {
+//
+//      user::box::assert_ok();
+//
+//   }
+//
+//
+//   void impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      user::box::dump(dumpcontext);
+//
+//   }
 
 
    void impact::install_message_routing(::channel * psender)

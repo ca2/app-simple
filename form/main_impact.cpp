@@ -2,6 +2,7 @@
 #include "main_impact.h"
 #include "application.h"
 #include "document.h"
+#include "acme/constant/id.h"
 
 
 namespace app_simple_form
@@ -26,20 +27,20 @@ namespace app_simple_form
    }
 
 
-   void main_impact::assert_ok() const
-   {
-
-      ::user::split_impact::assert_ok();
-
-   }
-
-
-   void main_impact::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::split_impact::dump(dumpcontext);
-
-   }
+//   void main_impact::assert_ok() const
+//   {
+//
+//      ::user::split_impact::assert_ok();
+//
+//   }
+//
+//
+//   void main_impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::split_impact::dump(dumpcontext);
+//
+//   }
 
 
    void main_impact::handle(::topic * ptopic, ::context * pcontext)

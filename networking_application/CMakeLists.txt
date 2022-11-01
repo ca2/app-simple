@@ -62,6 +62,7 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 add_dependencies(app_simple_networking_application experience_core)
+add_dependencies(app_simple_networking_application networking_bsd)
 
 list(APPEND library_link_directories
    ${LIBRARY_OUTPUT_PATH}

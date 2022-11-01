@@ -24,7 +24,10 @@
 //
 
 
+#include "acme/primitive/collection/string_map.h"
 #include "acme/primitive/geometry2d/angle.h"
+#include "acme/primitive/geometry2d/rectangle.h"
+#include "apex/platform/app_consumer.h"
 
 
 namespace app_simple_drawing

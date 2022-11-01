@@ -3,6 +3,7 @@
 #include "document.h"
 #include "main_impact.h"
 #include "application.h"
+#include "acme/constant/message.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "base/user/user/impact_system.h"
@@ -29,20 +30,20 @@ namespace app_simple_form
    }
 
 
-   void impact::assert_ok() const
-   {
-
-      user::box::assert_ok();
-
-   }
-
-
-   void impact::dump(dump_context & dumpcontext) const
-   {
-
-      user::box::dump(dumpcontext);
-
-   }
+//   void impact::assert_ok() const
+//   {
+//
+//      user::box::assert_ok();
+//
+//   }
+//
+//
+//   void impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      user::box::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

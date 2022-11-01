@@ -1,6 +1,8 @@
 ﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
+#include "acme/constant/id.h"
+#include "acme/constant/message.h"
 #include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"
 #include "aura/user/user/button.h"
@@ -24,20 +26,20 @@ namespace app_simple_form
    }
 
 
-   void form_001::assert_ok() const
-   {
-
-      form::assert_ok();
-
-   }
-
-
-   void form_001::dump(dump_context & dumpcontext) const
-   {
-
-      form::dump(dumpcontext);
-
-   }
+//   void form_001::assert_ok() const
+//   {
+//
+//      form::assert_ok();
+//
+//   }
+//
+//
+//   void form_001::dump(dump_context & dumpcontext) const
+//   {
+//
+//      form::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

@@ -3,6 +3,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/graphics/draw2d/_binary_stream.h"
+#include "acme/platform/node.h"
 #include "apex/database/_binary_stream.h"
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/draw2d/graphics.h"
@@ -38,7 +39,7 @@ namespace app_simple_drawing
    int64_t render::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::particle::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
@@ -46,7 +47,7 @@ namespace app_simple_drawing
    int64_t render::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::particle::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
    }
 
@@ -259,7 +260,7 @@ namespace app_simple_drawing
 
       string strTitle;
 
-      auto pbrush = __create < ::draw2d::brush >();
+      auto pbrush = __create < ::draw2d::brush >(this);
 
       auto psystem = acmesystem()->m_paurasystem;
 
