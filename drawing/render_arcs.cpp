@@ -73,9 +73,9 @@ namespace app_simple_drawing
 
       pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy + 8, str2);
 
-      auto ppen = __create < ::draw2d::pen > ();
+      auto ppen = __create < ::draw2d::pen >(this);
 
-      auto pbrush = __create < ::draw2d::brush >();
+      auto pbrush = __create < ::draw2d::brush >(this);
 
       pbrush->create_null();
 

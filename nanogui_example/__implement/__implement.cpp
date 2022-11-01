@@ -3,6 +3,9 @@
 #include "__implement.h"
 
 
+#include "acme/primitive/collection/string_map.h"
+
+
 int __implement()
 {
 

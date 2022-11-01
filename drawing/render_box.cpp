@@ -35,7 +35,7 @@ namespace app_simple_drawing
 
       ::draw2d::pen_pointer ppen;
 
-      __construct(ppen);
+      __construct(this, ppen);
 
       auto & echeckSimple = get_app()->application_properties().m_echeckSimple;
 
@@ -54,17 +54,15 @@ namespace app_simple_drawing
 
       ::draw2d::brush_pointer pbrush;
 
-      __construct(pbrush);
+      __construct(this, pbrush);
 
       pbrush->CreateBoxGradientBrush(r.top_left(), r.size(), radius, ::dk_red(), ::color::transparent);
-
 
       pgraphics->fill_round_rectangle(r, pbrush, radius);
 
       pgraphics->::draw2d::graphics::draw_round_rectangle(r, ppen, radius);
 
-
-draw_text(pgraphics);
+      draw_text(pgraphics);
 
    }
 

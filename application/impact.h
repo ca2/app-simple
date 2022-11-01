@@ -2,6 +2,7 @@
 
 
 #include "base/user/user/impact.h"
+#include "apex/platform/app_consumer.h"
 
 
 namespace app_simple_application
@@ -16,11 +17,11 @@ namespace app_simple_application
 
       ::write_text::font_pointer       m_pfontThomasBS_;
       string                           m_strFont1;
-
       int                              m_iSequence;
 
+
       impact();
-      virtual ~impact();
+      ~impact() override;
 
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;

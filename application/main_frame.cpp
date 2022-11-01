@@ -1,6 +1,6 @@
 #include "framework.h"
-
 #include "main_frame.h"
+#include "acme/constant/message.h"
 
 
 namespace app_simple_application
@@ -27,20 +27,20 @@ namespace app_simple_application
    }
 
 
-   void main_frame::assert_ok() const
-   {
-
-      simple_frame_window::assert_ok();
-
-   }
-
-
-   void main_frame::dump(dump_context & dumpcontext) const
-   {
-
-      simple_frame_window::dump(dumpcontext);
-
-   }
+//   void main_frame::assert_ok() const
+//   {
+//
+//      simple_frame_window::assert_ok();
+//
+//   }
+//
+//
+//   void main_frame::dump(dump_context & dumpcontext) const
+//   {
+//
+//      simple_frame_window::dump(dumpcontext);
+//
+//   }
 
 
    ::experience::frame * main_frame::frame_experience()

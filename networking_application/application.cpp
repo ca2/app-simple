@@ -1,11 +1,11 @@
 #include "framework.h"
-
 #include "application.h"
 #include "document.h"
 #include "frame.h"
 #include "main_frame.h"
 #include "impact.h"
 #include "tab_impact.h"
+#include "apex/platform/create.h"
 #include "base/user/user/single_document_template.h"
 
 

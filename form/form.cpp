@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "form.h"
+#include "acme/constant/message.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 
@@ -58,20 +59,20 @@ namespace app_simple_form
    }
 
 
-   void form::assert_ok() const
-   {
-
-      ::user::form_impact::assert_ok();
-
-   }
-
-
-   void form::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::form_impact::dump(dumpcontext);
-
-   }
+//   void form::assert_ok() const
+//   {
+//
+//      ::user::form_impact::assert_ok();
+//
+//   }
+//
+//
+//   void form::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::form_impact::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

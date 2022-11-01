@@ -19,20 +19,20 @@ namespace app_simple_form
    }
 
 
-   void document::assert_ok() const
-   {
-
-      ::user::document::assert_ok();
-
-   }
-
-
-   void document::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::document::dump(dumpcontext);
-
-   }
+//   void document::assert_ok() const
+//   {
+//
+//      ::user::document::assert_ok();
+//
+//   }
+//
+//
+//   void document::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::document::dump(dumpcontext);
+//
+//   }
 
 
 #ifdef _DEBUG

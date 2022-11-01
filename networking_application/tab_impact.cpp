@@ -2,6 +2,7 @@
 #include "tab_impact.h"
 #include "impact.h"
 #include "application.h"
+#include "acme/constant/message.h"
 #include "base/user/menu/list_impact.h"
 #include "base/user/user/tab_pane.h"
 
@@ -22,20 +23,20 @@ namespace app_simple_networking_application
    }
 
 
-   void tab_impact::assert_ok() const
-   {
-
-      ::user::impact::assert_ok();
-
-   }
-
-
-   void tab_impact::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::impact::dump(dumpcontext);
-
-   }
+//   void tab_impact::assert_ok() const
+//   {
+//
+//      ::user::impact::assert_ok();
+//
+//   }
+//
+//
+//   void tab_impact::dump(dump_context & dumpcontext) const
+//   {
+//
+//      ::user::impact::dump(dumpcontext);
+//
+//   }
 
 
    void tab_impact::install_message_routing(::channel * pchannel)

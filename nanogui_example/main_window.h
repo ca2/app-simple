@@ -25,7 +25,7 @@ namespace app_simple_nanogui_example
       int                                             m_iCloseButtonDraw;
 
 
-      array < ::nanogui::ref < nanogui::Screen > >    m_exampleapplicationa;
+      ::pointer_array < nanogui::Screen >             m_exampleapplicationa;
       int                                             m_iCurrentApplication;
 
 
@@ -59,7 +59,7 @@ namespace app_simple_nanogui_example
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
 
-      bool keyboard_focus_is_focusable() const override;
+      bool keyboard_focus_is_focusable() override;
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 

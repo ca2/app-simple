@@ -3,6 +3,7 @@
 
 #include "base/user/user/tab_impact.h"
 #include "aura/user/user/form_callback.h"
+#include "apex/platform/app_consumer.h"
 
 
 namespace app_simple_drawing
