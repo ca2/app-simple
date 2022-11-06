@@ -87,7 +87,7 @@ namespace app_simple_drawing
 
       string strImpactId = get_impact_id();
 
-      if(::str().begins(strImpactId, "drawing"))
+      if(string_begins(strImpactId, "drawing"))
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
@@ -138,7 +138,7 @@ namespace app_simple_drawing
 
       string strId = pimpactdata->m_atom;
 
-      if(::str().begins_eat_ci(strId, "drawing"))
+      if(strId.begins_eat_ci("drawing"))
       {
 
          auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);

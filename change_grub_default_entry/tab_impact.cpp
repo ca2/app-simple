@@ -177,7 +177,7 @@ namespace app_simple_change_grub_default_entry
 
       string strId = pimpactdata->m_atom;
 
-      if(::str().begins_eat_ci(strId, "form"))
+      if(strId.begins_eat_ci("form"))
       {
 
          ::pointer<form> pform;
@@ -238,7 +238,7 @@ namespace app_simple_change_grub_default_entry
 
    //         string strCheck = ptopic->user_element_id();
 
-   //         if (::str().begins_eat_ci(strCheck, "bilbo"))
+   //         if (strCheck.begins_eat_ci("bilbo"))
    //         {
 
    //            if (ptopic->user_interaction() != NULL && ptopic->m_actioncontext.is_user_source())
@@ -302,7 +302,7 @@ namespace app_simple_change_grub_default_entry
 
             string strCheck = ptopic->user_element_id();
 
-            if (::str().begins_eat_ci(strCheck, "bilbo"))
+            if (strCheck.begins_eat_ci("bilbo"))
             {
 
                if (ptopic->user_interaction() != NULL && ptopic->m_actioncontext.is_user_source())
