@@ -72,8 +72,8 @@ namespace app_simple_shortcut
 
       MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
 
-      add_command_handler("send_button", this, &form_001::_001OnSendButton);
-      add_command_handler("clear_button", this, &form_001::_001OnClearButton);
+      add_command_handler("send_button", { this,  &form_001::_001OnSendButton });
+      add_command_handler("clear_button", { this,  &form_001::_001OnClearButton });
 
    }
 
