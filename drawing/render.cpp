@@ -351,7 +351,7 @@ namespace app_simple_drawing
             else
             {
 
-               if (::is_ok(m_pimage2))
+               if (m_pimage2.ok())
                {
 
                   pbrush->CreatePatternBrush(m_pimage2);

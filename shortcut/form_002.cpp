@@ -67,7 +67,7 @@ namespace app_simple_shortcut
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &form_002::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form_002::on_message_create);
 
       add_command_handler("send_button", { this,  &form_002::_001OnSendButton });
 

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "render.h"
 #include <math.h>
@@ -44,7 +44,7 @@ namespace app_simple_drawing
 
                auto pimage1 = pcontextimage->get_image("matter://pat1.jpg");
 
-               if (::is_ok(pimage1))
+               if (pimage1.ok())
                {
 
                   ::pointer<::image> pimage2;
@@ -62,7 +62,7 @@ namespace app_simple_drawing
 
                      pimage2->unmap();
 
-                     pimage2->set_ok();
+                     pimage2->set_ok_flag();
 
                      m_pimage2 = pimage2;
 
@@ -175,7 +175,7 @@ namespace app_simple_drawing
 
       }
 
-      if (m_iDrawing == 3 && ::is_ok(m_pimage1))
+      if (m_iDrawing == 3 && m_pimage1.ok())
       {
 
          pbrush->CreatePatternBrush(m_pimage1);
@@ -237,7 +237,7 @@ namespace app_simple_drawing
          else
          {
 
-            if (::is_ok(m_pimage2))
+            if (m_pimage2.ok())
             {
 
                pbrush->CreatePatternBrush(m_pimage2);

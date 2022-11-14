@@ -1,11 +1,16 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "impact.h"
 #include "document.h"
 #include "application.h"
-#include <math.h>
 #include "acme/constant/id.h"
+#include "acme/constant/message.h"
+#include "acme/platform/sequencer.h"
+#include "acme/primitive/mathematics/_random.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
+
+
+#include <math.h>
 
 
 CLASS_DECL_AURA ::color::color dk_red(); // <3 tbs
@@ -54,20 +59,20 @@ namespace app_simple_box
 #endif
 
 
-   void impact::assert_ok() const
-   {
+   //void impact::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void impact::dump(dump_context & dumpcontext) const
-   {
+   //void impact::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
    void impact::install_message_routing(::channel * psender)
@@ -75,8 +80,8 @@ namespace app_simple_box
 
       ::user::impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
+      MESSAGE_LINK(MESSAGE_CREATE,psender,this,&impact::on_message_create);
+      MESSAGE_LINK(MESSAGE_DESTROY, psender, this, &impact::on_message_destroy);
 
    }
 
