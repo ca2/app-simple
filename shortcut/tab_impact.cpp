@@ -1,9 +1,10 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "tab_impact.h"
 #include "application.h"
 #include "form_001.h"
 #include "form_002.h"
 #include "document.h"
+#include "acme/constant/id.h"
 #include "acme/constant/impact.h"
 #include "base/user/user/tab_pane.h"
 
@@ -26,20 +27,20 @@ namespace app_simple_shortcut
    }
 
 
-   void tab_impact::assert_ok() const
-   {
+   //void tab_impact::assert_ok() const
+   //{
 
-      ::user::impact::assert_ok();
+   //   ::user::impact::assert_ok();
 
-   }
+   //}
 
 
-   void tab_impact::dump(dump_context & dumpcontext) const
-   {
+   //void tab_impact::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::impact::dump(dumpcontext);
+   //   ::user::impact::dump(dumpcontext);
 
-   }
+   //}
 
 
    void tab_impact::install_message_routing(::channel * pchannel)

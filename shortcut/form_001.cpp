@@ -1,10 +1,13 @@
 ﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
+#include "acme/constant/id.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/listing.h"
 #include "apex/database/_binary_stream.h"
 #include "apex/filesystem/filesystem/dir_context.h"
+#include "apex/platform/os_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
 #include "aura/user/user/plain_edit.h"
@@ -27,20 +30,20 @@ namespace app_simple_shortcut
    }
 
 
-   void form_001::assert_ok() const
-   {
+   //void form_001::assert_ok() const
+   //{
 
-      form::assert_ok();
+   //   form::assert_ok();
 
-   }
+   //}
 
 
-   void form_001::dump(dump_context & dumpcontext) const
-   {
+   //void form_001::dump(dump_context & dumpcontext) const
+   //{
 
-      form::dump(dumpcontext);
+   //   form::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

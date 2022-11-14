@@ -1,5 +1,7 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "simple_os_drag_and_drop.h"
+#include "acme/platform/node.h"
+#include "acme/platform/system.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/pen.h"
 #include "aura/graphics/draw2d/brush.h"
