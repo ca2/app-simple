@@ -1,5 +1,6 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "main_frame.h"
+#include "acme/constant/message.h"
 
 
 namespace app_simple_box
@@ -24,20 +25,20 @@ namespace app_simple_box
    }
 
 
-   void main_frame::assert_ok() const
-   {
+   //void main_frame::assert_ok() const
+   //{
 
-      simple_frame_window::assert_ok();
+   //   simple_frame_window::assert_ok();
 
-   }
+   //}
 
 
-   void main_frame::dump(dump_context & dumpcontext) const
-   {
+   //void main_frame::dump(dump_context & dumpcontext) const
+   //{
 
-      simple_frame_window::dump(dumpcontext);
+   //   simple_frame_window::dump(dumpcontext);
 
-   }
+   //}
 
 
    ::experience::frame * main_frame::frame_experience()
@@ -63,7 +64,7 @@ namespace app_simple_box
 
       simple_main_frame::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &simple_main_frame::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE, pchannel, this, &simple_main_frame::on_message_create);
 
    }
 

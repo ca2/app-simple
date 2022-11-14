@@ -73,7 +73,7 @@ namespace app_simple_form
 
       ::user::impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE,psender,this,&impact::on_message_create);
 
    }
 

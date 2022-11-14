@@ -101,7 +101,7 @@ namespace app_simple_change_grub_default_entry
 
       ::user::form_impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &form::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form::on_message_create);
 
    }
 

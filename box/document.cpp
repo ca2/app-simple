@@ -2,6 +2,7 @@
 #include "document.h"
 #include "impact.h"
 #include "application.h"
+#include "apex/filesystem/filesystem/file_context.h"
 
 
 namespace app_simple_box
@@ -20,20 +21,20 @@ namespace app_simple_box
    }
 
 
-   void document::assert_ok() const
-   {
+   //void document::assert_ok() const
+   //{
 
-      ::user::document::assert_ok();
+   //   ::user::document::assert_ok();
 
-   }
+   //}
 
 
-   void document::dump(dump_context & dumpcontext) const
-   {
+   //void document::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::document::dump(dumpcontext);
+   //   ::user::document::dump(dumpcontext);
 
-   }
+   //}
 
 
    bool document::on_new_document()
@@ -41,14 +42,14 @@ namespace app_simple_box
       
       auto papp = get_app();
       
-      auto & file = papp->file();
+      auto pfile = papp->file();
       
-      file.lines(m_straLine, "dropbox://app_simple_application.txt");
+      pfile->lines(m_straLine, "dropbox://app_simple_application.txt");
 
       if (m_straLine.is_empty())
       {
 
-         file.lines(m_straLine, "document://app_simple_application.txt");
+         pfile->lines(m_straLine, "document://app_simple_application.txt");
 
       }
 
