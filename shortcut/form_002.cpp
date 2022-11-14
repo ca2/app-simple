@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_002.h"
 #include "aura/message/user.h"
 #include "axis/user/user/combo_box.h"
@@ -24,20 +24,20 @@ namespace app_simple_shortcut
    }
 
 
-   void form_002::assert_ok() const
-   {
+   //void form_002::assert_ok() const
+   //{
 
-      form::assert_ok();
+   //   form::assert_ok();
 
-   }
+   //}
 
 
-   void form_002::dump(dump_context & dumpcontext) const
-   {
+   //void form_002::dump(dump_context & dumpcontext) const
+   //{
 
-      form::dump(dumpcontext);
+   //   form::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

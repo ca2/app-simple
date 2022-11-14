@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "aura/message/user.h"
 #include "base/user/user/impact_system.h"
 
@@ -26,20 +26,20 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void impact::assert_ok() const
-   {
+   //void impact::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void impact::dump(dump_context & dumpcontext) const
-   {
+   //void impact::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

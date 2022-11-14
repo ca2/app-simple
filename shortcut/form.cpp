@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/graphics.h"
@@ -58,20 +58,20 @@ namespace app_simple_shortcut
    }
 
 
-   void form::assert_ok() const
-   {
+   //void form::assert_ok() const
+   //{
 
-      ::user::form_impact::assert_ok();
+   //   ::user::form_impact::assert_ok();
 
-   }
+   //}
 
 
-   void form::dump(dump_context & dumpcontext) const
-   {
+   //void form::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::form_impact::dump(dumpcontext);
+   //   ::user::form_impact::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

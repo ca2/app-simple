@@ -1,6 +1,5 @@
-#include "framework.h"
-
-//#include "aura/update.h"
+﻿#include "framework.h"
+#include "acme/constant/id.h"
 #include "base/user/user/tab_pane.h"
 
 
@@ -22,20 +21,20 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void tab_impact::assert_ok() const
-   {
+   //void tab_impact::assert_ok() const
+   //{
 
-      ::user::impact::assert_ok();
+   //   ::user::impact::assert_ok();
 
-   }
+   //}
 
 
-   void tab_impact::dump(dump_context & dumpcontext) const
-   {
+   //void tab_impact::dump(dump_context & dumpcontext) const
+   //{
 
-      ::user::impact::dump(dumpcontext);
+   //   ::user::impact::dump(dumpcontext);
 
-   }
+   //}
 
 
    void tab_impact::install_message_routing(::channel * pchannel)

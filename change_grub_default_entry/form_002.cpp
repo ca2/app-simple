@@ -1,9 +1,10 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "form_002.h"
+#include "acme/constant/id.h"
 #include "aura/message/user.h"
-#include "axis/user/user/combo_box.h"
 #include "aura/user/user/still.h"
 #include "aura/user/user/button.h"
+#include "axis/user/user/combo_box.h"
 
 
 namespace app_simple_change_grub_default_entry
@@ -23,20 +24,20 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void form_002::assert_ok() const
-   {
+   //void form_002::assert_ok() const
+   //{
 
-      form::assert_ok();
+   //   form::assert_ok();
 
-   }
+   //}
 
 
-   void form_002::dump(dump_context & dumpcontext) const
-   {
+   //void form_002::dump(dump_context & dumpcontext) const
+   //{
 
-      form::dump(dumpcontext);
+   //   form::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

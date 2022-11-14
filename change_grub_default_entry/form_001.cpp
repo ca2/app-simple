@@ -1,6 +1,9 @@
 ﻿#include "framework.h"
 #include "form_001.h"
 #include "application.h"
+#include "acme/constant/id.h"
+#include "acme/platform/node.h"
+#include "acme/primitive/string/str.h"
 #include "apex/database/_binary_stream.h"
 #include "apex/filesystem/filesystem/file_context.h"
 #include "aura/message/user.h"
@@ -29,20 +32,20 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void form_001::assert_ok() const
-   {
+   //void form_001::assert_ok() const
+   //{
 
-      form::assert_ok();
+   //   form::assert_ok();
 
-   }
+   //}
 
 
-   void form_001::dump(dump_context & dumpcontext) const
-   {
+   //void form_001::dump(dump_context & dumpcontext) const
+   //{
 
-      form::dump(dumpcontext);
+   //   form::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG

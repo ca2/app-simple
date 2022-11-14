@@ -1,7 +1,8 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
-#include "base/user/user/single_document_template.h"
+#include "apex/platform/create.h"
 #include "aura/user/user/button.h"
+#include "base/user/user/single_document_template.h"
 
 
 namespace simple_os_drag_and_drop

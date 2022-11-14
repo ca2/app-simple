@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "impact.h"
 #include "document.h"
 #include "aura/message/user.h"
@@ -28,20 +28,20 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void impact::assert_ok() const
-   {
+   //void impact::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void impact::dump(dump_context & dumpcontext) const
-   {
+   //void impact::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG
