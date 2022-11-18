@@ -25,10 +25,10 @@ namespace app_simple_form
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      //virtual ::user::enum_translucency get_translucency(::user::style * pstyle) const override;
-      virtual ::experience::frame * frame_experience() override;
+      //::user::enum_translucency get_translucency(::user::style * pstyle) override;
+      ::experience::frame * frame_experience() override;
 
-      virtual bool has_pending_graphical_update() override;
+      bool has_pending_graphical_update() override;
 
    };
 

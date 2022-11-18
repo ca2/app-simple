@@ -29,7 +29,7 @@ namespace app_simple_form
 
       void on_create_split_impact() override;
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
 //      virtual bool BaseOnControlEvent(::user::control_event * pevent);
 

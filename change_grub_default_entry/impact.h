@@ -31,7 +31,7 @@ namespace app_simple_change_grub_default_entry
 
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
       ::user::document * get_document();
 
