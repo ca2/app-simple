@@ -41,9 +41,9 @@ namespace app_simple_shader
       bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);
       void on_change_cur_sel() override;
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::context * pcontext) override;
 
-      //virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      //void handle(::topic * ptopic, ::context * pcontext) override;
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
