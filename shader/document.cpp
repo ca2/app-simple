@@ -20,23 +20,20 @@ namespace app_simple_shader
    }
 
 
+   //void document::assert_ok() const
+   //{
+
+   //   ::user::document::assert_ok();
+
+   //}
 
 
+   //void document::dump(dump_context & dumpcontext) const
+   //{
 
-   void document::assert_ok() const
-   {
+   //   ::user::document::dump(dumpcontext);
 
-      ::user::document::assert_ok();
-
-   }
-
-
-   void document::dump(dump_context & dumpcontext) const
-   {
-
-      ::user::document::dump(dumpcontext);
-
-   }
+   //}
 
 
    bool document::on_new_document()

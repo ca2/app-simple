@@ -1,14 +1,12 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "frame.h"
 #include "main_frame.h"
 #include "tab_impact.h"
 #include "impact.h"
 #include "document.h"
+#include "apex/platform/create.h"
 #include "base/user/user/single_document_template.h"
-
-
-//IMPLEMENT_APPLICATION(app_simple_shader);
 
 
 namespace app_simple_shader

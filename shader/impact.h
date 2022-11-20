@@ -1,6 +1,7 @@
-#pragma once
+﻿#pragma once
 
 
+#include "apex/platform/app_consumer.h"
 #include "base/user/user/impact.h"
 
 
@@ -46,7 +47,7 @@ namespace app_simple_shader
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
       DECLARE_MESSAGE_HANDLER(on_message_key_down);
 
-      virtual bool keyboard_focus_is_focusable() const override;
+      virtual bool keyboard_focus_is_focusable() override;
 
    };
 

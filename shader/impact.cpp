@@ -2,16 +2,20 @@
 #include "impact.h"
 #include "frame.h"
 #include "application.h"
-#include "apex/database/_binary_stream.h"
 #include "app/shader/render.h"
-#include <math.h>
 #include "acme/constant/id.h"
+#include "acme/constant/message.h"
+#include "acme/primitive/datetime/datetime.h"
+#include "apex/database/_binary_stream.h"
 #include "base/user/user/impact_system.h"
 #include "base/user/user/split_impact.h"
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/image/save_image.h"
 #include "aura/graphics/image/context_image.h"
 #include "aura/message/user.h"
+
+
+#include <math.h>
 
 
 namespace app_simple_shader
@@ -38,20 +42,20 @@ namespace app_simple_shader
    }
 
 
-   void impact::assert_ok() const
-   {
+   //void impact::assert_ok() const
+   //{
 
-      user::box::assert_ok();
+   //   user::box::assert_ok();
 
-   }
+   //}
 
 
-   void impact::dump(dump_context & dumpcontext) const
-   {
+   //void impact::dump(dump_context & dumpcontext) const
+   //{
 
-      user::box::dump(dumpcontext);
+   //   user::box::dump(dumpcontext);
 
-   }
+   //}
 
 
 #ifdef _DEBUG
@@ -183,7 +187,7 @@ namespace app_simple_shader
 
             auto pproperty = fetch_property(atom);
 
-            m_prender->defer_load_fragment(pproperty->string());
+            m_prender->defer_load_fragment(pproperty->as_string());
 
          });
 
@@ -241,7 +245,7 @@ namespace app_simple_shader
    }
 
 
-   bool impact::keyboard_focus_is_focusable() const
+   bool impact::keyboard_focus_is_focusable()
    {
 
       return true;
@@ -272,11 +276,7 @@ namespace app_simple_shader
 
                saveimage.m_eformat = ::draw2d::e_format_png;
 
-               auto psystem = acmesystem();
-
-               auto pdatetime = psystem->datetime();
-
-               string strDate = pdatetime->international().get_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = datetime()->international().get_date_time(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
 
                auto pcontext = m_pcontext;
 
