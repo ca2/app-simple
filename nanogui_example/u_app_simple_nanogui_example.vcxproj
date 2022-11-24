@@ -112,9 +112,6 @@
     <ProjectReference Include="..\..\..\source\app\base\u_base.vcxproj">
       <Project>{0680a465-39a7-4e1b-8dc1-0607a3243ea2}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\bred\u_bred.vcxproj">
-      <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\app\nanogui\u_nanogui.vcxproj">
       <Project>{dec5db00-b299-4e96-929d-c90e7140b0c7}</Project>
     </ProjectReference>
@@ -132,6 +129,9 @@
     <ClInclude Include="_.h" />
     <ClInclude Include="_app.h" />
     <ClInclude Include="_app_simple_nanogui_example.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="u_app_simple_nanogui_example.def" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C15A23D9-41E8-462C-A9FA-B4762764A3BF}</ProjectGuid>
