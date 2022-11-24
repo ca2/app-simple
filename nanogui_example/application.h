@@ -1,7 +1,7 @@
-#pragma once
+﻿#pragma once
 
 
-#include "aura/platform/application.h"
+#include "base/platform/application.h"
 
 
 namespace app_simple_nanogui_example
@@ -9,7 +9,7 @@ namespace app_simple_nanogui_example
 
 
    class CLASS_DECL_APP_SIMPLE_NANOGUI_EXAMPLE application :
-      virtual public ::aura::application
+      virtual public ::base::application
    {
    public:
 

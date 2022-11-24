@@ -1,6 +1,7 @@
 ﻿#include "framework.h"
 #include "example1.h"
 #include "main_window.h"
+#include "acme/platform/node.h"
 #include "nanogui/CheckBox.h"
 #include "nanogui/Layout.h"
 #include "nanogui/Screen.h"
@@ -211,11 +212,11 @@ namespace app_simple_nanogui_example
                     //         {
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
-                  pick_single_file(poswindow,
+                  acmenode()->pick_single_file(poswindow,
                               { {"png", "Portable Network Graphics"},
                      {"jpeg", "JPEG file"},
                      {"jpg", "JPG file"},{"txt", "Text file"} },
-                              [this, image_impact](const ::std::string & str)
+                              [this, image_impact](const ::file::path & str)
                               {
                                  
                                  if(str.size() > 0)
@@ -237,10 +238,10 @@ namespace app_simple_nanogui_example
                   
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
-                  pick_single_file(
+                  acmenode()->pick_single_file(
                      poswindow,
                      { {"png", "Portable Network Graphics"}, {"txt", "Text file"} },
-                     [this, image_impact](const ::std::string & str)
+                     [this, image_impact](const ::file::path & str)
                      {
 
                         if(str.size() > 0)
