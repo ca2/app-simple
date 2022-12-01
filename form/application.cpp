@@ -66,15 +66,15 @@ namespace app_simple_form
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_form::document >();
-      ::factory::add_factory_item <::app_simple_form::frame >();
-      ::factory::add_factory_item <::app_simple_form::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
-      ::factory::add_factory_item <::app_simple_form::impact >();
-      ::factory::add_factory_item <::app_simple_form::main_impact >();
-      ::factory::add_factory_item <::app_simple_form::tab_impact >();
-      ::factory::add_factory_item <::app_simple_form::form_001 >();
-      ::factory::add_factory_item <::app_simple_form::form_002 >();
+      factory()->add_factory_item <::app_simple_form::document >();
+      factory()->add_factory_item <::app_simple_form::frame >();
+      factory()->add_factory_item <::app_simple_form::main_frame >();
+      factory()->add_factory_item <::user::button_impact >();
+      factory()->add_factory_item <::app_simple_form::impact >();
+      factory()->add_factory_item <::app_simple_form::main_impact >();
+      factory()->add_factory_item <::app_simple_form::tab_impact >();
+      factory()->add_factory_item <::app_simple_form::form_001 >();
+      factory()->add_factory_item <::app_simple_form::form_002 >();
 
       ::base::application::init_instance();
 

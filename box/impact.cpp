@@ -320,7 +320,7 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      auto psequencer = nano()->message_box_sequencer(
+      auto psequencer = nano()->message_box(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          e_message_box_yes_no | e_message_box_icon_information

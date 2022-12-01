@@ -24,7 +24,7 @@ namespace app_simple_change_grub_default_entry
       void init_instance() override;
       virtual void term_application() override;
 
-      virtual void on_request(::create * pcreate) override;
+      virtual void on_request(::request * prequest) override;
 
 
 #ifdef _DEBUG

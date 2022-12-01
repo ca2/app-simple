@@ -35,13 +35,13 @@ namespace simple_os_drag_and_drop
 
       //puser->will_use_impact_hint(FONTSEL_IMPACT);
       
-      ::factory::add_factory_item <::simple_os_drag_and_drop::document >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::frame >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::impact >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::main_impact >();
-      ::factory::add_factory_item <::simple_os_drag_and_drop::tab_impact >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::document >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::frame >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::main_frame >();
+      factory()->add_factory_item <::user::button_impact >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::impact >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::main_impact >();
+      factory()->add_factory_item <::simple_os_drag_and_drop::tab_impact >();
 
       ::aura::application::init_instance();
 

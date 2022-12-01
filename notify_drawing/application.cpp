@@ -35,8 +35,8 @@ namespace app_simple_notify_drawing
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_notify_drawing::main_frame >();
-      ::factory::add_factory_item <::app_simple_notify_drawing::impact >();
+      factory()->add_factory_item <::app_simple_notify_drawing::main_frame >();
+      factory()->add_factory_item <::app_simple_notify_drawing::impact >();
 
       ::app_simple_drawing::application::init_instance();
 
