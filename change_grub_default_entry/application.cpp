@@ -68,15 +68,15 @@ namespace app_simple_change_grub_default_entry
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::document >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::frame >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::main_impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::tab_impact >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::form_001 >();
-      ::factory::add_factory_item <::app_simple_change_grub_default_entry::form_002 >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::document >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::frame >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::main_frame >();
+      factory()->add_factory_item <::user::button_impact >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::impact >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::main_impact >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::tab_impact >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::form_001 >();
+      factory()->add_factory_item <::app_simple_change_grub_default_entry::form_002 >();
 
       ::base::application::init_instance();
 

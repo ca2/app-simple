@@ -50,9 +50,9 @@ namespace app_simple_application
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_application::document >();
-      ::factory::add_factory_item <::app_simple_application::main_frame >();
-      ::factory::add_factory_item <::app_simple_application::impact >();
+      factory()->add_factory_item <::app_simple_application::document >();
+      factory()->add_factory_item <::app_simple_application::main_frame >();
+      factory()->add_factory_item <::app_simple_application::impact >();
 
       ::base::application::init_instance();
 

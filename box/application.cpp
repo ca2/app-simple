@@ -39,9 +39,9 @@ namespace app_simple_box
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_box::document >();
-      ::factory::add_factory_item <::app_simple_box::main_frame >();
-      ::factory::add_factory_item <::app_simple_box::impact >();
+      factory()->add_factory_item <::app_simple_box::document >();
+      factory()->add_factory_item <::app_simple_box::main_frame >();
+      factory()->add_factory_item <::app_simple_box::impact >();
 
       ::base::application::init_instance();
 

@@ -80,11 +80,11 @@ namespace app_simple_networking_application
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_networking_application::document >();
-      ::factory::add_factory_item <::app_simple_networking_application::frame >();
-      ::factory::add_factory_item <::app_simple_networking_application::main_frame >();
-      ::factory::add_factory_item <::app_simple_networking_application::impact >();
-      ::factory::add_factory_item <::app_simple_networking_application::tab_impact >();
+      factory()->add_factory_item <::app_simple_networking_application::document >();
+      factory()->add_factory_item <::app_simple_networking_application::frame >();
+      factory()->add_factory_item <::app_simple_networking_application::main_frame >();
+      factory()->add_factory_item <::app_simple_networking_application::impact >();
+      factory()->add_factory_item <::app_simple_networking_application::tab_impact >();
 
       default_toggle_check_handling("simple_checkbox");
 

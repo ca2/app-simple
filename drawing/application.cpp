@@ -96,12 +96,12 @@ namespace app_simple_drawing
 
       set_local_data();
 
-      ::factory::add_factory_item <::app_simple_drawing::document >();
-      ::factory::add_factory_item <::app_simple_drawing::frame >();
-      ::factory::add_factory_item <::app_simple_drawing::main_frame >();
-      ::factory::add_factory_item <::user::button_impact >();
-      ::factory::add_factory_item <::app_simple_drawing::impact >();
-      ::factory::add_factory_item <::app_simple_drawing::tab_impact >();
+      factory()->add_factory_item <::app_simple_drawing::document >();
+      factory()->add_factory_item <::app_simple_drawing::frame >();
+      factory()->add_factory_item <::app_simple_drawing::main_frame >();
+      factory()->add_factory_item <::user::button_impact >();
+      factory()->add_factory_item <::app_simple_drawing::impact >();
+      factory()->add_factory_item <::app_simple_drawing::tab_impact >();
 
       default_toggle_check_handling("simple_checkbox");
 

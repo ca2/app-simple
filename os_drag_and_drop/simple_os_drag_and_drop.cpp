@@ -104,7 +104,7 @@ namespace simple_os_drag_and_drop
 
       auto pfont = __create < ::write_text::font > ();
 
-      auto psystem = get_system();
+      auto psystem = acmesystem();
 
       auto pnode = psystem->node();
 
@@ -327,7 +327,7 @@ namespace simple_os_drag_and_drop
 
       auto pfont = __create < ::write_text::font > ();
 
-      auto psystem = get_system();
+      auto psystem = acmesystem();
 
       auto pnode = psystem->node();
 

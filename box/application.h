@@ -26,7 +26,7 @@ namespace app_simple_box
       void init_instance() override;
 
       
-      void on_request(::create * pcreate) override;
+      void on_request(::request * prequest) override;
 
 
    };
