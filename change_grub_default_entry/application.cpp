@@ -8,7 +8,7 @@
 #include "impact.h"
 #include "form_001.h"
 #include "form_002.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "aura/user/user/button.h"
 #include "base/user/user/show.h"
 #include "base/user/user/single_document_template.h"
@@ -111,7 +111,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
       if (m_ptemplateChangeGrubDefaultEntryMain->get_document_count() == 0)

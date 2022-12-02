@@ -23,9 +23,9 @@ namespace app_simple_drawing
 
       string strFontFamily = get_font();
 
-      auto ppen = __create < ::draw2d::pen >(this);
+      auto ppen = __create < ::draw2d::pen >();
 
-      auto pbrush = __create < ::draw2d::brush >(this);
+      auto pbrush = __create < ::draw2d::brush >();
 
       if (m_iDrawing == 3)
       {
@@ -33,7 +33,7 @@ namespace app_simple_drawing
          if (!m_pimage1)
          {
 
-            __construct(this, m_pimage1);
+            __construct(m_pimage1);
 
             m_pcontext->fork([this]()
             {
@@ -49,7 +49,7 @@ namespace app_simple_drawing
 
                   ::pointer<::image> pimage2;
 
-                  __construct(this, pimage2);
+                  __construct(pimage2);
 
                   pimage2->copy_from(pimage1);
 
