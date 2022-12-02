@@ -260,7 +260,7 @@ namespace app_simple_drawing
 
       string strTitle;
 
-      auto pbrush = __create < ::draw2d::brush >(this);
+      auto pbrush = __create < ::draw2d::brush >();
 
       auto psystem = acmesystem()->m_paurasystem;
 

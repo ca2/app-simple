@@ -5,7 +5,7 @@
 #include "main_frame.h"
 #include "document.h"
 #include "tab_impact.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "aura/user/user/button.h"
 #include "base/user/user/show.h"
 #include "base/user/user/single_document_template.h"
@@ -138,7 +138,7 @@ namespace app_simple_drawing
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
 #if 0
@@ -164,7 +164,7 @@ namespace app_simple_drawing
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(pcreate->m_bMakeVisible)
+         if(prequest->m_bMakeVisible)
          {
 
             INFORMATION("pcreate->m_bMakeVisible");
@@ -177,14 +177,14 @@ namespace app_simple_drawing
 
          }
 
-         m_ptemplateSimpleDrawingMain->do_request(pcreate);
+         m_ptemplateSimpleDrawingMain->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

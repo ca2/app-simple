@@ -35,7 +35,7 @@ namespace app_simple_drawing
 
       ::draw2d::path_pointer ppath;
 
-      __construct(this, ppath);
+      __construct(ppath);
 
       ppath->begin_figure();
 
@@ -47,7 +47,7 @@ namespace app_simple_drawing
 
       ::draw2d::pen_pointer ppen;
 
-      __construct(this, ppen);
+      __construct(ppen);
 
       auto & echeckSimple = get_app()->application_properties().m_echeckSimple;
 
@@ -66,7 +66,7 @@ namespace app_simple_drawing
 
       ::draw2d::brush_pointer pbrush;
 
-      __construct(this, pbrush);
+      __construct(pbrush);
 
       pbrush->CreateBoxGradientBrush(r.top_left(), r.size(), radius, ::dk_red(), ::color::transparent);
 

@@ -5,7 +5,7 @@
 #include "tab_impact.h"
 #include "impact.h"
 #include "document.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "base/user/user/single_document_template.h"
 
 
@@ -101,7 +101,7 @@ namespace app_simple_shader
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
 #if 0

@@ -3,7 +3,7 @@
 #include "main_frame.h"
 #include "document.h"
 #include "impact.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "base/user/user/tab_impact.h"
 #include "base/platform/session.h"
 #include "base/user/user/document_manager.h"
@@ -21,6 +21,31 @@ namespace app_simple_application
       //message_box_synchronous("Message", "Title", e_message_box_yes_no_cancel);
 
       //m_bLocalization = true;
+
+      string str = "001";
+
+      string str001 = "001";
+
+      if (str < str001)
+      {
+
+         printf("<001");
+
+      }
+      else if (str != str001)
+      {
+
+         printf("!=001");
+
+      }
+      else if (str == str001)
+      {
+
+         printf("==001");
+
+      }
+
+
       
       m_bImaging = false;
 
@@ -88,13 +113,13 @@ namespace app_simple_application
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(pcreate->m_bMakeVisible)
+         if(prequest->m_bMakeVisible)
          {
 
             INFORMATION("pcreate->m_bMakeVisible");
@@ -107,14 +132,14 @@ namespace app_simple_application
 
          }
 
-         m_ptemplateSimpleDrawingMain->do_request(pcreate);
+         m_ptemplateSimpleDrawingMain->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

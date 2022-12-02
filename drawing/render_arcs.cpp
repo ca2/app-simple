@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "render.h"
 #include "application.h"
 #include <math.h>
@@ -73,9 +73,9 @@ namespace app_simple_drawing
 
       pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy + 8, str2);
 
-      auto ppen = __create < ::draw2d::pen >(this);
+      auto ppen = __create < ::draw2d::pen >();
 
-      auto pbrush = __create < ::draw2d::brush >(this);
+      auto pbrush = __create < ::draw2d::brush >();
 
       pbrush->create_null();
 

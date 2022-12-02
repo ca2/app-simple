@@ -1,8 +1,8 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "main_frame.h"
 #include "impact.h"
-#include "apex/platform/create.h"
+#include "acme/platform/request.h"
 #include "app-simple/drawing/document.h"
 #include "app-simple/drawing/tab_impact.h"
 #include "base/user/user/single_document_template.h"
@@ -82,7 +82,7 @@ namespace app_simple_notify_drawing
    }
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
 #if 0
@@ -121,14 +121,14 @@ namespace app_simple_notify_drawing
       if (m_ptemplateNotifyDrawingMain->get_document_count() == 0)
       {
 
-         m_ptemplateNotifyDrawingMain->do_request(pcreate);
+         m_ptemplateNotifyDrawingMain->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < app_simple_drawing::document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < app_simple_drawing::document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 

@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "document.h"
 #include "main_frame.h"
@@ -75,7 +75,7 @@ namespace app_simple_box
 
 
 
-   void application::on_request(::create * pcreate)
+   void application::on_request(::request * prequest)
    {
 
       m_strAppName = "Simple Message Box!!";
@@ -83,7 +83,7 @@ namespace app_simple_box
       if (m_ptemplateAppSimpleBoxMain->get_document_count() <= 0)
       {
 
-         m_ptemplateAppSimpleBoxMain->do_request(pcreate);
+         m_ptemplateAppSimpleBoxMain->request(prequest);
 
       }
 
