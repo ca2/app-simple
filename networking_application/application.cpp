@@ -1,4 +1,4 @@
-#include "framework.h"
+﻿#include "framework.h"
 #include "application.h"
 #include "document.h"
 #include "frame.h"
@@ -152,7 +152,7 @@ namespace app_simple_networking_application
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(pcreate->m_bMakeVisible)
+         if(prequest->m_bMakeVisible)
          {
 
             INFORMATION("pcreate->m_bMakeVisible");
@@ -165,14 +165,14 @@ namespace app_simple_networking_application
 
          }
 
-         m_ptemplateSimpleDrawingMain->do_request(pcreate);
+         m_ptemplateSimpleDrawingMain->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
