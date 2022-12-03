@@ -117,9 +117,9 @@ namespace app_simple_change_grub_default_entry
       if (m_ptemplateChangeGrubDefaultEntryMain->get_document_count() == 0)
       {
 
-         pcreate->m_bMakeVisible = false;
+         prequest->m_bMakeVisible = false;
 
-         m_ptemplateChangeGrubDefaultEntryMain->do_request(pcreate);
+         m_ptemplateChangeGrubDefaultEntryMain->request(prequest);
 
       }
 
