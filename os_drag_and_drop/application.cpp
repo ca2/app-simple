@@ -121,7 +121,7 @@ namespace simple_os_drag_and_drop
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(pcreate->m_bMakeVisible)
+         if(prequest->m_bMakeVisible)
          {
 
             INFORMATION("pcreate->m_bMakeVisible");
@@ -134,21 +134,21 @@ namespace simple_os_drag_and_drop
 
          }
 
-         m_ptemplateSimpleDrawingMain->do_request(pcreate);
+         m_ptemplateSimpleDrawingMain->request(prequest);
 
       }
 
-      if (pcreate->m_payloadFile.has_char())
+      if (prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateSimpleDrawingImpact->do_request(pcreate);
+         m_ptemplateSimpleDrawingImpact->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
