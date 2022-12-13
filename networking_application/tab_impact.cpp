@@ -175,7 +175,7 @@ namespace app_simple_networking_application
 
       string strId = pimpactdata->m_atom;
 
-      if(strId.begins_eat_ci("drawing"))
+      if(strId.case_insensitive_begins_eat("drawing"))
       {
 
          auto pimpact = papp->create_simple_drawing_impact(this, pimpactdata);

@@ -145,7 +145,7 @@ namespace app_simple_shader
 //
 //       }
 
-      if(strId.begins_eat_ci("shader://"))
+      if(strId.case_insensitive_begins_eat("shader://"))
       {
 
          string strShaderPath = strId;
@@ -200,7 +200,7 @@ namespace app_simple_shader
 
       string strId = pimpactdata->m_atom;
 
-      if(strId.begins_eat_ci("shader://"))
+      if(strId.case_insensitive_begins_eat("shader://"))
       {
 
          string strShaderPath = strId;
