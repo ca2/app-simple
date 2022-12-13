@@ -3,7 +3,7 @@ project(_app_simple_drawing CXX)
 
 
 
-add_executable(${PROJECT_NAME} __implement.cpp)
+add_executable(${PROJECT_NAME} application.cpp)
 
 
 if(LINUX OR FREEBSD)

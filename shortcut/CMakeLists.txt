@@ -69,7 +69,7 @@ target_compile_definitions(app_simple_shortcut PRIVATE _APP_SIMPLE_SHORTCUT_LIBR
 add_subdirectory(__implement)
 
 
-add_executable(${PROJECT_NAME} __implement.cpp)
+add_executable(${PROJECT_NAME} application.cpp)
 
 
 list(APPEND executable_references

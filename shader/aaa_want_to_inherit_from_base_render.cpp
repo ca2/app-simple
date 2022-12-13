@@ -128,7 +128,7 @@ namespace simple_shader
       for (auto& path : listing)
       {
 
-         if (path.name().begins_ci(pszPathPrefix))
+         if (path.name().case_insensitive_begins(pszPathPrefix))
          {
 
             m_strFragment = m_pcontext->load_fragment(path, m_eshadersource);

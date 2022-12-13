@@ -3,8 +3,7 @@ project(_app_simple_application CXX)
 
 
 
-
-add_executable(${PROJECT_NAME} __implement.cpp)
+add_executable(${PROJECT_NAME} application.cpp)
 
 
 list(APPEND executable_references
