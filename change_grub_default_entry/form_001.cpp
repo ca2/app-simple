@@ -313,7 +313,7 @@ namespace app_simple_change_grub_default_entry
       
       pcontext->file()->lines(straLines, pathGrubCfg);
 
-      ::index iFind = 0;
+      ::auto pFind = 0;
 
       m_plistbox->reset_content();
 
@@ -423,9 +423,9 @@ namespace app_simple_change_grub_default_entry
 
       string strEntry;
 
-      auto iFind = straLines.find_first_begins_eat(strEntry, "saved_entry=");
+      auto pFind = straLines.find_first_begins_eat(strEntry, "saved_entry=");
 
-      if (iFind < 0)
+      if (::is_null(pFind))
       {
 
          return "";
