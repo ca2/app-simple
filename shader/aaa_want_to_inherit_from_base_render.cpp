@@ -111,9 +111,9 @@ namespace simple_shader
       if (string(pszPathPrefix) == "default")
       {
 
-         m_strProjection.Empty();
+         m_strProjection.empty();
 
-         m_strFragment.Empty();
+         m_strFragment.empty();
 
          defer_update_shader();
 
@@ -255,7 +255,7 @@ namespace simple_shader
 
          defer_load_fragment(m_strShaderPrefix);
 
-         m_strShaderPrefix.Empty();
+         m_strShaderPrefix.empty();
 
       }
 
