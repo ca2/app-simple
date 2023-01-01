@@ -33,7 +33,7 @@ namespace app_simple_notify_drawing
    void application::init_instance()
    {
 
-      set_local_data();
+      //set_local_data();
 
       factory()->add_factory_item <::app_simple_notify_drawing::main_frame >();
       factory()->add_factory_item <::app_simple_notify_drawing::impact >();
