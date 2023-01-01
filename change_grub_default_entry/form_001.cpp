@@ -325,21 +325,21 @@ namespace app_simple_change_grub_default_entry
          if (strLine.has_char() && strLine[0] == ' ')
          {
 
-            string strEntryName = ::str().consume_command_line_argument(strLine);
+            string strEntryName = ::str::consume_command_line_argument(strLine);
 
             string strValue;
 
             while (strLine.has_char())
             {
 
-               string strItem = ::str().consume_command_line_argument(strLine);
+               string strItem = ::str::consume_command_line_argument(strLine);
 
                strItem.trim();
 
                if (strItem.begins("-"))
                {
 
-                  ::str().consume_command_line_argument(strLine);
+                  ::str::consume_command_line_argument(strLine);
 
                }
                else if (strItem.begins("$"))

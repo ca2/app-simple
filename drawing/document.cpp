@@ -56,7 +56,7 @@ namespace app_simple_drawing
 
       }
 
-      string strPath = payloadFile.file_path();
+      string strPath = payloadFile.as_file_path();
 
       return true;
 
