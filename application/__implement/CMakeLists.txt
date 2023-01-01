@@ -64,7 +64,7 @@ add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
 add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(${PROJECT_NAME} experience_core)
-#add_dependencies(${PROJECT_NAME} gpu_opengl)
+add_dependencies(${PROJECT_NAME} folder_zip)
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})

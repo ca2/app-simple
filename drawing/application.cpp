@@ -60,7 +60,7 @@ namespace app_simple_drawing
 
       m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
 
-      auto pproperty1 = application_properties().find_property("simple_checkbox");
+      auto pproperty1 = application_properties().find("simple_checkbox");
 
       bool bCheckOk = false;
 
@@ -94,7 +94,7 @@ namespace app_simple_drawing
 
       application_properties().m_strMainTitle = "Simple Drawing";
 
-      set_local_data();
+      //set_local_data();
 
       factory()->add_factory_item <::app_simple_drawing::document >();
       factory()->add_factory_item <::app_simple_drawing::frame >();

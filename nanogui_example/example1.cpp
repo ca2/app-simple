@@ -175,7 +175,7 @@ namespace app_simple_nanogui_example
       
                //   tex->upload(texture_data.get());
       
-               //   m_images.emplace_back(tex, std::move(texture_data));
+               //   m_images.emplace_back(tex, std::transfer(texture_data));
                //}
       
                ImageImpact * image_impact = memory_new ImageImpact(image_window);
