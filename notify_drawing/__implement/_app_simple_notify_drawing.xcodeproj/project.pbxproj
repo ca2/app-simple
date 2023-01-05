@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A22749F27CF41310042BAC2 /* __implement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749E27CF41310042BAC2 /* __implement.cpp */; };
+		9A22749F27CF41310042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749E27CF41310042BAC2 /* application.cpp */; };
 		9A79BDD5266455CC009E6C44 /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC5266455CB009E6C44 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79BDD7266455CC009E6C44 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC6266455CB009E6C44 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79BDDD266455CC009E6C44 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC9266455CB009E6C44 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -269,7 +269,7 @@
 		9A00E3C526611F6500517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating-system/operating-system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E3DD26611F6700517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating-system/operating-system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E40A26611F6900517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../../operating-system/operating-system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A22749E27CF41310042BAC2 /* __implement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = __implement.cpp; sourceTree = "<group>"; };
+		9A22749E27CF41310042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A353DE82662283F0060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A79BDA22664548F009E6C44 /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating-system/operating-system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9A79BDC5266455CB009E6C44 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -485,7 +485,7 @@
 		9AED779D2751983A00397A57 /* notify_drawing */ = {
 			isa = PBXGroup;
 			children = (
-				9A22749E27CF41310042BAC2 /* __implement.cpp */,
+				9A22749E27CF41310042BAC2 /* application.cpp */,
 				9A9E4A5027519C950094A04C /* macos */,
 				9A990437275332E900B13F01 /* _matter.zip */,
 			);
@@ -700,7 +700,6 @@
 		9A83643228E538790009BAF5 /* ios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = ios_write_text_quartz2d.a;
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9A83643128E538790009BAF5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -747,7 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A22749F27CF41310042BAC2 /* __implement.cpp in Sources */,
+				9A22749F27CF41310042BAC2 /* application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
