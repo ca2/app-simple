@@ -37,7 +37,7 @@ namespace app_simple_box
    void application::init_instance()
    {
 
-      set_local_data();
+      //set_local_data();
 
       factory()->add_factory_item <::app_simple_box::document >();
       factory()->add_factory_item <::app_simple_box::main_frame >();
