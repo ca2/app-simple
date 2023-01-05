@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A22749A27CF41110042BAC2 /* __implement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749927CF41110042BAC2 /* __implement.cpp */; };
+		9A22749A27CF41110042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749927CF41110042BAC2 /* application.cpp */; };
 		9A41D7BC28D05DDE0008DB81 /* libnetworking_bsd.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A41D7B328D05D3E0008DB81 /* libnetworking_bsd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C816B2783F856000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816A2783F856000C8587 /* _matter.zip */; };
 		9A8C819027844A9E000C8587 /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C818827844A71000C8587 /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -311,7 +311,7 @@
 		9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../../operating-system/operating-system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A22661209D00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating-system/operating-system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating-system/operating-system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A22749927CF41110042BAC2 /* __implement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = __implement.cpp; sourceTree = "<group>"; };
+		9A22749927CF41110042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A353E23266228800060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A41D7A228D05D3E0008DB81 /* networking_bsd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = networking_bsd.xcodeproj; path = ../../../app/networking_bsd/networking_bsd.xcodeproj; sourceTree = "<group>"; };
 		9A8C816A2783F856000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
@@ -549,7 +549,7 @@
 		9AED78CF275198AD00397A57 /* networking_application */ = {
 			isa = PBXGroup;
 			children = (
-				9A22749927CF41110042BAC2 /* __implement.cpp */,
+				9A22749927CF41110042BAC2 /* application.cpp */,
 				9A8C816A2783F856000C8587 /* _matter.zip */,
 				9A9E4A4727519C560094A04C /* macos */,
 			);
@@ -760,7 +760,6 @@
 		9A41D7B828D05D3E0008DB81 /* ios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = ios_write_text_quartz2d.a;
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9A41D7B728D05D3E0008DB81 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -849,7 +848,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A22749A27CF41110042BAC2 /* __implement.cpp in Sources */,
+				9A22749A27CF41110042BAC2 /* application.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
