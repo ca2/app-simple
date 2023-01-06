@@ -31,7 +31,7 @@ namespace simple_os_drag_and_drop
    void application::init_instance()
    {
 
-      set_local_data();
+      ///set_local_data();
 
       //puser->will_use_impact_hint(FONTSEL_IMPACT);
       

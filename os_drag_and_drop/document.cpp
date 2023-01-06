@@ -57,7 +57,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      string strPath = payloadFile.file_path();
+      //string strPath = payloadFile.as_file_path();
 
       return true;
 

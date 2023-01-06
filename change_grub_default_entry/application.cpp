@@ -66,7 +66,7 @@ namespace app_simple_change_grub_default_entry
    void application::init_instance()
    {
 
-      set_local_data();
+      //set_local_data();
 
       factory()->add_factory_item <::app_simple_change_grub_default_entry::document >();
       factory()->add_factory_item <::app_simple_change_grub_default_entry::frame >();

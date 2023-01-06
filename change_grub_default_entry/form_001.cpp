@@ -313,13 +313,13 @@ namespace app_simple_change_grub_default_entry
       
       pcontext->file()->lines(straLines, pathGrubCfg);
 
-      ::auto pFind = 0;
+      strsize iFind = 0;
 
       m_plistbox->reset_content();
 
       string strLine;
 
-      while ((iFind = straLines.find_first_begins_eat(strLine, "menuentry", iFind)) >= 0)
+      while (::found(iFind = straLines.find_first_begins_eat(strLine, "menuentry", iFind)))
       {
 
          if (strLine.has_char() && strLine[0] == ' ')
@@ -423,9 +423,9 @@ namespace app_simple_change_grub_default_entry
 
       string strEntry;
 
-      auto pFind = straLines.find_first_begins_eat(strEntry, "saved_entry=");
+      auto iFind = straLines.find_first_begins_eat(strEntry, "saved_entry=");
 
-      if (::is_null(pFind))
+      if (::found(iFind))
       {
 
          return "";
@@ -500,7 +500,7 @@ namespace app_simple_change_grub_default_entry
    if (iFindEol < 0)
    {
 
-      iFindEol = memoryGrubEnv.get_size();
+      iFindEol = memoryGrubEnv.size();
 
    }
 
@@ -509,7 +509,7 @@ namespace app_simple_change_grub_default_entry
    if (iFindEnd <= 0)
    {
 
-      iFindEnd = memoryGrubEnv.get_size();
+      iFindEnd = memoryGrubEnv.size();
 
    }
    else
@@ -521,11 +521,11 @@ namespace app_simple_change_grub_default_entry
 
    auto iOldLen = iFindEol - iStart;
 
-   auto iNewLen = blockValue.get_size();
+   auto iNewLen = blockValue.size();
 
-   auto iSize = memoryGrubEnv.get_size();
+   auto iSize = memoryGrubEnv.size();
 
-   auto pdata = (byte*)memoryGrubEnv.get_data();
+   auto pdata = (byte*)memoryGrubEnv.data();
 
    if (iNewLen != iOldLen)
    {
@@ -545,7 +545,7 @@ namespace app_simple_change_grub_default_entry
       
       auto c = iOldLen - iNewLen;
 
-      auto pemptypadding = pdata + memoryGrubEnv.get_size() - c;
+      auto pemptypadding = pdata + memoryGrubEnv.size() - c;
 
       memset(pemptypadding, '#', c);
 
@@ -556,9 +556,9 @@ namespace app_simple_change_grub_default_entry
 
       auto ptarget = pdata + iStart;
 
-      auto psource = (const char *) blockValue.get_data();
+      auto psource = (const char *) blockValue.data();
 
-      auto c = blockValue.get_size();
+      auto c = blockValue.size();
 
       memcpy(ptarget, psource, c);
 

@@ -80,7 +80,7 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      string strPath = payloadFile.file_path();
+      //string strPath = payloadFile.file_path();
 
       return true;
 
