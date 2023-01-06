@@ -163,7 +163,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      switch(pimpactdata->m_atom)
+      switch(pimpactdata->m_atom.as_i32())
       {
       case MENU_IMPACT:
       {
