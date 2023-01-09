@@ -459,7 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA803CD26657ABC00A6B449 /* libwrite_text_quartz2d.dylib */,
-				9AA203AA2847FD6900A747A1 /* ios_write_text_quartz2d.a */,
+				9AA203AA2847FD6900A747A1 /* libios_write_text_quartz2d.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -478,7 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */,
-				9AA2039F2847FD6900A747A1 /* lib.a */,
+				9AA2039F2847FD6900A747A1 /* libios_database_sqlite3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 			remoteRef = 9AA2039B2847FD6900A747A1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AA2039F2847FD6900A747A1 /* lib.a */ = {
+		9AA2039F2847FD6900A747A1 /* libios_database_sqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libios_database_sqlite3.a;
@@ -711,7 +711,7 @@
 			remoteRef = 9AA203A42847FD6900A747A1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AA203AA2847FD6900A747A1 /* ios_write_text_quartz2d.a */ = {
+		9AA203AA2847FD6900A747A1 /* libios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libios_write_text_quartz2d.a;
@@ -1049,6 +1049,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.form";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1070,6 +1071,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.form";
 				PROVISIONING_PROFILE_SPECIFIER = "";
