@@ -218,8 +218,8 @@ namespace app_simple_box
       else
       {
        
-         point.x = __random(0, (int)(rectangleClient.width() - size.cx));
-         point.y = __random(0, (int)(rectangleClient.height() - size.cy*2));
+         point.x = random(0, (int)(rectangleClient.width() - size.cx));
+         point.y = random(0, (int)(rectangleClient.height() - size.cy*2));
 
       }
       
