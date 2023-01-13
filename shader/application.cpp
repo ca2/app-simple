@@ -54,7 +54,7 @@ namespace app_simple_shader
    void application::init_instance()
    {
 
-      set_local_data();
+      //set_local_data();
 
       //puser->will_use_impact_hint(FONTSEL_IMPACT);
 
@@ -125,27 +125,27 @@ namespace app_simple_shader
       if (m_ptemplateSimpleShaderMain->get_document_count() == 0)
       {
 
-         if(pcreate->m_bMakeVisible)
+         if(prequest->m_bMakeVisible)
          {
 
-            INFORMATION("pcreate->m_bMakeVisible");
+            INFORMATION("prequest->m_bMakeVisible");
 
          }
          else
          {
 
-            INFORMATION("NOT pcreate->m_bMakeVisible");
+            INFORMATION("NOT prequest->m_bMakeVisible");
 
          }
 
-         m_ptemplateSimpleShaderMain->do_request(pcreate);
+         m_ptemplateSimpleShaderMain->request(prequest);
 
       }
 
       if (is_true("wfi_maximize"))
       {
 
-         pcreate->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+         prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
 
       }
 
