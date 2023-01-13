@@ -187,7 +187,7 @@ namespace app_simple_shader
 
       }
 
-      switch(pimpactdata->m_atom)
+      switch(pimpactdata->m_atom.as_i64())
       {
       case MENU_IMPACT:
       {

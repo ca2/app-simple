@@ -187,7 +187,7 @@ namespace app_simple_shader
 
             auto pproperty = fetch_property(atom);
 
-            m_prender->defer_load_fragment(pproperty->as_string());
+            m_prender->defer_load_fragment(pproperty->get_string());
 
          });
 
