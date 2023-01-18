@@ -40,7 +40,7 @@ namespace app_simple_drawing
 
 
       rectangle_i32                       m_rectangle;
-      ::user::impact *                    m_pimpact;
+      impact *                    m_pimpact;
       string                              m_strFont1;
       string                              m_strHoverFont;
       int                                 m_iDrawing;
