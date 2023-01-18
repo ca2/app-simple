@@ -274,6 +274,8 @@ namespace app_simple_drawing
 
       string strFontFamily = get_font();
 
+
+
       if(bDrawText)
       {
 
@@ -281,13 +283,25 @@ namespace app_simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = get_app()->application_properties().m_strSimple;
-
-         if(strTitle.is_empty())
+         if (m_pimpact->m_strOverrideText.has_char())
          {
 
-            strTitle = get_app()->application_properties().m_strMainTitle;
+            strTitle = m_pimpact->m_strOverrideText;
 
+         }
+         else
+         {
+
+            strTitle = get_app()->application_properties().m_strSimple;
+
+            if (strTitle.is_empty())
+            {
+
+               strTitle = get_app()->application_properties().m_strMainTitle;
+
+
+
+            }
          }
 
          size = pgraphics->get_text_extent(strTitle);
