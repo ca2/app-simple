@@ -1,5 +1,6 @@
 ﻿#include "framework.h"
 #include "render.h"
+#include "impact.h"
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/graphics/draw2d/_binary_stream.h"
@@ -283,25 +284,13 @@ namespace app_simple_drawing
 
          pgraphics->set(pfont1);
 
-         if (m_pimpact->m_strOverrideText.has_char())
+         strTitle = get_app()->application_properties().m_strSimple;
+
+         if (strTitle.is_empty())
          {
 
-            strTitle = m_pimpact->m_strOverrideText;
+            strTitle = get_app()->application_properties().m_strMainTitle;
 
-         }
-         else
-         {
-
-            strTitle = get_app()->application_properties().m_strSimple;
-
-            if (strTitle.is_empty())
-            {
-
-               strTitle = get_app()->application_properties().m_strMainTitle;
-
-
-
-            }
          }
 
          size = pgraphics->get_text_extent(strTitle);

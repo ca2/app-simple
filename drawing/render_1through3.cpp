@@ -1,6 +1,7 @@
 ﻿#include "framework.h"
 #include "application.h"
 #include "render.h"
+#include "impact.h"
 #include <math.h>
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/draw2d.h"
