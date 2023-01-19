@@ -1,5 +1,6 @@
 ﻿#include "framework.h"
 #include "render.h"
+#include "impact.h"
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/graphics/draw2d/_binary_stream.h"
@@ -274,6 +275,8 @@ namespace app_simple_drawing
 
       string strFontFamily = get_font();
 
+
+
       if(bDrawText)
       {
 
@@ -283,7 +286,7 @@ namespace app_simple_drawing
 
          strTitle = get_app()->application_properties().m_strSimple;
 
-         if(strTitle.is_empty())
+         if (strTitle.is_empty())
          {
 
             strTitle = get_app()->application_properties().m_strMainTitle;
