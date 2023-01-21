@@ -176,7 +176,7 @@ namespace app_simple_networking_application
       ::rectangle_i32 rectangleClient;
 
 
-      get_client_rect(rectangleClient);
+      client_rectangle(rectangleClient);
 
 
       pgraphics->fill_rectangle(rectangleClient, color::white);
@@ -187,7 +187,7 @@ namespace app_simple_networking_application
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       if(rectangleClient.is_empty())
       {

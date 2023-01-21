@@ -141,7 +141,7 @@ namespace app_simple_form
 
       ::user::form_impact::on_layout(pgraphics);
 
-      auto rectClient = get_client_rect();
+      auto rectClient = client_rectangle();
       
       double iLeft = minimum(100.0, rectClient.width() * 0.05);
 

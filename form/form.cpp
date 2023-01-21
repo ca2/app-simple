@@ -110,7 +110,7 @@ namespace app_simple_form
    void form::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       pgraphics->fill_rectangle(rectangleClient, argb(127, 245, 250, 255));
 

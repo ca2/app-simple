@@ -208,7 +208,7 @@ namespace app_simple_nanogui_example
    void main_window::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       if(rectangleClient.is_empty())
       {

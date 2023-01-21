@@ -261,7 +261,7 @@ namespace app_simple_shader
 
          m_bSaveFrame = false;
 
-         auto rectangleClient = get_client_rect();
+         auto rectangleClient = client_rectangle();
 
          auto pimage = m_pcontext->m_pauracontext->create_image(rectangleClient);
 
@@ -297,7 +297,7 @@ namespace app_simple_shader
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       if(rectangleClient.is_empty())
       {

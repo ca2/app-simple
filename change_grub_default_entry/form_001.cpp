@@ -144,7 +144,7 @@ namespace app_simple_change_grub_default_entry
 
       ::rectangle_i32 rectangleClient;
 
-      get_client_rect(rectangleClient);
+      client_rectangle(rectangleClient);
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
