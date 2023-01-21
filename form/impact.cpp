@@ -132,7 +132,7 @@ namespace app_simple_form
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       pgraphics->fill_rectangle(rectangleClient, argb(127, 255, 255, 255));
 
@@ -142,7 +142,7 @@ namespace app_simple_form
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       if (rectangleClient.area() <= 0)
       {

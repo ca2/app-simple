@@ -193,7 +193,7 @@ namespace app_simple_shortcut
 
       double y = 10.;
 
-      auto rectangleClient = get_client_rect();
+      auto rectangleClient = client_rectangle();
 
       {
 
