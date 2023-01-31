@@ -1,8 +1,9 @@
-#pragma once
+﻿#pragma once
 
 
-#include "base/user/user/impact.h"
+#include "acme/primitive/collection/int_map.h"
 #include "apex/platform/app_consumer.h"
+#include "base/user/user/impact.h"
 
 
 namespace app_simple_networking_application
@@ -16,6 +17,12 @@ namespace app_simple_networking_application
 
 
       //::pointer<render>          m_prender;
+      ::index_map < ::networking::address_pointer >      m_mapaddress;
+      ::index_map < ::networking::address_pointer >      m_mapaddress2;
+
+
+      ::networking::address_pointer m_paddressNetworkInterface;
+      ::string m_strNetworkInterfaceAddress;
 
 
       impact();
@@ -46,6 +53,9 @@ namespace app_simple_networking_application
 
 
       bool on_click(::item * pitem) override;
+
+
+      void network_interface_discovery(::index iItem);
 
 
    };
