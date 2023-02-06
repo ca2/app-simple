@@ -1,0 +1,8 @@
+BEGIN_FACTORY(app_simple_nanoui_example) 
+FACTORY_DEPENDENCY(draw2d_quartz2d) 
+FACTORY_DEPENDENCY(experience_core) 
+FACTORY_DEPENDENCY(node_macos) 
+FACTORY_DEPENDENCY(windowing_macos) 
+FACTORY_DEPENDENCY(write_text_quartz2d) 
+FACTORY_DEPENDENCY(app_simple_nanoui_example) 
+END_FACTORY() 
