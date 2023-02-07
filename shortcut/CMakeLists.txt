@@ -120,7 +120,6 @@ elseif(LINUX OR FREEBSD)
 endif ()
 
 
-add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_imaging})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
