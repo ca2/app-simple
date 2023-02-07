@@ -54,7 +54,6 @@ add_dependencies(app_simple_notify_drawing experience_core)
 add_dependencies(app_simple_notify_drawing ${default_draw2d})
 add_dependencies(app_simple_notify_drawing ${default_imaging})
 add_dependencies(app_simple_notify_drawing ${default_write_text})
-add_dependencies(app_simple_notify_drawing ${app_common_dependencies})
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
