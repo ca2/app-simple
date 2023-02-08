@@ -54,7 +54,6 @@ add_dependencies(app_simple_box experience_core)
 add_dependencies(app_simple_box ${default_draw2d})
 add_dependencies(app_simple_box ${default_imaging})
 add_dependencies(app_simple_box ${default_write_text})
-add_dependencies(app_simple_box ${app_common_dependencies})
 
 
 
