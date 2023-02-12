@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <None Include="..\uwp_app_simple_drawing_TemporaryKey.pfx">
-      <Filter>UWP</Filter>
-    </None>
     <None Include="..\_matter.zip">
       <Filter>Source Files</Filter>
     </None>
@@ -36,6 +33,9 @@
     </None>
     <None Include="..\..\..\..\..\operating-system\storage-universal_windows\x64\debug\binary\libssl-3-x64.dll">
       <Filter>Library\x64\basis</Filter>
+    </None>
+    <None Include="uwp_app_simple_drawing_TemporaryKey.pfx">
+      <Filter>UWP</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

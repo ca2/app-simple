@@ -766,7 +766,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
     </None>
-    <None Include="..\uwp_app_simple_drawing_TemporaryKey.pfx" />
     <None Include="..\_matter.zip">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">true</DeploymentContent>
@@ -785,6 +784,7 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
     </None>
+    <None Include="uwp_app_simple_drawing_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package10.appxmanifest">
