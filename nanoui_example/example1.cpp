@@ -214,9 +214,10 @@ namespace app_simple_nanoui_example
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
                   acmenode()->pick_single_file(poswindow,
-                              { {"png", "Portable Network Graphics"},
-                     {"jpeg", "JPEG file"},
-                     {"jpg", "JPG file"},{"txt", "Text file"} },
+                              { {"*.png", "Portable Network Graphics"},
+                     {"*.jpeg", "JPEG file"},
+                     {"*.jpg", "JPG file"},
+                     {"*.txt", "Text file"} },
                               [this, image_impact](const ::file::path & str)
                               {
                                  
