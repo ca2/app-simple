@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B0F73836-FE37-4559-A654-016242409D24}</ProjectGuid>
+    <ProjectGuid>{1B89A62C-83E0-440A-AF68-723A2CF5EB05}</ProjectGuid>
     <RootNamespace>app-simple</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <ProjectName>uwp_app_simple_nanoui_example</ProjectName>
@@ -255,66 +255,30 @@
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|ARM'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|ARM64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|ARM'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|ARM64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|Win32'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|Win32'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM64'">
-    <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
-    <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM64'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <OutDir>$(TimeDir)$(PlatformName)\$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(TimeDir)intermediate\$(PlatformName)\$(Configuration)\$(RootNamespace)\$(ProjectName)\</IntDir>
@@ -323,8 +287,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -332,8 +294,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
@@ -349,8 +309,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -359,8 +317,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
@@ -373,8 +329,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -383,8 +337,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
@@ -397,8 +349,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -407,8 +357,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
@@ -421,16 +369,13 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
@@ -444,17 +389,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -465,17 +407,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -486,17 +425,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -507,17 +443,13 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
@@ -535,18 +467,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
@@ -561,16 +489,13 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
@@ -584,17 +509,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -605,9 +527,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -615,7 +534,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
@@ -631,9 +549,6 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <CompileAsManaged>false</CompileAsManaged>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -642,7 +557,6 @@
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
@@ -655,16 +569,13 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
@@ -678,17 +589,14 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating-system/operating-system-universal_windows/_include;$(SolutionDir)../../../operating-system/operating-system-universal_windows;$(SolutionDir)../../../operating-system/operating-system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
-      <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
-      <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -910,7 +818,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="__implement.cpp">
+    <ClCompile Include="application.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticRelease|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -969,14 +877,11 @@
     <ProjectReference Include="..\..\..\app\database_sqlite3\u_database_sqlite3.vcxproj">
       <Project>{ba9bff50-1888-4722-8dee-73a3b5b32bcb}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\app\experience_nanoui\u_experience_nanoui.vcxproj">
+    <ProjectReference Include="..\..\..\app\experience_nanogui\u_experience_nanogui.vcxproj">
       <Project>{837a7917-7682-4000-8dfb-f4c5e53f760e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\app\folder_zip\u_folder_zip.vcxproj">
       <Project>{fc96f9e0-d65e-4286-95b1-f1ff4873dace}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\app\nanoui\u_nanoui.vcxproj">
-      <Project>{dec5db00-b299-4e96-929d-c90e7140b0c7}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\operating-system\operating-system-universal_windows\aura_universal_windows\u_aura_universal_windows.vcxproj">
       <Project>{05c4cf3f-fcb7-4017-a39b-1a03158ec0f3}</Project>

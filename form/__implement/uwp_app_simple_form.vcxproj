@@ -930,7 +930,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
     </None>
-    <None Include="..\..\nanogui_example\_matter.zip">
+    <None Include="..\_matter.zip">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\uwp_app_simple_form_TemporaryKey.pfx" />
@@ -975,7 +975,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="__implement.cpp" />
+    <ClCompile Include="application.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\operating-system\operating-system-universal_windows\acme_universal_windows\u_acme_universal_windows.vcxproj">
