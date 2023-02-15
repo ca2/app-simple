@@ -1,4 +1,4 @@
-﻿/*
+/*
     src/example2.cpp -- C++ version of an example application that shows
     how to use the form helper class. For a Python implementation, see
     '../python/example2.py'.
