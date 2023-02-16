@@ -30,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A438898299E6A9F00D2EE15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A93B6FA2846EB33005ACD11;
+			remoteInfo = ios_base;
+		};
 		9A83B5982807FC2300A1A2B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
@@ -76,7 +83,7 @@
 		9AE12F482661FAF0009F476A /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE12F4A2661FAF0009F476A /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE12F4C2661FAF0009F476A /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE24E8A1904CFFD001AEFFB /* libapp_simple_box_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libapp_simple_box_app.a; path = libios_app_simple_box.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE24E8A1904CFFD001AEFFB /* libios_app_simple_box.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_box.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
 		9AE24EA61904CFFD001AEFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AE24EA81904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				9A83B5992807FC2300A1A2B6 /* libbase.dylib */,
+				9A438899299E6A9F00D2EE15 /* libios_base.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9AEB75A316F78DF10085103B /* libapp_simple_box.dylib */,
-				9AE24E8A1904CFFD001AEFFB /* libapp_simple_box_app.a */,
+				9AE24E8A1904CFFD001AEFFB /* libios_app_simple_box.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,7 +228,7 @@
 			);
 			name = ios_app_simple_box;
 			productName = app_core_hellomultiverse_ios;
-			productReference = 9AE24E8A1904CFFD001AEFFB /* libapp_simple_box_app.a */;
+			productReference = 9AE24E8A1904CFFD001AEFFB /* libios_app_simple_box.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9AEB75A216F78DF10085103B /* app_simple_box */ = {
@@ -247,7 +255,7 @@
 		9AEB759B16F78DF10085103B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 			};
 			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_box" */;
@@ -276,6 +284,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A438899299E6A9F00D2EE15 /* libios_base.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_base.a;
+			remoteRef = 9A438898299E6A9F00D2EE15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9A83B5992807FC2300A1A2B6 /* libbase.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -336,6 +351,7 @@
 				EXECUTABLE_EXTENSION = a;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
 			};
@@ -347,6 +363,7 @@
 				EXECUTABLE_EXTENSION = a;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
 			};
@@ -384,6 +401,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -457,6 +475,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -496,6 +515,8 @@
 		9AEB75A816F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Debug;
@@ -503,6 +524,8 @@
 		9AEB75A916F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PLATFORM_MODIFIER = macos;
 			};
 			name = Release;
