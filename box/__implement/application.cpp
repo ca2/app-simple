@@ -1,18 +1,21 @@
 #include "framework.h"
 #include "application.h"
-#include "__implement.h"
+#include "acme/application.h"
 
 
-int __implement()
-{
+app_simple_box::application g_app_simple_box_application;
 
-   auto papp = memory_new app_simple_box::application();
 
-   int iExitCode = papp->__implement();
-
-   return iExitCode;
-
-}
+//int __implement()
+//{
+//
+//   auto papp = memory_new app_simple_box::application();
+//
+//   int iExitCode = papp->__implement();
+//
+//   return iExitCode;
+//
+//}
 
 
 
