@@ -4,7 +4,7 @@
 #include "base/_.h"
 
 
-#ifdef _APP_SIMPLE_SHORTCUT_LIBRARY
+#if defined(_app_simple_shortcut_project)
 #define CLASS_DECL_APP_SIMPLE_SHORTCUT  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_SIMPLE_SHORTCUT  CLASS_DECL_IMPORT

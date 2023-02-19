@@ -5,7 +5,7 @@
 ////#include "core/user/userex/_userex.h"
 //
 //
-//#ifdef _APP_SIMPLE_NOTIFY_DRAWING_LIBRARY
+//#if defined(_app_simple_notify_drawing_project)
 //#define CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING  CLASS_DECL_EXPORT
 //#else
 //#define CLASS_DECL_APP_SIMPLE_NOTIFY_DRAWING  CLASS_DECL_IMPORT

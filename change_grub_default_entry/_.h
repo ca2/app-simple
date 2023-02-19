@@ -1,14 +1,14 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/_.h"
 
 
 
-#ifdef _APP_SIMPLE_FORM_LIBRARY
-#define CLASS_DECL_APP_SIMPLE_FORM  CLASS_DECL_EXPORT
+#if defined(_app_simple_change_grub_default_entry_project)
+#define CLASS_DECL_APP_SIMPLE_CHANGE_GRUB_DEFAULT_ENTRY  CLASS_DECL_EXPORT
 #else
-#define CLASS_DECL_APP_SIMPLE_FORM  CLASS_DECL_IMPORT
+#define CLASS_DECL_APP_SIMPLE_CHANGE_GRUB_DEFAULT_ENTRY  CLASS_DECL_IMPORT
 #endif
 
 
