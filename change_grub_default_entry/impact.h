@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include "base/user/user/impact.h"
@@ -8,7 +8,7 @@ namespace app_simple_change_grub_default_entry
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_FORM impact :
+   class CLASS_DECL_APP_SIMPLE_CHANGE_GRUB_DEFAULT_ENTRY impact :
       virtual public ::user::impact
    {
    public:

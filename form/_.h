@@ -4,7 +4,7 @@
 #include "base/_.h"
 
 
-#ifdef _APP_SIMPLE_FORM_LIBRARY
+#if defined(_app_simple_form_project)
 #define CLASS_DECL_APP_SIMPLE_FORM  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_SIMPLE_FORM  CLASS_DECL_IMPORT

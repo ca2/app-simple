@@ -5,7 +5,7 @@
 #include "nanoui/_.h"
 
 
-#ifdef _APP_SIMPLE_NANOUI_EXAMPLE_LIBRARY
+#if defined(_app_simple_nanoui_example_project)
 #define CLASS_DECL_APP_SIMPLE_NANOUI_EXAMPLE  CLASS_DECL_EXPORT
 #else
 #define CLASS_DECL_APP_SIMPLE_NANOUI_EXAMPLE CLASS_DECL_IMPORT
