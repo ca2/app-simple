@@ -15,6 +15,12 @@
 		9A9902B727532A0700B13F01 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9902B3275329C600B13F01 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A4427519C320094A04C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A4027519C320094A04C /* MainMenu.xib */; };
 		9A9E4A4527519C320094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A4227519C320094A04C /* Images.xcassets */; };
+		9AB15C1029A87AC300DFDF90 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */; };
+		9AB15C1129A87AC300DFDF90 /* libacme_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB15C1429A87AD000DFDF90 /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */; };
+		9AB15C1529A87AD000DFDF90 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB15C1629A87AD100DFDF90 /* libaura_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */; };
+		9AB15C1729A87AD100DFDF90 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libbase.dylib */; };
 		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
@@ -249,6 +255,7 @@
 				9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */,
 				9AFFC7D82678757600C4104F /* libacme_posix.dylib in Embed Libraries */,
 				9AFFC7FF267875AB00C4104F /* libdraw2d_quartz2d.dylib in Embed Libraries */,
+				9AB15C1129A87AC300DFDF90 /* libacme_darwin.dylib in Embed Libraries */,
 				9A8C50D72783DA83000C8587 /* libssl.3.dylib in Embed Libraries */,
 				9AFFC7F7267875AA00C4104F /* libbase.dylib in Embed Libraries */,
 				9AFFC7E22678757600C4104F /* libapp_simple_drawing.dylib in Embed Libraries */,
@@ -262,11 +269,13 @@
 				9AFFC7E42678757600C4104F /* libaqua.dylib in Embed Libraries */,
 				9A9902B727532A0700B13F01 /* libfolder_zip.dylib in Embed Libraries */,
 				9AFFC7DC2678757600C4104F /* libapex_apple.dylib in Embed Libraries */,
+				9AB15C1529A87AD000DFDF90 /* libapex_darwin.dylib in Embed Libraries */,
 				9AFFC80C267875D200C4104F /* libwindowing_macos.dylib in Embed Libraries */,
 				9AFFC7E82678757600C4104F /* libaura_apple.dylib in Embed Libraries */,
 				9AFFC7E02678757600C4104F /* libapex_posix.dylib in Embed Libraries */,
 				9AFFC801267875AB00C4104F /* libexperience_core.dylib in Embed Libraries */,
 				9AFFC80E267875D300C4104F /* libwrite_text_quartz2d.dylib in Embed Libraries */,
+				9AB15C1729A87AD100DFDF90 /* libaura_darwin.dylib in Embed Libraries */,
 				9AFFC7FD267875AB00C4104F /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9AFFC7DE2678757600C4104F /* libapex_macos.dylib in Embed Libraries */,
 				9AFFC7F5267875AA00C4104F /* libaxis.dylib in Embed Libraries */,
@@ -302,6 +311,9 @@
 		9A9E4A4127519C320094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A4227519C320094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A4327519C320094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC01E3F2748D26D006BEBCC /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9AFFC7C42678757600C4104F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,11 +339,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB15C1429A87AD000DFDF90 /* libapex_darwin.dylib in Frameworks */,
 				9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */,
+				9AB15C1629A87AD100DFDF90 /* libaura_darwin.dylib in Frameworks */,
 				9A9902B627532A0700B13F01 /* libfolder_zip.dylib in Frameworks */,
 				9AFFC7D12678757600C4104F /* libacme.dylib in Frameworks */,
 				9AFFC7E12678757600C4104F /* libapp_simple_drawing.dylib in Frameworks */,
 				9AFFC7D92678757600C4104F /* libapex.dylib in Frameworks */,
+				9AB15C1029A87AC300DFDF90 /* libacme_darwin.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +490,9 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */,
+				9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */,
+				9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */,
 				9AFFC80A267875D200C4104F /* libwindowing_macos.dylib */,
 				9AFFC7F0267875AA00C4104F /* libbase.dylib */,
 				9AFFC7F3267875AA00C4104F /* libidn.dylib */,
