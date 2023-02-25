@@ -22,7 +22,7 @@
 #include "nanoui/ColorWheel.h"
 #include "nano2d/context.h"
 #include "acme/filesystem/file/file_stream1.h"
-//#include "acme/filesystem/file/text_stream.h"
+#include "acme/filesystem/filesystem/file_dialog.h"
 #include "aura/windowing/window.h"
 
 
@@ -213,22 +213,29 @@ namespace app_simple_nanoui_example
                     //         {
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
-                  acmenode()->pick_single_file(poswindow,
-                              { {"*.png", "Portable Network Graphics"},
-                     {"*.jpeg", "JPEG file"},
-                     {"*.jpg", "JPG file"},
-                     {"*.txt", "Text file"} },
-                              [this, image_impact](const ::file::path & str)
-                              {
-                                 
-                                 if(str.size() > 0)
-                                 {
-                         
-                                    image_impact->set_image(___load_image(m_puserinteraction, str.c_str()));
-                      
-                                 }
+                  auto pdialog = acmenode()->node_file_dialog();
+                  pdialog->m_filetypes = { {"*.png", "Portable Network Graphics"},
+                                           {"*.jpeg", "JPEG file"},
+                                           {"*.jpg", "JPG file"},
+                                           {"*.txt", "Text file"} };
+                  pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
+                  {
 
-                              }, false);
+                     if(pdialog->m_patha.has_element())
+                     {
+
+                        image_impact->set_image(___load_image(m_puserinteraction, pdialog->m_patha.first().c_str()));
+
+                     }
+
+                  };
+                  pdialog->m_puserelement = m_puserinteraction;
+                  pdialog->m_bSave = false;
+                  pdialog->m_bMultiple = false;
+                  pdialog->call_run();
+                  //acmenode()->pick_single_file(poswindow,
+                    //          ,
+                      //        , false);
                      
                   });
                   
@@ -240,20 +247,27 @@ namespace app_simple_nanoui_example
                   
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
-                  acmenode()->pick_single_file(
-                     poswindow,
-                     { {"png", "Portable Network Graphics"}, {"txt", "Text file"} },
-                     [this, image_impact](const ::file::path & str)
+                  auto pdialog = acmenode()->node_file_dialog();
+                  pdialog->m_puserelement = m_puserinteraction;
+                  pdialog->m_filetypes = { {"png", "Portable Network Graphics"}, {"txt", "Text file"} };
+                  pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
+                  {
+
+                     if(pdialog->m_patha.has_element())
                      {
 
-                        if(str.size() > 0)
-                        {
-                     
-                           ___save_image(m_puserinteraction, str.c_str(), image_impact->image());
-                        
-                        }
+                        ___save_image(m_puserinteraction, pdialog->m_patha.first().c_str(), image_impact->image());
 
-                     }, true);
+                     }
+
+                  };
+                  pdialog->m_bSave = true;
+                  pdialog->m_bMultiple = false;
+                  pdialog->call_run();
+//                  acmenode()->pick_single_file(
+//                     poswindow,
+//                     ,
+//                     , true);
 
                });
       
