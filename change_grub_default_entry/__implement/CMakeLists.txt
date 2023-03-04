@@ -70,6 +70,9 @@ add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_imaging})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
 add_dependencies(${PROJECT_NAME} database_sqlite3)
+add_dependencies(${PROJECT_NAME} crypto_openssl)
+add_dependencies(${PROJECT_NAME} networking_bsd)
+add_dependencies(${PROJECT_NAME} folder_zip)
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
