@@ -236,9 +236,14 @@ namespace app_simple_change_grub_default_entry
 
             m_pedit->_001GetText(strText);
 
-            auto papp = get_app();
+            if(ptopic->m_actioncontext.is_user_source())
+            {
 
-            papp->datastream()->set("grub_folder_path", strText);
+               auto papp = get_app();
+
+               papp->datastream()->set("grub_folder_path", strText);
+
+            }
 
             update_grub_entry_list(strText);
 
@@ -311,7 +316,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubCfg = get_grub_cfg_path(pathGrubFolder);
       
-      pcontext->file()->lines(straLines, pathGrubCfg);
+      straLines = pcontext->file()->lines(pathGrubCfg);
 
       strsize iFind = 0;
 
@@ -421,7 +426,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 
-      pcontext->file()->lines(straLines, pathGrubEnv);
+      straLines = pcontext->file()->lines(pathGrubEnv);
 
       string strEntry;
 
