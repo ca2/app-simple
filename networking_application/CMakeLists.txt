@@ -66,8 +66,8 @@ add_dependencies(app_simple_networking_application networking_bsd)
 
 list(APPEND library_link_directories
    ${LIBRARY_OUTPUT_PATH}
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${OPERATING_SYSTEM_NAME}/library/x64/basis
-   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating-system/storage-${OPERATING_SYSTEM_NAME}/third/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/storage-${OPERATING_SYSTEM_NAME}/library/x64/basis
+   ${CMAKE_CURRENT_SOURCE_DIR}/../../../operating_system/storage-${OPERATING_SYSTEM_NAME}/third/library/x64/basis
    )
 
 
