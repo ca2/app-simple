@@ -2,7 +2,8 @@
 #include "tab_impact.h"
 #include "application.h"
 #include "form_amender.h"
-#include "form_002.h"
+#include "form_reset_icon.h"
+#include "form_set_icon.h"
 #include "document.h"
 #include "acme/constant/id.h"
 #include "acme/constant/impact.h"
@@ -60,32 +61,9 @@ namespace app_simple_shortcut_amender
          return;
 
       add_tab("Menu",MENU_IMPACT);
-      add_tab("001", "form1");
-      add_tab("002", "form2");
-
-      string strForm;
-
-      auto papp = get_app();
-
-      strForm = papp->payload("tab");
-
-      string_array straForm;
-
-      straForm.add("form1");
-      straForm.add("form2");
-
-      if(straForm.contains(strForm))
-      {
-
-         set_current_tab_by_id(strForm);
-
-      }
-      else
-      {
-
-         set_current_tab_by_id("form1");
-
-      }
+      add_tab("Amender", "form_amender");
+      add_tab("Reset Icon", "form_reset_icon");
+      add_tab("Set Icon", "form_set_icon");
 
    }
 
@@ -161,36 +139,32 @@ namespace app_simple_shortcut_amender
 
       string strId = pimpactdata->m_atom;
 
-      if(strId.case_insensitive_begins_eat("form"))
+      if (strId.case_insensitive_begins("form_"))
       {
 
          ::pointer<form> pform;
 
-         index iId = atoi(strId);
-
-         switch (iId)
+         if (strId.case_insensitive_equals("form_amender"))
          {
-         case 1:
+
 
             pform = create_impact<form_amender>(pimpactdata);
 
-            break;
+         }
+         else if(strId.case_insensitive_equals("form_reset_icon"))
+         {
+            
+            pform = create_impact<form_reset_icon>(pimpactdata);
 
-         case 2:
+         }
+         else if (strId.case_insensitive_equals("form_set_icon"))
+         {
 
-            pform = create_impact<form_002>(pimpactdata);
-
-            break;
-
-         default:
-
-            break;
+            pform = create_impact<form_set_icon>(pimpactdata);
 
          }
 
          pform->m_ptabimpact = this;
-
-         pform->m_iId = (int)iId;
 
          pform->m_atom = pimpactdata->m_atom;
 

@@ -1,5 +1,6 @@
-﻿#include "framework.h"
-#include "form_amender.h"
+﻿// From form_amender.cpp by camilo on 2023-03-15 ~17:00 <3ThomasBorregaardSorensen!!
+#include "framework.h"
+#include "form_reset_icon.h"
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
@@ -19,19 +20,19 @@ namespace app_simple_shortcut_amender
 {
 
 
-   form_amender::form_amender()
+   form_reset_icon::form_reset_icon()
    {
 
    }
 
 
-   form_amender::~form_amender()
+   form_reset_icon::~form_reset_icon()
    {
 
    }
 
 
-   //void form_amender::assert_ok() const
+   //void form_reset_icon::assert_ok() const
    //{
 
    //   form::assert_ok();
@@ -39,7 +40,7 @@ namespace app_simple_shortcut_amender
    //}
 
 
-   //void form_amender::dump(dump_context & dumpcontext) const
+   //void form_reset_icon::dump(dump_context & dumpcontext) const
    //{
 
    //   form::dump(dumpcontext);
@@ -50,7 +51,7 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   int64_t form_amender::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_reset_icon::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -58,7 +59,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   int64_t form_amender::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_reset_icon::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
    {
 
       return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -69,20 +70,20 @@ namespace app_simple_shortcut_amender
 #endif
 
 
-   void form_amender::install_message_routing(::channel * psender)
+   void form_reset_icon::install_message_routing(::channel * psender)
    {
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form_amender::on_message_create);
+      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form_reset_icon::on_message_create);
 
-      add_command_handler("send_button", { this,  &form_amender::_001OnSendButton });
-      add_command_handler("clear_button", { this,  &form_amender::_001OnClearButton });
+      add_command_handler("send_button", { this,  &form_reset_icon::_001OnSendButton });
+      add_command_handler("clear_button", { this,  &form_reset_icon::_001OnClearButton });
 
    }
 
 
-   void form_amender::on_message_create(::message::message * pmessage)
+   void form_reset_icon::on_message_create(::message::message * pmessage)
    {
 
       ::pointer<::message::create> pcreate(pmessage);
@@ -104,10 +105,6 @@ namespace app_simple_shortcut_amender
 
       __construct_new(m_peditSource);
 
-      __construct_new(m_pstillTarget);
-
-      __construct_new(m_peditTarget);
-
       __construct_new(m_pbuttonClear);
 
       __construct_new(m_pbuttonSend);
@@ -126,12 +123,6 @@ namespace app_simple_shortcut_amender
 
       m_peditSource->add_handler(this);
 
-      m_pstillTarget->create_control(this, "still_target");
-
-      m_peditTarget->create_control(this, "edit_target");
-
-      m_peditTarget->add_handler(this);
-
       m_pbuttonClear->create_control(this, "clear_button");
 
       m_pbuttonClear->add_handler(this);
@@ -144,19 +135,13 @@ namespace app_simple_shortcut_amender
 
       m_pstillSource->set_window_text("Source:");
 
-      m_pstillTarget->set_window_text("Target:");
-
       m_pstillReceiver->create_control(this, "still");
 
       m_pstillReceiver->set_window_text("(Waiting to receive...)");
 
-      m_peditFolder->m_strEmtpyText = "Enter folder where to fix links";
+      m_peditFolder->m_strEmtpyText = "Enter folder where to reset links icon";
 
       m_peditSource->m_strEmtpyText = "Enter text to search for";
-
-      m_peditTarget->m_strEmtpyText = "Enter text do substitution";
-
-      
 
       auto papp = get_app();
 
@@ -180,16 +165,6 @@ namespace app_simple_shortcut_amender
 
       }
 
-      {
-
-         ::string strLastTarget;
-
-         papp->datastream()->get("last_target", strLastTarget);
-
-         m_peditTarget->_001SetText(strLastTarget, ::e_source_initialize);
-
-      }
-
       m_pbuttonClear->set_window_text("Clear");
 
       m_pbuttonSend->set_window_text("Thumbnail");
@@ -197,7 +172,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   void form_amender::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_reset_icon::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
       ::user::form_impact::on_layout(pgraphics);
@@ -257,9 +232,11 @@ namespace app_simple_shortcut_amender
 
       }
 
+      ::size_i32 sizeEdit;
+
       {
 
-         auto sizeEdit = m_peditSource->_001CalculateAdjustedFittingSize(pgraphics);
+         sizeEdit = m_peditSource->_001CalculateAdjustedFittingSize(pgraphics);
 
          auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pgraphics), ::e_element_none);
 
@@ -273,48 +250,13 @@ namespace app_simple_shortcut_amender
 
       }
 
-      {
-
-         auto sizeStill = m_pstillTarget->_001CalculateAdjustedFittingSize(pgraphics);
-
-         auto rectangleStillMargin = m_pstillTarget->get_margin(m_pstillTarget->get_style(pgraphics));
-
-         y += rectangleStillMargin.top;
-
-         m_pstillTarget->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
-
-         y += sizeStill.cy;
-
-         y += rectangleStillMargin.bottom;
-
-      }
-
-      ::size_i32 sizeEdit;
-
-      {
-
-         sizeEdit = m_peditTarget->_001CalculateAdjustedFittingSize(pgraphics);
-
-         auto rectangleEditMargin = m_peditTarget->get_margin(m_peditTarget->get_style(pgraphics), ::e_element_none);
-
-         y += rectangleEditMargin.top;
-
-         m_peditTarget->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy));
-
-         y += sizeEdit.cy;
-
-         y += rectangleEditMargin.bottom;
-
-      }
-
-
       auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
 
       auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditTarget->get_style(pgraphics));
+      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditSource->get_style(pgraphics));
 
-      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditTarget->get_style(pgraphics));
+      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditSource->get_style(pgraphics));
 
       y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
@@ -335,7 +277,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   void form_amender::handle(::topic * ptopic, ::context * pcontext)
+   void form_reset_icon::handle(::topic * ptopic, ::context * pcontext)
    {
 
       if (ptopic->m_atom == ::id_after_change_text)
@@ -386,80 +328,80 @@ namespace app_simple_shortcut_amender
                m_pbuttonSend->set_window_text("Thumbnail");
 
             }
-            else if (ptopic->m_puserelement->m_atom == "edit_target")
-            {
+            //else if (ptopic->m_puserelement->m_atom == "edit_target")
+            //{
 
-               string strText;
+            //   string strText;
 
-               m_peditTarget->_001GetText(strText);
+            //   m_peditTarget->_001GetText(strText);
 
-               auto papp = get_app();
+            //   auto papp = get_app();
 
-               if (strText == "This is a test. This is a test")
-               {
+            //   if (strText == "This is a test. This is a test")
+            //   {
 
-                  output_debug_string("");
+            //      output_debug_string("");
 
-               }
+            //   }
 
-               papp->datastream()->set("last_target", strText);
+            //   papp->datastream()->set("last_target", strText);
 
-               m_pbuttonSend->set_window_text("Thumbnail");
+            //   m_pbuttonSend->set_window_text("Thumbnail");
 
-            }
+            //}
 
          }
 
       }
-//      else if (ptopic->m_atom == ::id_click)
-//      {
-//
-//         if (ptopic->m_puserelement->m_atom == "clear_button")
-//         {
-//
-//            m_pedit->_001SetText("", ::e_source_user);
-//
-//         }
-//         else if (ptopic->m_puserelement->m_atom == "send_button")
-//         {
-//
-//            string strText;
-//
-//            m_pedit->_001GetText(strText);
-//
-//            //main_async(__routine([this, strText]()
-//              // {
-//
-//                  output_error_message("send_button clicked\nText: " + strText);
-//
-//               //}));
-//
-//                  m_pstillReceiver->set_window_text(strText);
-//
-//                  m_pstillReceiver->post_redraw();
-//
-//            ptopic->m_bRet = true;
-//
-//         }
-//
-//      }
+      //      else if (ptopic->m_atom == ::id_click)
+      //      {
+      //
+      //         if (ptopic->m_puserelement->m_atom == "clear_button")
+      //         {
+      //
+      //            m_pedit->_001SetText("", ::e_source_user);
+      //
+      //         }
+      //         else if (ptopic->m_puserelement->m_atom == "send_button")
+      //         {
+      //
+      //            string strText;
+      //
+      //            m_pedit->_001GetText(strText);
+      //
+      //            //main_async(__routine([this, strText]()
+      //              // {
+      //
+      //                  output_error_message("send_button clicked\nText: " + strText);
+      //
+      //               //}));
+      //
+      //                  m_pstillReceiver->set_window_text(strText);
+      //
+      //                  m_pstillReceiver->post_redraw();
+      //
+      //            ptopic->m_bRet = true;
+      //
+      //         }
+      //
+      //      }
 
    }
 
 
-   void form_amender::_001OnClearButton(::message::message * pmessage)
+   void form_reset_icon::_001OnClearButton(::message::message * pmessage)
    {
 
       m_peditSource->_001SetText("", ::e_source_user);
 
-      m_peditTarget->_001SetText("", ::e_source_user);
+      //m_peditTarget->_001SetText("", ::e_source_user);
 
       pmessage->m_bRet = true;
 
    }
 
 
-   void form_amender::_001OnSendButton(::message::message * pmessage)
+   void form_reset_icon::_001OnSendButton(::message::message * pmessage)
    {
 
       string strSend;
@@ -476,16 +418,16 @@ namespace app_simple_shortcut_amender
 
       m_peditSource->_001GetText(strSource);
 
-      string strTarget;
+      //string strTarget;
 
-      m_peditTarget->_001GetText(strTarget);
+      //m_peditTarget->_001GetText(strTarget);
 
       string strMessage;
 
-      strMessage.format("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
-         strSource.c_str(), strFolder.c_str(), strTarget.c_str());
+      strMessage.format("Gonna search for '%s', in '%s' and reset icon\n\n",
+         strSource.c_str(), strFolder.c_str());
 
-      string_array straAction = do_amender(strTarget, strFolder, strSource, bThumbnail);
+      string_array straAction = reset_icon(strFolder, strSource, bThumbnail);
 
       strMessage += straAction.implode("\n");
 
@@ -496,19 +438,16 @@ namespace app_simple_shortcut_amender
       if (bThumbnail)
       {
 
-         m_pbuttonSend->set_window_text("Replace");
+         m_pbuttonSend->set_window_text("Reset Icon");
 
       }
 
       pmessage->m_bRet = true;
 
-
-
    }
 
 
-   
-   string_array form_amender::do_amender(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail)
+   string_array form_reset_icon::reset_icon(const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail)
    {
 
       file::listing listing;
@@ -534,12 +473,6 @@ namespace app_simple_shortcut_amender
 
       strSource.find_replace("\\", "/");
 
-      ::string strTarget;
-
-      strTarget = scopedstrTarget;
-
-      strTarget.find_replace("\\", "/");
-
       for (auto & path : listing)
       {
 
@@ -551,76 +484,49 @@ namespace app_simple_shortcut_amender
 
          ::file::path pathIcon = plink->m_pathIcon;
 
-         ::string strActionSummary;
-
-         auto elinkChanged = plink->path_find_replace(strSource, strTarget);
-
-         if (!elinkChanged)
+         if (pathTarget.contains(strSource) 
+            && pathIcon.has_char()
+            && plink->m_elink & ::file::e_link_icon)
          {
 
-            continue;
+            ::file::e_link elinkChanged = ::file::e_link_icon;
 
-         }
+            ::file::e_link elinkWritten = ::file::e_link_none;
 
-         ::file::e_link elinkWritten = ::file::e_link_none;
-
-         if (!bThumbnail)
-         {
-
-            try
+            if (!bThumbnail)
             {
 
-               elinkWritten = plink->write(path);
+               try
+               {
+
+                  plink->m_elink = ::file::e_link_icon;
+
+                  plink->m_pathIcon.clear();
+
+                  elinkWritten = plink->write(path);
+
+               }
+               catch (...)
+               {
+
+                  elinkWritten = ::file::e_link_none;
+
+               }
 
             }
-            catch (...)
+            else
             {
 
-               elinkWritten = ::file::e_link_none;
+               elinkWritten = elinkChanged;
 
             }
 
-         }
-         else
-         {
+            if (elinkChanged & ::file::e_link_icon)
+            {
 
-            elinkWritten = elinkChanged;
+               straAction.add(path);
 
-         }
-
-         if (elinkChanged & ::file::e_link_target)
-         {
-
-            straAction.add(
-               (elinkWritten & ::file::e_link_target ? "" : "✗!! ")
-               + path + ": "
-               + plink->m_pathTarget.windows_path() +
-               + " <== "
-               + pathTarget.windows_path());
-
-         }
-
-         if (elinkChanged & ::file::e_link_folder)
-         {
-
-            straAction.add(
-               (elinkWritten & ::file::e_link_folder ? "" : "✗!! ")
-               + path + ": "
-               + plink->m_pathFolder.windows_path()
-               + " <== "
-               + pathFolder.windows_path());
-
-         }
-
-         if (elinkChanged & ::file::e_link_icon)
-         {
-
-            straAction.add(
-               (elinkWritten & ::file::e_link_icon ? "" : "✗!! ")
-               + path + ": "
-               + plink->m_pathIcon.windows_path()
-               + " <== "
-               + pathIcon.windows_path());
+            }
 
          }
 
@@ -630,7 +536,6 @@ namespace app_simple_shortcut_amender
 
 
    }
-
 
 } // namespace simple_shortcut
 
