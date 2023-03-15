@@ -17,6 +17,16 @@ namespace app_simple_shortcut_amender
       tab_impact *                          m_ptabimpact;
       string                              m_strFont;
       int                                 m_iId;
+      ::pointer<::user::still>             m_pstillFolder;
+      ::pointer<::user::plain_edit>        m_peditFolder;
+      ::pointer<::user::still>             m_pstillSource;
+      ::pointer<::user::plain_edit>        m_peditSource;
+
+      ::pointer<::user::button>            m_pbuttonClear;
+      ::pointer<::user::button>            m_pbuttonSend;
+
+
+      ::pointer<::user::still>             m_pstillReceiver;
 
 
       form();

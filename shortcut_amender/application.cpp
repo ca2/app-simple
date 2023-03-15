@@ -3,7 +3,8 @@
 #include "frame.h"
 #include "main_frame.h"
 #include "form_amender.h"
-#include "form_002.h"
+#include "form_reset_icon.h"
+#include "form_set_icon.h"
 #include "impact.h"
 #include "document.h"
 #include "tab_impact.h"
@@ -78,7 +79,8 @@ namespace app_simple_shortcut_amender
       factory()->add_factory_item <::app_simple_shortcut_amender::main_impact >();
       factory()->add_factory_item <::app_simple_shortcut_amender::tab_impact >();
       factory()->add_factory_item <::app_simple_shortcut_amender::form_amender >();
-      factory()->add_factory_item <::app_simple_shortcut_amender::form_002 >();
+      factory()->add_factory_item <::app_simple_shortcut_amender::form_reset_icon >();
+      factory()->add_factory_item <::app_simple_shortcut_amender::form_set_icon >();
 
       ::base::application::init_instance();
 

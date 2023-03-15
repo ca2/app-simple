@@ -1,3 +1,4 @@
+// Created by camilo on 2023-03-15 18:48 <3ThomasBorregaardSorensen!!
 #pragma once
 
 
@@ -8,7 +9,7 @@ namespace app_simple_shortcut_amender
 {
 
 
-   class CLASS_DECL_app_simple_shortcut_amender form_amender :
+   class CLASS_DECL_app_simple_shortcut_amender form_set_icon :
       virtual public ::app_simple_shortcut_amender::form
    {
    public:
@@ -18,12 +19,12 @@ namespace app_simple_shortcut_amender
       ::pointer<::user::plain_edit>        m_peditTarget;
 
 
-      form_amender();
-      ~form_amender() override;
+      form_set_icon();
+      ~form_set_icon() override;
 
 
-//      // void assert_ok() const override;
-//      // void dump(dump_context & dumpcontext) const override;
+      //      // void assert_ok() const override;
+      //      // void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG
@@ -42,7 +43,7 @@ namespace app_simple_shortcut_amender
 
       void handle(::topic * ptopic, ::context * pcontext) override;
 
-      virtual string_array do_amender(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail);
+      virtual string_array set_icon(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail);
 
 
    };
