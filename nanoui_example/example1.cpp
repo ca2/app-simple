@@ -214,10 +214,10 @@ namespace app_simple_nanoui_example
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
                   auto pdialog = acmenode()->node_file_dialog();
-                  pdialog->m_filetypes = { {"*.png", "Portable Network Graphics"},
-                                           {"*.jpeg", "JPEG file"},
-                                           {"*.jpg", "JPG file"},
-                                           {"*.txt", "Text file"} };
+                  pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
+                  pdialog->m_filedialogfiltera.add({ "JPEG file", "*.jpeg" });
+                  pdialog->m_filedialogfiltera.add({ "JPG file", "*.jpg" });
+                  pdialog->m_filedialogfiltera.add({ "Text file", "*.txt" });
                   pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
@@ -242,14 +242,15 @@ namespace app_simple_nanoui_example
                  // });
 
                b = memory_new Button(tools, "Save");
-               b->set_callback([this,image_impact]
+               b->set_callback([this, image_impact]
                {
-                  
+
                   auto pwindow = m_puserinteraction->window();
                   auto poswindow = pwindow->get_os_data();
                   auto pdialog = acmenode()->node_file_dialog();
                   pdialog->m_puserelement = m_puserinteraction;
-                  pdialog->m_filetypes = { {"png", "Portable Network Graphics"}, {"txt", "Text file"} };
+                  pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
+                  pdialog->m_filedialogfiltera.add({ "Text file", "*.txt" } );
                   pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
