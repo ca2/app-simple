@@ -38,7 +38,6 @@
 		9A5A878126D26350004AF957 /* libapp_simple_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; };
 		9A5A879326D264A0004AF957 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879126D264A0004AF957 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A879426D264A0004AF957 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A879226D264A0004AF957 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A775D4929AAAB23008FE15C /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A775D3F29AAAB23008FE15C /* libassimp.dylib */; };
 		9A7F3F9F274D6E0E00D914CC /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5A873426D2628A004AF957 /* libcore.dylib */; };
 		9A7F3FA6274D6F1B00D914CC /* libapp_simple_shader.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEE92AC2661FD2700FCA5EC /* libapp_simple_shader.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C7DCC2783F61C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7DCB2783F61C000C8587 /* _matter.zip */; };
@@ -46,6 +45,7 @@
 		9A8C84A9278483C0000C8587 /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C849D278481A9000C8587 /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0E3826B68F62000D2AD6 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0E3726B68F62000D2AD6 /* libacme.dylib */; };
 		9A8D0E3A26B68F62000D2AD6 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0E3926B68F62000D2AD6 /* libapex.dylib */; };
+		9A8DCF8129C927E000686F63 /* libassimp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8DCF8029C927E000686F63 /* libassimp.dylib */; };
 		9A99044B2753350000B13F01 /* libgpu_opengl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A990444275334D500B13F01 /* libgpu_opengl.dylib */; };
 		9A99044C2753350000B13F01 /* libgpu_opengl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A990444275334D500B13F01 /* libgpu_opengl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A6927519CAE0094A04C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A6027519CAE0094A04C /* MainMenu.xib */; };
@@ -322,12 +322,12 @@
 		9A5A876E26D26309004AF957 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A879126D264A0004AF957 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9A5A879226D264A0004AF957 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
-		9A775D3F29AAAB23008FE15C /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = "../../../../../operating_system/storage-macos/library/libassimp.dylib"; sourceTree = "<group>"; };
 		9A8C7DCB2783F61C000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A8C8498278481A8000C8587 /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
 		9A8C849E278481B1000C8587 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
 		9A8D0E3726B68F62000D2AD6 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8D0E3926B68F62000D2AD6 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8DCF8029C927E000686F63 /* libassimp.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.dylib; path = "../../../../../operating_system/storage-macos/third/library/libassimp.dylib"; sourceTree = "<group>"; };
 		9A990439275334D400B13F01 /* gpu_opengl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = gpu_opengl.xcodeproj; path = ../../../app/gpu_opengl/gpu_opengl.xcodeproj; sourceTree = "<group>"; };
 		9A9E4A6127519CAE0094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A6227519CAE0094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 				9AB15C4E29A87B6300DFDF90 /* libacme_darwin.dylib in Frameworks */,
 				9A5A878126D26350004AF957 /* libapp_simple_shader.dylib in Frameworks */,
 				9A8D0E3826B68F62000D2AD6 /* libacme.dylib in Frameworks */,
-				9A775D4929AAAB23008FE15C /* libassimp.dylib in Frameworks */,
+				9A8DCF8129C927E000686F63 /* libassimp.dylib in Frameworks */,
 				9A8D0E3A26B68F62000D2AD6 /* libapex.dylib in Frameworks */,
 				9A99044B2753350000B13F01 /* libgpu_opengl.dylib in Frameworks */,
 				9A5A874F26D262D7004AF957 /* libapp_shader.dylib in Frameworks */,
@@ -478,7 +478,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A775D3F29AAAB23008FE15C /* libassimp.dylib */,
+				9A8DCF8029C927E000686F63 /* libassimp.dylib */,
 				9AB15C4B29A87B6300DFDF90 /* libacme_darwin.dylib */,
 				9AB15C4C29A87B6300DFDF90 /* libapex_darwin.dylib */,
 				9AB15C4D29A87B6300DFDF90 /* libaura_darwin.dylib */,
@@ -930,8 +930,8 @@
 				HEADER_SEARCH_PATHS = "";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path /Library/Frameworks/ca2";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/third/library",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -988,9 +988,8 @@
 				HEADER_SEARCH_PATHS = "";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path /Library/Frameworks/ca2";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
-					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/third/library",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
