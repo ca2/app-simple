@@ -53,7 +53,7 @@
 		9AB15C2729A87B0700DFDF90 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C2229A87B0600DFDF90 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB15C2829A87B0700DFDF90 /* libaura_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15C2329A87B0600DFDF90 /* libaura_darwin.dylib */; };
 		9AB15C2929A87B0700DFDF90 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C2329A87B0600DFDF90 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
+		9AEFFBFB29CDF9BF00E9C17D /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AEFFBFA29CDF9BE00E9C17D /* en.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -358,6 +358,7 @@
 		9ADB6CE228D1479200608B22 /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9AED78C22751989E00397A57 /* app_simple_networking_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_networking_application.xcodeproj; path = ../app_simple_networking_application.xcodeproj; sourceTree = "<group>"; };
+		9AEFFBFA29CDF9BE00E9C17D /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +491,7 @@
 		9A9E4A4727519C560094A04C /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				9AEFFBFA29CDF9BE00E9C17D /* en.lproj */,
 				9A9E4A4827519C560094A04C /* MainMenu.xib */,
 				9A9E4A4A27519C560094A04C /* Images.xcassets */,
 				9A9E4A4B27519C560094A04C /* Info.plist */,
@@ -847,7 +849,7 @@
 			files = (
 				9A8C816B2783F856000C8587 /* _matter.zip in Resources */,
 				9A9E4A4D27519C560094A04C /* Images.xcassets in Resources */,
-				9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */,
+				9AEFFBFB29CDF9BF00E9C17D /* en.lproj in Resources */,
 				9A9E4A4C27519C560094A04C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
