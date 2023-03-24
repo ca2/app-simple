@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A22749727CF40EB0042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749627CF40EB0042BAC2 /* application.cpp */; };
+		9A83DE3A29CE16AA00C455B8 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9A83DE2F29CE16AA00C455B8 /* en.lproj */; };
 		9A8C50D52783DA80000C8587 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C50D72783DA83000C8587 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D22783DA28000C8587 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9902AC275328F100B13F01 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A9902A6275328F100B13F01 /* _matter.zip */; };
@@ -23,7 +24,6 @@
 		9AB15C1729A87AD100DFDF90 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libbase.dylib */; };
-		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
 		9AFFC7D12678757600C4104F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7C42678757600C4104F /* libacme.dylib */; };
 		9AFFC7D22678757600C4104F /* libacme.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7C42678757600C4104F /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC7D42678757600C4104F /* libacme_apple.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7C52678757600C4104F /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -304,6 +304,7 @@
 		9A353DDC266228100060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A353E5426622AB90060257B /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
 		9A353E8B26624E960060257B /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
+		9A83DE2F29CE16AA00C455B8 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9A8C50D22783DA28000C8587 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9A9902A6275328F100B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
@@ -471,6 +472,7 @@
 		9A9E4A3F27519C320094A04C /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				9A83DE2F29CE16AA00C455B8 /* en.lproj */,
 				9A9E4A4027519C320094A04C /* MainMenu.xib */,
 				9A9E4A4227519C320094A04C /* Images.xcassets */,
 				9A9E4A4327519C320094A04C /* Info.plist */,
@@ -797,7 +799,7 @@
 			files = (
 				9A9902AC275328F100B13F01 /* _matter.zip in Resources */,
 				9A9E4A4527519C320094A04C /* Images.xcassets in Resources */,
-				9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */,
+				9A83DE3A29CE16AA00C455B8 /* en.lproj in Resources */,
 				9A9E4A4427519C320094A04C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

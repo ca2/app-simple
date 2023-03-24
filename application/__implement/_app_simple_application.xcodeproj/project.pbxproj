@@ -11,6 +11,7 @@
 		9A22748B27CF40980042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748A27CF40980042BAC2 /* application.cpp */; };
 		9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE12EC52661EA22009F476A /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96A12785379F00B74C76 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A83DE0D29CE128200C455B8 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9A83DE0329CE128200C455B8 /* en.lproj */; };
 		9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E13326611D5A00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E1A026611D5E00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C816D2783F879000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816C2783F879000C8587 /* _matter.zip */; };
@@ -29,7 +30,6 @@
 		9AC01E2F2748D057006BEBCC /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75026786CAD00C4104F /* libaxis.dylib */; };
 		9AC01E302748D060006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75126786CAD00C4104F /* libbase.dylib */; };
 		9AC01E3E2748D129006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E3A2748D0E0006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */; };
 		9AED730C2751960F00397A57 /* libexperience_core.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AED7309275195F800397A57 /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF8CEDE271B9CB300BF80B7 /* libidn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AF8CEDC271B9CB300BF80B7 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF8CEE0271B9D9600BF80B7 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E19426611D5D00517464 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -293,6 +293,7 @@
 		9A22748A27CF40980042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
+		9A83DE0329CE128200C455B8 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A9E4A2827519BC10094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -446,6 +447,7 @@
 		9A9E4A2627519BC10094A04C /* macos */ = {
 			isa = PBXGroup;
 			children = (
+				9A83DE0329CE128200C455B8 /* en.lproj */,
 				9A9E4A2727519BC10094A04C /* MainMenu.xib */,
 				9A9E4A2927519BC10094A04C /* Images.xcassets */,
 				9A9E4A2A27519BC10094A04C /* Info.plist */,
@@ -781,7 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE5CC8F22CBECAE00EDEAD1 /* en.lproj in Resources */,
+				9A83DE0D29CE128200C455B8 /* en.lproj in Resources */,
 				9A8C816D2783F879000C8587 /* _matter.zip in Resources */,
 				9A9E4A3127519BFA0094A04C /* Images.xcassets in Resources */,
 			);
