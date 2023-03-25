@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A273CD929CF199E00CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CD529CF199E00CBEB97 /* InfoPlist.strings */; };
-		9A273CDA29CF199E00CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CD729CF199E00CBEB97 /* MainMenu.xib */; };
 		9A8C81692783F83C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C81682783F83C000C8587 /* _matter.zip */; };
 		9A8D0E7526B71908000D2AD6 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0E7326B71908000D2AD6 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0E7626B71908000D2AD6 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0E7426B71908000D2AD6 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -314,7 +313,6 @@
 		070B8EEA1B6E53F900D26137 /* _app_simple_form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_form.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* _app_simple_form_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_form_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A273CD629CF199E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		9A273CD829CF199E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A42D7C3266597540011645D /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = "<group>"; };
 		9A8C81682783F83C000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A8D0E7326B71908000D2AD6 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
@@ -412,7 +410,6 @@
 			isa = PBXGroup;
 			children = (
 				9A273CD529CF199E00CBEB97 /* InfoPlist.strings */,
-				9A273CD729CF199E00CBEB97 /* MainMenu.xib */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -841,7 +838,6 @@
 				9A8C81692783F83C000C8587 /* _matter.zip in Resources */,
 				9A273CD929CF199E00CBEB97 /* InfoPlist.strings in Resources */,
 				9A9905AE2753364300B13F01 /* Images.xcassets in Resources */,
-				9A273CDA29CF199E00CBEB97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,14 +928,6 @@
 				9A273CD629CF199E00CBEB97 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9A273CD729CF199E00CBEB97 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A273CD829CF199E00CBEB97 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
