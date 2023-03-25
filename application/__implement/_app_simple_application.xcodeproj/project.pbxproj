@@ -10,8 +10,9 @@
 		9A1D5ECB2751AC11003D9B5F /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A22748B27CF40980042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748A27CF40980042BAC2 /* application.cpp */; };
 		9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE12EC52661EA22009F476A /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A273C8329CF176100CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C7F29CF176000CBEB97 /* InfoPlist.strings */; };
+		9A273C8429CF176100CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C8129CF176000CBEB97 /* MainMenu.xib */; };
 		9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96A12785379F00B74C76 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A83DE0D29CE128200C455B8 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9A83DE0329CE128200C455B8 /* en.lproj */; };
 		9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E13326611D5A00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E1A026611D5E00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C816D2783F879000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816C2783F879000C8587 /* _matter.zip */; };
@@ -291,12 +292,12 @@
 		9A00E644266170F400517464 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22748A27CF40980042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		9A273C8029CF176000CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9A273C8229CF176000CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
-		9A83DE0329CE128200C455B8 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
-		9A9E4A2827519BC10094A04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9A9E4A2927519BC10094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A2A27519BC10094A04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AB15BEC29A87A4100DFDF90 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,6 +420,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A273C7E29CF176000CBEB97 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9A273C7F29CF176000CBEB97 /* InfoPlist.strings */,
+				9A273C8129CF176000CBEB97 /* MainMenu.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		9A3E0BA12309FBD400B5459B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,8 +457,7 @@
 		9A9E4A2627519BC10094A04C /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				9A83DE0329CE128200C455B8 /* en.lproj */,
-				9A9E4A2727519BC10094A04C /* MainMenu.xib */,
+				9A273C7E29CF176000CBEB97 /* en.lproj */,
 				9A9E4A2927519BC10094A04C /* Images.xcassets */,
 				9A9E4A2A27519BC10094A04C /* Info.plist */,
 			);
@@ -783,9 +792,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A83DE0D29CE128200C455B8 /* en.lproj in Resources */,
 				9A8C816D2783F879000C8587 /* _matter.zip in Resources */,
+				9A273C8329CF176100CBEB97 /* InfoPlist.strings in Resources */,
 				9A9E4A3127519BFA0094A04C /* Images.xcassets in Resources */,
+				9A273C8429CF176100CBEB97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,10 +875,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A9E4A2727519BC10094A04C /* MainMenu.xib */ = {
+		9A273C7F29CF176000CBEB97 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9A9E4A2827519BC10094A04C /* Base */,
+				9A273C8029CF176000CBEB97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A273C8129CF176000CBEB97 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A273C8229CF176000CBEB97 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
