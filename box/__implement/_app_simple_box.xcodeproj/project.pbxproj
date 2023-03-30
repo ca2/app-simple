@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A22749027CF40D00042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748F27CF40D00042BAC2 /* application.cpp */; };
 		9A273C8A29CF177E00CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C8629CF177E00CBEB97 /* InfoPlist.strings */; };
-		9A273C8B29CF177E00CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C8829CF177E00CBEB97 /* MainMenu.xib */; };
 		9A273FEE29CF284300CBEB97 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A273FED29CF284200CBEB97 /* _matter.zip */; };
 		9A43889A299E6B6600D2EE15 /* libapp_simple_box.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A438892299E65B500D2EE15 /* libapp_simple_box.dylib */; };
 		9A43889C299E6D5100D2EE15 /* libssl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43889B299E6D5100D2EE15 /* libssl.3.dylib */; };
@@ -220,7 +219,6 @@
 		070B8EFD1B6E53FA00D26137 /* _app_simple_box_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_box_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22748F27CF40D00042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A273C8729CF177E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		9A273C8929CF177E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A273FED29CF284200CBEB97 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A43888B299E65B400D2EE15 /* app_simple_box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_box.xcodeproj; path = ../app_simple_box.xcodeproj; sourceTree = "<group>"; };
 		9A43889B299E6D5100D2EE15 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				9A273C8629CF177E00CBEB97 /* InfoPlist.strings */,
-				9A273C8829CF177E00CBEB97 /* MainMenu.xib */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -636,7 +633,6 @@
 				9A273FEE29CF284300CBEB97 /* _matter.zip in Resources */,
 				9A9E4A3D27519C0F0094A04C /* Images.xcassets in Resources */,
 				9A273C8A29CF177E00CBEB97 /* InfoPlist.strings in Resources */,
-				9A273C8B29CF177E00CBEB97 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,14 +708,6 @@
 				9A273C8729CF177E00CBEB97 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		9A273C8829CF177E00CBEB97 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A273C8929CF177E00CBEB97 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
