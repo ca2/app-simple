@@ -63,6 +63,9 @@
     <Filter Include="Library\x64\basis">
       <UniqueIdentifier>{59544b76-e978-40e3-be29-14a9cef28b7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\NewFilter1">
+      <UniqueIdentifier>{c1a8cf74-01d8-4c20-80a8-1f41370b6160}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package10.appxmanifest">
@@ -121,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
