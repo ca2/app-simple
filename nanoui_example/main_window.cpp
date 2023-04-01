@@ -141,7 +141,7 @@ namespace app_simple_nanoui_example
 
       auto papplication = m_exampleapplicationa[iIndex].get();
 
-#if !defined(_UWP)
+#if !defined(UNIVERSAL_WINDOWS)
 
       int cx = papplication->m_size.x() + 20;
       int cy = papplication->m_size.y() + 48;
