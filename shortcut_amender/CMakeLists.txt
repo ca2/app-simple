@@ -35,7 +35,8 @@ list(APPEND library_source
 add_library(app_simple_shortcut ${library_source})
 
 
-target_precompile_headers(app_simple_shortcut PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
+target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 
 set_target_properties(app_simple_shortcut PROPERTIES LINKER_LANGUAGE CXX)
