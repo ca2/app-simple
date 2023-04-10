@@ -11,7 +11,7 @@ namespace app_simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING tab_impact :
-      virtual public application_interaction < application, ::user::tab_impact >,
+      virtual public app_interaction < application, ::user::tab_impact >,
       virtual public ::user::form_callback
    {
    public:
