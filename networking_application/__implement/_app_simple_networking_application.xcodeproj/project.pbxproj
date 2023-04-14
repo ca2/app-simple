@@ -314,7 +314,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_webserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		070B8EEA1B6E53F900D26137 /* _app_simple_networking_application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_networking_application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* _app_simple_networking_application_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_networking_application_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A00E5A22661209D00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
@@ -411,7 +411,7 @@
 		070B8EEB1B6E53F900D26137 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */,
+				070B8EEA1B6E53F900D26137 /* _app_simple_networking_application.app */,
 				070B8EFD1B6E53FA00D26137 /* _app_simple_networking_application_Tests.xctest */,
 			);
 			name = Products;
@@ -609,7 +609,7 @@
 			);
 			name = _app_simple_networking_application;
 			productName = "Hello Multiverse!!";
-			productReference = 070B8EEA1B6E53F900D26137 /* _app_simple_webserver.app */;
+			productReference = 070B8EEA1B6E53F900D26137 /* _app_simple_networking_application.app */;
 			productType = "com.apple.product-type.application";
 		};
 		070B8EFC1B6E53FA00D26137 /* _app_simple_networking_application_Tests */ = {
@@ -1128,7 +1128,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Networking Application";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.networking-application";
-				PRODUCT_NAME = _app_simple_webserver;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -1147,7 +1146,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Networking Application";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.networking-application";
-				PRODUCT_NAME = _app_simple_webserver;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
