@@ -125,7 +125,7 @@ namespace app_simple_drawing
          for (index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225));
+            pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225), 1.0);
 
             rectangle.deflate(1, 1);
 
