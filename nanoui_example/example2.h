@@ -33,7 +33,7 @@ namespace app_simple_nanoui_example
       ::string strval = "A string";
       ::string strval2 = "";
       test_enum enumval = Item2;
-      ::nanoui::Color colval = { 0.5f, 0.5f, 0.7f, 1.f };
+      ::color::color colval = { 0.5f, 0.5f, 0.7f, 1.f };
 
       ExampleApplication2(main_window * pmainwindow);
 
