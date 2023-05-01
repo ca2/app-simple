@@ -51,7 +51,7 @@ namespace app_simple_nanoui_example
 
       ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", FA_ROCKET);
-      b->set_background_color(Color(0, 0, 255, 25));
+      b->set_background_color(::color::color(0, 0, 255, 25));
       b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
@@ -458,13 +458,13 @@ namespace app_simple_nanoui_example
                memory_new Label(window, "Color picker :", "sans-bold");
                auto cp = memory_new ColorPicker(window, { 255, 120, 0, 255 });
                cp->set_fixed_size({ 100, 20 });
-               cp->set_final_callback([this](const Color & c) {
+               cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;
                   str << "ColorPicker final callback: ["
-                     << c.r() << ", "
-                     << c.g() << ", "
-                     << c.b() << ", "
-                     << c.w() << "]";
+                     << c.red  << ", "
+                     << c.green << ", "
+                     << c.blue << ", "
+                     << c.alpha << "]";
                   message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
                   });
                // setup a fast callback for the color picker widget on a memory_new window
@@ -491,16 +491,16 @@ namespace app_simple_nanoui_example
                memory_new Label(window, "Alpha: ");
                auto alpha_int_box = memory_new IntBox<int>(window);
       
-               cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const Color & c) {
+               cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const ::color::color & c) {
                   b->set_background_color(c);
                   b->set_text_color(c.contrasting_color());
-                  int red = (int)(c.r() * 255.0f);
+                  int red = (int)(c.red);
                   red_int_box->set_value(red);
-                  int green = (int)(c.g() * 255.0f);
+                  int green = (int)(c.green);
                   green_int_box->set_value(green);
-                  int blue = (int)(c.b() * 255.0f);
+                  int blue = (int)(c.blue);
                   blue_int_box->set_value(blue);
-                  int alpha = (int)(c.w() * 255.0f);
+                  int alpha = (int)(c.alpha);
                   alpha_int_box->set_value(alpha);
                   });
       

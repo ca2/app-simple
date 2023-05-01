@@ -38,7 +38,7 @@ namespace app_simple_nanoui_example
 
       Screen * screen = nullptr;
 
-      ::nanoui::Color colval = { 0.5f, 0.5f, 0.7f, 1.f };
+      ::color::color colval = { 0.5f, 0.5f, 0.7f, 1.f };
 
       ExampleApplicationIcons(main_window * pmainwindow);
 
