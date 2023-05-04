@@ -35,6 +35,11 @@ namespace app_simple_notify_drawing
 
       virtual ::pointer<app_simple_drawing::impact> create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;
 
+
+      string draw2d_get_default_implementation_name() override;
+
+
+
    };
 
 
