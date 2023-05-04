@@ -3,6 +3,7 @@
 #include "main_frame.h"
 #include "impact.h"
 #include "acme/handler/request.h"
+#include "acme/platform/system.h"
 #include "app-simple/drawing/document.h"
 #include "app-simple/drawing/tab_impact.h"
 #include "base/user/user/single_document_template.h"
@@ -173,6 +174,16 @@ namespace app_simple_notify_drawing
    {
 
       return pimpactParent->create_impact < impact >(pimpactdata);
+
+   }
+
+
+   string application::draw2d_get_default_implementation_name()
+   {
+
+      //return acmesystem()->implementation_name("draw2d", "opengl");
+
+      return acmesystem()->implementation_name("draw2d", "gdiplus");
 
    }
 
