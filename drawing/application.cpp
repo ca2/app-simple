@@ -266,7 +266,7 @@ namespace app_simple_drawing
 
       //return acmesystem()->implementation_name("draw2d", "opengl");
 
-      return acmesystem()->implementation_name("draw2d", "gdiplus");
+      return {};
 
    }
 
