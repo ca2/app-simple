@@ -40,7 +40,7 @@ namespace app_simple_application
    };
 
 
-} // namespace simple_application
+} // namespace app_simple_application
 
 
 
