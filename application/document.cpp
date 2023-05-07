@@ -94,15 +94,7 @@ namespace app_simple_application
 #endif
 
 
-   //stream& document::write(::stream& stream) const
-   //{
-
-   //   return stream;
-
-   //}
-
-
-} // namespace simple_application
+} // namespace app_simple_application
 
 
 

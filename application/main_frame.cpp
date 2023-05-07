@@ -10,10 +10,6 @@ namespace app_simple_application
    main_frame::main_frame()
    {
 
-      //m_bFramePayloadFlags = true;
-
-      //m_bDefaultCreateToolbar = false;
-
       window_enable_full_screen();
 
       m_etranslucencyFrame = ::user::e_translucency_present;
@@ -25,22 +21,6 @@ namespace app_simple_application
    {
 
    }
-
-
-//   void main_frame::assert_ok() const
-//   {
-//
-//      simple_frame_window::assert_ok();
-//
-//   }
-//
-//
-//   void main_frame::dump(dump_context & dumpcontext) const
-//   {
-//
-//      simple_frame_window::dump(dumpcontext);
-//
-//   }
 
 
    ::experience::frame * main_frame::frame_experience()
@@ -79,7 +59,7 @@ namespace app_simple_application
    }
 
 
-} // namespace simple_application
+} // namespace app_simple_application
 
 
 

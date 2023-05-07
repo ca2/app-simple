@@ -178,7 +178,7 @@ namespace app_simple_application
 #endif
 
 
-} // namespace simple_application
+} // namespace app_simple_application
 
 
 
