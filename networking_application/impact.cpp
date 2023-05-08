@@ -245,7 +245,7 @@ namespace app_simple_networking_application
                r.left = 25;
                r.top = y;
                r.bottom = y + iHeight;
-               r.right = r.left + size.cx;
+               r.right = r.left + (::i32) (size.cx);
 
                if (r.right > iMaxX1)
                {
@@ -305,7 +305,7 @@ namespace app_simple_networking_application
                   r.left = iMaxX1 + 20;
                   r.top = y;
                   r.bottom = y + iHeight;
-                  r.right = r.left + size.cx;
+                  r.right = r.left + (::i32) (size.cx);
 
                   if (r.right > iMaxX1)
                   {
