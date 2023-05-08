@@ -23,22 +23,6 @@ namespace app_simple_drawing
    }
 
 
-//   void tab_impact::assert_ok() const
-//   {
-//
-//      ::user::impact::assert_ok();
-//
-//   }
-//
-//
-//   void tab_impact::dump(dump_context & dumpcontext) const
-//   {
-//
-//      ::user::impact::dump(dumpcontext);
-//
-//   }
-
-
    void tab_impact::install_message_routing(::channel * pchannel)
    {
 
@@ -67,7 +51,6 @@ namespace app_simple_drawing
       set_tab("text://app-simple/drawing/:circle path", "drawing5");
       set_tab("text://app-simple/drawing/:arcs", "drawing6");
       set_tab("text://app-simple/drawing/:arcpths", "drawing7");
-
 
       set_current_tab_by_id("drawing1");
 
