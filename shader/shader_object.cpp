@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-
+#define GLAD_GLAPI_EXPORT
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
