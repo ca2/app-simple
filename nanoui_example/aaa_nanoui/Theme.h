@@ -200,25 +200,25 @@ NAMESPACE_BEGIN(nanoui)
        */
       Color m_window_popup_transparent;
 
-      /// Icon to use for check box widgets (default: ``FA_CHECK``).
+      /// Icon to use for check box widgets (default: ``e_font_awesome_check``).
       int m_check_box_icon;
-      /// Icon to use for informational message dialog widgets (default: ``FA_INFO_CIRCLE``).
+      /// Icon to use for informational message dialog widgets (default: ``e_font_awesome_info_circle``).
       int m_message_information_icon;
-      /// Icon to use for interrogative message dialog widgets (default: ``FA_QUESTION_CIRCLE``).
+      /// Icon to use for interrogative message dialog widgets (default: ``e_font_awesome_question_circle``).
       int m_message_question_icon;
-      /// Icon to use for warning message dialog widgets (default: ``FA_EXCLAMATION_TRINAGLE``).
+      /// Icon to use for warning message dialog widgets (default: ``e_font_awesome_exclamation_trinagle``).
       int m_message_warning_icon;
-      /// Icon to use on message dialog alt button (default: ``FA_CIRCLE_WITH_CROSS``).
+      /// Icon to use on message dialog alt button (default: ``e_font_awesome_circle_with_cross``).
       int m_message_alt_button_icon;
-      /// Icon to use on message_dialog primary button (default: ``FA_CHECK``).
+      /// Icon to use on message_dialog primary button (default: ``e_font_awesome_check``).
       int m_message_primary_button_icon;
-      /// Icon to use for Popup_button widgets opening to the right (default: ``FA_CHEVRON_RIGHT``).
+      /// Icon to use for Popup_button widgets opening to the right (default: ``e_font_awesome_chevron_right``).
       int m_popup_chevron_right_icon;
-      /// Icon to use for Popup_button widgets opening to the left (default: ``FA_CHEVRON_LEFT``).
+      /// Icon to use for Popup_button widgets opening to the left (default: ``e_font_awesome_chevron_left``).
       int m_popup_chevron_left_icon;
-      /// Icon to use when a text box has an up toggle (e.g. IntBox) (default: ``FA_CHEVRON_UP``).
+      /// Icon to use when a text box has an up toggle (e.g. IntBox) (default: ``e_font_awesome_chevron_up``).
       int m_text_box_up_icon;
-      /// Icon to use when a text box has a down toggle (e.g. IntBox) (default: ``FA_CHEVRON_DOWN``).
+      /// Icon to use when a text box has a down toggle (e.g. IntBox) (default: ``e_font_awesome_chevron_down``).
       int m_text_box_down_icon;
 
    protected:

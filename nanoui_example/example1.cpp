@@ -15,6 +15,7 @@
 #include "nanoui/VScrollPanel.h"
 #include "nanoui/ImagePanel.h"
 #include "nanoui/ImageImpact.h"
+#include "nanoui/IntBox.h"
 #include "nanoui/ComboBox.h"
 #include "nanoui/ProgressBar.h"
 #include "nanoui/Slider.h"
@@ -50,7 +51,7 @@ namespace app_simple_nanoui_example
       b->set_tooltip("short tooltip");
 
       ///* Alternative construction notation using variadic template */
-      b = window->add<Button>("Styled", FA_ROCKET);
+      b = window->add<Button>("Styled", e_font_awesome_rocket);
       b->set_background_color(::color::color(0, 0, 255, 25));
       b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
@@ -76,27 +77,27 @@ namespace app_simple_nanoui_example
       
                memory_new Label(window, "A tool palette", "sans-bold");
                Widget * tools = memory_new Widget(window);
-               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                  Alignment::Middle, 0, 6));
+               tools->set_layout(memory_new BoxLayout(::nanoui::e_orientation_horizontal,
+                  ::nanoui::e_alignment_middle, 0, 6));
       
-               b = memory_new ToolButton(tools, FA_CLOUD);
-               b = memory_new ToolButton(tools, FA_FAST_FORWARD);
-               b = memory_new ToolButton(tools, FA_COMPASS);
-               b = memory_new ToolButton(tools, FA_UTENSILS);
+               b = memory_new ToolButton(tools, e_font_awesome_cloud);
+               b = memory_new ToolButton(tools, e_font_awesome_fast_forward);
+               b = memory_new ToolButton(tools, e_font_awesome_compass);
+               b = memory_new ToolButton(tools, e_font_awesome_utensils);
       
                memory_new Label(window, "Popup buttons", "sans-bold");
-               PopupButton * popup_btn = memory_new PopupButton(window, "Popup", FA_FLASK);
+               PopupButton * popup_btn = memory_new PopupButton(window, "Popup", e_font_awesome_flask);
                Popup * popup = popup_btn->popup();
                popup->set_layout(memory_new GroupLayout());
                memory_new Label(popup, "Arbitrary widgets can be placed here");
                memory_new CheckBox(popup, "A check box");
                // popup right
-               popup_btn = memory_new PopupButton(popup, "Recursive popup", FA_CHART_PIE);
+               popup_btn = memory_new PopupButton(popup, "Recursive popup", e_font_awesome_chart_pie);
                Popup * popup_right = popup_btn->popup();
                popup_right->set_layout(memory_new GroupLayout());
                memory_new CheckBox(popup_right, "Another check box");
                // popup left
-               popup_btn = memory_new PopupButton(popup, "Recursive popup", FA_DNA);
+               popup_btn = memory_new PopupButton(popup, "Recursive popup", e_font_awesome_dna);
                popup_btn->set_side(Popup::Side::Left);
                Popup * popup_left = popup_btn->popup();
                popup_left->set_layout(memory_new GroupLayout());
@@ -108,8 +109,8 @@ namespace app_simple_nanoui_example
       
                memory_new Label(window, "Message dialog", "sans-bold");
                tools = memory_new Widget(window);
-               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                  Alignment::Middle, 0, 6));
+               tools->set_layout(memory_new BoxLayout(::nanoui::e_orientation_horizontal,
+                  e_alignment_middle, 0, 6));
                b = memory_new Button(tools, "Info");
                b->set_callback([this] {
                   auto dlg = memory_new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
@@ -147,7 +148,7 @@ namespace app_simple_nanoui_example
       
                memory_new Label(window, "Image panel & scroll panel", "sans-bold");
                PopupButton * image_panel_btn = memory_new PopupButton(window, "Image Panel");
-               image_panel_btn->set_icon(FA_IMAGES);
+               image_panel_btn->set_icon(e_font_awesome_images);
                popup = image_panel_btn->popup();
                VScrollPanel * vscroll = memory_new VScrollPanel(popup);
                ImagePanel * img_panel = memory_new ImagePanel(vscroll);
@@ -204,8 +205,8 @@ namespace app_simple_nanoui_example
       
                memory_new Label(window, "File dialog", "sans-bold");
                tools = memory_new Widget(window);
-               tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                  Alignment::Middle, 0, 6));
+               tools->set_layout(memory_new BoxLayout(::nanoui::e_orientation_horizontal,
+                  ::nanoui::e_alignment_middle, 0, 6));
                b = memory_new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
@@ -299,8 +300,8 @@ namespace app_simple_nanoui_example
                memory_new Label(window, "Slider and text box", "sans-bold");
       
                Widget * panel = memory_new Widget(window);
-               panel->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                  Alignment::Middle, 0, 20));
+               panel->set_layout(memory_new BoxLayout(::nanoui::e_orientation_horizontal,
+                  ::nanoui::e_alignment_middle, 0, 20));
       
                Slider * slider = memory_new Slider(panel);
                slider->set_value(0.5f);
@@ -309,7 +310,7 @@ namespace app_simple_nanoui_example
                TextBox * text_box = memory_new TextBox(panel);
                text_box->set_fixed_size(Vector2i(60, 25));
                text_box->set_value("50");
-               text_box->set_units("%");
+               text_box->set_unit("%");
                slider->set_callback([text_box](float value) {
                   text_box->set_value(::as_string((int)(value * 100)));
                   });
@@ -321,7 +322,7 @@ namespace app_simple_nanoui_example
                   });
                text_box->set_fixed_size(Vector2i(60, 25));
                text_box->set_font_size(20);
-               text_box->set_alignment(TextBox::Alignment::Right);
+               text_box->set_alignment(TextBox::e_alignment_right);
       
                window = memory_new Window(this, "Misc. widgets");
                window->set_position(Vector2i(425, 15));
@@ -389,13 +390,13 @@ namespace app_simple_nanoui_example
                // A button to go back to the first tab and scroll the window.
                panel = window->add<Widget>();
                panel->add<Label>("Jump to tab: ");
-               panel->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                  Alignment::Middle, 0, 6));
+               panel->set_layout(memory_new BoxLayout(::nanoui::e_orientation_horizontal,
+                  ::nanoui::e_alignment_middle, 0, 6));
       
                auto ib = panel->add<IntBox<int>>();
                ib->set_editable(true);
       
-               b = panel->add<Button>("", FA_FORWARD);
+               b = panel->add<Button>("", e_font_awesome_forward);
                b->set_fixed_size(Vector2i(22, 22));
                ib->set_fixed_height(22);
                b->set_callback([tab_widget, ib] {
@@ -407,10 +408,10 @@ namespace app_simple_nanoui_example
                window = memory_new Window(this, "Grid of small widgets");
                window->set_position(Vector2i(425, 300));
                GridLayout * layout =
-                  memory_new GridLayout(Orientation::Horizontal, 2,
-                     Alignment::Middle, 15, 5);
+                  memory_new GridLayout(::nanoui::e_orientation_horizontal, 2,
+                     e_alignment_middle, 15, 5);
                layout->set_col_alignment(
-                  { Alignment::Maximum, Alignment::Fill });
+                  { e_alignment_maximum, e_alignment_fill });
                layout->set_spacing(0, 10);
                window->set_layout(layout);
       
@@ -420,7 +421,7 @@ namespace app_simple_nanoui_example
                   text_box->set_editable(true);
                   text_box->set_fixed_size(Vector2i(100, 20));
                   text_box->set_value("50");
-                  text_box->set_units("GiB");
+                  text_box->set_unit("GiB");
                   text_box->set_default_value("0.0");
                   text_box->set_font_size(16);
                   text_box->set_format("[-]?[0-9]*\\.?[0-9]+");
@@ -432,12 +433,12 @@ namespace app_simple_nanoui_example
                   int_box->set_editable(true);
                   int_box->set_fixed_size(Vector2i(100, 20));
                   int_box->set_value(50);
-                  int_box->set_units("Mhz");
+                  int_box->set_unit("Mhz");
                   int_box->set_default_value("0");
                   int_box->set_font_size(16);
                   int_box->set_format("[1-9][0-9]*");
                   int_box->set_spinnable(true);
-                  int_box->set_min_value(1);
+                  int_box->set_minimum_value(1);
                   int_box->set_value_increment(2);
                }
       
@@ -470,15 +471,15 @@ namespace app_simple_nanoui_example
                // setup a fast callback for the color picker widget on a memory_new window
                // for demonstrative purposes
                window = memory_new Window(this, "Color Picker Fast Callback");
-               layout = memory_new GridLayout(Orientation::Horizontal, 2,
-                  Alignment::Middle, 15, 5);
+               layout = memory_new GridLayout(::nanoui::e_orientation_horizontal, 2,
+                  e_alignment_middle, 15, 5);
                layout->set_col_alignment(
-                  { Alignment::Maximum, Alignment::Fill });
+                  { e_alignment_maximum, e_alignment_fill });
                layout->set_spacing(0, 10);
                window->set_layout(layout);
                window->set_position(Vector2i(425, 500));
                memory_new Label(window, "Combined: ");
-               b = memory_new Button(window, "ColorWheel", FA_INFINITY);
+               b = memory_new Button(window, "ColorWheel", e_font_awesome_infinity);
                memory_new Label(window, "Red: ");
                auto red_int_box = memory_new IntBox<int>(window);
                red_int_box->set_editable(false);

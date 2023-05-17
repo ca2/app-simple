@@ -20,20 +20,21 @@
 #include <unordered_map>
 #include <vector>
 
-NAMESPACE_BEGIN(nanoui)
+namespace nanoui
+{
 
 /// The different kinds of alignments a layout can perform.
-enum class Alignment : uint8_t {
-   Minimum = 0, ///< Take only as much space as is required.
-   Middle,      ///< Center align.
-   Maximum,     ///< Take as much space as is allowed.
-   Fill         ///< Fill according to preferred sizes.
+enum enum_alignment : uint8_t {
+   e_alignment_minimum = 0, ///< Take only as much space as is required.
+   e_alignment_middle,      ///< Center align.
+   e_alignment_maximum,     ///< Take as much space as is allowed.
+   e_alignment_fill         ///< Fill according to preferred sizes.
 };
 
 /// The direction of data flow for a layout.
-enum class Orientation {
-   Horizontal = 0, ///< Layout expands on horizontal axis.
-   Vertical        ///< Layout expands on vertical axis.
+enum class enum_orientation {
+   e_orientation_horizontal = 0, ///< Layout expands on horizontal axis.
+   e_orientation_vertical        ///< Layout expands on vertical axis.
 };
 
 /**
@@ -85,10 +86,10 @@ protected:
 class NANOUI_EXPORT BoxLayout : public Layout {
 public:
    /**
-    * \brief Construct a box layout which packs widgets in the given \c Orientation
+    * \brief Construct a box layout which packs widgets in the given \c enum_orientation
     *
     * \param orientation
-    *     The Orientation this BoxLayout expands along
+    *     The enum_orientation this BoxLayout expands along
     *
     * \param alignment
     *     Widget alignment perpendicular to the chosen orientation
@@ -99,20 +100,20 @@ public:
     * \param spacing
     *     Extra spacing placed between widgets
     */
-   BoxLayout(Orientation orientation, Alignment alignment = Alignment::Middle,
+   BoxLayout(enum_orientation orientation, enum_alignment alignment = e_alignment_middle,
       int margin = 0, int spacing = 0);
 
-   /// The Orientation this BoxLayout is using.
-   Orientation orientation() const { return m_orientation; }
+   /// The enum_orientation this BoxLayout is using.
+   enum_orientation orientation() const { return m_orientation; }
 
-   /// Sets the Orientation of this BoxLayout.
-   void set_orientation(Orientation orientation) { m_orientation = orientation; }
+   /// Sets the enum_orientation of this BoxLayout.
+   void set_orientation(enum_orientation orientation) { m_orientation = orientation; }
 
-   /// The Alignment of this BoxLayout.
-   Alignment alignment() const { return m_alignment; }
+   /// The enum_alignment of this BoxLayout.
+   enum_alignment alignment() const { return m_alignment; }
 
-   /// Sets the Alignment of this BoxLayout.
-   void set_alignment(Alignment alignment) { m_alignment = alignment; }
+   /// Sets the enum_alignment of this BoxLayout.
+   void set_alignment(enum_alignment alignment) { m_alignment = alignment; }
 
    /// The margin of this BoxLayout.
    int margin() const { return m_margin; }
@@ -135,11 +136,11 @@ public:
    //virtual void perform_layout(NVGcontext * ctx, Widget * widget) const override;
 
 protected:
-   /// The Orientation of this BoxLayout.
-   Orientation m_orientation;
+   /// The enum_orientation of this BoxLayout.
+   enum_orientation m_orientation;
 
-   /// The Alignment of this BoxLayout.
-   Alignment m_alignment;
+   /// The enum_alignment of this BoxLayout.
+   enum_alignment m_alignment;
 
    /// The margin padding of this BoxLayout.
    int m_margin;
@@ -248,7 +249,7 @@ public:
     *     The fixed dimension of this GridLayout.
     *
     * \param resolution
-    *     The number of rows or columns in the grid (depending on the Orientation).
+    *     The number of rows or columns in the grid (depending on the enum_orientation).
     *
     * \param alignment
     *     How widgets should be aligned within each grid cell.
@@ -259,28 +260,28 @@ public:
     * \param spacing
     *     The amount of spacing between widgets added to the grid.
     */
-   GridLayout(Orientation orientation = Orientation::Horizontal, int resolution = 2,
-      Alignment alignment = Alignment::Middle,
+   GridLayout(enum_orientation orientation = e_orientation_horizontal, int resolution = 2,
+      enum_alignment alignment = e_alignment_middle,
       int margin = 0, int spacing = 0)
       : m_orientation(orientation), m_resolution(resolution), m_margin(margin) {
       m_default_alignment[0] = m_default_alignment[1] = alignment;
       m_spacing = Vector2i(spacing);
    }
 
-   /// The Orientation of this GridLayout.
-   Orientation orientation() const { return m_orientation; }
+   /// The enum_orientation of this GridLayout.
+   enum_orientation orientation() const { return m_orientation; }
 
-   /// Sets the Orientation of this GridLayout.
-   void set_orientation(Orientation orientation) {
+   /// Sets the enum_orientation of this GridLayout.
+   void set_orientation(enum_orientation orientation) {
       m_orientation = orientation;
    }
 
-   /// The number of rows or columns (depending on the Orientation) of this GridLayout.
+   /// The number of rows or columns (depending on the enum_orientation) of this GridLayout.
    int resolution() const { return m_resolution; }
-   /// Sets the number of rows or columns (depending on the Orientation) of this GridLayout.
+   /// Sets the number of rows or columns (depending on the enum_orientation) of this GridLayout.
    void set_resolution(int resolution) { m_resolution = resolution; }
 
-   /// The spacing at the specified axis (row or column number, depending on the Orientation).
+   /// The spacing at the specified axis (row or column number, depending on the enum_orientation).
    int spacing(int axis) const { return m_spacing[axis]; }
    /// Sets the spacing for a specific axis.
    void set_spacing(int axis, int spacing) { m_spacing[axis] = spacing; }
@@ -293,27 +294,27 @@ public:
    void set_margin(int margin) { m_margin = margin; }
 
    /**
-    * The Alignment of the specified axis (row or column number, depending on
-    * the Orientation) at the specified index of that row or column.
+    * The enum_alignment of the specified axis (row or column number, depending on
+    * the enum_orientation) at the specified index of that row or column.
     */
-   Alignment alignment(int axis, int item) const {
+   enum_alignment alignment(int axis, int item) const {
       if (item < (int)m_alignment[axis].size())
          return m_alignment[axis][item];
       else
          return m_default_alignment[axis];
    }
 
-   /// Sets the Alignment of the columns.
-   void set_col_alignment(Alignment value) { m_default_alignment[0] = value; }
+   /// Sets the enum_alignment of the columns.
+   void set_col_alignment(enum_alignment value) { m_default_alignment[0] = value; }
 
-   /// Sets the Alignment of the rows.
-   void set_row_alignment(Alignment value) { m_default_alignment[1] = value; }
+   /// Sets the enum_alignment of the rows.
+   void set_row_alignment(enum_alignment value) { m_default_alignment[1] = value; }
 
-   /// Use this to set variable Alignment for columns.
-   void set_col_alignment(const std::vector<Alignment> & value) { m_alignment[0] = value; }
+   /// Use this to set variable enum_alignment for columns.
+   void set_col_alignment(const std::vector<enum_alignment> & value) { m_alignment[0] = value; }
 
-   /// Use this to set variable Alignment for rows.
-   void set_row_alignment(const std::vector<Alignment> & value) { m_alignment[1] = value; }
+   /// Use this to set variable enum_alignment for rows.
+   void set_row_alignment(const std::vector<enum_alignment> & value) { m_alignment[1] = value; }
 
    /* Implementation of the layout interface */
    /// See \ref Layout::preferred_size.
@@ -328,13 +329,13 @@ protected:
       //std::vector<int> * grid) const;
 
 protected:
-   /// The Orientation of the GridLayout.
-   Orientation m_orientation;
-   /// The default Alignment of the GridLayout.
-   Alignment m_default_alignment[2];
-   /// The actual Alignment being used for each column/row
-   std::vector<Alignment> m_alignment[2];
-   /// The number of rows or columns before starting a memory_new one, depending on the Orientation.
+   /// The enum_orientation of the GridLayout.
+   enum_orientation m_orientation;
+   /// The default enum_alignment of the GridLayout.
+   enum_alignment m_default_alignment[2];
+   /// The actual enum_alignment being used for each column/row
+   std::vector<enum_alignment> m_alignment[2];
+   /// The number of rows or columns before starting a memory_new one, depending on the enum_orientation.
    int m_resolution;
    /// The spacing used for each dimension.
    Vector2i m_spacing;
@@ -361,7 +362,7 @@ protected:
  *    using Anchor = AdvancedGridLayout::Anchor;
  *    Label *label = memory_new Label(window, "A label");
  *    // Add a centered label at grid position (1, 5), which spans two horizontal cells
- *    layout->set_anchor(label, Anchor(1, 5, 2, 1, Alignment::Middle, Alignment::Middle));
+ *    layout->set_anchor(label, Anchor(1, 5, 2, 1, e_alignment_middle, e_alignment_middle));
  *
  * \endrst
  *
@@ -386,14 +387,14 @@ public:
    struct Anchor {
       uint8_t pos[2];    ///< The ``(x, y)`` position.
       uint8_t size[2];   ///< The ``(x, y)`` size.
-      Alignment align[2];///< The ``(x, y)`` Alignment.
+      enum_alignment align[2];///< The ``(x, y)`` enum_alignment.
 
       /// Creates a ``0`` Anchor.
       Anchor() { }
 
-      /// Create an Anchor at position ``(x, y)`` with specified Alignment.
-      Anchor(int x, int y, Alignment horiz = Alignment::Fill,
-         Alignment vert = Alignment::Fill) {
+      /// Create an Anchor at position ``(x, y)`` with specified enum_alignment.
+      Anchor(int x, int y, enum_alignment horiz = e_alignment_fill,
+         enum_alignment vert = e_alignment_fill) {
          pos[0] = (uint8_t)x; pos[1] = (uint8_t)y;
          size[0] = size[1] = 1;
          align[0] = horiz; align[1] = vert;
@@ -401,8 +402,8 @@ public:
 
       /// Create an Anchor at position ``(x, y)`` of size ``(w, h)`` with specified alignments.
       Anchor(int x, int y, int w, int h,
-         Alignment horiz = Alignment::Fill,
-         Alignment vert = Alignment::Fill) {
+         enum_alignment horiz = e_alignment_fill,
+         enum_alignment vert = e_alignment_fill) {
          pos[0] = (uint8_t)x; pos[1] = (uint8_t)y;
          size[0] = (uint8_t)w; size[1] = (uint8_t)h;
          align[0] = horiz; align[1] = vert;
@@ -487,4 +488,8 @@ protected:
    int m_margin;
 };
 
-NAMESPACE_END(nanoui)
+
+} // namespace nanoui
+
+
+
