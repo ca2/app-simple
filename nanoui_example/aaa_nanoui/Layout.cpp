@@ -21,7 +21,7 @@
 
 NAMESPACE_BEGIN(nanoui)
 
-BoxLayout::BoxLayout(Orientation orientation, Alignment alignment,
+BoxLayout::BoxLayout(enum_orientation orientation, enum_alignment alignment,
    int margin, int spacing)
    : m_orientation(orientation), m_alignment(alignment), m_margin(margin),
    m_spacing(spacing) {
@@ -33,7 +33,7 @@ BoxLayout::BoxLayout(Orientation orientation, Alignment alignment,
 //   int y_offset = 0;
 //   const Window * window = dynamic_cast<const Window *>(widget);
 //   if (window && !window->title().empty()) {
-//      if (m_orientation == Orientation::Vertical)
+//      if (m_orientation == e_orientation_vertical)
 //         size[1] += widget->theme()->m_window_header_height - m_margin / 2;
 //      else
 //         y_offset = widget->theme()->m_window_header_height;
@@ -75,7 +75,7 @@ BoxLayout::BoxLayout(Orientation orientation, Alignment alignment,
 //
 //   const Window * window = dynamic_cast<const Window *>(widget);
 //   if (window && !window->title().empty()) {
-//      if (m_orientation == Orientation::Vertical) {
+//      if (m_orientation == e_orientation_vertical) {
 //         position += widget->theme()->m_window_header_height - m_margin / 2;
 //      }
 //      else {
@@ -103,16 +103,16 @@ BoxLayout::BoxLayout(Orientation orientation, Alignment alignment,
 //      pos[axis1] = position;
 //
 //      switch (m_alignment) {
-//      case Alignment::Minimum:
+//      case e_alignment_minimum:
 //         pos[axis2] += m_margin;
 //         break;
-//      case Alignment::Middle:
+//      case e_alignment_middle:
 //         pos[axis2] += (container_size[axis2] - target_size[axis2]) / 2;
 //         break;
-//      case Alignment::Maximum:
+//      case e_alignment_maximum:
 //         pos[axis2] += container_size[axis2] - target_size[axis2] - m_margin * 2;
 //         break;
-//      case Alignment::Fill:
+//      case e_alignment_fill:
 //         pos[axis2] += m_margin;
 //         target_size[axis2] = fs[axis2] ? fs[axis2] : (container_size[axis2] - m_margin * 2);
 //         break;
@@ -318,18 +318,18 @@ BoxLayout::BoxLayout(Orientation orientation, Alignment alignment,
 //         for (int j = 0; j < 2; j++) {
 //            int axis = (axis1 + j) % 2;
 //            int item = j == 0 ? i1 : i2;
-//            Alignment align = alignment(axis, item);
+//            enum_alignment align = alignment(axis, item);
 //
 //            switch (align) {
-//            case Alignment::Minimum:
+//            case e_alignment_minimum:
 //               break;
-//            case Alignment::Middle:
+//            case e_alignment_middle:
 //               item_pos[axis] += (grid[axis][item] - target_size[axis]) / 2;
 //               break;
-//            case Alignment::Maximum:
+//            case e_alignment_maximum:
 //               item_pos[axis] += grid[axis][item] - target_size[axis];
 //               break;
-//            case Alignment::Fill:
+//            case e_alignment_fill:
 //               target_size[axis] = fs[axis] ? fs[axis] : grid[axis][item];
 //               break;
 //            }
@@ -392,15 +392,15 @@ AdvancedGridLayout::AdvancedGridLayout(const std::vector<int> & cols, const std:
 //         int target_size = fs ? fs : ps;
 //
 //         switch (anchor.align[axis]) {
-//         case Alignment::Minimum:
+//         case e_alignment_minimum:
 //            break;
-//         case Alignment::Middle:
+//         case e_alignment_middle:
 //            item_pos += (cell_size - target_size) / 2;
 //            break;
-//         case Alignment::Maximum:
+//         case e_alignment_maximum:
 //            item_pos += cell_size - target_size;
 //            break;
-//         case Alignment::Fill:
+//         case e_alignment_fill:
 //            target_size = fs ? fs : cell_size;
 //            break;
 //         }

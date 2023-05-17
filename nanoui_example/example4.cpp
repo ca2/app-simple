@@ -204,8 +204,8 @@ public:
         m_canvas->set_fixed_size({400, 400});
 
         Widget *tools = memory_new Widget(window);
-        tools->set_layout(memory_new BoxLayout(Orientation::Horizontal,
-                                       Alignment::Middle, 0, 5));
+        tools->set_layout(memory_new BoxLayout(e_orientation_horizontal,
+                                       e_alignment_middle, 0, 5));
 
         Button *b0 = memory_new Button(tools, "Random Background");
         b0->set_callback([this]() {
