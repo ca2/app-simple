@@ -17,10 +17,10 @@ namespace app_simple_nanoui_example
    public:
 
 
-      ::pointer<main_window> m_pmainwindow;
+      ::pointer<main_window>        m_pmainwindow;
 
 
-      ref<Window> m_window;
+      ::pointer<Window>             m_pwindow;
 
 
       enum test_enum {

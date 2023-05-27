@@ -19,7 +19,7 @@
 #include "framework.h"
 #include "main_window.h"
 #include "example_icons.h"
-#include "nanoui/Icons.h"
+#include "acme/constant/_font_awesome.h"
 #include "nanoui/Button.h"
 #include "nanoui/Window.h"
 #include "nanoui/Layout.h"

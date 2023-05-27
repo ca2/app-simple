@@ -51,7 +51,7 @@ namespace app_simple_nanoui_example
 
       __construct_new(m_pmainwindow);
 
-      m_pmainwindow->display(e_display_restored);
+      m_pmainwindow->display(e_display_normal);
 
       m_pmainwindow->create_main_window();
 

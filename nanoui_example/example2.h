@@ -18,7 +18,7 @@ namespace app_simple_nanoui_example
       ::pointer<main_window>                 m_pmainwindow;
 
 
-      ::nanoui::ref<::nanoui::Window>      m_window;
+      ::pointer<::nanoui::Window>            m_pwindow;
 
       enum test_enum {
          Item1 = 0,
