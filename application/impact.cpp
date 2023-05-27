@@ -180,8 +180,8 @@ namespace app_simple_application
       else
       {
        
-         point.x =   random(0, (int)(rectangleClient.width() - size.cx));
-         point.y =   random(0, (int)(rectangleClient.height() - size.cy*2));
+         point.x() = random(0, (int)(rectangleClient.width() - size.cx));
+         point.y() = random(0, (int)(rectangleClient.height() - size.cy * 2));
 
       }
       
@@ -214,7 +214,7 @@ namespace app_simple_application
             
          }
          
-         pgraphics->text_out(point.x + x, point.y + y, strItem);
+         pgraphics->text_out(point.x() + x, point.y() + y, strItem);
          
          auto s = pgraphics->get_text_extent(strItem);
 
@@ -226,7 +226,7 @@ namespace app_simple_application
       
       pgraphics->set_text_color(color_dk);
 
-      pgraphics->text_out(point.x, point.y + y + size.cy, strText);
+      pgraphics->text_out(point.x(), point.y() + y + size.cy, strText);
 
       pgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
 

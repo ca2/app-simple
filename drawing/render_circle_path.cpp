@@ -39,7 +39,11 @@ namespace app_simple_drawing
 
       ppath->begin_figure();
 
-      ppath->add_ellipse(r);
+      ::ellipse_f64 ellipse;
+
+      ellipse.set(r);
+
+      ppath->add_ellipse(ellipse);
 
       ppath->close_figure();
 
