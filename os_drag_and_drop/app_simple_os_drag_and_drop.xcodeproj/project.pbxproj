@@ -608,7 +608,6 @@
 					
 					"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(BUILD_MACHINE_MACOS_DEPLOYMENT_TARGET)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
@@ -678,7 +677,6 @@
 					
 					"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(BUILD_MACHINE_MACOS_DEPLOYMENT_TARGET)";
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
