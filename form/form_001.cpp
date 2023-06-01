@@ -161,15 +161,15 @@ namespace app_simple_form
       
       m_pstill->m_ealignText = e_align_left;
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
-      y += sizeStill.cy;
+      y += sizeStill.cy();
 
       y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
       
-      sizeEdit.cx = cx;
+      sizeEdit.cx() = cx;
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
       
@@ -177,9 +177,9 @@ namespace app_simple_form
       
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy()));
 
-      y += sizeEdit.cy;
+      y += sizeEdit.cy();
 
       y += rectangleEditMargin.bottom;
 
@@ -195,11 +195,11 @@ namespace app_simple_form
 
       y += 4;
       
-      auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
+      auto button_width = maximum(sizeButtonClear.cx() + 32, sizeButtonSend.cx() + 32);
 
-      auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
+      auto button_height = maximum(sizeButtonClear.cy(), sizeButtonSend.cy());
 
-      ::rectangle rectangleSend;
+      ::rectangle_f64 rectangleSend;
       
       rectangleSend.right = rectClient.right - iRight;
       
@@ -211,7 +211,7 @@ namespace app_simple_form
       
       m_pbuttonSend->display_child(rectangleSend);
       
-      ::rectangle rectangleClear;
+      ::rectangle_f64 rectangleClear;
       
       rectangleClear.right = rectangleSend.left - iLeft;
       
@@ -226,7 +226,7 @@ namespace app_simple_form
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy * 5));
+      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy() * 5));
 
    }
 
