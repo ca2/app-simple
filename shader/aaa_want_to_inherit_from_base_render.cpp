@@ -276,9 +276,9 @@ namespace simple_shader
 
             {
 
-               float x = (float) psession->get_cursor_position().x;
+               float x = (float) psession->get_cursor_position().x();
 
-               float y = (float) psession->get_cursor_position().y;
+               float y = (float) psession->get_cursor_position().y();
 
                m_pcontext->m_pprogram->m_pshader->setVec2("mouse", x, y);
                m_pcontext->m_pprogram->m_pshader->setVec2("iMouse", x, y);

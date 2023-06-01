@@ -161,7 +161,7 @@ namespace simple_shader
 
       //pgraphics->ellipse(rectangle);
 
-      //::rectangle rectangleText;
+      //::rectangle_f64 rectangleText;
 
       //rectangleText.set_size(size);
 
