@@ -268,21 +268,21 @@ namespace app_simple_box
 //
 //
 //
-//      point.x += size.cx;
+//      point.x() += size.cx;
 //
 //      pgraphics->set_text_color(color_dk);
 //
 //      size = pgraphics->get_text_extent("TBS_");
 //
-//      pgraphics->text_out(point.x, point.y, strText);
+//      pgraphics->text_out(point.x(), point.y(), strText);
 //
-//      point.x += size.cx;
+//      point.x() += size.cx;
 //
 //      pgraphics->set_text_color(color_dk);
 //
 //      pgraphics->set_text_color(color::white);
 //
-//      pgraphics->text_out(point.x, point.y, strText);
+//      pgraphics->text_out(point.x(), point.y(), strText);
 //
       
       pgraphics->set_text_color(color_dk);
