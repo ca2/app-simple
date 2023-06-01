@@ -159,15 +159,15 @@ namespace app_simple_form
       
       m_pstill->m_ealignText = e_align_left;
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
-      y += sizeStill.cy;
+      y += sizeStill.cy();
 
       y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
       
-      sizeEdit.cx = cx;
+      sizeEdit.cx() = cx;
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
       
@@ -175,9 +175,9 @@ namespace app_simple_form
       
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeEdit.cy));
+      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeEdit.cy()));
 
-      y += sizeEdit.cy;
+      y += sizeEdit.cy();
 
       y += rectangleEditMargin.bottom;
 
@@ -185,17 +185,17 @@ namespace app_simple_form
 
       auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeCombo.cy));
+      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeCombo.cy()));
 
-      y += sizeCombo.cy + 4;
+      y += sizeCombo.cy() + 4;
 
       auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
 
-      m_pbutton->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeButton.cy));
+      m_pbutton->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeButton.cy()));
 
-      y += sizeButton.cy + 4;
+      y += sizeButton.cy() + 4;
 
-      m_pstillResponse->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeEdit.cy * 8));
+      m_pstillResponse->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeEdit.cy() * 8));
 
    }
 
