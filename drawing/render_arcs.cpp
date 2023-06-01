@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "render.h"
 #include "application.h"
 #include <math.h>
@@ -14,7 +14,7 @@ namespace app_simple_drawing
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, angle angleStart, angle angleAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, ::angle_f64 angleStart, ::angle_f64 angleAngle, bool bPath)
    {
 
       auto psystem = acmesystem()->m_paurasystem;
@@ -45,15 +45,15 @@ namespace app_simple_drawing
 
       auto size1 = pgraphics->get_text_extent(str1);
 
-      size1.cx += 32;
+      size1.cx() += 32;
 
-      size1.cy += 4;
+      size1.cy() += 4;
 
       auto size2 = pgraphics->get_text_extent(str2);
 
-      size2.cx += 32;
+      size2.cx() += 32;
 
-      size2.cy += 4;
+      size2.cy() += 4;
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
@@ -65,13 +65,13 @@ namespace app_simple_drawing
 
       rectangleBack.deflate(2, 2);
 
-      rectangleBack.bottom = rectangleBack.top + size.cy * 2 + 4 * 3;
+      rectangleBack.bottom = rectangleBack.top + size.cy() * 2 + 4 * 3;
 
       pgraphics->fill_rectangle(rectangleBack, argb(127, 80, 80, 80));
 
       pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + 4, str1);
 
-      pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy + 8, str2);
+      pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy() + 8, str2);
 
       auto ppen = __create < ::draw2d::pen >();
 
@@ -152,9 +152,9 @@ namespace app_simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::array < angle > angleaStart;
+      ::array < ::angle_f64 > angleaStart;
 
-      ::array < angle > angleaAngle;
+      ::array < ::angle_f64 > angleaAngle;
 
       auto a = 0.0_degree;
       angleaStart.add(a);
