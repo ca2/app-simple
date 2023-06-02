@@ -11,8 +11,6 @@
 		9A8C81692783F83C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C81682783F83C000C8587 /* _matter.zip */; };
 		9A8D0E7526B71908000D2AD6 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0E7326B71908000D2AD6 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8D0E7626B71908000D2AD6 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0E7426B71908000D2AD6 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8F4CFE2A26D33D00097EE1 /* _____release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4CEE2A26D33C00097EE1 /* _____release.xcconfig */; };
-		9A8F4CFF2A26D33D00097EE1 /* _____debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4CFD2A26D33C00097EE1 /* _____debug.xcconfig */; };
 		9A9905AE2753364300B13F01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9905AB2753364200B13F01 /* Images.xcassets */; };
 		9A9905B22753368400B13F01 /* libapp_simple_form.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA8046626657AF500A6B449 /* libapp_simple_form.dylib */; };
 		9A9905C22753375B00B13F01 /* libfolder_zip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9905BF2753372200B13F01 /* libfolder_zip.dylib */; };
@@ -856,10 +854,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8F4CFE2A26D33D00097EE1 /* _____release.xcconfig in Resources */,
 				9A8C81692783F83C000C8587 /* _matter.zip in Resources */,
 				9A273CD929CF199E00CBEB97 /* InfoPlist.strings in Resources */,
-				9A8F4CFF2A26D33D00097EE1 /* _____debug.xcconfig in Resources */,
 				9A9905AE2753364300B13F01 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
