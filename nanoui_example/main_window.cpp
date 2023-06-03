@@ -143,8 +143,8 @@ namespace app_simple_nanoui_example
 
 #if !defined(UNIVERSAL_WINDOWS)
 
-      int cx = papplication->m_size.x() + 20;
-      int cy = papplication->m_size.y() + 48;
+      int cx = papplication->m_size.cx() + 20;
+      int cy = papplication->m_size.cy() + 48;
 
       top_level()->set_size({cx, cy});
 

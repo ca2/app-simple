@@ -172,7 +172,7 @@ public:
             float(25 * Pi / 180),
             0.1f,
             20.f,
-            m_size.x() / (float) m_size.y()
+            m_size.cx() / (float) m_size.cy()
         );
 
         Matrix4f mvp = proj * view * model * model2;

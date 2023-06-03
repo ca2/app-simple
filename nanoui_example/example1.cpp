@@ -164,7 +164,7 @@ namespace app_simple_nanoui_example
                //   Vector2i size;
                //   int n = 0;
                //   ImageHolder texture_data(
-               //      stbi_load((icon.second + ".png").c_str(), &size.x(), &size.y(), &n, 0),
+               //      stbi_load((icon.second + ".png").c_str(), &size.cx(), &size.cy(), &n, 0),
                //      stbi_image_free);
                //   assert(n == 4);
       
@@ -562,13 +562,13 @@ namespace app_simple_nanoui_example
       Screen::draw_contents(pcontext);
 
 
-      int iSize = minimum(m_size.x(), m_size.y());
+      int iSize = minimum(m_size.cx(), m_size.cy());
 
       iSize = iSize / 2;
 
-      int centerX = m_size.x() / 2;
+      int centerX = m_size.cx() / 2;
 
-      int centerY = m_size.y() / 2;
+      int centerY = m_size.cy() / 2;
 
       ::nano2d::guard guard(pcontext);
 
