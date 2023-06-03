@@ -81,14 +81,14 @@ public:
    void set_size(const Vector2i & size) { m_size = size; }
 
    /// Return the width of the widget
-   int width() const { return m_size.x(); }
+   int width() const { return m_size.cx(); }
    /// Set the width of the widget
-   void set_width(int width) { m_size.x() = width; }
+   void set_width(int width) { m_size.cx() = width; }
 
    /// Return the height of the widget
-   int height() const { return m_size.y(); }
+   int height() const { return m_size.cy(); }
    /// Set the height of the widget
-   void set_height(int height) { m_size.y() = height; }
+   void set_height(int height) { m_size.cy() = height; }
 
    /**
     * \brief Set the fixed size of this widget
@@ -105,13 +105,13 @@ public:
    const Vector2i & fixed_size() const { return m_fixed_size; }
 
    // Return the fixed width (see \ref set_fixed_size())
-   int fixed_width() const { return m_fixed_size.x(); }
+   int fixed_width() const { return m_fixed_size.cx(); }
    // Return the fixed height (see \ref set_fixed_size())
-   int fixed_height() const { return m_fixed_size.y(); }
+   int fixed_height() const { return m_fixed_size.cy(); }
    /// Set the fixed width (see \ref set_fixed_size())
-   void set_fixed_width(int width) { m_fixed_size.x() = width; }
+   void set_fixed_width(int width) { m_fixed_size.cx() = width; }
    /// Set the fixed height (see \ref set_fixed_size())
-   void set_fixed_height(int height) { m_fixed_size.y() = height; }
+   void set_fixed_height(int height) { m_fixed_size.cy() = height; }
 
    /// Return whether or not the widget is currently visible (assuming all parents are visible)
    bool visible() const { return m_visible; }
@@ -222,7 +222,7 @@ public:
 //   bool contains(const Vector2i & p) const {
 //      Vector2i d = p - m_pos;
 //      return d.x() >= 0 && d.y() >= 0 &&
-//         d.x() < m_size.x() && d.y() < m_size.y();
+//         d.x() < m_size.cx() && d.y() < m_size.cy();
 //   }
 //
 //   /// Determine the widget located at the given position value (recursive)
