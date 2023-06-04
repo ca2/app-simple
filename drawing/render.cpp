@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "render.h"
 #include "impact.h"
 #include "application.h"
@@ -300,7 +300,7 @@ namespace app_simple_drawing
 
             int iHeight = rectangle.height();
 
-            double dMaxDimension = size.get_maximum_dimension();
+            double dMaxDimension = size.maximum();
 
             if (m_iDrawing == 1)
             {
