@@ -40,7 +40,7 @@ namespace app_simple_nanoui_example
 
 
    ExampleApplicationIcons::ExampleApplicationIcons(main_window * pmainwindow) :
-      Screen(pmainwindow, Vector2i(1000, 800), "NanoGUI Icons"),
+      Screen(pmainwindow, { 1000, 800 }, "NanoGUI Icons"),
       m_pmainwindow(pmainwindow)
    {
 
@@ -53,13 +53,13 @@ namespace app_simple_nanoui_example
         // create a fixed size screen with one window
         //Screen *screen = memory_new Screen({width, height}, "NanoGUI Icons", false);
 
-        Window *window = memory_new Window(this, "All Icons");
-        m_window = window;
-        window->set_position({0, 0});
-        window->set_fixed_size({width, height});
+        Window * pwindow = memory_new Window(this, "All Icons");
+        m_pwindow = pwindow;
+        pwindow->set_position({0, 0});
+        pwindow->set_fixed_size({width, height});
 
         // attach a vertical scroll panel
-        auto vscroll = memory_new VScrollPanel(window);
+        auto vscroll = memory_new VScrollPanel(pwindow);
         vscroll->set_fixed_size({width, height});
 
         // vscroll should only have *ONE* child. this is what `wrapper` is for
