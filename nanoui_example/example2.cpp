@@ -43,7 +43,7 @@ namespace app_simple_nanoui_example
 
 
    ExampleApplication2::ExampleApplication2(main_window * pmainwindow) :
-      Screen(pmainwindow, ::nanoui::Vector2i(500, 900), "NanoGUI Test"),
+      Screen(pmainwindow, { 500, 900 }, "NanoGUI Test"),
       m_pmainwindow(pmainwindow)
    {
 
@@ -68,7 +68,7 @@ namespace app_simple_nanoui_example
 
          bool enabled = true;
          nanoui::FormHelper * gui = memory_new ::nanoui::FormHelper(this);
-         m_window = gui->add_window(::nanoui::Vector2i(10, 10), "Form helper example");
+         m_pwindow = gui->add_window({ 10, 10 }, "Form helper example");
          gui->add_group("Basic types");
          gui->add_variable("bool", bvar);
          gui->add_variable("string", strval);
@@ -102,7 +102,7 @@ namespace app_simple_nanoui_example
 
 
          auto window = memory_new Window(this, "Navigation");
-         window->set_position(Vector2i(15, 680));
+         window->set_position({ 15, 680 });
          window->set_layout(memory_new GroupLayout());
 
 
