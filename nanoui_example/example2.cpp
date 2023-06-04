@@ -140,7 +140,7 @@ namespace app_simple_nanoui_example
 
       Screen::perform_layout(pcontext, bRecalcTextSize);
 
-      m_window->center();
+      m_pwindow->center();
 
    }
 

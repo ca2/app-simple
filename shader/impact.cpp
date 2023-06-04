@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "impact.h"
 #include "frame.h"
 #include "application.h"
@@ -263,7 +263,7 @@ namespace app_simple_shader
 
          auto rectangleClient = client_rectangle();
 
-         auto pimage = m_pcontext->m_pauracontext->create_image(rectangleClient);
+         auto pimage = m_pcontext->m_pauracontext->create_image(rectangleClient.size());
 
          ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
 
