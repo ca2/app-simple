@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "example1.h"
 #include "main_window.h"
 #include "acme/constant/_font_awesome.h"
@@ -213,8 +213,8 @@ namespace app_simple_nanoui_example
                   
                   //m_puserinteraction->acmenode()->node_post(__routine([this, image_impact]()
                     //         {
-                  auto pwindow = m_puserinteraction->window();
-                  auto poswindow = pwindow->get_os_data();
+                  //auto pwindow = m_puserinteraction->window();
+                  //auto poswindow = pwindow->get_os_data();
                   auto pdialog = acmenode()->node_file_dialog();
                   pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
                   pdialog->m_filedialogfiltera.add({ "JPEG file", "*.jpeg" });
@@ -247,8 +247,8 @@ namespace app_simple_nanoui_example
                b->set_callback([this, image_impact]
                {
 
-                  auto pwindow = m_puserinteraction->window();
-                  auto poswindow = pwindow->get_os_data();
+                  //auto pwindow = m_puserinteraction->window();
+                  //auto poswindow = pwindow->get_os_data();
                   auto pdialog = acmenode()->node_file_dialog();
                   pdialog->m_puserelement = m_puserinteraction;
                   pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
@@ -305,15 +305,15 @@ namespace app_simple_nanoui_example
                   ::nanoui::e_alignment_middle, 0, 20));
       
                Slider * slider = memory_new Slider(panel);
-               slider->set_value(0.5f);
+               slider->set_value(0.5f, e_source_initialize);
                slider->set_fixed_width(80);
       
                TextBox * text_box = memory_new TextBox(panel);
                text_box->set_fixed_size({ 60, 25 });
-               text_box->set_value("50");
+               text_box->set_value("50", e_source_initialize);
                text_box->set_unit("%");
                slider->set_callback([text_box](float value) {
-                  text_box->set_value(::as_string((int)(value * 100)));
+                  text_box->set_value(::as_string((int)(value * 100)), e_source_user);
                   });
                slider->set_final_callback([&](float value) {
                   string str;
@@ -421,7 +421,7 @@ namespace app_simple_nanoui_example
                   text_box = memory_new TextBox(window);
                   text_box->set_editable(true);
                   text_box->set_fixed_size({ 100, 20 });
-                  text_box->set_value("50");
+                  text_box->set_value("50", e_source_initialize);
                   text_box->set_unit("GiB");
                   text_box->set_default_value("0.0");
                   text_box->set_font_size(16);
@@ -433,7 +433,7 @@ namespace app_simple_nanoui_example
                   auto int_box = memory_new IntBox<int>(window);
                   int_box->set_editable(true);
                   int_box->set_fixed_size({ 100, 20 });
-                  int_box->set_value(50);
+                  int_box->set_value(50, e_source_initialize);
                   int_box->set_unit("Mhz");
                   int_box->set_default_value("0");
                   int_box->set_font_size(16);
@@ -497,13 +497,13 @@ namespace app_simple_nanoui_example
                   b->set_background_color(c);
                   b->set_text_color(c.contrasting_color());
                   int red = (int)(c.red);
-                  red_int_box->set_value(red);
+                  red_int_box->set_value(red, e_source_user);
                   int green = (int)(c.green);
-                  green_int_box->set_value(green);
+                  green_int_box->set_value(green, e_source_user);
                   int blue = (int)(c.blue);
-                  blue_int_box->set_value(blue);
+                  blue_int_box->set_value(blue, e_source_user);
                   int alpha = (int)(c.alpha);
-                  alpha_int_box->set_value(alpha);
+                  alpha_int_box->set_value(alpha, e_source_user);
                   });
       
 
