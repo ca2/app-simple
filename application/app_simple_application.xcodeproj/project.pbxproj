@@ -83,6 +83,8 @@
 		9A00E5C52661320400517464 /* _.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 		9A258BD424DA5DD30013F50E /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2E62A825258F6D0001CC7E /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A54987A2A2D4BFA0052BAB6 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
+		9A54987C2A2D4BFA0052BAB6 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A7D920E251AF32C00DE81AE /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7D9210251AF32C00DE81AE /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A833BDF24F544B200C079FB /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -170,6 +172,8 @@
 		9AEB75AA16F78E600085103B /* simple_application */ = {
 			isa = PBXGroup;
 			children = (
+				9A54987C2A2D4BFA0052BAB6 /* _____debug.xcconfig */,
+				9A54987A2A2D4BFA0052BAB6 /* _____release.xcconfig */,
 				9A00E5C52661320400517464 /* _.cpp */,
 				9A833BDF24F544B200C079FB /* _.h */,
 				9A833BE024F544B200C079FB /* _user.h */,
@@ -357,6 +361,7 @@
 		};
 		9AEB75A516F78DF10085103B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A54987C2A2D4BFA0052BAB6 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -445,6 +450,7 @@
 		};
 		9AEB75A616F78DF10085103B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A54987A2A2D4BFA0052BAB6 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
