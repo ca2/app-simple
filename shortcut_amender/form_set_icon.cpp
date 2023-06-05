@@ -465,7 +465,7 @@ namespace app_simple_shortcut_amender
 
       string strSend;
 
-      m_pbuttonSend->get_window_text(strSend);
+      strSend = m_pbuttonSend->get_window_text();
 
       bool bThumbnail = strSend == "Thumbnail";
 
