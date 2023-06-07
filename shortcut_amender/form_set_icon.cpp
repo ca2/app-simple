@@ -157,8 +157,6 @@ namespace app_simple_shortcut_amender
 
       m_peditTarget->m_strEmtpyText = "Enter text do substitution";
 
-
-
       auto papp = get_app();
 
       {
@@ -591,7 +589,7 @@ namespace app_simple_shortcut_amender
             {
 
                straAction.add(
-                  (elinkWritten & ::file::e_link_icon ? "" : "✗!! ")
+                  (elinkWritten & ::file::e_link_icon ? "" : "\u2717!! ")
                   + path + ": "
                   + plink->m_pathIcon.windows_path());
 
