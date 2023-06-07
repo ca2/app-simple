@@ -1,4 +1,4 @@
-﻿// From form_amender.cpp by camilo on 2023-03-15 ~17:00 <3ThomasBorregaardSorensen!!
+// From form_amender.cpp by camilo on 2023-03-15 ~17:00 <3ThomasBorregaardSorensen!!
 #include "framework.h"
 #include "form_reset_icon.h"
 #include "application.h"

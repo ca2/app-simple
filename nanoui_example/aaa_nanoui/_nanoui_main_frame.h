@@ -1,4 +1,4 @@
-// Created by camilo on 2022/03/18 03:14 AM <3ThomasBorregaardS�rensen!! (Thomas Like number 5)
+// Created by camilo on 2022/03/18 03:14 AM <3ThomasBorregaardSorensen!! (Thomas Like number 5)
 #pragma once
 //Mummi at office during dawn
 //youngmatti_

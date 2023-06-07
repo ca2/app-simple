@@ -1,4 +1,4 @@
-﻿// From nanoui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSørensen!!
+// From nanoui by camilo on 2022/03/18 2:01 AM <3ThomasBorregaardSorensen!!
 #pragma once
 
 

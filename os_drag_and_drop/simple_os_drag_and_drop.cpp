@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "simple_os_drag_and_drop.h"
 #include "acme/platform/node.h"
 #include "acme/platform/system.h"
