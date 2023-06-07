@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "form_001.h"
 #include "application.h"
 #include "acme/constant/id.h"

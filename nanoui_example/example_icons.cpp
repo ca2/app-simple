@@ -1,4 +1,4 @@
-﻿/*
+/*
     src/example_icons.cpp -- C++ version of an example application that shows
     all available Entypo icons as they would appear in NanoGUI itself.  For a Python
     implementation, see '../python/example_icons.py'.

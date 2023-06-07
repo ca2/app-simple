@@ -1,4 +1,4 @@
-﻿#include "framework.h"
+#include "framework.h"
 #include "form.h"
 #include "aura/message/user.h"
 #include <math.h>
