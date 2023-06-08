@@ -592,7 +592,7 @@ namespace app_simple_shortcut_amender
          {
 
             straAction.add(
-               (elinkWritten & ::file::e_link_target ? "" : u8"\u2717!! ")
+               (elinkWritten & ::file::e_link_target ? u8"" : u8"\u2717!! ")
                + path + ": "
                + plink->m_pathTarget.windows_path() +
                + " <== "
