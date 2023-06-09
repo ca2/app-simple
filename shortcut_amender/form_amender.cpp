@@ -604,7 +604,7 @@ namespace app_simple_shortcut_amender
          {
 
             straAction.add(
-               (elinkWritten & ::file::e_link_folder ? "" : u8"\u2717!! ")
+               (const char *)(elinkWritten & ::file::e_link_folder ? u8"" : u8"\u2717!! ")
                + path + ": "
                + plink->m_pathFolder.windows_path()
                + " <== "
