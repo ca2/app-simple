@@ -532,7 +532,7 @@ namespace app_simple_change_grub_default_entry
 
    auto iSize = memoryGrubEnv.size();
 
-   auto pdata = (byte*)memoryGrubEnv.data();
+   auto pdata = (::u8*)memoryGrubEnv.data();
 
    if (iNewLen != iOldLen)
    {
