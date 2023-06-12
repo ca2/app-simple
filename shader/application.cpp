@@ -128,13 +128,13 @@ namespace app_simple_shader
          if(prequest->m_bMakeVisible)
          {
 
-            INFORMATION("prequest->m_bMakeVisible");
+            information() << "prequest->m_bMakeVisible";
 
          }
          else
          {
 
-            INFORMATION("NOT prequest->m_bMakeVisible");
+            information() << "NOT prequest->m_bMakeVisible";
 
          }
 
