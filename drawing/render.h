@@ -25,7 +25,10 @@
 
 
 #include "acme/primitive/collection/string_map.h"
-#include "acme/primitive/geometry2d/_geometry2d.h"
+#include "acme/primitive/geometry2d/angle.h"
+#include "acme/primitive/geometry2d/rectangle.h"
+//#include "acme/primitive/geometry2d/_geometry2d.h"
+//#include "acme/primitive/geometry2d/size.h"
 #include "apex/platform/app_consumer.h"
 
 
@@ -40,7 +43,7 @@ namespace app_simple_drawing
 
 
       rectangle_i32                       m_rectangle;
-      impact *                    m_pimpact;
+      impact *                            m_pimpact;
       string                              m_strFont1;
       string                              m_strHoverFont;
       int                                 m_iDrawing;

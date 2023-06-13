@@ -131,7 +131,7 @@ namespace app_simple_application
 
       ::color::color color_dk(dk_red());
 
-      color_dk.alpha = 127;
+      color_dk.set_opacity(127);
 
 #ifdef DEBUG_WORK
 

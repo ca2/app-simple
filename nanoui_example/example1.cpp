@@ -2,6 +2,7 @@
 #include "example1.h"
 #include "main_window.h"
 #include "acme/constant/_font_awesome.h"
+#include "acme/graphics/draw2d/_text_stream.h"
 #include "acme/platform/node.h"
 #include "nanoui/CheckBox.h"
 #include "nanoui/Layout.h"
@@ -53,7 +54,7 @@ namespace app_simple_nanoui_example
 
       ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", e_font_awesome_rocket);
-      b->set_background_color(::color::color(0, 0, 255, 25));
+      b->set_background_color(::rgba(0, 0, 255, 25));
       b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
@@ -458,15 +459,11 @@ namespace app_simple_nanoui_example
                cobo->set_fixed_size({ 100, 20 });
       
                memory_new Label(window, "Color picker :", "sans-bold");
-               auto cp = memory_new ColorPicker(window, { 255, 120, 0, 255 });
+               auto cp = memory_new ColorPicker(window, argb(255, 120, 0, 255));
                cp->set_fixed_size({ 100, 20 });
                cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;
-                  str << "ColorPicker final callback: ["
-                     << c.red  << ", "
-                     << c.green << ", "
-                     << c.blue << ", "
-                     << c.alpha << "]";
+                  str << "ColorPicker final callback: [" << c << "]";
                   message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
                   });
                // setup a fast callback for the color picker widget on a memory_new window
@@ -496,13 +493,13 @@ namespace app_simple_nanoui_example
                cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const ::color::color & c) {
                   b->set_background_color(c);
                   b->set_text_color(c.contrasting_color());
-                  int red = (int)(c.red);
+                  int red = (int) c.u8_red();
                   red_int_box->set_value(red, e_source_user);
-                  int green = (int)(c.green);
+                  int green = (int)c.u8_green();
                   green_int_box->set_value(green, e_source_user);
-                  int blue = (int)(c.blue);
+                  int blue = (int)c.u8_blue();
                   blue_int_box->set_value(blue, e_source_user);
-                  int alpha = (int)(c.alpha);
+                  int alpha = (int)c.u8_opacity();
                   alpha_int_box->set_value(alpha, e_source_user);
                   });
       
@@ -573,7 +570,7 @@ namespace app_simple_nanoui_example
 
       ::nano2d::guard guard(pcontext);
 
-      pcontext->fill_color({1.0f, 1.0f, 1.0f, 0.5f});
+      pcontext->fill_color(rgba(1.0f, 1.0f, 1.0f, 0.5f));
 
       auto angle = fmod(::floating_second(), 2.0 * math_greek_pi_unicode);
 
