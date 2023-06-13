@@ -219,9 +219,9 @@ namespace simple_os_drag_and_drop
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::array < angle > angleaStart;
+      ::array < angle_f32 > angleaStart;
 
-      ::array < angle > angleaAngle;
+      ::array < angle_f32 > angleaAngle;
 
       angleaStart.add(0.0_degree);
       angleaAngle.add(100.0_degree);
@@ -321,7 +321,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, angle angleStart, angle angleAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, angle_f32 angleStart, angle_f32 angleAngle, bool bPath)
    {
 
 

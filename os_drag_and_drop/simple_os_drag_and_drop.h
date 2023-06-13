@@ -2,7 +2,9 @@
 
 
 #include "acme/primitive/collection/string_map.h"
-#include "acme/primitive/geometry2d/_geometry2d.h"
+#include "acme/primitive/geometry2d/angle.h"
+#include "acme/primitive/geometry2d/rectangle.h"
+//#include "acme/primitive/geometry2d/_geometry2d.h"
 
 
 namespace simple_os_drag_and_drop
@@ -39,7 +41,7 @@ namespace simple_os_drag_and_drop
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, angle angleStart, angle angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, ::angle_f32 angleStart, ::angle_f32 angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
