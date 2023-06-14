@@ -66,7 +66,7 @@ namespace app_simple_nanoui_example
          {
             string_stream str;
             str << "Toggle button state: " << state;
-            message_box_asynchronous(nullptr, screen()->m_puserinteraction, (::string &) str);
+            message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
             
          
          });
