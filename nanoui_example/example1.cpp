@@ -572,7 +572,7 @@ namespace app_simple_nanoui_example
 
       pcontext->fill_color(rgba(1.0f, 1.0f, 1.0f, 0.5f));
 
-      auto angle = fmod(::floating_second(), 2.0 * math_greek_pi_unicode);
+      auto angle = fmod(::floating_second(), 2.0 * π);
 
       pcontext->translate((float)centerX, (float)centerY);
       pcontext->rotate((float) angle);
