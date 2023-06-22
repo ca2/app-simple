@@ -167,7 +167,7 @@ namespace app_simple_box
 
       ::color::color color_dk(dk_red());
 
-      color_dk.alpha = 127;
+      color_dk.set_opacity(0.5);
 
 #ifdef DEBUG_WORK
 
