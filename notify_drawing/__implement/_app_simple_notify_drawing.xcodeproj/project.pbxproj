@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A22749F27CF41310042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749E27CF41310042BAC2 /* application.cpp */; };
 		9A273CA629CF17E300CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CA229CF17E300CBEB97 /* InfoPlist.strings */; };
+		9A71B8542A469ED900F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B8532A469ED900F9FC3D /* libunac.dylib */; };
+		9A71B8552A469ED900F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B8532A469ED900F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79BDD5266455CC009E6C44 /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC5266455CB009E6C44 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79BDD7266455CC009E6C44 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC6266455CB009E6C44 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A79BDDD266455CC009E6C44 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A79BDC9266455CB009E6C44 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -252,6 +254,7 @@
 				9AFFC84C267885D400C4104F /* libidn.dylib in Embed Libraries */,
 				9AFFC857267885F900C4104F /* libwindowing_macos.dylib in Embed Libraries */,
 				9A79BDED266455CD009E6C44 /* libwrite_text_quartz2d.dylib in Embed Libraries */,
+				9A71B8552A469ED900F9FC3D /* libunac.dylib in Embed Libraries */,
 				9AFFC833267885D300C4104F /* libapex_apple.dylib in Embed Libraries */,
 				9A8C835F27845A11000C8587 /* libapp_simple_drawing.dylib in Embed Libraries */,
 				9A79BDD7266455CC009E6C44 /* libbase.dylib in Embed Libraries */,
@@ -287,6 +290,7 @@
 		9A22749E27CF41310042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		9A273CA329CF17E300CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A353DE82662283F0060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
+		9A71B8532A469ED900F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79BDA22664548F009E6C44 /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9A79BDC5266455CB009E6C44 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79BDC6266455CB009E6C44 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +338,7 @@
 				9AB15C3429A87B3600DFDF90 /* libacme_darwin.dylib in Frameworks */,
 				9A990435275332A500B13F01 /* libfolder_zip.dylib in Frameworks */,
 				9AFFC828267885D200C4104F /* libacme.dylib in Frameworks */,
+				9A71B8542A469ED900F9FC3D /* libunac.dylib in Frameworks */,
 				9AFFC830267885D300C4104F /* libapex.dylib in Frameworks */,
 				9A8C836027845A1D000C8587 /* libapp_simple_notify_drawing.dylib in Frameworks */,
 				9A8C835E27845A10000C8587 /* libapp_simple_drawing.dylib in Frameworks */,
@@ -479,6 +484,7 @@
 		9ADF1D6122C16E7F00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B8532A469ED900F9FC3D /* libunac.dylib */,
 				9AB15C3129A87B3600DFDF90 /* libacme_darwin.dylib */,
 				9AB15C3229A87B3600DFDF90 /* libapex_darwin.dylib */,
 				9AB15C3329A87B3600DFDF90 /* libaura_darwin.dylib */,

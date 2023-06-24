@@ -12,6 +12,8 @@
 		9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE12EC52661EA22009F476A /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A273C8329CF176100CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C7F29CF176000CBEB97 /* InfoPlist.strings */; };
 		9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A4E96A12785379F00B74C76 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A71B8262A469E1000F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B8252A469E1000F9FC3D /* libunac.dylib */; };
+		9A71B8272A469E1000F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B8252A469E1000F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E13326611D5A00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E1A026611D5E00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C816D2783F879000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816C2783F879000C8587 /* _matter.zip */; };
@@ -253,6 +255,7 @@
 			dstSubfolderSpec = 6;
 			files = (
 				9AC01E3E2748D129006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */,
+				9A71B8272A469E1000F9FC3D /* libunac.dylib in Embed Libraries */,
 				9AB3DE85278386270025099F /* libcrypto.3.dylib in Embed Libraries */,
 				9AFFC73426786C6B00C4104F /* libacme.dylib in Embed Libraries */,
 				9AF8CEE0271B9D9600BF80B7 /* libnode_macos.dylib in Embed Libraries */,
@@ -301,6 +304,7 @@
 		9A273C8029CF176000CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
+		9A71B8252A469E1000F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A8F4D682A26D53B00097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 			files = (
 				9AB15C0329A87A8A00DFDF90 /* libaura_darwin.dylib in Frameworks */,
 				9AC01E302748D060006BEBCC /* libbase.dylib in Frameworks */,
+				9A71B8262A469E1000F9FC3D /* libunac.dylib in Frameworks */,
 				9AC01E2F2748D057006BEBCC /* libaxis.dylib in Frameworks */,
 				9AC01E2E2748D046006BEBCC /* libaura.dylib in Frameworks */,
 				9AC01E2D2748D03C006BEBCC /* libaqua.dylib in Frameworks */,
@@ -483,6 +488,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B8252A469E1000F9FC3D /* libunac.dylib */,
 				9AB15BEC29A87A4100DFDF90 /* libacme_darwin.dylib */,
 				9AB15BED29A87A4100DFDF90 /* libapex_darwin.dylib */,
 				9AB15BEE29A87A4100DFDF90 /* libaura_darwin.dylib */,

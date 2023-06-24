@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9A22749727CF40EB0042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749627CF40EB0042BAC2 /* application.cpp */; };
 		9A273C9129CF179B00CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273C8D29CF179B00CBEB97 /* InfoPlist.strings */; };
+		9A71B83C2A469E7800F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B83B2A469E7800F9FC3D /* libunac.dylib */; };
+		9A71B83D2A469E7800F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B83B2A469E7800F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C50D52783DA80000C8587 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C50D72783DA83000C8587 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C50D22783DA28000C8587 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9902AC275328F100B13F01 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A9902A6275328F100B13F01 /* _matter.zip */; };
@@ -271,6 +273,7 @@
 				9AFFC7EC2678757600C4104F /* libaura_posix.dylib in Embed Libraries */,
 				9AFFC805267875AB00C4104F /* libimaging_coreimage.dylib in Embed Libraries */,
 				9A8C50D52783DA80000C8587 /* libcrypto.3.dylib in Embed Libraries */,
+				9A71B83D2A469E7800F9FC3D /* libunac.dylib in Embed Libraries */,
 				9AFFC7D42678757600C4104F /* libacme_apple.dylib in Embed Libraries */,
 				9AFFC7E42678757600C4104F /* libaqua.dylib in Embed Libraries */,
 				9A9902B727532A0700B13F01 /* libfolder_zip.dylib in Embed Libraries */,
@@ -311,6 +314,7 @@
 		9A353DDC266228100060257B /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
 		9A353E5426622AB90060257B /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
 		9A353E8B26624E960060257B /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
+		9A71B83B2A469E7800F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C50D22783DA28000C8587 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9A8C50D32783DA47000C8587 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		9A8F4D3C2A26D4CE00097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB15C1429A87AD000DFDF90 /* libapex_darwin.dylib in Frameworks */,
+				9A71B83C2A469E7800F9FC3D /* libunac.dylib in Frameworks */,
 				9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */,
 				9AB15C1629A87AD100DFDF90 /* libaura_darwin.dylib in Frameworks */,
 				9A9902B627532A0700B13F01 /* libfolder_zip.dylib in Frameworks */,
@@ -507,6 +512,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A71B83B2A469E7800F9FC3D /* libunac.dylib */,
 				9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */,
 				9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */,
 				9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */,
