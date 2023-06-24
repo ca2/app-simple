@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A22749027CF40D00042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748F27CF40D00042BAC2 /* application.cpp */; };
 		9A273FEE29CF284300CBEB97 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A273FED29CF284200CBEB97 /* _matter.zip */; };
-		9A43889A299E6B6600D2EE15 /* libapp_simple_box.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A438892299E65B500D2EE15 /* libapp_simple_box.dylib */; };
-		9A43889C299E6D5100D2EE15 /* libssl.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43889B299E6D5100D2EE15 /* libssl.3.dylib */; };
-		9A43889E299E6D5A00D2EE15 /* libcrypto.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43889D299E6D5A00D2EE15 /* libcrypto.3.dylib */; };
 		9A71B82E2A469E4500F9FC3D /* libunac.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A71B82D2A469E4500F9FC3D /* libunac.dylib */; };
 		9A71B82F2A469E4500F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B82D2A469E4500F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A83B5892807FBA200A1A2B6 /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC76026786DCC00C4104F /* libaqua.dylib */; };
@@ -26,11 +23,8 @@
 		9A83DE2329CE163100C455B8 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A43889B299E6D5100D2EE15 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A83DE2429CE163400C455B8 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A43889D299E6D5A00D2EE15 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A83DE2529CE163700C455B8 /* libapp_simple_box.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A438892299E65B500D2EE15 /* libapp_simple_box.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A83DE2929CE166800C455B8 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83DE2629CE166800C455B8 /* libacme_darwin.dylib */; };
 		9A83DE2A29CE166800C455B8 /* libacme_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A83DE2629CE166800C455B8 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A83DE2B29CE166900C455B8 /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83DE2729CE166800C455B8 /* libapex_darwin.dylib */; };
 		9A83DE2C29CE166900C455B8 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A83DE2729CE166800C455B8 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A83DE2D29CE166900C455B8 /* libaura_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83DE2829CE166800C455B8 /* libaura_darwin.dylib */; };
 		9A83DE2E29CE166900C455B8 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A83DE2829CE166800C455B8 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8F4D602A26D50200097EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4D4F2A26D50200097EE1 /* InfoPlist.strings */; };
 		9A8F4D612A26D50200097EE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4D512A26D50200097EE1 /* Images.xcassets */; };
@@ -271,20 +265,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A43889E299E6D5A00D2EE15 /* libcrypto.3.dylib in Frameworks */,
-				9A43889C299E6D5100D2EE15 /* libssl.3.dylib in Frameworks */,
-				9A83DE2D29CE166900C455B8 /* libaura_darwin.dylib in Frameworks */,
-				9A43889A299E6B6600D2EE15 /* libapp_simple_box.dylib in Frameworks */,
 				9A83B5AD2807FCEE00A1A2B6 /* libidn.dylib in Frameworks */,
 				9A83B58C2807FBBB00A1A2B6 /* libbase.dylib in Frameworks */,
 				9A83B58B2807FBB300A1A2B6 /* libaxis.dylib in Frameworks */,
 				9A83B58A2807FBAA00A1A2B6 /* libaura.dylib in Frameworks */,
-				9A83DE2929CE166800C455B8 /* libacme_darwin.dylib in Frameworks */,
 				9A83B5892807FBA200A1A2B6 /* libaqua.dylib in Frameworks */,
 				9AFFC76B26786DCC00C4104F /* libapex.dylib in Frameworks */,
 				9A71B82E2A469E4500F9FC3D /* libunac.dylib in Frameworks */,
 				9AFFC76326786DCC00C4104F /* libacme.dylib in Frameworks */,
-				9A83DE2B29CE166900C455B8 /* libapex_darwin.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
