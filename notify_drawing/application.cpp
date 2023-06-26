@@ -92,7 +92,7 @@ namespace app_simple_notify_drawing
          auto pthread = fork([this]()
             {
 
-               output_debug_string("test");
+               infomration("test");
 
             });
 
@@ -103,13 +103,13 @@ namespace app_simple_notify_drawing
 
 #ifdef _DEBUG
 
-      output_debug_string("_DEBUG build? (basis)");
+      infomration("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      output_debug_string("RELEASE build? (stage)");
+      infomration("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -133,7 +133,7 @@ namespace app_simple_notify_drawing
 
       }
 
-      output_debug_string("\nfinished notify_drawing::on_request");
+      infomration("\nfinished notify_drawing::on_request");
 
    }
 

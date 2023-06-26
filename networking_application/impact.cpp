@@ -202,9 +202,7 @@ namespace app_simple_networking_application
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::rectangle_i32 rectangleClient;
-
-      client_rectangle(rectangleClient);
+      auto rectangleClient = client_rectangle();
 
       pgraphics->fill_rectangle(rectangleClient, color::white);
 

@@ -143,9 +143,7 @@ namespace app_simple_box
 
       //return;
 
-      ::rectangle_i32 rectangleClient;
-
-      client_rectangle(rectangleClient);
+      auto rectangleClient = client_rectangle();
 
       if (rectangleClient.is_empty())
       {

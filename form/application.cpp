@@ -129,13 +129,13 @@ namespace app_simple_form
 
 #ifdef _DEBUG
 
-      output_debug_string("_DEBUG build? (basis)");
+      infomration("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      output_debug_string("RELEASE build? (stage)");
+      infomration("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -166,7 +166,7 @@ namespace app_simple_form
 
       }
 
-      output_debug_string("\nfinished simple_form::on_request");
+      infomration("\nfinished simple_form::on_request");
 
    }
 
