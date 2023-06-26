@@ -142,9 +142,7 @@ namespace app_simple_change_grub_default_entry
 
       double y = 10.;
 
-      ::rectangle_i32 rectangleClient;
-
-      client_rectangle(rectangleClient);
+      auto rectangleClient = client_rectangle();
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 

@@ -143,7 +143,7 @@ namespace app_simple_application
 
       }
 
-      output_debug_string("\nfinished simple_application::on_request");
+      information("finished simple_application::on_request");
 
    }
 
