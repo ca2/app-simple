@@ -108,13 +108,13 @@ namespace app_simple_shader
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -149,7 +149,7 @@ namespace app_simple_shader
 
       }
 
-      infomration("\nfinished simple_shader::on_request");
+      information("\nfinished simple_shader::on_request");
 
    }
 

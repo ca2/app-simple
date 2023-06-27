@@ -252,7 +252,7 @@ namespace app_simple_form
                if (strText == "This is a test. This is a test")
                {
 
-                  infomration("");
+                  information("");
 
                }
 

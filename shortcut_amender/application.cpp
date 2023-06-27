@@ -143,13 +143,13 @@ namespace app_simple_shortcut_amender
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -178,7 +178,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      infomration("\nfinished simple_shortcut::on_request");
+      information("\nfinished simple_shortcut::on_request");
 
    }
 

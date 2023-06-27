@@ -89,7 +89,7 @@ namespace app_simple_drawing
       if (!bCheckOk)
       {
 
-         infomration("ERROR: simple_check_box is not ok");
+         information("ERROR: simple_check_box is not ok");
 
       }
 
@@ -146,13 +146,13 @@ namespace app_simple_drawing
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -189,7 +189,7 @@ namespace app_simple_drawing
 
       }
 
-      infomration("\nfinished simple_drawing::on_request");
+      information("\nfinished simple_drawing::on_request");
 
    }
 
