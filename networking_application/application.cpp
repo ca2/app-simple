@@ -135,13 +135,13 @@ namespace app_simple_networking_application
 
 #ifdef _DEBUG
 
-      infomration("_DEBUG build? (basis)");
+      information("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      infomration("RELEASE build? (stage)");
+      information("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -176,7 +176,7 @@ namespace app_simple_networking_application
 
       }
 
-      infomration("\nfinished simple_webserver::on_request");
+      information("\nfinished simple_webserver::on_request");
 
    }
 
