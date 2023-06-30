@@ -78,13 +78,6 @@ namespace app_simple_application
 
       }
       
-      auto psystem = acmesystem()->m_paurasystem;
-      
-      auto pnode = psystem->draw2d();
-      
-      auto pwritetext = pnode->write_text();
-
-      m_pfontThomasBS_ = pwritetext->point_font("Fira Code", 24);
 
    }
 
@@ -123,13 +116,36 @@ namespace app_simple_application
 
       }
 
+      if (pgraphics->payload("set_transparent") == "set_transparent")
+      {
+
+         information() << "set_transparent called";
+
+      }
+      else
+      {
+
+         information() << "set_transparent NOT called!!";
+
+      }
+
+      ::rectangle_f64 rectangleClipBox;
+
+      pgraphics->reset_clip();
+
+      pgraphics->get_clip_box(rectangleClipBox);
+
+      auto matrix = pgraphics->m_matrix;
+
+      auto origin = pgraphics->origin();
+
+      auto opacity = ::opacity(48);
+
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleClient, argb(128, 128, 128, 128));
+      pgraphics->fill_rectangle(rectangleClient, argb(108, 128, 128, 128));
 
       ::color::color color_dk(dk_red());
-
-      color_dk.set_opacity(127);
 
 #ifdef DEBUG_WORK
 
@@ -140,6 +156,16 @@ namespace app_simple_application
 #endif
 
       pgraphics->set_text_color(color_dk);
+
+      auto psystem = acmesystem()->m_paurasystem;
+
+      auto pnode = psystem->draw2d();
+
+      auto pwritetext = pnode->write_text();
+
+      auto fontsize = ::write_text::font_size(48.0 * rectangleClient.height() / 1'080, e_unit_pixel);
+
+      m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
 
       pgraphics->set(m_pfontThomasBS_);
 
@@ -182,7 +208,11 @@ namespace app_simple_application
          point.y() = random(0, (int)(rectangleClient.height() - size.cy() * 2));
 
       }
-      
+
+      ::color::color color;
+
+      opacity = ::opacity(96);
+
       for(auto & strItem : stra)
       {
          
@@ -198,20 +228,24 @@ namespace app_simple_application
             continue;
          
          }
-         
+
          if(bWhite)
          {
             
-            pgraphics->set_text_color(color::white);
+            color = color::white;
             
          }
          else
          {
             
-            pgraphics->set_text_color(color_dk);
+            color = color_dk;
             
          }
-         
+
+         color &= opacity;
+
+         pgraphics->set_text_color(color);
+
          pgraphics->text_out(point.x() + x, point.y() + y, strItem);
          
          auto s = pgraphics->get_text_extent(strItem);
@@ -221,8 +255,12 @@ namespace app_simple_application
          bWhite = !bWhite;
          
       }
+
+      color = color_dk;
       
-      pgraphics->set_text_color(color_dk);
+      color &= opacity;
+
+      pgraphics->set_text_color(color);
 
       pgraphics->text_out(point.x(), point.y() + y + size.cy(), strText);
 
