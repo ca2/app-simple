@@ -280,7 +280,7 @@ namespace app_simple_drawing
       if(bDrawText)
       {
 
-         pfont1->create_pixel_font(strFontFamily, 100.0, 800);
+         pfont1->create_font(strFontFamily, 100_px, e_font_weight_bold);
 
          pgraphics->set(pfont1);
 
@@ -305,17 +305,19 @@ namespace app_simple_drawing
             if (m_iDrawing == 1)
             {
 
-               float fSize = (float) (iHeight * 80.0 / dMaxDimension);
+               auto fontsize = ::write_text::font_size(iHeight * 80.0 / dMaxDimension, ::e_unit_pixel);
 
-               pfont2->create_pixel_font(strFontFamily, fSize, 800);
+
+               pfont2->create_font(strFontFamily, fontsize, e_font_weight_bold);
 
             }
             else
             {
 
-               float fSize = (float) (iHeight * 160.0 / dMaxDimension);
+               auto fontsize = ::write_text::font_size(iHeight * 160.0 / dMaxDimension, ::e_unit_pixel);
 
-               pfont2->create_pixel_font(strFontFamily, fSize, 800);
+
+               pfont2->create_font(strFontFamily, fontsize, e_font_weight_bold);
 
             }
 

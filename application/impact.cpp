@@ -137,7 +137,7 @@ namespace app_simple_application
 
       auto matrix = pgraphics->m_matrix;
 
-      auto origin = pgraphics->origin();
+      //auto origin = pgraphics->origin();
 
       auto opacity = ::opacity(48);
 
