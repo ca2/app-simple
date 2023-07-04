@@ -541,7 +541,7 @@ namespace app_simple_change_grub_default_entry
 
       auto c = abs(iNewLen - iOldLen);
 
-      memmove(ptarget, psource, iSize - iStart - iNewLen);
+      memory_transfer(ptarget, psource, iSize - iStart - iNewLen);
 
    }
 
