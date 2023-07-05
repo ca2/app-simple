@@ -48,7 +48,7 @@ if (MSVC)
    target_link_options(app_simple_shortcut PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(app_simple_shortcut PRIVATE acme apex aqua aura axis base)
    add_dependencies(app_simple_shortcut draw2d_gdiplus imaging_wic)
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
    target_compile_options(app_simple_shortcut PRIVATE -fpermissive)
    #target_link_options(app_simple_shortcut PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_simple_shortcut PRIVATE acme apex aqua aura axis base)
@@ -83,7 +83,7 @@ list(APPEND executable_references
    base
    app_simple_shortcut)
 
-if(LINUX OR FREEBSD)
+if(${LINUX} OR ${FREEBSD})
 #
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -113,7 +113,7 @@ if (MSVC)
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})

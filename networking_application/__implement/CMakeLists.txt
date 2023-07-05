@@ -18,7 +18,7 @@ list(APPEND executable_references
    app_simple_networking_application)
 
 
-if(LINUX OR FREEBSD)
+if(${LINUX} OR ${FREEBSD})
 #
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -52,7 +52,7 @@ if (MSVC)
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
