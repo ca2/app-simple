@@ -87,7 +87,7 @@ namespace app_simple_networking_application
 #endif
 
 
-   //void document::write(::binary_stream < FILE > & stream) const
+   //void document::write(::binary_stream & stream) const
    //{
 
    //}
