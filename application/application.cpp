@@ -18,35 +18,6 @@ namespace app_simple_application
    application::application()
    {
 
-      //message_box_synchronous("Message", "Title", e_message_box_yes_no_cancel);
-
-      //m_bLocalization = true;
-
-      string str = "001";
-
-      string str001 = "001";
-
-      if (str < str001)
-      {
-
-         printf("<001");
-
-      }
-      else if (str != str001)
-      {
-
-         printf("!=001");
-
-      }
-      else if (str == str001)
-      {
-
-         printf("==001");
-
-      }
-
-
-      
       m_bImaging = false;
 
       m_bNetworking = false;
@@ -73,20 +44,11 @@ namespace app_simple_application
    void application::init_instance()
    {
 
-      //set_local_data();
-
       factory()->add_factory_item <::app_simple_application::document >();
       factory()->add_factory_item <::app_simple_application::main_frame >();
       factory()->add_factory_item <::app_simple_application::impact >();
 
       ::base::application::init_instance();
-
-      //if (!::base::application::init_instance())
-      //{
-
-      //   return false;
-
-      //}
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
