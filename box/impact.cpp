@@ -107,7 +107,7 @@ namespace app_simple_box
       
       auto pwritetext = pnode->write_text();
 
-      m_pfontThomasBS_ = pwritetext->point_font("Fira Code", 24);
+      m_pfontThomasBS_ = pwritetext->font("Fira Code", 24_pt);
 
       show_message_box();
 
