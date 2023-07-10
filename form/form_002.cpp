@@ -136,12 +136,12 @@ namespace app_simple_form
    }
 
 
-   void form_002::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_002::on_perform_top_down_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      //::user::form_impact::on_layout(pgraphics);
 
-      auto rectClient = client_rectangle();
+      auto rectClient = client_rectangle(::user::e_layout_lading);
       
       double iLeft = minimum(100.0, rectClient.width() * 0.05);
 
