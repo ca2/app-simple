@@ -3,6 +3,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
+#include "acme/primitive/geometry2d/_text_stream.h"
 #include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"
 #include "aura/user/user/button.h"
@@ -135,15 +136,23 @@ namespace app_simple_form
 
       m_pbuttonSend->set_window_text("Send");
 
+      //set_need_layout();
+
+      //set_need_redraw();
+
+      //post_redraw();
+
    }
 
 
-   void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_001::on_perform_top_down_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      //::user::form_impact::on_perform_top_down_layout(pgraphics);
 
-      auto rectClient = client_rectangle();
+      auto rectClient = client_rectangle(::user::e_layout_lading);
+
+      information() << "form_001 " << rectClient;
       
       double iLeft = minimum(100.0, rectClient.width() * 0.05);
 

@@ -41,7 +41,7 @@ namespace app_simple_form
       DECLARE_MESSAGE_HANDLER(_001OnSendButton);
       DECLARE_MESSAGE_HANDLER(_001OnClearButton);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void on_perform_top_down_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       void handle(::topic * ptopic, ::context * pcontext) override;
 
