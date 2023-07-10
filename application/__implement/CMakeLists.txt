@@ -60,6 +60,7 @@ elseif(${LINUX} OR ${FREEBSD})
 endif ()
 
 
+add_dependencies(${PROJECT_NAME} ${default_node})
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
 add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
