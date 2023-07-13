@@ -552,7 +552,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pemptypadding = pdata + memoryGrubEnv.size() - c;
 
-      memset(pemptypadding, '#', c);
+      memory_set(pemptypadding, '#', c);
 
    }
 
@@ -565,7 +565,7 @@ namespace app_simple_change_grub_default_entry
 
       auto c = blockValue.size();
 
-      memcpy(ptarget, psource, c);
+      memory_copy(ptarget, psource, c);
 
    }
 
