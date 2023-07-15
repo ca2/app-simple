@@ -60,7 +60,7 @@ namespace app_simple_application
 
       auto psession = get_session();
 
-      auto puser = psession->user();
+      auto puser = psession->baseuser();
 
       puser->document_manager()->add_document_template(pdoctemplate);
 
