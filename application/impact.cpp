@@ -131,9 +131,9 @@ namespace app_simple_application
 
       ::rectangle_f64 rectangleClipBox;
 
-      pgraphics->reset_clip();
+      //pgraphics->reset_clip();
 
-      pgraphics->get_clip_box(rectangleClipBox);
+      //pgraphics->get_clip_box(rectangleClipBox);
 
       auto matrix = pgraphics->m_matrix;
 
