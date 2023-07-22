@@ -116,18 +116,18 @@ namespace app_simple_application
 
       }
 
-      if (pgraphics->payload("set_transparent") == "set_transparent")
-      {
-
-         information() << "set_transparent called";
-
-      }
-      else
-      {
-
-         information() << "set_transparent NOT called!!";
-
-      }
+//      if (pgraphics->payload("set_transparent") == "set_transparent")
+//      {
+//
+//         information() << "set_transparent called";
+//
+//      }
+//      else
+//      {
+//
+//         information() << "set_transparent NOT called!!";
+//
+//      }
 
       ::rectangle_f64 rectangleClipBox;
 
