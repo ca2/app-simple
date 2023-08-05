@@ -28,6 +28,7 @@
 		9A83DE2E29CE166900C455B8 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A83DE2829CE166800C455B8 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8F4D602A26D50200097EE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4D4F2A26D50200097EE1 /* InfoPlist.strings */; };
 		9A8F4D612A26D50200097EE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F4D512A26D50200097EE1 /* Images.xcassets */; };
+		9AB4B1252A71578A00C28DAD /* libapp_simple_box.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A438892299E65B500D2EE15 /* libapp_simple_box.dylib */; };
 		9AFFC76326786DCC00C4104F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75826786DCC00C4104F /* libacme.dylib */; };
 		9AFFC76426786DCC00C4104F /* libacme.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC75826786DCC00C4104F /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC76626786DCC00C4104F /* libacme_apple.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC75926786DCC00C4104F /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -265,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB4B1252A71578A00C28DAD /* libapp_simple_box.dylib in Frameworks */,
 				9A83B5AD2807FCEE00A1A2B6 /* libidn.dylib in Frameworks */,
 				9A83B58C2807FBBB00A1A2B6 /* libbase.dylib in Frameworks */,
 				9A83B58B2807FBB300A1A2B6 /* libaxis.dylib in Frameworks */,
