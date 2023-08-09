@@ -4,10 +4,11 @@
 #include "acme/constant/id.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/acme_path.h"
+#include "acme/filesystem/filesystem/link.h"
 #include "acme/filesystem/filesystem/listing.h"
 #include "apex/database/_binary_stream.h"
 #include "apex/filesystem/filesystem/dir_context.h"
-#include "apex/filesystem/filesystem/link.h"
 #include "apex/platform/os_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
@@ -543,7 +544,7 @@ namespace app_simple_shortcut_amender
       for (auto & path : listing)
       {
 
-         auto plink = m_pcontext->m_papexcontext->os_context()->resolve_link(path);
+         auto plink = acmepath()->resolve_link(path);
 
          ::file::path pathTarget = plink->m_pathTarget;
 
