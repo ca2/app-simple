@@ -24,22 +24,6 @@ namespace app_simple_networking_application
    }
 
 
-//   void main_frame::assert_ok() const
-//   {
-//
-//      simple_frame_window::assert_ok();
-//
-//   }
-//
-//
-//   void main_frame::dump(dump_context & dumpcontext) const
-//   {
-//
-//      simple_frame_window::dump(dumpcontext);
-//
-//   }
-
-
    ::experience::frame * main_frame::frame_experience()
    {
 

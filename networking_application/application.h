@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/platform/application.h"
+#include "core/platform/application.h"
 
 
 namespace app_simple_networking_application
@@ -9,7 +9,7 @@ namespace app_simple_networking_application
 
 
    class CLASS_DECL_APP_SIMPLE_NETWORKING_APPLICATION application :
-      virtual public ::base::application
+      virtual public ::core::application
    {
    public:
 
@@ -36,7 +36,7 @@ namespace app_simple_networking_application
       virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 #endif
 
-      virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
+      //virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
 
       void create_networking_application() override;

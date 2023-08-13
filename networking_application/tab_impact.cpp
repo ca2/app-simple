@@ -1,6 +1,8 @@
 #include "framework.h"
 #include "tab_impact.h"
-#include "impact.h"
+#include "computer_list2.h"
+#include "interface_list2.h"
+#include "main_impact.h"
 #include "application.h"
 #include "acme/constant/message.h"
 #include "base/user/menu/list_impact.h"
@@ -21,22 +23,6 @@ namespace app_simple_networking_application
    {
 
    }
-
-
-//   void tab_impact::assert_ok() const
-//   {
-//
-//      ::user::impact::assert_ok();
-//
-//   }
-//
-//
-//   void tab_impact::dump(dump_context & dumpcontext) const
-//   {
-//
-//      ::user::impact::dump(dumpcontext);
-//
-//   }
 
 
    void tab_impact::install_message_routing(::channel * pchannel)
@@ -62,9 +48,9 @@ namespace app_simple_networking_application
       //papp->m_ptabimpact = this;
 
       set_tab("Menu", MENU_IMPACT);
-      set_tab("001", "drawing1");
+      set_tab("Network Interfaces and Computers", MAIN_IMPACT);
 
-      set_current_tab_by_id("drawing1");
+      set_current_tab_by_id(MAIN_IMPACT);
 
    }
 
@@ -112,38 +98,6 @@ namespace app_simple_networking_application
 
       }
 
-      string strImpactId = get_impact_id();
-
-      if(string_begins(strImpactId, "drawing"))
-      {
-
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
-
-         if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
-         {
-
-            ptabpaneFileManager->m_pplaceholder->hide();
-
-         }
-
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
-
-         if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
-         {
-
-            ptabpaneFontSel->m_pplaceholder->hide();
-
-         }
-
-         m_pviewTopic = m_pimpactdata->m_pplaceholder->get_hold();
-
-      }
-      //else if (get_impact_id() == MENU_IMPACT)
-      //{
-
-      //   m_pdocMenu->open_document("matter://menu.html");
-
-      //}
 
    }
 
@@ -171,20 +125,16 @@ namespace app_simple_networking_application
 
       }
       break;
-      }
-
-      string strId = pimpactdata->m_atom;
-
-      if(strId.case_insensitive_begins_eat("drawing"))
+      case MAIN_IMPACT:
       {
 
-         auto pimpact = papp->create_simple_drawing_impact(this, pimpactdata);
-
-         pimpact->m_atom = pimpactdata->m_atom;
-
-         pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
+         ::user::impact::create_impact < main_impact >(pimpactdata);
 
       }
+      break;
+      }
+
+
 
       ::user::tab_impact::on_create_impact(pimpactdata);
 

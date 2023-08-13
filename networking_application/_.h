@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/_.h"
+#include "core/_.h"
 
 
 #if defined(_app_simple_networking_application_project)
@@ -18,8 +18,12 @@ namespace app_simple_networking_application
    class application;
    class tab_impact;
    class document;
-   class impact;
-   //class socket_thread;
+   //class impact;
+   
+   
+   class main_impact;
+   class interface_list2;
+   class computer_list2;
 
 
 } // namespace app_simple_networking_application

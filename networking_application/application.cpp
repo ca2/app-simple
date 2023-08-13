@@ -3,7 +3,9 @@
 #include "document.h"
 #include "frame.h"
 #include "main_frame.h"
-#include "impact.h"
+#include "main_impact.h"
+#include "interface_list2.h"
+#include "computer_list2.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
 #include "base/user/user/single_document_template.h"
@@ -45,7 +47,7 @@ namespace app_simple_networking_application
 
       //auto estatus = 
       
-      ::base::application::create_networking_application();
+      ::core::application::create_networking_application();
 
       //if (!estatus)
       //{
@@ -83,8 +85,10 @@ namespace app_simple_networking_application
       factory()->add_factory_item <::app_simple_networking_application::document >();
       factory()->add_factory_item <::app_simple_networking_application::frame >();
       factory()->add_factory_item <::app_simple_networking_application::main_frame >();
-      factory()->add_factory_item <::app_simple_networking_application::impact >();
       factory()->add_factory_item <::app_simple_networking_application::tab_impact >();
+      factory()->add_factory_item <::app_simple_networking_application::main_impact >();
+      factory()->add_factory_item <::app_simple_networking_application::computer_list2 >();
+      factory()->add_factory_item <::app_simple_networking_application::interface_list2 >();
 
       default_toggle_check_handling("simple_checkbox");
 
@@ -211,12 +215,12 @@ namespace app_simple_networking_application
 #endif
 
 
-   ::pointer<impact> application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
-   {
+   //::pointer<impact> application::create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data * pimpactdata)
+   //{
 
-      return pimpactParent->create_impact < impact >(pimpactdata);
+   //   return pimpactParent->create_impact < impact >(pimpactdata);
 
-   }
+   //}
 
 
 } // namespace app_simple_networking_application
