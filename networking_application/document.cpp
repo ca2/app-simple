@@ -1,7 +1,11 @@
 #include "framework.h"
 #include "document.h"
-#include "impact.h"
+#include "computer_list2.h"
+#include "interface_list2.h"
 #include "application.h"
+#include "acme/primitive/collection/_generic_array.h"
+#include "apex/platform/system.h"
+#include "apex/networking/networking.h"
 
 
 namespace app_simple_networking_application
@@ -22,27 +26,10 @@ namespace app_simple_networking_application
 
 
 
-
-//   void document::assert_ok() const
-//   {
-//
-//      ::user::document::assert_ok();
-//
-//   }
-//
-//
-//   void document::dump(dump_context & dumpcontext) const
-//   {
-//
-//      ::user::document::dump(dumpcontext);
-//
-//   }
-
-
    bool document::on_new_document()
    {
 
-      return ::user::document::on_new_document();
+      return on_open_document("");
 
    }
 
@@ -50,16 +37,9 @@ namespace app_simple_networking_application
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
-      impact * pimpact = get_typed_impact < impact >();
+      m_pitemaInterface = acmesystem()->m_papexsystem->networking()->list_network_interfaces();
 
-      if(pimpact == NULL)
-      {
-
-         return true;
-
-      }
-
-      string strPath = payloadFile.as_file_path();
+      m_pitemaComputer = acmesystem()->m_papexsystem->networking()->list_computers();
 
       return true;
 
@@ -87,27 +67,37 @@ namespace app_simple_networking_application
 #endif
 
 
-   //void document::write(::binary_stream & stream) const
-   //{
+   void document::network_interface_discovery(::index iItem)
+   {
 
-   //}
+      m_strNetworkInterfaceAddress.empty();
+
+      m_paddressNetworkInterface = m_pitemaInterface->element_at(iItem);
+
+      if (!m_paddressNetworkInterface)
+      {
+
+         return;
+
+      }
+
+      m_strNetworkInterfaceAddress = m_paddressNetworkInterface->get_display_number();
+
+      auto pcomputerlist2 = get_typed_impact < computer_list2 >();
+
+      if (pcomputerlist2)
+      {
+
+         pcomputerlist2->set_need_redraw();
+
+         pcomputerlist2->post_redraw();
+
+      }
+
+   }
 
 
 } // namespace app_simple_networking_application
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
