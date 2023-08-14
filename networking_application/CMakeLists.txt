@@ -9,18 +9,22 @@ list(APPEND library_source
    #_factory.cpp
    application.cpp
    application.h
+   computer_list2.cpp
+   computer_list2.h
    document.cpp
    document.h
    framework.cpp
    framework.h
    frame.cpp
    frame.h
+   interface_list2.cpp
+   interface_list2.h
    main_frame.cpp
    main_frame.h
+   main_impact.cpp
+   main_impact.h
    tab_impact.cpp
    tab_impact.h
-   impact.cpp
-   impact.h
    )
 
 
