@@ -51,6 +51,8 @@ list(APPEND app_simple_networking_application_references
    aura
    axis
    base
+   bred
+   core
    )
 
 if (MSVC)
