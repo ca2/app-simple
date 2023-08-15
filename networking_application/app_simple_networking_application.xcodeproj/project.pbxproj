@@ -14,8 +14,6 @@
 		9A9903E527532C4800B13F01 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9902EA27532C4000B13F01 /* application.h */; };
 		9A9903E627532C4800B13F01 /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9902EC27532C4000B13F01 /* frame.h */; };
 		9A9903F227532C4900B13F01 /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A99035527532C4100B13F01 /* tab_impact.cpp */; };
-		9A9903F327532C4900B13F01 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99035F27532C4200B13F01 /* impact.h */; };
-		9A9903F527532C4900B13F01 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A99036427532C4200B13F01 /* impact.cpp */; };
 		9A9903F727532C4900B13F01 /* targetver.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99036727532C4300B13F01 /* targetver.h */; };
 		9A9903FA27532C4900B13F01 /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99037227532C4300B13F01 /* tab_impact.h */; };
 		9A9903FC27532C4900B13F01 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99037A27532C4400B13F01 /* document.h */; };
@@ -31,6 +29,12 @@
 		9A99041B27532D3E00B13F01 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041A27532D3E00B13F01 /* libaura.dylib */; };
 		9A99041D27532D3E00B13F01 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041C27532D3E00B13F01 /* libaxis.dylib */; };
 		9A99041E27532D3E00B13F01 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041027532CE600B13F01 /* libbase.dylib */; };
+		9AAFBF892A8B343C005D10AB /* interface_list2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFBF872A8B343B005D10AB /* interface_list2.h */; };
+		9AAFBF8A2A8B343C005D10AB /* interface_list2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFBF882A8B343B005D10AB /* interface_list2.cpp */; };
+		9AAFBF8D2A8B3453005D10AB /* computer_list2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */; };
+		9AAFBF8E2A8B3453005D10AB /* computer_list2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFBF8C2A8B3453005D10AB /* computer_list2.h */; };
+		9AAFC2372A8B3486005D10AB /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFC2352A8B3486005D10AB /* main_impact.cpp */; };
+		9AAFC2382A8B3486005D10AB /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFC2362A8B3486005D10AB /* main_impact.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +72,6 @@
 		9A9902EA27532C4000B13F01 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		9A9902EC27532C4000B13F01 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		9A99035527532C4100B13F01 /* tab_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_impact.cpp; sourceTree = "<group>"; };
-		9A99035F27532C4200B13F01 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
-		9A99036427532C4200B13F01 /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
 		9A99036727532C4300B13F01 /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
 		9A99037227532C4300B13F01 /* tab_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_impact.h; sourceTree = "<group>"; };
 		9A99037A27532C4400B13F01 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
@@ -85,6 +87,12 @@
 		9A99041827532D3E00B13F01 /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A99041A27532D3E00B13F01 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A99041C27532D3E00B13F01 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAFBF872A8B343B005D10AB /* interface_list2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interface_list2.h; sourceTree = "<group>"; };
+		9AAFBF882A8B343B005D10AB /* interface_list2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interface_list2.cpp; sourceTree = "<group>"; };
+		9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = computer_list2.cpp; sourceTree = "<group>"; };
+		9AAFBF8C2A8B3453005D10AB /* computer_list2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = computer_list2.h; sourceTree = "<group>"; };
+		9AAFC2352A8B3486005D10AB /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
+		9AAFC2362A8B3486005D10AB /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,16 +139,20 @@
 				9A1CEC31285F939B001ED6E1 /* _factory.cpp */,
 				9A99039027532C4600B13F01 /* application.cpp */,
 				9A9902EA27532C4000B13F01 /* application.h */,
+				9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */,
+				9AAFBF8C2A8B3453005D10AB /* computer_list2.h */,
 				9A99039227532C4600B13F01 /* document.cpp */,
 				9A99037A27532C4400B13F01 /* document.h */,
 				9A9902D027532C3F00B13F01 /* frame.cpp */,
 				9A9902EC27532C4000B13F01 /* frame.h */,
 				9A9902E927532C4000B13F01 /* framework.cpp */,
 				9A99038C27532C4500B13F01 /* framework.h */,
-				9A99036427532C4200B13F01 /* impact.cpp */,
-				9A99035F27532C4200B13F01 /* impact.h */,
+				9AAFBF882A8B343B005D10AB /* interface_list2.cpp */,
+				9AAFBF872A8B343B005D10AB /* interface_list2.h */,
 				9A9902D627532C3F00B13F01 /* main_frame.cpp */,
 				9A9903BF27532C4700B13F01 /* main_frame.h */,
+				9AAFC2352A8B3486005D10AB /* main_impact.cpp */,
+				9AAFC2362A8B3486005D10AB /* main_impact.h */,
 				9A99038027532C4400B13F01 /* resource.h */,
 				9A99035527532C4100B13F01 /* tab_impact.cpp */,
 				9A99037227532C4300B13F01 /* tab_impact.h */,
@@ -178,13 +190,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9903F727532C4900B13F01 /* targetver.h in Headers */,
-				9A9903F327532C4900B13F01 /* impact.h in Headers */,
+				9AAFBF892A8B343C005D10AB /* interface_list2.h in Headers */,
 				9A9903FE27532C4900B13F01 /* framework.h in Headers */,
 				9A9903E627532C4800B13F01 /* frame.h in Headers */,
 				9A9903FA27532C4900B13F01 /* tab_impact.h in Headers */,
+				9AAFBF8E2A8B3453005D10AB /* computer_list2.h in Headers */,
 				9A99040427532C4900B13F01 /* _.h in Headers */,
 				9A9903FD27532C4900B13F01 /* resource.h in Headers */,
 				9A99040127532C4900B13F01 /* main_frame.h in Headers */,
+				9AAFC2382A8B3486005D10AB /* main_impact.h in Headers */,
 				9A9903E527532C4800B13F01 /* application.h in Headers */,
 				9A9903FC27532C4900B13F01 /* document.h in Headers */,
 			);
@@ -271,11 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAFC2372A8B3486005D10AB /* main_impact.cpp in Sources */,
 				9A99040027532C4900B13F01 /* document.cpp in Sources */,
 				9A9903E427532C4800B13F01 /* framework.cpp in Sources */,
-				9A9903F527532C4900B13F01 /* impact.cpp in Sources */,
+				9AAFBF8A2A8B343C005D10AB /* interface_list2.cpp in Sources */,
 				9A9903E127532C4800B13F01 /* main_frame.cpp in Sources */,
 				9A1CEC35285F939B001ED6E1 /* _factory.cpp in Sources */,
+				9AAFBF8D2A8B3453005D10AB /* computer_list2.cpp in Sources */,
 				9A9903F227532C4900B13F01 /* tab_impact.cpp in Sources */,
 				9A9903FF27532C4900B13F01 /* application.cpp in Sources */,
 				9A9903E027532C4800B13F01 /* frame.cpp in Sources */,
@@ -295,7 +311,6 @@
 /* Begin XCBuildConfiguration section */
 		9A1D5D402751A81D003D9B5F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A54A62F2A2D65E10052BAB6 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -390,7 +405,6 @@
 		};
 		9A1D5D412751A81D003D9B5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A54A6302A2D65E10052BAB6 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -529,6 +543,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
@@ -583,6 +601,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "@executable_path";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nsisExamples/Plugin/nsis",
+				);
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
 				SDKROOT = macosx;
