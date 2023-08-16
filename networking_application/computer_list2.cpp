@@ -225,10 +225,10 @@ namespace app_simple_networking_application
          {
 
             ::pointer < ::networking::address > paddress = pitem;
-            //if (pitem->m_eelement == e_element_item)
+            //if (pitem->m_item.m_eelement == e_element_item)
             {
 
-               // auto paddress = m_mapaddress[pitem->m_iItem];
+               // auto paddress = m_mapaddress[pitem->m_item.m_iItem];
 
                if (paddress->is_in_same_net(get_document()->m_paddressNetworkInterface, paddressMask))
                {
@@ -285,7 +285,7 @@ namespace app_simple_networking_application
    bool computer_list2::on_click(::item * pitem)
    {
 
-      if (pitem->m_eelement == e_element_item)
+      if (pitem->m_item.m_eelement == e_element_item)
       {
 
          auto phyperlink = __create_new <::hyperlink >();
@@ -311,13 +311,13 @@ namespace app_simple_networking_application
    //   for (auto & pitem : m_itema)
    //   {
 
-   //      if (pitem->m_eelement == e_element_item)
+   //      if (pitem->m_item.m_eelement == e_element_item)
    //      {
 
-   //         if (pitem->m_iItem == iItem)
+   //         if (pitem->m_item.m_iItem == iItem)
    //         {
 
-   //            m_paddressNetworkInterface = m_mapaddress[pitem->m_iItem];
+   //            m_paddressNetworkInterface = m_mapaddress[pitem->m_item.m_iItem];
 
    //            break;
 
