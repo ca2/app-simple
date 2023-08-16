@@ -216,6 +216,13 @@ namespace app_simple_networking_application
 
       pgraphics->text_out(25, 10, "Network Interfaces");
 
+      if(!m_pitema)
+      {
+         
+         return;
+         
+      }
+      
       int iHeight = 25;
 
       int iMaxX1 = 0;
