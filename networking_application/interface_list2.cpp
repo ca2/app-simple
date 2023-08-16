@@ -282,7 +282,7 @@ namespace app_simple_networking_application
    bool interface_list2::on_click(::item * pitem)
    {
 
-      get_document()->network_interface_discovery(pitem->m_iItem);
+      get_document()->network_interface_discovery(pitem->m_item.m_iItem);
 
       return true;
 
