@@ -1,5 +1,7 @@
 #include "framework.h"
 #include "application.h"
+#include "command_document.h"
+#include "command_list2.h"
 #include "document.h"
 #include "frame.h"
 #include "main_frame.h"
@@ -8,6 +10,7 @@
 #include "computer_list2.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
+#include "base/user/user/multiple_document_template.h"
 #include "base/user/user/single_document_template.h"
 
 
@@ -90,6 +93,9 @@ namespace app_simple_networking_application
       factory()->add_factory_item <::app_simple_networking_application::computer_list2 >();
       factory()->add_factory_item <::app_simple_networking_application::interface_list2 >();
 
+      factory()->add_factory_item <::app_simple_networking_application::command_document >();
+      factory()->add_factory_item <::app_simple_networking_application::command_list2 >();
+
       default_toggle_check_handling("simple_checkbox");
 
       default_toggle_check_handling("no_client_frame");
@@ -112,6 +118,16 @@ namespace app_simple_networking_application
       m_ptemplateSimpleDrawingMain = pdoctemplate;
 
       add_document_template(pdoctemplate);
+
+      auto pdoctemplate2 = __new(::user::multiple_document_template(
+         "command",
+         __type(command_document),
+         __type(main_frame),
+         __type(command_list2)));
+
+      m_ptemplateCommand = pdoctemplate2;
+
+      add_document_template(pdoctemplate2);
 
       default_data_save_handling("simple_checkbox");
 
@@ -177,6 +193,15 @@ namespace app_simple_networking_application
       {
 
          prequest->payload("document").cast < document >()->get_typed_impact < ::user::tab_impact >()->top_level_frame()->design_window_maximize();
+
+      }
+
+
+      if (prequest->has_file())
+      {
+
+         m_ptabimpact->add_tab(prequest->m_payloadFile.as_file_path().name(), prequest->m_payloadFile.as_file_path());
+         m_ptabimpact->set_current_tab_by_id(prequest->m_payloadFile.as_file_path());
 
       }
 
