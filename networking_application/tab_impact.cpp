@@ -7,6 +7,7 @@
 #include "acme/constant/message.h"
 #include "base/user/menu/list_impact.h"
 #include "base/user/user/tab_pane.h"
+#include "base/user/user/multiple_document_template.h"
 
 
 namespace app_simple_networking_application
@@ -45,7 +46,7 @@ namespace app_simple_networking_application
 
       }
 
-      //papp->m_ptabimpact = this;
+      m_papp->m_ptabimpact = this;
 
       set_tab("Menu", MENU_IMPACT);
       set_tab("Network Interfaces and Computers", MAIN_IMPACT);
@@ -115,6 +116,18 @@ namespace app_simple_networking_application
          return;
 
       }
+
+      auto str = pimpactdata->m_atom.as_string();
+
+      if (str.case_insensitive_ends(".simple_networking_application"))
+      {
+
+         m_papp->m_ptemplateCommand->open_document_file(m_papp, str, true,pimpactdata->m_pplaceholder);
+
+         return;
+
+      }
+
 
       switch(pimpactdata->m_atom.as_i64())
       {

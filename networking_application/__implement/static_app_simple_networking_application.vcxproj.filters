@@ -23,10 +23,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="deployment.rc">
+    <ResourceCompile Include="main.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-    <ResourceCompile Include="main.rc">
+    <ResourceCompile Include="..\deployment.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -39,18 +39,21 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="platform\windows\_app_simple_networking_application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="deps.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="_static_factory.inl">
+    <None Include="..\_static_factory_.inl">
       <Filter>Source Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
