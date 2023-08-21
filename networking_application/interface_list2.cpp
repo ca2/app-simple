@@ -193,7 +193,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitema = get_document()->m_pitemaInterface;
+      m_pitemaContent = get_document()->m_pitemaInterface;
 
       return true;
 
@@ -216,7 +216,7 @@ namespace app_simple_networking_application
 
       pgraphics->text_out(25, 10, "Network Interfaces");
 
-      if(!m_pitema)
+      if(!m_pitemaContent)
       {
          
          return;
@@ -235,7 +235,7 @@ namespace app_simple_networking_application
 
          ::rectangle_i32 r;
 
-         for (auto & pitem : *m_pitema)
+         for (auto & pitem : *m_pitemaContent)
          {
 
             ::pointer < ::networking::address > paddress = pitem;
