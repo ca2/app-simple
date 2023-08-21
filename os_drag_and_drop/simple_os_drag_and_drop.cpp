@@ -108,7 +108,7 @@ namespace simple_os_drag_and_drop
 
       auto pnode = psystem->node();
 
-      pfont->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
+      pfont->create_font(e_font_sans_ex, 100.0_px, 800);
 
       pgraphics->set(pfont);
 
@@ -331,7 +331,7 @@ namespace simple_os_drag_and_drop
 
       auto pnode = psystem->node();
 
-      pfont->create_point_font(pnode->font_name(e_font_sans), 14.0, e_font_weight_light);
+      pfont->create_font(e_font_sans, 14.0_px, e_font_weight_light);
 
       pgraphics->set_text_color(argb(255, 0, 0, 0));
 
