@@ -31,7 +31,7 @@ namespace app_simple_shader
 
       m_flagNonClient.erase(e_non_client_focus_rect);
 
-      m_bClickDefaultMouseHandling = true;
+      m_bDefaultClickHandling = true;
 
    }
 
