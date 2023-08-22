@@ -7,6 +7,7 @@
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
 #include "acme/platform/hyperlink.h"
+#include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"
 #include "apex/networking/address.h"
 #include "apex/networking/networking.h"
@@ -174,7 +175,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitema = get_document()->m_pitemaComputer;
+      main_content().m_pitema = get_document()->m_pitemaComputer;
 
       return true;
 

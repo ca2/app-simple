@@ -9,6 +9,7 @@
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
 #include "acme/platform/hyperlink.h"
+#include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"
 #include "apex/networking/address.h"
 #include "apex/networking/networking.h"
@@ -127,7 +128,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitema = get_document()->m_pitemaCommand;
+      main_content().m_pitema = get_document()->m_pitemaCommand;
 
       set_need_layout();
 
@@ -139,10 +140,11 @@ namespace app_simple_networking_application
 
    }
 
+
    void command_list2::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (!m_pitema)
+      if (!main_content().m_pitema)
       {
 
          return;
@@ -182,7 +184,7 @@ namespace app_simple_networking_application
          pcommandCurrent->m_strCommand = "(No Command)";
 
       }
-      else if (iCurrentCommand >= m_pitema->size())
+      else if (iCurrentCommand >= main_content().m_pitema->size())
       {
 
          __construct_new(pcommandCurrent);
@@ -193,7 +195,7 @@ namespace app_simple_networking_application
       else
       {
 
-         pcommandCurrent = m_pitema->element_at(iCurrentCommand);
+         pcommandCurrent = main_content().m_pitema->element_at(iCurrentCommand);
 
          __defer_construct_new(pcommandCurrent);
 
@@ -224,7 +226,7 @@ namespace app_simple_networking_application
          //int iMaxX1 = 0;
 //         auto paddressMask = acmesystem()->m_papexsystem->networking()->create_ip4_address("255.255.255.0");
 
-         for (auto & pitem : *m_pitema)
+         for (auto & pitem : *main_content().m_pitema)
          {
 
             ::pointer < command > pcommand = pitem;
