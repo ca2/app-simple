@@ -7,6 +7,7 @@
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
 #include "acme/platform/hyperlink.h"
+#include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"
 #include "apex/networking/address.h"
 #include "apex/networking/networking.h"
@@ -193,7 +194,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitemaContent = get_document()->m_pitemaInterface;
+      main_content().m_pitema = get_document()->m_pitemaInterface;
 
       return true;
 
@@ -216,7 +217,7 @@ namespace app_simple_networking_application
 
       pgraphics->text_out(25, 10, "Network Interfaces");
 
-      if(!m_pitemaContent)
+      if(!main_content().m_pitema)
       {
          
          return;
@@ -235,7 +236,7 @@ namespace app_simple_networking_application
 
          ::rectangle_i32 r;
 
-         for (auto & pitem : *m_pitemaContent)
+         for (auto & pitem : *main_content().m_pitema)
          {
 
             ::pointer < ::networking::address > paddress = pitem;
