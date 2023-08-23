@@ -98,7 +98,7 @@ namespace app_simple_nanoui_example
 
       }
 
-      //set_prodevian();
+      //set_auto_refresh();
 
       m_exampleapplicationa.add(memory_new ExampleApplication1(this));
       m_exampleapplicationa.add(memory_new ExampleApplication2(this));
