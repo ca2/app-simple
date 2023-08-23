@@ -108,7 +108,7 @@ namespace app_simple_shader
 
       payload(FONTSEL_IMPACT) = true;
 
-      top_level_frame()->set_prodevian();
+      top_level_frame()->set_auto_refresh();
 
       auto pprocedureRedraw = [this]()
          {
