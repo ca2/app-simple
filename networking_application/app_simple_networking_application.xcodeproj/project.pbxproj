@@ -28,6 +28,12 @@
 		9A99041927532D3E00B13F01 /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041827532D3E00B13F01 /* libaqua.dylib */; };
 		9A99041B27532D3E00B13F01 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041A27532D3E00B13F01 /* libaura.dylib */; };
 		9A99041D27532D3E00B13F01 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A99041C27532D3E00B13F01 /* libaxis.dylib */; };
+		9AA3F9A52A95C8F8004283CA /* command_list2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA3F99E2A95C8F7004283CA /* command_list2.h */; };
+		9AA3F9A62A95C8F8004283CA /* command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F9A02A95C8F7004283CA /* command.cpp */; };
+		9AA3F9A72A95C8F8004283CA /* command_document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F9A12A95C8F7004283CA /* command_document.cpp */; };
+		9AA3F9A82A95C8F8004283CA /* command_document.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA3F9A22A95C8F8004283CA /* command_document.h */; };
+		9AA3F9A92A95C8F8004283CA /* command_list2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F9A32A95C8F8004283CA /* command_list2.cpp */; };
+		9AA3F9AA2A95C8F8004283CA /* command.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA3F9A42A95C8F8004283CA /* command.h */; };
 		9AAFBF892A8B343C005D10AB /* interface_list2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFBF872A8B343B005D10AB /* interface_list2.h */; };
 		9AAFBF8A2A8B343C005D10AB /* interface_list2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFBF882A8B343B005D10AB /* interface_list2.cpp */; };
 		9AAFBF8D2A8B3453005D10AB /* computer_list2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */; };
@@ -88,6 +94,12 @@
 		9A99041827532D3E00B13F01 /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A99041A27532D3E00B13F01 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A99041C27532D3E00B13F01 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA3F99E2A95C8F7004283CA /* command_list2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command_list2.h; sourceTree = "<group>"; };
+		9AA3F9A02A95C8F7004283CA /* command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = command.cpp; sourceTree = "<group>"; };
+		9AA3F9A12A95C8F7004283CA /* command_document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = command_document.cpp; sourceTree = "<group>"; };
+		9AA3F9A22A95C8F8004283CA /* command_document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command_document.h; sourceTree = "<group>"; };
+		9AA3F9A32A95C8F8004283CA /* command_list2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = command_list2.cpp; sourceTree = "<group>"; };
+		9AA3F9A42A95C8F8004283CA /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command.h; sourceTree = "<group>"; };
 		9AAFBF872A8B343B005D10AB /* interface_list2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interface_list2.h; sourceTree = "<group>"; };
 		9AAFBF882A8B343B005D10AB /* interface_list2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interface_list2.cpp; sourceTree = "<group>"; };
 		9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = computer_list2.cpp; sourceTree = "<group>"; };
@@ -145,6 +157,12 @@
 				9A1CEC31285F939B001ED6E1 /* _factory.cpp */,
 				9A99039027532C4600B13F01 /* application.cpp */,
 				9A9902EA27532C4000B13F01 /* application.h */,
+				9AA3F9A12A95C8F7004283CA /* command_document.cpp */,
+				9AA3F9A22A95C8F8004283CA /* command_document.h */,
+				9AA3F9A32A95C8F8004283CA /* command_list2.cpp */,
+				9AA3F99E2A95C8F7004283CA /* command_list2.h */,
+				9AA3F9A02A95C8F7004283CA /* command.cpp */,
+				9AA3F9A42A95C8F8004283CA /* command.h */,
 				9AAFBF8B2A8B3453005D10AB /* computer_list2.cpp */,
 				9AAFBF8C2A8B3453005D10AB /* computer_list2.h */,
 				9A99039227532C4600B13F01 /* document.cpp */,
@@ -198,15 +216,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9903F727532C4900B13F01 /* targetver.h in Headers */,
+				9AA3F9A82A95C8F8004283CA /* command_document.h in Headers */,
 				9AAFBF892A8B343C005D10AB /* interface_list2.h in Headers */,
 				9A9903FE27532C4900B13F01 /* framework.h in Headers */,
 				9A9903E627532C4800B13F01 /* frame.h in Headers */,
+				9AA3F9A52A95C8F8004283CA /* command_list2.h in Headers */,
 				9A9903FA27532C4900B13F01 /* tab_impact.h in Headers */,
 				9AAFBF8E2A8B3453005D10AB /* computer_list2.h in Headers */,
 				9A99040427532C4900B13F01 /* _.h in Headers */,
 				9A9903FD27532C4900B13F01 /* resource.h in Headers */,
 				9A99040127532C4900B13F01 /* main_frame.h in Headers */,
 				9AAFC2382A8B3486005D10AB /* main_impact.h in Headers */,
+				9AA3F9AA2A95C8F8004283CA /* command.h in Headers */,
 				9A9903E527532C4800B13F01 /* application.h in Headers */,
 				9A9903FC27532C4900B13F01 /* document.h in Headers */,
 			);
@@ -296,8 +317,11 @@
 				9AAFC2372A8B3486005D10AB /* main_impact.cpp in Sources */,
 				9A99040027532C4900B13F01 /* document.cpp in Sources */,
 				9A9903E427532C4800B13F01 /* framework.cpp in Sources */,
+				9AA3F9A92A95C8F8004283CA /* command_list2.cpp in Sources */,
+				9AA3F9A62A95C8F8004283CA /* command.cpp in Sources */,
 				9AAFBF8A2A8B343C005D10AB /* interface_list2.cpp in Sources */,
 				9A9903E127532C4800B13F01 /* main_frame.cpp in Sources */,
+				9AA3F9A72A95C8F8004283CA /* command_document.cpp in Sources */,
 				9A1CEC35285F939B001ED6E1 /* _factory.cpp in Sources */,
 				9AAFBF8D2A8B3453005D10AB /* computer_list2.cpp in Sources */,
 				9A9903F227532C4900B13F01 /* tab_impact.cpp in Sources */,
