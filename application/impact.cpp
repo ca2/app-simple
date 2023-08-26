@@ -105,6 +105,13 @@ namespace app_simple_application
    }
 
 
+   void impact::_001OnClip(::draw2d::graphics_pointer & pgraphics)
+   {
+
+
+   }
+
+
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
