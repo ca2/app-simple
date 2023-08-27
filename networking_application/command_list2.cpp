@@ -151,9 +151,9 @@ namespace app_simple_networking_application
 
       }
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleClient, color::white);
+      pgraphics->fill_rectangle(rectangleX, color::white);
 
       pgraphics->set_text_color(color::black);
 
@@ -285,9 +285,9 @@ namespace app_simple_networking_application
    void command_list2::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if (rectangleClient.is_empty())
+      if (rectangleX.is_empty())
       {
 
          return;

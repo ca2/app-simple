@@ -70,6 +70,8 @@ namespace app_simple_application
 
       ::pointer<::message::create>pcreate(pmessage);
 
+      //display();
+
       pcreate->previous();
 
       if (pcreate->m_bRet)
@@ -115,9 +117,9 @@ namespace app_simple_application
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if (rectangleClient.is_empty())
+      if (rectangleX.is_empty())
       {
 
          return;
@@ -151,7 +153,7 @@ namespace app_simple_application
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleClient, argb(108, 128, 128, 128));
+      pgraphics->fill_rectangle(rectangleX, argb(108, 128, 128, 128));
 
       ::color::color color_dk(dk_red());
 
@@ -171,7 +173,7 @@ namespace app_simple_application
 
       auto pwritetext = pnode->write_text();
 
-      auto fontsize = ::write_text::font_size(48.0 * rectangleClient.height() / 1'080, e_unit_pixel);
+      auto fontsize = ::write_text::font_size(48.0 * rectangleX.height() / 1'080, e_unit_pixel);
 
       m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
 
@@ -212,8 +214,8 @@ namespace app_simple_application
       else
       {
        
-         point.x() = random(0, (int)(rectangleClient.width() - size.cx()));
-         point.y() = random(0, (int)(rectangleClient.height() - size.cy() * 2));
+         point.x() = random(0, (int)(rectangleX.width() - size.cx()));
+         point.y() = random(0, (int)(rectangleX.height() - size.cy() * 2));
 
       }
 
@@ -280,9 +282,9 @@ namespace app_simple_application
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;

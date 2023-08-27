@@ -182,7 +182,7 @@ namespace app_simple_shortcut_amender
 
       double y = 10.;
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       {
 

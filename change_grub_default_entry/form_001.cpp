@@ -142,7 +142,7 @@ namespace app_simple_change_grub_default_entry
 
       double y = 10.;
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
 
@@ -183,7 +183,7 @@ namespace app_simple_change_grub_default_entry
 
       y += sizeButtonMarginRestart.top;
 
-      m_pbuttonRestart->display_child(::rectangle_f64_dimension(rectangleClient.right - iLeft - button_width, y, button_width, button_height));
+      m_pbuttonRestart->display_child(::rectangle_f64_dimension(rectangleX.right - iLeft - button_width, y, button_width, button_height));
 
       y += sizeButtonMarginRestart.bottom;
 
@@ -193,7 +193,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.bottom;
 
-      m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleClient.width() - iLeft * 2, rectangleClient.bottom - iLeft - y));
+      m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom - iLeft - y));
 
       m_plistbox->set_need_layout();
    }

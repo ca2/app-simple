@@ -150,7 +150,7 @@ namespace app_simple_form
 
       //::user::form_impact::on_perform_top_down_layout(pgraphics);
 
-      auto rectClient = client_rectangle(::user::e_layout_lading);
+      auto rectClient = this->rectangle(::user::e_layout_lading);
 
       information() << "form_001 " << rectClient;
       
