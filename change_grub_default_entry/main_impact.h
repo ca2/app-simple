@@ -15,7 +15,7 @@ namespace app_simple_change_grub_default_entry
    public:
 
 
-      //::userex::top_impact *    m_ptopview;
+      //::userex::top_impact *    m_ptopimpact;
       impact *                  m_pimpact;
 
 
