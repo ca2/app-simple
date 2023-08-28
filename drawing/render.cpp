@@ -177,13 +177,13 @@ namespace app_simple_drawing
 
       }
 
+      m_strFont1 = strFont;
+
       string strDataId;
 
       strDataId = m_pimpact->m_atom;
 
       get_app()->datastream()->set(strDataId + ".font_family", m_strFont1);
-
-      m_strFont1 = strFont;
 
       return ::success;
 

@@ -71,9 +71,9 @@ namespace app_simple_change_grub_default_entry
 
       //   initialize_split_layout();
 
-      //   m_ptopview = host_impact < ::userex::top_impact >(0, "top_impact");
+      //   m_ptopimpact = host_impact < ::userex::top_impact >(0, "top_impact");
 
-      //   if (m_ptopview == NULL)
+      //   if (m_ptopimpact == NULL)
       //   {
 
       //      output_error_message("Could not create folder edit impact");
