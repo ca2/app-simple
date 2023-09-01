@@ -256,15 +256,15 @@ namespace app_simple_networking_application
 
                pgraphics->text_out(iMaxX1 + 20, y, strText);
 
-               r.left = iMaxX1 + 20;
-               r.top = y;
-               r.bottom = y + iHeight;
-               r.right = r.left + (::i32)(size.cx());
+               r.left() = iMaxX1 + 20;
+               r.top() = y;
+               r.bottom() = y + iHeight;
+               r.right() = r.left() + (::i32)(size.cx());
 
-               if (r.right > iMaxX1)
+               if (r.right() > iMaxX1)
                {
 
-                  iMaxX2 = r.right;
+                  iMaxX2 = r.right();
 
                }
 
