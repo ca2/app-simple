@@ -148,19 +148,19 @@ namespace app_simple_change_grub_default_entry
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += rectangleStillMargin.top;
+      y += rectangleStillMargin.top();
 
       m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
       y += sizeStill.cy();
 
-      y += rectangleStillMargin.bottom;
+      y += rectangleStillMargin.bottom();
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
 
-      y += rectangleEditMargin.top;
+      y += rectangleEditMargin.top();
 
       m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy()));
 
@@ -173,7 +173,7 @@ namespace app_simple_change_grub_default_entry
 
       auto sizeButtonMarginRestart = m_pbuttonRestart->get_margin(m_pedit->get_style(pgraphics));
 
-      //y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
+      //y += maximum(sizeButtonMarginClear.top(), sizeButtonMarginSend.top());
 
       auto button_width = sizeButtonRestart.cx() + 32;
 
@@ -181,19 +181,19 @@ namespace app_simple_change_grub_default_entry
 
       //m_pbuttonClear->display_child(::rectangle_f64_dimension(iLeft, y, button_width, button_height));
 
-      y += sizeButtonMarginRestart.top;
+      y += sizeButtonMarginRestart.top();
 
-      m_pbuttonRestart->display_child(::rectangle_f64_dimension(rectangleX.right - iLeft - button_width, y, button_width, button_height));
+      m_pbuttonRestart->display_child(::rectangle_f64_dimension(rectangleX.right() - iLeft - button_width, y, button_width, button_height));
 
-      y += sizeButtonMarginRestart.bottom;
+      y += sizeButtonMarginRestart.bottom();
 
       y += button_height;
 
       y += sizeEdit.cy();
 
-      y += rectangleEditMargin.bottom;
+      y += rectangleEditMargin.bottom();
 
-      m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom - iLeft - y));
+      m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom() - iLeft - y));
 
       m_plistbox->set_need_layout();
    }
