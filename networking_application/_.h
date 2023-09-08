@@ -25,6 +25,10 @@ namespace app_simple_networking_application
    class interface_list2;
    class computer_list2;
 
+   class command;
+   class command_document;
+   class command_list2;
+
 
 } // namespace app_simple_networking_application
 

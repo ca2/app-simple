@@ -141,7 +141,7 @@ namespace app_simple_form
 
       //::user::form_impact::on_layout(pgraphics);
 
-      auto rectClient = client_rectangle(::user::e_layout_lading);
+      auto rectClient = this->rectangle(::user::e_layout_lading);
       
       double iLeft = minimum(100.0, rectClient.width() * 0.05);
 
@@ -155,7 +155,7 @@ namespace app_simple_form
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += rectangleStillMargin.top;
+      y += rectangleStillMargin.top();
       
       m_pstill->m_ealignText = e_align_left;
 
@@ -163,7 +163,7 @@ namespace app_simple_form
 
       y += sizeStill.cy();
 
-      y += rectangleStillMargin.bottom;
+      y += rectangleStillMargin.bottom();
 
       auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
       
@@ -173,13 +173,13 @@ namespace app_simple_form
       
       //y += 1;
       
-      y += rectangleEditMargin.top;
+      y += rectangleEditMargin.top();
 
       m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeEdit.cy()));
 
       y += sizeEdit.cy();
 
-      y += rectangleEditMargin.bottom;
+      y += rectangleEditMargin.bottom();
 
       y += 4;
 

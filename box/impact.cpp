@@ -143,9 +143,9 @@ namespace app_simple_box
 
       //return;
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if (rectangleClient.is_empty())
+      if (rectangleX.is_empty())
       {
 
          return;
@@ -159,7 +159,7 @@ namespace app_simple_box
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleClient, argb(128, 128, 128, 128));
+      pgraphics->fill_rectangle(rectangleX, argb(128, 128, 128, 128));
 
       //return;
 
@@ -216,8 +216,8 @@ namespace app_simple_box
       else
       {
        
-         point.x() = random(0, (int)(rectangleClient.width() - size.cx()));
-         point.y() = random(0, (int)(rectangleClient.height() - size.cy() * 2));
+         point.x() = random(0, (int)(rectangleX.width() - size.cx()));
+         point.y() = random(0, (int)(rectangleX.height() - size.cy() * 2));
 
       }
       
@@ -301,9 +301,9 @@ namespace app_simple_box
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;

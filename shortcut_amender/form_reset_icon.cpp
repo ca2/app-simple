@@ -9,7 +9,7 @@
 #include "acme/filesystem/filesystem/link.h"
 #include "acme/filesystem/filesystem/listing.h"
 #include "apex/database/_binary_stream.h"
-#include "apex/filesystem/filesystem/dir_context.h"
+#include "acme/filesystem/filesystem/dir_context.h"
 #include "apex/platform/os_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
@@ -182,7 +182,7 @@ namespace app_simple_shortcut_amender
 
       double y = 10.;
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
       {
 
@@ -190,13 +190,13 @@ namespace app_simple_shortcut_amender
 
          auto rectangleStillMargin = m_pstillFolder->get_margin(m_pstillFolder->get_style(pgraphics));
 
-         y += rectangleStillMargin.top;
+         y += rectangleStillMargin.top();
 
          m_pstillFolder->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
          y += sizeStill.cy();
 
-         y += rectangleStillMargin.bottom;
+         y += rectangleStillMargin.bottom();
 
       }
 
@@ -206,13 +206,13 @@ namespace app_simple_shortcut_amender
 
          auto rectangleEditMargin = m_peditFolder->get_margin(m_peditFolder->get_style(pgraphics), ::e_element_none);
 
-         y += rectangleEditMargin.top;
+         y += rectangleEditMargin.top();
 
          m_peditFolder->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy()));
 
          y += sizeEdit.cy();
 
-         y += rectangleEditMargin.bottom;
+         y += rectangleEditMargin.bottom();
 
       }
 
@@ -223,13 +223,13 @@ namespace app_simple_shortcut_amender
 
          auto rectangleStillMargin = m_pstillSource->get_margin(m_pstillSource->get_style(pgraphics));
 
-         y += rectangleStillMargin.top;
+         y += rectangleStillMargin.top();
 
          m_pstillSource->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
          y += sizeStill.cy();
 
-         y += rectangleStillMargin.bottom;
+         y += rectangleStillMargin.bottom();
 
       }
 
@@ -241,13 +241,13 @@ namespace app_simple_shortcut_amender
 
          auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pgraphics), ::e_element_none);
 
-         y += rectangleEditMargin.top;
+         y += rectangleEditMargin.top();
 
          m_peditSource->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy()));
 
          y += sizeEdit.cy();
 
-         y += rectangleEditMargin.bottom;
+         y += rectangleEditMargin.bottom();
 
       }
 
@@ -259,7 +259,7 @@ namespace app_simple_shortcut_amender
 
       auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditSource->get_style(pgraphics));
 
-      y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
+      y += maximum(sizeButtonMarginClear.top(), sizeButtonMarginSend.top());
 
       auto button_width = maximum(sizeButtonClear.cx() + 32, sizeButtonSend.cx() + 32);
 

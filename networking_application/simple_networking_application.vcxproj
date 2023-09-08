@@ -797,6 +797,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClInclude Include="command.h" />
+    <ClCompile Include="command.cpp" />
+    <ClCompile Include="command_document.cpp" />
+    <ClCompile Include="command_list2.cpp" />
     <ClCompile Include="computer_list2.cpp" />
     <ClCompile Include="document.cpp" />
     <ClCompile Include="frame.cpp" />
@@ -819,6 +823,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+    <ClInclude Include="command_document.h" />
+    <ClInclude Include="command_list2.h" />
     <ClInclude Include="computer_list2.h" />
     <ClInclude Include="document.h" />
     <ClInclude Include="frame.h" />

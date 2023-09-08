@@ -108,7 +108,7 @@ namespace simple_os_drag_and_drop
 
       auto pnode = psystem->node();
 
-      pfont->create_pixel_font(pnode->font_name(e_font_sans_ex), 100.0, 800);
+      pfont->create_font(e_font_sans_ex, 100.0_px, 800);
 
       pgraphics->set(pfont);
 
@@ -280,11 +280,11 @@ namespace simple_os_drag_and_drop
 
       rectangle_i32 r;
 
-      r.top = 0;
+      r.top() = 0;
 
-      r.left = 0;
+      r.left() = 0;
 
-      r.bottom = rClient.center().y();
+      r.bottom() = rClient.center().y();
 
       int i = 0;
 
@@ -293,28 +293,28 @@ namespace simple_os_drag_and_drop
       for (i = 0; i < iColumnCount && i < angleaStart.get_size(); i++)
       {
 
-         r.right = r.left + iColumnWidth;
+         r.right() = r.left() + iColumnWidth;
 
          draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
-         r.left = r.right;
+         r.left() = r.right();
 
       }
 
-      r.top = r.bottom;
+      r.top() = r.bottom();
 
-      r.left = 0;
+      r.left() = 0;
 
-      r.bottom = rClient.bottom;
+      r.bottom() = rClient.bottom();
 
       for (; i < iColumnCount * 2 && i < angleaStart.get_size(); i++)
       {
 
-         r.right = r.left + iColumnWidth;
+         r.right() = r.left() + iColumnWidth;
 
          draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
-         r.left = r.right;
+         r.left() = r.right();
 
       }
 
@@ -331,7 +331,7 @@ namespace simple_os_drag_and_drop
 
       auto pnode = psystem->node();
 
-      pfont->create_point_font(pnode->font_name(e_font_sans), 14.0, e_font_weight_light);
+      pfont->create_font(e_font_sans, 14.0_px, e_font_weight_light);
 
       pgraphics->set_text_color(argb(255, 0, 0, 0));
 
@@ -341,11 +341,11 @@ namespace simple_os_drag_and_drop
 
       str.format("Start: %0.0f", angleStart.degree());
 
-      pgraphics->text_out(r.left, r.top, str);
+      pgraphics->text_out(r.left(), r.top(), str);
 
       str.format("Angle: %0.0f", angleAngle.degree());
 
-      pgraphics->text_out(r.left, r.top + 20, str);
+      pgraphics->text_out(r.left(), r.top() + 20, str);
 
       auto ppen = __create < ::draw2d::pen > ();
 

@@ -14,7 +14,7 @@ namespace simple_os_drag_and_drop
    public:
 
 
-      // ::userex::top_impact* m_ptopview;
+      // ::userex::top_impact* m_ptopimpact;
       impact *                  m_pimpact;
 
 

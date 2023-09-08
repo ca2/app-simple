@@ -7,6 +7,7 @@
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
 #include "acme/platform/hyperlink.h"
+#include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"
 #include "apex/networking/address.h"
 #include "apex/networking/networking.h"
@@ -28,7 +29,8 @@ namespace app_simple_networking_application
 
       m_flagNonClient.erase(e_non_client_focus_rect);
 
-      m_bClickDefaultMouseHandling = true;
+      m_bDefaultClickHandling = true;
+      m_bDefaultParentMouseMessageHandling = true;
 
    }
 
@@ -193,7 +195,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitema = get_document()->m_pitemaInterface;
+      main_content().m_pitema = get_document()->m_pitemaInterface;
 
       return true;
 
@@ -204,9 +206,9 @@ namespace app_simple_networking_application
    void interface_list2::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleClient, color::white);
+      pgraphics->fill_rectangle(rectangleX, color::white);
 
       pgraphics->set_text_color(color::black);
 
@@ -216,6 +218,13 @@ namespace app_simple_networking_application
 
       pgraphics->text_out(25, 10, "Network Interfaces");
 
+      if(!main_content().m_pitema)
+      {
+         
+         return;
+         
+      }
+      
       int iHeight = 25;
 
       int iMaxX1 = 0;
@@ -228,7 +237,7 @@ namespace app_simple_networking_application
 
          ::rectangle_i32 r;
 
-         for (auto & pitem : *m_pitema)
+         for (auto & pitem : *main_content().m_pitema)
          {
 
             ::pointer < ::networking::address > paddress = pitem;
@@ -239,15 +248,15 @@ namespace app_simple_networking_application
 
             pgraphics->text_out(25, y, strAddress);
 
-            r.left = 25;
-            r.top = y;
-            r.bottom = y + iHeight;
-            r.right = r.left + (::i32) (size.cx());
+            r.left() = 25;
+            r.top() = y;
+            r.bottom() = y + iHeight;
+            r.right() = r.left() + (::i32) (size.cx());
 
-            if (r.right > iMaxX1)
+            if (r.right() > iMaxX1)
             {
 
-               iMaxX1 = r.right;
+               iMaxX1 = r.right();
 
             }
 
@@ -267,9 +276,9 @@ namespace app_simple_networking_application
    void interface_list2::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;
@@ -282,7 +291,7 @@ namespace app_simple_networking_application
    bool interface_list2::on_click(::item * pitem)
    {
 
-      get_document()->network_interface_discovery(pitem->m_iItem);
+      get_document()->network_interface_discovery(pitem->m_item.m_iItem);
 
       return true;
 

@@ -9,6 +9,12 @@ list(APPEND library_source
    #_factory.cpp
    application.cpp
    application.h
+   command.cpp
+   command.h
+   command_document.cpp
+   command_document.h
+   command_list2.cpp
+   command_list2.h
    computer_list2.cpp
    computer_list2.h
    document.cpp
