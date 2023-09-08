@@ -31,7 +31,7 @@ namespace app_simple_shader
 
       m_flagNonClient.erase(e_non_client_focus_rect);
 
-      m_bClickDefaultMouseHandling = true;
+      m_bDefaultClickHandling = true;
 
    }
 
@@ -108,7 +108,7 @@ namespace app_simple_shader
 
       payload(FONTSEL_IMPACT) = true;
 
-      top_level_frame()->set_prodevian();
+      top_level_frame()->set_auto_refresh();
 
       auto pprocedureRedraw = [this]()
          {
@@ -261,9 +261,9 @@ namespace app_simple_shader
 
          m_bSaveFrame = false;
 
-         auto rectangleClient = client_rectangle();
+         auto rectangleX = this->rectangle();
 
-         auto pimage = m_pcontext->m_pauracontext->create_image(rectangleClient.size());
+         auto pimage = m_pcontext->m_pauracontext->create_image(rectangleX.size());
 
          ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
 
@@ -297,16 +297,16 @@ namespace app_simple_shader
    void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;
 
       }
 
-      m_prender->m_rectangle = rectangleClient;
+      m_prender->m_rectangle = rectangleX;
 
       m_prender->on_layout(pgraphics);
 

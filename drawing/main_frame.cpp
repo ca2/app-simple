@@ -44,7 +44,7 @@ namespace app_simple_drawing
    ::experience::frame * main_frame::frame_experience()
    {
 
-      auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");
+      auto pframe = ::simple_main_frame::frame_experience(nullptr, "022", "LightBlue");
 
       return pframe;
 

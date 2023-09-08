@@ -21,8 +21,8 @@ namespace app_simple_nanoui_example
 
       //m_pexampleapplication = nullptr;
       m_flagNonClient -= e_non_client_background;
-      m_bClickDefaultMouseHandling = true;
-      m_bEditDefaultHandling = true;
+      m_bDefaultClickHandling = true;
+      m_bDefaultEditHandling = true;
 
    }
 
@@ -98,7 +98,7 @@ namespace app_simple_nanoui_example
 
       }
 
-      //set_prodevian();
+      //set_auto_refresh();
 
       m_exampleapplicationa.add(memory_new ExampleApplication1(this));
       m_exampleapplicationa.add(memory_new ExampleApplication2(this));
@@ -208,9 +208,9 @@ namespace app_simple_nanoui_example
    void main_window::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;

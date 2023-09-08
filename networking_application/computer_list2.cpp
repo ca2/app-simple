@@ -7,6 +7,7 @@
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
 #include "acme/platform/hyperlink.h"
+#include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"
 #include "apex/networking/address.h"
 #include "apex/networking/networking.h"
@@ -30,7 +31,7 @@ namespace app_simple_networking_application
 
       m_flagNonClient.erase(e_non_client_focus_rect);
 
-      m_bClickDefaultMouseHandling = true;
+      m_bDefaultClickHandling = true;
 
    }
 
@@ -174,7 +175,7 @@ namespace app_simple_networking_application
 
       }
 
-      m_pitema = get_document()->m_pitemaComputer;
+      main_content().m_pitema = get_document()->m_pitemaComputer;
 
       return true;
 
@@ -183,9 +184,9 @@ namespace app_simple_networking_application
    void computer_list2::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleClient, color::white);
+      pgraphics->fill_rectangle(rectangleX, color::white);
 
       pgraphics->set_text_color(color::black);
 
@@ -225,10 +226,10 @@ namespace app_simple_networking_application
          {
 
             ::pointer < ::networking::address > paddress = pitem;
-            //if (pitem->m_eelement == e_element_item)
+            //if (pitem->m_item.m_eelement == e_element_item)
             {
 
-               // auto paddress = m_mapaddress[pitem->m_iItem];
+               // auto paddress = m_mapaddress[pitem->m_item.m_iItem];
 
                if (paddress->is_in_same_net(get_document()->m_paddressNetworkInterface, paddressMask))
                {
@@ -239,15 +240,15 @@ namespace app_simple_networking_application
 
                   pgraphics->text_out(iMaxX1 + 20, y, strAddress);
 
-                  r.left = iMaxX1 + 20;
-                  r.top = y;
-                  r.bottom = y + iHeight;
-                  r.right = r.left + (::i32) (size.cx());
+                  r.left() = iMaxX1 + 20;
+                  r.top() = y;
+                  r.bottom() = y + iHeight;
+                  r.right() = r.left() + (::i32) (size.cx());
 
-                  if (r.right > iMaxX1)
+                  if (r.right() > iMaxX1)
                   {
 
-                     iMaxX2 = r.right;
+                     iMaxX2 = r.right();
 
                   }
 
@@ -270,9 +271,9 @@ namespace app_simple_networking_application
    void computer_list2::on_layout(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleClient = client_rectangle();
+      auto rectangleX = this->rectangle();
 
-      if(rectangleClient.is_empty())
+      if(rectangleX.is_empty())
       {
 
          return;
@@ -285,7 +286,7 @@ namespace app_simple_networking_application
    bool computer_list2::on_click(::item * pitem)
    {
 
-      if (pitem->m_eelement == e_element_item)
+      if (pitem->m_item.m_eelement == e_element_item)
       {
 
          auto phyperlink = __create_new <::hyperlink >();
@@ -311,13 +312,13 @@ namespace app_simple_networking_application
    //   for (auto & pitem : m_itema)
    //   {
 
-   //      if (pitem->m_eelement == e_element_item)
+   //      if (pitem->m_item.m_eelement == e_element_item)
    //      {
 
-   //         if (pitem->m_iItem == iItem)
+   //         if (pitem->m_item.m_iItem == iItem)
    //         {
 
-   //            m_paddressNetworkInterface = m_mapaddress[pitem->m_iItem];
+   //            m_paddressNetworkInterface = m_mapaddress[pitem->m_item.m_iItem];
 
    //            break;
 

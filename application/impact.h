@@ -33,6 +33,8 @@ namespace app_simple_application
 
       virtual void install_message_routing(::channel * psender) override;
 
+      virtual void _001OnClip(::draw2d::graphics_pointer & pgraphics) override;
+
       virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
 
       void handle(::topic * ptopic, ::context * pcontext) override;
