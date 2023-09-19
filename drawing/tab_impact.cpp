@@ -108,17 +108,6 @@ namespace app_simple_drawing
 
       }
 
-      switch(pimpactdata->m_atom.as_i32())
-      {
-      case MENU_IMPACT:
-      {
-
-         //::user::impact::create_impact < ::user::menu_list_impact >(pimpactdata);
-
-      }
-      break;
-      }
-
       string strId = pimpactdata->m_atom;
 
       if(strId.case_insensitive_begins_eat("drawing"))
