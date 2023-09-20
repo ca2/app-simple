@@ -43,7 +43,7 @@ namespace app_simple_networking_application
       void create_networking_application() override;
 
 
-      virtual ::type get_pane_impact_type() const;
+      virtual ::type_atom get_pane_impact_type() const;
 
 
 
