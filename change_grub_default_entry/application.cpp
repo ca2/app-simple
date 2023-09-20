@@ -89,9 +89,9 @@ namespace app_simple_change_grub_default_entry
 
       auto pdoctemplate = __new(::user::single_document_template(
                               "main",
-                              __type(document),
-                              __type(main_frame),
-                              __type(form_001)
+                              ::type < document >(),
+                              ::type < main_frame >(),
+                              ::type < form_001 >()
                ));
 
       m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;

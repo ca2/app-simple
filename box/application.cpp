@@ -54,9 +54,9 @@ namespace app_simple_box
 
       auto pdoctemplate = __new(::user::single_document_template(
          "main",
-         __type(document),
-         __type(main_frame),
-         __type(impact)));
+         ::type < document >(),
+         ::type < main_frame >(),
+         ::type < impact >()));
 
       m_ptemplateAppSimpleBoxMain = pdoctemplate;
 
