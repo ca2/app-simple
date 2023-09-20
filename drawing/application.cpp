@@ -49,7 +49,7 @@ namespace app_simple_drawing
    ::type application::get_pane_impact_type() const
    {
 
-      return __type(tab_impact);
+      return ::type < tab_impact >();
 
    }
 
@@ -112,8 +112,8 @@ namespace app_simple_drawing
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
+                               ::type < document >(),
+                               ::type < main_frame >(),
                                get_pane_impact_type()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;

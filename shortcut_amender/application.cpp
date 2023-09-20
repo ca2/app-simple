@@ -93,18 +93,18 @@ namespace app_simple_shortcut_amender
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
-                               __type(tab_impact)));
+                               ::type < document >(),
+                               ::type < main_frame >(),
+                               ::type < tab_impact >()));
       m_ptemplateShortcutAmenderMain = pdoctemplate;
       add_document_template(pdoctemplate);
 
 
       pdoctemplate = __new(::user::single_document_template(
                           "main",
-                          __type(document),
-                          __type(frame),
-                          __type(main_impact)));
+                          ::type < document >(),
+                          ::type < frame >(),
+                          ::type < main_impact >()));
       m_ptemplateShortcutAmenderImpact = pdoctemplate;
       add_document_template(pdoctemplate);
 

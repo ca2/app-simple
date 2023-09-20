@@ -67,7 +67,7 @@ namespace app_simple_networking_application
    ::type application::get_pane_impact_type() const
    {
 
-      return __type(tab_impact);
+      return ::type < tab_impact >();
 
    }
 
@@ -111,8 +111,8 @@ namespace app_simple_networking_application
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
+                               ::type < document >(),
+                               ::type < main_frame >(),
                                get_pane_impact_type()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
@@ -121,9 +121,9 @@ namespace app_simple_networking_application
 
       auto pdoctemplate2 = __new(::user::multiple_document_template(
          "command",
-         __type(command_document),
-         __type(main_frame),
-         __type(command_list2)));
+         ::type < command_document >(),
+         ::type < main_frame >(),
+         ::type < command_list2 >()));
 
       m_ptemplateCommand = pdoctemplate2;
 

@@ -80,9 +80,9 @@ namespace app_simple_shader
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               __type(document),
-                               __type(main_frame),
-                               __type(tab_impact)));
+                               ::type < document >(),
+                               ::type < main_frame >(),
+                               ::type < tab_impact >()));
 
       add_document_template(pdoctemplate);
 
