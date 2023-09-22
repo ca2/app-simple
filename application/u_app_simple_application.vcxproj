@@ -69,13 +69,10 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
-    <ClInclude Include="frame.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="main_frame.h" />
-    <ClInclude Include="pane_impact.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="_user.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
@@ -121,9 +118,6 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\source\app\base\u_base.vcxproj">
       <Project>{0680a465-39a7-4e1b-8dc1-0607a3243ea2}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\app\bred\u_bred.vcxproj">
-      <Project>{08c317fc-6ee8-4371-84cb-18150e439021}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
