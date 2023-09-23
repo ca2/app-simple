@@ -65,15 +65,15 @@ namespace app_simple_drawing
 
       bool bCheckOk = false;
 
-      if (pproperty1->m_etype == e_type_enum_check)
+      if (pproperty1->atom_type() == atom::e_type_check)
       {
 
          auto pproperty = pproperty1;
 
-         if (pproperty->m_etype == e_type_enum_check)
+         if (pproperty->atom_type() == atom::e_type_check)
          {
 
-            auto & echeck = pproperty->m_echeck;
+            auto & echeck = pproperty->echeck_reference();
 
             if (echeck == e_check_undefined)
             {
