@@ -526,6 +526,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
     </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\iconv.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\pcre.dll">
       <DeploymentContent>true</DeploymentContent>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">false</ExcludedFromBuild>
@@ -589,6 +592,9 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">false</DeploymentContent>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\unac.dll">
+      <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\..\..\..\..\operating_system\storage-universal_windows\x64\Debug\third\binary\zlib.dll">
       <DeploymentContent>true</DeploymentContent>
