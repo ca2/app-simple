@@ -144,7 +144,7 @@ namespace app_simple_change_grub_default_entry
 
       auto rectangleX = this->rectangle();
 
-      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
@@ -156,7 +156,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleStillMargin.bottom();
 
-      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
 
@@ -167,7 +167,7 @@ namespace app_simple_change_grub_default_entry
 
       //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
 
-      auto sizeButtonRestart = m_pbuttonRestart->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeButtonRestart = m_pbuttonRestart->get_adjusted_fitting_size(pgraphics);
 
       //auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
 
