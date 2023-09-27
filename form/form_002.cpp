@@ -149,7 +149,7 @@ namespace app_simple_form
 
       double y = iLeft * 2.0;
 
-      auto sizeStill = m_pstill->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
       
       auto cx = rectClient.width() - iLeft - iRight;
 
@@ -165,7 +165,7 @@ namespace app_simple_form
 
       y += rectangleStillMargin.bottom();
 
-      auto sizeEdit = m_pedit->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
       
       sizeEdit.cx() = cx;
 
@@ -183,13 +183,13 @@ namespace app_simple_form
 
       y += 4;
 
-      auto sizeCombo = m_pcombobox->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeCombo = m_pcombobox->get_adjusted_fitting_size(pgraphics);
 
       m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200.0, sizeCombo.cy()));
 
       y += sizeCombo.cy() + 4;
 
-      auto sizeButton = m_pbutton->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeButton = m_pbutton->get_adjusted_fitting_size(pgraphics);
 
       m_pbutton->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeButton.cy()));
 
