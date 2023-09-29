@@ -211,7 +211,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillFolder->_001CalculateAdjustedFittingSize(pgraphics);
+         auto sizeStill = m_pstillFolder->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleStillMargin = m_pstillFolder->get_margin(m_pstillFolder->get_style(pgraphics));
 
@@ -227,7 +227,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeEdit = m_peditFolder->_001CalculateAdjustedFittingSize(pgraphics);
+         auto sizeEdit = m_peditFolder->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleEditMargin = m_peditFolder->get_margin(m_peditFolder->get_style(pgraphics), ::e_element_none);
 
@@ -244,7 +244,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillSource->_001CalculateAdjustedFittingSize(pgraphics);
+         auto sizeStill = m_pstillSource->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleStillMargin = m_pstillSource->get_margin(m_pstillSource->get_style(pgraphics));
 
@@ -260,7 +260,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeEdit = m_peditSource->_001CalculateAdjustedFittingSize(pgraphics);
+         auto sizeEdit = m_peditSource->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pgraphics), ::e_element_none);
 
@@ -276,7 +276,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillTarget->_001CalculateAdjustedFittingSize(pgraphics);
+         auto sizeStill = m_pstillTarget->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleStillMargin = m_pstillTarget->get_margin(m_pstillTarget->get_style(pgraphics));
 
@@ -294,7 +294,7 @@ namespace app_simple_shortcut_amender
 
       {
 
-         sizeEdit = m_peditTarget->_001CalculateAdjustedFittingSize(pgraphics);
+         sizeEdit = m_peditTarget->get_adjusted_fitting_size(pgraphics);
 
          auto rectangleEditMargin = m_peditTarget->get_margin(m_peditTarget->get_style(pgraphics), ::e_element_none);
 
@@ -309,9 +309,9 @@ namespace app_simple_shortcut_amender
       }
 
 
-      auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeButtonClear = m_pbuttonClear->get_adjusted_fitting_size(pgraphics);
 
-      auto sizeButtonSend = m_pbuttonSend->_001CalculateAdjustedFittingSize(pgraphics);
+      auto sizeButtonSend = m_pbuttonSend->get_adjusted_fitting_size(pgraphics);
 
       auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditTarget->get_style(pgraphics));
 
