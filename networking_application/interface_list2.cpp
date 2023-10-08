@@ -229,7 +229,7 @@ namespace app_simple_networking_application
 
       int iMaxX1 = 0;
 
-      int iMaxX2 = 0;
+      //int iMaxX2 = 0;
 
       {
 
