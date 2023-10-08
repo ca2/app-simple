@@ -60,7 +60,7 @@ namespace app_simple_networking_application
 
       SetSplitOrientation(e_orientation_vertical);
 
-      auto preferredDensity = preferred_density();
+      //auto preferredDensity = preferred_density();
 
       set_position_rate(0,0.5);
 
