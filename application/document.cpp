@@ -40,12 +40,12 @@ namespace app_simple_application
    bool document::on_new_document()
    {
       
-      file()->get_lines(m_straLine, "dropbox-app://application.txt");
+      //file()->get_lines(m_straLine, "dropbox-app://application.txt");
 
-      if (m_straLine.is_empty())
+      //if (m_straLine.is_empty())
       {
 
-         file()->get_lines(m_straLine, "document://app_simple_application.txt");
+         file()->get_lines(m_straLine, "document://application/app-simple/application/application.txt");
 
       }
 
