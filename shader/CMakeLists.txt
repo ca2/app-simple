@@ -59,7 +59,7 @@ if (MSVC)
 
 elseif(${LINUX} OR ${FREEBSD})
 
-   target_compile_options(app_simple_shader PRIVATE -fpermissive)
+   target_compile_options(app_simple_shader PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive>)
    #target_link_options(app_simple_shader PRIVATE -Wl,-rpath=$ORIGIN)
    target_link_libraries(app_simple_shader PRIVATE ${library_references})
    target_link_options(app_simple_shader PRIVATE -Wl,-z,defs)
