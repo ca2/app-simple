@@ -43,7 +43,7 @@ if (MSVC)
 elseif(${LINUX} OR ${FREEBSD})
 
 
-    target_compile_options(app_simple_box PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive>)
+    target_compile_options(app_simple_box PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
     #target_link_options(app_simple_box PRIVATE -Wl,-rpath=$ORIGIN)
     target_link_libraries(app_simple_box PRIVATE acme apex aqua aura axis base)
     target_link_options(app_simple_box PRIVATE -Wl,-z,defs)
