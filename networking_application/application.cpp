@@ -14,14 +14,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-//IMPLEMENT_APPLICATION(app_simple_networking_application);
+__DECLARE_RELEASE_TIME(app_simple_networking_application);
 
 
 namespace app_simple_networking_application
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_networking_application);
 
 
    application::application()

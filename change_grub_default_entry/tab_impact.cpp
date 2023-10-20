@@ -132,7 +132,7 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      if(get_impact_id() == ::impact_simple_change_grub_default_entry)
+      if(get_impact_id() == ::e_impact_simple_change_grub_default_entry)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);

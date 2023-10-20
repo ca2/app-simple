@@ -15,14 +15,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-////#define memory_new ACME_NEW
-//IMPLEMENT_APPLICATION(app_simple_shortcut_amender)
+__DECLARE_RELEASE_TIME(app_simple_shortcut_amender);
+
 
 namespace app_simple_shortcut_amender
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_shortcut_amender);
 
 
    application::application()
