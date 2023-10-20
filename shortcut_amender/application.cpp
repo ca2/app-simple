@@ -22,6 +22,9 @@ namespace app_simple_shortcut_amender
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
@@ -143,13 +146,13 @@ namespace app_simple_shortcut_amender
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -178,7 +181,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      information("\nfinished simple_shortcut::on_request");
+      informationf("\nfinished simple_shortcut::on_request");
 
    }
 

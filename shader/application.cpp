@@ -13,6 +13,9 @@ namespace app_simple_shader
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
       
@@ -108,13 +111,13 @@ namespace app_simple_shader
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -149,7 +152,7 @@ namespace app_simple_shader
 
       }
 
-      information("\nfinished simple_shader::on_request");
+      informationf("\nfinished simple_shader::on_request");
 
    }
 

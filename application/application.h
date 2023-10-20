@@ -21,6 +21,10 @@ namespace app_simple_application
 
       application();
       ~application() override;
+      
+
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
       virtual string preferred_experience() override;
       virtual void init_instance() override;

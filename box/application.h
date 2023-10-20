@@ -21,6 +21,9 @@ namespace app_simple_box
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
 
       void init_instance() override;

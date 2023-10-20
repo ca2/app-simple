@@ -357,7 +357,7 @@ namespace app_simple_shortcut_amender
                if (strText == "This is a test. This is a test")
                {
 
-                  information("");
+                  informationf("");
 
                }
 
@@ -378,7 +378,7 @@ namespace app_simple_shortcut_amender
                if (strText == "This is a test. This is a test")
                {
 
-                  information("");
+                  informationf("");
 
                }
 
@@ -399,7 +399,7 @@ namespace app_simple_shortcut_amender
                if (strText == "This is a test. This is a test")
                {
 
-                  information("");
+                  informationf("");
 
                }
 

@@ -1,6 +1,6 @@
 #include "framework.h"
 #include "acme/_library.h"
-#include "acme/platform/version.h"
+#include "acme/platform/release_time.h"
 
 
 __BEGIN_RELEASE_TIME(app_simple_drawing)

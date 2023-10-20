@@ -9,6 +9,9 @@ namespace simple_app
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
