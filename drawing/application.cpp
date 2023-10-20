@@ -12,8 +12,14 @@
 #include "base/user/user/single_document_template.h"
 
 
+__DECLARE_VERSION(app_simple_drawing);
+
+
 namespace app_simple_drawing
 {
+
+
+   __IMPLEMENT_APPLICATION_VERSION(app_simple_drawing);
 
 
    application::application()
@@ -269,6 +275,7 @@ namespace app_simple_drawing
       return {};
 
    }
+
 
 
 } // namespace simple_drawing
