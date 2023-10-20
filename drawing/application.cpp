@@ -12,14 +12,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-__DECLARE_VERSION(app_simple_drawing);
+__DECLARE_RELEASE_TIME(app_simple_drawing);
 
 
 namespace app_simple_drawing
 {
 
 
-   __IMPLEMENT_APPLICATION_VERSION(app_simple_drawing);
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_drawing);
 
 
    application::application()
@@ -95,7 +95,7 @@ namespace app_simple_drawing
       if (!bCheckOk)
       {
 
-         information("ERROR: simple_check_box is not ok");
+         informationf("ERROR: simple_check_box is not ok");
 
       }
 
@@ -152,13 +152,13 @@ namespace app_simple_drawing
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -195,7 +195,7 @@ namespace app_simple_drawing
 
       }
 
-      information("\nfinished simple_drawing::on_request");
+      informationf("\nfinished simple_drawing::on_request");
 
    }
 

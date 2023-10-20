@@ -11,8 +11,14 @@
 #include "base/user/user/single_document_template.h"
 
 
+__DECLARE_RELEASE_TIME(app_simple_application);
+
+
 namespace app_simple_application
 {
+
+
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_application);
 
 
    application::application()
@@ -105,7 +111,7 @@ namespace app_simple_application
 
       }
 
-      information("finished simple_application::on_request");
+      informationf("finished simple_application::on_request");
 
    }
 

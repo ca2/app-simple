@@ -19,6 +19,9 @@ namespace app_simple_nanoui_example
 
       application();
       ~application() override;
+      
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
 
 
       virtual string preferred_experience() override;

@@ -9,8 +9,14 @@
 #include "base/user/user/single_document_template.h"
 
 
+__DECLARE_RELEASE_TIME(app_simple_notify_drawing);
+
+
 namespace app_simple_notify_drawing
 {
+
+
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_notify_drawing);
 
 
    application::application()
@@ -92,7 +98,7 @@ namespace app_simple_notify_drawing
          auto pthread = fork([this]()
             {
 
-               information("test");
+               informationf("test");
 
             });
 
@@ -103,13 +109,13 @@ namespace app_simple_notify_drawing
 
 #ifdef _DEBUG
 
-      information("_DEBUG build? (basis)");
+      informationf("_DEBUG build? (basis)");
 
       ASSERT(false);
 
 #else
 
-      information("RELEASE build? (stage)");
+      informationf("RELEASE build? (stage)");
 
       ASSERT(false);
 
@@ -133,7 +139,7 @@ namespace app_simple_notify_drawing
 
       }
 
-      information("\nfinished notify_drawing::on_request");
+      informationf("\nfinished notify_drawing::on_request");
 
    }
 

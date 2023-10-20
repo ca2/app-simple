@@ -5,9 +5,15 @@
 #include "impact.h"
 #include "base/user/user/single_document_template.h"
 
-//IMPLEMENT_APPLICATION(app_simple_box)
+
+__DECLARE_RELEASE_TIME(app_simple_box);
+
+
 namespace app_simple_box
 {
+
+
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_box);
 
 
    application::application()

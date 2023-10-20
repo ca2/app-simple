@@ -93,7 +93,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      if(get_impact_id() == ::impact_simple_form)
+      if(get_impact_id() == ::e_impact_simple_form)
       {
 
          auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);

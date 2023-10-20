@@ -8,6 +8,9 @@ namespace app_simple_nanoui_example
 {
 
 
+   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+
+
    application::application()
    {
 
