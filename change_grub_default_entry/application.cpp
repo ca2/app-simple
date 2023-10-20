@@ -14,13 +14,16 @@
 #include "base/user/user/single_document_template.h"
 
 
+__DECLARE_RELEASE_TIME(app_simple_change_grub_default_entry);
+
+
 ////#define memory_new ACME_NEW
 ///IMPLEMENT_APPLICATION(app_simple_change_grub_default_entry)
 namespace app_simple_change_grub_default_entry
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_change_grub_default_entry);
 
 
    application::application()
