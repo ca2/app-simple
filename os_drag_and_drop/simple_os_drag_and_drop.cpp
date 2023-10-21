@@ -339,11 +339,11 @@ namespace simple_os_drag_and_drop
 
       string str;
 
-      str.format("Start: %0.0f", angleStart.degree());
+      str.formatf("Start: %0.0f", angleStart.degree());
 
       pgraphics->text_out(r.left(), r.top(), str);
 
-      str.format("Angle: %0.0f", angleAngle.degree());
+      str.formatf("Angle: %0.0f", angleAngle.degree());
 
       pgraphics->text_out(r.left(), r.top() + 20, str);
 

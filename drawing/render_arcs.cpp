@@ -37,11 +37,11 @@ namespace app_simple_drawing
 
       string str1;
 
-      str1.format("Start: %0.0f", angleStart.degree());
+      str1.formatf("Start: %0.0f", angleStart.degree());
 
       string str2;
 
-      str2.format("Angle: %0.0f", angleAngle.degree());
+      str2.formatf("Angle: %0.0f", angleAngle.degree());
 
       auto size1 = pgraphics->get_text_extent(str1);
 

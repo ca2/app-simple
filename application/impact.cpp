@@ -199,7 +199,7 @@ namespace app_simple_application
 
       m_iSequence++;
       
-      strText.format("psimpleapplication->m_pimpact->_001OnDraw(pgraphics); %d", m_iSequence);
+      strText.formatf("psimpleapplication->m_pimpact->_001OnDraw(pgraphics); %d", m_iSequence);
 
       auto size = pgraphics->get_text_extent(strText);
 
