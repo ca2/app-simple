@@ -425,7 +425,7 @@ namespace app_simple_shortcut_amender
 
       string strMessage;
 
-      strMessage.format("Gonna search for '%s', in '%s' and reset icon\n\n",
+      strMessage.formatf("Gonna search for '%s', in '%s' and reset icon\n\n",
          strSource.c_str(), strFolder.c_str());
 
       string_array straAction = reset_icon(strFolder, strSource, bThumbnail);

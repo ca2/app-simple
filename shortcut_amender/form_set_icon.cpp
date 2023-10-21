@@ -483,7 +483,7 @@ namespace app_simple_shortcut_amender
 
       string strMessage;
 
-      strMessage.format("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
+      strMessage.formatf("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
          strSource.c_str(), strFolder.c_str(), strTarget.c_str());
 
       string_array straAction = set_icon(strTarget, strFolder, strSource, bThumbnail);

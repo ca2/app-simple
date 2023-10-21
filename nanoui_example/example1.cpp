@@ -319,7 +319,7 @@ namespace app_simple_nanoui_example
                slider->set_final_callback([&](float value) {
                   string str;
                   
-                  str.format("Final slider value: %d", (int)(value * 100));
+                  str.formatf("Final slider value: %d", (int)(value * 100));
                   message_box_asynchronous(nullptr, screen()->m_puserinteraction, str);
                   });
                text_box->set_fixed_size({ 60, 25 });
