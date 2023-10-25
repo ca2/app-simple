@@ -38,7 +38,7 @@ namespace app_simple_nanoui_example
       m_pmainwindow(pmainwindow)
    {
 
-      inc_ref();
+      //inc_ref();
       Window * window = memory_new Window(this, "Button demo");
       window->set_position({ 15, 15 });
       window->set_layout(memory_new GroupLayout());
