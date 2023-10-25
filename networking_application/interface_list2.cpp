@@ -264,7 +264,7 @@ namespace app_simple_networking_application
 
             auto puseritem = user_item(pitem);
 
-            puseritem->m_rectangle = r;
+            puseritem->m_rectangle2 = r;
 
          }
 
