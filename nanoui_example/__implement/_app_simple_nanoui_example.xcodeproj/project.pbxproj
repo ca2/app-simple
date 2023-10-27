@@ -24,6 +24,12 @@
 		9AA14D4E282A119900B1621E /* libnanoui.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA14D4C282A119900B1621E /* libnanoui.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB3DE84278386270025099F /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE82278386270025099F /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB3DE85278386270025099F /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE83278386270025099F /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9ABBB6AF2AEB2BF4007611C5 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6AE2AEB2BF4007611C5 /* libacme_darwin.dylib */; };
+		9ABBB6B02AEB2BF5007611C5 /* libacme_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABBB6AE2AEB2BF4007611C5 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9ABBB6B22AEB2C05007611C5 /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6B12AEB2C05007611C5 /* libapex_darwin.dylib */; };
+		9ABBB6B32AEB2C05007611C5 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABBB6B12AEB2C05007611C5 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9ABBB6B52AEB2C15007611C5 /* libaura_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6B42AEB2C15007611C5 /* libaura_darwin.dylib */; };
+		9ABBB6B62AEB2C15007611C5 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABBB6B42AEB2C15007611C5 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E2D2748D03C006BEBCC /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC73026786C6A00C4104F /* libaqua.dylib */; };
 		9AC01E2E2748D046006BEBCC /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC73126786C6A00C4104F /* libaura.dylib */; };
 		9AC01E3E2748D129006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E3A2748D0E0006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -232,7 +238,9 @@
 				9AB3DE84278386270025099F /* libssl.3.dylib in Embed Libraries */,
 				9A3CA85F27EAEFAA009ADCD2 /* libimaging_coreimage.dylib in Embed Libraries */,
 				9AFFC73626786C6B00C4104F /* libacme_apple.dylib in Embed Libraries */,
+				9ABBB6B32AEB2C05007611C5 /* libapex_darwin.dylib in Embed Libraries */,
 				9AFFC74726786C6B00C4104F /* libaura.dylib in Embed Libraries */,
+				9ABBB6B02AEB2BF5007611C5 /* libacme_darwin.dylib in Embed Libraries */,
 				9A93B0F427FCD3D70042D6C8 /* libapp_simple_nanoui_example.dylib in Embed Libraries */,
 				9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9AFFC74026786C6B00C4104F /* libapex_macos.dylib in Embed Libraries */,
@@ -244,6 +252,7 @@
 				9AFFC74F26786C8700C4104F /* libaura_posix.dylib in Embed Libraries */,
 				9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */,
 				9AFFC73A26786C6B00C4104F /* libacme_posix.dylib in Embed Libraries */,
+				9ABBB6B62AEB2C15007611C5 /* libaura_darwin.dylib in Embed Libraries */,
 				9AFFC74226786C6B00C4104F /* libapex_posix.dylib in Embed Libraries */,
 				9AFFC73C26786C6B00C4104F /* libapex.dylib in Embed Libraries */,
 				9AFFC74926786C6B00C4104F /* libaura_apple.dylib in Embed Libraries */,
@@ -278,6 +287,9 @@
 		9AA14D4C282A119900B1621E /* libnanoui.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnanoui.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB3DE82278386270025099F /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9AB3DE83278386270025099F /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
+		9ABBB6AE2AEB2BF4007611C5 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABBB6B12AEB2C05007611C5 /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABBB6B42AEB2C15007611C5 /* libaura_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC01E312748D069006BEBCC /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC01E332748D0E0006BEBCC /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
@@ -304,6 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABBB6B52AEB2C15007611C5 /* libaura_darwin.dylib in Frameworks */,
 				9AA14D4D282A119900B1621E /* libnanoui.dylib in Frameworks */,
 				9A92318527EAE4F000B5A78D /* libapp_simple_nanoui_example.dylib in Frameworks */,
 				9A3CA85E27EAEFAA009ADCD2 /* libimaging_coreimage.dylib in Frameworks */,
@@ -311,6 +324,8 @@
 				9AC01E2D2748D03C006BEBCC /* libaqua.dylib in Frameworks */,
 				9AFFC71F26786B6A00C4104F /* libacme.dylib in Frameworks */,
 				9AFFC72126786B6A00C4104F /* libapex.dylib in Frameworks */,
+				9ABBB6AF2AEB2BF4007611C5 /* libacme_darwin.dylib in Frameworks */,
+				9ABBB6B22AEB2C05007611C5 /* libapex_darwin.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +460,9 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ABBB6B42AEB2C15007611C5 /* libaura_darwin.dylib */,
+				9ABBB6B12AEB2C05007611C5 /* libapex_darwin.dylib */,
+				9ABBB6AE2AEB2BF4007611C5 /* libacme_darwin.dylib */,
 				9AA14D4C282A119900B1621E /* libnanoui.dylib */,
 				9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */,
 				9AC01E312748D069006BEBCC /* libbred.dylib */,
