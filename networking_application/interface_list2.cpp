@@ -245,8 +245,17 @@ namespace app_simple_networking_application
             ::string strAddress = paddress->get_display_number();
 
             auto size = pgraphics->get_text_extent(strAddress);
+            
+            ::string strName;
+            
+            if(paddress->m_strName.has_char())
+            {
+               
+               strName = paddress->m_strName + ": ";
+               
+            }
 
-            pgraphics->text_out(25, y, strAddress);
+            pgraphics->text_out(25, y, strName + strAddress);
 
             r.left() = 25;
             r.top() = y;
@@ -296,8 +305,6 @@ namespace app_simple_networking_application
       return true;
 
    }
-
-
 
 
 } // namespace app_simple_networking_application
