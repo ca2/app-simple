@@ -33,12 +33,12 @@ namespace app_simple_application
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
-
-      return ::simple_main_frame::has_pending_graphical_update();
-
-   }
+//   bool main_frame::has_pending_graphical_update()
+//   {
+//
+//      return ::simple_main_frame::has_pending_graphical_update();
+//
+//   }
 
 
    void main_frame::install_message_routing(::channel * pchannel)
