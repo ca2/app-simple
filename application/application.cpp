@@ -87,16 +87,16 @@ namespace app_simple_application
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(prequest->m_bMakeVisible)
+         if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
          {
 
-            information() << "pcreate->m_bMakeVisible";
+            information() << "::graphics::e_output_purpose_screen";
 
          }
          else
          {
 
-            information() << "NOT pcreate->m_bMakeVisible";
+            information() << "NOT ::graphics::e_output_purpose_screen";
 
          }
 
