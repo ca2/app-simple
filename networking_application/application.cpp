@@ -114,8 +114,8 @@ namespace app_simple_networking_application
 
       auto pdoctemplate = __new(::user::single_document_template(
                                "main",
-                               ::type < document >(),
-                               ::type < main_frame >(),
+                               ::type < ::app_simple_networking_application::document >(),
+                               ::type < ::app_simple_networking_application::main_frame >(),
                                get_pane_impact_type()));
 
       m_ptemplateSimpleDrawingMain = pdoctemplate;
@@ -175,7 +175,7 @@ namespace app_simple_networking_application
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(prequest->m_bMakeVisible)
+         if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
          {
 
             information() << "pcreate->m_bMakeVisible";
@@ -189,6 +189,8 @@ namespace app_simple_networking_application
          }
 
          m_ptemplateSimpleDrawingMain->request(prequest);
+
+         return;
 
       }
 
