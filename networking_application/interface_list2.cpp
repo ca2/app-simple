@@ -115,42 +115,42 @@ namespace app_simple_networking_application
 
       //initialize_application_composer();
 
-      get_app()->create_networking_application();
+//      get_app()->create_networking_application();
+//
+//      {
+//
+//         auto psignal = get_app()->get_signal("simple_checkbox");
+//
+//         psignal->add_handler(this);
+//
+//      }
+//
+//      {
+//
+//         auto psignal = get_app()->get_signal("no_client_frame");
+//
+//         psignal->add_handler(this);
+//
+//      }
 
-      {
 
-         auto psignal = get_app()->get_signal("simple_checkbox");
-
-         psignal->add_handler(this);
-
-      }
-
-      {
-
-         auto psignal = get_app()->get_signal("no_client_frame");
-
-         psignal->add_handler(this);
-
-      }
-
-
-      string strId = get_document()->m_pimpactsystem->m_atom;
-
-      string strText;
-
-      if(get_typed_parent<::user::split_impact>() != nullptr)
-      {
-
-         if(get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
-         {
-
-            auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
-
-            pinteraction->_001SetText(strText,::e_source_initialize);
-
-         }
-
-      }
+//      string strId = get_document()->m_pimpactsystem->m_atom;
+//
+//      string strText;
+//
+//      if(get_typed_parent<::user::split_impact>() != nullptr)
+//      {
+//
+//         if(get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact") != nullptr)
+//         {
+//
+//            auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
+//
+//            pinteraction->_001SetText(strText,::e_source_initialize);
+//
+//         }
+//
+//      }
 
    }
 
@@ -164,13 +164,13 @@ namespace app_simple_networking_application
    void interface_list2::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == "simple_checkbox"
-         || ptopic->m_atom == "no_client_frame")
-      {
-
-         set_need_redraw();
-
-      }
+//      if (ptopic->m_atom == "simple_checkbox"
+//         || ptopic->m_atom == "no_client_frame")
+//      {
+//
+//         set_need_redraw();
+//
+//      }
 
       ::user::impact::handle(ptopic, pcontext);
 
@@ -197,6 +197,8 @@ namespace app_simple_networking_application
 
       main_content().m_pitema = get_document()->m_pitemaInterface;
 
+      information() << "interface_list2::on_impact_update";
+
       return true;
 
    }
@@ -220,6 +222,8 @@ namespace app_simple_networking_application
 
       if(!main_content().m_pitema)
       {
+
+         information() << "No interfaces to list";
          
          return;
          
@@ -243,6 +247,8 @@ namespace app_simple_networking_application
             ::pointer < ::networking::address > paddress = pitem;
 
             ::string strAddress = paddress->get_display_number();
+
+            information() << "interface_list2 : address : " + strAddress;
 
             auto size = pgraphics->get_text_extent(strAddress);
             

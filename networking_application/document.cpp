@@ -3,6 +3,7 @@
 #include "computer_list2.h"
 #include "interface_list2.h"
 #include "application.h"
+#include "acme/constant/id.h"
 #include "acme/primitive/collection/_generic_array.h"
 #include "apex/platform/system.h"
 #include "apex/networking/networking.h"
@@ -24,10 +25,10 @@ namespace app_simple_networking_application
    }
 
 
-
-
    bool document::on_new_document()
    {
+
+      information() << "app_simple_networking_application::document::on_new_document";
 
       return on_open_document("");
 
@@ -37,9 +38,13 @@ namespace app_simple_networking_application
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
+      information() << "app_simple_networking_application::document::on_open_document";
+
       m_pitemaInterface = acmesystem()->m_papexsystem->networking()->list_network_interfaces();
 
       m_pitemaComputer = acmesystem()->m_papexsystem->networking()->list_computers();
+
+      //id_update_all_impacts(id_update);
 
       return true;
 

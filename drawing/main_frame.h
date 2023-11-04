@@ -29,7 +29,7 @@ namespace app_simple_drawing
       ::experience::frame * frame_experience() override;
 
 
-      bool has_pending_graphical_update() override;
+      //bool has_pending_graphical_update() override;
 
 
       void install_message_routing(::channel * pchannel) override;
