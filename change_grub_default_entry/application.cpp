@@ -123,7 +123,7 @@ namespace app_simple_change_grub_default_entry
       if (m_ptemplateChangeGrubDefaultEntryMain->get_document_count() == 0)
       {
 
-         prequest->m_bMakeVisible = false;
+         prequest->m_egraphicsoutputpurpose -= ::graphics::e_output_purpose_screen;
 
          m_ptemplateChangeGrubDefaultEntryMain->request(prequest);
 
