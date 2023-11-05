@@ -108,7 +108,7 @@ namespace app_simple_shader
 
       payload(FONTSEL_IMPACT) = true;
 
-      top_level_frame()->set_fps_interest();
+      add_graphical_output_purpose(this,::graphics::e_output_purpose_screen_fps);
 
       auto pprocedureRedraw = [this]()
          {
