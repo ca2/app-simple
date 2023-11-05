@@ -48,12 +48,12 @@ namespace app_simple_form
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
-
-      return true;
-
-   }
+//   bool main_frame::has_pending_graphical_update()
+//   {
+//
+//      return true;
+//
+//   }
 
 
    //bool main_frame::get_translucency(::user::enum_translucency & etranslucency, ::enum_element eelement, ::user::style_context * pcontext)

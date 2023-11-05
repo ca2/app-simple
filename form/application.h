@@ -14,12 +14,12 @@ namespace app_simple_form
    public:
 
 
-      bool                                   m_bMultiverseChat;
-
-      ::user::document *                     m_pdocMenu;
-      ::user::plain_edit_impact *            m_prollfps;
-      ::user::single_document_template *     m_ptemplateBeatMapperMain;
-      ::user::single_document_template *     m_ptemplateBeatMapperImpact;
+//      bool                                   m_bMultiverseChat;
+//
+//      ::user::document *                     m_pdocMenu;
+//      ::user::plain_edit_impact *            m_prollfps;
+      ::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormMain;
+      ::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormImpact;
 
 
       application();

@@ -26,15 +26,15 @@ namespace app_simple_form
    application::application()
    {
 
-      m_ptemplateBeatMapperMain  = NULL;
-      m_ptemplateBeatMapperImpact  = NULL;
+      //m_ptemplateBeatMapperMain  = NULL;
+      //m_ptemplateBeatMapperImpact  = NULL;
 
       m_strAppId                 = "app-simple/form";
       m_strBaseSupportId         = "app-simple/form";
       m_strAppName               = "Simple Form";
       m_bLicense                 = false;
       m_bNetworking              = false;
-      m_bMultiverseChat          = true;
+      //m_bMultiverseChat          = true;
 
    }
 
@@ -90,7 +90,7 @@ namespace app_simple_form
                                ::type < main_frame >(),
                                ::type < tab_impact >()));
 
-      m_ptemplateBeatMapperMain = pdoctemplate;
+      m_ptemplateAppSimpleFormMain = pdoctemplate;
 
       add_document_template(pdoctemplate);
 
@@ -101,7 +101,7 @@ namespace app_simple_form
                           ::type < frame >(),
                           ::type < main_impact >()));
 
-      m_ptemplateBeatMapperImpact = pdoctemplate;
+      m_ptemplateAppSimpleFormImpact = pdoctemplate;
 
       add_document_template(pdoctemplate);
 
@@ -149,19 +149,21 @@ namespace app_simple_form
 
 #endif
 
-      m_bMultiverseChat = !is_true("no_hello_edit");
+      //m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (m_ptemplateBeatMapperMain->get_document_count() == 0)
+      if (m_ptemplateAppSimpleFormMain->get_document_count() == 0)
       {
 
-         m_ptemplateBeatMapperMain->request(prequest);
+         m_ptemplateAppSimpleFormMain->request(prequest);
+
+         return;
 
       }
 
       if (prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateBeatMapperImpact->request(prequest);
+         m_ptemplateAppSimpleFormImpact->request(prequest);
 
       }
 
@@ -172,7 +174,7 @@ namespace app_simple_form
 
       }
 
-      informationf("\nfinished simple_form::on_request");
+      informationf("finished simple_form::on_request");
 
    }
 
