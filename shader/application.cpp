@@ -131,7 +131,7 @@ namespace app_simple_shader
       if (m_ptemplateSimpleShaderMain->get_document_count() == 0)
       {
 
-         if(prequest->m_bMakeVisible)
+         if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
          {
 
             information() << "prequest->m_bMakeVisible";
