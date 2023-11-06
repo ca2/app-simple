@@ -3,7 +3,7 @@
 #include "base/user/user/impact_system.h"
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
 
@@ -171,7 +171,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
 

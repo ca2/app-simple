@@ -2,7 +2,7 @@
 #include "application.h"
 #include "acme/application.h"
 
-app_simple_form::application g_app_simple_form__application;
+//app_simple_form::application g_app_simple_form__application;
 
 //int __implement()
 //{
@@ -14,6 +14,18 @@ app_simple_form::application g_app_simple_form__application;
 //   return iExitCode;
 //
 //}
+
+
+int application_main()
+{
+
+   auto papplication = __new(app_simple_form::application());
+
+   int iExitCode = papplication->application_main();
+
+   return iExitCode;
+
+}
 
 
 

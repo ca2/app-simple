@@ -5,11 +5,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-namespace simple_os_drag_and_drop
+__DECLARE_RELEASE_TIME(app_simple_os_drag_and_drop);
+
+
+namespace app_simple_os_drag_and_drop
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME();
+   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_os_drag_and_drop);
 
 
    application::application()
@@ -38,13 +41,13 @@ namespace simple_os_drag_and_drop
 
       //puser->will_use_impact_hint(FONTSEL_IMPACT);
       
-      factory()->add_factory_item <::simple_os_drag_and_drop::document >();
-      factory()->add_factory_item <::simple_os_drag_and_drop::frame >();
-      factory()->add_factory_item <::simple_os_drag_and_drop::main_frame >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::document >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::frame >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::main_frame >();
       factory()->add_factory_item <::user::button_impact >();
-      factory()->add_factory_item <::simple_os_drag_and_drop::impact >();
-      factory()->add_factory_item <::simple_os_drag_and_drop::main_impact >();
-      factory()->add_factory_item <::simple_os_drag_and_drop::tab_impact >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::impact >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::main_impact >();
+      factory()->add_factory_item <::app_simple_os_drag_and_drop::tab_impact >();
 
       ::aura::application::init_instance();
 
@@ -124,7 +127,7 @@ namespace simple_os_drag_and_drop
       if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
       {
 
-         if(prequest->m_bMakeVisible)
+         if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
          {
 
             information() << "pcreate->m_bMakeVisible";
@@ -155,7 +158,7 @@ namespace simple_os_drag_and_drop
 
       }
 
-      informationf("\nfinished simple_os_drag_and_drop::on_request");
+      informationf("\nfinished app_simple_os_drag_and_drop::on_request");
 
    }
 
@@ -198,7 +201,7 @@ namespace simple_os_drag_and_drop
    }
 
    
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
 
@@ -207,7 +210,7 @@ namespace simple_os_drag_and_drop
 //::acme::library * app_simple_drag_and_drop_get_new_library()
 //{
 //
-//   return memory_new ::apex::single_application_library < ::simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
+//   return memory_new ::apex::single_application_library < ::app_simple_os_drag_and_drop::application >("app-simple/drag_and_drop");
 //
 //}
 //

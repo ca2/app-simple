@@ -21,7 +21,7 @@ namespace user
 } // namespace user
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
    class application;
@@ -33,7 +33,7 @@ namespace simple_os_drag_and_drop
 
 
 #undef APP_TYPE
-#define APP_TYPE ::simple_os_drag_and_drop::application
+#define APP_TYPE ::app_simple_os_drag_and_drop::application
 
 
 #include "simple_os_drag_and_drop.h"

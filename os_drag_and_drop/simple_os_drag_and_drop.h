@@ -7,7 +7,7 @@
 //#include "acme/primitive/geometry2d/_geometry2d.h"
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
 
@@ -17,11 +17,11 @@ namespace simple_os_drag_and_drop
    public:
 
 
-      rectangle_i32                                m_rectangle;
-      ::user::impact *                    m_pimpact;
-      string                              m_strFont;
-      int                                 m_iDragAndDrop;
-      string_map < ::image_pointer >                m_pimagemap;
+      rectangle_i32                          m_rectangle;
+      ::user::impact *                       m_pimpact;
+      string                                 m_strFont;
+      int                                    m_iDragAndDrop;
+      string_map < ::image_pointer >         m_pimagemap;
 
 
       simple_os_drag_and_drop();
@@ -48,6 +48,6 @@ namespace simple_os_drag_and_drop
    };
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
