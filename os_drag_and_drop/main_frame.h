@@ -4,7 +4,7 @@
 #include "base/user/simple/main_frame.h"
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
 
@@ -28,12 +28,12 @@ namespace simple_os_drag_and_drop
 //      ::user::enum_translucency get_translucency(::user::style * pstyle) override;
       ::experience::frame * frame_experience() override;
 
-      bool has_pending_graphical_update() override;
+      //bool has_pending_graphical_update() override;
 
    };
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
 

@@ -51,12 +51,12 @@ namespace app_simple_box
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
+   //bool main_frame::has_pending_graphical_update()
+   //{
 
-      return ::simple_frame_window::has_pending_graphical_update();
+   //   return ::simple_frame_window::has_pending_graphical_update();
 
-   }
+   //}
 
 
    void main_frame::install_message_routing(::channel * pchannel)

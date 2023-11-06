@@ -3,7 +3,7 @@
 #include "__implement.h"
 
 
-app_simple_nanoui_example::application g_app_simple_nanoui_example_application;
+//app_simple_nanoui_example::application g_app_simple_nanoui_example_application;
 //#include "acme/primitive/collection/string_map.h"
 
 
@@ -20,3 +20,16 @@ app_simple_nanoui_example::application g_app_simple_nanoui_example_application;
 //
 //
 //
+int application_main()
+{
+
+   auto papplication = __new(app_simple_nanoui_example::application());
+
+   int iExitCode = papplication->application_main();
+
+   return iExitCode;
+
+}
+
+
+

@@ -3,7 +3,7 @@
 #include "base/user/user/tab_pane.h"
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
 
@@ -301,7 +301,7 @@ namespace simple_os_drag_and_drop
    }
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
 

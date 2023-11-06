@@ -3,7 +3,7 @@
 #include "__implement.h"
 
 
-app_simple_shader::application g_app_simple_shader_application;
+//app_simple_shader::application g_app_simple_shader_application;
 
 //int __implement()
 //{
@@ -18,3 +18,17 @@ app_simple_shader::application g_app_simple_shader_application;
 
 
 
+
+
+
+
+int application_main()
+{
+
+   auto papplication = __new(app_simple_shader::application());
+
+   int iExitCode = papplication->application_main();
+
+   return iExitCode;
+
+}

@@ -2,7 +2,7 @@
 
 
 
-namespace simple_os_drag_and_drop
+namespace app_simple_os_drag_and_drop
 {
 
 
@@ -71,12 +71,12 @@ namespace simple_os_drag_and_drop
    }
 
 
-   bool main_frame::has_pending_graphical_update()
-   {
+   //bool main_frame::has_pending_graphical_update()
+   //{
 
-      return ::simple_frame_window::has_pending_graphical_update();
+   //   return ::simple_frame_window::has_pending_graphical_update();
 
-   }
+   //}
 
 
    //bool main_frame::get_translucency(::user::enum_translucency & etranslucency, ::enum_element eelement, ::user::style_context * pcontext)
@@ -109,7 +109,7 @@ namespace simple_os_drag_and_drop
    //}
 
 
-} // namespace simple_os_drag_and_drop
+} // namespace app_simple_os_drag_and_drop
 
 
 
