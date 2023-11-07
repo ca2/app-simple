@@ -4,7 +4,7 @@ project(_app_simple_box CXX)
 
 
 
-add_executable(${PROJECT_NAME} application.cpp)
+add_executable(${PROJECT_NAME} application_main.cpp)
 
 
 list(APPEND executable_references
