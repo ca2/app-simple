@@ -18,6 +18,7 @@
 		9A9902BE27532B7F00B13F01 /* libapp_simple_networking_application.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9902B927532B0F00B13F01 /* libapp_simple_networking_application.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9904232753303E00B13F01 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99042027532EFC00B13F01 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9904242753304000B13F01 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99041F27532EFC00B13F01 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A9A193A2AFC379700FA9BEB /* libdarwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9A19382AFC379700FA9BEB /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A4D27519C560094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A4A27519C560094A04C /* Images.xcassets */; };
 		9A9E4A972751A3B20094A04C /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9E4A802751A3B20094A04C /* libacme.dylib */; };
 		9A9E4A982751A3B20094A04C /* libacme.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9E4A802751A3B20094A04C /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -194,6 +195,20 @@
 			remoteGlobalIDString = 9A1D5D3D2751A81D003D9B5F;
 			remoteInfo = app_simple_networking_application;
 		};
+		9A9A192A2AFC378400FA9BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8C818327844A71000C8587 /* crypto_openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC97ECF2A71B2A700B1BCF3;
+			remoteInfo = static_crypto_openssl;
+		};
+		9A9A19352AFC378400FA9BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A41D7A228D05D3E0008DB81 /* networking_bsd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A818E562A71D978008F470C;
+			remoteInfo = static_networking_bsd;
+		};
 		9AA802742665752000A6B449 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A00E5602661209B00517464 /* draw2d_quartz2d.xcodeproj */;
@@ -283,6 +298,7 @@
 				9A9E4A9E2751A3B20094A04C /* libacme_posix.dylib in Embed Libraries */,
 				9A9E4ABE2751A3B30094A04C /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9A9E4A982751A3B20094A04C /* libacme.dylib in Embed Libraries */,
+				9A9A193A2AFC379700FA9BEB /* libdarwin.dylib in Embed Libraries */,
 				9A9E4AC62751A3B40094A04C /* libnode_macos.dylib in Embed Libraries */,
 				9A9E4AC22751A3B30094A04C /* libidn.dylib in Embed Libraries */,
 				9AB15C2529A87B0700DFDF90 /* libacme_darwin.dylib in Embed Libraries */,
@@ -337,6 +353,7 @@
 		9A8F4D392A26D49200097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A99041F27532EFC00B13F01 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
 		9A99042027532EFC00B13F01 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
+		9A9A19382AFC379700FA9BEB /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A4A27519C560094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A4B27519C560094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9E4A802751A3B20094A04C /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -478,6 +495,7 @@
 			children = (
 				9A41D7B328D05D3E0008DB81 /* libnetworking_bsd.dylib */,
 				9A41D7B528D05D3E0008DB81 /* libios_networking_bsd.a */,
+				9A9A19362AFC378400FA9BEB /* libstatic_networking_bsd.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -487,6 +505,7 @@
 			children = (
 				9A8C818827844A71000C8587 /* libcrypto_openssl.dylib */,
 				9A41D7A828D05D3E0008DB81 /* libios_crypto_openssl.a */,
+				9A9A192B2AFC378400FA9BEB /* libstatic_crypto_openssl.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -533,6 +552,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A9A19382AFC379700FA9BEB /* libdarwin.dylib */,
 				9A71B8482A469EA700F9FC3D /* libunac.dylib */,
 				9AB15C2129A87B0600DFDF90 /* libacme_darwin.dylib */,
 				9AB15C2229A87B0600DFDF90 /* libapex_darwin.dylib */,
@@ -825,6 +845,20 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libapp_simple_networking_application.dylib;
 			remoteRef = 9A9902B827532B0F00B13F01 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A9A192B2AFC378400FA9BEB /* libstatic_crypto_openssl.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_crypto_openssl.dylib;
+			remoteRef = 9A9A192A2AFC378400FA9BEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A9A19362AFC378400FA9BEB /* libstatic_networking_bsd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_networking_bsd.a;
+			remoteRef = 9A9A19352AFC378400FA9BEB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9ADB6CD828D1475F00608B22 /* libdatabase_sqlite3.dylib */ = {
