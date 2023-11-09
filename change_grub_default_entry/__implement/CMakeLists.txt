@@ -3,7 +3,7 @@ project(_app_simple_change_grub_default_entry CXX)
 
 
 
-add_executable(${PROJECT_NAME} application.cpp)
+add_executable(${PROJECT_NAME} application_main.cpp)
 
 
 
