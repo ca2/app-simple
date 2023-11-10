@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A1D5ECB2751AC11003D9B5F /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A22748B27CF40980042BAC2 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748A27CF40980042BAC2 /* application.cpp */; };
+		9A22748B27CF40980042BAC2 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22748A27CF40980042BAC2 /* application_main.cpp */; };
 		9A273CB729CF184A00CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CB329CF184A00CBEB97 /* InfoPlist.strings */; };
 		9A273CB829CF184A00CBEB97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CB529CF184A00CBEB97 /* MainMenu.xib */; };
 		9A3CA85F27EAEFAA009ADCD2 /* libimaging_coreimage.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A3CA85727EAEF7F009ADCD2 /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -269,7 +269,7 @@
 		9A00E18F26611D5D00517464 /* node_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = node_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/node_macos/node_macos.xcodeproj"; sourceTree = "<group>"; };
 		9A00E19B26611D5E00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
 		9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A22748A27CF40980042BAC2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
+		9A22748A27CF40980042BAC2 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
 		9A273CB429CF184A00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A273CB629CF184A00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,7 +499,7 @@
 			children = (
 				9A8F4D102A26D3E500097EE1 /* _____debug.xcconfig */,
 				9A8F4D1C2A26D3F900097EE1 /* _____release.xcconfig */,
-				9A22748A27CF40980042BAC2 /* application.cpp */,
+				9A22748A27CF40980042BAC2 /* application_main.cpp */,
 				9A8C816C2783F879000C8587 /* _matter.zip */,
 				9A9E4A2627519BC10094A04C /* macos */,
 			);
@@ -763,7 +763,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A22748B27CF40980042BAC2 /* application.cpp in Sources */,
+				9A22748B27CF40980042BAC2 /* application_main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
