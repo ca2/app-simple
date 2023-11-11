@@ -167,7 +167,7 @@ namespace app_simple_application
 
       pgraphics->set_text_color(color_dk);
 
-      auto psystem = acmesystem()->m_paurasystem;
+      auto psystem = system()->m_paurasystem;
 
       auto pnode = psystem->draw2d();
 

@@ -40,9 +40,9 @@ namespace app_simple_networking_application
 
       information() << "app_simple_networking_application::document::on_open_document";
 
-      m_pitemaInterface = acmesystem()->m_papexsystem->networking()->list_network_interfaces();
+      m_pitemaInterface = system()->m_papexsystem->networking()->list_network_interfaces();
 
-      m_pitemaComputer = acmesystem()->m_papexsystem->networking()->list_computers();
+      m_pitemaComputer = system()->m_papexsystem->networking()->list_computers();
 
       //id_update_all_impacts(id_update);
 

@@ -187,9 +187,9 @@ namespace app_simple_notify_drawing
    string application::draw2d_get_default_implementation_name()
    {
 
-      //return acmesystem()->implementation_name("draw2d", "opengl");
+      //return system()->implementation_name("draw2d", "opengl");
 
-      //return acmesystem()->implementation_name("draw2d", "gdiplus");
+      //return system()->implementation_name("draw2d", "gdiplus");
 
       return ::app_simple_drawing::application::draw2d_get_default_implementation_name();
 
