@@ -17,7 +17,7 @@ namespace app_simple_drawing
    void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, ::angle_f64 angleStart, ::angle_f64 angleAngle, bool bPath)
    {
 
-      auto psystem = acmesystem()->m_paurasystem;
+      auto psystem = system()->m_paurasystem;
 
       auto pdraw2d = psystem->draw2d();
 

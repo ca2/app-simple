@@ -89,7 +89,7 @@ namespace app_simple_networking_application
       }
 
 
-      //auto addressa = acmesystem()->m_papexsystem->networking()->list_network_interfaces();
+      //auto addressa = system()->m_papexsystem->networking()->list_network_interfaces();
 
       //for (::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
@@ -102,7 +102,7 @@ namespace app_simple_networking_application
 
       //}
 
-      //auto addressa2 = acmesystem()->m_papexsystem->networking()->list_computers();
+      //auto addressa2 = system()->m_papexsystem->networking()->list_computers();
 
       //for (::index iItem = 0; iItem < addressa2.size(); iItem++)
       //{
