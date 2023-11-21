@@ -61,7 +61,7 @@ namespace app_simple_nanoui_example
 
       m_pmainwindow->add_graphical_output_purpose(this, ::graphics::e_output_purpose_screen);
 
-      m_pmainwindow->create_main_window();
+      m_pmainwindow->create_main_window(prequest);
 
 //      m_pmainwindow->set_need_layout();
 //
