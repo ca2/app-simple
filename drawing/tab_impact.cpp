@@ -94,7 +94,7 @@ namespace app_simple_drawing
          m_pimpactDrawing = m_pimpactdata->m_pplaceholder->get_hold();
 
       }
-
+      
    }
 
 
