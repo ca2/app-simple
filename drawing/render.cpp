@@ -37,18 +37,18 @@ namespace app_simple_drawing
 #ifdef _DEBUG
 
 
-   int64_t render::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t render::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::particle::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::particle::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t render::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t render::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::particle::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::particle::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

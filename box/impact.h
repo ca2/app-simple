@@ -27,8 +27,8 @@ namespace app_simple_box
 
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
-      virtual int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual int64_t increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
+      virtual int64_t decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
 #endif
 
       virtual void install_message_routing(::channel * psender) override;

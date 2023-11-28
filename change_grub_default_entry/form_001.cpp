@@ -51,18 +51,18 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
 
-   int64_t form_001::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t form_001::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_001::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

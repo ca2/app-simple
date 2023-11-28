@@ -38,18 +38,18 @@ namespace app_simple_nanoui_example
 #ifdef _DEBUG
 
 
-   int64_t main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t main_window::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::user::main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::user::main_window::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t main_window::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t main_window::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::user::main_window::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::user::main_window::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -100,9 +100,9 @@ namespace app_simple_nanoui_example
 
       //set_fps_interest();
 
-      m_exampleapplicationa.add(memory_new ExampleApplication1(this));
-      m_exampleapplicationa.add(memory_new ExampleApplication2(this));
-      m_exampleapplicationa.add(memory_new ExampleApplicationIcons(this));
+      m_exampleapplicationa.add(__new< ExampleApplication1 >(this));
+      m_exampleapplicationa.add(__new< ExampleApplication2 >(this));
+      m_exampleapplicationa.add(__new< ExampleApplicationIcons >(this));
       //start(m_pexampleapplication, this);
 
       set_current_application(0);

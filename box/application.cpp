@@ -58,7 +58,7 @@ namespace app_simple_box
 
       //}
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
          "main",
          ::type < document >(),
          ::type < main_frame >(),

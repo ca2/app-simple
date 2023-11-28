@@ -17,7 +17,7 @@
 __DECLARE_RELEASE_TIME(app_simple_change_grub_default_entry);
 
 
-////#define memory_new ACME_NEW
+//
 ///IMPLEMENT_APPLICATION(app_simple_change_grub_default_entry)
 namespace app_simple_change_grub_default_entry
 {
@@ -50,18 +50,18 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -93,7 +93,7 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
                               "main",
                               ::type < document >(),
                               ::type < main_frame >(),

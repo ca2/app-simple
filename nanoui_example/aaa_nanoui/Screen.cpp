@@ -399,7 +399,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //
 //#if defined(NANOUI_USE_METAL)
 //   if (depth_buffer) {
-//      m_depth_stencil_texture = memory_new Texture(
+//      m_depth_stencil_texture = __new< Texture >(
 //         stencil_buffer ? Texture::PixelFormat::DepthStencil
 //         : Texture::PixelFormat::Depth,
 //         Texture::ComponentFormat::Float32,
@@ -481,7 +481,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //      throw std::runtime_error("Could not initialize NanoVG!");
 //
 //   m_visible = glfwGetWindowAttrib(window, GLFW_VISIBLE) != 0;
-//   set_theme(memory_new Theme(m_nvg_context));
+//   set_theme(__new< Theme >(m_nvg_context));
 //   m_mouse_pos = Vector2i(0);
 //   m_mouse_state = m_modifiers = 0;
 //   m_drag_active = false;
