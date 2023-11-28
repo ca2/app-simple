@@ -6,12 +6,12 @@
 //app_simple_application::application g_app_simple_application;
 
 
-int application_main()
+::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = __new(app_simple_application::application());
+   auto papplication = __allocate< app_simple_application::application >();
 
-   int iExitCode = papplication->application_main();
+   int iExitCode = papplication->application_main(pplatform);
 
    return iExitCode;
 

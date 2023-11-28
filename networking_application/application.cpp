@@ -112,7 +112,7 @@ namespace app_simple_networking_application
 
       //}
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
                                "main",
                                ::type < ::app_simple_networking_application::document >(),
                                ::type < ::app_simple_networking_application::main_frame >(),
@@ -122,7 +122,7 @@ namespace app_simple_networking_application
 
       add_document_template(pdoctemplate);
 
-      auto pdoctemplate2 = __new(::user::multiple_document_template(
+      auto pdoctemplate2 = __allocate < ::user::multiple_document_template >(
          "command",
          ::type < command_document >(),
          ::type < main_frame >(),
@@ -226,18 +226,18 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 

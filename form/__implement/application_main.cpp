@@ -7,7 +7,7 @@
 //int __implement()
 //{
 //
-//   auto papp = memory_new app_simple_form::application();
+//   auto papp = __new< app_simple_form::application >();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -16,12 +16,12 @@
 //}
 
 
-int application_main()
+::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = __new(app_simple_form::application());
+   auto papplication = __allocate< app_simple_form::application >();
 
-   int iExitCode = papplication->application_main();
+   int iExitCode = papplication->application_main(pplatform);
 
    return iExitCode;
 

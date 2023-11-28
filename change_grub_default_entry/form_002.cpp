@@ -43,18 +43,18 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
   
-   int64_t form_002::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_002::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t form_002::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t form_002::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -106,7 +106,7 @@ namespace app_simple_change_grub_default_entry
 
       m_pbutton->add_handler(this);
 
-      m_pstill->set_window_text("Enter memory_new text:");
+      m_pstill->set_window_text("Enter new text:");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 

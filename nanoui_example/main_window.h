@@ -37,8 +37,8 @@ namespace app_simple_nanoui_example
 //      // void dump(dump_context & dumpcontext) const override;
 
 #ifdef _DEBUG
-      int64_t increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
-      int64_t decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      int64_t increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
+      int64_t decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
 #endif
 
 

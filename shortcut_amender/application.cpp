@@ -48,18 +48,18 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   int64_t application::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t application::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t application::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return ::object::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -94,7 +94,7 @@ namespace app_simple_shortcut_amender
 
       //}
 
-      auto pdoctemplate = __new(::user::single_document_template(
+      auto pdoctemplate = __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -103,7 +103,7 @@ namespace app_simple_shortcut_amender
       add_document_template(pdoctemplate);
 
 
-      pdoctemplate = __new(::user::single_document_template(
+      pdoctemplate = __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -211,7 +211,7 @@ namespace app_simple_shortcut_amender
 //::acme::library * app_simple_shortcut_amender_get_new_library()
 //{
 //
-//   return memory_new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
+//   return __new< ::apex::single_application_library < ::simple_shortcut::application > >("app-simple/form");
 //
 //}
 //

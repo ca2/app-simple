@@ -35,7 +35,7 @@ class NANOUI_EXPORT Screen : public Widget
    friend class Window;
 public:
    /**
-    * Create a memory_new Screen instance
+    * Create a new Screen instance
     *
     * \param size
     *     Size in pixels at 96 dpi (on high-DPI screens, the actual resolution

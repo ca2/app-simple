@@ -44,18 +44,18 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   int64_t interface_list2::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t interface_list2::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return  ::user::impact::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return  ::user::impact::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
 
-   int64_t interface_list2::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+   int64_t interface_list2::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
    {
 
-      return  ::user::impact::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      return  ::user::impact::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
 
    }
 
@@ -94,7 +94,7 @@ namespace app_simple_networking_application
       //for (::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
 
-      //   auto pitem = __new(::item(e_element_item, iItem));
+      //   auto pitem = __allocate< ::item >(e_element_item, iItem);
 
       //   add_item(pitem);
 

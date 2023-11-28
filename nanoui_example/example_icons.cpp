@@ -32,7 +32,7 @@ using namespace nanoui;
 // `icon` should be the defined constant in nanoui/entypo.h
 // the button label will be the string that represents this
 #define ADD_BUTTON(icon)                                   \
-    auto b_##icon = memory_new Button(wrapper, #icon, icon);      \
+    auto b_##icon = __new< Button >(wrapper, #icon, icon);      \
     b_##icon->set_icon_position(Button::IconPosition::Left); \
     b_##icon->set_fixed_width(half_width);
 namespace app_simple_nanoui_example
@@ -51,21 +51,21 @@ namespace app_simple_nanoui_example
         static constexpr int height     = 800;
 
         // create a fixed size screen with one window
-        //Screen *screen = memory_new Screen({width, height}, "NanoGUI Icons", false);
+        //Screen *screen = __new< Screen >({width, height}, "NanoGUI Icons", false);
 
-        Window * pwindow = memory_new Window(this, "All Icons");
+        Window * pwindow = __new< Window >(this, "All Icons");
         m_pwindow = pwindow;
         pwindow->set_position({0, 0});
         pwindow->set_fixed_size({width, height});
 
         // attach a vertical scroll panel
-        auto vscroll = memory_new VScrollPanel(pwindow);
+        auto vscroll = __new< VScrollPanel >(pwindow);
         vscroll->set_fixed_size({width, height});
 
         // vscroll should only have *ONE* child. this is what `wrapper` is for
-        auto wrapper = memory_new Widget(vscroll);
+        auto wrapper = __new< Widget >(vscroll);
         wrapper->set_fixed_size({width, height});
-        wrapper->set_layout(memory_new GridLayout());// defaults: 2 columns
+        wrapper->set_layout(__new< GridLayout >());// defaults: 2 columns
 
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

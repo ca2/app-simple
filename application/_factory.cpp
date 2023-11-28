@@ -10,7 +10,7 @@
 //CLASS_DECL_IMPORT::acme::application * CONCATENATE_ID(new_, APPLICATION)() \
 //{ \
 //  \
-//   return memory_new ::APPLICATION::application();  \
+//   return __new< ::APPLICATION::application >();  \
 //  \
 //}
 
