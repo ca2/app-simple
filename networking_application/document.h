@@ -34,8 +34,8 @@ namespace app_simple_networking_application
       virtual bool on_open_document(const ::payload & payloadFile) override;
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
-      virtual int64_t decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
+      virtual int64_t increment_reference_count() override;
+      virtual int64_t decrement_reference_count() override;
 #endif
 
       //virtual void write(::binary_stream & stream) const override;

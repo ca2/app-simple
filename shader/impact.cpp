@@ -61,18 +61,18 @@ namespace app_simple_shader
 #ifdef _DEBUG
 
 
-   int64_t impact::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t impact::increment_reference_count()
    {
 
-      return  ::user::impact::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return  ::user::impact::increment_reference_count();
 
    }
 
 
-   int64_t impact::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t impact::decrement_reference_count()
    {
 
-      return  ::user::impact::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return  ::user::impact::decrement_reference_count();
 
    }
 

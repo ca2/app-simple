@@ -38,18 +38,18 @@ namespace app_simple_nanoui_example
 #ifdef _DEBUG
 
 
-   int64_t main_window::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t main_window::increment_reference_count()
    {
 
-      return ::user::main_window::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::user::main_window::increment_reference_count();
 
    }
 
 
-   int64_t main_window::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t main_window::decrement_reference_count()
    {
 
-      return ::user::main_window::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::user::main_window::increment_reference_count();
 
    }
 

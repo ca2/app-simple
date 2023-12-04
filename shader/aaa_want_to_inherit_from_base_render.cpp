@@ -66,18 +66,18 @@ namespace simple_shader
 #ifdef _DEBUG
 
 
-   int64_t render::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t render::increment_reference_count()
    {
 
-      return ::object::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::object::increment_reference_count();
 
    }
 
 
-   int64_t render::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t render::decrement_reference_count()
    {
 
-      return ::object::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::object::decrement_reference_count();
 
    }
 

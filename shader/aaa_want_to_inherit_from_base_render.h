@@ -34,8 +34,8 @@ namespace simple_shader
       virtual ::e_status initialize(::particle * pparticle) override;
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
-      virtual int64_t decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
+      virtual int64_t increment_reference_count() override;
+      virtual int64_t decrement_reference_count() override;
 #endif
 
       string get_font();

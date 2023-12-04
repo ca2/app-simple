@@ -36,8 +36,8 @@ namespace app_simple_networking_application
       virtual void on_request(::request * prequest) override;
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
-      virtual int64_t decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS) override;
+      virtual int64_t increment_reference_count() override;
+      virtual int64_t decrement_reference_count() override;
 #endif
 
       //virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
