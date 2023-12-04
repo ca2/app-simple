@@ -3,7 +3,7 @@
 #include "document.h"
 #include "application.h"
 #include "acme/constant/message.h"
-#include "acme/primitive/mathematics/_random.h"
+#include "acme/primitive/mathematics/mathematics.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
 
@@ -34,18 +34,18 @@ namespace app_simple_application
 #ifdef _DEBUG
 
 
-   int64_t impact::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t impact::increment_reference_count()
    {
 
-      return ::user::impact::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::user::impact::increment_reference_count();
 
    }
 
 
-   int64_t impact::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t impact::decrement_reference_count()
    {
 
-      return ::user::impact::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return ::user::impact::decrement_reference_count();
 
    }
 
@@ -214,8 +214,8 @@ namespace app_simple_application
       else
       {
        
-         point.x() = random(0, (int)(rectangleX.width() - size.cx()));
-         point.y() = random(0, (int)(rectangleX.height() - size.cy() * 2));
+         point.x() = mathematics()->random(0, (int)(rectangleX.width() - size.cx()));
+         point.y() = mathematics()->random(0, (int)(rectangleX.height() - size.cy() * 2));
 
       }
 

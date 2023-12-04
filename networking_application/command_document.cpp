@@ -80,17 +80,17 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   int64_t command_document::increment_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t command_document::increment_reference_count()
    {
 
-      return  ::user::document::increment_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return  ::user::document::increment_reference_count();
 
    }
 
-   int64_t command_document::decrement_reference_count(REFERENCING_DEBUGGING_PARAMETERS_DEF)
+   int64_t command_document::decrement_reference_count()
    {
 
-      return  ::user::document::decrement_reference_count(REFERENCING_DEBUGGING_ARGS);
+      return  ::user::document::decrement_reference_count();
 
    }
 
