@@ -56,19 +56,17 @@ namespace app_simple_application
 
       ::base::application::init_instance();
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
-                               "main",
-                               ::type < document >(),
-                               ::type < main_frame >(),
-                               ::type < impact >());
+      //auto pdoctemplate = 
 
-      __construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
+      //__construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
-      auto psession = get_session();
-
-      auto puser = psession->baseuser();
-
-      puser->document_manager()->add_document_template(pdoctemplate);
+      add_impact_system(
+         "main", 
+         __allocate < ::user::single_document_template >(
+         "main",
+         ::type < document >(),
+         ::type < main_frame >(),
+         ::type < impact >()));
 
    }
 
@@ -84,7 +82,7 @@ namespace app_simple_application
    void application::on_request(::request * prequest)
    {
 
-      if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
          if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
@@ -100,7 +98,7 @@ namespace app_simple_application
 
          }
 
-         m_ptemplateSimpleDrawingMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
