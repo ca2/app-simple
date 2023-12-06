@@ -25,7 +25,7 @@ namespace app_simple_drawing
    application::application()
    {
 
-      m_ptemplateSimpleDrawingMain = nullptr;
+      //m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabimpact = nullptr;
 
@@ -116,15 +116,17 @@ namespace app_simple_drawing
 
       ::base::application::init_instance();
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "main",
+         __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                get_pane_impact_type()));
 
-      m_ptemplateSimpleDrawingMain = pdoctemplate;
+      //m_ptemplateSimpleDrawingMain = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
       default_data_save_handling("simple_checkbox");
 
@@ -168,7 +170,7 @@ namespace app_simple_drawing
 
       m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
          if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
@@ -184,7 +186,7 @@ namespace app_simple_drawing
 
          }
 
-         m_ptemplateSimpleDrawingMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
@@ -210,9 +212,11 @@ namespace app_simple_drawing
 
 #ifdef _DEBUG
 
+   int xxx = 0;
 
    int64_t application::increment_reference_count()
    {
+      xxx++;
 
       return ::object::increment_reference_count();
 

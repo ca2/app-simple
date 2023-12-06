@@ -15,7 +15,7 @@ namespace app_simple_box
 
 
       ::payload                           m_varMessage;
-      ::user::single_document_template *  m_ptemplateAppSimpleBoxMain;
+      //::user::single_document_template *  m_ptemplateAppSimpleBoxMain;
 
 
 
