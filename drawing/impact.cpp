@@ -5,6 +5,8 @@
 #include "document.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
+#include "acme/handler/handler.h"
+#include "apex/handler/signal.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
 #include "base/user/user/impact_system.h"
@@ -154,7 +156,13 @@ namespace app_simple_drawing
 
    void impact::on_message_destroy(::message::message * pmessage)
    {
+      if (m_prender)
+      {
 
+         m_prender->finalize();
+
+      }
+      m_prender.release();
    }
 
 

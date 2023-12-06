@@ -5,7 +5,7 @@
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
 #include "acme/platform/sequencer.h"
-#include "acme/primitive/mathematics/_random.h"
+#include "acme/primitive/mathematics/mathematics.h"
 #include "acme/user/nano/nano.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
@@ -216,8 +216,8 @@ namespace app_simple_box
       else
       {
        
-         point.x() = random(0, (int)(rectangleX.width() - size.cx()));
-         point.y() = random(0, (int)(rectangleX.height() - size.cy() * 2));
+         point.x() = mathematics()->random(0, (int)(rectangleX.width() - size.cx()));
+         point.y() = mathematics()->random(0, (int)(rectangleX.height() - size.cy() * 2));
 
       }
       

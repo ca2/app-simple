@@ -28,7 +28,7 @@ namespace app_simple_drawing
 
       ::user::document *                     m_pdocMenu;
       ::user::plain_edit_impact *              m_prollfps;
-      ::user::single_document_template *     m_ptemplateSimpleDrawingMain;
+      //::user::single_document_template *     m_ptemplateSimpleDrawingMain;
       tab_impact *                             m_ptabimpact;
 
       application();

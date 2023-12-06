@@ -20,7 +20,7 @@ namespace app_simple_box
    {
       
       m_bImaging = false;
-      m_ptemplateAppSimpleBoxMain = nullptr;
+      //m_ptemplateAppSimpleBoxMain = nullptr;
       
       //m_bWriteText = false;
       
@@ -58,15 +58,17 @@ namespace app_simple_box
 
       //}
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "main",
+         __allocate < ::user::single_document_template >(
          "main",
          ::type < document >(),
          ::type < main_frame >(),
          ::type < impact >()));
 
-      m_ptemplateAppSimpleBoxMain = pdoctemplate;
+      //m_ptemplateAppSimpleBoxMain = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
       default_data_save_handling("simple_checkbox");
 
@@ -86,10 +88,10 @@ namespace app_simple_box
 
       m_strAppName = "Simple Message Box!!";
 
-      if (m_ptemplateAppSimpleBoxMain->get_document_count() <= 0)
+      if (impact_system("main")->get_document_count() <= 0)
       {
 
-         m_ptemplateAppSimpleBoxMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 

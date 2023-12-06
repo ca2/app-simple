@@ -22,7 +22,7 @@ namespace app_simple_notify_drawing
    application::application()
    {
 
-      m_ptemplateNotifyDrawingMain = NULL;
+      //m_ptemplateNotifyDrawingMain = NULL;
 
       m_strAppId = "app-simple/notify_drawing";
       m_strBaseSupportId = "ca2_flag";
@@ -56,13 +56,16 @@ namespace app_simple_notify_drawing
 
       add_matter_locator("app-simple/drawing");
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      //auto pdoctemplate =
+      add_impact_system(
+         "main",
+      __allocate < ::user::single_document_template >(
                                "main",
                                ::type < app_simple_drawing::document >(),
                                ::type < main_frame >(),
                                ::type < app_simple_drawing::tab_impact >()));
-      m_ptemplateNotifyDrawingMain = pdoctemplate;
-      add_document_template(pdoctemplate);
+      //m_ptemplateNotifyDrawingMain = pdoctemplate;
+      //add_document_template(pdoctemplate);
 
 
 //      pdoctemplate = __allocate < ::user::single_document_template >(
@@ -125,10 +128,10 @@ namespace app_simple_notify_drawing
 
       m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (m_ptemplateNotifyDrawingMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
-         m_ptemplateNotifyDrawingMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
