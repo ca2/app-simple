@@ -41,7 +41,7 @@ namespace app_simple_box
    //}
 
 
-   ::experience::frame * main_frame::frame_experience()
+   ::pointer < ::experience::frame > main_frame::frame_experience()
    {
 
       auto pframe = ::simple_main_frame::frame_experience("", "013", "LightBlue");
