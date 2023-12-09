@@ -112,15 +112,15 @@ namespace app_simple_networking_application
 
       //}
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system("main", __allocate < ::user::single_document_template >(
                                "main",
                                ::type < ::app_simple_networking_application::document >(),
                                ::type < ::app_simple_networking_application::main_frame >(),
                                get_pane_impact_type()));
 
-      m_ptemplateSimpleDrawingMain = pdoctemplate;
+      //m_ptemplateSimpleDrawingMain = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
       auto pdoctemplate2 = __allocate < ::user::multiple_document_template >(
          "command",

@@ -24,7 +24,7 @@ namespace app_simple_networking_application
    }
 
 
-   ::experience::frame * main_frame::frame_experience()
+   ::pointer < ::experience::frame > main_frame::frame_experience()
    {
 
       auto pframe = ::simple_main_frame::frame_experience(nullptr, "022", "LightBlue");
