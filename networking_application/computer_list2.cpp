@@ -6,6 +6,7 @@
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
+#include "acme/handler/topic.h"
 #include "acme/platform/hyperlink.h"
 #include "acme/user/user/content.h"
 #include "apex/networking/application/application.h"

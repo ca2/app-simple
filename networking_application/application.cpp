@@ -122,15 +122,17 @@ namespace app_simple_networking_application
 
       //add_document_template(pdoctemplate);
 
-      auto pdoctemplate2 = __allocate < ::user::multiple_document_template >(
+      add_impact_system(
          "command",
-         ::type < command_document >(),
-         ::type < main_frame >(),
-         ::type < command_list2 >()));
+         __allocate < ::user::multiple_document_template >(
+            "command",
+            ::type < command_document >(),
+            ::type < main_frame >(),
+            ::type < command_list2 >()));
 
-      m_ptemplateCommand = pdoctemplate2;
+      //m_ptemplateCommand = pdoctemplate2;
 
-      add_document_template(pdoctemplate2);
+      //add_document_template(pdoctemplate2);
 
       default_data_save_handling("simple_checkbox");
 

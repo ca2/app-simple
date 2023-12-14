@@ -83,27 +83,28 @@ namespace app_simple_form
       factory()->add_factory_item <::app_simple_form::form_002 >();
 
       ::base::application::init_instance();
-
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system("main",
+       __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                ::type < tab_impact >()));
 
-      m_ptemplateAppSimpleFormMain = pdoctemplate;
+      //m_ptemplateAppSimpleFormMain = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
-
-      pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "impact",
+      __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
                           ::type < main_impact >()));
 
-      m_ptemplateAppSimpleFormImpact = pdoctemplate;
+      //m_ptemplateAppSimpleFormImpact = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
    }
 

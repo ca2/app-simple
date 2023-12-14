@@ -276,7 +276,7 @@ namespace app_simple_nanoui_example
                });
       
                __new< Label >(window, "Combo box", "sans-bold");
-               __new< ComboBox >(window, { "Combo box item 1", "Combo box item 2", "Combo box item 3" });
+               __new< ComboBox >(window, string_array{ "Combo box item 1", "Combo box item 2", "Combo box item 3" });
                __new< Label >(window, "Check box", "sans-bold");
                CheckBox * cb = __new< CheckBox >(window, "Flag 1",
                   [this](bool state) { 
@@ -454,12 +454,12 @@ namespace app_simple_nanoui_example
       
                __new< Label >(window, "Combo box :", "sans-bold");
                ComboBox * cobo =
-                  __new< ComboBox >(window, { "Item 1", "Item 2", "Item 3" });
+                  __new< ComboBox >(window, string_array{ "Item 1", "Item 2", "Item 3" });
                cobo->set_font_size(16);
                cobo->set_fixed_size({ 100, 20 });
       
                __new< Label >(window, "Color picker :", "sans-bold");
-               auto cp = __new< ColorPicker(window, argb >(255, 120, 0, 255));
+               auto cp = __new< ColorPicker >(window, argb(255, 120, 0, 255));
                cp->set_fixed_size({ 100, 20 });
                cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;

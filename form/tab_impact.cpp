@@ -7,6 +7,7 @@
 #include "acme/constant/id.h"
 #include "acme/constant/impact.h"
 #include "acme/constant/message.h"
+#include "acme/handler/topic.h"
 #include "base/user/user/tab_pane.h"
 
 

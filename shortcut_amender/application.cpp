@@ -93,26 +93,28 @@ namespace app_simple_shortcut_amender
       //   return false;
 
       //}
-
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "main",
+         __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                ::type < tab_impact >()));
-      m_ptemplateShortcutAmenderMain = pdoctemplate;
-      add_document_template(pdoctemplate);
+      //m_ptemplateShortcutAmenderMain = pdoctemplate;
+      //add_document_template(pdoctemplate);
 
 
-      pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "impact",
+      __allocate < ::user::single_document_template >(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
                           ::type < main_impact >()));
-      m_ptemplateShortcutAmenderImpact = pdoctemplate;
-      add_document_template(pdoctemplate);
 
 
-
+      //m_ptemplateShortcutAmenderImpact = pdoctemplate;
+      //add_document_template(pdoctemplate);
 
       //return true;
 

@@ -3,6 +3,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/platform/node.h"
+#include "acme/handler/topic.h"
 #include "acme/primitive/string/str.h"
 #include "apex/database/_binary_stream.h"
 #include "acme/filesystem/filesystem/file_context.h"

@@ -22,7 +22,8 @@ namespace app_simple_change_grub_default_entry
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      ::experience::frame * frame_experience() override;
+      ::pointer < ::experience::frame > frame_experience() override;
+
 
    };
 

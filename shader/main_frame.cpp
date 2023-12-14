@@ -38,7 +38,7 @@ namespace app_simple_shader
    //}
 
 
-   ::experience::frame * main_frame::frame_experience()
+   ::pointer < ::experience::frame > main_frame::frame_experience()
    {
 
       auto pframe = ::simple_frame_window::frame_experience(nullptr, "022", "LightBlue");
