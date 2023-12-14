@@ -3,6 +3,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
+#include "acme/handler/topic.h"
 #include "acme/primitive/geometry2d/_text_stream.h"
 #include "apex/database/_binary_stream.h"
 #include "aura/message/user.h"

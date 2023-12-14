@@ -2,6 +2,7 @@
 #include "form_amender.h"
 #include "application.h"
 #include "acme/constant/id.h"
+#include "acme/handler/topic.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/filesystem/filesystem/acme_file.h"
 #include "acme/filesystem/filesystem/acme_path.h"

@@ -84,15 +84,17 @@ namespace app_simple_shader
 
       //}
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "main",
+         __allocate < ::user::single_document_template >(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
                                ::type < tab_impact >()));
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
-      m_ptemplateSimpleShaderMain = pdoctemplate;
+      //m_ptemplateSimpleShaderMain = pdoctemplate;
 
       //return true;
 

@@ -93,16 +93,18 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      auto pdoctemplate = __allocate < ::user::single_document_template >(
+      add_impact_system(
+         "main",
+         __allocate < ::user::single_document_template >(
                               "main",
                               ::type < document >(),
                               ::type < main_frame >(),
                               ::type < form_001 >()
                ));
 
-      m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;
+      //m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;
 
-      add_document_template(pdoctemplate);
+      //add_document_template(pdoctemplate);
 
       //return true;
 

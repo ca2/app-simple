@@ -10,7 +10,7 @@
 #include "acme/filesystem/filesystem/listing.h"
 #include "apex/database/_binary_stream.h"
 #include "acme/filesystem/filesystem/dir_context.h"
-//#include "acme/filesystem/filesystem/link.h"
+#include "acme/handler/topic.h"
 #include "apex/platform/os_context.h"
 #include "aura/message/user.h"
 #include "aura/user/user/still.h"
