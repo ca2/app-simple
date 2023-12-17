@@ -27,7 +27,7 @@ namespace app_simple_networking_application
    application::application()
    {
 
-      m_ptemplateSimpleDrawingMain = nullptr;
+      //m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabimpact = nullptr;
 
@@ -174,7 +174,7 @@ namespace app_simple_networking_application
 
 #endif
 
-      if (m_ptemplateSimpleDrawingMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
          if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
@@ -190,7 +190,7 @@ namespace app_simple_networking_application
 
          }
 
-         m_ptemplateSimpleDrawingMain->request(prequest);
+         impact_system("main")->request(prequest);
 
          return;
 
