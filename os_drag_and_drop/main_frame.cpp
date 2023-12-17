@@ -61,7 +61,7 @@ namespace app_simple_os_drag_and_drop
    //}
 
 
-   ::experience::frame * main_frame::frame_experience()
+   ::pointer < ::experience::frame > main_frame::frame_experience()
    {
 
       auto pframe = ::simple_main_frame::frame_experience(nullptr, "013", "LightBlue");

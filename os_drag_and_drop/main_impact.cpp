@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "acme/constant/id.h"
+#include "acme/handler/topic.h"
 
 
 namespace app_simple_os_drag_and_drop
