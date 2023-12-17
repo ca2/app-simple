@@ -18,8 +18,8 @@ namespace app_simple_form
 //
 //      ::user::document *                     m_pdocMenu;
 //      ::user::plain_edit_impact *            m_prollfps;
-      ::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormMain;
-      ::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormImpact;
+      //::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormMain;
+      //::pointer < ::user::single_document_template >        m_ptemplateAppSimpleFormImpact;
 
 
       application();

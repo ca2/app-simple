@@ -152,10 +152,10 @@ namespace app_simple_form
 
       //m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (m_ptemplateAppSimpleFormMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
-         m_ptemplateAppSimpleFormMain->request(prequest);
+         impact_system("main")->request(prequest);
 
          return;
 
@@ -164,7 +164,7 @@ namespace app_simple_form
       if (prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateAppSimpleFormImpact->request(prequest);
+         impact_system("impact")->request(prequest);
 
       }
 
