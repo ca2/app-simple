@@ -122,7 +122,7 @@ namespace app_simple_networking_application
       if (str.case_insensitive_ends(".simple_networking_application"))
       {
 
-         m_papp->m_ptemplateCommand->open_document_file(m_papp, str, true,pimpactdata->m_pplaceholder);
+         m_papp->impact_system("impact")->open_document_file(m_papp, str, true, pimpactdata->m_pplaceholder);
 
          return;
 
