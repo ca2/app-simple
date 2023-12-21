@@ -4,14 +4,14 @@
 #include "nanoui/Screen.h"
 
 
-__DECLARE_RELEASE_TIME(app_simple_nanoui_example);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_nanoui_example);
 
 
 namespace app_simple_nanoui_example
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_nanoui_example);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_nanoui_example));
 
 
    application::application()

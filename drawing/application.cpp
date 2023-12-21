@@ -12,14 +12,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-__DECLARE_RELEASE_TIME(app_simple_drawing);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_drawing);
 
 
 namespace app_simple_drawing
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_drawing);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_drawing));
 
 
    application::application()

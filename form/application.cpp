@@ -13,14 +13,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-__DECLARE_RELEASE_TIME(app_simple_form);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_form);
 
 
 namespace app_simple_form
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_form);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_form));
 
 
    application::application()

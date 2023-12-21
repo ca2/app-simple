@@ -14,7 +14,7 @@
 #include "base/user/user/single_document_template.h"
 
 
-__DECLARE_RELEASE_TIME(app_simple_change_grub_default_entry);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_change_grub_default_entry);
 
 
 //
@@ -23,7 +23,7 @@ namespace app_simple_change_grub_default_entry
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_change_grub_default_entry);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_change_grub_default_entry));
 
 
    application::application()
