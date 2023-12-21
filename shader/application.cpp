@@ -9,14 +9,14 @@
 #include "base/user/user/single_document_template.h"
 
 
-__DECLARE_RELEASE_TIME(app_simple_shader);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_shader);
 
 
 namespace app_simple_shader
 {
 
 
-   __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_shader);
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_shader));
 
 
    application::application()
