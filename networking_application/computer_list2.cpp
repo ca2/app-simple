@@ -96,7 +96,7 @@ namespace app_simple_networking_application
 
       //initialize_application_composer();
 
-      get_app()->create_networking_application();
+      get_app()->create_networking_application("");
 
       //{
 
