@@ -804,9 +804,11 @@
     <ClInclude Include="command.h" />
     <ClCompile Include="command.cpp" />
     <ClCompile Include="document.cpp" />
+    <ClCompile Include="edit_impact.cpp" />
     <ClCompile Include="impact.cpp" />
     <ClCompile Include="main_document.cpp" />
     <ClCompile Include="frame.cpp" />
+    <ClCompile Include="main_impact.cpp" />
     <ClCompile Include="tab_impact.cpp" />
     <ClCompile Include="framework.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -825,9 +827,11 @@
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
+    <ClInclude Include="edit_impact.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="main_document.h" />
     <ClInclude Include="frame.h" />
+    <ClInclude Include="main_impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="tab_impact.h" />

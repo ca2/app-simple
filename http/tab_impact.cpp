@@ -1,8 +1,7 @@
 #include "framework.h"
 #include "tab_impact.h"
 #include "impact.h"
-//#include "interface_list2.h"
-//#include "main_impact.h"
+#include "main_impact.h"
 #include "application.h"
 #include "acme/constant/message.h"
 #include "base/user/menu/list_impact.h"
@@ -141,7 +140,7 @@ namespace app_simple_http
       case MAIN_IMPACT:
       {
 
-         ::user::impact::create_impact < app_simple_http::impact >(pimpactdata);
+         ::user::impact::create_impact < app_simple_http::main_impact >(pimpactdata);
 
       }
       break;

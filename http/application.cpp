@@ -1,12 +1,11 @@
 #include "framework.h"
 #include "application.h"
-//#include "document.h"
-//#include "command_list2.h"
 #include "document.h"
+#include "edit_impact.h"
+#include "main_impact.h"
 #include "frame.h"
 #include "main_frame.h"
 #include "main_document.h"
-//#include "interface_list2.h"
 #include "impact.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
@@ -48,25 +47,6 @@ namespace app_simple_http
    }
 
 
-   //void application::create_http()
-   //{
-
-   //   //auto estatus = 
-   //   
-   //   ::core::application::create_http();
-
-   //   //if (!estatus)
-   //   //{
-
-   //   //   return estatus;
-
-   //   //}
-
-   //   //return estatus;
-
-   //}
-
-
    ::type_atom application::get_pane_impact_type() const
    {
 
@@ -75,26 +55,16 @@ namespace app_simple_http
    }
 
 
- /*  string application::get_hover_font() const
-   {
-
-      return "Helvetica";
-
-   }*/
-
-
    void application::init_instance()
    {
-
-      //set_local_data();
 
       factory()->add_factory_item <::app_simple_http::document >();
       factory()->add_factory_item <::app_simple_http::frame >();
       factory()->add_factory_item <::app_simple_http::main_frame >();
       factory()->add_factory_item <::app_simple_http::tab_impact >();
       factory()->add_factory_item <::app_simple_http::main_document >();
-      //factory()->add_factory_item <::app_simple_http::computer_list2 >();
-      //factory()->add_factory_item <::app_simple_http::interface_list2 >();
+      factory()->add_factory_item <::app_simple_http::edit_impact >();
+      factory()->add_factory_item <::app_simple_http::main_impact >();
 
       factory()->add_factory_item <::app_simple_http::document >();
       factory()->add_factory_item <::app_simple_http::impact >();

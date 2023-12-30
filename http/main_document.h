@@ -15,19 +15,8 @@ namespace app_simple_http
    public:
 
 
-   /*   ::networking::address_pointer    m_paddressNetworkInterface;
-      ::string                         m_strNetworkInterfaceAddress;
-      ::pointer < ::item_array >       m_pitemaInterface;
-      ::pointer < ::item_array >       m_pitemaComputer;*/
-
-
       main_document();
 	   ~main_document() override;
-
-
-	   // void assert_ok() const override;
-	   // void dump(dump_context & dumpcontext) const override;
-
 
 
       bool on_new_document() override;

@@ -2,13 +2,17 @@
 #include "framework.h"
 #include "impact.h"
 #include "document.h"
+#include "edit_impact.h"
+#include "main_impact.h"
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
 #include "acme/handler/item.h"
+#include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/platform/hyperlink.h"
 #include "acme/user/user/content.h"
+#include "apex/database/_binary_stream.h"
 #include "apex/networking/http/context.h"
 #include "apex/platform/system.h"
 #include "aura/graphics/draw2d/graphics.h"
@@ -89,17 +93,33 @@ namespace app_simple_http
       }
 
 
-      fork([this]()
+
+   }
+
+
+   void impact::on_message_destroy(::message::message * pmessage)
+   {
+
+   }
+
+
+   void impact::open_url(const ::scoped_string & scopedstrUrl)
+   {
+
+      ::string strUrl(scopedstrUrl);
+
+      fork([this, strUrl]()
       {
 
          property_set set;
 
+         auto & http = application()->m_papexapplication->http();
 
-         auto & http =             application()->m_papexapplication->http();
-         
+         application()->m_papexapplication->datastream()->set("url", strUrl);
+
          ::string str =
-            http.get("https://raw.githubusercontent.com/ca2/app/main/README.md", set);
-         
+            http.get(strUrl, set);
+
          {
 
             synchronous_lock synchronouslock(this->synchronization());
@@ -114,22 +134,22 @@ namespace app_simple_http
 
       });
 
-
-      
-
-
-   }
-
-
-   void impact::on_message_destroy(::message::message * pmessage)
-   {
-
    }
 
 
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
+      if (ptopic->m_atom == id_enter_key)
+      {
+
+         ::string strText;
+
+         m_pmainimpact->m_peditimpact->_001GetText(strText);
+
+         open_url(strText);
+
+      }
 
       ::user::impact::handle(ptopic, pcontext);
 
