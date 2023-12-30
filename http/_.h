@@ -17,17 +17,13 @@ namespace app_simple_http
    
    class application;
    class tab_impact;
-   //class document;
-   //class impact;
    class main_document;
 
    
    class impact;
+   class edit_impact;
+   class main_impact;
    class document;
-
-   //class command;
-   //class command_document;
-   //class command_list2;
 
 
 } // namespace app_simple_http

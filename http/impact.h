@@ -17,18 +17,13 @@ namespace app_simple_http
    public:
 
 
-      //::pointer<render>          m_prender;
-      //::index_map < ::networking::address_pointer >      m_mapaddress;
-      //::index_map < ::networking::address_pointer >      m_mapaddress2;
+      ::pointer<main_impact>          m_pmainimpact;
 
       ::string m_strRequestResult;
 
 
       impact();
       ~impact() override;
-
-//      // void assert_ok() const override;
-//      // void dump(dump_context & dumpcontext) const override;
 
 
 #ifdef _DEBUG
@@ -46,6 +41,8 @@ namespace app_simple_http
       document * get_document();
 
       bool on_impact_update() override;
+
+      virtual void open_url(const ::scoped_string & scopedstrUrl);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
