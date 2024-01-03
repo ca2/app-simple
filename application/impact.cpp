@@ -183,7 +183,7 @@ namespace app_simple_application
 
       pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
 
-      ::synchronous_lock synchronouslockDocument(get_document()->synchronization());
+      _synchronous_lock synchronouslockDocument(get_document()->synchronization());
       
       string_array & stra = get_document()->m_straLine;
       

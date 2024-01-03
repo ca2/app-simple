@@ -39,10 +39,16 @@ namespace app_simple_application
 
    bool document::on_new_document()
    {
-      
-      //file()->get_lines(m_straLine, "dropbox-app://application.txt");
 
-      //if (m_straLine.is_empty())
+      ::file::path path;
+
+      path = "dropbox-app://application.txt";
+
+      const char * pszPath = path.c_str();
+      
+      file()->get_lines(m_straLine, path);
+
+      if (m_straLine.is_empty())
       {
 
          file()->get_lines(m_straLine, "document://application/app-simple/application/application.txt");
