@@ -15,8 +15,8 @@ namespace app_simple_shortcut_amender
 
 
       ::user::document *                     m_pdocMenu;
-      ::user::single_document_template *     m_ptemplateShortcutAmenderMain;
-      ::user::single_document_template *     m_ptemplateShortcutAmenderImpact;
+      //::user::single_document_template *     m_ptemplateShortcutAmenderMain;
+      //::user::single_document_template *     m_ptemplateShortcutAmenderImpact;
 
 
       application();

@@ -28,8 +28,8 @@ namespace app_simple_shortcut_amender
    application::application()
    {
 
-      m_ptemplateShortcutAmenderMain  = NULL;
-      m_ptemplateShortcutAmenderImpact  = NULL;
+      //m_ptemplateShortcutAmenderMain  = NULL;
+      //m_ptemplateShortcutAmenderImpact  = NULL;
 
       m_strAppId                 = "app-simple/shortcut_amender";
       m_strBaseSupportId         = "app-simple/shortcut_amender";
@@ -162,17 +162,17 @@ namespace app_simple_shortcut_amender
 
 #endif
 
-      if (m_ptemplateShortcutAmenderMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
-         m_ptemplateShortcutAmenderMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
       if (prequest->m_payloadFile.has_char())
       {
 
-         m_ptemplateShortcutAmenderImpact->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 

@@ -29,8 +29,7 @@ namespace app_simple_change_grub_default_entry
    application::application()
    {
 
-
-      m_ptemplateChangeGrubDefaultEntryMain  = NULL;
+      //m_ptemplateChangeGrubDefaultEntryMain  = NULL;
 
       m_strAppId                 = "app-simple/change_grub_default_entry";
       m_strAppName               = "Change GRUB default entry";
@@ -122,12 +121,12 @@ namespace app_simple_change_grub_default_entry
    void application::on_request(::request * prequest)
    {
 
-      if (m_ptemplateChangeGrubDefaultEntryMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
          prequest->m_egraphicsoutputpurpose -= ::graphics::e_output_purpose_screen;
 
-         m_ptemplateChangeGrubDefaultEntryMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
