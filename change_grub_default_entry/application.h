@@ -14,7 +14,7 @@ namespace app_simple_change_grub_default_entry
    public:
 
 
-      ::user::single_document_template *     m_ptemplateChangeGrubDefaultEntryMain;
+      //::user::single_document_template *     m_ptemplateChangeGrubDefaultEntryMain;
 
 
       application();
