@@ -16,6 +16,7 @@
 		9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E13326611D5A00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E1A026611D5E00517464 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C816D2783F879000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C816C2783F879000C8587 /* _matter.zip */; };
+		9A90BCC12B54A050002BFC9E /* libarchive.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A90BCBF2B54A04F002BFC9E /* libarchive.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A92318527EAE4F000B5A78D /* libapp_simple_nanoui_example.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A922E8F27EAC61500B5A78D /* libapp_simple_nanoui_example.dylib */; };
 		9A93B0F427FCD3D70042D6C8 /* libapp_simple_nanoui_example.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A922E8F27EAC61500B5A78D /* libapp_simple_nanoui_example.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9A19542AFC37F500FA9BEB /* libdarwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9A19522AFC37F500FA9BEB /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -244,6 +245,7 @@
 				9AFFC74026786C6B00C4104F /* libapex_macos.dylib in Embed Libraries */,
 				9AF8CEDE271B9CB300BF80B7 /* libidn.dylib in Embed Libraries */,
 				9AFFC73826786C6B00C4104F /* libacme_macos.dylib in Embed Libraries */,
+				9A90BCC12B54A050002BFC9E /* libarchive.dylib in Embed Libraries */,
 				9AFFC73E26786C6B00C4104F /* libapex_apple.dylib in Embed Libraries */,
 				9AFFC74D26786C8700C4104F /* libaura_macos.dylib in Embed Libraries */,
 				9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */,
@@ -279,6 +281,7 @@
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A8F4D102A26D3E500097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A8F4D1C2A26D3F900097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
+		9A90BCBF2B54A04F002BFC9E /* libarchive.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libarchive.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A922E8827EAC61500B5A78D /* app_simple_nanoui_example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_nanoui_example.xcodeproj; path = ../app_simple_nanoui_example.xcodeproj; sourceTree = "<group>"; };
 		9A9A19522AFC37F500FA9BEB /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A2927519BC10094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -455,6 +458,7 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A90BCBF2B54A04F002BFC9E /* libarchive.dylib */,
 				9A9A19522AFC37F500FA9BEB /* libdarwin.dylib */,
 				9ABBB6B42AEB2C15007611C5 /* libaura_darwin.dylib */,
 				9ABBB6B12AEB2C05007611C5 /* libapex_darwin.dylib */,
