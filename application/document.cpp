@@ -44,7 +44,7 @@ namespace app_simple_application
 
       path = "dropbox-app://application.txt";
 
-      const char * pszPath = path.c_str();
+      //const char * pszPath = path.c_str();
       
       file()->get_lines(m_straLine, path);
 
