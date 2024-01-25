@@ -3,5 +3,4 @@ do(draw2d_cairo); \
 do(crypto_openssl); \
 do(experience_core); \
 do(imaging_freeimage); \
-do(node_linux); \
-do(windowing_x11);
+do(node_linux);
