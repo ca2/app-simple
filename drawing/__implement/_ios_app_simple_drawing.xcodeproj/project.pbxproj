@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,11 +13,19 @@
 		9A2F609E2474F53900D392E8 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F609D2474F53900D392E8 /* CoreServices.framework */; };
 		9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4972092001905400B9C9B2 /* ImageIO.framework */; };
 		9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5752BB16AAE1D2000CC4EF /* Foundation.framework */; };
+		9A50C73A2B6C7A7000FDB101 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C7392B6C7A7000FDB101 /* application_main.cpp */; };
+		9A50C7752B6C900B00FDB101 /* _____debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7732B6C900B00FDB101 /* _____debug.xcconfig */; };
+		9A50C7762B6C900B00FDB101 /* _____release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7742B6C900B00FDB101 /* _____release.xcconfig */; };
+		9A50C7782B6C911700FDB101 /* libios_acme_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7772B6C911700FDB101 /* libios_acme_darwin.a */; };
+		9A50C77A2B6C911700FDB101 /* libios_apex_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7792B6C911700FDB101 /* libios_apex_darwin.a */; };
+		9A50C77C2B6C912400FDB101 /* libios_aura_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C77B2B6C912400FDB101 /* libios_aura_darwin.a */; };
+		9A50C77E2B6C912400FDB101 /* libios_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C77D2B6C912400FDB101 /* libios_darwin.a */; };
+		9A50C7802B6C913F00FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C77F2B6C913F00FDB101 /* libios_archive.a */; };
+		9A50C7822B6C914900FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7812B6C914900FDB101 /* UniformTypeIdentifiers.framework */; };
+		9A50C7842B6C917800FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7832B6C917800FDB101 /* libios_unac.a */; };
 		9A93B908284716AA005ACD11 /* libios_acme.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B904284716AA005ACD11 /* libios_acme.a */; };
 		9A93B90A284716AA005ACD11 /* libios_acme_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B905284716AA005ACD11 /* libios_acme_apple.a */; };
 		9A93B90C284716AA005ACD11 /* libacme_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B906284716AA005ACD11 /* libacme_ios.a */; };
-		9A93B90E284716AA005ACD11 /* libios_acme_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B907284716AA005ACD11 /* libios_acme_posix.a */; };
-		9A93B9202847171B005ACD11 /* libacme_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B9102847171A005ACD11 /* libacme_ios.a */; };
 		9A93B9222847171B005ACD11 /* libios_acme_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B9112847171A005ACD11 /* libios_acme_posix.a */; };
 		9A93B9242847171B005ACD11 /* libios_apex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B9122847171A005ACD11 /* libios_apex.a */; };
 		9A93B9262847171B005ACD11 /* libios_apex_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B9132847171A005ACD11 /* libios_apex_apple.a */; };
@@ -40,7 +48,7 @@
 		9A93B94628471722005ACD11 /* libios_imaging_coreimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5342846EA03005ACD11 /* libios_imaging_coreimage.a */; };
 		9A93B94728471723005ACD11 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5812846EA26005ACD11 /* libnode_ios.a */; };
 		9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B91F2847171A005ACD11 /* libwindowing_ios.a */; };
-		9A93B94B28471724005ACD11 /* ios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */; };
+		9A93B94B28471724005ACD11 /* libios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */; };
 		9AAC20ED247566B50013AB72 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EB247566B50013AB72 /* libcrypto.a */; };
 		9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EC247566B50013AB72 /* libssl.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
@@ -48,7 +56,6 @@
 		9AE86B382858908E00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A734828284F3858003986C7 /* Images.xcassets */; };
 		9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */; };
 		9AE86B3A2858909800F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A734820284F3858003986C7 /* _matter.zip */; };
-		9AE86D21285896A800F88364 /* __implement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A73482C284F3858003986C7 /* __implement.cpp */; };
 		9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B5903518866047002C6FEC /* CoreFoundation.framework */; };
 		9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077A02081B4D5758001C85FF /* UIKit.framework */; };
 		9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */; };
@@ -62,6 +69,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 078C352E1921758500354453;
 			remoteInfo = wiossimple_drawing_simple_drawing;
+		};
+		9A50C72D2B6C7A6200FDB101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A93B54F2846EA04005ACD11 /* crypto_openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC97ECF2A71B2A700B1BCF3;
+			remoteInfo = static_crypto_openssl;
+		};
+		9A50C7342B6C7A6200FDB101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A93B56A2846EA05005ACD11 /* folder_zip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A1BD6E12A0079D400152CD1;
+			remoteInfo = static_folder_zip;
 		};
 		9A93B5312846EA03005ACD11 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -347,6 +368,16 @@
 		9A4172B220004E120056265A /* openssl.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = openssl.pc; sourceTree = "<group>"; };
 		9A4972092001905400B9C9B2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9A4972272001907B00B9C9B2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9A50C7392B6C7A7000FDB101 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
+		9A50C7732B6C900B00FDB101 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
+		9A50C7742B6C900B00FDB101 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
+		9A50C7772B6C911700FDB101 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A50C7792B6C911700FDB101 /* libios_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A50C77B2B6C912400FDB101 /* libios_aura_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_aura_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A50C77D2B6C912400FDB101 /* libios_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A50C77F2B6C913F00FDB101 /* libios_archive.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_archive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A50C7812B6C914900FDB101 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		9A50C7832B6C917800FDB101 /* libios_unac.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_unac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9A5752BA16AAE1D2000CC4EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9A5752BB16AAE1D2000CC4EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -354,7 +385,6 @@
 		9A734827284F3858003986C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A734828284F3858003986C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A734829284F3858003986C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A73482C284F3858003986C7 /* __implement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = __implement.cpp; sourceTree = "<group>"; };
 		9A8181BE1F21C2F000FDAF74 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		9A8181C21F21C33500FDAF74 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -401,6 +431,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A50C7842B6C917800FDB101 /* libios_unac.a in Frameworks */,
+				9A50C7822B6C914900FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
+				9A50C7802B6C913F00FDB101 /* libios_archive.a in Frameworks */,
+				9A50C77C2B6C912400FDB101 /* libios_aura_darwin.a in Frameworks */,
+				9A50C77E2B6C912400FDB101 /* libios_darwin.a in Frameworks */,
+				9A50C7782B6C911700FDB101 /* libios_acme_darwin.a in Frameworks */,
+				9A50C77A2B6C911700FDB101 /* libios_apex_darwin.a in Frameworks */,
 				9A93B94028471721005ACD11 /* libios_experience_core.a in Frameworks */,
 				9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */,
 				9A0A8A9428737E6500D1904E /* QuartzCore.framework in Frameworks */,
@@ -411,7 +448,7 @@
 				9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */,
 				9A93B92A2847171C005ACD11 /* libios_apex_posix.a in Frameworks */,
 				9A93B92D2847171D005ACD11 /* libios_aqua.a in Frameworks */,
-				9A93B94B28471724005ACD11 /* ios_write_text_quartz2d.a in Frameworks */,
+				9A93B94B28471724005ACD11 /* libios_write_text_quartz2d.a in Frameworks */,
 				9A93B94628471722005ACD11 /* libios_imaging_coreimage.a in Frameworks */,
 				9A93B93E28471720005ACD11 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9A2F609C2474F2CC00D392E8 /* libsqlite3.tbd in Frameworks */,
@@ -422,7 +459,6 @@
 				9A93B9262847171B005ACD11 /* libios_apex_apple.a in Frameworks */,
 				9A93B9302847171D005ACD11 /* libios_aura_apple.a in Frameworks */,
 				9A93B9222847171B005ACD11 /* libios_acme_posix.a in Frameworks */,
-				9A93B9202847171B005ACD11 /* libacme_ios.a in Frameworks */,
 				9A93B94228471721005ACD11 /* libios_folder_zip.a in Frameworks */,
 				9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */,
 				9A93B93C28471720005ACD11 /* libios_database_sqlite3.a in Frameworks */,
@@ -440,7 +476,6 @@
 				9A93B9362847171E005ACD11 /* libios_axis.a in Frameworks */,
 				9A93B94728471723005ACD11 /* libnode_ios.a in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
-				9A93B90E284716AA005ACD11 /* libios_acme_posix.a in Frameworks */,
 				9A93B93A2847171F005ACD11 /* libios_crypto_openssl.a in Frameworks */,
 				9A93B9242847171B005ACD11 /* libios_apex.a in Frameworks */,
 			);
@@ -606,6 +641,13 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A50C7832B6C917800FDB101 /* libios_unac.a */,
+				9A50C7812B6C914900FDB101 /* UniformTypeIdentifiers.framework */,
+				9A50C77F2B6C913F00FDB101 /* libios_archive.a */,
+				9A50C77B2B6C912400FDB101 /* libios_aura_darwin.a */,
+				9A50C77D2B6C912400FDB101 /* libios_darwin.a */,
+				9A50C7772B6C911700FDB101 /* libios_acme_darwin.a */,
+				9A50C7792B6C911700FDB101 /* libios_apex_darwin.a */,
 				9A0A8A8A28737E6500D1904E /* QuartzCore.framework */,
 				9A93B9102847171A005ACD11 /* libacme_ios.a */,
 				9A93B9112847171A005ACD11 /* libios_acme_posix.a */,
@@ -664,9 +706,11 @@
 		9A734779284F3857003986C7 /* drawing */ = {
 			isa = PBXGroup;
 			children = (
+				9A50C7732B6C900B00FDB101 /* _____debug.xcconfig */,
+				9A50C7742B6C900B00FDB101 /* _____release.xcconfig */,
+				9A50C7392B6C7A7000FDB101 /* application_main.cpp */,
 				9A734825284F3858003986C7 /* ios */,
 				9A734820284F3858003986C7 /* _matter.zip */,
-				9A73482C284F3858003986C7 /* __implement.cpp */,
 			);
 			name = drawing;
 			sourceTree = "<group>";
@@ -696,7 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				9A93B5432846EA04005ACD11 /* libwrite_text_quartz2d.dylib */,
-				9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */,
+				9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -715,6 +759,7 @@
 			children = (
 				9A93B5552846EA04005ACD11 /* libcrypto_openssl.dylib */,
 				9A93B5572846EA04005ACD11 /* libios_crypto_openssl.a */,
+				9A50C72E2B6C7A6200FDB101 /* libstatic_crypto_openssl.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -742,6 +787,7 @@
 			children = (
 				9A93B5702846EA05005ACD11 /* libfolder_zip.dylib */,
 				9A93B5722846EA05005ACD11 /* libios_folder_zip.a */,
+				9A50C7352B6C7A6200FDB101 /* libstatic_folder_zip.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -816,8 +862,9 @@
 		9A5752A916AAE1D2000CC4EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -896,6 +943,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		9A50C72E2B6C7A6200FDB101 /* libstatic_crypto_openssl.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_crypto_openssl.dylib;
+			remoteRef = 9A50C72D2B6C7A6200FDB101 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A50C7352B6C7A6200FDB101 /* libstatic_folder_zip.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_folder_zip.a;
+			remoteRef = 9A50C7342B6C7A6200FDB101 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9A93B5322846EA03005ACD11 /* libimaging_coreimage.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -924,10 +985,9 @@
 			remoteRef = 9A93B5422846EA04005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A93B5452846EA04005ACD11 /* ios_write_text_quartz2d.a */ = {
+		9A93B5452846EA04005ACD11 /* libios_write_text_quartz2d.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			name = ios_write_text_quartz2d.a;
 			path = libios_write_text_quartz2d.a;
 			remoteRef = 9A93B5442846EA04005ACD11 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -1030,9 +1090,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A50C7752B6C900B00FDB101 /* _____debug.xcconfig in Resources */,
 				9AE86B382858908E00F88364 /* Images.xcassets in Resources */,
 				9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */,
 				9AE86B3A2858909800F88364 /* _matter.zip in Resources */,
+				9A50C7762B6C900B00FDB101 /* _____release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1050,7 +1112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE86D21285896A800F88364 /* __implement.cpp in Sources */,
+				9A50C73A2B6C7A7000FDB101 /* application_main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1136,6 +1198,7 @@
 				CODE_SIGN_ENTITLEMENTS = simple_drawing.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1161,6 +1224,7 @@
 				CODE_SIGN_ENTITLEMENTS = simple_drawing.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Camilo Tsumanuma (665TC58ZA4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1182,6 +1246,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wiossimple_drawing_simple_drawing.app/wiossimple_drawing_simple_drawing";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1209,6 +1274,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/wiossimple_drawing_simple_drawing.app/wiossimple_drawing_simple_drawing";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1228,6 +1294,7 @@
 		};
 		9A5752CE16AAE1D3000CC4EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A50C7732B6C900B00FDB101 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
@@ -1258,10 +1325,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1277,29 +1344,42 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include";
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";
 			};
 			name = Debug;
 		};
 		9A5752CF16AAE1D3000CC4EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A50C7742B6C900B00FDB101 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
@@ -1329,9 +1409,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1341,21 +1421,34 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(WorkspaceDir)/operating_system",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(ARCHS)/library",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = ". $(WorkspaceDir)/source $(WorkspaceDir)/source/include $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include $(WorkspaceDir)/operating_system $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER) $(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include . .. $(WorkspaceDir)  $(WorkspaceDir)/source/app $(WorkspaceDir)/source/app/include";
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
 				WorkspaceDir = "$(SRCROOT)/../../../..";
 			};
 			name = Release;
