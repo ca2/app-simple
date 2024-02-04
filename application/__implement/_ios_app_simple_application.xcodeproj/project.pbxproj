@@ -23,6 +23,7 @@
 		9A50C75E2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C75D2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50C76E2B6C86E600FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C76D2B6C86E600FDB101 /* libios_unac.a */; };
 		9A50C7722B6C88EE00FDB101 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7712B6C88EE00FDB101 /* _static_factory_.inl */; };
+		9A50CDFC2B6CB8AC00FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50CDFB2B6CB8AC00FDB101 /* libios_archive.a */; };
 		9A93B8D4284711A8005ACD11 /* libios_acme.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C2284711A8005ACD11 /* libios_acme.a */; };
 		9A93B8D6284711A9005ACD11 /* libios_acme_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C3284711A8005ACD11 /* libios_acme_apple.a */; };
 		9A93B8D8284711A9005ACD11 /* libacme_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C4284711A8005ACD11 /* libacme_ios.a */; };
@@ -350,6 +351,7 @@
 		9A50C75F2B6C823500FDB101 /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A50C76D2B6C86E600FDB101 /* libios_unac.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_unac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A50C7712B6C88EE00FDB101 /* _static_factory_.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _static_factory_.inl; path = ../_static_factory_.inl; sourceTree = "<group>"; };
+		9A50CDFB2B6CB8AC00FDB101 /* libios_archive.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_archive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9A5752BA16AAE1D2000CC4EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9A5752BB16AAE1D2000CC4EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -400,6 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A50CDFC2B6CB8AC00FDB101 /* libios_archive.a in Frameworks */,
 				9A50C76E2B6C86E600FDB101 /* libios_unac.a in Frameworks */,
 				9A50C75E2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
 				9A50C75C2B6C814B00FDB101 /* libios_archive.a in Frameworks */,
@@ -607,6 +610,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A50CDFB2B6CB8AC00FDB101 /* libios_archive.a */,
 				9A50C76D2B6C86E600FDB101 /* libios_unac.a */,
 				9A50C75F2B6C823500FDB101 /* libunac.dylib */,
 				9A50C75D2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework */,
@@ -1284,6 +1288,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = (
 					.,
@@ -1361,6 +1374,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/_",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = (
 					.,
