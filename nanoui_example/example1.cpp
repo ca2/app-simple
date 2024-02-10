@@ -212,11 +212,11 @@ namespace app_simple_nanoui_example
                b = __new< Button >(tools, "Open");
                b->set_callback([this,image_impact] {
                   
-                  //m_puserinteraction->acmenode()->node_post(__routine([this, image_impact]()
+                  //m_puserinteraction->node()->node_post(__routine([this, image_impact]()
                     //         {
                   //auto pwindow = m_puserinteraction->window();
                   //auto poswindow = pwindow->get_os_data();
-                  auto pdialog = acmenode()->node_file_dialog();
+                  auto pdialog = node()->node_file_dialog();
                   pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
                   pdialog->m_filedialogfiltera.add({ "JPEG file", "*.jpeg" });
                   pdialog->m_filedialogfiltera.add({ "JPG file", "*.jpg" });
@@ -236,7 +236,7 @@ namespace app_simple_nanoui_example
                   pdialog->m_bSave = false;
                   pdialog->m_bMultiple = false;
                   pdialog->call_run();
-                  //acmenode()->pick_single_file(poswindow,
+                  //node()->pick_single_file(poswindow,
                     //          ,
                       //        , false);
                      
@@ -250,7 +250,7 @@ namespace app_simple_nanoui_example
 
                   //auto pwindow = m_puserinteraction->window();
                   //auto poswindow = pwindow->get_os_data();
-                  auto pdialog = acmenode()->node_file_dialog();
+                  auto pdialog = node()->node_file_dialog();
                   pdialog->m_puserelement = m_puserinteraction;
                   pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
                   pdialog->m_filedialogfiltera.add({ "Text file", "*.txt" } );
@@ -268,7 +268,7 @@ namespace app_simple_nanoui_example
                   pdialog->m_bSave = true;
                   pdialog->m_bMultiple = false;
                   pdialog->call_run();
-//                  acmenode()->pick_single_file(
+//                  node()->pick_single_file(
 //                     poswindow,
 //                     ,
 //                     , true);
