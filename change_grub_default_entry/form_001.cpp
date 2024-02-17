@@ -261,7 +261,7 @@ namespace app_simple_change_grub_default_entry
          else if (ptopic->m_puserelement->m_atom == "restart_button")
          {
 
-            auto pnode = acmenode();
+            auto pnode = node();
 
             pnode->reboot();
 

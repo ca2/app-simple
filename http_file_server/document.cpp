@@ -114,7 +114,7 @@ namespace app_simple_http_file_server
          if (strCommand.case_insensitive_begins_eat("select first network adapter"))
          {
 
-            ::string str = acmenode()->get_output("netsh interface show interface", 5_minute);
+            ::string str = node()->get_output("netsh interface show interface", 5_minute);
 
             ::string_array stra;
 
@@ -180,7 +180,7 @@ namespace app_simple_http_file_server
 
             strCmd = "netsh interface ip set address \"" + m_strCurrentAdapter + "\" static " + strCommand;
 
-            ::string str = acmenode()->get_output(strCmd, 5_minute);
+            ::string str = node()->get_output(strCmd, 5_minute);
 
             information() << str;
 
@@ -199,7 +199,7 @@ namespace app_simple_http_file_server
 
                strCmd = "netsh interface ip set dnsserver \"" + m_strCurrentAdapter + "\" static " + strCommand + " validate=no";
 
-               ::string str = acmenode()->get_output(strCmd, 5_minute);
+               ::string str = node()->get_output(strCmd, 5_minute);
 
                information() << str;
 
@@ -228,7 +228,7 @@ namespace app_simple_http_file_server
 
                   }
 
-                  ::string str = acmenode()->get_output(strCmd, 5_minute);
+                  ::string str = node()->get_output(strCmd, 5_minute);
 
                   information() << str;
 

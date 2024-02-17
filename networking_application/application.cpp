@@ -48,12 +48,12 @@ namespace app_simple_networking_application
    }
 
 
-   void application::create_networking_application(const ::scoped_string & scopedstrHostName)
+   void application::create_networking_application(const ::scoped_string & scopedstrHostName, ::networking::application_handler * papplicationhandlerCreateNetworkApplication)
    {
 
       //auto estatus = 
       
-      ::core::application::create_networking_application(scopedstrHostName);
+      ::core::application::create_networking_application(scopedstrHostName, papplicationhandlerCreateNetworkApplication);
 
       //if (!estatus)
       //{
