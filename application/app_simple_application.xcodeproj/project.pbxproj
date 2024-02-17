@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		9A415C2A247393C100EF2BCD /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C9240C09F10097E249 /* document.cpp */; };
 		9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C3240C09F00097E249 /* main_frame.cpp */; };
 		9A415C2E247393C100EF2BCD /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F90C2240C09F00097E249 /* impact.cpp */; };
+		9A50C7612B6C85CB00FDB101 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A00E5C52661320400517464 /* _.cpp */; };
 		9A7D920F251AF32C00DE81AE /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D920E251AF32C00DE81AE /* libacme.dylib */; };
 		9A7D9211251AF32C00DE81AE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D9210251AF32C00DE81AE /* libapex.dylib */; };
 		9A833BE124F544B200C079FB /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A833BDF24F544B200C079FB /* _.h */; };
@@ -54,6 +55,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9AD117F324F51BE400177261;
 			remoteInfo = base;
+		};
+		9AE0E1212B705C1700D4F550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A833BE324F544D600C079FB /* base.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A93B6992846EB33005ACD11;
+			remoteInfo = ios_base;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -222,6 +230,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AE0E1222B705C1700D4F550 /* PBXTargetDependency */,
 			);
 			name = ios_app_simple_application;
 			productName = app_core_hellomultiverse_ios;
@@ -254,11 +263,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 			};
 			buildConfigurationList = 9AEB759E16F78DF10085103B /* Build configuration list for PBXProject "app_simple_application" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -307,6 +316,7 @@
 				9A415C29247393C100EF2BCD /* application.cpp in Sources */,
 				9A415C2A247393C100EF2BCD /* document.cpp in Sources */,
 				9A415C2C247393C100EF2BCD /* main_frame.cpp in Sources */,
+				9A50C7612B6C85CB00FDB101 /* _.cpp in Sources */,
 				9A415C2E247393C100EF2BCD /* impact.cpp in Sources */,
 				07B65520190F3001002DAADE /* framework.cpp in Sources */,
 			);
@@ -333,15 +343,20 @@
 			name = base;
 			targetProxy = 9A00E0E026611ADF00517464 /* PBXContainerItemProxy */;
 		};
+		9AE0E1222B705C1700D4F550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_base;
+			targetProxy = 9AE0E1212B705C1700D4F550 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9AE24EAA1904CFFD001AEFFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_HARDENED_RUNTIME = YES;
-				EXECUTABLE_EXTENSION = a;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				DEAD_CODE_STRIPPING = NO;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
+				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
@@ -351,9 +366,9 @@
 		9AE24EAB1904CFFD001AEFFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_HARDENED_RUNTIME = YES;
-				EXECUTABLE_EXTENSION = a;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				DEAD_CODE_STRIPPING = NO;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
+				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
@@ -426,7 +441,6 @@
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = (
 					.,
@@ -486,6 +500,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -511,7 +526,6 @@
 				OTHER_LDFLAGS = "-all_load";
 				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = (
 					.,
@@ -541,6 +555,7 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = YES;
 				PLATFORM_MODIFIER = macos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -549,6 +564,7 @@
 			buildSettings = {
 				DEAD_CODE_STRIPPING = YES;
 				PLATFORM_MODIFIER = macos;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
