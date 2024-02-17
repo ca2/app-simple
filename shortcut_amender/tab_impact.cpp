@@ -66,6 +66,9 @@ namespace app_simple_shortcut_amender
       add_tab("Reset Icon", "form_reset_icon");
       add_tab("Set Icon", "form_set_icon");
 
+
+      set_current_tab_by_id("form_amender");
+
    }
 
 
