@@ -37,22 +37,24 @@ namespace app_simple_http_file_server
 
       m_strIp = "127.0.0.1";
 
-      {
+      //{
 
-         auto strCat = file()->safe_get_string("matter://certificate/localhost.ca2.software.cat");
+      //   auto strCat = file()->safe_get_string("matter://certificate/localhost.ca2.software.cat");
 
-         if (strCat.has_char())
-         {
+      //   if (strCat.has_char())
+      //   {
 
-            m_strCat = "cat://" + strCat;
-            m_strCipherList = "ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-RC4-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:RSA:SHA:3DES:!aNULL:!eNULL:!EXP:!LOW:!MD5:@STRENGTH";
+      //      m_strCat = "cat://" + strCat;
+      //      m_strCipherList = "ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-RC4-SHA:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:RSA:SHA:3DES:!aNULL:!eNULL:!EXP:!LOW:!MD5:@STRENGTH";
 
-         }
+      //   }
 
-      }
+      //}
 
-      m_iPortMinimum = (::networking::port_t)443;
-      m_iPortMaximum = (::networking::port_t)443;
+      //m_iPortMinimum = (::networking::port_t)443;
+      //m_iPortMaximum = (::networking::port_t)443;
+      m_iPortMinimum = (::networking::port_t)80;
+      m_iPortMaximum = (::networking::port_t)80;
 
       branch();
 
