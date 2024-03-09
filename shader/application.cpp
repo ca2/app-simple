@@ -24,7 +24,7 @@ namespace app_simple_shader
       
       m_bImaging = true;
 
-      m_ptemplateSimpleShaderMain = nullptr;
+      //m_ptemplateSimpleShaderMain = nullptr;
 
       m_ptabimpact = nullptr;
 
@@ -130,7 +130,7 @@ namespace app_simple_shader
 
 #endif
 
-      if (m_ptemplateSimpleShaderMain->get_document_count() == 0)
+      if (impact_system("main")->get_document_count() == 0)
       {
 
          if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
@@ -146,7 +146,7 @@ namespace app_simple_shader
 
          }
 
-         m_ptemplateSimpleShaderMain->request(prequest);
+         impact_system("main")->request(prequest);
 
       }
 
