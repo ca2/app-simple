@@ -1,1 +1,0 @@
-app-simple/change_grub_default_entry
