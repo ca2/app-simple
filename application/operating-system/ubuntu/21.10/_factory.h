@@ -1,8 +1,0 @@
-BEGIN_FACTORY(app_simple_application) 
-FACTORY_DEPENDENCY(draw2d_cairo) 
-FACTORY_DEPENDENCY(experience_core) 
-FACTORY_DEPENDENCY(node_linux) 
-FACTORY_DEPENDENCY(windowing_x11) 
-FACTORY_DEPENDENCY(write_text_pango) 
-FACTORY_DEPENDENCY(app_simple_application) 
-END_FACTORY() 

@@ -1,8 +1,0 @@
-BEGIN_FACTORY(app_simple_notify_drawing) 
-FACTORY_DEPENDENCY(draw2d_quartz2d) 
-FACTORY_DEPENDENCY(experience_core) 
-FACTORY_DEPENDENCY(imaging_coreimage) 
-FACTORY_DEPENDENCY(node_macos) 
-FACTORY_DEPENDENCY(windowing_macos) 
-FACTORY_DEPENDENCY(app_simple_notify_drawing) 
-END_FACTORY() 
