@@ -28,34 +28,34 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(app_simple_box PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
 
 
-    target_compile_options(app_simple_box PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_box PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_box PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(app_simple_box PRIVATE acme apex aqua aura axis base)
+    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
 
 
 elseif(${LINUX} OR ${FREEBSD})
 
 
-    target_compile_options(app_simple_box PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-    #target_link_options(app_simple_box PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(app_simple_box PRIVATE acme apex aqua aura axis base)
-    target_link_options(app_simple_box PRIVATE -Wl,-z,defs)
+    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+    #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+    target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 
 endif()
 
 
-add_dependencies(app_simple_box experience_core)
-add_dependencies(app_simple_box ${default_draw2d})
-add_dependencies(app_simple_box ${default_imaging})
-add_dependencies(app_simple_box ${default_write_text})
+add_dependencies(${PROJECT_NAME} experience_core)
+add_dependencies(${PROJECT_NAME} ${default_draw2d})
+add_dependencies(${PROJECT_NAME} ${default_imaging})
+add_dependencies(${PROJECT_NAME} ${default_write_text})
 
 
 
@@ -68,7 +68,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories
 target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(app_simple_box PRIVATE _APP_SIMPLE_BOX_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_SIMPLE_BOX_LIBRARY)
 
 
 add_subdirectory(__implement)

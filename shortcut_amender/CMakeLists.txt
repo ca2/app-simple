@@ -32,27 +32,27 @@ list(APPEND library_source
    )
 
 
-add_library(app_simple_shortcut ${library_source})
+add_library(${PROJECT_NAME} ${library_source})
 
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 
-set_target_properties(app_simple_shortcut PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
-   target_compile_options(app_simple_shortcut PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_shortcut PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_shortcut PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_simple_shortcut PRIVATE acme apex aqua aura axis base)
-   add_dependencies(app_simple_shortcut draw2d_gdiplus imaging_wic)
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+   add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 elseif(${LINUX} OR ${FREEBSD})
-   target_compile_options(app_simple_shortcut PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-   #target_link_options(app_simple_shortcut PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(app_simple_shortcut PRIVATE acme apex aqua aura axis base)
-   target_link_options(app_simple_shortcut PRIVATE -Wl,-z,defs)
+   target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+   #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 endif ()
 
 
@@ -65,7 +65,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_simple_shortcut PRIVATE _APP_SIMPLE_SHORTCUT_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
 
 
 add_subdirectory(__implement)

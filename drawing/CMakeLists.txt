@@ -36,7 +36,7 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(app_simple_drawing PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 list(APPEND library_references
@@ -51,24 +51,24 @@ list(APPEND library_references
 
 if (MSVC)
 
-   target_compile_options(app_simple_drawing PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_drawing PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_drawing PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_simple_drawing PRIVATE ${library_references})
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
 
 elseif(${LINUX} OR ${FREEBSD})
 
-   target_compile_options(app_simple_drawing PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-   #target_link_options(app_simple_drawing PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(app_simple_drawing PRIVATE ${library_references})
-   target_link_options(app_simple_drawing PRIVATE -Wl,-z,defs)
+   target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+   #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 endif ()
 
 
 
 
-target_link_directories(app_simple_drawing PRIVATE ${library_link_directories})
+target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
@@ -80,7 +80,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_simple_drawing PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
 
 
 add_subdirectory(__implement)
