@@ -37,8 +37,6 @@ list(APPEND library_source
 
 if (MSVC)
    set(LIBCXX_TARGETING_MSVC ON)
-else ()
-   set(LIBCXX_TARGETING_MSVC OFF)
 endif ()
 
 
@@ -48,10 +46,10 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(app_simple_networking_application PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
-list(APPEND app_simple_networking_application_references
+list(APPEND library_references
    acme
    apex
    aqua
@@ -63,21 +61,21 @@ list(APPEND app_simple_networking_application_references
    )
 
 if (MSVC)
-   target_compile_options(app_simple_networking_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_networking_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-   target_link_options(app_simple_networking_application PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(app_simple_networking_application PRIVATE ${app_simple_networking_application_references})
-   add_dependencies(app_simple_networking_application draw2d_gdiplus imaging_wic)
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 elseif(${LINUX} OR ${FREEBSD})
-   target_compile_options(app_simple_networking_application PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-   #target_link_options(app_simple_networking_application PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(app_simple_networking_application PRIVATE ${app_simple_networking_application_references})
-   target_link_options(app_simple_networking_application PRIVATE -Wl,-z,defs)
-   add_dependencies(app_simple_networking_application draw2d_cairo imaging_freeimage)
+   target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+   #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
+   add_dependencies(${PROJECT_NAME} draw2d_cairo imaging_freeimage)
 endif ()
 
-add_dependencies(app_simple_networking_application experience_core)
-add_dependencies(app_simple_networking_application networking_bsd)
+add_dependencies(${PROJECT_NAME} experience_core)
+add_dependencies(${PROJECT_NAME} networking_bsd)
 
 list(APPEND library_link_directories
    ${LIBRARY_OUTPUT_PATH}
@@ -86,7 +84,7 @@ list(APPEND library_link_directories
    )
 
 
-target_link_directories(app_simple_networking_application PRIVATE ${library_link_directories})
+target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
@@ -108,9 +106,9 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_simple_networking_application PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
-target_compile_definitions(app_simple_networking_application PRIVATE UNICODE)
-target_compile_definitions(app_simple_networking_application PRIVATE _UNICODE)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
+target_compile_definitions(${PROJECT_NAME} PRIVATE UNICODE)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _UNICODE)
 
 
 

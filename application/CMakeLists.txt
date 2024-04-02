@@ -37,26 +37,26 @@ target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 
-set_target_properties(app_simple_application PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
-    target_compile_options(app_simple_application PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(app_simple_application PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_libraries(app_simple_application PRIVATE ${library_references})
-    target_link_options(app_simple_application PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
 elseif(${LINUX} OR ${FREEBSD})
-    target_compile_options(app_simple_application PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
-    #target_link_options(app_simple_application PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(app_simple_application PRIVATE ${library_references})
-    target_link_options(app_simple_application PRIVATE -Wl,-z,defs)
+    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
+    #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 endif()
 
 
-add_dependencies(app_simple_application experience_core)
-add_dependencies(app_simple_application ${default_draw2d})
-add_dependencies(app_simple_application ${default_write_text})
-add_dependencies(app_simple_application database_sqlite3)
+add_dependencies(${PROJECT_NAME} experience_core)
+add_dependencies(${PROJECT_NAME} ${default_draw2d})
+add_dependencies(${PROJECT_NAME} ${default_write_text})
+add_dependencies(${PROJECT_NAME} database_sqlite3)
 
 
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
@@ -68,7 +68,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_simple_application PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _APP_SIMPLE_APPLICATION_LIBRARY)
 
 
 add_subdirectory(__implement)
