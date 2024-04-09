@@ -277,7 +277,7 @@ namespace app_simple_shader
 
                saveimage.m_eformat = ::draw2d::e_format_png;
 
-               string strDate = datetime()->date_time_text(INTERNATIONAL_DATE_TIME_FORMAT_FOR_FILE);
+               string strDate = datetime()->date_time_text_for_file();
 
                auto pcontext = m_pcontext;
 
