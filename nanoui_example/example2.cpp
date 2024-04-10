@@ -66,7 +66,14 @@ namespace app_simple_nanoui_example
          //   screen = __new< Screen(Vector2i >(500, 700), "NanoGUI test");
          //}
 
-         bool enabled = true;
+      nanoui::FormHelper * guiNanouiExample = __new< ::nanoui::FormHelper >(this);
+      m_pwindow = guiNanouiExample->add_window({ 10, 10 }, "nanoui example");
+      guiNanouiExample->add_group("Buttons");
+      guiNanouiExample->add_button("A button", [this]()
+         { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Button pressed.");
+         });
+
+      bool enabled = true;
          nanoui::FormHelper * gui = __new< ::nanoui::FormHelper >(this);
          m_pwindow = gui->add_window({ 10, 10 }, "Form helper example");
          gui->add_group("Basic types");
