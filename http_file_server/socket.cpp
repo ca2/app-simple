@@ -36,7 +36,7 @@ namespace app_simple_http_file_server
 
       string strHost = inheader("host");
 
-      //if (!strHost.case_insensitive_begins("localhost.ca2software.com:2000"))
+      //if (!strHost.case_insensitive_begins("localhost.ca2.software:2000"))
       //{
       //   outattr("http_status_code") = 500;
       //   /*outattr("http_version") = "HTTP/1.1";*/
@@ -54,10 +54,10 @@ namespace app_simple_http_file_server
 
       ::string strServer = purl->get_server(strReferer);
 
-      //if (strServer.case_insensitive_equals("store.ca2software.com"))
+      //if (strServer.case_insensitive_equals("ca2.store"))
       //{
 
-      //   outheader("Access-Control-Allow-Origin") = "https://store.ca2software.com";
+      //   outheader("Access-Control-Allow-Origin") = "https://ca2.store";
 
       //}
       //else if (strServer.case_insensitive_equals("camilothomas.com"))
@@ -234,7 +234,7 @@ namespace app_simple_http_file_server
 //
 //            //outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
 //
-//            response().file()->write("localhost.ca2software.com is installed!!");
+//            response().file()->write("localhost.ca2.software is installed!!");
 //
 //         }
 //         else if (m_request.m_strRequestUri == "/start_ca2store")
@@ -265,7 +265,7 @@ namespace app_simple_http_file_server
 //
 //         //outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
 //
-//         response().file()->write("localhost.ca2software.com starting...");
+//         response().file()->write("localhost.ca2.software starting...");
 //
 //         }
 //         else if (string_begins(m_request.m_strRequestUri, "/matter/"))
