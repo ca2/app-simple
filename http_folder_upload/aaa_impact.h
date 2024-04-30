@@ -56,7 +56,7 @@ namespace app_simple_http_folder_upload
       bool on_click(::item * pitem) override;
 
 
-      //void network_interface_discovery(::index iItem);
+      //void network_interface_discovery(::raw::index iItem);
 
 
    };

@@ -316,7 +316,7 @@ namespace app_simple_networking_application
    }
 
 
-   //void command_list2::network_interface_discovery(::index iItem)
+   //void command_list2::network_interface_discovery(::raw::index iItem)
    //{
 
    //   m_paddressNetworkInterface.release();

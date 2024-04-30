@@ -53,7 +53,7 @@ namespace app_simple_http
       bool on_click(::item * pitem) override;
 
 
-      //void network_interface_discovery(::index iItem);
+      //void network_interface_discovery(::raw::index iItem);
 
 
    };

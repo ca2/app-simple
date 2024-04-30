@@ -29,7 +29,7 @@ namespace app_simple_http_folder_upload
 
       //virtual void write(::binary_stream & stream) const override;
 
-      void network_interface_discovery(::index iItem);
+      void network_interface_discovery(::raw::index iItem);
 
    };
 

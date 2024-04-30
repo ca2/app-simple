@@ -24,7 +24,7 @@ namespace app_simple_http_file_server
 
       ::string m_strResult;
 
-      virtual ::string get_text(::index iSubItem);
+      virtual ::string get_text(::raw::index iSubItem);
 
 
    };

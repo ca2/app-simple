@@ -62,7 +62,7 @@ namespace app_simple_http_folder_upload
       virtual void do_synchronization();
 
 
-      //void network_interface_discovery(::index iItem);
+      //void network_interface_discovery(::raw::index iItem);
 
 
    };

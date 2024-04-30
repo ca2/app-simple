@@ -235,7 +235,7 @@ namespace app_simple_http_file_server
    }
 
 
-   //void impact::network_interface_discovery(::index iItem)
+   //void impact::network_interface_discovery(::raw::index iItem)
    //{
 
    //   m_paddressNetworkInterface.release();

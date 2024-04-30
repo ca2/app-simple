@@ -91,7 +91,7 @@ namespace app_simple_http
 
       //auto addressa = system()->m_papexsystem->networking()->list_network_interfaces();
 
-      //for (::index iItem = 0; iItem < addressa.size(); iItem++)
+      //for (::raw::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
 
       //   auto pitem = __allocate< ::item >(e_element_item, iItem);
@@ -104,7 +104,7 @@ namespace app_simple_http
 
       //auto addressa2 = system()->m_papexsystem->networking()->list_computers();
 
-      //for (::index iItem = 0; iItem < addressa2.size(); iItem++)
+      //for (::raw::index iItem = 0; iItem < addressa2.size(); iItem++)
       //{
 
       //   m_mapaddress2[iItem] = addressa2[iItem];
