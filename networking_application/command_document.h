@@ -17,7 +17,7 @@ namespace app_simple_networking_application
 
 
       ::pointer <::item_array >        m_pitemaCommand;
-      ::index                          m_iCurrentCommand;
+      ::raw::index                          m_iCurrentCommand;
 
       ::string                         m_strCurrentAdapter;
 

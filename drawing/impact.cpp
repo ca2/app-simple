@@ -199,7 +199,7 @@ namespace app_simple_drawing
 
          ::rectangle_i32 rectangle = this->rectangle();
 
-         for (index i = 0; i < 11; i++)
+         for (::raw::index i = 0; i < 11; i++)
          {
 
             pgraphics->draw_inset_rectangle(rectangle, argb(180, 80, 80, 80), 1.0);

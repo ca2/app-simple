@@ -24,7 +24,7 @@ namespace app_simple_networking_application
 
       ::string m_strResult;
 
-      virtual ::string get_text(::index iSubItem);
+      virtual ::string get_text(::raw::index iSubItem);
 
 
    };

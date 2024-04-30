@@ -72,7 +72,7 @@ namespace app_simple_http_folder_upload
 #endif
 
 
-   void main_document::network_interface_discovery(::index iItem)
+   void main_document::network_interface_discovery(::raw::index iItem)
    {
 
       //m_strNetworkInterfaceAddress.empty();
