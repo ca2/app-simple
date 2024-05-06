@@ -123,15 +123,15 @@ namespace app_simple_form
 
       m_pstillResponse->m_etextwrap = e_text_wrap_character;
 
-      m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
+      //m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
 
-      m_pcombobox->add_string("Combo1", "ComboData001");
+      m_pcombobox->add_item("Combo1", "ComboData001");
 
-      m_pcombobox->add_string("Combo2", "ComboData002");
+      m_pcombobox->add_item("Combo2", "ComboData002");
 
-      m_pcombobox->add_string("Combo3", "ComboData003");
+      m_pcombobox->add_item("Combo3", "ComboData003");
 
-      m_pcombobox->add_string("Combo4", "ComboData004");
+      m_pcombobox->add_item("Combo4", "ComboData004");
 
    }
 
@@ -270,9 +270,7 @@ namespace app_simple_form
 
          string strData;
 
-         strData = m_pcombobox->get_current_item_string_value();
-
-         //auto routine = [this, strText, strData]()
+      strData = m_pcombobox->get_current_item_atom();        //auto routine = [this, strText, strData]()
          //{
          string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
          output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
