@@ -60,6 +60,7 @@
 		9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077A02081B4D5758001C85FF /* UIKit.framework */; };
 		9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */; };
 		9AF7615D1F84388800FDE7CC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181BE1F21C2F000FDAF74 /* CoreText.framework */; };
+		9AFDDC122BE8A3FD00555778 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFDDC062BE8A3FD00555778 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,6 +345,7 @@
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		9AFDDC062BE8A3FD00555778 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AFDDC122BE8A3FD00555778 /* SystemConfiguration.framework in Frameworks */,
 				9A50CDFA2B6CB89A00FDB101 /* libios_archive.a in Frameworks */,
 				9A50C7842B6C917800FDB101 /* libios_unac.a in Frameworks */,
 				9A50C7822B6C914900FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
@@ -441,6 +444,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AFDDC062BE8A3FD00555778 /* SystemConfiguration.framework */,
 				9A50CDF92B6CB89900FDB101 /* libios_archive.a */,
 				9A50C7832B6C917800FDB101 /* libios_unac.a */,
 				9A50C7812B6C914900FDB101 /* UniformTypeIdentifiers.framework */,
