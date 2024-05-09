@@ -17,7 +17,7 @@ namespace app_simple_http_folder_upload
 
 
       ::pointer <::item_array >        m_pitemaCommand;
-      ::raw::index                          m_iCurrentCommand;
+      ::collection::index                          m_iCurrentCommand;
 
       ::string                         m_strCurrentAdapter;
 

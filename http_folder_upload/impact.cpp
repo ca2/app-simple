@@ -205,7 +205,7 @@ namespace app_simple_http_folder_upload
 
       int iHeight = 20;
 
-      for (::raw::index i = 0; i < m_listing.size(); i++)
+      for (::collection::index i = 0; i < m_listing.size(); i++)
       {
 
          rectangleX.top() = y;
@@ -254,7 +254,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   //void impact::network_interface_discovery(::raw::index iItem)
+   //void impact::network_interface_discovery(::collection::index iItem)
    //{
 
    //   m_paddressNetworkInterface.release();

@@ -122,7 +122,7 @@ namespace app_simple_drawing
 
          pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-         for (::raw::index i = 0; i < 5; i++)
+         for (::collection::index i = 0; i < 5; i++)
          {
 
             pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225), 1.0);

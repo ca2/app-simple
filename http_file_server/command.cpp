@@ -7,7 +7,7 @@ namespace app_simple_http_file_server
 {
 
 
-      ::string command::get_text(::raw::index iSubItem)
+      ::string command::get_text(::collection::index iSubItem)
       {
 
          switch (iSubItem)

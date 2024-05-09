@@ -19,7 +19,7 @@ namespace app_simple_nanoui_example
 
       ::pointer<main_window>  m_pmainwindow;
 
-      ::raw::index m_current_image;
+      ::collection::index m_current_image;
 
       ProgressBar * m_progress;
 
