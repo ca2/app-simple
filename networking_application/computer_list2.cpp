@@ -303,7 +303,7 @@ namespace app_simple_networking_application
    }
 
 
-   //void computer_list2::network_interface_discovery(::raw::index iItem)
+   //void computer_list2::network_interface_discovery(::collection::index iItem)
    //{
 
    //   m_paddressNetworkInterface.release();

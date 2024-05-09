@@ -233,7 +233,7 @@ namespace app_simple_http
    }
 
 
-   //void impact::network_interface_discovery(::raw::index iItem)
+   //void impact::network_interface_discovery(::collection::index iItem)
    //{
 
    //   m_paddressNetworkInterface.release();

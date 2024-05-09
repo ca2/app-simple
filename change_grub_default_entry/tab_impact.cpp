@@ -184,7 +184,7 @@ namespace app_simple_change_grub_default_entry
 
          ::pointer<form> pform;
 
-         ::raw::index iId = atoi(strId);
+         ::collection::index iId = atoi(strId);
 
          switch (iId)
          {

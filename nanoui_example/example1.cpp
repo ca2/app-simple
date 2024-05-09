@@ -188,7 +188,7 @@ namespace app_simple_nanoui_example
                image_impact->center();
                m_current_image = 0;
       
-               img_panel->set_callback([this, image_impact, img_panel](::raw::index i) {
+               img_panel->set_callback([this, image_impact, img_panel](::collection::index i) {
                   //std::cout << "Selected item " << i << std::endl;
                   image_impact->set_image(img_panel->_get_image(i));
                   m_current_image = i;
@@ -361,7 +361,7 @@ namespace app_simple_nanoui_example
       
                // A simple counter.
                int counter = 1;
-               tab_widget->set_callback([tab_widget, this, counter, plus_id](::raw::index id) mutable {
+               tab_widget->set_callback([tab_widget, this, counter, plus_id](::collection::index id) mutable {
                   if (id == plus_id) {
                      // When the "+" tab has been clicked, simply add a new tab.
                      ::string tab_name = "Dynamic " + ::as_string(counter);

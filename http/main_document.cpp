@@ -72,7 +72,7 @@ namespace app_simple_http
 #endif
 
 
-   void main_document::network_interface_discovery(::raw::index iItem)
+   void main_document::network_interface_discovery(::collection::index iItem)
    {
 
       //m_strNetworkInterfaceAddress.empty();

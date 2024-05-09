@@ -24,7 +24,7 @@ namespace app_simple_http_folder_upload
 
       ::string m_strResult;
 
-      virtual ::string get_text(::raw::index iSubItem);
+      virtual ::string get_text(::collection::index iSubItem);
 
 
    };

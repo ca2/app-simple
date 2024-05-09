@@ -7,7 +7,7 @@ namespace app_simple_networking_application
 {
 
 
-      ::string command::get_text(::raw::index iSubItem)
+      ::string command::get_text(::collection::index iSubItem)
       {
 
          switch (iSubItem)
