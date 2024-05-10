@@ -209,16 +209,16 @@ namespace app_simple_change_grub_default_entry
          if (ptopic->m_puserelement->m_atom == "list_box")
          {
 
-            string strSavedEntry = m_plistbox->get_current_item_string_value();
+            auto atomSavedEntry = m_plistbox->get_current_item_atom();
 
-            if (strSavedEntry.has_char())
+            if (atomSavedEntry.has_char())
             {
 
                auto pcontext = m_pcontext->m_papexcontext;
 
                auto pathGrubFolder = get_grub_folder_path();
 
-               set_grub_saved_entry(pathGrubFolder, strSavedEntry);
+               set_grub_saved_entry(pathGrubFolder, atomSavedEntry.as_string());
 
             }
 
@@ -367,7 +367,7 @@ namespace app_simple_change_grub_default_entry
             if (strEntryName.has_char() && strValue.has_char())
             {
 
-               m_plistbox->add_string(strEntryName, strValue);
+               m_plistbox->add_item(strEntryName, strValue);
 
             }
 
@@ -403,7 +403,7 @@ namespace app_simple_change_grub_default_entry
 
       auto strSavedEntry = get_grub_saved_entry(pathGrubFolder);
 
-      m_plistbox->set_current_item_by_string_value(strSavedEntry, ::e_source_initialize);
+      m_plistbox->set_current_item_by_atom(strSavedEntry, ::e_source_initialize);
 
       m_plistbox->set_need_layout();
 
