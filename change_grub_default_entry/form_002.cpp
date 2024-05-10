@@ -113,15 +113,15 @@ namespace app_simple_change_grub_default_entry
 
       m_pbutton->set_window_text("Send");
 
-      m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
+      //m_pcombobox->m_edatamode = ::user::combo_box::data_mode_string;
 
-      m_pcombobox->add_string("Combo1", "ComboData001");
+      m_pcombobox->add_item("Combo1", "ComboData001");
 
-      m_pcombobox->add_string("Combo2", "ComboData002");
+      m_pcombobox->add_item("Combo2", "ComboData002");
 
-      m_pcombobox->add_string("Combo3", "ComboData003");
+      m_pcombobox->add_item("Combo3", "ComboData003");
 
-      m_pcombobox->add_string("Combo4", "ComboData004");
+      m_pcombobox->add_item("Combo4", "ComboData004");
 
    }
 
@@ -183,7 +183,7 @@ namespace app_simple_change_grub_default_entry
 
             string strData;
 
-            strData = m_pcombobox->get_current_item_string_value();
+            strData = m_pcombobox->get_current_item_atom();
 
             //auto routine = [this, strText, strData]()
             //{
