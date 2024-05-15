@@ -14,8 +14,6 @@
 		9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4972092001905400B9C9B2 /* ImageIO.framework */; };
 		9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5752BB16AAE1D2000CC4EF /* Foundation.framework */; };
 		9A50C7292B6C7A2100FDB101 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C7282B6C7A2100FDB101 /* application_main.cpp */; };
-		9A50C74A2B6C7D4F00FDB101 /* _____debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7482B6C7D4F00FDB101 /* _____debug.xcconfig */; };
-		9A50C74B2B6C7D4F00FDB101 /* _____release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7492B6C7D4F00FDB101 /* _____release.xcconfig */; };
 		9A50C74D2B6C7DB500FDB101 /* libios_acme_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C74C2B6C7DB500FDB101 /* libios_acme_darwin.a */; };
 		9A50C74F2B6C7DB500FDB101 /* libios_apex_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C74E2B6C7DB500FDB101 /* libios_apex_darwin.a */; };
 		9A50C7512B6C7DB500FDB101 /* libios_aura_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7502B6C7DB500FDB101 /* libios_aura_darwin.a */; };
@@ -623,7 +621,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
@@ -825,11 +823,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A50C7722B6C88EE00FDB101 /* _static_factory_.inl in Resources */,
-				9A50C74A2B6C7D4F00FDB101 /* _____debug.xcconfig in Resources */,
 				9AE86B2928588FEE00F88364 /* Launch Screen.storyboard in Resources */,
 				9AE86B2B28588FF400F88364 /* _matter.zip in Resources */,
 				9AE86B2C2858904D00F88364 /* Images.xcassets in Resources */,
-				9A50C74B2B6C7D4F00FDB101 /* _____release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +920,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
@@ -943,6 +940,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CURRENT_PROJECT_VERSION = 10;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
