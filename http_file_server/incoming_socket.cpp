@@ -61,10 +61,10 @@ namespace app_simple_http_file_server
    //      outheader("Access-Control-Allow-Origin") = "https://ca2.store";
 
    //   }
-   //   else if (strServer.case_insensitive_equals("camilothomas.com"))
+   //   else if (strServer.case_insensitive_equals("ca2.network"))
    //   {
 
-   //      outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
+   //      outheader("Access-Control-Allow-Origin") = "https://ca2.network";
 
    //   }
    //   else
@@ -203,7 +203,7 @@ namespace app_simple_http_file_server
 
    //         outattr("http_status") = "OK";
 
-   //         //outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
+   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.network";
 
    //         response().file()->write("localhost.ca2.software is installed!!");
 
@@ -234,7 +234,7 @@ namespace app_simple_http_file_server
 
    //         puserinteraction->window()->switch_to_this_window(true);
 
-   //         //outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
+   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.network";
 
    //         response().file()->write("localhost.ca2.software starting...");
 
@@ -335,10 +335,10 @@ namespace app_simple_http_file_server
 
    //      //auto strRefererServer = system()->url()->get_server(strReferer);
 
-   //      //if (strRefererServer.case_insensitive_order("camilothomas.com") == 0)
+   //      //if (strRefererServer.case_insensitive_order("ca2.network") == 0)
    //      //{
 
-   //      //   outheader("Access-Control-Allow-Origin") = "https://camilothomas.com";
+   //      //   outheader("Access-Control-Allow-Origin") = "https://ca2.network";
 
    //      //}
    //      //else if (strRefererServer.case_insensitive_order("ca2.life") == 0)
