@@ -22,8 +22,8 @@
 		9A8C835F27845A11000C8587 /* libapp_simple_drawing.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C835D27845A10000C8587 /* libapp_simple_drawing.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C836027845A1D000C8587 /* libapp_simple_notify_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A353D042661FD6A0060257B /* libapp_simple_notify_drawing.dylib */; };
 		9A8C836127845A1D000C8587 /* libapp_simple_notify_drawing.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A353D042661FD6A0060257B /* libapp_simple_notify_drawing.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D0DDF26B6452C000D2AD6 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DD526B6452C000D2AD6 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A8D0DE026B6452C000D2AD6 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DDE26B6452C000D2AD6 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D0DDF26B6452C000D2AD6 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DD526B6452C000D2AD6 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8D0DE026B6452C000D2AD6 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0DDE26B6452C000D2AD6 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A90BCB52B54A00F002BFC9E /* libarchive.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A90BCB32B54A00F002BFC9E /* libarchive.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A990436275332A500B13F01 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9904322753327A00B13F01 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A990438275332E900B13F01 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A990437275332E900B13F01 /* _matter.zip */; };
@@ -247,9 +247,9 @@
 			files = (
 				9AC01E6A2748D2D9006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */,
 				9AFFC829267885D200C4104F /* libacme.dylib in Embed Libraries */,
-				9A8D0DDF26B6452C000D2AD6 /* libssl.3.dylib in Embed Libraries */,
+				9A8D0DDF26B6452C000D2AD6 /* libssl.dylib in Embed Libraries */,
 				9A9A19482AFC37C600FA9BEB /* libdarwin.dylib in Embed Libraries */,
-				9A8D0DE026B6452C000D2AD6 /* libcrypto.3.dylib in Embed Libraries */,
+				9A8D0DE026B6452C000D2AD6 /* libcrypto.dylib in Embed Libraries */,
 				9A79BDDF266455CC009E6C44 /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9AB15C3529A87B3600DFDF90 /* libacme_darwin.dylib in Embed Libraries */,
 				9A79BDDD266455CC009E6C44 /* libdatabase_sqlite3.dylib in Embed Libraries */,
@@ -303,8 +303,8 @@
 		9A79BDC9266455CB009E6C44 /* libdatabase_sqlite3.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdatabase_sqlite3.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C819427844BD2000C8587 /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C835D27845A10000C8587 /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_drawing.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8D0DD526B6452C000D2AD6 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
-		9A8D0DDE26B6452C000D2AD6 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
+		9A8D0DD526B6452C000D2AD6 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libssl.dylib"; sourceTree = "<group>"; };
+		9A8D0DDE26B6452C000D2AD6 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
 		9A8F4D1E2A26D44C00097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A8F4D292A26D44C00097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A90BCB32B54A00F002BFC9E /* libarchive.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libarchive.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -513,10 +513,10 @@
 				9AFFC826267885D200C4104F /* libaura_posix.dylib */,
 				9AFFC827267885D200C4104F /* libidn.dylib */,
 				9A79BDC5266455CB009E6C44 /* libaxis.dylib */,
-				9A8D0DDE26B6452C000D2AD6 /* libcrypto.3.dylib */,
+				9A8D0DDE26B6452C000D2AD6 /* libcrypto.dylib */,
 				9A79BDC6266455CB009E6C44 /* libbase.dylib */,
 				9A79BDC9266455CB009E6C44 /* libdatabase_sqlite3.dylib */,
-				9A8D0DD526B6452C000D2AD6 /* libssl.3.dylib */,
+				9A8D0DD526B6452C000D2AD6 /* libssl.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
@@ -887,6 +887,7 @@
 			baseConfigurationReference = 9A8F4D292A26D44C00097EE1 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -939,7 +940,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -973,6 +974,7 @@
 			baseConfigurationReference = 9A8F4D1E2A26D44C00097EE1 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1018,7 +1020,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 					"$(WorkspaceDir)/operating_system",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;

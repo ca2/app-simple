@@ -16,8 +16,8 @@
 		9A8C819227844AA7000C8587 /* libfolder_zip.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8C818E27844A7C000C8587 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C819327844B17000C8587 /* libapp_simple_http_folder_upload.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9902B927532B0F00B13F01 /* libapp_simple_http_folder_upload.dylib */; };
 		9A9902BE27532B7F00B13F01 /* libapp_simple_http_folder_upload.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9902B927532B0F00B13F01 /* libapp_simple_http_folder_upload.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A9904232753303E00B13F01 /* libcrypto.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99042027532EFC00B13F01 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A9904242753304000B13F01 /* libssl.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99041F27532EFC00B13F01 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A9904232753303E00B13F01 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99042027532EFC00B13F01 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A9904242753304000B13F01 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A99041F27532EFC00B13F01 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9A193A2AFC379700FA9BEB /* libdarwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A9A19382AFC379700FA9BEB /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A9E4A4D27519C560094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A4A27519C560094A04C /* Images.xcassets */; };
 		9A9E4A972751A3B20094A04C /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9E4A802751A3B20094A04C /* libacme.dylib */; };
@@ -314,8 +314,8 @@
 				9A9E4AA62751A3B20094A04C /* libapex_posix.dylib in Embed Libraries */,
 				9A9902BE27532B7F00B13F01 /* libapp_simple_http_folder_upload.dylib in Embed Libraries */,
 				9A9E4AC02751A3B30094A04C /* libexperience_core.dylib in Embed Libraries */,
-				9A9904232753303E00B13F01 /* libcrypto.3.dylib in Embed Libraries */,
-				9A9904242753304000B13F01 /* libssl.3.dylib in Embed Libraries */,
+				9A9904232753303E00B13F01 /* libcrypto.dylib in Embed Libraries */,
+				9A9904242753304000B13F01 /* libssl.dylib in Embed Libraries */,
 				9A9E4ACE2751A3B40094A04C /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9A9E4ABC2751A3B30094A04C /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9A9E4AB02751A3B30094A04C /* libaura_apple.dylib in Embed Libraries */,
@@ -351,8 +351,8 @@
 		9A8C818927844A7B000C8587 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
 		9A8F4D2C2A26D49200097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A8F4D392A26D49200097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
-		9A99041F27532EFC00B13F01 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "../../../../../operating_system/storage-macos/library/libssl.3.dylib"; sourceTree = "<group>"; };
-		9A99042027532EFC00B13F01 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "../../../../../operating_system/storage-macos/library/libcrypto.3.dylib"; sourceTree = "<group>"; };
+		9A99041F27532EFC00B13F01 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libssl.dylib"; sourceTree = "<group>"; };
+		9A99042027532EFC00B13F01 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
 		9A9A19382AFC379700FA9BEB /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A4A27519C560094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A4B27519C560094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -565,8 +565,8 @@
 				9A9E4A852751A3B20094A04C /* libapex_apple.dylib */,
 				9A9E4A862751A3B20094A04C /* libapex_macos.dylib */,
 				9A9E4A872751A3B20094A04C /* libapex_posix.dylib */,
-				9A99042027532EFC00B13F01 /* libcrypto.3.dylib */,
-				9A99041F27532EFC00B13F01 /* libssl.3.dylib */,
+				9A99042027532EFC00B13F01 /* libcrypto.dylib */,
+				9A99041F27532EFC00B13F01 /* libssl.dylib */,
 				9A9E4A892751A3B20094A04C /* libaqua.dylib */,
 				9A9E4A8A2751A3B20094A04C /* libaura.dylib */,
 				9A9E4A8B2751A3B20094A04C /* libaura_apple.dylib */,
@@ -1064,7 +1064,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1143,7 +1143,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 					"$(WorkspaceDir)/operating_system",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
