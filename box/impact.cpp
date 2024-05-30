@@ -6,7 +6,7 @@
 #include "acme/constant/message.h"
 #include "acme/platform/sequencer.h"
 #include "acme/primitive/mathematics/mathematics.h"
-#include "acme/user/nano/nano.h"
+//#include "acme/user/nano/nano.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
 
@@ -318,7 +318,7 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      auto psequencer = nano()->message_box(
+      auto psequencer = message_box(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          e_message_box_yes_no | e_message_box_icon_information
