@@ -65,6 +65,7 @@ add_dependencies(${PROJECT_NAME} ${default_write_text})
 add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
 add_dependencies(${PROJECT_NAME} ${default_node})
 add_dependencies(${PROJECT_NAME} crypto_openssl)
+add_dependencies(${PROJECT_NAME} database_sqlite3)
 add_dependencies(${PROJECT_NAME} experience_core)
 add_dependencies(${PROJECT_NAME} folder_zip)
 
