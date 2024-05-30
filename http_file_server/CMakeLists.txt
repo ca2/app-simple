@@ -12,20 +12,12 @@ list(APPEND library_source
    application.h
    command.cpp
    command.h
-   command_document.cpp
-   command_document.h
-   command_list2.cpp
-   command_list2.h
-   computer_list2.cpp
-   computer_list2.h
    document.cpp
    document.h
    framework.cpp
    framework.h
    frame.cpp
    frame.h
-   interface_list2.cpp
-   interface_list2.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp
