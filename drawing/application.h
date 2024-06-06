@@ -2,7 +2,7 @@
 
 
 #include "base/platform/application.h"
-
+#include "acme/primitive/data/check_property.h"
 
 namespace app_simple_drawing
 {
@@ -13,7 +13,9 @@ namespace app_simple_drawing
    {
    public:
 
-
+      check_property < "simple_checkbox" >      m_checkSimple;
+      check_property < "no_client_frame" >      m_checkNoClientFrame;
+      text_property < "simple_text" >           m_checkNoClientFrame;
       __PROPERTIES(application)
          __PROPERTY(e_check, m_echeckSimple, "simple_checkbox");
          __PROPERTY(e_check, m_echeckNoClientFrame, "no_client_frame");
