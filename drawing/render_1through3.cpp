@@ -118,7 +118,7 @@ namespace app_simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = get_app()->m_textSimple;
+         strTitle = get_app()->m_textSimple.as_text();
 
          if(strTitle.is_empty())
          {
