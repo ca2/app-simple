@@ -69,12 +69,12 @@ namespace app_simple_box
       //m_ptemplateAppSimpleBoxMain = pdoctemplate;
 
       //add_document_template(pdoctemplate);
+      //default_data_save_handling(m_checkSimple);
 
-      default_data_save_handling("simple_checkbox");
+      //default_data_save_handling(m_checkNoClientFrame);
 
-      default_data_save_handling("no_client_frame");
+      //default_data_save_handling(m_textSimple);
 
-      default_data_save_handling("simple_text");
 
       //return true;
 

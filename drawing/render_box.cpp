@@ -37,7 +37,7 @@ namespace app_simple_drawing
 
       __construct(ppen);
 
-      auto & echeckSimple = get_app()->application_properties().m_echeckSimple;
+      auto echeckSimple = (::e_check)get_app()->m_checkSimple;
 
       if (__bool(echeckSimple))
       {

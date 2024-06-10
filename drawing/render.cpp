@@ -115,7 +115,7 @@ namespace app_simple_drawing
 
       }
 
-      if (get_app()->application_properties().m_echeckNoClientFrame != ::e_check_checked)
+      if (get_app()->m_checkNoClientFrame != ::e_check_checked)
       {
 
          ::rectangle_i32 rectangle(m_rectangle);
@@ -284,12 +284,12 @@ namespace app_simple_drawing
 
          pgraphics->set(pfont1);
 
-         strTitle = get_app()->application_properties().m_strSimple;
+         strTitle = get_app()->m_textSimple;
 
          if (strTitle.is_empty())
          {
 
-            strTitle = get_app()->application_properties().m_strMainTitle;
+            strTitle = get_app()->m_textMainTitle;
 
          }
 
@@ -347,7 +347,7 @@ namespace app_simple_drawing
          else if (m_iDrawing == 3)
          {
 
-            if (__bool(get_app()->application_properties().m_echeckSimple))
+            if ((bool) get_app()->m_checkSimple)
             {
 
                pbrush->create_solid(m_hlsText);
@@ -375,7 +375,7 @@ namespace app_simple_drawing
          else
          {
 
-            if (__bool(get_app()->application_properties().m_echeckSimple))
+            if ((bool) get_app()->m_checkSimple)
             {
 
                pbrush->create_solid(m_hlsText);
