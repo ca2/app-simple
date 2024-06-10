@@ -39,7 +39,7 @@ namespace app_simple_drawing
 
       auto echeckSimple = get_app()->m_checkSimple.echeck();
 
-      if (echeckSimple.bcheck())
+      if (echeckSimple.is_checked())
       {
 
          ppen->create_null();

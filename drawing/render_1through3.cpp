@@ -123,7 +123,7 @@ namespace app_simple_drawing
          if(strTitle.is_empty())
          {
          
-            strTitle = get_app()->m_textMainTitle;
+            strTitle = get_app()->m_textMainTitle.as_text();
          
          }
 
@@ -161,9 +161,9 @@ namespace app_simple_drawing
             
       }
 
-      ::e_check echeckSimple = get_app()->m_checkSimple;
+      auto echeckSimple = get_app()->m_checkSimple.echeck();
 
-      if (__bool(echeckSimple))
+      if (echeckSimple.is_checked())
       {
 
          ppen->create_null();
@@ -185,7 +185,7 @@ namespace app_simple_drawing
       else
       {
 
-         if ((bool) get_app()->m_checkSimple)
+         if (get_app()->m_checkSimple.is_checked())
          {
 
             pbrush->create_solid(argb(255, 255, 255, 200));
@@ -229,7 +229,7 @@ namespace app_simple_drawing
       else if (m_iDrawing == 3)
       {
 
-         if ((bool) get_app()->m_checkSimple)
+         if (get_app()->m_checkSimple.is_checked())
          {
 
             pbrush->create_solid(m_hlsText);
@@ -257,7 +257,7 @@ namespace app_simple_drawing
       else
       {
 
-         if ((bool) get_app()->m_checkSimple)
+         if (get_app()->m_checkSimple.is_checked())
          {
 
             pbrush->create_solid(m_hlsText);

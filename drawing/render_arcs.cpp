@@ -81,7 +81,7 @@ namespace app_simple_drawing
 
       pgraphics->set(pbrush);
 
-      if ((bool) get_app()->m_checkSimple)
+      if (get_app()->m_checkSimple.is_checked())
       {
 
          if (angleAngle < 0.0)
@@ -207,7 +207,7 @@ namespace app_simple_drawing
 
       ::rectangle_i32 rClient(m_rectangle);
 
-      if ((bool)get_app()->m_checkSimple)
+      if (get_app()->m_checkSimple.is_checked())
       {
 
          pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
