@@ -168,7 +168,7 @@ namespace app_simple_shortcut_amender
 
          papp->datastream()->get("last_folder", strLastFolder);
 
-         m_peditFolder->_001SetText(strLastFolder, ::e_source_initialize);
+         m_peditFolder->set_text(strLastFolder, ::e_source_initialize);
 
       }
 
@@ -178,7 +178,7 @@ namespace app_simple_shortcut_amender
 
          papp->datastream()->get("last_source", strLastSource);
 
-         m_peditSource->_001SetText(strLastSource, ::e_source_initialize);
+         m_peditSource->set_text(strLastSource, ::e_source_initialize);
 
       }
 
@@ -188,7 +188,7 @@ namespace app_simple_shortcut_amender
 
          papp->datastream()->get("last_target", strLastTarget);
 
-         m_peditTarget->_001SetText(strLastTarget, ::e_source_initialize);
+         m_peditTarget->set_text(strLastTarget, ::e_source_initialize);
 
       }
 
@@ -351,7 +351,7 @@ namespace app_simple_shortcut_amender
 
                string strText;
 
-               m_peditFolder->_001GetText(strText);
+               m_peditFolder->get_text(strText);
 
                auto papp = get_app();
 
@@ -372,7 +372,7 @@ namespace app_simple_shortcut_amender
 
                string strText;
 
-               m_peditSource->_001GetText(strText);
+               m_peditSource->get_text(strText);
 
                auto papp = get_app();
 
@@ -393,7 +393,7 @@ namespace app_simple_shortcut_amender
 
                string strText;
 
-               m_peditTarget->_001GetText(strText);
+               m_peditTarget->get_text(strText);
 
                auto papp = get_app();
 
@@ -419,7 +419,7 @@ namespace app_simple_shortcut_amender
 //         if (ptopic->m_puserelement->m_atom == "clear_button")
 //         {
 //
-//            m_pedit->_001SetText("", ::e_source_user);
+//            m_pedit->set_text("", ::e_source_user);
 //
 //         }
 //         else if (ptopic->m_puserelement->m_atom == "send_button")
@@ -427,7 +427,7 @@ namespace app_simple_shortcut_amender
 //
 //            string strText;
 //
-//            m_pedit->_001GetText(strText);
+//            m_pedit->get_text(strText);
 //
 //            //main_async(__routine([this, strText]()
 //              // {
@@ -452,9 +452,9 @@ namespace app_simple_shortcut_amender
    void form_amender::_001OnClearButton(::message::message * pmessage)
    {
 
-      m_peditSource->_001SetText("", ::e_source_user);
+      m_peditSource->set_text("", ::e_source_user);
 
-      m_peditTarget->_001SetText("", ::e_source_user);
+      m_peditTarget->set_text("", ::e_source_user);
 
       pmessage->m_bRet = true;
 
@@ -472,15 +472,15 @@ namespace app_simple_shortcut_amender
 
       string strFolder;
 
-      m_peditFolder->_001GetText(strFolder);
+      m_peditFolder->get_text(strFolder);
 
       string strSource;
 
-      m_peditSource->_001GetText(strSource);
+      m_peditSource->get_text(strSource);
 
       string strTarget;
 
-      m_peditTarget->_001GetText(strTarget);
+      m_peditTarget->get_text(strTarget);
 
       string strMessage;
 

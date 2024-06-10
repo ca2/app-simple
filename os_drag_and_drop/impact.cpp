@@ -116,7 +116,7 @@ namespace app_simple_os_drag_and_drop
 
             auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
-            pinteraction->_001SetText(strText,::e_source_initialize);
+            pinteraction->set_text(strText,::e_source_initialize);
 
          }
 

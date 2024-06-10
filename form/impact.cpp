@@ -104,8 +104,7 @@ namespace app_simple_form
 
             auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
-            pinteraction->_001SetText(strText,::e_source_initialize);
-
+            pinteraction->set_text(strText,::e_source_initialize);
 
          }
 

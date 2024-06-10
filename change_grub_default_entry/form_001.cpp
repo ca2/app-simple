@@ -127,7 +127,7 @@ namespace app_simple_change_grub_default_entry
 
       papp->datastream()->get("grub_folder_path", strFolderPath);
 
-      m_pedit->_001SetText(strFolderPath, ::e_source_initialize);
+      m_pedit->set_text(strFolderPath, ::e_source_initialize);
 
       m_pbuttonRestart->set_window_text("Restart Now");
 
@@ -233,7 +233,7 @@ namespace app_simple_change_grub_default_entry
 
             string strText;
 
-            m_pedit->_001GetText(strText);
+            m_pedit->get_text(strText);
 
             if(ptopic->m_actioncontext.is_user_source())
             {
@@ -255,7 +255,7 @@ namespace app_simple_change_grub_default_entry
          if (ptopic->m_puserelement->m_atom == "clear_button")
          {
 
-            m_pedit->_001SetText("", ::e_source_user);
+            m_pedit->set_text("", ::e_source_user);
 
          }
          else if (ptopic->m_puserelement->m_atom == "restart_button")
@@ -279,7 +279,7 @@ namespace app_simple_change_grub_default_entry
 
       string strGrubFolderPath;
 
-      m_pedit->_001GetText(strGrubFolderPath);
+      m_pedit->get_text(strGrubFolderPath);
 
       return strGrubFolderPath;
 

@@ -171,11 +171,11 @@ namespace app_simple_change_grub_default_entry
 
             string strText1;
             
-            m_pedit->_001GetText(strText1);
+            m_pedit->get_text(strText1);
 
             string strText2;
 
-            m_pcombobox->_001GetText(strText2);
+            m_pcombobox->get_text(strText2);
 
             string strText;
 

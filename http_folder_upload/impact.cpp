@@ -149,7 +149,7 @@ namespace app_simple_http_folder_upload
 
          ::string strText;
 
-         m_pmainimpact->m_pimpactpath->m_pimpactfolderpath->_001GetText(strText);
+         m_pmainimpact->m_pimpactpath->m_pimpactfolderpath->get_text(strText);
 
          get_app()->datastream()->set("folder", strText);
 

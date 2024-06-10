@@ -115,7 +115,7 @@ namespace app_simple_http_file_server
 
       ::string str;
 
-      _001GetText(str);
+      get_text(str);
 
       get_app()->m_pathFolder = str;
 
