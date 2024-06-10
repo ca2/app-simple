@@ -13,15 +13,17 @@ namespace app_simple_drawing
    {
    public:
 
-      check_property < "simple_checkbox" >      m_checkSimple;
-      check_property < "no_client_frame" >      m_checkNoClientFrame;
-      text_property < "simple_text" >           m_checkNoClientFrame;
-      __PROPERTIES(application)
-         __PROPERTY(e_check, m_echeckSimple, "simple_checkbox");
-         __PROPERTY(e_check, m_echeckNoClientFrame, "no_client_frame");
-         __PROPERTY(string, m_strSimple, "simple_text");
-         __PROPERTY(string, m_strMainTitle, "main_title");
-      __END_PROPERTIES(application);
+
+      ::data::check_property           m_checkSimple;
+      ::data::check_property           m_checkNoClientFrame;
+      ::data::text_property            m_textSimple;
+      ::data::text_property            m_textMainTitle;
+      //__PROPERTIES(application)
+      //   __PROPERTY(e_check, m_echeckSimple, "simple_checkbox");
+      //   __PROPERTY(e_check, m_echeckNoClientFrame, "no_client_frame");
+      //   __PROPERTY(string, m_strSimple, "simple_text");
+      //   __PROPERTY(string, m_strMainTitle, "main_title");
+      //__END_PROPERTIES(application);
 
       
 

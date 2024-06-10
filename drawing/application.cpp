@@ -22,7 +22,12 @@ namespace app_simple_drawing
    // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_drawing));
 
 
-   application::application()
+   application::application() :
+      m_checkSimple(this, "simple_checkbox"),
+      m_checkNoClientFrame(this, "no_client_frame"),
+      m_textSimple(this, "simple_text"),
+      m_textMainTitle(this, "main_title")
+
    {
 
       //m_ptemplateSimpleDrawingMain = nullptr;
@@ -63,43 +68,9 @@ namespace app_simple_drawing
    void application::init_instance()
    {
 
-      create_application_properties();
-
       m_textAppTitle = __text("text://app-simple/drawing/app_simple_drawing/Simple Drawing");
 
-      auto pproperty1 = application_properties().find("simple_checkbox");
-
-      bool bCheckOk = false;
-
-      if (pproperty1->atom_type() == atom::e_type_check)
-      {
-
-         auto pproperty = pproperty1;
-
-         if (pproperty->atom_type() == atom::e_type_check)
-         {
-
-            auto & echeck = pproperty->echeck_reference();
-
-            if (echeck == e_check_undefined)
-            {
-
-               bCheckOk = true;
-
-            }
-
-         }
-
-      }
-
-      if (!bCheckOk)
-      {
-
-         informationf("ERROR: simple_check_box is not ok");
-
-      }
-
-      application_properties().m_strMainTitle = "Simple Drawing";
+      m_textMainTitle = { "Simple Drawing", ::e_source_sync };
 
       //set_local_data();
 
@@ -110,9 +81,9 @@ namespace app_simple_drawing
       factory()->add_factory_item <::app_simple_drawing::impact >();
       factory()->add_factory_item <::app_simple_drawing::tab_impact >();
 
-      default_toggle_check_handling("simple_checkbox");
+      //default_save_handling(m_checkSimple);
 
-      default_toggle_check_handling("no_client_frame");
+      //default_save_handling(m_checkNoClientFrame);
 
       ::base::application::init_instance();
 
@@ -128,11 +99,11 @@ namespace app_simple_drawing
 
       //add_document_template(pdoctemplate);
 
-      default_data_save_handling("simple_checkbox");
+      default_data_save_handling(m_checkSimple);
 
-      default_data_save_handling("no_client_frame");
+      default_data_save_handling(m_checkNoClientFrame);
 
-      default_data_save_handling("simple_text");
+      default_data_save_handling(m_textSimple);
 
       //return true;
 

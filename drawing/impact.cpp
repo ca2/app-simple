@@ -98,21 +98,23 @@ namespace app_simple_drawing
 
       }
 
-      {
+      m_papp->m_propertylistenera.add(this);
 
-         auto psignal = get_app()->get_signal("simple_checkbox");
+      //{
 
-         psignal->add_handler(this);
+      //   auto psignal = get_app()->get_signal("simple_checkbox");
 
-      }
+      //   psignal->add_handler(this);
 
-      {
+      //}
 
-         auto psignal = get_app()->get_signal("no_client_frame");
+      //{
 
-         psignal->add_handler(this);
+      //   auto psignal = get_app()->get_signal("no_client_frame");
 
-      }
+      //   psignal->add_handler(this);
+
+      //}
 
       //auto estatus = 
       
@@ -145,9 +147,32 @@ namespace app_simple_drawing
 
             auto pinteraction = get_typed_parent<::user::split_impact>()->get_child_by_id("top_edit_impact");
 
-            pinteraction->_001SetText(strText,::e_source_initialize);
+            pinteraction->set_text(strText,::e_source_initialize);
 
          }
+
+      }
+
+   }
+
+
+   void impact::on_property_changed(::data::property_container * pcontainer, const ::atom_array & atoma, const ::payload & payload, const ::action_context & actioncontext)
+   {
+
+      if (m_papp->m_checkSimple.matches(pcontainer, atoma))
+      {
+
+         set_need_redraw();
+
+         post_redraw();
+
+      }
+      else if (m_papp->m_checkNoClientFrame.matches(pcontainer, atoma))
+      {
+
+         set_need_redraw();
+
+         post_redraw();
 
       }
 
@@ -194,7 +219,7 @@ namespace app_simple_drawing
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (get_app()->application_properties().m_echeckNoClientFrame != ::e_check_checked)
+      if (get_app()->m_checkNoClientFrame != ::e_check_checked)
       {
 
          ::rectangle_i32 rectangle = this->rectangle();
