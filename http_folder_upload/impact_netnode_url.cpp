@@ -117,7 +117,7 @@ namespace app_simple_http_folder_upload
 
       ::string str;
 
-      _001GetText(str);
+      get_text(str);
 
       get_app()->m_pathUrl = str;
 
@@ -155,7 +155,7 @@ namespace app_simple_http_folder_upload
 
       get_app()->datastream()->get("url", strUrl);
 
-      _001SetText(strUrl, ::e_source_initialize);
+      set_text(strUrl, ::e_source_initialize);
 
 
    }

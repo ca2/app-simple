@@ -131,7 +131,7 @@ namespace app_simple_form
 
       papp->datastream()->get("last_text", strInitialText);
 
-      m_pedit->_001SetText(strInitialText, ::e_source_initialize);
+      m_pedit->set_text(strInitialText, ::e_source_initialize);
 
       m_pbuttonClear->set_window_text("Clear");
 
@@ -255,7 +255,7 @@ namespace app_simple_form
 
                string strText;
 
-               m_pedit->_001GetText(strText);
+               m_pedit->get_text(strText);
 
                auto papp = get_app();
 
@@ -279,7 +279,7 @@ namespace app_simple_form
 //         if (ptopic->m_puserelement->m_atom == "clear_button")
 //         {
 //
-//            m_pedit->_001SetText("", ::e_source_user);
+//            m_pedit->set_text("", ::e_source_user);
 //
 //         }
 //         else if (ptopic->m_puserelement->m_atom == "send_button")
@@ -287,7 +287,7 @@ namespace app_simple_form
 //
 //            string strText;
 //
-//            m_pedit->_001GetText(strText);
+//            m_pedit->get_text(strText);
 //
 //            //main_async(__routine([this, strText]()
 //              // {
@@ -312,7 +312,7 @@ namespace app_simple_form
    void form_001::_001OnClearButton(::message::message * pmessage)
    {
 
-      m_pedit->_001SetText("", ::e_source_user);
+      m_pedit->set_text("", ::e_source_user);
 
       pmessage->m_bRet = true;
 
@@ -324,7 +324,7 @@ namespace app_simple_form
 
       string strText;
 
-      m_pedit->_001GetText(strText);
+      m_pedit->get_text(strText);
 
       output_error_message("send_button clicked\nText: " + strText);
 

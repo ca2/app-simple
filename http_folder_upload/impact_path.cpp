@@ -148,7 +148,7 @@ namespace app_simple_http_folder_upload
 
       //}
 
-      //m_peditimpact->_001SetText(strUrl, ::e_source_initialize);
+      //m_peditimpact->set_text(strUrl, ::e_source_initialize);
 
       //m_pimpact->m_pmainimpact = this;
 
@@ -163,7 +163,7 @@ namespace app_simple_http_folder_upload
       //
       //         papp->data_get("cur_text",strText);
       //
-      //         peditview->_001SetText(strText, ::e_source_initialize);
+      //         peditview->set_text(strText, ::e_source_initialize);
       //
       //      }
       //

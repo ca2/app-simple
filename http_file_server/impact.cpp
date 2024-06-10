@@ -145,7 +145,7 @@ namespace app_simple_http_file_server
 
          ::string strText;
 
-         m_pmainimpact->m_peditimpact->_001GetText(strText);
+         m_pmainimpact->m_peditimpact->get_text(strText);
 
          get_app()->datastream()->set("folder", strText);
 
