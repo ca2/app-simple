@@ -99,9 +99,9 @@ namespace app_simple_networking_application
       factory()->add_factory_item <::app_simple_networking_application::command_document >();
       factory()->add_factory_item <::app_simple_networking_application::command_list2 >();
 
-      default_toggle_check_handling("simple_checkbox");
+      //default_toggle_check_handling("simple_checkbox");
 
-      default_toggle_check_handling("no_client_frame");
+      //default_toggle_check_handling("no_client_frame");
 
       ::base::application::init_instance();
 
@@ -134,11 +134,11 @@ namespace app_simple_networking_application
 
       //add_document_template(pdoctemplate2);
 
-      default_data_save_handling("simple_checkbox");
+      //default_data_save_handling("simple_checkbox");
 
-      default_data_save_handling("no_client_frame");
+      //default_data_save_handling("no_client_frame");
 
-      default_data_save_handling("simple_text");
+      //default_data_save_handling("simple_text");
 
       //return true;
 
