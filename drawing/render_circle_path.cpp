@@ -54,9 +54,9 @@ namespace app_simple_drawing
 
       __construct(ppen);
 
-      auto echeckSimple = (::e_check) get_app()->m_checkSimple;
+      auto echeckSimple = get_app()->m_checkSimple.echeck();
 
-      if ((bool) echeckSimple)
+      if (echeckSimple.is_checked())
       {
 
          ppen->create_null();

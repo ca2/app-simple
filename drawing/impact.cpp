@@ -219,7 +219,7 @@ namespace app_simple_drawing
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      if (get_app()->m_checkNoClientFrame != ::e_check_checked)
+      if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
       {
 
          ::rectangle_i32 rectangle = this->rectangle();
