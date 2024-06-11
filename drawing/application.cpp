@@ -213,33 +213,33 @@ namespace app_simple_drawing
    }
 
 
-   ::atom application::translate_property_id(const ::atom & atom)
-   {
-      
-      return atom;
-
-//      if(atom == "simple_checkbox")
-//      {
-//
-//         return id_simple_checkbox;
-//
-//      }
-//      else if(atom == "simple_text")
-//      {
-//
-//         return id_simple_text;
-//
-//      }
-//      else if (atom == "no_client_frame")
-//      {
-//
-//         return id_no_client_frame;
-//
-//      }
-//
+//   ::atom application::translate_property_id(const ::atom & atom)
+//   {
+//      
 //      return atom;
-
-   }
+//
+////      if(atom == "simple_checkbox")
+////      {
+////
+////         return id_simple_checkbox;
+////
+////      }
+////      else if(atom == "simple_text")
+////      {
+////
+////         return id_simple_text;
+////
+////      }
+////      else if (atom == "no_client_frame")
+////      {
+////
+////         return id_no_client_frame;
+////
+////      }
+////
+////      return atom;
+//
+//   }
 
    
    string application::draw2d_get_default_implementation_name()

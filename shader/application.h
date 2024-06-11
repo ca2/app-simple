@@ -29,6 +29,8 @@ namespace app_simple_shader
 
       string                                 m_strMainTitle;
 
+      ::data::text_property                     m_textLoadFragmentPathPrefix;
+
 
       application();
       ~application() override;
@@ -66,7 +68,7 @@ namespace app_simple_shader
       //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
 
-      virtual ::atom translate_property_id(const ::atom& atom) override;
+      //virtual ::atom translate_property_id(const ::atom& atom) override;
    };
 
 
