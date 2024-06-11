@@ -156,10 +156,10 @@ namespace app_simple_drawing
    }
 
 
-   void impact::on_property_changed(::data::property_container * pcontainer, const ::atom_array & atoma, const ::payload & payload, const ::action_context & actioncontext)
+   void impact::on_property_changed(::data::property_change & change)
    {
 
-      if (m_papp->m_checkSimple.matches(pcontainer, atoma))
+      if (m_papp->m_checkSimple && change)
       {
 
          set_need_redraw();
@@ -167,7 +167,7 @@ namespace app_simple_drawing
          post_redraw();
 
       }
-      else if (m_papp->m_checkNoClientFrame.matches(pcontainer, atoma))
+      else if (m_papp->m_checkNoClientFrame && change)
       {
 
          set_need_redraw();

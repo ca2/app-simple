@@ -32,7 +32,7 @@ namespace app_simple_drawing
 #endif
 
 
-      void on_property_changed(::data::property_container * pcontainer, const ::atom_array & atoma, const ::payload & payload, const ::action_context & actioncontext);
+      void on_property_changed(::data::property_change & change);
 
 
       virtual void install_message_routing(::channel * psender) override;

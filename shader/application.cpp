@@ -5,6 +5,7 @@
 #include "tab_impact.h"
 #include "impact.h"
 #include "document.h"
+#include "acme/constant/id.h"
 #include "acme/handler/request.h"
 #include "base/user/user/single_document_template.h"
 
@@ -19,7 +20,8 @@ namespace app_simple_shader
    // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_shader));
 
 
-   application::application()
+   application::application() :
+      m_textLoadFragmentPathPrefix(this, id_load_fragment_path_prefix)
    {
       
       m_bImaging = true;
@@ -71,9 +73,9 @@ namespace app_simple_shader
       factory()->add_factory_item <::app_simple_shader::impact >();
       factory()->add_factory_item <::app_simple_shader::tab_impact >();
 
-      default_toggle_check_handling("simple_checkbox");
+      //default_toggle_check_handling("simple_checkbox");
 
-      default_toggle_check_handling("no_client_frame");
+      //default_toggle_check_handling("no_client_frame");
 
       ::aura::application::init_instance();
 
@@ -200,27 +202,27 @@ namespace app_simple_shader
    }
 
 
-   ::atom application::translate_property_id(const ::atom & atom)
-   {
+   //::atom application::translate_property_id(const ::atom & atom)
+   //{
 
-      return atom;
+   //   return atom;
 
-      //if(atom == "simple_checkbox")
-      //{
+   //   //if(atom == "simple_checkbox")
+   //   //{
 
-      //   return id_simple_checkbox;
+   //   //   return id_simple_checkbox;
 
-      //}
-      //else if(atom == "simple_text")
-      //{
+   //   //}
+   //   //else if(atom == "simple_text")
+   //   //{
 
-      //   return id_simple_text;
+   //   //   return id_simple_text;
 
-      //}
+   //   //}
 
-      //return atom;
+   //   //return atom;
 
-   }
+   //}
 
 
 

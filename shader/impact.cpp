@@ -120,11 +120,11 @@ namespace app_simple_shader
 
          };
 
-      auto papp = get_app();
+      //auto papp = get_app();
 
-      papp->add_procedure("simple_checkbox", pprocedureRedraw);
+      //papp->add_procedure("simple_checkbox", pprocedureRedraw);
 
-      papp->add_procedure("no_client_frame", pprocedureRedraw);
+      //papp->add_procedure("no_client_frame", pprocedureRedraw);
 
       //auto estatus = 
       
@@ -168,29 +168,30 @@ namespace app_simple_shader
 
       {
 
-         ::atom atom = "simple_text";
+         //::atom atom = "simple_text";
 
-         auto pproperty = papp->fetch_property(atom);
+         //auto pproperty = papp->fetch_property(atom);
 
-         ::payload payload;
+         //::payload payload;
 
-         if (papp->datastream()->get(atom, payload))
+         m_papp->data_get(m_papp->m_textLoadFragmentPathPrefix);
+         //{
+
+         //   pproperty->target_constrained_assign(payload);
+
+         //}
+
+         //auto idRunnable = papp->translate_property_id(atom);
+         m_papp->m_textLoadFragmentPathPrefix.property_changed() +=
+            [this](auto & change)
+         //papp->add_procedure(idRunnable, [this, atom]()
          {
 
-            pproperty->convert(payload);
+            //auto pproperty = fetch_property(atom);
 
-         }
+            m_prender->defer_load_fragment(change.m_payload.as_string());
 
-         auto idRunnable = papp->translate_property_id(atom);
-
-         papp->add_procedure(idRunnable, [this, atom]()
-         {
-
-            auto pproperty = fetch_property(atom);
-
-            m_prender->defer_load_fragment(pproperty->as_string());
-
-         });
+         };
 
       }
 

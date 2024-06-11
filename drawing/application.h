@@ -74,7 +74,7 @@ namespace app_simple_drawing
       //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
 
-      virtual ::atom translate_property_id(const ::atom& atom) override;
+      //virtual ::atom translate_property_id(const ::atom& atom) override;
 
 
       string draw2d_get_default_implementation_name() override;
