@@ -32,7 +32,7 @@ namespace app_simple_drawing
 #endif
 
 
-      void on_property_changed(::data::property_change & change);
+      void on_property_changed(::data::property_change & change) override;
 
 
       virtual void install_message_routing(::channel * psender) override;
