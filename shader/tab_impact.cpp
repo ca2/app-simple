@@ -104,7 +104,16 @@ namespace app_simple_shader
       //set_tab("Color", COLORSEL_IMPACT);
       //set_tab("Open", FILEMANAGER_IMPACT);
 
-      set_current_tab_by_index(1);
+      if (listing.has_element())
+      {
+
+         auto path = listing.first();
+
+         ::string strPath = path;
+
+         set_current_tab_by_id("shader://" + strPath);
+
+      }
 
    }
 
