@@ -19,18 +19,12 @@ namespace app_simple_drawing
 {
 
 
-   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_drawing));
-
-
    application::application() :
       m_checkSimple(this, "simple_checkbox"),
       m_checkNoClientFrame(this, "no_client_frame"),
       m_textSimple(this, "simple_text"),
       m_textMainTitle(this, "main_title")
-
    {
-
-      //m_ptemplateSimpleDrawingMain = nullptr;
 
       m_ptabimpact = nullptr;
 
