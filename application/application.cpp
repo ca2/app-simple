@@ -3,6 +3,7 @@
 #include "main_frame.h"
 #include "document.h"
 #include "impact.h"
+#include "acme/filesystem/filesystem/file_system_options.h"
 #include "acme/handler/request.h"
 #include "base/user/user/tab_impact.h"
 #include "base/platform/session.h"
@@ -37,6 +38,10 @@ namespace app_simple_application
       m_strBaseSupportId = "app_simple_application";
 
       m_bLicense = false;
+      
+      m_pfilesystemoptions->m_b_iCloudContainer = true;
+      m_pfilesystemoptions->m_str_iCloudContainerIdentifier = "iCloud.app-simple";
+
 
    }
 
@@ -67,6 +72,19 @@ namespace app_simple_application
          ::type < document >(),
          ::type < main_frame >(),
          ::type < impact >()));
+      
+      
+#if defined(APPLE_IOS)
+
+      m_pathApplicationText = "icloud://iCloud.app-simple/Documents/application/application.txt";
+      
+#else
+      
+      m_pathApplicationText = "dropbox-app://application.txt";
+      
+#endif
+
+
 
    }
 
