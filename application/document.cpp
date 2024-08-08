@@ -41,8 +41,10 @@ namespace app_simple_application
    {
 
       ::file::path path;
-
-      path = "dropbox-app://application.txt";
+      
+      ::pointer < ::app_simple_application::application > papp = application();
+      
+      path = papp->m_pathApplicationText;
 
       //const char * pszPath = path.c_str();
       
