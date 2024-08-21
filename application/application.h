@@ -14,7 +14,7 @@ namespace app_simple_application
    public:
 
 
-
+      ::file::path                                    m_pathApplicationText;
       ::user::document *                              m_pdocMenu;
       //::pointer<::user::single_document_template>  m_ptemplateSimpleDrawingMain;
       pane_impact *                                     m_ppaneimpact;

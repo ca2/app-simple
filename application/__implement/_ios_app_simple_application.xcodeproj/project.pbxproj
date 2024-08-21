@@ -250,6 +250,7 @@
 		078C352F1921758500354453 /* _ios_app_simple_application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _ios_app_simple_application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		078C35451921758600354453 /* ios_simple_drawing_simple_drawingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_simple_drawing_simple_drawingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B5903518866047002C6FEC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9A0E3BAA2C607F28004A0972 /* _ios_app_simple_application.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _ios_app_simple_application.entitlements; sourceTree = "<group>"; };
 		9A0E4F052BF50024007C7253 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9A2F60932474F2BD00D392E8 /* libapp_simple_application.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libapp_simple_application.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2F60952474F2BD00D392E8 /* libios_aura.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_aura.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +384,7 @@
 		9A5752A716AAE1D2000CC4EF = {
 			isa = PBXGroup;
 			children = (
+				9A0E3BAA2C607F28004A0972 /* _ios_app_simple_application.entitlements */,
 				9A93B4602846E5B9005ACD11 /* app_simple_application.xcodeproj */,
 				9A93B47E2846E5BA005ACD11 /* crypto_openssl.xcodeproj */,
 				9A93B46F2846E5BA005ACD11 /* database_sqlite3.xcodeproj */,
@@ -921,15 +923,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CODE_SIGN_ENTITLEMENTS = _ios_app_simple_application.entitlements;
+				CURRENT_PROJECT_VERSION = 19;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Application!!";
+				INFOPLIST_KEY_CFBundleDisplayName = _ios_app_simple_application;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				MACH_O_TYPE = mh_execute;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.62;
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca2.software.app-simple.application";
 				WRAPPER_EXTENSION = app;
@@ -941,15 +949,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CODE_SIGN_ENTITLEMENTS = _ios_app_simple_application.entitlements;
+				CURRENT_PROJECT_VERSION = 19;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Application!!";
+				INFOPLIST_KEY_CFBundleDisplayName = _ios_app_simple_application;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				MACH_O_TYPE = mh_execute;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.62;
 				PLATFORM_MODIFIER = ios;
 				PRODUCT_BUNDLE_IDENTIFIER = "ca2.software.app-simple.application";
 				WRAPPER_EXTENSION = app;

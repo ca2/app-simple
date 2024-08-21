@@ -3,6 +3,9 @@
 #include "document.h"
 #include "application.h"
 #include "acme/constant/message.h"
+#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/file_context.h"
+#include "acme/platform/node.h"
 #include "acme/primitive/mathematics/mathematics.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
@@ -21,6 +24,10 @@ namespace app_simple_application
       m_flagNonClient -= e_non_client_background;
       m_iSequence = 0;
       m_bNeedFullRedrawOnResize = true;
+      
+      m_bDefaultClickHandling = true;
+      
+      m_bEmptyAreaIsClientArea = true;
 
    }
 
@@ -292,6 +299,47 @@ namespace app_simple_application
       }
 
       ::user::impact::on_layout(pgraphics);
+      
+      setup_default_client_area_user_item();
+
+   }
+
+
+   bool impact::on_click(::item * pitem)
+   {
+
+      if (::is_set(pitem))
+      {
+
+         if (pitem->m_item.m_eelement == ::e_element_client)
+         {
+
+            print_line("on_click : e_element_client");
+            
+            ::array < ::file::file_dialog_filter > filtera;
+            
+            filtera.add({"application.txt", "application.txt"});
+            
+            pick_single_file(filtera, [ this ] (const ::file::path & path)
+                             {
+               
+               auto memory = file()->as_memory(path);
+               
+               auto size = memory.size();
+               
+               informationf("got file with %d bytes", size);
+               
+               file()->put_memory(m_papp->m_pathApplicationText, memory);
+               
+            }, false);
+
+            return true;
+
+         }
+
+      }
+
+      return ::user::impact::on_click(pitem);
 
    }
 
