@@ -45,6 +45,10 @@ namespace app_simple_application
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
+      
+      
+      bool on_click(::item * pitem) override;
+      
 
    };
 

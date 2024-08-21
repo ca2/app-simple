@@ -11,7 +11,7 @@
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <ProjectName>uwp_app_simple_drawing</ProjectName>
-    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <ItemGroup Label="ProjectConfigurations">
@@ -759,6 +759,9 @@
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\operating_system\operating_system-windows_common\write_text_direct2d\u_write_text_direct2d.vcxproj">
       <Project>{e90b52b8-ab16-4d55-87d6-cf2389746776}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\app\nanoui\u_nanoui.vcxproj">
+      <Project>{891629ab-a6aa-484c-b470-f6b0673ac8e7}</Project>
     </ProjectReference>
     <ProjectReference Include="..\u_app_simple_drawing.vcxproj">
       <Project>{cac77a44-c0fa-49ed-8373-1e101f53d2d6}</Project>
