@@ -111,14 +111,14 @@ namespace app_simple_shader
 
       add_graphical_output_purpose(this,::graphics::e_output_purpose_screen_fps);
 
-      auto pprocedureRedraw = [this]()
-         {
-
-            set_need_redraw();
-
-            post_redraw();
-
-         };
+//      auto pprocedureRedraw = [this]()
+//         {
+//
+//            set_need_redraw();
+//
+//            post_redraw();
+//
+//         };
 
       //auto papp = get_app();
 
