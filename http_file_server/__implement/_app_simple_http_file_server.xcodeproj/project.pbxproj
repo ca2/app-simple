@@ -52,6 +52,8 @@
 		9AB15C2529A87B0700DFDF90 /* libacme_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C2129A87B0600DFDF90 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB15C2729A87B0700DFDF90 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C2229A87B0600DFDF90 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB15C2929A87B0700DFDF90 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C2329A87B0600DFDF90 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9ABDE81E2C76CEA200619F93 /* libarchive.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABDE81C2C76CEA100619F93 /* libarchive.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9ABDE8212C76CEBE00619F93 /* libnano_idn_libidn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABDE81F2C76CEBE00619F93 /* libnano_idn_libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +239,27 @@
 			remoteGlobalIDString = 9A64C1702660C62C0074030F;
 			remoteInfo = write_text_quartz2d;
 		};
+		9ABDE83D2C76D8BA00619F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AE834EE2C1CCEF900096100;
+			remoteInfo = nano_idn_libidn;
+		};
+		9ABDE83F2C76D8BA00619F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC1B6F82C32171500B503A1;
+			remoteInfo = ios_nano_idn_libidn;
+		};
+		9ABDE8412C76D8D200619F93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AE834ED2C1CCEF900096100;
+			remoteInfo = nano_idn_libidn;
+		};
 		9ADB6CD728D1475F00608B22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9ADB6CD128D1475E00608B22 /* database_sqlite3.xcodeproj */;
@@ -311,7 +334,9 @@
 				9A9E4A9A2751A3B20094A04C /* libacme_apple.dylib in Embed Libraries */,
 				9A71B84A2A469EA800F9FC3D /* libunac.dylib in Embed Libraries */,
 				9A9E4AA22751A3B20094A04C /* libapex_apple.dylib in Embed Libraries */,
+				9ABDE8212C76CEBE00619F93 /* libnano_idn_libidn.dylib in Embed Libraries */,
 				9A9E4AA62751A3B20094A04C /* libapex_posix.dylib in Embed Libraries */,
+				9ABDE81E2C76CEA200619F93 /* libarchive.dylib in Embed Libraries */,
 				9A9902BE27532B7F00B13F01 /* libapp_simple_http_file_server.dylib in Embed Libraries */,
 				9A9E4AC02751A3B30094A04C /* libexperience_core.dylib in Embed Libraries */,
 				9A9904232753303E00B13F01 /* libcrypto.dylib in Embed Libraries */,
@@ -379,6 +404,9 @@
 		9AB15C2129A87B0600DFDF90 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB15C2229A87B0600DFDF90 /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB15C2329A87B0600DFDF90 /* libaura_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABDE81C2C76CEA100619F93 /* libarchive.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libarchive.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABDE81F2C76CEBE00619F93 /* libnano_idn_libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnano_idn_libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = nano_idn_libidn.xcodeproj; path = ../../../app/nano_idn_libidn/nano_idn_libidn.xcodeproj; sourceTree = "<group>"; };
 		9ADB6CD128D1475E00608B22 /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
 		9ADB6CE228D1479200608B22 /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = "<group>"; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
@@ -420,10 +448,11 @@
 				9A353E23266228800060257B /* experience_core.xcodeproj */,
 				9A8C818927844A7B000C8587 /* folder_zip.xcodeproj */,
 				9ADB6CE228D1479200608B22 /* imaging_coreimage.xcodeproj */,
+				9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */,
 				9A41D7A228D05D3E0008DB81 /* networking_bsd.xcodeproj */,
 				9A00E5A22661209D00517464 /* node_macos.xcodeproj */,
 				9A00E5A82661209D00517464 /* write_text_quartz2d.xcodeproj */,
-				9AED78CF275198AD00397A57 /* http */,
+				9AED78CF275198AD00397A57 /* __implement */,
 				070B8EEB1B6E53F900D26137 /* Products */,
 				9ADF1D2922C16DBB00456537 /* Frameworks */,
 				9A3E0BA12309FBD400B5459B /* Library */,
@@ -530,6 +559,15 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
+		9ABDE8392C76D8BA00619F93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9ABDE83E2C76D8BA00619F93 /* libnano_idn_libidn.dylib */,
+				9ABDE8402C76D8BA00619F93 /* libios_nano_idn_libidn.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9ADB6CD228D1475E00608B22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +590,8 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ABDE81F2C76CEBE00619F93 /* libnano_idn_libidn.dylib */,
+				9ABDE81C2C76CEA100619F93 /* libarchive.dylib */,
 				9A9A19382AFC379700FA9BEB /* libdarwin.dylib */,
 				9A71B8482A469EA700F9FC3D /* libunac.dylib */,
 				9AB15C2129A87B0600DFDF90 /* libacme_darwin.dylib */,
@@ -599,7 +639,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AED78CF275198AD00397A57 /* http */ = {
+		9AED78CF275198AD00397A57 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
 				9A8F4D2C2A26D49200097EE1 /* _____debug.xcconfig */,
@@ -608,7 +648,7 @@
 				9A8C816A2783F856000C8587 /* _matter.zip */,
 				9A9E4A4727519C560094A04C /* macos */,
 			);
-			name = http;
+			name = __implement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +666,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9ABDE8422C76D8D200619F93 /* PBXTargetDependency */,
 				9ADB6CEF28D147A600608B22 /* PBXTargetDependency */,
 				9ADB6CE128D1477500608B22 /* PBXTargetDependency */,
 				9A41D7BA28D05DB40008DB81 /* PBXTargetDependency */,
@@ -720,6 +761,10 @@
 				{
 					ProductGroup = 9ADB6CE328D1479200608B22 /* Products */;
 					ProjectRef = 9ADB6CE228D1479200608B22 /* imaging_coreimage.xcodeproj */;
+				},
+				{
+					ProductGroup = 9ABDE8392C76D8BA00619F93 /* Products */;
+					ProjectRef = 9ABDE8382C76D8BA00619F93 /* nano_idn_libidn.xcodeproj */;
 				},
 				{
 					ProductGroup = 9A41D7A328D05D3E0008DB81 /* Products */;
@@ -862,6 +907,20 @@
 			remoteRef = 9A9A19352AFC378400FA9BEB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9ABDE83E2C76D8BA00619F93 /* libnano_idn_libidn.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libnano_idn_libidn.dylib;
+			remoteRef = 9ABDE83D2C76D8BA00619F93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9ABDE8402C76D8BA00619F93 /* libios_nano_idn_libidn.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_nano_idn_libidn.a;
+			remoteRef = 9ABDE83F2C76D8BA00619F93 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9ADB6CD828D1475F00608B22 /* libdatabase_sqlite3.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
@@ -982,6 +1041,11 @@
 			isa = PBXTargetDependency;
 			name = write_text_quartz2d;
 			targetProxy = 9AA8027A2665752000A6B449 /* PBXContainerItemProxy */;
+		};
+		9ABDE8422C76D8D200619F93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nano_idn_libidn;
+			targetProxy = 9ABDE8412C76D8D200619F93 /* PBXContainerItemProxy */;
 		};
 		9ADB6CE128D1477500608B22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1184,9 +1248,9 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Networking Application";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Http File Server";
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.networking-application";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.http-file-server";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -1203,9 +1267,9 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Networking Application";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Http File Server";
 				PLATFORM_MODIFIER = macos;
-				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.networking-application";
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.http-file-server";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
