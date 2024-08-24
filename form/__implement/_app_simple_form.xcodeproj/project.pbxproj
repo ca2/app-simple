@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A273CD929CF199E00CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CD529CF199E00CBEB97 /* InfoPlist.strings */; };
+		9A3F07E42C7944FD00850151 /* experience_tranquillum.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A42D7CA266597550011645D /* experience_tranquillum.dylib */; };
 		9A71B8712A469F4A00F9FC3D /* libunac.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A71B86F2A469F4A00F9FC3D /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A8C81692783F83C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C81682783F83C000C8587 /* _matter.zip */; };
 		9A8D0E7526B71908000D2AD6 /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A8D0E7326B71908000D2AD6 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -43,10 +44,10 @@
 		9AEA1B912679469D006F4A68 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B712679469B006F4A68 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B932679469D006F4A68 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B952679469D006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803B726657ABB00A6B449 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AEA1B972679469D006F4A68 /* libexperience_tranquillum.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A42D7CA266597550011645D /* libexperience_tranquillum.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEA1B972679469D006F4A68 /* experience_tranquillum.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A42D7CA266597550011645D /* experience_tranquillum.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B992679469E006F4A68 /* libidn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B722679469B006F4A68 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B9B2679469E006F4A68 /* libimaging_coreimage.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803ED26657ABC00A6B449 /* libimaging_coreimage.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AEA1B9D2679469E006F4A68 /* node_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8039426657ABA00A6B449 /* node_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEA1B9D2679469E006F4A68 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8039426657ABA00A6B449 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B9F2679469E006F4A68 /* libwindowing_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B732679469B006F4A68 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1BA12679469E006F4A68 /* libwrite_text_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803CD26657ABC00A6B449 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -291,7 +292,7 @@
 				9AB15C6329A87C8100DFDF90 /* libacme_darwin.dylib in Embed Libraries */,
 				9AEA1BA12679469E006F4A68 /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9A90BCDF2B54A0C0002BFC9E /* libarchive.dylib in Embed Libraries */,
-				9AEA1B972679469D006F4A68 /* libexperience_tranquillum.dylib in Embed Libraries */,
+				9AEA1B972679469D006F4A68 /* experience_tranquillum.dylib in Embed Libraries */,
 				9AEA1B6526794656006F4A68 /* libacme_macos.dylib in Embed Libraries */,
 				9A8D0E7526B71908000D2AD6 /* libcrypto.dylib in Embed Libraries */,
 				9A8D0E7626B71908000D2AD6 /* libssl.dylib in Embed Libraries */,
@@ -310,7 +311,7 @@
 				9A9A19722AFC386C00FA9BEB /* libdarwin.dylib in Embed Libraries */,
 				9AEA1B812679469C006F4A68 /* libapex_posix.dylib in Embed Libraries */,
 				9AEA1B892679469C006F4A68 /* libaura_apple.dylib in Embed Libraries */,
-				9AEA1B9D2679469E006F4A68 /* node_macos.dylib in Embed Libraries */,
+				9AEA1B9D2679469E006F4A68 /* libnode_macos.dylib in Embed Libraries */,
 				9AB15C6729A87C8100DFDF90 /* libaura_darwin.dylib in Embed Libraries */,
 				9AEA1B832679469C006F4A68 /* libapp_simple_form.dylib in Embed Libraries */,
 				9AEA1B7F2679469C006F4A68 /* libapex_macos.dylib in Embed Libraries */,
@@ -378,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC01EBB2748E3E8006BEBCC /* libbase.dylib in Frameworks */,
+				9A3F07E42C7944FD00850151 /* experience_tranquillum.dylib in Frameworks */,
 				9A9905B22753368400B13F01 /* libapp_simple_form.dylib in Frameworks */,
 				9AEA1B5D26794642006F4A68 /* libacme.dylib in Frameworks */,
 				9AEA1B5F26794642006F4A68 /* libapex.dylib in Frameworks */,
@@ -441,7 +443,7 @@
 		9A42D7C4266597540011645D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A42D7CA266597550011645D /* libexperience_tranquillum.dylib */,
+				9A42D7CA266597550011645D /* experience_tranquillum.dylib */,
 				9A42D7CC266597550011645D /* libios_experience_tranquillum.a */,
 				9A42D7CE266597550011645D /* experience_lite_iosTests.xctest */,
 			);
@@ -483,7 +485,7 @@
 		9AA8039026657ABA00A6B449 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AA8039426657ABA00A6B449 /* node_macos.dylib */,
+				9AA8039426657ABA00A6B449 /* libnode_macos.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -712,10 +714,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A42D7CA266597550011645D /* libexperience_tranquillum.dylib */ = {
+		9A42D7CA266597550011645D /* experience_tranquillum.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libexperience_tranquillum.dylib;
+			path = experience_tranquillum.dylib;
 			remoteRef = 9A42D7C9266597550011645D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -782,10 +784,10 @@
 			remoteRef = 9AA203A92847FD6900A747A1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AA8039426657ABA00A6B449 /* node_macos.dylib */ = {
+		9AA8039426657ABA00A6B449 /* libnode_macos.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = node_macos.dylib;
+			path = libnode_macos.dylib;
 			remoteRef = 9AA8039326657ABA00A6B449 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
