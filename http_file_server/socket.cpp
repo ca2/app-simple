@@ -48,11 +48,11 @@ namespace app_simple_http_file_server
 
       string strReferer = inheader("referer");
 
-      auto psystem = system();
+      //auto psystem = system();
 
-      auto purl = psystem->url();
+      //auto purl = psystem->url();
 
-      ::string strServer = purl->get_server(strReferer);
+      ::string strServer = ::url::get_host(strReferer);
 
       //if (strServer.case_insensitive_equals("ca2.store"))
       //{
