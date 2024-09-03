@@ -25,7 +25,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = __allocate< app_simple_shader::application >();
+   auto papplication = ::place(new app_simple_shader::application());
 
    int iExitCode = papplication->application_main(pplatform);
 
