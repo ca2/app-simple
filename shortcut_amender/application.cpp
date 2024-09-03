@@ -95,11 +95,11 @@ namespace app_simple_shortcut_amender
       //}
       add_impact_system(
          "main",
-         __allocate < ::user::single_document_template >(
+         ::place(new ::user::single_document_template (
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
-                               ::type < tab_impact >()));
+                               ::type < tab_impact >())));
       //m_ptemplateShortcutAmenderMain = pdoctemplate;
       //add_document_template(pdoctemplate);
 
