@@ -94,7 +94,7 @@ namespace app_simple_networking_application
       //for (::collection::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
 
-      //   auto pitem = __allocate< ::item >(e_element_item, iItem);
+      //   auto pitem = ::place(new ::item(e_element_item, iItem));
 
       //   add_item(pitem);
 

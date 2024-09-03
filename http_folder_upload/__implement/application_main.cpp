@@ -24,7 +24,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = __allocate< app_simple_http_folder_upload::application >();
+   auto papplication = ::place(new app_simple_http_folder_upload::application());
 
    int iExitCode = papplication->application_main(pplatform);
 
