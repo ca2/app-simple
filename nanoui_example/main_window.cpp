@@ -100,9 +100,9 @@ namespace app_simple_nanoui_example
 
       //set_fps_interest();
 
-      m_exampleapplicationa.add(__new< ExampleApplication1 >(this));
-      m_exampleapplicationa.add(__new< ExampleApplication2 >(this));
-      m_exampleapplicationa.add(__new< ExampleApplicationIcons >(this));
+      m_exampleapplicationa.add(new ExampleApplication1(this));
+      m_exampleapplicationa.add(new ExampleApplication2(this));
+      m_exampleapplicationa.add(new ExampleApplicationIcons(this));
       //start(m_pexampleapplication, this);
 
       set_current_application(0);

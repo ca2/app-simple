@@ -110,7 +110,7 @@ namespace app_simple_nanoui_example
 
          auto window = new Window(this, "Navigation");
          window->set_position({ 15, 680 });
-         window->set_layout(__new< GroupLayout >());
+         window->set_layout(new GroupLayout());
 
 
 

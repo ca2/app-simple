@@ -112,23 +112,22 @@ namespace app_simple_networking_application
 
       //}
 
-      add_impact_system("main", __allocate < ::user::single_document_template >(
+      add_impact_system("main", ::place(new ::user::single_document_template(
                                "main",
                                ::type < ::app_simple_networking_application::document >(),
                                ::type < ::app_simple_networking_application::main_frame >(),
-                               get_pane_impact_type()));
+                               get_pane_impact_type())));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
 
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "command",
-         __allocate < ::user::multiple_document_template >(
+         "command", ::place(new ::user::multiple_document_template(
             "command",
             ::type < command_document >(),
             ::type < main_frame >(),
-            ::type < command_list2 >()));
+            ::type < command_list2 >())));
 
       //m_ptemplateCommand = pdoctemplate2;
 

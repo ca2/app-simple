@@ -58,22 +58,21 @@ namespace app_simple_notify_drawing
 
       //auto pdoctemplate =
       add_impact_system(
-         "main",
-      __allocate < ::user::single_document_template >(
+         "main", ::place(new ::user::single_document_template(
                                "main",
                                ::type < app_simple_drawing::document >(),
                                ::type < main_frame >(),
-                               ::type < app_simple_drawing::tab_impact >()));
+                               ::type < app_simple_drawing::tab_impact >())));
       //m_ptemplateNotifyDrawingMain = pdoctemplate;
       //add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = __allocate < ::user::single_document_template >(
+//      pdoctemplate = ::place(new ::user::single_document_template(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),
 //                          ::type < simple_drawing::frame >(),
-//                          ::type < simple_drawing::main_impact >()));
+//                          ::type < simple_drawing::main_impact >())));
 //
 //      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //

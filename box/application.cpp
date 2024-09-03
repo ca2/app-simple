@@ -59,12 +59,11 @@ namespace app_simple_box
       //}
 
       add_impact_system(
-         "main",
-         __allocate < ::user::single_document_template >(
+         "main", ::place(new ::user::single_document_template(
          "main",
          ::type < document >(),
          ::type < main_frame >(),
-         ::type < impact >()));
+         ::type < impact >())));
 
       //m_ptemplateAppSimpleBoxMain = pdoctemplate;
 

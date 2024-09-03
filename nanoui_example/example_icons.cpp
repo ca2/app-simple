@@ -32,7 +32,7 @@ using namespace nanoui;
 // `icon` should be the defined constant in nanoui/entypo.h
 // the button label will be the string that represents this
 #define ADD_BUTTON(icon)                                   \
-    auto b_##icon = __new< Button >(wrapper, #icon, icon);      \
+    auto b_##icon = new Button(wrapper, #icon, icon);      \
     b_##icon->set_icon_position(Button::IconPosition::Left); \
     b_##icon->set_fixed_width(half_width);
 namespace app_simple_nanoui_example
@@ -51,7 +51,7 @@ namespace app_simple_nanoui_example
         static constexpr int height     = 800;
 
         // create a fixed size screen with one window
-        //Screen *screen = __new< Screen >({width, height}, "NanoGUI Icons", false);
+        //Screen *screen = new Screen({width, height}, "NanoGUI Icons", false);
 
         Window * pwindow = new Window(this, "All Icons");
         m_pwindow = pwindow;
@@ -65,7 +65,7 @@ namespace app_simple_nanoui_example
         // vscroll should only have *ONE* child. this is what `wrapper` is for
         auto wrapper = new Widget(vscroll);
         wrapper->set_fixed_size({width, height});
-        wrapper->set_layout(__new< GridLayout >());// defaults: 2 columns
+        wrapper->set_layout(new GridLayout());// defaults: 2 columns
 
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

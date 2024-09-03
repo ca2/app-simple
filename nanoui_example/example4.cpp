@@ -197,14 +197,14 @@ public:
 
         Window *window = new Window(this, "Canvas widget demo");
         window->set_position(Vector2i(15, 15));
-        window->set_layout(__new< GroupLayout >());
+        window->set_layout(new GroupLayout());
 
         m_canvas = new MyCanvas(window);
         m_canvas->set_background_color({100, 100, 100, 255});
         m_canvas->set_fixed_size({400, 400});
 
         Widget *tools = new Widget(window);
-        tools->set_layout(__new< BoxLayout >(e_orientation_horizontal,
+        tools->set_layout(new BoxLayout(e_orientation_horizontal,
                                        e_alignment_middle, 0, 5));
 
         Button *b0 = new Button(tools, "Random Background");
