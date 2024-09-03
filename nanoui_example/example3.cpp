@@ -113,7 +113,7 @@ namespace app_simple_nanoui_example
 //#endif
 //
 //    // Create a nanoui screen and pass the glfw pointer to initialize
-//    screen = __new< Screen >();
+//    screen = new Screen();
 //    screen->initialize(window, true);
 //
 //#if defined(NANOUI_USE_OPENGL) || defined(NANOUI_USE_GLES)
@@ -126,7 +126,7 @@ namespace app_simple_nanoui_example
 //
     // Create nanoui gui
     bool enabled = true;
-    FormHelper *gui = __new< FormHelper >(this);
+    FormHelper *gui = new FormHelper(this);
     m_window = gui->add_window(Vector2i(10, 10), "Form helper example");
     gui->add_group("Basic types");
     gui->add_variable("bool", bvar)->set_tooltip("Test tooltip.");

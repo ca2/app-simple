@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = __new< app_simple_nanoui_example::application >();
+   auto papp = new app_simple_nanoui_example::application();
 
    int iExitCode = papp->__implement();
 

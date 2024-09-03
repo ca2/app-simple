@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_simple_notify_drawing::application >();
+//   auto papp = new app_simple_notify_drawing::application();
 //
 //   int iExitCode = papp->__implement();
 //

@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_simple_http_folder_upload::application >();
+//   auto papp = new app_simple_http_folder_upload::application();
 //
 //   int iExitCode = papp->__implement();
 //

@@ -53,17 +53,17 @@ namespace app_simple_nanoui_example
         // create a fixed size screen with one window
         //Screen *screen = __new< Screen >({width, height}, "NanoGUI Icons", false);
 
-        Window * pwindow = __new< Window >(this, "All Icons");
+        Window * pwindow = new Window(this, "All Icons");
         m_pwindow = pwindow;
         pwindow->set_position({0, 0});
         pwindow->set_fixed_size({width, height});
 
         // attach a vertical scroll panel
-        auto vscroll = __new< VScrollPanel >(pwindow);
+        auto vscroll = new VScrollPanel(pwindow);
         vscroll->set_fixed_size({width, height});
 
         // vscroll should only have *ONE* child. this is what `wrapper` is for
-        auto wrapper = __new< Widget >(vscroll);
+        auto wrapper = new Widget(vscroll);
         wrapper->set_fixed_size({width, height});
         wrapper->set_layout(__new< GridLayout >());// defaults: 2 columns
 
