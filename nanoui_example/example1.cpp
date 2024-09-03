@@ -39,7 +39,7 @@ namespace app_simple_nanoui_example
    {
 
       //inc_ref();
-      Window * window = __new< Window >(this, "Button demo");
+      Window * window = new Window(this, "Button demo");
       window->set_position({ 15, 15 });
       window->set_layout(__new< GroupLayout >());
 
@@ -48,7 +48,7 @@ namespace app_simple_nanoui_example
       __new< Label >(window, "Push buttons", "sans-bold");
 
 
-      Button * b = __new< Button >(window, "Plain button");
+      Button * b = new Button(window, "Plain button");
       b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */ });
       b->set_tooltip("short tooltip");
 
@@ -60,7 +60,7 @@ namespace app_simple_nanoui_example
          "fact, that the shown text will span several lines.");
       
       __new< Label >(window, "Toggle buttons", "sans-bold");
-      b = __new< Button >(window, "Toggle me");
+      b = new Button(window, "Toggle me");
       b->set_flags(Button::ToggleButton);
       b->set_change_callback([this](bool state)
          {
@@ -72,60 +72,60 @@ namespace app_simple_nanoui_example
          });
       
          __new< Label >(window, "Radio buttons", "sans-bold");
-         b = __new< Button >(window, "Radio button 1");
+         b = new Button(window, "Radio button 1");
          b->set_flags(Button::RadioButton);
-         b = __new< Button >(window, "Radio button 2");
+         b = new Button(window, "Radio button 2");
          b->set_flags(Button::RadioButton);
       
                __new< Label >(window, "A tool palette", "sans-bold");
-               Widget * tools = __new< Widget >(window);
+               Widget * tools = new Widget(window);
                tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 6));
       
-               b = __new< ToolButton >(tools, e_font_awesome_cloud);
-               b = __new< ToolButton >(tools, e_font_awesome_fast_forward);
-               b = __new< ToolButton >(tools, e_font_awesome_compass);
-               b = __new< ToolButton >(tools, e_font_awesome_utensils);
+               b = new ToolButton(tools, e_font_awesome_cloud);
+               b = new ToolButton(tools, e_font_awesome_fast_forward);
+               b = new ToolButton(tools, e_font_awesome_compass);
+               b = new ToolButton(tools, e_font_awesome_utensils);
       
                __new< Label >(window, "Popup buttons", "sans-bold");
-               PopupButton * popup_btn = __new< PopupButton >(window, "Popup", e_font_awesome_flask);
+               PopupButton * popup_btn = new PopupButton(window, "Popup", e_font_awesome_flask);
                Popup * popup = popup_btn->popup();
                popup->set_layout(__new< GroupLayout >());
-               __new< Label >(popup, "Arbitrary widgets can be placed here");
-               __new< CheckBox >(popup, "A check box");
+               new Label(popup, "Arbitrary widgets can be placed here");
+               new CheckBox(popup, "A check box");
                // popup right
-               popup_btn = __new< PopupButton >(popup, "Recursive popup", e_font_awesome_chart_pie);
+               popup_btn = new PopupButton(popup, "Recursive popup", e_font_awesome_chart_pie);
                Popup * popup_right = popup_btn->popup();
                popup_right->set_layout(__new< GroupLayout >());
-               __new< CheckBox >(popup_right, "Another check box");
+               new CheckBox(popup_right, "Another check box");
                // popup left
-               popup_btn = __new< PopupButton >(popup, "Recursive popup", e_font_awesome_dna);
+               popup_btn = new PopupButton(popup, "Recursive popup", e_font_awesome_dna);
                popup_btn->set_side(Popup::Side::Left);
                Popup * popup_left = popup_btn->popup();
                popup_left->set_layout(__new< GroupLayout >());
-               __new< CheckBox >(popup_left, "Another check box");
+               new CheckBox(popup_left, "Another check box");
       
-               window = __new< Window >(this, "Basic widgets");
+               window = new Window(this, "Basic widgets");
                window->set_position({ 200, 15 });
                window->set_layout(__new< GroupLayout >());
       
                __new< Label >(window, "Message dialog", "sans-bold");
-               tools = __new< Widget >(window);
+               tools = new Widget(window);
                tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
                   e_alignment_middle, 0, 6));
-               b = __new< Button >(tools, "Info");
+               b = new Button(tools, "Info");
                b->set_callback([this] {
-                  auto dlg = __new< MessageDialog >(this, MessageDialog::Type::Information, "Title", "This is an information message");
+                  auto dlg = new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
                   });
-               b = __new< Button >(tools, "Warn");
+               b = new Button(tools, "Warn");
                b->set_callback([this] {
-                  auto dlg = __new< MessageDialog >(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
+                  auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
                   });
-               b = __new< Button >(tools, "Ask");
+               b = new Button(tools, "Ask");
                b->set_callback([this] {
-                  auto dlg = __new< MessageDialog >(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
+                  auto dlg = new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
                   dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
                   });
       
@@ -149,15 +149,15 @@ namespace app_simple_nanoui_example
       //#endif
       
                __new< Label >(window, "Image panel & scroll panel", "sans-bold");
-               PopupButton * image_panel_btn = __new< PopupButton >(window, "Image Panel");
+               PopupButton * image_panel_btn = new PopupButton(window, "Image Panel");
                image_panel_btn->set_icon(e_font_awesome_images);
                popup = image_panel_btn->popup();
-               VScrollPanel * vscroll = __new< VScrollPanel >(popup);
-               ImagePanel * img_panel = __new< ImagePanel >(vscroll);
+               VScrollPanel * vscroll = new VScrollPanel(popup);
+               ImagePanel * img_panel = new ImagePanel(vscroll);
                img_panel->load_image_directory("matter://icons");
                popup->set_fixed_size({ 245, 150 });
       
-               auto image_window = __new< Window >(this, "Selected image");
+               auto image_window = new Window(this, "Selected image");
                image_window->set_position({ 710, 15 });
                image_window->set_layout(__new< GroupLayout >(3));
       
@@ -182,7 +182,7 @@ namespace app_simple_nanoui_example
                //   m_images.emplace_back(tex, std::transfer(texture_data));
                //}
       
-               ImageImpact * image_impact = __new< ImageImpact >(image_window);
+               ImageImpact * image_impact = new ImageImpact(image_window);
                //if (!m_images.empty())
                  // image_impact->set_image(m_images[0].first);
                image_impact->center();
@@ -206,10 +206,10 @@ namespace app_simple_nanoui_example
                //);
       
                __new< Label >(window, "File dialog", "sans-bold");
-               tools = __new< Widget >(window);
+               tools = new Widget(window);
                tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 6));
-               b = __new< Button >(tools, "Open");
+               b = new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
                   //m_puserinteraction->node()->node_post(__routine([this, image_impact]()
@@ -244,7 +244,7 @@ namespace app_simple_nanoui_example
                   
                  // });
 
-               b = __new< Button >(tools, "Save");
+               b = new Button(tools, "Save");
                b->set_callback([this, image_impact]
                {
 
@@ -297,19 +297,19 @@ namespace app_simple_nanoui_example
                   }
                );
                __new< Label >(window, "Progress bar", "sans-bold");
-               m_progress = __new< ProgressBar >(window);
+               m_progress = new ProgressBar(window);
       
                __new< Label >(window, "Slider and text box", "sans-bold");
       
-               Widget * panel = __new< Widget >(window);
+               Widget * panel = new Widget(window);
                panel->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 20));
       
-               Slider * slider = __new< Slider >(panel);
+               Slider * slider = new Slider(panel);
                slider->set_value(0.5f, e_source_initialize);
                slider->set_fixed_width(80);
       
-               TextBox * text_box = __new< TextBox >(panel);
+               TextBox * text_box = new TextBox(panel);
                text_box->set_fixed_size({ 60, 25 });
                text_box->set_value("50", e_source_initialize);
                text_box->set_unit("%");
@@ -332,7 +332,7 @@ namespace app_simple_nanoui_example
       
                TabWidget * tab_widget = window->add<TabWidget>();
       
-               Widget * layer = __new< Widget >(tab_widget);
+               Widget * layer = new Widget(tab_widget);
                layer->set_layout(__new< GroupLayout >());
                tab_widget->append_tab("Color Wheel", layer);
       
@@ -340,7 +340,7 @@ namespace app_simple_nanoui_example
                layer->add<Label>("Color wheel widget", "sans-bold");
                layer->add<ColorWheel>();
       
-               layer = __new< Widget >(tab_widget);
+               layer = new Widget(tab_widget);
                layer->set_layout(__new< GroupLayout >());
                tab_widget->append_tab("Function Graph", layer);
       
@@ -365,7 +365,7 @@ namespace app_simple_nanoui_example
                   if (id == plus_id) {
                      // When the "+" tab has been clicked, simply add a new tab.
                      ::string tab_name = "Dynamic " + ::as_string(counter);
-                     Widget * layer_dyn = __new< Widget >(tab_widget);
+                     Widget * layer_dyn = new Widget(tab_widget);
                      auto new_id = tab_widget->insert_tab(tab_widget->tab_count() - 1,
                         tab_name, layer_dyn);
                      layer_dyn->set_layout(__new< GroupLayout >());
@@ -407,10 +407,10 @@ namespace app_simple_nanoui_example
                      tab_widget->set_selected_index(value);
                   });
       
-               window = __new< Window >(this, "Grid of small widgets");
+               window = new Window(this, "Grid of small widgets");
                window->set_position({ 425, 300 });
                GridLayout * layout =
-                  __new< GridLayout >(::e_orientation_horizontal, 2,
+                  new GridLayout(::e_orientation_horizontal, 2,
                      e_alignment_middle, 15, 5);
                layout->set_col_alignment(
                   { e_alignment_maximum, e_alignment_fill });
@@ -419,7 +419,7 @@ namespace app_simple_nanoui_example
       
                /* FP widget */ {
                   __new< Label >(window, "Floating point :", "sans-bold");
-                  text_box = __new< TextBox >(window);
+                  text_box = new TextBox(window);
                   text_box->set_editable(true);
                   text_box->set_fixed_size({ 100, 20 });
                   text_box->set_value("50", e_source_initialize);
@@ -431,7 +431,7 @@ namespace app_simple_nanoui_example
       
                /* Positive integer widget */ {
                   __new< Label >(window, "Positive integer :", "sans-bold");
-                  auto int_box = __new< IntBox<int> >(window);
+                  auto int_box = new IntBox<int>(window);
                   int_box->set_editable(true);
                   int_box->set_fixed_size({ 100, 20 });
                   int_box->set_value(50, e_source_initialize);
@@ -447,7 +447,7 @@ namespace app_simple_nanoui_example
                /* Checkbox widget */ {
                   __new< Label >(window, "Checkbox :", "sans-bold");
       
-                  cb = __new< CheckBox >(window, "Check me");
+                  cb = new CheckBox(window, "Check me");
                   cb->set_font_size(16);
                   cb->set_checked(true, ::e_source_initialize);
                }
@@ -468,27 +468,27 @@ namespace app_simple_nanoui_example
                   });
                // setup a fast callback for the color picker widget on a new window
                // for demonstrative purposes
-               window = __new< Window >(this, "Color Picker Fast Callback");
-               layout = __new< GridLayout >(::e_orientation_horizontal, 2,
+               window = new Window(this, "Color Picker Fast Callback");
+               layout = new GridLayout(::e_orientation_horizontal, 2,
                   e_alignment_middle, 15, 5);
                layout->set_col_alignment(
                   { e_alignment_maximum, e_alignment_fill });
                layout->set_spacing(0, 10);
                window->set_layout(layout);
                window->set_position({ 425, 500 });
-               __new< Label >(window, "Combined: ");
-               b = __new< Button >(window, "ColorWheel", e_font_awesome_infinity);
-               __new< Label >(window, "Red: ");
-               auto red_int_box = __new< IntBox<int> >(window);
+               new Label(window, "Combined: ");
+               b = new Button(window, "ColorWheel", e_font_awesome_infinity);
+               new Label(window, "Red: ");
+               auto red_int_box = new IntBox<int>(window);
                red_int_box->set_editable(false);
-               __new< Label >(window, "Green: ");
-               auto green_int_box = __new< IntBox<int> >(window);
+               new Label(window, "Green: ");
+               auto green_int_box = new IntBox<int>(window);
                green_int_box->set_editable(false);
-               __new< Label >(window, "Blue: ");
-               auto blue_int_box = __new< IntBox<int> >(window);
+               new Label(window, "Blue: ");
+               auto blue_int_box = new IntBox<int>(window);
                blue_int_box->set_editable(false);
-               __new< Label >(window, "Alpha: ");
-               auto alpha_int_box = __new< IntBox<int> >(window);
+               new Label(window, "Alpha: ");
+               auto alpha_int_box = new IntBox<int>(window);
       
                cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const ::color::color & c) {
                   b->set_background_color(c);
@@ -504,13 +504,13 @@ namespace app_simple_nanoui_example
                   });
       
 
-               window = __new< Window >(this, "Navigation");
+               window = new Window(this, "Navigation");
                window->set_position({ 15, 680 });
                window->set_layout(__new< GroupLayout >());
 
 
 
-               b = __new< Button >(window, "Next Example");
+               b = new Button(window, "Next Example");
                b->set_callback(
                   [this] 
                   { 
@@ -521,7 +521,7 @@ namespace app_simple_nanoui_example
 
 
                   });
-               b = __new< Button >(window, "Previous Example");
+               b = new Button(window, "Previous Example");
                b->set_callback(
                   [this]
                   {
@@ -540,7 +540,7 @@ namespace app_simple_nanoui_example
    //void start(ExampleApplication *& papplication, ::user::interaction * puserinteraction)
    //{
 
-   //   papplication = __new< ExampleApplication >();
+   //   papplication = new ExampleApplication();
 
    //   papplication->_nanoui_to_user(puserinteraction);
 

@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_simple_shortcut_amender::application >();
+//   auto papp = new app_simple_shortcut_amender::application();
 //
 //   int iExitCode = papp->__implement();
 //

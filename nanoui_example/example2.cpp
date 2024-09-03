@@ -66,7 +66,7 @@ namespace app_simple_nanoui_example
          //   screen = __new< Screen(Vector2i >(500, 700), "NanoGUI test");
          //}
 
-      nanoui::FormHelper * guiNanouiExample = __new< ::nanoui::FormHelper >(this);
+      nanoui::FormHelper * guiNanouiExample = new ::nanoui::FormHelper(this);
       m_pwindow = guiNanouiExample->add_window({ 10, 10 }, "nanoui example");
       guiNanouiExample->add_group("Buttons");
       guiNanouiExample->add_button("A button", [this]()
@@ -74,7 +74,7 @@ namespace app_simple_nanoui_example
          });
 
       bool enabled = true;
-         nanoui::FormHelper * gui = __new< ::nanoui::FormHelper >(this);
+         nanoui::FormHelper * gui = new ::nanoui::FormHelper(this);
          m_pwindow = gui->add_window({ 10, 10 }, "Form helper example");
          gui->add_group("Basic types");
          gui->add_variable("bool", bvar);
@@ -108,13 +108,13 @@ namespace app_simple_nanoui_example
       //return 0;
 
 
-         auto window = __new< Window >(this, "Navigation");
+         auto window = new Window(this, "Navigation");
          window->set_position({ 15, 680 });
          window->set_layout(__new< GroupLayout >());
 
 
 
-         auto b = __new< Button >(window, "Next Example");
+         auto b = new Button(window, "Next Example");
          b->set_callback(
             [this]
             {
@@ -125,7 +125,7 @@ namespace app_simple_nanoui_example
 
 
             });
-         b = __new< Button >(window, "Previous Example");
+         b = new Button(window, "Previous Example");
          b->set_callback(
             [this]
             {

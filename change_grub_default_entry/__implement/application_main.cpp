@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_simple_change_grub_default_entry::application >();
+//   auto papp = new app_simple_change_grub_default_entry::application();
 //
 //   int iExitCode = papp->__implement();
 //

@@ -8,7 +8,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new< app_simple_shader::application >();
+//   auto papp = new app_simple_shader::application();
 //
 //   int iExitCode = papp->__implement();
 //
