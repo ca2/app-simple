@@ -41,11 +41,11 @@ namespace app_simple_nanoui_example
       //inc_ref();
       Window * window = new Window(this, "Button demo");
       window->set_position({ 15, 15 });
-      window->set_layout(__new< GroupLayout >());
+      window->set_layout(new GroupLayout());
 
       ///* No need to store a pointer, the data structure will be automatically
       //   freed when the parent window is deleted */
-      __new< Label >(window, "Push buttons", "sans-bold");
+      new Label(window, "Push buttons", "sans-bold");
 
 
       Button * b = new Button(window, "Plain button");
@@ -59,7 +59,7 @@ namespace app_simple_nanoui_example
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
       
-      __new< Label >(window, "Toggle buttons", "sans-bold");
+      new Label(window, "Toggle buttons", "sans-bold");
       b = new Button(window, "Toggle me");
       b->set_flags(Button::ToggleButton);
       b->set_change_callback([this](bool state)
@@ -71,15 +71,15 @@ namespace app_simple_nanoui_example
          
          });
       
-         __new< Label >(window, "Radio buttons", "sans-bold");
+         new Label(window, "Radio buttons", "sans-bold");
          b = new Button(window, "Radio button 1");
          b->set_flags(Button::RadioButton);
          b = new Button(window, "Radio button 2");
          b->set_flags(Button::RadioButton);
       
-               __new< Label >(window, "A tool palette", "sans-bold");
+               new Label(window, "A tool palette", "sans-bold");
                Widget * tools = new Widget(window);
-               tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
+               tools->set_layout(new BoxLayout(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 6));
       
                b = new ToolButton(tools, e_font_awesome_cloud);
@@ -87,31 +87,31 @@ namespace app_simple_nanoui_example
                b = new ToolButton(tools, e_font_awesome_compass);
                b = new ToolButton(tools, e_font_awesome_utensils);
       
-               __new< Label >(window, "Popup buttons", "sans-bold");
+               new Label(window, "Popup buttons", "sans-bold");
                PopupButton * popup_btn = new PopupButton(window, "Popup", e_font_awesome_flask);
                Popup * popup = popup_btn->popup();
-               popup->set_layout(__new< GroupLayout >());
+               popup->set_layout(new GroupLayout());
                new Label(popup, "Arbitrary widgets can be placed here");
                new CheckBox(popup, "A check box");
                // popup right
                popup_btn = new PopupButton(popup, "Recursive popup", e_font_awesome_chart_pie);
                Popup * popup_right = popup_btn->popup();
-               popup_right->set_layout(__new< GroupLayout >());
+               popup_right->set_layout(new GroupLayout());
                new CheckBox(popup_right, "Another check box");
                // popup left
                popup_btn = new PopupButton(popup, "Recursive popup", e_font_awesome_dna);
                popup_btn->set_side(Popup::Side::Left);
                Popup * popup_left = popup_btn->popup();
-               popup_left->set_layout(__new< GroupLayout >());
+               popup_left->set_layout(new GroupLayout());
                new CheckBox(popup_left, "Another check box");
       
                window = new Window(this, "Basic widgets");
                window->set_position({ 200, 15 });
-               window->set_layout(__new< GroupLayout >());
+               window->set_layout(new GroupLayout());
       
-               __new< Label >(window, "Message dialog", "sans-bold");
+               new Label(window, "Message dialog", "sans-bold");
                tools = new Widget(window);
-               tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
+               tools->set_layout(new BoxLayout(::e_orientation_horizontal,
                   e_alignment_middle, 0, 6));
                b = new Button(tools, "Info");
                b->set_callback([this] {
@@ -148,7 +148,7 @@ namespace app_simple_nanoui_example
       //         }
       //#endif
       
-               __new< Label >(window, "Image panel & scroll panel", "sans-bold");
+               new Label(window, "Image panel & scroll panel", "sans-bold");
                PopupButton * image_panel_btn = new PopupButton(window, "Image Panel");
                image_panel_btn->set_icon(e_font_awesome_images);
                popup = image_panel_btn->popup();
@@ -159,7 +159,7 @@ namespace app_simple_nanoui_example
       
                auto image_window = new Window(this, "Selected image");
                image_window->set_position({ 710, 15 });
-               image_window->set_layout(__new< GroupLayout >(3));
+               image_window->set_layout(new GroupLayout(3));
       
                //// Create a Texture instance for each object
                //for (auto & icon : icons) {
@@ -170,7 +170,7 @@ namespace app_simple_nanoui_example
                //      stbi_image_free);
                //   assert(n == 4);
       
-               //   Texture * tex = __new< Texture >(
+               //   Texture * tex = new Texture(
                //      Texture::PixelFormat::RGBA,
                //      Texture::ComponentFormat::UInt8,
                //      size,
@@ -205,9 +205,9 @@ namespace app_simple_nanoui_example
                //   }
                //);
       
-               __new< Label >(window, "File dialog", "sans-bold");
+               new Label(window, "File dialog", "sans-bold");
                tools = new Widget(window);
-               tools->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
+               tools->set_layout(new BoxLayout(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 6));
                b = new Button(tools, "Open");
                b->set_callback([this,image_impact] {
@@ -275,10 +275,10 @@ namespace app_simple_nanoui_example
 
                });
       
-               __new< Label >(window, "Combo box", "sans-bold");
-               __new< ComboBox >(window, string_array{ "Combo box item 1", "Combo box item 2", "Combo box item 3" });
-               __new< Label >(window, "Check box", "sans-bold");
-               CheckBox * cb = __new< CheckBox >(window, "Flag 1",
+               new Label(window, "Combo box", "sans-bold");
+               new ComboBox(window, string_array{ "Combo box item 1", "Combo box item 2", "Combo box item 3" });
+               new Label(window, "Check box", "sans-bold");
+               CheckBox * cb = new CheckBox (window, "Flag 1",
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
@@ -287,7 +287,7 @@ namespace app_simple_nanoui_example
                   }
                );
                cb->set_checked(true, ::e_source_initialize);
-               cb = __new< CheckBox >(window, "Flag 2",
+               cb = new CheckBox(window, "Flag 2",
                   [this](bool state) {
                      
                      string_stream str;
@@ -296,13 +296,13 @@ namespace app_simple_nanoui_example
 
                   }
                );
-               __new< Label >(window, "Progress bar", "sans-bold");
+               new Label(window, "Progress bar", "sans-bold");
                m_progress = new ProgressBar(window);
       
-               __new< Label >(window, "Slider and text box", "sans-bold");
+               new Label(window, "Slider and text box", "sans-bold");
       
                Widget * panel = new Widget(window);
-               panel->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
+               panel->set_layout(new BoxLayout(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 20));
       
                Slider * slider = new Slider(panel);
@@ -326,14 +326,14 @@ namespace app_simple_nanoui_example
                text_box->set_font_size(20);
                text_box->set_alignment(TextBox::e_alignment_right);
       
-               window = __new< Window >(this, "Misc. widgets");
+               window = new Window(this, "Misc. widgets");
                window->set_position({ 425, 15 });
-               window->set_layout(__new< GroupLayout >());
+               window->set_layout(new GroupLayout());
       
                TabWidget * tab_widget = window->add<TabWidget>();
       
                Widget * layer = new Widget(tab_widget);
-               layer->set_layout(__new< GroupLayout >());
+               layer->set_layout(new GroupLayout());
                tab_widget->append_tab("Color Wheel", layer);
       
                // Use overloaded variadic add to fill the tab widget with Different tabs.
@@ -341,7 +341,7 @@ namespace app_simple_nanoui_example
                layer->add<ColorWheel>();
       
                layer = new Widget(tab_widget);
-               layer->set_layout(__new< GroupLayout >());
+               layer->set_layout(new GroupLayout());
                tab_widget->append_tab("Function Graph", layer);
       
                layer->add<Label>("Function graph widget", "sans-bold");
@@ -357,7 +357,7 @@ namespace app_simple_nanoui_example
                      0.5f * std::cos(i / 23.f) + 1);
       
                // Dummy tab used to represent the last tab button.
-               auto plus_id = tab_widget->append_tab("+", __new< Widget >(tab_widget));
+               auto plus_id = tab_widget->append_tab("+", new Widget(tab_widget));
       
                // A simple counter.
                int counter = 1;
@@ -368,7 +368,7 @@ namespace app_simple_nanoui_example
                      Widget * layer_dyn = new Widget(tab_widget);
                      auto new_id = tab_widget->insert_tab(tab_widget->tab_count() - 1,
                         tab_name, layer_dyn);
-                     layer_dyn->set_layout(__new< GroupLayout >());
+                     layer_dyn->set_layout(new GroupLayout());
                      layer_dyn->add<Label>("Function graph widget", "sans-bold");
                      Graph * graph_dyn = layer_dyn->add<Graph>("Dynamic function");
       
@@ -392,7 +392,7 @@ namespace app_simple_nanoui_example
                // A button to go back to the first tab and scroll the window.
                panel = window->add<Widget>();
                panel->add<Label>("Jump to tab: ");
-               panel->set_layout(__new< BoxLayout >(::e_orientation_horizontal,
+               panel->set_layout(new BoxLayout(::e_orientation_horizontal,
                   ::nanoui::e_alignment_middle, 0, 6));
       
                auto ib = panel->add<IntBox<int>>();
@@ -418,7 +418,7 @@ namespace app_simple_nanoui_example
                window->set_layout(layout);
       
                /* FP widget */ {
-                  __new< Label >(window, "Floating point :", "sans-bold");
+                  new Label(window, "Floating point :", "sans-bold");
                   text_box = new TextBox(window);
                   text_box->set_editable(true);
                   text_box->set_fixed_size({ 100, 20 });
@@ -430,7 +430,7 @@ namespace app_simple_nanoui_example
                }
       
                /* Positive integer widget */ {
-                  __new< Label >(window, "Positive integer :", "sans-bold");
+                  new Label(window, "Positive integer :", "sans-bold");
                   auto int_box = new IntBox<int>(window);
                   int_box->set_editable(true);
                   int_box->set_fixed_size({ 100, 20 });
@@ -445,21 +445,21 @@ namespace app_simple_nanoui_example
                }
       
                /* Checkbox widget */ {
-                  __new< Label >(window, "Checkbox :", "sans-bold");
+                  new Label(window, "Checkbox :", "sans-bold");
       
                   cb = new CheckBox(window, "Check me");
                   cb->set_font_size(16);
                   cb->set_checked(true, ::e_source_initialize);
                }
       
-               __new< Label >(window, "Combo box :", "sans-bold");
+               new Label(window, "Combo box :", "sans-bold");
                ComboBox * cobo =
-                  __new< ComboBox >(window, string_array{ "Item 1", "Item 2", "Item 3" });
+                  new ComboBox(window, string_array{ "Item 1", "Item 2", "Item 3" });
                cobo->set_font_size(16);
                cobo->set_fixed_size({ 100, 20 });
       
-               __new< Label >(window, "Color picker :", "sans-bold");
-               auto cp = __new< ColorPicker >(window, argb(255, 120, 0, 255));
+               new Label(window, "Color picker :", "sans-bold");
+               auto cp = new ColorPicker(window, argb(255, 120, 0, 255));
                cp->set_fixed_size({ 100, 20 });
                cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;
@@ -506,7 +506,7 @@ namespace app_simple_nanoui_example
 
                window = new Window(this, "Navigation");
                window->set_position({ 15, 680 });
-               window->set_layout(__new< GroupLayout >());
+               window->set_layout(new GroupLayout());
 
 
 

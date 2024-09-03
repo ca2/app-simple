@@ -43,7 +43,7 @@ Window::Window(Widget * parent, const std::string & title)
 //Widget * Window::button_panel() {
 //   if (!m_button_panel) {
 //      m_button_panel = new Widget(this);
-//      m_button_panel->set_layout(__new< BoxLayout >(e_orientation_horizontal, e_alignment_middle, 0, 4));
+//      m_button_panel->set_layout(new BoxLayout(e_orientation_horizontal, e_alignment_middle, 0, 4));
 //   }
 //   return m_button_panel;
 //}
