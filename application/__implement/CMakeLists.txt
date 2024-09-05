@@ -17,7 +17,7 @@ list(APPEND executable_references
    )
 
 
-if(${LINUX} OR ${BSD_LIKE})
+if(${LINUX} OR ${__BSD__})
 
 #    add_custom_command(
 #       COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
