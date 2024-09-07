@@ -12,7 +12,7 @@
 #include "base/user/user/split_impact.h"
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/image/save_image.h"
-#include "aura/graphics/image/context_image.h"
+#include "aura/graphics/image/image_context.h"
 #include "aura/message/user.h"
 #include "app/shader/render.h"
 
@@ -265,7 +265,7 @@ namespace app_simple_shader
 
          auto rectangleX = this->rectangle();
 
-         auto pimage = context_image()->create_image(rectangleX.size());
+         auto pimage = image()->create_image(rectangleX.size());
 
          ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
 
@@ -282,7 +282,7 @@ namespace app_simple_shader
 
                auto pcontext = m_pcontext;
 
-               auto pcontextimage = pcontext->context_image();
+               auto pcontextimage = pcontext->image_context();
 
                pcontextimage->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
 
