@@ -19,9 +19,6 @@ namespace app_simple_application
 {
 
 
-   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_application));
-
-
    application::application()
    {
 
@@ -60,10 +57,6 @@ namespace app_simple_application
       factory()->add_factory_item <::app_simple_application::impact >();
 
       ::base::application::init_instance();
-
-      //auto pdoctemplate = 
-
-      //__construct(m_ptemplateSimpleDrawingMain, pdoctemplate);
 
       add_impact_system(
          "main", ::place(new ::user::single_document_template(

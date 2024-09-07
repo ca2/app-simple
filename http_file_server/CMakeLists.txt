@@ -14,14 +14,26 @@ list(APPEND library_source
    command.h
    document.cpp
    document.h
+   edit_impact.cpp
+   edit_impact.h
    framework.cpp
    framework.h
    frame.cpp
    frame.h
+   impact.cpp
+   impact.h
+   incoming_socket_thread.cpp
+   incoming_socket_thread.h
+   incoming_socket.cpp
+   incoming_socket.h
+   main_document.cpp
+   main_document.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp
    main_impact.h
+   socket.cpp
+   socket.h
    tab_impact.cpp
    tab_impact.h
    )

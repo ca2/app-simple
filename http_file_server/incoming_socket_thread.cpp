@@ -53,8 +53,14 @@ namespace app_simple_http_file_server
 
       //m_iPortMinimum = (::networking::port_t)443;
       //m_iPortMaximum = (::networking::port_t)443;
+
+#ifdef LINUX
+      m_iPortMinimum = (::networking::port_t)8080;
+      m_iPortMaximum = (::networking::port_t)8080;
+#else
       m_iPortMinimum = (::networking::port_t)80;
       m_iPortMaximum = (::networking::port_t)80;
+#endif
 
       branch();
 
