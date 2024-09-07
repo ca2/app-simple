@@ -113,12 +113,9 @@ namespace app_simple_http_file_server
 
          property_set set;
 
-         auto & http = application()->m_papexapplication->http();
-
          application()->m_papexapplication->datastream()->set("url", strUrl);
 
-         ::string str =
-            http.get(strUrl, set);
+         ::string str = http()->get(strUrl, set);
 
          {
 
