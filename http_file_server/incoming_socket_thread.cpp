@@ -110,7 +110,7 @@ namespace app_simple_http_file_server
 
    //   //auto pcontext = pparticle->m_pcontext;
 
-   //   //pthreadSsl->m_strCat = pcontext->m_papexcontext->defer_process_path(dir()->matter("appinstaller.cat"));
+   //   //pthreadSsl->m_strCat = m_pcontext->defer_process_matter_path(dir()->matter("appinstaller.cat"));
 
    //   //auto pfolder = pparticle->file()->resource_folder();
 

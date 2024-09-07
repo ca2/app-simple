@@ -11,8 +11,8 @@
 #include "base/user/user/impact_system.h"
 #include "base/user/user/split_impact.h"
 #include "aura/graphics/image/image.h"
-#include "aura/graphics/image/save_image.h"
-#include "aura/graphics/image/image_context.h"
+#include "aura/graphics/image/save_options.h"
+#include "aura/graphics/image/context.h"
 #include "aura/message/user.h"
 #include "app/shader/render.h"
 
@@ -274,17 +274,13 @@ namespace app_simple_shader
          fork([this, pimage]()
             {
 
-               save_image saveimage;
+               ::image::save_options saveoptions;
 
-               saveimage.m_eformat = ::draw2d::e_format_png;
+               saveoptions.m_eformat = ::image::e_format_png;
 
                string strDate = datetime()->date_time_text_for_file();
 
-               auto pcontext = m_pcontext;
-
-               auto pcontextimage = pcontext->image_context();
-
-               pcontextimage->save_image("image://app_simple_shader-" + strDate + ".png", pimage, &saveimage);
+               image()->save_image("image://app_simple_shader-" + strDate + ".png", pimage, saveoptions);
 
             });
 

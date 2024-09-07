@@ -7,7 +7,7 @@
 #include "aura/graphics/draw2d/draw2d.h"
 #include "aura/graphics/draw2d/pen.h"
 #include "aura/graphics/write_text/font.h"
-#include "aura/graphics/image/image_context.h"
+#include "aura/graphics/image/context.h"
 #include "base/user/user/impact.h"
 
 
@@ -39,11 +39,7 @@ namespace app_simple_drawing
             m_pcontext->fork([this]()
             {
 
-               auto pcontext = m_pcontext;
-
-               auto pcontextimage = pcontext->image_context();
-
-               auto pimage1 = pcontextimage->get_image("matter://pat1.jpg");
+               auto pimage1 = image()->get_image("matter://pat1.jpg");
 
                if (pimage1.ok())
                {

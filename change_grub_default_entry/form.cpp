@@ -34,7 +34,7 @@ namespace app_simple_change_grub_default_entry
 //            //            bool bTemporary =get_task()->m_bTemporary;
 //            //            get_task()->m_bTemporary = true;
 //            string strMatter = dir()->matter("popup_lyricview.xml");
-//            ::file::path path = pcontext->m_papexcontext->defer_process_path(strMatter);
+//            ::file::path path = m_pcontext->defer_process_matter_path(strMatter);
 //            //::pointer<::message::mouse> p=pmouse->
 //            //main_async([this,p]()
 //            //{
