@@ -21,22 +21,6 @@ namespace app_simple_application
    }
 
 
-//   void document::assert_ok() const
-//   {
-//
-//      ::user::document::assert_ok();
-//
-//   }
-//
-//
-//   void document::dump(dump_context & dumpcontext) const
-//   {
-//
-//      ::user::document::dump(dumpcontext);
-//
-//   }
-
-
    bool document::on_new_document()
    {
 

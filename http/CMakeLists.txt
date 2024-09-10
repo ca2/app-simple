@@ -14,10 +14,16 @@ list(APPEND library_source
    command.h
    document.cpp
    document.h
+   edit_impact.cpp
+   edit_impact.h
    framework.cpp
    framework.h
    frame.cpp
    frame.h
+   impact.cpp
+   impact.h
+   main_document.cpp
+   main_document.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp

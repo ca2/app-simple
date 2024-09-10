@@ -6,7 +6,7 @@ project(_app_simple_drawing CXX)
 add_executable(${PROJECT_NAME} application_main.cpp)
 
 
-if(${LINUX} OR ${BSD_LIKE})
+if(${LINUX} OR ${__BSD__})
 #
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -49,7 +49,7 @@ if (MSVC)
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
    target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
-elseif(${LINUX} OR ${BSD_LIKE})
+elseif(${LINUX} OR ${__BSD__})
 
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
    #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
