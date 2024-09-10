@@ -18,7 +18,7 @@ list(APPEND executable_references
    app_simple_http_file_server)
 
 
-if(${LINUX} OR ${FREEBSD})
+if(${LINUX} OR ${__BSD__})
 #
 #   add_custom_command(
 #      COMMAND ${APPLICATION_BUILD_HELPER} ${PROJECT_SOURCE_DIR}
@@ -52,7 +52,7 @@ if (MSVC)
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 
 
-elseif(${LINUX} OR ${FREEBSD})
+elseif(${LINUX} OR ${__BSD__})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
