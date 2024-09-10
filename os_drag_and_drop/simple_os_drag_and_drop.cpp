@@ -5,7 +5,7 @@
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/pen.h"
 #include "aura/graphics/draw2d/brush.h"
-#include "aura/graphics/image/context_image.h"
+#include "aura/graphics/image/context.h"
 #include "aura/graphics/write_text/font.h"
 
 
@@ -130,14 +130,10 @@ namespace app_simple_os_drag_and_drop
 
       auto papp = get_app()->m_pauraapplication;
 
-      auto pcontext = m_pcontext;
-
-      auto pcontextimage = pcontext->context_image();
-
       if(m_iDragAndDrop == 3)
       {
 
-         pbrush->CreatePatternBrush(pcontextimage->get_image("matter://pat1.jpg"));
+         pbrush->CreatePatternBrush(image()->get_image("matter://pat1.jpg"));
 
       }
       else
@@ -168,18 +164,18 @@ namespace app_simple_os_drag_and_drop
             if(m_pimagemap["pat1grayed"]->is_null())
             {
 
-               auto pimage1 = pcontextimage->get_image("matter://pat1.jpg");
+               auto pimage1 = image()->get_image("matter://pat1.jpg");
                
                /**pimage1 += { success, [this](auto & result)
                {
                   
-                  ::image_pointer pimage = result;
+                  ::image::image_pointer pimage = result;
 
                   m_pimpact->set_need_redraw();
 
-                  ::image_pointer pimpl = pimage->clone();
+                  ::image::image_pointer pimpl = pimage->clone();
 
-                  ::image_pointer imageClone = pimpl;
+                  ::image::image_pointer imageClone = pimpl;
 
                   m_pimagemap["pat1grayed"] = imageClone;
 

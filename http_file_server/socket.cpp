@@ -273,7 +273,7 @@ namespace app_simple_http_file_server
 //            //         outheader("Cache-control") = "public";
 //            //         outheader("Pragma") = "public";
 //            //         i32 iPathCount;
-//            //         outheader("Expires") = pcontext->m_papexcontext->http().gmdate(papp->datetime().strtotime(nullptr, "+1 day", 0, iPathCount));
+//            //         outheader("Expires") = http()->gmdate(papp->datetime().strtotime(nullptr, "+1 day", 0, iPathCount));
 //            //#ifdef WINDOWS
 //            //         simple_file_server(::file::path("Z:\\") / m_request.m_strRequestUri);
 //            //#else
