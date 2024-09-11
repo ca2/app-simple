@@ -24,7 +24,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = ::place(new app_simple_http::application());
+   auto papplication = new app_simple_http::application();
 
    int iExitCode = papplication->application_main(pplatform);
 
