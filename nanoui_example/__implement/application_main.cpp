@@ -23,7 +23,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = ::place(new app_simple_nanoui_example::application());
+   auto papplication = new app_simple_nanoui_example::application();
 
    int iExitCode = papplication->application_main(pplatform);
 
