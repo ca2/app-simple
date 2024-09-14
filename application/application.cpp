@@ -22,7 +22,9 @@ namespace app_simple_application
    application::application()
    {
 
-      m_bImaging = false;
+      //m_bImaging = false;
+
+      m_bImaging = true; // for showing application icon
 
       m_bNetworking = false;
 
