@@ -87,7 +87,10 @@ namespace app_simple_application
          return;
 
       }
-      
+
+
+      //application()->show_about_box();
+    
 
    }
 
