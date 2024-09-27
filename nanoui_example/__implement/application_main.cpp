@@ -4,7 +4,7 @@
 
 
 //app_simple_nanoui_example::application g_app_simple_nanoui_example_application;
-//#include "acme/primitive/collection/string_map.h"
+//#include "acme/prototype/collection/string_map.h"
 
 
 //int __implement()
