@@ -3,7 +3,7 @@
 #include "render.h"
 #include "application.h"
 #include <math.h>
-#include "acme/primitive/geometry2d/ellipse.h"
+#include "acme/prototype/geometry2d/ellipse.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/graphics/draw2d/brush.h"
 #include "aura/graphics/draw2d/path.h"

@@ -2,7 +2,7 @@
 
 
 #include "base/platform/application.h"
-#include "acme/primitive/data/check_property.h"
+#include "acme/prototype/data/check_property.h"
 
 namespace app_simple_drawing
 {

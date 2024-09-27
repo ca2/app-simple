@@ -24,11 +24,11 @@
 //
 
 
-#include "acme/primitive/collection/string_map.h"
-#include "acme/primitive/geometry2d/angle.h"
-#include "acme/primitive/geometry2d/rectangle.h"
-//#include "acme/primitive/geometry2d/_geometry2d.h"
-//#include "acme/primitive/geometry2d/size.h"
+#include "acme/prototype/collection/string_map.h"
+#include "acme/prototype/geometry2d/angle.h"
+#include "acme/prototype/geometry2d/rectangle.h"
+//#include "acme/prototype/geometry2d/_geometry2d.h"
+//#include "acme/prototype/geometry2d/size.h"
 #include "apex/platform/app_consumer.h"
 
 

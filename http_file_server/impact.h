@@ -2,7 +2,7 @@
 #pragma once
 
 
-#include "acme/primitive/collection/int_map.h"
+#include "acme/prototype/collection/int_map.h"
 #include "apex/platform/app_consumer.h"
 #include "base/user/user/impact.h"
 

@@ -6,7 +6,7 @@
 //#include "interface_list2.h"
 #include "application.h"
 #include "acme/filesystem/filesystem/acme_file.h"
-#include "acme/primitive/collection/_generic_array.h"
+#include "acme/prototype/collection/_generic_array.h"
 #include "apex/platform/node.h"
 #include "apex/platform/system.h"
 #include "apex/networking/networking.h"
