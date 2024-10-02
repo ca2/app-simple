@@ -48,7 +48,7 @@ namespace app_simple_os_drag_and_drop
       if (ptopic->m_atom == ::id_click)
       {
 
-         if (ptopic->user_element_id() == "simple_drag_and_drop_toggle")
+         if (ptopic->user_interaction_id() == "simple_drag_and_drop_toggle")
          {
 
             m_pimpact->set_need_layout();
@@ -145,7 +145,7 @@ namespace app_simple_os_drag_and_drop
    //   if(ptopic->m_atom == ::id_click)
    //   {
 
-   //      if(ptopic->user_element_id() == "simple_drag_and_drop_toggle")
+   //      if(ptopic->user_interaction_id() == "simple_drag_and_drop_toggle")
    //      {
 
    //         m_pimpact->set_need_layout();
