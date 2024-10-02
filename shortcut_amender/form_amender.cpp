@@ -346,7 +346,7 @@ namespace app_simple_shortcut_amender
          if (ptopic->m_actioncontext.is_user_source())
          {
 
-            if (ptopic->m_puserelement->m_atom == "edit_folder")
+            if (ptopic->user_interaction_id() == "edit_folder")
             {
 
                string strText;
@@ -367,7 +367,7 @@ namespace app_simple_shortcut_amender
                m_pbuttonSend->set_window_text("Thumbnail");
 
             }
-            else if (ptopic->m_puserelement->m_atom == "edit_source")
+            else if (ptopic->user_interaction_id() == "edit_source")
             {
 
                string strText;
@@ -388,7 +388,7 @@ namespace app_simple_shortcut_amender
                m_pbuttonSend->set_window_text("Thumbnail");
 
             }
-            else if (ptopic->m_puserelement->m_atom == "edit_target")
+            else if (ptopic->user_interaction_id() == "edit_target")
             {
 
                string strText;
@@ -416,13 +416,13 @@ namespace app_simple_shortcut_amender
 //      else if (ptopic->m_atom == ::id_click)
 //      {
 //
-//         if (ptopic->m_puserelement->m_atom == "clear_button")
+//         if (ptopic->user_interaction_id() == "clear_button")
 //         {
 //
 //            m_pedit->set_text("", ::e_source_user);
 //
 //         }
-//         else if (ptopic->m_puserelement->m_atom == "send_button")
+//         else if (ptopic->user_interaction_id() == "send_button")
 //         {
 //
 //            string strText;

@@ -199,7 +199,7 @@ namespace app_simple_shortcut_amender
    //      else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != NULL)
    //      {
 
-   //         string strCheck = ptopic->user_element_id();
+   //         string strCheck = ptopic->user_interaction_id();
 
    //         if (strCheck.case_insensitive_begins_eat("bilbo"))
    //         {
@@ -264,7 +264,7 @@ namespace app_simple_shortcut_amender
          else if (ptopic->m_atom == ::id_set_check && ::is_set(ptopic->m_puserelement))
          {
 
-            string strCheck = ptopic->m_puserelement->m_atom;
+            string strCheck = ptopic->user_interaction_id();
 
             if (strCheck.case_insensitive_begins_eat("bilbo"))
             {

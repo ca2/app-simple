@@ -166,7 +166,7 @@ namespace app_simple_shortcut_amender
    //   if(ptopic->m_atom == ::id_click)
    //   {
 
-   //      if(ptopic->user_element_id() == "simple_shortcut_toggle")
+   //      if(ptopic->user_interaction_id() == "simple_shortcut_toggle")
    //      {
 
    //         m_pimpact->set_need_layout();

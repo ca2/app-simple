@@ -166,7 +166,7 @@ namespace app_simple_change_grub_default_entry
       if (ptopic->m_atom == ::id_click)
       {
 
-         if (ptopic->m_puserelement->m_atom == "send_button")
+         if (ptopic->m_puserelement->user_interaction()->m_atom == "send_button")
          {
 
             string strText1;
