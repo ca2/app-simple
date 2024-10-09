@@ -93,7 +93,7 @@ namespace app_simple_http_folder_upload
       //   return false;
 
       //}
-      add_impact_system("main", ::place(new ::user::single_document_template(
+      add_impact_system("main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < ::app_simple_http_folder_upload::main_document >(),
                                ::type < ::app_simple_http_folder_upload::main_frame >(),
@@ -103,7 +103,7 @@ namespace app_simple_http_folder_upload
 
       //add_document_template(pdoctemplate);
 
-      //add_impact_system("impact", ::place(new ::user::multiple_document_template(
+      //add_impact_system("impact", ::as(new ::user::multiple_document_template(
       //   "command",
       //   ::type < main_document >(),
       //   ::type < main_frame >(),

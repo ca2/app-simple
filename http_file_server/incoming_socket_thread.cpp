@@ -85,7 +85,7 @@ namespace app_simple_http_file_server
    //::pointer < ::netserver::socket_handler > incoming_socket_thread::create_socket_handler()
    //{
 
-   //   return ::place(new ::install::socket_handler());
+   //   return __new ::install::socket_handler();
 
 
    //}
@@ -94,7 +94,7 @@ namespace app_simple_http_file_server
    //::pointer < ::sockets::listen_socket_base > incoming_socket_thread::create_listen_socket()
    //{
 
-   //   return ::place(new ::sockets::listen_socket < socket >());
+   //   return __new ::sockets::listen_socket < socket >();
 
    //}
 

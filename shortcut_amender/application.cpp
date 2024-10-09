@@ -95,7 +95,7 @@ namespace app_simple_shortcut_amender
       //}
       add_impact_system(
          "main",
-         ::place(new ::user::single_document_template (
+         ::as(new ::user::single_document_template (
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -105,7 +105,7 @@ namespace app_simple_shortcut_amender
 
 
       add_impact_system(
-         "impact", ::place(new ::user::single_document_template(
+         "impact", ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

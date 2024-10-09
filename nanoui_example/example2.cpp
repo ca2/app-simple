@@ -119,7 +119,9 @@ namespace app_simple_nanoui_example
             [this]
             {
 
-               //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+               //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+
+send(pmessagebox);/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->next_application();
 
@@ -130,7 +132,9 @@ namespace app_simple_nanoui_example
             [this]
             {
 
-               //message_box_synchronous(nullptr, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */
+               //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+
+send(pmessagebox);/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->previous_application();
 

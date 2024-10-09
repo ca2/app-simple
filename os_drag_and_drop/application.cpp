@@ -60,7 +60,7 @@ namespace app_simple_os_drag_and_drop
 
       add_matter_locator("app-simple/drawing");
       add_impact_system(
-         "main", ::place(new ::user::single_document_template(
+         "main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -70,7 +70,7 @@ namespace app_simple_os_drag_and_drop
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "impact", ::place(new ::user::single_document_template(
+         "impact", ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

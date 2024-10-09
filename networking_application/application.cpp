@@ -112,7 +112,7 @@ namespace app_simple_networking_application
 
       //}
 
-      add_impact_system("main", ::place(new ::user::single_document_template(
+      add_impact_system("main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < ::app_simple_networking_application::document >(),
                                ::type < ::app_simple_networking_application::main_frame >(),
@@ -123,7 +123,7 @@ namespace app_simple_networking_application
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "command", ::place(new ::user::multiple_document_template(
+         "command", ::as(new ::user::multiple_document_template(
             "command",
             ::type < command_document >(),
             ::type < main_frame >(),

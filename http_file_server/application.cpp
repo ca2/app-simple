@@ -87,7 +87,7 @@ namespace app_simple_http_file_server
       //   return false;
 
       //}
-      add_impact_system("main", ::place(new ::user::single_document_template(
+      add_impact_system("main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < ::app_simple_http_file_server::main_document >(),
                                ::type < ::app_simple_http_file_server::main_frame >(),
@@ -97,7 +97,7 @@ namespace app_simple_http_file_server
 
       //add_document_template(pdoctemplate);
 
-      //add_impact_system("impact", ::place(new ::user::multiple_document_template(
+      //add_impact_system("impact", ::as(new ::user::multiple_document_template(
       //   "command",
       //   ::type < main_document >(),
       //   ::type < main_frame >(),
