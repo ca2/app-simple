@@ -83,7 +83,7 @@ namespace app_simple_form
       factory()->add_factory_item <::app_simple_form::form_002 >();
 
       ::base::application::init_instance();
-      add_impact_system("main", ::place(new ::user::single_document_template(
+      add_impact_system("main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -94,7 +94,7 @@ namespace app_simple_form
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "impact", ::place(new ::user::single_document_template(
+         "impact", ::as(new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),

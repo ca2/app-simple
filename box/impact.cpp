@@ -4,7 +4,7 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
-#include "acme/platform/sequencer.h"
+//#include "acme/platform/sequencer.h"
 #include "acme/prototype/mathematics/mathematics.h"
 //#include "acme/user/nano/nano.h"
 #include "aura/message/user.h"

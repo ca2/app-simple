@@ -82,7 +82,7 @@ namespace app_simple_drawing
       ::base::application::init_instance();
 
       add_impact_system(
-         "main", ::place(new ::user::single_document_template(
+         "main", ::as(new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
