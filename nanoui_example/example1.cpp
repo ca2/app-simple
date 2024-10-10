@@ -517,7 +517,7 @@ namespace app_simple_nanoui_example
                      
                      //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-send(pmessagebox);/* std::cout << "pushed!" << std::endl; */
+pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->next_application();
 
@@ -530,7 +530,7 @@ send(pmessagebox);/* std::cout << "pushed!" << std::endl; */
 
                      //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-send(pmessagebox);/* std::cout << "pushed!" << std::endl; */
+pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->previous_application();
 
