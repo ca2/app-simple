@@ -58,7 +58,7 @@ namespace app_simple_notify_drawing
 
       //auto pdoctemplate =
       add_impact_system(
-         "main", ::as(new ::user::single_document_template(
+         "main", ::as(__new ::user::single_document_template(
                                "main",
                                ::type < app_simple_drawing::document >(),
                                ::type < main_frame >(),
@@ -67,7 +67,7 @@ namespace app_simple_notify_drawing
       //add_document_template(pdoctemplate);
 
 
-//      pdoctemplate = ::as(new ::user::single_document_template(
+//      pdoctemplate = ::as(__new ::user::single_document_template(
 //                          this,
 //                          "main",
 //                          ::type < simple_drawing::document >(),

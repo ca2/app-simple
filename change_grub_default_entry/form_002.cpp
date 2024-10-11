@@ -107,7 +107,7 @@ namespace app_simple_change_grub_default_entry
 
       m_pbutton->add_handler(this);
 
-      m_pstill->set_window_text("Enter new text:");
+      m_pstill->set_window_text("Enter __new text:");
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 

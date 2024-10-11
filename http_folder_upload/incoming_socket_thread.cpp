@@ -79,7 +79,7 @@ namespace app_simple_http_folder_upload
    //::pointer < ::netserver::socket_handler > incoming_socket_thread::create_socket_handler()
    //{
 
-   //   return __new ::install::socket_handler();
+   //   return __allocate ::install::socket_handler();
 
 
    //}
@@ -88,7 +88,7 @@ namespace app_simple_http_folder_upload
    //::pointer < ::sockets::listen_socket_base > incoming_socket_thread::create_listen_socket()
    //{
 
-   //   return __new ::sockets::listen_socket < socket >();
+   //   return __allocate ::sockets::listen_socket < socket >();
 
    //}
 

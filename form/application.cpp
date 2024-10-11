@@ -83,7 +83,7 @@ namespace app_simple_form
       factory()->add_factory_item <::app_simple_form::form_002 >();
 
       ::base::application::init_instance();
-      add_impact_system("main", ::as(new ::user::single_document_template(
+      add_impact_system("main", ::as(__new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -94,7 +94,7 @@ namespace app_simple_form
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "impact", ::as(new ::user::single_document_template(
+         "impact", ::as(__new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -203,7 +203,7 @@ namespace app_simple_form
 //::acme::library * app_simple_form_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
+//   return __new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
 //
 //}
 //

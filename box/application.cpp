@@ -59,7 +59,7 @@ namespace app_simple_box
       //}
 
       add_impact_system(
-         "main", ::as(new ::user::single_document_template(
+         "main", ::as(__new ::user::single_document_template(
          "main",
          ::type < document >(),
          ::type < main_frame >(),

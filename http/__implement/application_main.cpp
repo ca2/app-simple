@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = new app_simple_http::application();
+//   auto papp = __new app_simple_http::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -24,7 +24,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = new app_simple_http::application();
+   auto papplication = __new app_simple_http::application();
 
    int iExitCode = papplication->application_main(pplatform);
 
