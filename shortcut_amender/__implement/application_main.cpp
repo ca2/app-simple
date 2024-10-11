@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = new app_simple_shortcut_amender::application();
+//   auto papp = __new app_simple_shortcut_amender::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -25,7 +25,7 @@
 ::i32 application_main(::platform::platform * pplatform)
 {
 
-   auto papplication = new app_simple_shortcut_amender::application();
+   auto papplication = __new app_simple_shortcut_amender::application();
 
    int iExitCode = papplication->application_main(pplatform);
 

@@ -40,7 +40,7 @@ public:
    
 
 
-   /// Construct a new widget with the given parent widget
+   /// Construct a __new widget with the given parent widget
    Widget(Widget * parent);
 
    /// Return the parent widget
@@ -166,7 +166,7 @@ public:
 //   /// Variadic shorthand notation to construct and add a child widget
 //   template<typename WidgetClass, typename... Args>
 //   WidgetClass * add(const Args&... args) {
-//      return __new< WidgetClass >(this, args...);
+//      return __allocate< WidgetClass >(this, args...);
 //   }
 //
 //   /// Walk up the hierarchy and return the parent window
@@ -302,7 +302,7 @@ protected:
 //    * Whether or not this Widget is currently enabled.  Various different kinds
 //    * of derived types use this to determine whether or not user input will be
 //    * accepted.  For example, when ``m_enabled == false``, the state of a
-//    * CheckBox cannot be changed, or a TextBox will not allow new input.
+//    * CheckBox cannot be changed, or a TextBox will not allow __new input.
 //    */
    bool m_enabled;
    bool m_focused, m_mouse_focus;

@@ -56,17 +56,17 @@ namespace app_simple_nanoui_example
          //if (use_gl_4_1) {
          //   // NanoGUI presents many options for you to utilize at your discretion.
          //   // See include/nanoui/screen.h for what all of these represent.
-         //   screen = __new< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
+         //   screen = __allocate< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
          //      /* resizable */ true, /* fullscreen */ false,
          //      /* depth_buffer */ true, /* stencil_buffer */ true,
          //      /* float_buffer */ false, /* gl_major */ 4,
          //      /* gl_minor */ 1);
          //}
          //else {
-         //   screen = __new< Screen(Vector2i >(500, 700), "NanoGUI test");
+         //   screen = __allocate< Screen(Vector2i >(500, 700), "NanoGUI test");
          //}
 
-      nanoui::FormHelper * guiNanouiExample = new ::nanoui::FormHelper(this);
+      nanoui::FormHelper * guiNanouiExample = __new ::nanoui::FormHelper(this);
       m_pwindow = guiNanouiExample->add_window({ 10, 10 }, "nanoui example");
       guiNanouiExample->add_group("Buttons");
       guiNanouiExample->add_button("A button", [this]()
@@ -74,7 +74,7 @@ namespace app_simple_nanoui_example
          });
 
       bool enabled = true;
-         nanoui::FormHelper * gui = new ::nanoui::FormHelper(this);
+         nanoui::FormHelper * gui = __new ::nanoui::FormHelper(this);
          m_pwindow = gui->add_window({ 10, 10 }, "Form helper example");
          gui->add_group("Basic types");
          gui->add_variable("bool", bvar);
@@ -108,13 +108,13 @@ namespace app_simple_nanoui_example
       //return 0;
 
 
-         auto window = new Window(this, "Navigation");
+         auto window = __new Window(this, "Navigation");
          window->set_position({ 15, 680 });
-         window->set_layout(new GroupLayout());
+         window->set_layout(__new GroupLayout());
 
 
 
-         auto b = new Button(window, "Next Example");
+         auto b = __new Button(window, "Next Example");
          b->set_callback(
             [this]
             {
@@ -127,7 +127,7 @@ pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
 
             });
-         b = new Button(window, "Previous Example");
+         b = __new Button(window, "Previous Example");
          b->set_callback(
             [this]
             {

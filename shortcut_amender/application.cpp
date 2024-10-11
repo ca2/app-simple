@@ -95,7 +95,7 @@ namespace app_simple_shortcut_amender
       //}
       add_impact_system(
          "main",
-         ::as(new ::user::single_document_template (
+         ::as(__new ::user::single_document_template (
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
@@ -105,7 +105,7 @@ namespace app_simple_shortcut_amender
 
 
       add_impact_system(
-         "impact", ::as(new ::user::single_document_template(
+         "impact", ::as(__new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
@@ -212,7 +212,7 @@ namespace app_simple_shortcut_amender
 //::acme::library * app_simple_shortcut_amender_get_new_library()
 //{
 //
-//   return new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
+//   return __new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
 //
 //}
 //
