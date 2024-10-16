@@ -63,11 +63,11 @@ namespace app_simple_application
       ::base::application::init_instance();
 
       add_impact_system(
-         "main", ::as(__new ::user::single_document_template(
+         "main", __initialize_new ::user::single_document_template(
          "main",
          ::type < document >(),
          ::type < main_frame >(),
-         ::type < impact >())));
+         ::type < impact >()));
       
       
 #if defined(APPLE_IOS)

@@ -19,14 +19,12 @@
 
 
 
-::i32 application_main(::platform::platform * pplatform)
+void application_main()
 {
 
    auto papplication = __new app_simple_box::application();
 
-   int iExitCode = papplication->application_main(pplatform);
-
-   return iExitCode;
+   papplication->application_main(pplatform);
 
 }
 

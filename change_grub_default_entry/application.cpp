@@ -93,12 +93,12 @@ namespace app_simple_change_grub_default_entry
       //}
 
       add_impact_system(
-         "main", ::as(__new ::user::single_document_template(
+         "main", __initialize_new ::user::single_document_template(
                               "main",
                               ::type < document >(),
                               ::type < main_frame >(),
                               ::type < form_001 >()
-               )));
+               ));
 
       //m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;
 
