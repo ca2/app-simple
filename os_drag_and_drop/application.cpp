@@ -60,21 +60,21 @@ namespace app_simple_os_drag_and_drop
 
       add_matter_locator("app-simple/drawing");
       add_impact_system(
-         "main", ::as(__new ::user::single_document_template(
+         "main", __initialize_new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
-                               ::type < tab_impact >())));
+                               ::type < tab_impact >()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
       //add_document_template(pdoctemplate);
 
       add_impact_system(
-         "impact", ::as(__new ::user::single_document_template(
+         "impact", __initialize_new ::user::single_document_template(
                           "main",
                           ::type < document >(),
                           ::type < frame >(),
-                          ::type < main_impact >())));
+                          ::type < main_impact >()));
 
       //m_ptemplateSimpleDrawingImpact = pdoctemplate;
       //add_document_template(pdoctemplate);

@@ -82,11 +82,11 @@ namespace app_simple_drawing
       ::base::application::init_instance();
 
       add_impact_system(
-         "main", ::as(__new ::user::single_document_template(
+         "main", __initialize_new ::user::single_document_template(
                                "main",
                                ::type < document >(),
                                ::type < main_frame >(),
-                               get_pane_impact_type())));
+                               get_pane_impact_type()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
 
