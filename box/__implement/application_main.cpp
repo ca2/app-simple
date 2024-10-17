@@ -24,7 +24,7 @@ void application_main()
 
    auto papplication = __new app_simple_box::application();
 
-   papplication->application_main(pplatform);
+   papplication->application_main();
 
 }
 
