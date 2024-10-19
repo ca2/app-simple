@@ -27,7 +27,6 @@ namespace app_simple_form
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;
 
-
 #ifdef _DEBUG
       virtual int64_t increment_reference_count() override;
       virtual int64_t decrement_reference_count() override;

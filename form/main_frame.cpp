@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "main_frame.h"
+#include "acme/platform/referencing_debugging.h"
 
 
 namespace app_simple_form
@@ -10,6 +11,7 @@ namespace app_simple_form
    {
 
       //m_bDefaultCreateToolbar = false;
+      m_bIncludeCallStackTrace = true;
 
       window_enable_full_screen();
 
@@ -18,6 +20,38 @@ namespace app_simple_form
 
    main_frame::~main_frame()
    {
+
+   }
+
+
+   ::i64 main_frame::increment_reference_count()
+   {
+
+      return ::simple_main_frame::increment_reference_count();
+
+//#if REFERENCING_DEBUGGING
+//
+//      critical_section_lock synchronouslock(&::acme::get()->m_preferencingdebugging->m_criticalsection);
+//
+//#endif
+//
+//      auto c = ++m_countReference;
+//
+//#if REFERENCING_DEBUGGING
+//
+//      add_reference_item(true);
+//
+//#endif
+//
+//      return c;
+
+   }
+
+
+   ::i64 main_frame::decrement_reference_count()
+   {
+
+      return ::simple_main_frame::decrement_reference_count();
 
    }
 

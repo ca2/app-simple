@@ -70,7 +70,12 @@ namespace app_simple_nanoui_example
       m_pwindow = guiNanouiExample->add_window({ 10, 10 }, "nanoui example");
       guiNanouiExample->add_group("Buttons");
       guiNanouiExample->add_button("A button", [this]()
-         { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Button pressed.");
+         { 
+            
+            auto pmessagebox = __initialize_new ::message_box("Button pressed.");
+
+            pmessagebox->async();
+
          });
 
       bool enabled = true;
@@ -93,7 +98,8 @@ namespace app_simple_nanoui_example
 
          gui->add_group("Other widgets");
          gui->add_button("A button", [this]() 
-            { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Button pressed.");
+            { auto pmessagebox = __initialize_new::message_box("Button pressed.");
+         pmessagebox->async();
             });
 
          set_visible(true);
@@ -121,7 +127,7 @@ namespace app_simple_nanoui_example
 
                //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->next_application();
 
@@ -134,7 +140,7 @@ pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->previous_application();
 
