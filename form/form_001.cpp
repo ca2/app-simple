@@ -28,6 +28,21 @@ namespace app_simple_form
    }
 
 
+   //void form_001::destroy()
+   //{
+
+   //   m_pstill.release();
+   //   m_pedit.release();
+   //   m_pbuttonClear.release();
+   //   m_pbuttonSend.release();
+   //   m_pstillReceiver.release();
+
+   //   ::app_simple_form::form::destroy();
+
+
+   //}
+
+
 //   void form_001::assert_ok() const
 //   {
 //
@@ -71,7 +86,8 @@ namespace app_simple_form
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form_001::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
+      MESSAGE_LINK(e_message_destroy, psender, this, &form_001::on_message_destroy);
 
       add_command_handler("send_button", { this,  &form_001::_001OnSendButton });
       add_command_handler("clear_button", { this,  &form_001::_001OnClearButton });
@@ -142,6 +158,20 @@ namespace app_simple_form
       //set_need_redraw();
 
       //post_redraw();
+
+   }
+
+
+   void form_001::on_message_destroy(::message::message * pmessage)
+   {
+
+      __UNREFERENCED_PARAMETER(pmessage);
+
+      m_pstill.release();
+      m_pedit.release();
+      m_pbuttonClear.release();
+      m_pbuttonSend.release();
+      m_pstillReceiver.release();
 
    }
 

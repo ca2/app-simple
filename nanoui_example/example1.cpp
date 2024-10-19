@@ -49,13 +49,23 @@ namespace app_simple_nanoui_example
 
 
       Button * b = __new Button(window, "Plain button");
-      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Plain Button!");/* std::cout << "pushed!" << std::endl; */ });
+      b->set_callback([this] 
+         {
+            auto pmessagebox = __initialize_new::message_box("Pushed Plain Button!");
+            /* std::cout << "pushed!" << std::endl; */ 
+            pmessagebox->async();
+         
+         });
       b->set_tooltip("short tooltip");
 
       ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", e_font_awesome_rocket);
       b->set_background_color(::rgba(0, 0, 255, 25));
-      b->set_callback([this] { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Pushed Styled!");/* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ });
+      b->set_callback([this] { 
+         auto pmessagebox = __initialize_new::message_box("Pushed Styled!");
+         /* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ 
+         pmessagebox->async();
+         });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
       
@@ -66,8 +76,8 @@ namespace app_simple_nanoui_example
          {
             string_stream str;
             str << "Toggle button state: " << state;
-            message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
-            
+            auto pmessagebox = __initialize_new::message_box(str.as_string());
+            pmessagebox->async();
          
          });
       
@@ -116,17 +126,31 @@ namespace app_simple_nanoui_example
                b = __new Button(tools, "Info");
                b->set_callback([this] {
                   auto dlg = __new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
-                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
+                  dlg->set_callback([this](int result) { 
+                     auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                     
+                     pmessagebox->async();
+                     });
                   });
                b = __new Button(tools, "Warn");
                b->set_callback([this] {
                   auto dlg = __new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
-                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
+                  dlg->set_callback([this](int result) 
+                     {
+                        auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                     
+                        pmessagebox->async();
+                     });
                   });
                b = __new Button(tools, "Ask");
                b->set_callback([this] {
                   auto dlg = __new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
-                  dlg->set_callback([this](int result) { message_box_asynchronous(nullptr, screen()->m_puserinteraction, "Dialog result: " + ::as_string(result)); });
+                  dlg->set_callback([this](int result) 
+                     {
+                        auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                     
+                        pmessagebox->async();
+                     });
                   });
       
       #if defined(_WIN32)
@@ -235,7 +259,7 @@ namespace app_simple_nanoui_example
                   pdialog->m_puserelement = m_puserinteraction;
                   pdialog->m_bSave = false;
                   pdialog->m_bMultiple = false;
-                  pdialog->call_run();
+                  pdialog->call();
                   //node()->pick_single_file(poswindow,
                     //          ,
                       //        , false);
@@ -267,7 +291,7 @@ namespace app_simple_nanoui_example
                   };
                   pdialog->m_bSave = true;
                   pdialog->m_bMultiple = false;
-                  pdialog->call_run();
+                  pdialog->call();
 //                  node()->pick_single_file(
 //                     poswindow,
 //                     ,
@@ -282,7 +306,9 @@ namespace app_simple_nanoui_example
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
-                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
+                     auto pmessagebox = __initialize_new::message_box(str.as_string());
+
+                     pmessagebox->async();
 
                   }
                );
@@ -292,7 +318,9 @@ namespace app_simple_nanoui_example
                      
                      string_stream str;
                      str << "Check box 2 state: " << state;
-                     message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
+                     auto pmessagebox = __initialize_new::message_box(str.as_string());
+
+                     pmessagebox->async();
 
                   }
                );
@@ -320,7 +348,8 @@ namespace app_simple_nanoui_example
                   string str;
                   
                   str.formatf("Final slider value: %d", (int)(value * 100));
-                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str);
+                  auto pmessagebox = message_box(str);
+                  pmessagebox->async();
                   });
                text_box->set_fixed_size({ 60, 25 });
                text_box->set_font_size(20);
@@ -464,7 +493,8 @@ namespace app_simple_nanoui_example
                cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;
                   str << "ColorPicker final callback: [" << c << "]";
-                  message_box_asynchronous(nullptr, screen()->m_puserinteraction, str.as_string());
+                  auto pmessagebox = message_box(str.as_string());
+                  pmessagebox->async();
                   });
                // setup a fast callback for the color picker widget on a __new window
                // for demonstrative purposes
@@ -517,7 +547,7 @@ namespace app_simple_nanoui_example
                      
                      //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->next_application();
 
@@ -530,7 +560,7 @@ pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                      //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
 
-pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->previous_application();
 

@@ -25,6 +25,9 @@ namespace app_simple_form
       ~form_001() override;
 
 
+      //void destroy() override;
+
+
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;
 
@@ -38,6 +41,7 @@ namespace app_simple_form
 
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
+      DECLARE_MESSAGE_HANDLER(on_message_destroy);
       DECLARE_MESSAGE_HANDLER(_001OnSendButton);
       DECLARE_MESSAGE_HANDLER(_001OnClearButton);
 

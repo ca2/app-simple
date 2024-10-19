@@ -20,6 +20,10 @@ namespace app_simple_form
       main_frame();
       ~main_frame() override;
 
+      
+      ::i64 increment_reference_count() override;
+      ::i64 decrement_reference_count() override;
+
 
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;
