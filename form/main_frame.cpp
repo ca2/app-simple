@@ -10,8 +10,10 @@ namespace app_simple_form
    main_frame::main_frame()
    {
 
+#if REFERENCING_DEBUGGING
       //m_bDefaultCreateToolbar = false;
       m_bIncludeCallStackTrace = true;
+#endif
 
       window_enable_full_screen();
 
