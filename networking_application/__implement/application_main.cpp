@@ -9,7 +9,7 @@
 //int __implement()
 //{
 //
-//   auto papp = __new app_simple_networking_application::application();
+//   auto papp = ___new app_simple_networking_application::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -24,7 +24,7 @@
 void application_main()
 {
 
-   auto papplication = __new app_simple_networking_application::application();
+   auto papplication = ___new app_simple_networking_application::application();
 
    papplication->application_main();
 

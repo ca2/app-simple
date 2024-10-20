@@ -195,25 +195,25 @@ public:
     ExampleApplication() : nanoui::Screen(Vector2i(800, 600), "NanoGUI Test", false) {
         using namespace nanoui;
 
-        Window *window = __new Window(this, "Canvas widget demo");
+        Window *window = ___new Window(this, "Canvas widget demo");
         window->set_position(Vector2i(15, 15));
-        window->set_layout(__new GroupLayout());
+        window->set_layout(___new GroupLayout());
 
-        m_canvas = __new MyCanvas(window);
+        m_canvas = ___new MyCanvas(window);
         m_canvas->set_background_color({100, 100, 100, 255});
         m_canvas->set_fixed_size({400, 400});
 
-        Widget *tools = __new Widget(window);
-        tools->set_layout(__new BoxLayout(e_orientation_horizontal,
+        Widget *tools = ___new Widget(window);
+        tools->set_layout(___new BoxLayout(e_orientation_horizontal,
                                        e_alignment_middle, 0, 5));
 
-        Button *b0 = __new Button(tools, "Random Background");
+        Button *b0 = ___new Button(tools, "Random Background");
         b0->set_callback([this]() {
             m_canvas->set_background_color(
                 Vector4i(rand() % 256, rand() % 256, rand() % 256, 255));
         });
 
-        Button *b1 = __new Button(tools, "Random Rotation");
+        Button *b1 = ___new Button(tools, "Random Rotation");
         b1->set_callback([this]() {
             m_canvas->set_rotation((float) Pi * rand() / (float) RAND_MAX);
         });
@@ -244,7 +244,7 @@ int main(int /* argc */, char ** /* argv */) {
         nanoui::init();
 
         /* scoped variables */ {
-            nanoui::ref<ExampleApplication> app = __new ExampleApplication();
+            nanoui::ref<ExampleApplication> app = ___new ExampleApplication();
             app->draw_all();
             app->set_visible(true);
             nanoui::mainloop(1 / 60.f * 1000);

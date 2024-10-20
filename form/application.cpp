@@ -203,7 +203,7 @@ namespace app_simple_form
 //::acme::library * app_simple_form_get_new_library()
 //{
 //
-//   return __new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
+//   return ___new ::apex::single_application_library < ::simple_form::application >("app-simple/form");
 //
 //}
 //
