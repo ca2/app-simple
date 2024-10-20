@@ -9,7 +9,7 @@
 void application_main()
 {
 
-   auto papplication = __new app_simple_application::application();
+   auto papplication = ___new app_simple_application::application();
 
    papplication->application_main();
 

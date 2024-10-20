@@ -335,7 +335,7 @@ protected:
    enum_alignment m_default_alignment[2];
    /// The actual enum_alignment being used for each column/row
    std::vector<enum_alignment> m_alignment[2];
-   /// The number of rows or columns before starting a __new one, depending on the enum_orientation.
+   /// The number of rows or columns before starting a ___new one, depending on the enum_orientation.
    int m_resolution;
    /// The spacing used for each dimension.
    Vector2i m_spacing;
@@ -360,7 +360,7 @@ protected:
  * .. code-block:: cpp
  *
  *    using Anchor = AdvancedGridLayout::Anchor;
- *    Label *label = __new Label(window, "A label");
+ *    Label *label = ___new Label(window, "A label");
  *    // Add a centered label at grid position (1, 5), which spans two horizontal cells
  *    layout->set_anchor(label, Anchor(1, 5, 2, 1, e_alignment_middle, e_alignment_middle));
  *

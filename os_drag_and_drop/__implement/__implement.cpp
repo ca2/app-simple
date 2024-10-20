@@ -6,7 +6,7 @@
 int __implement()
 {
 
-   auto papp = __new app_simple_shader::application();
+   auto papp = ___new app_simple_shader::application();
 
    int iExitCode = papp->__implement();
 

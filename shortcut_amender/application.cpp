@@ -212,7 +212,7 @@ namespace app_simple_shortcut_amender
 //::acme::library * app_simple_shortcut_amender_get_new_library()
 //{
 //
-//   return __new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
+//   return ___new ::apex::single_application_library < ::simple_shortcut::application >("app-simple/form");
 //
 //}
 //
