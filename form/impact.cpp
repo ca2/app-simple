@@ -92,9 +92,13 @@ namespace app_simple_form
 
       }
 
+      __check_refdbg
+
       string strId = get_document()->m_pimpactsystem->m_atom;
 
       string strText;
+
+      __check_refdbg
 
       if(get_typed_parent<::user::split_impact>() != nullptr)
       {
@@ -109,6 +113,8 @@ namespace app_simple_form
          }
 
       }
+
+      __check_refdbg
 
    }
 
