@@ -109,49 +109,95 @@ namespace app_simple_form
 
       }
 
+      __check_refdbg
+
       __construct_new(m_pstill);
+
+      __check_refdbg
 
       __construct_new(m_pedit);
 
+      __check_refdbg
+
       __construct_new(m_pbuttonClear);
+
+      __check_refdbg
 
       __construct_new(m_pbuttonSend);
 
+      __check_refdbg
+
       __construct_new(m_pstillReceiver);
+
+      __check_refdbg
 
       m_pstill->create_control(this, "still");
 
+      __check_refdbg
+
       m_pedit->create_control(this, "edit");
+
+      __check_refdbg
 
       m_pedit->add_handler(this);
 
+      __check_refdbg
+
       m_pbuttonClear->create_control(this, "clear_button");
+
+      __check_refdbg
 
       m_pbuttonClear->add_handler(this);
 
+      __check_refdbg
+
       m_pbuttonSend->create_control(this, "send_button");
+
+      __check_refdbg
 
       m_pbuttonSend->add_handler(this);
 
+      __check_refdbg
+
       m_pstill->set_window_text("Enter ___new text:");
+
+      __check_refdbg
 
       m_pstillReceiver->create_control(this, "still");
 
+      __check_refdbg
+
       m_pstillReceiver->set_window_text("(Waiting to receive...)");
+
+      __check_refdbg
 
       m_pedit->m_strEmtpyText = "Enter New Text Here";
 
+      __check_refdbg
+
       string strInitialText;
+
+      __check_refdbg
 
       auto papp = get_app();
 
+      __check_refdbg
+
       papp->datastream()->get("last_text", strInitialText);
+
+      __check_refdbg
 
       m_pedit->set_text(strInitialText, ::e_source_initialize);
 
+      __check_refdbg
+
       m_pbuttonClear->set_window_text("Clear");
 
+      __check_refdbg
+
       m_pbuttonSend->set_window_text("Send");
+
+      __check_refdbg
 
       //set_need_layout();
 

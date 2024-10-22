@@ -170,11 +170,17 @@ namespace app_simple_form
 
          ::collection::index iId = atoi(strId);
 
+         __check_refdbg
+
          switch (iId)
          {
          case 1:
 
+            __check_refdbg
+
             pform = create_impact<form_001>(pimpactdata);
+
+            __check_refdbg
 
             break;
 
