@@ -10,6 +10,12 @@ namespace app_simple_drawing
    main_frame::main_frame()
    {
 
+#if REFERENCING_DEBUGGING
+
+      //m_bIncludeCallStackTrace = true;
+
+#endif
+
       //m_ewindowflag += window_flag_miniaturizable;
 
       //m_bDefaultCreateToolbar = false;
@@ -49,6 +55,35 @@ namespace app_simple_drawing
       return pframe;
 
    }
+
+#ifdef DEBUG
+
+
+   i64 main_frame::increment_reference_count()
+   {
+
+      if(m_preferenceitema->m_iStep == 211)
+      {
+
+         ::output_debug_string("211");
+
+      }
+
+      return ::simple_main_frame::increment_reference_count();
+
+   }
+
+
+
+   i64 main_frame::decrement_reference_count()
+   {
+
+      return ::simple_main_frame::decrement_reference_count();
+
+   }
+
+
+#endif
 
 
 //   bool main_frame::has_pending_graphical_update()

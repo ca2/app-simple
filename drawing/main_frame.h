@@ -24,6 +24,13 @@ namespace app_simple_drawing
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;
 
+#ifdef DEBUG
+
+      i64 increment_reference_count() override;
+
+      i64 decrement_reference_count() override;
+
+#endif
 
       //::user::enum_translucency get_translucency(::user::style * pstyle) override;
       ::pointer < ::experience::frame > frame_experience() override;
