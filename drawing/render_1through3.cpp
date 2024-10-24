@@ -36,7 +36,7 @@ namespace app_simple_drawing
 
             __construct(m_pimage1);
 
-            m_pcontext->fork([this]()
+            m_papplication->fork([this]()
             {
 
                auto pimage1 = image()->get_image("matter://pat1.jpg");

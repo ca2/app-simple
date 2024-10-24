@@ -34,7 +34,7 @@ namespace app_simple_shortcut_amender
 //            //            bool bTemporary =get_task()->m_bTemporary;
 //            //            get_task()->m_bTemporary = true;
 //            string strMatter = dir()->matter("popup_lyricview.xml");
-//            ::file::path path = m_pcontext->defer_process_matter_path(strMatter);
+//            ::file::path path = m_papplication->defer_process_matter_path(strMatter);
 //            //::pointer<::message::mouse> p=pmouse->
 //            //main_async([this,p]()
 //            //{

@@ -224,7 +224,7 @@ namespace app_simple_http
          ::rectangle_i32 r;
 
          //int iMaxX1 = 0;
-//         auto paddressMask = system()->m_papexsystem->networking()->create_ip4_address("255.255.255.0");
+//         auto paddressMask = system()->networking()->create_ip4_address("255.255.255.0");
 
          for (auto & pitem : *main_content().m_pitema)
          {

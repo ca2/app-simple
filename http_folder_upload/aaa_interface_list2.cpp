@@ -89,7 +89,7 @@ namespace app_simple_http_folder_upload
       }
 
 
-      //auto addressa = system()->m_papexsystem->networking()->list_network_interfaces();
+      //auto addressa = system()->networking()->list_network_interfaces();
 
       //for (::collection::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
@@ -102,7 +102,7 @@ namespace app_simple_http_folder_upload
 
       //}
 
-      //auto addressa2 = system()->m_papexsystem->networking()->list_computers();
+      //auto addressa2 = system()->networking()->list_computers();
 
       //for (::collection::index iItem = 0; iItem < addressa2.size(); iItem++)
       //{
