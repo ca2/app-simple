@@ -104,7 +104,7 @@ namespace app_simple_http_folder_upload
 
    //   //auto pcontext = pparticle->m_papplication;
 
-   //   //pthreadSsl->m_strCat = m_papplication->defer_process_matter_path(dir()->matter("appinstaller.cat"));
+   //   //pthreadSsl->m_strCat = m_papplication->defer_process_matter_path(directory()->matter("appinstaller.cat"));
 
    //   //auto pfolder = pparticle->file()->resource_folder();
 

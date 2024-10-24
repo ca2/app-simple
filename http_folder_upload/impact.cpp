@@ -8,8 +8,8 @@
 #include "application.h"
 #include "acme/constant/id.h"
 #include "acme/constant/message.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
-#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/directory_system.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/handler/item.h"
 #include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
@@ -117,9 +117,9 @@ namespace app_simple_http_folder_upload
 
          property_set set;
 
-         auto & http = application()->m_papexapplication->http();
+         auto & http = application()->http();
 
-         application()->m_papexapplication->datastream()->set("url", strUrl);
+         application()->datastream()->set("url", strUrl);
 
          ::string str =
             http.get(strUrl, set);
@@ -330,7 +330,7 @@ namespace app_simple_http_folder_upload
 
       m_listing.set_file_listing(get_app()->m_pathFolder, e_depth_recursively);
 
-      acmedirectory()->enumerate(m_listing);
+      directory_system()->enumerate(m_listing);
 
       set_total_size(::size_i32(800, 20 * m_listing.size()+ 50));
 

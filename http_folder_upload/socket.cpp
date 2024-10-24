@@ -3,7 +3,7 @@
 #include "socket.h"
 #include "application.h"
 #include "acme/filesystem/file/memory_file.h"
-#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "aura/user/user/interaction.h"
 #include "acme/prototype/prototype/url.h"
@@ -87,7 +87,7 @@ namespace app_simple_http_folder_upload
 
       path = get_app()->m_pathFolder / strUri;
 
-      if (!acmefile()->exists(path))
+      if (!file_system()->exists(path))
       {
 
          outattr("http_status_code") = 404;

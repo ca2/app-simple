@@ -5,7 +5,7 @@
 #include "impact_folder_path.h"
 #include "impact_path.h"
 #include "acme/constant/id.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
+#include "acme/filesystem/filesystem/directory_system.h"
 #include "acme/handler/topic.h"
 #include "apex/database/_binary_stream.h"
 
