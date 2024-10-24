@@ -214,7 +214,7 @@ namespace app_simple_change_grub_default_entry
             if (atomSavedEntry.has_char())
             {
 
-               auto pcontext = m_pcontext->m_papexcontext;
+               auto pcontext = m_papplication->m_papexcontext;
 
                auto pathGrubFolder = get_grub_folder_path();
 
@@ -309,7 +309,7 @@ namespace app_simple_change_grub_default_entry
    ::e_status form_001::update_grub_entry_list(const ::file::path& pathGrubFolder)
    {
 
-      auto pcontext = m_pcontext->m_papexcontext;
+      auto pcontext = m_papplication->m_papexcontext;
 
       string_array straLines;
 
@@ -421,7 +421,7 @@ namespace app_simple_change_grub_default_entry
 
       string_array straLines;
 
-      auto pcontext = m_pcontext->m_papexcontext;
+      auto pcontext = m_papplication->m_papexcontext;
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 
@@ -455,7 +455,7 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      auto pcontext = m_pcontext->m_papexcontext;
+      auto pcontext = m_papplication->m_papexcontext;
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 

@@ -40,9 +40,9 @@ namespace app_simple_http_folder_upload
 
       information() << "app_simple_http_folder_upload::document::on_open_document";
 
-      //m_pitemaInterface = system()->m_papexsystem->networking()->list_network_interfaces();
+      //m_pitemaInterface = system()->networking()->list_network_interfaces();
 
-      //m_pitemaComputer = system()->m_papexsystem->networking()->list_computers();
+      //m_pitemaComputer = system()->networking()->list_computers();
 
       //id_update_all_impacts(id_update);
 

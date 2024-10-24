@@ -40,16 +40,16 @@ namespace simple_shader
 
       initialize_application_consumer();
 
-      m_pcontext = psystem->get_gpu()->create_context();
+      m_papplication = psystem->get_gpu()->create_context();
 
-      if (!m_pcontext)
+      if (!m_papplication)
       {
 
          return ::error_failed;
 
       }
 
-      estatus = m_pcontext->initialize(this);
+      estatus = m_papplication->initialize(this);
 
       if (!estatus)
       {
@@ -95,10 +95,10 @@ namespace simple_shader
 
       }
 
-      if (m_pcontext)
+      if (m_papplication)
       {
 
-         m_pcontext->resize_offscreen_buffer(m_rect.size());
+         m_papplication->resize_offscreen_buffer(m_rect.size());
 
       }
       
@@ -131,7 +131,7 @@ namespace simple_shader
          if (path.name().case_insensitive_begins(pszPathPrefix))
          {
 
-            m_strFragment = m_pcontext->load_fragment(path, m_eshadersource);
+            m_strFragment = m_papplication->load_fragment(path, m_eshadersource);
 
             m_bUpdateShader = true;
 
@@ -177,14 +177,14 @@ namespace simple_shader
       if(m_strProjection.is_empty())
       {
 
-         m_strProjection = m_pcontext->_001GetIntroProjection();
+         m_strProjection = m_papplication->_001GetIntroProjection();
 
       }
 
       if(m_strFragment.is_empty())
       {
 
-         m_strFragment = m_pcontext->_001GetIntroFragment();
+         m_strFragment = m_papplication->_001GetIntroFragment();
 
       }
 
@@ -194,9 +194,9 @@ namespace simple_shader
 
       string strFragment = m_strFragment;
 
-      ::gpu::context_lock lock(m_pcontext);
+      ::gpu::context_lock lock(m_papplication);
 
-      m_pcontext->make_current();
+      m_papplication->make_current();
 
       if (!m_pprogram)
       {
@@ -205,9 +205,9 @@ namespace simple_shader
 
       }
 
-      m_pcontext->translate_shader(strProjection);
+      m_papplication->translate_shader(strProjection);
 
-      m_pcontext->translate_shader(strFragment);
+      m_papplication->translate_shader(strFragment);
 
       if (::succeeded(estatus))
       {
@@ -222,9 +222,9 @@ namespace simple_shader
 
       strDataId = m_pimpact->m_atom;
 
-      m_pcontext->m_pprogram = m_pprogram;
+      m_papplication->m_pprogram = m_pprogram;
 
-      m_pcontext->draw();
+      m_papplication->draw();
 
       //unsigned int texture1;
 
@@ -248,7 +248,7 @@ namespace simple_shader
    void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
       
-      ::gpu::context_lock lock(m_pcontext);
+      ::gpu::context_lock lock(m_papplication);
 
       if (m_strShaderPrefix.has_char())
       {
@@ -261,18 +261,18 @@ namespace simple_shader
 
       defer_update_shader();
 
-      if (m_pcontext &&
-        ::is_set(m_pcontext->m_pprogram) &&
-       m_pcontext->m_pbuffer && ::is_ok(m_pcontext->m_pbuffer->m_pimage))
+      if (m_papplication &&
+        ::is_set(m_papplication->m_pprogram) &&
+       m_papplication->m_pbuffer && ::is_ok(m_papplication->m_pbuffer->m_pimage))
       {
          
          {
 
-            ::gpu::context_lock lock(m_pcontext);
+            ::gpu::context_lock lock(m_papplication);
             
-            m_pcontext->make_current();
+            m_papplication->make_current();
 
-            m_pcontext->start();
+            m_papplication->start();
 
             {
 
@@ -280,19 +280,19 @@ namespace simple_shader
 
                float y = (float) psession->get_cursor_position().y();
 
-               m_pcontext->m_pprogram->m_pshader->setVec2("mouse", x, y);
-               m_pcontext->m_pprogram->m_pshader->setVec2("iMouse", x, y);
+               m_papplication->m_pprogram->m_pshader->setVec2("mouse", x, y);
+               m_papplication->m_pprogram->m_pshader->setVec2("iMouse", x, y);
 
             }
 
             {
 
-               float cx = (float) m_pcontext->m_pbuffer->m_pimage->width();
+               float cx = (float) m_papplication->m_pbuffer->m_pimage->width();
 
-               float cy = (float) m_pcontext->m_pbuffer->m_pimage->height();
+               float cy = (float) m_papplication->m_pbuffer->m_pimage->height();
 
-               m_pcontext->m_pprogram->m_pshader->setVec2("resolution", cx, cy);
-               m_pcontext->m_pprogram->m_pshader->setVec2("iResolution", cx, cy);
+               m_papplication->m_pprogram->m_pshader->setVec2("resolution", cx, cy);
+               m_papplication->m_pprogram->m_pshader->setVec2("iResolution", cx, cy);
 
             }
 
@@ -304,16 +304,16 @@ namespace simple_shader
 
                float time = (float) dTime;
 
-               m_pcontext->m_pprogram->m_pshader->setFloat("time", time);
-               m_pcontext->m_pprogram->m_pshader->setFloat("iTime", time);
+               m_papplication->m_pprogram->m_pshader->setFloat("time", time);
+               m_papplication->m_pprogram->m_pshader->setFloat("iTime", time);
 
             }
 
-            m_pcontext->render();
+            m_papplication->render();
 
-            m_pcontext->prepare_for_gpu_read();
+            m_papplication->prepare_for_gpu_read();
 
-            m_pcontext->m_pbuffer->gpu_read();
+            m_papplication->m_pbuffer->gpu_read();
             
          }
       
@@ -327,7 +327,7 @@ namespace simple_shader
          pgraphics->set(matrix);
 #endif
 
-         pgraphics->draw(m_rect, m_pcontext->m_pbuffer->m_pimage);
+         pgraphics->draw(m_rect, m_papplication->m_pbuffer->m_pimage);
 
 #if !defined(__APPLE__)
          pgraphics->set(matrixOriginal);

@@ -268,7 +268,7 @@ namespace app_simple_http_folder_upload
    //         mem.assign(strKey);
    //         memory memSha1;
 
-   //         auto psystem = system()->m_papexsystem;
+   //         auto psystem = system();
 
    //         auto pcrypto = crypto();
 

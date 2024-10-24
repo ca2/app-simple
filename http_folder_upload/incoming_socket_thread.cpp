@@ -102,9 +102,9 @@ namespace app_simple_http_folder_upload
 
    //   pthreadSsl->m_strIp = "127.0.0.1";
 
-   //   //auto pcontext = pparticle->m_pcontext;
+   //   //auto pcontext = pparticle->m_papplication;
 
-   //   //pthreadSsl->m_strCat = m_pcontext->defer_process_matter_path(dir()->matter("appinstaller.cat"));
+   //   //pthreadSsl->m_strCat = m_papplication->defer_process_matter_path(dir()->matter("appinstaller.cat"));
 
    //   //auto pfolder = pparticle->file()->resource_folder();
 

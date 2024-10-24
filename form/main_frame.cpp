@@ -33,7 +33,7 @@ namespace app_simple_form
 
 //#if REFERENCING_DEBUGGING
 //
-//      critical_section_lock synchronouslock(&::acme::get()->m_preferencingdebugging->m_criticalsection);
+//      critical_section_lock synchronouslock(&::system()->m_preferencingdebugging->m_criticalsection);
 //
 //#endif
 //

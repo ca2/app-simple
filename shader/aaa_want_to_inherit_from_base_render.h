@@ -15,7 +15,7 @@ namespace simple_shader
       bool                                m_bUpdateShader;
       string                              m_strProjection;
       string                              m_strFragment;
-      ::pointer<::gpu::context>           m_pcontext;
+      ::pointer<::gpu::context>           m_papplication;
       ::pointer<::gpu::program>           m_pprogram;
       rectangle                                m_rect;
       ::user::impact *                    m_pimpact;
