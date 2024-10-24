@@ -113,7 +113,7 @@ namespace app_simple_http
 
          property_set set;
 
-         application()->m_papexapplication->datastream()->set("url", strUrl);
+         application()->datastream()->set("url", strUrl);
 
          ::string str = http()->get(strUrl, set);
 

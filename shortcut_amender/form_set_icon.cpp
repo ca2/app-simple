@@ -3,13 +3,13 @@
 #include "form_set_icon.h"
 #include "application.h"
 #include "acme/constant/id.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
-#include "acme/filesystem/filesystem/acme_file.h"
-#include "acme/filesystem/filesystem/acme_path.h"
+#include "acme/filesystem/filesystem/directory_system.h"
+#include "acme/filesystem/filesystem/file_system.h"
+#include "acme/filesystem/filesystem/path_system.h"
 #include "acme/filesystem/filesystem/link.h"
 #include "acme/filesystem/filesystem/listing.h"
 #include "apex/database/_binary_stream.h"
-#include "acme/filesystem/filesystem/dir_context.h"
+#include "acme/filesystem/filesystem/directory_context.h"
 #include "acme/handler/topic.h"
 #include "apex/platform/node.h"
 #include "aura/message/user.h"
@@ -516,7 +516,7 @@ namespace app_simple_shortcut_amender
 
       listing.set_pattern_file_listing(pathFolder, { "*.lnk" });
 
-      dir()->enumerate(listing);
+      directory()->enumerate(listing);
 
       string_array straAction;
 
@@ -544,7 +544,7 @@ namespace app_simple_shortcut_amender
       for (auto & path : listing)
       {
 
-         auto plink = acmepath()->resolve_link(path);
+         auto plink = path_system()->resolve_link(path);
 
          ::file::path pathTarget = plink->m_pathTarget;
 
