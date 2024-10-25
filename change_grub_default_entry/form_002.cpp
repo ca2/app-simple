@@ -68,7 +68,7 @@ namespace app_simple_change_grub_default_entry
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(MESSAGE_CREATE, psender, this, &form_002::on_message_create);
+      MESSAGE_LINK(e_message_create, psender, this, &form_002::on_message_create);
 
    }
 
