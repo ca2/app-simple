@@ -128,7 +128,7 @@ namespace app_simple_os_drag_and_drop
 
       rectangle.offset_x(iSize/5 * m_iDragAndDrop);
 
-      auto papp = get_app()->m_pauraapplication;
+      auto papp = get_app();
 
       if(m_iDragAndDrop == 3)
       {

@@ -101,7 +101,7 @@ namespace app_simple_box
 
       }
 
-      auto psystem = system()->m_paurasystem;
+      auto psystem = system();
 
       auto pnode = psystem->draw2d();
 

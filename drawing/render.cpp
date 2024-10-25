@@ -263,7 +263,7 @@ namespace app_simple_drawing
 
       auto pbrush = __create < ::draw2d::brush >();
 
-      auto psystem = system()->m_paurasystem;
+      auto psystem = system();
 
       auto pdraw2d = psystem->draw2d();
 
