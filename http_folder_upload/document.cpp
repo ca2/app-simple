@@ -108,7 +108,7 @@ namespace app_simple_http_folder_upload
 
          ::string strCommand = pcommand->m_strCommand;
 
-         id_update_all_impacts(ID_UPDATE);
+         id_update_all_impacts(id_update);
 
 
          if (strCommand.case_insensitive_begins_eat("select first network adapter"))
@@ -239,14 +239,14 @@ namespace app_simple_http_folder_upload
 
          }
 
-         id_update_all_impacts(ID_UPDATE);
+         id_update_all_impacts(id_update);
 
          preempt(5_s);
 
       }
 
 
-      id_update_all_impacts(ID_UPDATE);
+      id_update_all_impacts(id_update);
 
 
    }
