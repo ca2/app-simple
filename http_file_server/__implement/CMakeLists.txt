@@ -3,7 +3,18 @@ project(_app_simple_http_file_server CXX)
 
 
 
-add_executable(${PROJECT_NAME} application_main.cpp)
+
+list(APPEND application_source application_main.cpp)
+
+
+if(MSVC)
+    list(APPEND application_source ../deployment.rc main.rc)
+endif()
+
+
+add_executable(${PROJECT_NAME} ${application_source})
+
+
 target_compile_definitions(${PROJECT_NAME} PRIVATE UNICODE)
 target_compile_definitions(${PROJECT_NAME} PRIVATE _UNICODE)
 

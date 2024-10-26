@@ -71,7 +71,18 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
 add_subdirectory(__implement)
 
 
-add_executable(${PROJECT_NAME} application_main.cpp)
+
+list(APPEND application_source application_main.cpp)
+
+
+if(MSVC)
+    list(APPEND application_source ../deployment.rc main.rc)
+endif()
+
+
+add_executable(${PROJECT_NAME} ${application_source})
+
+
 
 
 list(APPEND executable_references
