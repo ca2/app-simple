@@ -22,8 +22,8 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_notify_drawing::application();
+   app_simple_notify_drawing::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }

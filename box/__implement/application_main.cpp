@@ -22,9 +22,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_box::application();
+   app_simple_box::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

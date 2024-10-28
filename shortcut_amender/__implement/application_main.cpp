@@ -25,9 +25,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_shortcut_amender::application();
+   app_simple_shortcut_amender::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

@@ -24,9 +24,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_http_file_server::application();
+   app_simple_http_file_server::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

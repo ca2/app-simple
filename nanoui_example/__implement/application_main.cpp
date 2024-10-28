@@ -23,9 +23,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_nanoui_example::application();
+   app_simple_nanoui_example::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

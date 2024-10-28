@@ -10,9 +10,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_drawing::application();
+   app_simple_drawing::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

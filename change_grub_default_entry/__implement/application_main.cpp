@@ -24,9 +24,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_change_grub_default_entry::application();
+   app_simple_change_grub_default_entry::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 

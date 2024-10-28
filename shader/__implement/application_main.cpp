@@ -25,8 +25,8 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_shader::application();
+   app_simple_shader::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
