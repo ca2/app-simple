@@ -24,9 +24,9 @@
 void application_main()
 {
 
-   auto papplication = ___new app_simple_networking_application::application();
+   app_simple_networking_application::application application;
 
-   papplication->application_main();
+   application.application_main();
 
 }
 
