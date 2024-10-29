@@ -160,13 +160,13 @@ namespace app_simple_shortcut_amender
 
       
 
-      auto papp = get_app();
+      ::cast < ::database::client > pdatabaseclient = application();
 
       {
 
          ::string strLastFolder;
 
-         papp->datastream()->get("last_folder", strLastFolder);
+         pdatabaseclient->datastream()->get("last_folder", strLastFolder);
 
          m_peditFolder->set_text(strLastFolder, ::e_source_initialize);
 
@@ -176,7 +176,7 @@ namespace app_simple_shortcut_amender
 
          ::string strLastSource;
 
-         papp->datastream()->get("last_source", strLastSource);
+         pdatabaseclient->datastream()->get("last_source", strLastSource);
 
          m_peditSource->set_text(strLastSource, ::e_source_initialize);
 
@@ -186,7 +186,7 @@ namespace app_simple_shortcut_amender
 
          ::string strLastTarget;
 
-         papp->datastream()->get("last_target", strLastTarget);
+         pdatabaseclient->datastream()->get("last_target", strLastTarget);
 
          m_peditTarget->set_text(strLastTarget, ::e_source_initialize);
 
@@ -353,7 +353,7 @@ namespace app_simple_shortcut_amender
 
                m_peditFolder->get_text(strText);
 
-               auto papp = get_app();
+               ::cast < ::database::client > pdatabaseclient = application();
 
                if (strText == "This is a test. This is a test")
                {
@@ -362,7 +362,7 @@ namespace app_simple_shortcut_amender
 
                }
 
-               papp->datastream()->set("last_folder", strText);
+               pdatabaseclient->datastream()->set("last_folder", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 
@@ -374,7 +374,7 @@ namespace app_simple_shortcut_amender
 
                m_peditSource->get_text(strText);
 
-               auto papp = get_app();
+               ::cast < ::database::client > pdatabaseclient = application();
 
                if (strText == "This is a test. This is a test")
                {
@@ -383,7 +383,7 @@ namespace app_simple_shortcut_amender
 
                }
 
-               papp->datastream()->set("last_source", strText);
+               pdatabaseclient->datastream()->set("last_source", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 
@@ -395,7 +395,7 @@ namespace app_simple_shortcut_amender
 
                m_peditTarget->get_text(strText);
 
-               auto papp = get_app();
+               ::cast < ::database::client > pdatabaseclient = application();
 
                if (strText == "This is a test. This is a test")
                {
@@ -404,7 +404,7 @@ namespace app_simple_shortcut_amender
 
                }
 
-               papp->datastream()->set("last_target", strText);
+               pdatabaseclient->datastream()->set("last_target", strText);
 
                m_pbuttonSend->set_window_text("Thumbnail");
 
