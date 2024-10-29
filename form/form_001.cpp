@@ -179,11 +179,11 @@ namespace app_simple_form
 
       __check_refdbg
 
-      auto papp = get_app();
+      ::cast < ::database::client > pdatabaseclient = application();
 
       __check_refdbg
 
-      papp->datastream()->get("last_text", strInitialText);
+      pdatabaseclient->datastream()->get("last_text", strInitialText);
 
       __check_refdbg
 
@@ -333,7 +333,7 @@ namespace app_simple_form
 
                m_pedit->get_text(strText);
 
-               auto papp = get_app();
+               ::cast < ::database::client > pdatabaseclient = application();
 
                if (strText == "This is a test. This is a test")
                {
@@ -342,7 +342,7 @@ namespace app_simple_form
 
                }
 
-               papp->datastream()->set("last_text", strText);
+               pdatabaseclient->datastream()->set("last_text", strText);
 
             }
 

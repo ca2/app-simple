@@ -49,7 +49,7 @@ namespace app_simple_nanoui_example
    int64_t main_window::decrement_reference_count()
    {
 
-      return ::user::main_window::increment_reference_count();
+      return ::user::main_window::decrement_reference_count();
 
    }
 

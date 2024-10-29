@@ -121,11 +121,11 @@ namespace app_simple_change_grub_default_entry
 
       m_pedit->m_strEmtpyText = "Enter Grub Folder Here";
 
-      auto papp = get_app();
-
       string strFolderPath;
 
-      papp->datastream()->get("grub_folder_path", strFolderPath);
+      ::cast < ::database::client > pdatabaseclient = application();
+
+      pdatabaseclient->datastream()->get("grub_folder_path", strFolderPath);
 
       m_pedit->set_text(strFolderPath, ::e_source_initialize);
 
@@ -238,9 +238,9 @@ namespace app_simple_change_grub_default_entry
             if(ptopic->m_actioncontext.is_user_source())
             {
 
-               auto papp = get_app();
+               ::cast < ::database::client > pdatabaseclient = application();
 
-               papp->datastream()->set("grub_folder_path", strText);
+               pdatabaseclient->datastream()->set("grub_folder_path", strText);
 
             }
 

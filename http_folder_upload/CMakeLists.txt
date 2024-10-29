@@ -108,7 +108,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 
-target_compile_definitions(app_simple_http_folder_upload PRIVATE _APP_SIMPLE_DRAWING_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
 target_compile_definitions(app_simple_http_folder_upload PRIVATE UNICODE)
 target_compile_definitions(app_simple_http_folder_upload PRIVATE _UNICODE)
 
