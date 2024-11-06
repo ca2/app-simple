@@ -59,7 +59,7 @@ namespace app_simple_drawing
 #ifdef DEBUG
 
 
-   i64 main_frame::increment_reference_count()
+   huge_integer main_frame::increment_reference_count()
    {
 
       if(m_preferenceitema->m_iStep == 211)
@@ -75,7 +75,7 @@ namespace app_simple_drawing
 
 
 
-   i64 main_frame::decrement_reference_count()
+   huge_integer main_frame::decrement_reference_count()
    {
 
       return ::simple_main_frame::decrement_reference_count();

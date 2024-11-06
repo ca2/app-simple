@@ -24,7 +24,7 @@ namespace app_simple_drawing
 
       pgraphics->text_out(100, 50, "Circle Path (300, 300) - (800, 800) r = 250");
 
-      ::rectangle_f64 r(300, 300, 800, 800);
+      ::double_rectangle r(300, 300, 800, 800);
 
       double greekdeltax = m_rectangle.width() / 1000.0;
 
@@ -40,7 +40,7 @@ namespace app_simple_drawing
 
       ppath->begin_figure();
 
-      ::ellipse_f64 ellipse;
+      ::double_ellipse ellipse;
 
       ellipse.set(r);
 

@@ -254,7 +254,7 @@ public:
 //   virtual bool keyboard_character_event(unsigned int codepoint);
 //
 
-   virtual ::size_i32 preferred_size(::draw2d::graphics_pointer & pointer) const override;
+   virtual ::int_size preferred_size(::draw2d::graphics_pointer & pointer) const override;
 
    virtual void perform_layout::draw2d::graphics_pointer & pointer) override;
 

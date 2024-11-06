@@ -151,7 +151,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleStillMargin.top();
 
-      m_pstill->display_child(::rectangle_double_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
       y += sizeStill.cy();
 
@@ -163,7 +163,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.top();
 
-      m_pedit->display_child(::rectangle_double_dimension(iLeft, y, 600, sizeEdit.cy()));
+      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
 
 
       //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
@@ -180,11 +180,11 @@ namespace app_simple_change_grub_default_entry
 
       auto button_height = sizeButtonRestart.cy();
 
-      //m_pbuttonClear->display_child(::rectangle_double_dimension(iLeft, y, button_width, button_height));
+      //m_pbuttonClear->display_child(::double_rectangle_dimension(iLeft, y, button_width, button_height));
 
       y += sizeButtonMarginRestart.top();
 
-      m_pbuttonRestart->display_child(::rectangle_double_dimension(rectangleX.right() - iLeft - button_width, y, button_width, button_height));
+      m_pbuttonRestart->display_child(::double_rectangle_dimension(rectangleX.right() - iLeft - button_width, y, button_width, button_height));
 
       y += sizeButtonMarginRestart.bottom();
 
@@ -194,7 +194,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.bottom();
 
-      m_plistbox->display_child(::rectangle_double_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom() - iLeft - y));
+      m_plistbox->display_child(::double_rectangle_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom() - iLeft - y));
 
       m_plistbox->set_need_layout();
    }
@@ -211,7 +211,7 @@ namespace app_simple_change_grub_default_entry
 
             auto atomSavedEntry = m_plistbox->get_current_item_atom();
 
-            if (atomSavedEntry.has_char())
+            if (atomSavedEntry.has_character())
             {
 
                auto pcontext = m_papplication;
@@ -317,7 +317,7 @@ namespace app_simple_change_grub_default_entry
       
       straLines = pcontext->file()->lines(pathGrubCfg);
 
-      strsize iFind = 0;
+      character_count iFind = 0;
 
       m_plistbox->reset_content();
 
@@ -326,7 +326,7 @@ namespace app_simple_change_grub_default_entry
       while (::found(iFind = straLines.find_first_begins_eat(strLine, "menuentry", iFind)))
       {
 
-         if (strLine.has_char() && strLine[0] == ' ')
+         if (strLine.has_character() && strLine[0] == ' ')
          {
 
             auto range = strLine();
@@ -335,7 +335,7 @@ namespace app_simple_change_grub_default_entry
 
             string strValue;
 
-            while (strLine.has_char())
+            while (strLine.has_character())
             {
 
                string strItem = range.consume_command_line_argument();
@@ -364,7 +364,7 @@ namespace app_simple_change_grub_default_entry
 
             }
 
-            if (strEntryName.has_char() && strValue.has_char())
+            if (strEntryName.has_character() && strValue.has_character())
             {
 
                m_plistbox->add_item(strEntryName, strValue);

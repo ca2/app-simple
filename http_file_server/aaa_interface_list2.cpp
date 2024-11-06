@@ -239,7 +239,7 @@ namespace app_simple_http_file_server
 
          int y = 10 + iHeight;
 
-         ::rectangle_i32 r;
+         ::int_rectangle r;
 
          for (auto & pitem : *main_content().m_pitema)
          {
@@ -254,7 +254,7 @@ namespace app_simple_http_file_server
             
             ::string strName;
             
-            if(paddress->m_strName.has_char())
+            if(paddress->m_strName.has_character())
             {
                
                strName = paddress->m_strName + ": ";

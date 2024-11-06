@@ -26,7 +26,7 @@ namespace app_simple_form
    }
 
 
-   ::i64 main_frame::increment_reference_count()
+   huge_integer main_frame::increment_reference_count()
    {
 
       return ::simple_main_frame::increment_reference_count();
@@ -50,7 +50,7 @@ namespace app_simple_form
    }
 
 
-   ::i64 main_frame::decrement_reference_count()
+   huge_integer main_frame::decrement_reference_count()
    {
 
       return ::simple_main_frame::decrement_reference_count();

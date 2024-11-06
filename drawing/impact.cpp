@@ -222,7 +222,7 @@ namespace app_simple_drawing
       if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
       {
 
-         ::rectangle_i32 rectangle = this->rectangle();
+         ::int_rectangle rectangle = this->rectangle();
 
          for (::collection::index i = 0; i < 11; i++)
          {

@@ -149,7 +149,7 @@ namespace app_simple_application
 //
 //      }
 
-      ::rectangle_f64 rectangleClipBox;
+      ::double_rectangle rectangleClipBox;
 
       //pgraphics->reset_clip();
 
@@ -169,7 +169,7 @@ namespace app_simple_application
 
 #ifdef DEBUG_WORK
 
-      ::rectangle_i32 rectangleDryProWithLove_Work(5, 5, 1915, 1075);
+      ::int_rectangle rectangleDryProWithLove_Work(5, 5, 1915, 1075);
 
       pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
@@ -203,7 +203,7 @@ namespace app_simple_application
       
       double y = 0.;
       
-      ::point_i32 point;
+      ::int_point point;
 
       string strText;
 

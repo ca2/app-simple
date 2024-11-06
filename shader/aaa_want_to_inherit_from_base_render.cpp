@@ -250,7 +250,7 @@ namespace simple_shader
       
       ::gpu::context_lock lock(m_papplication);
 
-      if (m_strShaderPrefix.has_char())
+      if (m_strShaderPrefix.has_character())
       {
 
          defer_load_fragment(m_strShaderPrefix);
@@ -374,7 +374,7 @@ namespace simple_shader
 
       strFont = papp->get_hover_font();
 
-      if (strFont.has_char())
+      if (strFont.has_character())
       {
 
          return strFont;
@@ -408,7 +408,7 @@ namespace simple_shader
 
       string strSimple(m_strSimple);
 
-      if (strSimple.trimmed().has_char())
+      if (strSimple.trimmed().has_character())
       {
 
          return m_strSimple;

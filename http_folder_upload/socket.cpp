@@ -113,7 +113,7 @@ namespace app_simple_http_folder_upload
 
       Respond();
 
-//      if (strPrefix.has_char())
+//      if (strPrefix.has_character())
 //      {
 //
 //         //strPrefix.case_insensitive_ends_eat("/");
@@ -329,7 +329,7 @@ namespace app_simple_http_folder_upload
 //
 //            string strH1;
 //
-//            /*           if (m_pbootstrap->m_strInstallerName.has_char())
+//            /*           if (m_pbootstrap->m_strInstallerName.has_character())
 //                       {
 //
 //                          strH1 = "Installing " + m_pbootstrap->m_strInstallerName + " ...";

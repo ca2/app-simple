@@ -14,7 +14,7 @@ namespace app_simple_drawing
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32& r, ::angle_f64 angleStart, ::angle_f64 angleAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle& r, ::angle_double angleStart, ::angle_double angleAngle, bool bPath)
    {
 
       auto psystem = system();
@@ -57,11 +57,11 @@ namespace app_simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::size_i32 size;
+      ::int_size size;
 
       size = size1.maximum(size2);
 
-      ::rectangle_i32 rectangleBack(r);
+      ::int_rectangle rectangleBack(r);
 
       rectangleBack.deflate(2, 2);
 
@@ -152,9 +152,9 @@ namespace app_simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::array < ::angle_f64 > angleaStart;
+      ::array < ::angle_double > angleaStart;
 
-      ::array < ::angle_f64 > angleaAngle;
+      ::array < ::angle_double > angleaAngle;
 
       auto a = 0.0_degree;
       angleaStart.add(a);
@@ -205,7 +205,7 @@ namespace app_simple_drawing
       angleaStart.add(45.0_degree);
       angleaAngle.add(-100.0_degree);
 
-      ::rectangle_i32 rClient(m_rectangle);
+      ::int_rectangle rClient(m_rectangle);
 
       if (get_app()->m_checkSimple.is_checked())
       {
@@ -222,7 +222,7 @@ namespace app_simple_drawing
 
       int iColumnCount = 8;
 
-      rectangle_i32 r;
+      int_rectangle r;
 
       r.top() = 0;
 

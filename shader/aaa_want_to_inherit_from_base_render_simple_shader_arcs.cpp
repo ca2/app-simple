@@ -51,7 +51,7 @@ namespace simple_shader
 
       size = size1.maximum(size2);
 
-      ::rectangle_f64 rectangleBack(r);
+      ::double_rectangle rectangleBack(r);
 
       rectangleBack.deflate(2, 2);
 
@@ -194,7 +194,7 @@ namespace simple_shader
       daStart.add(45.0);
       daAngle.add(-100.0);
 
-      ::rectangle_f64 rClient(m_rect);
+      ::double_rectangle rClient(m_rect);
 
       if (__bool(papp->m_echeckSimple))
       {

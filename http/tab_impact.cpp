@@ -128,7 +128,7 @@ namespace app_simple_http
       }
 
 
-      switch(pimpactdata->m_atom.as_i64())
+      switch(pimpactdata->m_atom.as_huge_integer())
       {
       case MENU_IMPACT:
       {

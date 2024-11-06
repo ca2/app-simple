@@ -221,7 +221,7 @@ namespace app_simple_http_file_server
 
          y += iHeight;
 
-         ::rectangle_i32 r;
+         ::int_rectangle r;
 
          //int iMaxX1 = 0;
 //         auto paddressMask = system()->networking()->create_ip4_address("255.255.255.0");
@@ -245,7 +245,7 @@ namespace app_simple_http_file_server
 
                }
 
-               if (pcommand->m_strResult.has_char())
+               if (pcommand->m_strResult.has_character())
                {
 
                   strText += " - Result : " + pcommand->m_strResult;

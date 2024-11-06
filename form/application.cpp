@@ -159,7 +159,7 @@ namespace app_simple_form
 
       }
 
-      if (prequest->m_payloadFile.has_char())
+      if (prequest->m_payloadFile.has_character())
       {
 
          impact_system("impact")->request(prequest);
