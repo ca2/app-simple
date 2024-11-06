@@ -150,7 +150,7 @@ namespace app_simple_form
    void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->m_atom.as_i32())
+      switch(pimpactdata->m_atom.as_int())
       {
       case MENU_IMPACT:
       {
