@@ -259,7 +259,7 @@ namespace app_simple_http
                r.left() = iMaxX1 + 20;
                r.top() = y;
                r.bottom() = y + iHeight;
-               r.right() = r.left() + (::i32)(size.cx());
+               r.right() = r.left() + (int)(size.cx());
 
                if (r.right() > iMaxX1)
                {
