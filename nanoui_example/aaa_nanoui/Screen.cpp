@@ -114,7 +114,7 @@ Screen::Screen()
    : Widget(nullptr) /*, m_glfw_window(nullptr), m_nvg_context(nullptr),
    m_cursor(Cursor::Arrow), m_background(0.3f, 0.3f, 0.32f, 1.f),
    m_shutdown_glfw_on_destruct(false), m_fullscreen(false), m_depth_buffer(false),
-   m_stencil_buffer(false), m_float_buffer(false), m_redraw(false)*/ {
+   m_stencil_buffer(false), m_f_buffer(false), m_redraw(false)*/ {
   /* memset(m_cursors, 0, sizeof(GLFWcursor *) * (size_t)Cursor::CursorCount);
 #if defined(NANOUI_USE_OPENGL)
    GLint n_stencil_bits = 0, n_depth_bits = 0;
@@ -126,7 +126,7 @@ Screen::Screen()
    CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &float_mode));
    m_depth_buffer = n_depth_bits > 0;
    m_stencil_buffer = n_stencil_bits > 0;
-   m_float_buffer = (bool)float_mode;
+   m_f_buffer = (bool)float_mode;
 #endif*/
 }
 
@@ -136,7 +136,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
    : Widget(nullptr)/*,  m_glfw_window(nullptr), m_nvg_context(nullptr),
    m_cursor(Cursor::Arrow), m_background(0.3f, 0.3f, 0.32f, 1.f), m_caption(caption),
    m_shutdown_glfw_on_destruct(false), m_fullscreen(fullscreen), m_depth_buffer(depth_buffer),
-   m_stencil_buffer(stencil_buffer), m_float_buffer(float_buffer), m_redraw(false)*/ {
+   m_stencil_buffer(stencil_buffer), m_f_buffer(float_buffer), m_redraw(false)*/ {
    
    
    // memset(m_cursors, 0, sizeof(GLFWcursor *) * (int)Cursor::CursorCount);
@@ -173,7 +173,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //      depth_bits = 24;
 //      stencil_bits = 8;
 //   }
-//   if (m_float_buffer)
+//   if (m_f_buffer)
 //      color_bits = 16;
 //
 //   glfwWindowHint(GLFW_RED_BITS, color_bits);
@@ -184,9 +184,9 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   glfwWindowHint(GLFW_DEPTH_BITS, depth_bits);
 //
 //#if (defined(NANOUI_USE_OPENGL) || defined(NANOUI_USE_METAL)) && defined(GLFW_FLOATBUFFER)
-//   glfwWindowHint(GLFW_FLOATBUFFER, m_float_buffer ? GL_TRUE : GL_FALSE);
+//   glfwWindowHint(GLFW_FLOATBUFFER, m_f_buffer ? GL_TRUE : GL_FALSE);
 //#else
-//   m_float_buffer = false;
+//   m_f_buffer = false;
 //#endif
 //
 //   glfwWindowHint(GLFW_VISIBLE, GL_FALSE);
@@ -205,8 +205,8 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //            caption.c_str(), nullptr, nullptr);
 //      }
 //
-//      if (m_glfw_window == nullptr && m_float_buffer) {
-//         m_float_buffer = false;
+//      if (m_glfw_window == nullptr && m_f_buffer) {
+//         m_f_buffer = false;
 //#if defined(GLFW_FLOATBUFFER)
 //         glfwWindowHint(GLFW_FLOATBUFFER, GL_FALSE);
 //#endif
@@ -247,12 +247,12 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //#endif
 //
 //#if defined(NANOUI_USE_OPENGL)
-//   if (m_float_buffer) {
+//   if (m_f_buffer) {
 //      GLboolean float_mode;
 //      CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &float_mode));
 //      if (!float_mode) {
 //         fprintf(stderr, "Could not allocate floating point framebuffer.\n");
-//         m_float_buffer = false;
+//         m_f_buffer = false;
 //      }
 //   }
 //#endif
@@ -470,7 +470,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   m_nvg_context = nvgCreateGLES2(flags);
 //#elif defined(NANOUI_USE_METAL)
 //   void * nswin = glfwGetCocoaWindow(window);
-//   metal_window_init(nswin, m_float_buffer);
+//   metal_window_init(nswin, m_f_buffer);
 //   metal_window_set_size(nswin, m_fbsize);
 //   m_nvg_context = nvgCreateMTL(metal_layer(),
 //      metal_command_queue(),
@@ -979,14 +979,14 @@ Screen::~Screen() {
 //
 //Texture::PixelFormat Screen::pixel_format() const {
 //#if defined(NANOUI_USE_METAL)
-//   if (!m_float_buffer)
+//   if (!m_f_buffer)
 //      return Texture::PixelFormat::BGRA;
 //#endif
 //   return Texture::PixelFormat::RGBA;
 //}
 //
 //Texture::ComponentFormat Screen::component_format() const {
-//   if (m_float_buffer)
+//   if (m_f_buffer)
 //      return Texture::ComponentFormat::Float16;
 //   else
 //      return Texture::ComponentFormat::UInt8;

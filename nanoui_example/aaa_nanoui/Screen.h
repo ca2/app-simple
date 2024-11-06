@@ -205,7 +205,7 @@ public:
 //   bool has_stencil_buffer() const { return m_stencil_buffer; }
 //
 //   /// Does the framebuffer use a floating point representation
-//   bool has_float_buffer() const { return m_float_buffer; }
+//   bool has_float_buffer() const { return m_f_buffer; }
 //
 //#if defined(NANOUI_USE_METAL)
 //   /// Return the associated CAMetalLayer object
@@ -291,7 +291,7 @@ public:
 //   bool m_fullscreen;
 //   bool m_depth_buffer;
 //   bool m_stencil_buffer;
-//   bool m_float_buffer;
+//   bool m_f_buffer;
 //   bool m_redraw;
 //   std::function<void(Vector2i)> m_resize_callback;
 //#if defined(NANOUI_USE_METAL)
