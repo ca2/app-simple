@@ -144,7 +144,7 @@ namespace app_simple_http_folder_upload
                         {
 
 
-                           if (line.has_char())
+                           if (line.has_character())
                            {
 
                               ::string strAdapter(line);

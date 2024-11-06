@@ -127,7 +127,7 @@ namespace app_simple_http
 
       m_pimpact->m_pmainimpact = this;
 
-      if (strUrl.has_char())
+      if (strUrl.has_character())
       {
 
          m_pimpact->open_url(strUrl);

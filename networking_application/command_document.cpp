@@ -144,7 +144,7 @@ namespace app_simple_networking_application
                         {
 
 
-                           if (line.has_char())
+                           if (line.has_character())
                            {
 
                               ::string strAdapter(line);

@@ -17,7 +17,7 @@ namespace app_simple_os_drag_and_drop
    public:
 
 
-      rectangle_i32                          m_rectangle;
+      int_rectangle                          m_rectangle;
       ::user::impact *                       m_pimpact;
       string                                 m_strFont;
       int                                    m_iDragAndDrop;
@@ -41,7 +41,7 @@ namespace app_simple_os_drag_and_drop
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, ::angle_f32 angleStart, ::angle_f32 angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::angle_float angleStart, ::angle_float angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

@@ -114,7 +114,7 @@ namespace app_simple_os_drag_and_drop
 
       ppen->create_solid(4.0, argb(255, 50, 180, 255));
 
-      rectangle_i32 rectangle;
+      int_rectangle rectangle;
 
       int iSize = minimum(m_rectangle.width(), m_rectangle.height());
 
@@ -152,7 +152,7 @@ namespace app_simple_os_drag_and_drop
       if(m_iDragAndDrop >= 2)
       {
 
-         ::rectangle_i32 rectangleText(rectangle);
+         ::int_rectangle rectangleText(rectangle);
 
          rectangleText.inflate(100, 100);
 
@@ -215,9 +215,9 @@ namespace app_simple_os_drag_and_drop
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::array < angle_f32 > angleaStart;
+      ::array < angle_float > angleaStart;
 
-      ::array < angle_f32 > angleaAngle;
+      ::array < angle_float > angleaAngle;
 
       angleaStart.add(0.0_degree);
       angleaAngle.add(100.0_degree);
@@ -268,13 +268,13 @@ namespace app_simple_os_drag_and_drop
       angleaStart.add(45.0_degree);
       angleaAngle.add(-100.0_degree);
 
-      ::rectangle_i32 rClient(m_rectangle);
+      ::int_rectangle rClient(m_rectangle);
 
       pgraphics->fill_rectangle(rClient, argb(255, 192, 192, 185));
 
       int iColumnCount = 8;
 
-      rectangle_i32 r;
+      int_rectangle r;
 
       r.top() = 0;
 
@@ -317,7 +317,7 @@ namespace app_simple_os_drag_and_drop
    }
 
 
-   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, angle_f32 angleStart, angle_f32 angleAngle, bool bPath)
+   void simple_os_drag_and_drop::draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, angle_float angleStart, angle_float angleAngle, bool bPath)
    {
 
 

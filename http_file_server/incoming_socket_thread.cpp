@@ -41,7 +41,7 @@ namespace app_simple_http_file_server
 
       //   auto strCat = file()->safe_get_string("matter://certificate/localhost.ca2.software.cat");
 
-      //   if (strCat.has_char())
+      //   if (strCat.has_character())
       //   {
 
       //      m_strCat = "cat://" + strCat;

@@ -42,7 +42,7 @@ namespace app_simple_drawing
    public:
 
 
-      rectangle_i32                       m_rectangle;
+      int_rectangle                       m_rectangle;
       impact *                            m_pimpact;
       string                              m_strFont1;
       string                              m_strHoverFont;
@@ -78,7 +78,7 @@ namespace app_simple_drawing
 
       virtual void _001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle_i32 & r, ::angle_f64 angleStart, ::angle_f64 angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::angle_double angleStart, ::angle_double angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

@@ -168,7 +168,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      if (prequest->m_payloadFile.has_char())
+      if (prequest->m_payloadFile.has_character())
       {
 
          impact_system("main")->request(prequest);

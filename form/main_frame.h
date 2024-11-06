@@ -21,8 +21,8 @@ namespace app_simple_form
       ~main_frame() override;
 
       
-      ::i64 increment_reference_count() override;
-      ::i64 decrement_reference_count() override;
+      huge_integer increment_reference_count() override;
+      huge_integer decrement_reference_count() override;
 
 
 //      // void assert_ok() const override;
