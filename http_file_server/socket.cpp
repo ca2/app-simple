@@ -272,7 +272,7 @@ namespace app_simple_http_file_server
 //         {
 //            //         outheader("Cache-control") = "public";
 //            //         outheader("Pragma") = "public";
-//            //         i32 iPathCount;
+//            //         int iPathCount;
 //            //         outheader("Expires") = http()->gmdate(papp->datetime().strtotime(nullptr, "+1 day", 0, iPathCount));
 //            //#ifdef WINDOWS
 //            //         simple_file_server(::file::path("Z:\\") / m_request.m_strRequestUri);
@@ -317,7 +317,7 @@ namespace app_simple_http_file_server
 //            string strMessage = "yes_account_com";
 //            m.set_size(strMessage.length() + 2);
 //            m.data()[0] = 0x81;
-//            m.data()[1] = (::u8) (strMessage.length());
+//            m.data()[1] = (unsigned char) (strMessage.length());
 //            ::memory_copy(&m.data()[2], strMessage.c_str(), strMessage.length());
 //            write(m.data(), m.size());
 //            return;

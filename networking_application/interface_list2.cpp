@@ -266,7 +266,7 @@ namespace app_simple_networking_application
             r.left() = 25;
             r.top() = y;
             r.bottom() = y + iHeight;
-            r.right() = r.left() + (::i32) (size.cx());
+            r.right() = r.left() + (int) (size.cx());
 
             if (r.right() > iMaxX1)
             {
