@@ -151,7 +151,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleStillMargin.top();
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+      m_pstill->display_child(::rectangle_double_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
       y += sizeStill.cy();
 
@@ -163,7 +163,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.top();
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, 600, sizeEdit.cy()));
+      m_pedit->display_child(::rectangle_double_dimension(iLeft, y, 600, sizeEdit.cy()));
 
 
       //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
@@ -180,11 +180,11 @@ namespace app_simple_change_grub_default_entry
 
       auto button_height = sizeButtonRestart.cy();
 
-      //m_pbuttonClear->display_child(::rectangle_f64_dimension(iLeft, y, button_width, button_height));
+      //m_pbuttonClear->display_child(::rectangle_double_dimension(iLeft, y, button_width, button_height));
 
       y += sizeButtonMarginRestart.top();
 
-      m_pbuttonRestart->display_child(::rectangle_f64_dimension(rectangleX.right() - iLeft - button_width, y, button_width, button_height));
+      m_pbuttonRestart->display_child(::rectangle_double_dimension(rectangleX.right() - iLeft - button_width, y, button_width, button_height));
 
       y += sizeButtonMarginRestart.bottom();
 
@@ -194,7 +194,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.bottom();
 
-      m_plistbox->display_child(::rectangle_f64_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom() - iLeft - y));
+      m_plistbox->display_child(::rectangle_double_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom() - iLeft - y));
 
       m_plistbox->set_need_layout();
    }

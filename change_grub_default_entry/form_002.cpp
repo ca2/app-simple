@@ -137,25 +137,25 @@ namespace app_simple_change_grub_default_entry
 
       auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, 200, sizeStill.cy()));
+      m_pstill->display_child(::rectangle_double_dimension(iLeft, y, 200, sizeStill.cy()));
 
       y += sizeStill.cy() * 1.25;
 
       auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy()));
+      m_pedit->display_child(::rectangle_double_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy()));
 
       y += sizeEdit.cy() * 1.25;
 
       auto sizeCombo = m_pcombobox->get_adjusted_fitting_size(pgraphics);
 
-      m_pcombobox->display_child(::rectangle_f64_dimension(iLeft, y, 200., sizeCombo.cy()));
+      m_pcombobox->display_child(::rectangle_double_dimension(iLeft, y, 200., sizeCombo.cy()));
 
       y += sizeCombo.cy() * 1.25;
 
       auto sizeButton = m_pbutton->get_adjusted_fitting_size(pgraphics);
 
-      m_pbutton->display_child(::rectangle_f64_dimension(iLeft-30., y, 200., sizeButton.cy()));
+      m_pbutton->display_child(::rectangle_double_dimension(iLeft-30., y, 200., sizeButton.cy()));
 
    }
 

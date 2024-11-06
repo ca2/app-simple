@@ -247,7 +247,7 @@ namespace app_simple_form
       
       m_pstill->m_ealignText = e_align_left;
 
-      m_pstill->display_child(::rectangle_f64_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+      m_pstill->display_child(::rectangle_double_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
 
       y += sizeStill.cy();
 
@@ -263,7 +263,7 @@ namespace app_simple_form
       
       y += rectangleEditMargin.top();
 
-      m_pedit->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy()));
+      m_pedit->display_child(::rectangle_double_dimension(iLeft, y, cx, sizeEdit.cy()));
 
       y += sizeEdit.cy();
 
@@ -312,7 +312,7 @@ namespace app_simple_form
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::rectangle_f64_dimension(iLeft, y, cx, sizeEdit.cy() * 5));
+      m_pstillReceiver->display_child(::rectangle_double_dimension(iLeft, y, cx, sizeEdit.cy() * 5));
 
    }
 

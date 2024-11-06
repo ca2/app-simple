@@ -139,7 +139,7 @@ namespace app_simple_box
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //pgraphics->fill_rectangle(rectangle_f64_dimension(100, 100, 100, 100), color::magenta);
+      //pgraphics->fill_rectangle(rectangle_double_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 
@@ -152,7 +152,7 @@ namespace app_simple_box
 
       }
 
-      //pgraphics->fill_rectangle(rectangle_f64_dimension(100, 100, 100, 100), color::magenta);
+      //pgraphics->fill_rectangle(rectangle_double_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 

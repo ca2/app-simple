@@ -523,13 +523,13 @@ namespace app_simple_nanoui_example
                cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const ::color::color & c) {
                   b->set_background_color(c);
                   b->set_text_color(c.contrasting_color());
-                  int red = (int) c.u8_red();
+                  int red = (int) c.byte_red();
                   red_int_box->set_value(red, e_source_user);
-                  int green = (int)c.u8_green();
+                  int green = (int)c.byte_green();
                   green_int_box->set_value(green, e_source_user);
-                  int blue = (int)c.u8_blue();
+                  int blue = (int)c.byte_blue();
                   blue_int_box->set_value(blue, e_source_user);
-                  int alpha = (int)c.u8_opacity();
+                  int alpha = (int)c.byte_opacity();
                   alpha_int_box->set_value(alpha, e_source_user);
                   });
       
