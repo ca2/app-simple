@@ -113,7 +113,9 @@ namespace app_simple_http_file_server
 
          property_set set;
 
-         application()->datastream()->set("url", strUrl);
+         ::cast < ::database::client > pdatabaseclient = application();
+
+         pdatabaseclient->datastream()->set("url", strUrl);
 
          ::string str = http()->get(strUrl, set);
 
