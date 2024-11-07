@@ -112,7 +112,7 @@ namespace app_simple_form
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleX, argb(127, 245, 250, 255));
+      pgraphics->fill_rectangle(rectangleX, ::color::white);
 
    }
 
