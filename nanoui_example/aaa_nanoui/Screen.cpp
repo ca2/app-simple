@@ -271,7 +271,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //#endif
 //
 //#if defined(__APPLE__)
-//   /* Poll for events once before starting a potentially
+//   /* Poll for happenings once before starting a potentially
 //      lengthy loading process. This is needed to be
 //      classified as "interactive" by other software such
 //      as iTerm2 */
@@ -279,7 +279,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   glfwPollEvents();
 //#endif
 //
-//   /* Propagate GLFW events to the appropriate Screen instance */
+//   /* Propagate GLFW happenings to the appropriate Screen instance */
 //   glfwSetCursorPosCallback(m_glfw_window,
 //      [](GLFWwindow * w, double x, double y) {
 //         auto it = __nanoui_screens.find(w);
@@ -352,8 +352,8 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //      }
 //   );
 //
-//   /* React to framebuffer size events -- includes window
-//      size events and also catches things like dragging
+//   /* React to framebuffer size happenings -- includes window
+//      size happenings and also catches things like dragging
 //      a window from a Retina-capable screen to a normal
 //      screen on Mac OS X */
 //   glfwSetFramebufferSizeCallback(m_glfw_window,
@@ -768,7 +768,7 @@ Screen::~Screen() {
 //      m_redraw |= ret;
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //}
 //
@@ -828,7 +828,7 @@ Screen::~Screen() {
 //         action == GLFW_PRESS, m_modifiers);
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //}
 //
@@ -838,7 +838,7 @@ Screen::~Screen() {
 //      m_redraw |= keyboard_event(key, scancode, action, mods);
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //}
 //
@@ -848,7 +848,7 @@ Screen::~Screen() {
 //      m_redraw |= keyboard_character_event(codepoint);
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //}
 //
@@ -873,7 +873,7 @@ Screen::~Screen() {
 //      m_redraw |= scroll_event(m_mouse_pos, Vector2f(x, y));
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //}
 //
@@ -904,7 +904,7 @@ Screen::~Screen() {
 //      resize_event(m_size);
 //   }
 //   catch (const std::exception & e) {
-//      std::cerr << "Caught exception in event handler: " << e.what() << std::endl;
+//      std::cerr << "Caught exception in happening handler: " << e.what() << std::endl;
 //   }
 //   redraw();
 //}

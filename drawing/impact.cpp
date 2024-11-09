@@ -184,7 +184,7 @@ namespace app_simple_drawing
       if (m_prender)
       {
 
-         m_prender->finalize();
+         m_prender->destroy();
 
       }
       m_prender.release();

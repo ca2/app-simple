@@ -199,7 +199,7 @@ pmessagebox->sync(); }
 //
 //    // Game loop
 //    while (!glfwWindowShouldClose(window)) {
-//        // Check if any events have been activated (key pressed, mouse moved etc.) and call corresponding response functions
+//        // Check if any happenings have been activated (key pressed, mouse moved etc.) and call corresponding response functions
 //        glfwPollEvents();
 //
 //#if defined(NANOUI_USE_METAL)
