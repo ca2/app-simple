@@ -229,25 +229,25 @@ public:
 //   Widget * find_widget(const Vector2i & p);
 //   const Widget * find_widget(const Vector2i & p) const;
 //
-//   /// Handle a mouse button event (default implementation: propagate to children)
+//   /// Handle a mouse button happening (default implementation: propagate to children)
 //   virtual bool mouse_button_event(const Vector2i & p, int button, bool down, int modifiers);
 //
-//   /// Handle a mouse motion event (default implementation: propagate to children)
+//   /// Handle a mouse motion happening (default implementation: propagate to children)
 //   virtual bool mouse_motion_event(const Vector2i & p, const Vector2i & rel, int button, int modifiers);
 //
-//   /// Handle a mouse drag event (default implementation: do nothing)
+//   /// Handle a mouse drag happening (default implementation: do nothing)
 //   virtual bool mouse_drag_event(const Vector2i & p, const Vector2i & rel, int button, int modifiers);
 //
-//   /// Handle a mouse enter/leave event (default implementation: record this fact, but do nothing)
+//   /// Handle a mouse enter/leave happening (default implementation: record this fact, but do nothing)
 //   virtual bool mouse_enter_event(const Vector2i & p, bool enter);
 //
-//   /// Handle a mouse scroll event (default implementation: propagate to children)
+//   /// Handle a mouse scroll happening (default implementation: propagate to children)
 //   virtual bool scroll_event(const Vector2i & p, const Vector2f & rel);
 //
-//   /// Handle a focus change event (default implementation: record the focus status, but do nothing)
+//   /// Handle a focus change happening (default implementation: record the focus status, but do nothing)
 //   virtual bool focus_event(bool focused);
 //
-//   /// Handle a keyboard event (default implementation: do nothing)
+//   /// Handle a keyboard happening (default implementation: do nothing)
 //   virtual bool keyboard_event(int key, int scancode, int action, int modifiers);
 //
 //   /// Handle text input (UTF-32 format) (default implementation: do nothing)

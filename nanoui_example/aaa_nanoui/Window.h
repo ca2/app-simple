@@ -51,13 +51,13 @@ NAMESPACE_BEGIN(nanoui)
 
    //   /// Draw the window
    //   virtual void draw(NVGcontext * ctx) override;
-   //   /// Handle mouse enter/leave events
+   //   /// Handle mouse enter/leave happenings
    //   virtual bool mouse_enter_event(const Vector2i & p, bool enter) override;
-   //   /// Handle window drag events
+   //   /// Handle window drag happenings
    //   virtual bool mouse_drag_event(const Vector2i & p, const Vector2i & rel, int button, int modifiers) override;
-   //   /// Handle mouse events recursively and bring the current window to the top
+   //   /// Handle mouse happenings recursively and bring the current window to the top
    //   virtual bool mouse_button_event(const Vector2i & p, int button, bool down, int modifiers) override;
-   //   /// Accept scroll events and propagate them to the widget under the mouse cursor
+   //   /// Accept scroll happenings and propagate them to the widget under the mouse cursor
    //   virtual bool scroll_event(const Vector2i & p, const Vector2f & rel) override;
    //   /// Compute the preferred size of the widget
    //   virtual Vector2i preferred_size(NVGcontext * ctx) const override;

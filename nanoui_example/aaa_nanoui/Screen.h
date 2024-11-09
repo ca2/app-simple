@@ -113,7 +113,7 @@ public:
 //   /// Return the framebuffer size (potentially larger than size() on high-DPI screens)
 //   const Vector2i & framebuffer_size() const { return m_fbsize; }
 //
-//   /// Send an event that will cause the screen to be redrawn at the next event loop iteration
+//   /// Send an happening that will cause the screen to be redrawn at the next happening loop iteration
 //   void redraw();
 //
 //   /**
@@ -163,18 +163,18 @@ public:
 //   /// Return the ratio between pixel and device coordinates (e.g. >= 2 on Mac Retina displays)
 //   float pixel_ratio() const { return m_pixel_ratio; }
 //
-//   /// Handle a file drop event
+//   /// Handle a file drop happening
 //   virtual bool drop_event(const std::vector<std::string> & /* filenames */) {
 //      return false; /* To be overridden */
 //   }
 //
-//   /// Default keyboard event handler
+//   /// Default keyboard happening handler
 //   virtual bool keyboard_event(int key, int scancode, int action, int modifiers);
 //
-//   /// Text input event handler: codepoint is native endian UTF-32 format
+//   /// Text input happening handler: codepoint is native endian UTF-32 format
 //   virtual bool keyboard_character_event(unsigned int codepoint);
 //
-//   /// Window resize event handler
+//   /// Window resize happening handler
 //   virtual bool resize_event(const Vector2i & size);
 //
 //   /// Set the resize callback
@@ -248,7 +248,7 @@ public:
 //    * pointer to an existing \c GLFWwindow instance
 //    *
 //    * You will also be responsible in this case to deliver GLFW callbacks
-//    * to the appropriate callback event handlers below
+//    * to the appropriate callback happening handlers below
 //    */
    Screen();
 //
