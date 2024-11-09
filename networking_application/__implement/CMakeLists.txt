@@ -26,6 +26,8 @@ list(APPEND executable_references
    aura
    axis
    base
+   bred
+   core
    app_simple_networking_application)
 
 
