@@ -62,12 +62,12 @@ namespace app_simple_drawing
    huge_integer main_frame::increment_reference_count()
    {
 
-      if(m_preferenceitema->m_iStep == 211)
-      {
+      //~ if(m_preferenceitema->m_iStep == 211)
+      //~ {
 
-         ::output_debug_string("211");
+         //~ ::output_debug_string("211");
 
-      }
+      //~ }
 
       return ::simple_main_frame::increment_reference_count();
 
