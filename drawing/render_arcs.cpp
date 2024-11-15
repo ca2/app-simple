@@ -14,7 +14,7 @@ namespace app_simple_drawing
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle& r, ::angle_double angleStart, ::angle_double angleAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle& r, ::double_angle angleStart, ::double_angle angleAngle, bool bPath)
    {
 
       auto psystem = system();
@@ -152,9 +152,9 @@ namespace app_simple_drawing
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      ::array < ::angle_double > angleaStart;
+      ::array < ::double_angle > angleaStart;
 
-      ::array < ::angle_double > angleaAngle;
+      ::array < ::double_angle > angleaAngle;
 
       auto a = 0.0_degree;
       angleaStart.add(a);
