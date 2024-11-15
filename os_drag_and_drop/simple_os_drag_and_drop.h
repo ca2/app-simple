@@ -41,7 +41,7 @@ namespace app_simple_os_drag_and_drop
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::angle_float angleStart, ::angle_float angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::float_angle angleStart, ::float_angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

@@ -78,7 +78,7 @@ namespace app_simple_drawing
 
       virtual void _001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::angle_double angleStart, ::angle_double angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::double_angle angleStart, ::double_angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
