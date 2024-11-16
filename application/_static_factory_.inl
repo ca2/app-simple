@@ -2,6 +2,8 @@
 do(default_draw2d); \
 do(experience_core); \
 do(default_node); \
+do(default_operating_ambient); \
+do(default_windowing); \
 do(default_write_text); \
 do(folder_zip); \
 do(crypto_openssl); \
