@@ -45,7 +45,7 @@ namespace app_simple_os_drag_and_drop
 #ifdef _DEBUG
 
 
-   int64_t impact::increment_reference_count()
+   huge_integer impact::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -53,7 +53,7 @@ namespace app_simple_os_drag_and_drop
    }
 
 
-   int64_t impact::decrement_reference_count()
+   huge_integer impact::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

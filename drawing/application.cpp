@@ -178,7 +178,7 @@ namespace app_simple_drawing
 
    int xxx = 0;
 
-   int64_t application::increment_reference_count()
+   huge_integer application::increment_reference_count()
    {
       xxx++;
 
@@ -187,7 +187,7 @@ namespace app_simple_drawing
    }
 
 
-   int64_t application::decrement_reference_count()
+   huge_integer application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

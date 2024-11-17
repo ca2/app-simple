@@ -62,7 +62,7 @@ namespace app_simple_form
 #ifdef _DEBUG
 
 
-   int64_t form_001::increment_reference_count()
+   huge_integer form_001::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -70,7 +70,7 @@ namespace app_simple_form
    }
 
 
-   int64_t form_001::decrement_reference_count()
+   huge_integer form_001::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

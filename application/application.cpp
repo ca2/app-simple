@@ -139,7 +139,7 @@ namespace app_simple_application
 #ifdef _DEBUG
 
 
-   int64_t application::increment_reference_count()
+   huge_integer application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -147,7 +147,7 @@ namespace app_simple_application
    }
 
 
-   int64_t application::decrement_reference_count()
+   huge_integer application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

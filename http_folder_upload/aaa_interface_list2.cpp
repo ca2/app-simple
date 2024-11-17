@@ -44,7 +44,7 @@ namespace app_simple_http_folder_upload
 #ifdef _DEBUG
 
 
-   int64_t interface_list2::increment_reference_count()
+   huge_integer interface_list2::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -52,7 +52,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   int64_t interface_list2::decrement_reference_count()
+   huge_integer interface_list2::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();
