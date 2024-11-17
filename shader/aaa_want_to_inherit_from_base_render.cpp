@@ -66,7 +66,7 @@ namespace simple_shader
 #ifdef _DEBUG
 
 
-   int64_t render::increment_reference_count()
+   huge_integer render::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -74,7 +74,7 @@ namespace simple_shader
    }
 
 
-   int64_t render::decrement_reference_count()
+   huge_integer render::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

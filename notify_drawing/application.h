@@ -32,8 +32,8 @@ namespace app_simple_notify_drawing
       virtual void on_request(::request * prequest) override;
 
 #ifdef _DEBUG
-      virtual int64_t increment_reference_count() override;
-      virtual int64_t decrement_reference_count() override;
+      virtual huge_integer increment_reference_count() override;
+      virtual huge_integer decrement_reference_count() override;
 #endif
 
       virtual ::pointer<app_simple_drawing::impact> create_simple_drawing_impact(::user::impact* pimpactParent, ::user::impact_data* pimpactdata) override;

@@ -53,7 +53,7 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   int64_t form_set_icon::increment_reference_count()
+   huge_integer form_set_icon::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -61,7 +61,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   int64_t form_set_icon::decrement_reference_count()
+   huge_integer form_set_icon::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
