@@ -201,7 +201,7 @@ namespace simple_shader
       if (!m_pprogram)
       {
 
-         estatus = __construct(m_pprogram);
+         estatus = __øconstruct(m_pprogram);
 
       }
 
