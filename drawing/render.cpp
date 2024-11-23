@@ -261,7 +261,7 @@ namespace app_simple_drawing
 
       string strTitle;
 
-      auto pbrush = __create < ::draw2d::brush >();
+      auto pbrush = __øcreate < ::draw2d::brush >();
 
       auto psystem = system();
 

@@ -197,7 +197,7 @@ Window::Window(Widget * parent, const std::string & title)
 void Window::_nanoui_to_user(::user::interaction * puserinteraction)
 {
 
-   puserinteraction->__construct(m_pform);
+   puserinteraction->__øconstruct(m_pform);
 
    m_pform->create_control(puserinteraction, (iptr)(void*) this);
 
