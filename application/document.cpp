@@ -32,14 +32,37 @@ namespace app_simple_application
 
       //const char * pszPath = path.c_str();
       
-      file()->get_lines(m_straLine, path);
+      try
+      {
+
+         file()->get_lines(m_straLine, path);
+         
+      }
+      catch(...)
+      {
+       
+      }
+
 
       if (m_straLine.is_empty())
       {
-
-         file()->get_lines(m_straLine, "document://application/app-simple/application/application.txt");
+         
+         try
+         {
+            
+            file()->get_lines(m_straLine, "document://application/app-simple/application/application.txt");
+            
+         }
+         catch (...)
+         {
+         
+            
+         }
 
       }
+
+         
+
 
       return true;
       //return ::user::document::on_new_document();
