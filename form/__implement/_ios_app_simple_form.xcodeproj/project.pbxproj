@@ -50,6 +50,12 @@
 		9AA2F2A02847DCC400A747A1 /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7872846ED34005ACD11 /* libnode_ios.a */; };
 		9AA2F2A42847DCC600A747A1 /* libwindowing_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA2F2862847DCBC00A747A1 /* libwindowing_ios.a */; };
 		9AA2F2A62847DCC700A747A1 /* libios_write_text_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B7752846ED13005ACD11 /* libios_write_text_quartz2d.a */; };
+		9AC3F31B2CF904410061DCC0 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F31A2CF904410061DCC0 /* libios_acme_windowing_kit.a */; };
+		9AC3F31C2CF904410061DCC0 /* libios_acme_windowing_kit.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F31A2CF904410061DCC0 /* libios_acme_windowing_kit.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AC3F32B2CF9044B0061DCC0 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F32A2CF9044B0061DCC0 /* libinnate_ui_uikit.a */; };
+		9AC3F32C2CF9044B0061DCC0 /* libinnate_ui_uikit.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F32A2CF9044B0061DCC0 /* libinnate_ui_uikit.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AC3F32E2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F32D2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a */; };
+		9AC3F32F2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F32D2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AE86D1C2858924600F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C14285891B400F88364 /* Launch Screen.storyboard */; };
 		9AE86D1D2858924800F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C13285891B400F88364 /* Images.xcassets */; };
 		9AE86D1E2858924A00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C0A285891B400F88364 /* _matter.zip */; };
@@ -298,7 +304,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9AC3F32C2CF9044B0061DCC0 /* libinnate_ui_uikit.a in Embed Libraries */,
 				9A28CC142CF435FF00C6D8B1 /* liboperating_ambient_ios.a in Embed Libraries */,
+				9AC3F31C2CF904410061DCC0 /* libios_acme_windowing_kit.a in Embed Libraries */,
+				9AC3F32F2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +376,9 @@
 		9AA2F2842847DCBC00A747A1 /* libios_idn.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_idn.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA2F2852847DCBC00A747A1 /* libnode_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA2F2862847DCBC00A747A1 /* libwindowing_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC3F31A2CF904410061DCC0 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC3F32A2CF9044B0061DCC0 /* libinnate_ui_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC3F32D2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE86C0A285891B400F88364 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9AE86C12285891B400F88364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -385,6 +397,7 @@
 				9A28CC022CF434D600C6D8B1 /* libacme_windowing_uikit.a in Frameworks */,
 				9A0E4F042BF50014007C7253 /* SystemConfiguration.framework in Frameworks */,
 				9A50CDF82B6CB88700FDB101 /* libios_archive.a in Frameworks */,
+				9AC3F32B2CF9044B0061DCC0 /* libinnate_ui_uikit.a in Frameworks */,
 				9A50CC962B6CA9D200FDB101 /* UniformTypeIdentifiers.framework in Frameworks */,
 				9A50CC942B6CA9CA00FDB101 /* libios_unac.a in Frameworks */,
 				9A50CC902B6CA9B300FDB101 /* libios_aura_darwin.a in Frameworks */,
@@ -400,6 +413,7 @@
 				9AA2F2A62847DCC700A747A1 /* libios_write_text_quartz2d.a in Frameworks */,
 				9AA2F2902847DCBF00A747A1 /* libios_axis.a in Frameworks */,
 				9AA2F29D2847DCC300A747A1 /* libios_idn.a in Frameworks */,
+				9AC3F32E2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a in Frameworks */,
 				9AA2F2982847DCC100A747A1 /* libios_draw2d_quartz2d.a in Frameworks */,
 				9AA2F2742847DC5000A747A1 /* libios_apex.a in Frameworks */,
 				9AA2F2702847DC4F00A747A1 /* libacme_ios.a in Frameworks */,
@@ -413,6 +427,7 @@
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
 				9AA2F27A2847DC5100A747A1 /* libios_apex_posix.a in Frameworks */,
 				9AA2F2892847DCBD00A747A1 /* libios_aura.a in Frameworks */,
+				9AC3F31B2CF904410061DCC0 /* libios_acme_windowing_kit.a in Frameworks */,
 				9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */,
 				9AF7615D1F84388800FDE7CC /* CoreText.framework in Frameworks */,
 				9AF7615C1F84387F00FDE7CC /* CoreGraphics.framework in Frameworks */,
@@ -474,6 +489,9 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AC3F32D2CF904560061DCC0 /* libios_nano_graphics_quartz2d.a */,
+				9AC3F32A2CF9044B0061DCC0 /* libinnate_ui_uikit.a */,
+				9AC3F31A2CF904410061DCC0 /* libios_acme_windowing_kit.a */,
 				9A28CC122CF435FE00C6D8B1 /* liboperating_ambient_ios.a */,
 				9A28CC012CF434D600C6D8B1 /* libacme_windowing_uikit.a */,
 				9A0E4F032BF50014007C7253 /* SystemConfiguration.framework */,
