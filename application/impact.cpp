@@ -326,13 +326,20 @@ namespace app_simple_application
             pick_single_file(filtera, [ this ] (const ::file::path & path)
                              {
                
-               auto memory = file()->as_memory(path);
-               
-               auto size = memory.size();
-               
-               informationf("got file with %d bytes", size);
-               
-               file()->put_memory(m_papp->m_pathApplicationText, memory);
+               try {
+                  auto memory = file()->as_memory(path);
+                  
+                  auto size = memory.size();
+                  
+                  informationf("got file with %d bytes", size);
+                  
+                  file()->put_memory(m_papp->m_pathApplicationText, memory);
+                  
+
+               } catch (...) {
+                  auto pmessagebox = message_box("No file loaded...");
+                  pmessagebox->async();
+               }
                
             }, false);
 
