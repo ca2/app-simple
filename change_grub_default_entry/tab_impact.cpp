@@ -222,7 +222,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   //bool tab_impact::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent)
+   //bool tab_impact::BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * phappening)
    //{
 
    //   if(m_pdocMenu != nullptr
