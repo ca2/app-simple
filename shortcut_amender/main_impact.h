@@ -31,7 +31,7 @@ namespace app_simple_shortcut_amender
 
       void handle(::topic * ptopic, ::context * pcontext) override;
 
-//      virtual bool BaseOnControlEvent(::user::control_event * pevent);
+//      virtual bool BaseOnControlEvent(::user::control_event * phappening);
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

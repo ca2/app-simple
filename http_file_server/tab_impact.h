@@ -39,7 +39,7 @@ namespace app_simple_http_file_server
 
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
-      bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * pevent);
+      bool BaseOnControlEvent(::user::form_window * pimpact,::user::control_event * phappening);
       void on_change_cur_sel() override;
 
       void handle(::topic * ptopic, ::context * pcontext) override;
