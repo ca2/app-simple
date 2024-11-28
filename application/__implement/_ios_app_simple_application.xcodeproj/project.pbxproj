@@ -54,9 +54,8 @@
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
 		9AC3F28D2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */; };
-		9AC3F28E2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC3F2912CF800170061DCC0 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */; };
-		9AC3F2922CF800180061DCC0 /* libinnate_ui_uikit.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AC3F3012CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3002CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a */; };
 		9AE86B2928588FEE00F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86B2828588F3B00F88364 /* Launch Screen.storyboard */; };
 		9AE86B2B28588FF400F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86A2928588ED900F88364 /* _matter.zip */; };
 		9AE86B2C2858904D00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86A2F28588ED900F88364 /* Images.xcassets */; };
@@ -258,21 +257,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9AC3F28F2CF7FF4C0061DCC0 /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9AC3F28E2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a in Embed Libraries */,
-				9AC3F2922CF800180061DCC0 /* libinnate_ui_uikit.a in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		077A02081B4D5758001C85FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		078C352F1921758500354453 /* _ios_app_simple_application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _ios_app_simple_application.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -341,6 +325,7 @@
 		9AAC2144247571180013AB72 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC3F3002CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE86A2928588ED900F88364 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9AE86A2E28588ED900F88364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -355,6 +340,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC3F3012CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a in Frameworks */,
 				9A3109202CE8306F0067398D /* libnode_ios.a in Frameworks */,
 				9A31091E2CE830350067398D /* liboperating_ambient_ios.a in Frameworks */,
 				9A0E4F0F2BF50024007C7253 /* SystemConfiguration.framework in Frameworks */,
@@ -457,6 +443,7 @@
 		9A5752B516AAE1D2000CC4EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AC3F3002CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a */,
 				9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */,
 				9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */,
 				9A28CBDF2CF42F8700C6D8B1 /* libacme_windowing_uikit.a */,
@@ -629,7 +616,6 @@
 				078C352B1921758500354453 /* Sources */,
 				078C352C1921758500354453 /* Frameworks */,
 				078C352D1921758500354453 /* Resources */,
-				9AC3F28F2CF7FF4C0061DCC0 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -674,7 +660,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = ca2;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = "Camilo Sasuke Tsumanuma";
 				TargetAttributes = {
 					078C352E1921758500354453 = {
