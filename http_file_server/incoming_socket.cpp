@@ -221,7 +221,7 @@ namespace app_simple_http_file_server
 
    //         auto puserinteraction = papp->m_puserinteractionMain;
 
-   //         puserinteraction->display(e_display_normal, e_activation_set_foreground);
+   //         puserinteraction->display(e_display_normal, ::user::e_activation_set_foreground);
 
    //         puserinteraction->order(e_zorder_top);
 
