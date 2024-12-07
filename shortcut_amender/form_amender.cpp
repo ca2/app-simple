@@ -595,10 +595,10 @@ namespace app_simple_shortcut_amender
 
             straAction.add(
                (const char *)(elinkWritten & ::file::e_link_target ? u8"" : u8"\u2717!! ")
-               + path + ": "
-               + plink->m_pathTarget.windows_path() +
+               + node()->display_file_path(path) + ": "
+               + node()->display_file_path(plink->m_pathTarget) +
                + " <== "
-               + pathTarget.windows_path());
+               + node()->display_file_path(pathTarget));
 
          }
 
@@ -607,10 +607,10 @@ namespace app_simple_shortcut_amender
 
             straAction.add(
                (const char *)(elinkWritten & ::file::e_link_folder ? u8"" : u8"\u2717!! ")
-               + path + ": "
-               + plink->m_pathFolder.windows_path()
+               + node()->display_file_path(path) + ": "
+               + node()->display_file_path(plink->m_pathFolder)
                + " <== "
-               + pathFolder.windows_path());
+               + node()->display_file_path(pathFolder));
 
          }
 
@@ -619,10 +619,10 @@ namespace app_simple_shortcut_amender
 
             straAction.add(
                (const char *) (elinkWritten & ::file::e_link_icon ? u8"" : u8"\u2717!! ")
-               + path + ": "
-               + plink->m_pathIcon.windows_path()
+               + node()->display_file_path(path) + ": "
+               + node()->display_file_path(plink->m_pathIcon)
                + " <== "
-               + pathIcon.windows_path());
+               + node()->display_file_path(pathIcon));
 
          }
 
