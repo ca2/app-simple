@@ -564,6 +564,8 @@ namespace app_simple_shortcut_amender
 
          }
 
+         ::file::e_link elinkWithError = plink->check_link();
+
          ::file::e_link elinkWritten = ::file::e_link_none;
 
          if (!bThumbnail)
@@ -600,6 +602,14 @@ namespace app_simple_shortcut_amender
                + " <== "
                + node()->display_file_path(pathTarget));
 
+            if (elinkWithError & ::file::e_link_target)
+            {
+
+               straAction.add(
+                  node()->display_file_path(plink->m_pathTarget) + ::string("\u2717!!"));
+
+            }
+
          }
 
          if (elinkChanged & ::file::e_link_folder)
@@ -612,6 +622,14 @@ namespace app_simple_shortcut_amender
                + " <== "
                + node()->display_file_path(pathFolder));
 
+            if (elinkWithError & ::file::e_link_folder)
+            {
+
+               straAction.add(
+                  node()->display_file_path(plink->m_pathFolder) + ::string("\u2717!!"));
+
+            }
+
          }
 
          if (elinkChanged & ::file::e_link_icon)
@@ -623,6 +641,14 @@ namespace app_simple_shortcut_amender
                + node()->display_file_path(plink->m_pathIcon)
                + " <== "
                + node()->display_file_path(pathIcon));
+
+            if (elinkWithError & ::file::e_link_icon)
+            {
+
+               straAction.add(
+                  node()->display_file_path(plink->m_pathIcon) + ::string("\u2717!!"));
+
+            }
 
          }
 
