@@ -11,7 +11,7 @@ namespace app_simple_change_grub_default_entry
 
       //m_bDefaultCreateToolbar = false;
 
-      m_bDefaultNotifyIcon = true;
+      enable_default_notification_icon();
 
    }
 
