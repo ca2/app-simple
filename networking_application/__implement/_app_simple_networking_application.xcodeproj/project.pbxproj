@@ -57,6 +57,10 @@
 		9ABDE85E2C76D92F00619F93 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABDE85C2C76D92F00619F93 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9ABDE8602C76D94100619F93 /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABDE85F2C76D94100619F93 /* libcore.dylib */; };
 		9ABDE8612C76D94200619F93 /* libcore.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABDE85F2C76D94100619F93 /* libcore.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3E72D1CD7B300070257 /* libacme_windowing_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3E42D1CD7B300070257 /* libacme_windowing_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3E92D1CD7B300070257 /* libacme_windowing_kit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3E52D1CD7B300070257 /* libacme_windowing_kit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3EC2D1CD7BE00070257 /* libinnate_ui_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3EA2D1CD7BD00070257 /* libinnate_ui_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3EF2D1CD7C700070257 /* libnano_graphics_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3ED2D1CD7C700070257 /* libnano_graphics_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEC3F742D1AB1C800F9E621 /* liboperating_ambient_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A0CB7912D1A6F6A001FD7FE /* liboperating_ambient_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEC3F772D1AB1D300F9E621 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEC3F752D1AB1D300F9E621 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -325,11 +329,13 @@
 			files = (
 				9A9E4A9E2751A3B20094A04C /* libacme_posix.dylib in Embed Libraries */,
 				9A9E4ABE2751A3B30094A04C /* libdraw2d_quartz2d.dylib in Embed Libraries */,
+				9AE7A3EC2D1CD7BE00070257 /* libinnate_ui_appkit.dylib in Embed Libraries */,
 				9A9E4A982751A3B20094A04C /* libacme.dylib in Embed Libraries */,
 				9A9A193A2AFC379700FA9BEB /* libdarwin.dylib in Embed Libraries */,
 				9A9E4AC22751A3B30094A04C /* libidn.dylib in Embed Libraries */,
 				9AB15C2529A87B0700DFDF90 /* libacme_darwin.dylib in Embed Libraries */,
 				9AEC3F742D1AB1C800F9E621 /* liboperating_ambient_macos.dylib in Embed Libraries */,
+				9AE7A3EF2D1CD7C700070257 /* libnano_graphics_quartz2d.dylib in Embed Libraries */,
 				9A9E4AB22751A3B30094A04C /* libaura_macos.dylib in Embed Libraries */,
 				9ABDE85E2C76D92F00619F93 /* libbred.dylib in Embed Libraries */,
 				9A9E4AAC2751A3B20094A04C /* libaqua.dylib in Embed Libraries */,
@@ -353,10 +359,12 @@
 				9A9E4ABC2751A3B30094A04C /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9A9E4AB02751A3B30094A04C /* libaura_apple.dylib in Embed Libraries */,
 				9A41D7BC28D05DDE0008DB81 /* libnetworking_bsd.dylib in Embed Libraries */,
+				9AE7A3E92D1CD7B300070257 /* libacme_windowing_kit.dylib in Embed Libraries */,
 				9AB15C2729A87B0700DFDF90 /* libapex_darwin.dylib in Embed Libraries */,
 				9A9E4AB62751A3B30094A04C /* libaxis.dylib in Embed Libraries */,
 				9A9E4AA42751A3B20094A04C /* libapex_macos.dylib in Embed Libraries */,
 				9AB15C2929A87B0700DFDF90 /* libaura_darwin.dylib in Embed Libraries */,
+				9AE7A3E72D1CD7B300070257 /* libacme_windowing_appkit.dylib in Embed Libraries */,
 				9A8C819027844A9E000C8587 /* libcrypto_openssl.dylib in Embed Libraries */,
 				9A8C819227844AA7000C8587 /* libfolder_zip.dylib in Embed Libraries */,
 				9A9E4AA02751A3B20094A04C /* libapex.dylib in Embed Libraries */,
@@ -419,6 +427,10 @@
 		9ADB6CD128D1475E00608B22 /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9ADB6CE228D1479200608B22 /* imaging_coreimage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = imaging_coreimage.xcodeproj; path = "../../../../operating_system/operating_system-apple/imaging_coreimage/imaging_coreimage.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		9AE7A3E42D1CD7B300070257 /* libacme_windowing_appkit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_windowing_appkit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3E52D1CD7B300070257 /* libacme_windowing_kit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_windowing_kit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3EA2D1CD7BD00070257 /* libinnate_ui_appkit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_appkit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3ED2D1CD7C700070257 /* libnano_graphics_quartz2d.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnano_graphics_quartz2d.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEC3F752D1AB1D300F9E621 /* libnode_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AED78C22751989E00397A57 /* app_simple_networking_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_networking_application.xcodeproj; path = ../app_simple_networking_application.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -602,6 +614,10 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE7A3ED2D1CD7C700070257 /* libnano_graphics_quartz2d.dylib */,
+				9AE7A3EA2D1CD7BD00070257 /* libinnate_ui_appkit.dylib */,
+				9AE7A3E42D1CD7B300070257 /* libacme_windowing_appkit.dylib */,
+				9AE7A3E52D1CD7B300070257 /* libacme_windowing_kit.dylib */,
 				9AEC3F752D1AB1D300F9E621 /* libnode_macos.dylib */,
 				9ABDE85F2C76D94100619F93 /* libcore.dylib */,
 				9ABDE85C2C76D92F00619F93 /* libbred.dylib */,
