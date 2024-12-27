@@ -219,7 +219,7 @@ namespace app_simple_http_file_server
 
    //         auto papp = get_app();
 
-   //         auto puserinteraction = papp->m_puserinteractionMain;
+   //         auto puserinteraction = papp->m_pacmeuserinteractionMain;
 
    //         puserinteraction->display(e_display_normal, ::user::e_activation_set_foreground);
 
