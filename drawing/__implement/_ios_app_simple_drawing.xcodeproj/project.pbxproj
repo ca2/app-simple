@@ -54,7 +54,6 @@
 		9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EC247566B50013AB72 /* libssl.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
-		9AB73F612CE8817E008F8B8E /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AB73F602CE8817E008F8B8E /* _static_factory_.inl */; };
 		9AB73F6D2CE8823F008F8B8E /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB73F6C2CE88225008F8B8E /* liboperating_ambient_ios.a */; };
 		9AB73F6F2CE88255008F8B8E /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB73F6E2CE88255008F8B8E /* libnode_ios.a */; };
 		9AC3F3052CF8F74E0061DCC0 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3042CF8F74E0061DCC0 /* libios_acme_windowing_kit.a */; };
@@ -63,6 +62,7 @@
 		9AC3F3162CF8FD160061DCC0 /* libinnate_ui_uikit.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F3142CF8FD150061DCC0 /* libinnate_ui_uikit.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC3F3182CF8FD3A0061DCC0 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3172CF8FD3A0061DCC0 /* libios_nano_graphics_quartz2d.a */; };
 		9AC3F3192CF8FD3A0061DCC0 /* libios_nano_graphics_quartz2d.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC3F3172CF8FD3A0061DCC0 /* libios_nano_graphics_quartz2d.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AD7E4EC2D1E50B700D91148 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7E4EB2D1E50B700D91148 /* _static_factory_.inl */; };
 		9AE86B382858908E00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A734828284F3858003986C7 /* Images.xcassets */; };
 		9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */; };
 		9AE86B3A2858909800F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A734820284F3858003986C7 /* _matter.zip */; };
@@ -376,13 +376,13 @@
 		9AAC20EB247566B50013AB72 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../../operating_system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libcrypto.a"; sourceTree = "<group>"; };
 		9AAC20EC247566B50013AB72 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../../operating_system/storage-ios/iPhoneSimulator13.4-x86_64.sdk/lib/libssl.a"; sourceTree = "<group>"; };
 		9AAC2144247571180013AB72 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
-		9AB73F602CE8817E008F8B8E /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; name = _static_factory_.inl; path = ../_static_factory_.inl; sourceTree = SOURCE_ROOT; };
 		9AB73F622CE881FA008F8B8E /* operating_ambient_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_ios.xcodeproj; path = "../../../../operating_system/operating_system-ios/operating_ambient_ios/operating_ambient_ios.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9AB73F652CE88224008F8B8E /* operating_ambient_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_ios.xcodeproj; path = "/Users/camilo/workspace/main/operating_system/operating_system-ios/operating_ambient_ios/operating_ambient_ios.xcodeproj"; sourceTree = "<absolute>"; };
 		9AB73F6E2CE88255008F8B8E /* libnode_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F3042CF8F74E0061DCC0 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F3142CF8FD150061DCC0 /* libinnate_ui_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F3172CF8FD3A0061DCC0 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD7E4EB2D1E50B700D91148 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = _static_factory_.inl; sourceTree = "<group>"; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE86B2D2858907D00F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -571,12 +571,12 @@
 		9A734779284F3857003986C7 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
-				9AB73F602CE8817E008F8B8E /* _static_factory_.inl */,
 				9A50C7732B6C900B00FDB101 /* _____debug.xcconfig */,
 				9A50C7742B6C900B00FDB101 /* _____release.xcconfig */,
+				9A734820284F3858003986C7 /* _matter.zip */,
+				9AD7E4EB2D1E50B700D91148 /* _static_factory_.inl */,
 				9A50C7392B6C7A7000FDB101 /* application_main.cpp */,
 				9A734825284F3858003986C7 /* ios */,
-				9A734820284F3858003986C7 /* _matter.zip */,
 			);
 			name = __implement;
 			sourceTree = "<group>";
@@ -968,7 +968,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB73F612CE8817E008F8B8E /* _static_factory_.inl in Resources */,
+				9AD7E4EC2D1E50B700D91148 /* _static_factory_.inl in Resources */,
 				9A50C7752B6C900B00FDB101 /* _____debug.xcconfig in Resources */,
 				9AE86B382858908E00F88364 /* Images.xcassets in Resources */,
 				9AE86B392858909200F88364 /* Launch Screen.storyboard in Resources */,
