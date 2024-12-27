@@ -24,7 +24,6 @@
 		9A50C75C2B6C814B00FDB101 /* libios_archive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C75B2B6C814B00FDB101 /* libios_archive.a */; };
 		9A50C75E2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C75D2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework */; };
 		9A50C76E2B6C86E600FDB101 /* libios_unac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C76D2B6C86E600FDB101 /* libios_unac.a */; };
-		9A50C7722B6C88EE00FDB101 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9A50C7712B6C88EE00FDB101 /* _static_factory_.inl */; };
 		9A93B8D4284711A8005ACD11 /* libios_acme.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C2284711A8005ACD11 /* libios_acme.a */; };
 		9A93B8D6284711A9005ACD11 /* libios_acme_apple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C3284711A8005ACD11 /* libios_acme_apple.a */; };
 		9A93B8D8284711A9005ACD11 /* libacme_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A93B8C4284711A8005ACD11 /* libacme_ios.a */; };
@@ -56,6 +55,7 @@
 		9AC3F28D2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */; };
 		9AC3F2912CF800170061DCC0 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */; };
 		9AC3F3012CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3002CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a */; };
+		9AD7E4DE2D1E4FF900D91148 /* _static_factory_.inl in Resources */ = {isa = PBXBuildFile; fileRef = 9AD7E4DD2D1E4FF900D91148 /* _static_factory_.inl */; };
 		9AE86B2928588FEE00F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86B2828588F3B00F88364 /* Launch Screen.storyboard */; };
 		9AE86B2B28588FF400F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86A2928588ED900F88364 /* _matter.zip */; };
 		9AE86B2C2858904D00F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86A2F28588ED900F88364 /* Images.xcassets */; };
@@ -286,7 +286,6 @@
 		9A50C75D2B6C81CD00FDB101 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 		9A50C75F2B6C823500FDB101 /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A50C76D2B6C86E600FDB101 /* libios_unac.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_unac.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A50C7712B6C88EE00FDB101 /* _static_factory_.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _static_factory_.inl; path = ../_static_factory_.inl; sourceTree = "<group>"; };
 		9A50CDFB2B6CB8AC00FDB101 /* libios_archive.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_archive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5752B916AAE1D2000CC4EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9A5752BA16AAE1D2000CC4EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -326,6 +325,7 @@
 		9AC3F28C2CF7FF4B0061DCC0 /* libios_nano_graphics_quartz2d.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_nano_graphics_quartz2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F2902CF800170061DCC0 /* libinnate_ui_uikit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_uikit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC3F3002CF8BB0D0061DCC0 /* libios_acme_windowing_kit.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_windowing_kit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD7E4DD2D1E4FF900D91148 /* _static_factory_.inl */ = {isa = PBXFileReference; lastKnownFileType = text; path = _static_factory_.inl; sourceTree = "<group>"; };
 		9AE24EC31904E95E001AEFFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9AE86A2928588ED900F88364 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9AE86A2E28588ED900F88364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -585,12 +585,12 @@
 		9AE8698428588ED800F88364 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
-				9A50C7712B6C88EE00FDB101 /* _static_factory_.inl */,
 				9A50C7482B6C7D4F00FDB101 /* _____debug.xcconfig */,
 				9A50C7492B6C7D4F00FDB101 /* _____release.xcconfig */,
+				9AE86A2928588ED900F88364 /* _matter.zip */,
+				9AD7E4DD2D1E4FF900D91148 /* _static_factory_.inl */,
 				9A50C7282B6C7A2100FDB101 /* application_main.cpp */,
 				9AE86A2C28588ED900F88364 /* ios */,
-				9AE86A2928588ED900F88364 /* _matter.zip */,
 			);
 			name = __implement;
 			sourceTree = "<group>";
@@ -872,9 +872,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A50C7722B6C88EE00FDB101 /* _static_factory_.inl in Resources */,
 				9AE86B2928588FEE00F88364 /* Launch Screen.storyboard in Resources */,
 				9AE86B2B28588FF400F88364 /* _matter.zip in Resources */,
+				9AD7E4DE2D1E4FF900D91148 /* _static_factory_.inl in Resources */,
 				9AE86B2C2858904D00F88364 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
