@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,12 @@
 		9AC01E2F2748D057006BEBCC /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75026786CAD00C4104F /* libaxis.dylib */; };
 		9AC01E302748D060006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75126786CAD00C4104F /* libbase.dylib */; };
 		9AC01E3E2748D129006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E3A2748D0E0006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3B72D1CD5E300070257 /* libacme_windowing_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3B42D1CD5E300070257 /* libacme_windowing_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3B92D1CD5E300070257 /* libacme_windowing_kit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3B52D1CD5E300070257 /* libacme_windowing_kit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3BC2D1CD5EC00070257 /* libinnate_ui_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3BA2D1CD5EC00070257 /* libinnate_ui_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AE7A3BF2D1CD5FC00070257 /* libnano_graphics_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3BD2D1CD5FC00070257 /* libnano_graphics_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEC3F632D1AB09E00F9E621 /* liboperating_ambient_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A191D462CF3D880001239A6 /* liboperating_ambient_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEC3F662D1AB0AB00F9E621 /* libnode_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEC3F642D1AB0AB00F9E621 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AED730C2751960F00397A57 /* libexperience_core.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AED7309275195F800397A57 /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AF8CEDE271B9CB300BF80B7 /* libidn.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AF8CEDC271B9CB300BF80B7 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC71F26786B6A00C4104F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC71E26786B6A00C4104F /* libacme.dylib */; };
@@ -235,6 +241,13 @@
 			remoteGlobalIDString = 9AE12E782661E97E009F476A;
 			remoteInfo = database_sqlite3;
 		};
+		9AEC3D382D1A96A900F9E621 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A46319E2CF3846600426444 /* operating_ambient_macos.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1CC36B2CF2BE37004A00CB;
+			remoteInfo = operating_ambient_macos;
+		};
 		9AED7308275195F800397A57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A00E644266170F400517464 /* experience_core.xcodeproj */;
@@ -265,6 +278,7 @@
 				9AB15C0429A87A8A00DFDF90 /* libaura_darwin.dylib in Embed Libraries */,
 				9A842CB7271BDAC200C64F6F /* libwrite_text_quartz2d.dylib in Embed Libraries */,
 				9A9A190E2AFC36F000FA9BEB /* libdarwin.dylib in Embed Libraries */,
+				9AE7A3B72D1CD5E300070257 /* libacme_windowing_appkit.dylib in Embed Libraries */,
 				9AFFC74026786C6B00C4104F /* libapex_macos.dylib in Embed Libraries */,
 				9AFFC75326786CAE00C4104F /* libaxis.dylib in Embed Libraries */,
 				9AF8CEDE271B9CB300BF80B7 /* libidn.dylib in Embed Libraries */,
@@ -275,14 +289,19 @@
 				9AFFC74D26786C8700C4104F /* libaura_macos.dylib in Embed Libraries */,
 				9A842CB5271BDA9E00C64F6F /* libdraw2d_quartz2d.dylib in Embed Libraries */,
 				9AFFC74F26786C8700C4104F /* libaura_posix.dylib in Embed Libraries */,
+				9AE7A3BC2D1CD5EC00070257 /* libinnate_ui_appkit.dylib in Embed Libraries */,
 				9A23A7DE26CEEA6C00F98012 /* libdatabase_sqlite3.dylib in Embed Libraries */,
 				9A4E96B0278537D300B74C76 /* libfolder_zip.dylib in Embed Libraries */,
+				9AE7A3BF2D1CD5FC00070257 /* libnano_graphics_quartz2d.dylib in Embed Libraries */,
+				9AEC3F662D1AB0AB00F9E621 /* libnode_macos.dylib in Embed Libraries */,
 				9AFFC73A26786C6B00C4104F /* libacme_posix.dylib in Embed Libraries */,
 				9AFFC74226786C6B00C4104F /* libapex_posix.dylib in Embed Libraries */,
+				9AE7A3B92D1CD5E300070257 /* libacme_windowing_kit.dylib in Embed Libraries */,
 				9AFFC73C26786C6B00C4104F /* libapex.dylib in Embed Libraries */,
 				9AA802A32665789E00A6B449 /* libapp_simple_application.dylib in Embed Libraries */,
 				9AFFC74926786C6B00C4104F /* libaura_apple.dylib in Embed Libraries */,
 				9AFFC74526786C6B00C4104F /* libaqua.dylib in Embed Libraries */,
+				9AEC3F632D1AB09E00F9E621 /* liboperating_ambient_macos.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,16 +311,16 @@
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_simple_application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_application.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		070B8EFD1B6E53FA00D26137 /* _app_simple_application_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_application_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A00E12C26611D5900517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A00E19B26611D5E00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = "<group>"; };
-		9A00E1A126611D8700517464 /* app_simple_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_application.xcodeproj; path = ../app_simple_application.xcodeproj; sourceTree = "<group>"; };
-		9A00E644266170F400517464 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = "<group>"; };
+		9A00E12C26611D5900517464 /* draw2d_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = draw2d_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/draw2d_quartz2d/draw2d_quartz2d.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9A00E19B26611D5E00517464 /* write_text_quartz2d.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = write_text_quartz2d.xcodeproj; path = "../../../../operating_system/operating_system-apple/write_text_quartz2d/write_text_quartz2d.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9A00E1A126611D8700517464 /* app_simple_application.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_application.xcodeproj; path = ../app_simple_application.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A00E644266170F400517464 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A1D5EC92751AC11003D9B5F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22748A27CF40980042BAC2 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
 		9A273C8029CF176000CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A353E76266249C00060257B /* libapp_simple_application.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapp_simple_application.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A46319E2CF3846600426444 /* operating_ambient_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/operating_ambient_macos/operating_ambient_macos.xcodeproj"; sourceTree = "<group>"; };
-		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = "<group>"; };
+		9A46319E2CF3846600426444 /* operating_ambient_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/operating_ambient_macos/operating_ambient_macos.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9A4E969A2785379F00B74C76 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A71B8252A469E1000F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A842CB1271BDA6B00C64F6F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C816C2783F879000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
@@ -317,10 +336,15 @@
 		9AB3DE82278386270025099F /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libssl.dylib"; sourceTree = "<group>"; };
 		9AB3DE83278386270025099F /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
 		9AC01E312748D069006BEBCC /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AC01E332748D0E0006BEBCC /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = "<group>"; };
-		9AE12E992661EA0B009F476A /* regular_expression_pcre2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = regular_expression_pcre2.xcodeproj; path = ../../../app/regular_expression_pcre2/regular_expression_pcre2.xcodeproj; sourceTree = "<group>"; };
-		9AE12EC02661EA22009F476A /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = "<group>"; };
+		9AC01E332748D0E0006BEBCC /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9AE12E992661EA0B009F476A /* regular_expression_pcre2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = regular_expression_pcre2.xcodeproj; path = ../../../app/regular_expression_pcre2/regular_expression_pcre2.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9AE12EC02661EA22009F476A /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		9AE7A3B42D1CD5E300070257 /* libacme_windowing_appkit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_windowing_appkit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3B52D1CD5E300070257 /* libacme_windowing_kit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_windowing_kit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3BA2D1CD5EC00070257 /* libinnate_ui_appkit.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libinnate_ui_appkit.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE7A3BD2D1CD5FC00070257 /* libnano_graphics_quartz2d.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnano_graphics_quartz2d.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEC3F642D1AB0AB00F9E621 /* libnode_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF8CEDC271B9CB300BF80B7 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC71E26786B6A00C4104F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC72026786B6A00C4104F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -485,6 +509,11 @@
 		9ADF1D2922C16DBB00456537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE7A3BD2D1CD5FC00070257 /* libnano_graphics_quartz2d.dylib */,
+				9AE7A3BA2D1CD5EC00070257 /* libinnate_ui_appkit.dylib */,
+				9AE7A3B42D1CD5E300070257 /* libacme_windowing_appkit.dylib */,
+				9AE7A3B52D1CD5E300070257 /* libacme_windowing_kit.dylib */,
+				9AEC3F642D1AB0AB00F9E621 /* libnode_macos.dylib */,
 				9A90BC812B549EC2002BFC9E /* libarchive.dylib */,
 				9A9A190C2AFC36F000FA9BEB /* libdarwin.dylib */,
 				9A71B8252A469E1000F9FC3D /* libunac.dylib */,
@@ -570,6 +599,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AEC3D392D1A96A900F9E621 /* PBXTargetDependency */,
 				9A4E96AE278537B700B74C76 /* PBXTargetDependency */,
 				9A9E4A6D2751A07D0094A04C /* PBXTargetDependency */,
 				9AC01E3C2748D0F5006BEBCC /* PBXTargetDependency */,
@@ -609,7 +639,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
-				ORGANIZATIONNAME = "ca2 Desenvolvimento de Software Ltdal";
+				ORGANIZATIONNAME = "ca2 Software Development";
 				TargetAttributes = {
 					070B8EE91B6E53F900D26137 = {
 						CreatedOnToolsVersion = 6.4;
@@ -623,7 +653,7 @@
 				};
 			};
 			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "_app_simple_application" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -893,6 +923,11 @@
 			isa = PBXTargetDependency;
 			name = crypto_openssl;
 			targetProxy = 9AC01E3B2748D0F5006BEBCC /* PBXContainerItemProxy */;
+		};
+		9AEC3D392D1A96A900F9E621 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = operating_ambient_macos;
+			targetProxy = 9AEC3D382D1A96A900F9E621 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
