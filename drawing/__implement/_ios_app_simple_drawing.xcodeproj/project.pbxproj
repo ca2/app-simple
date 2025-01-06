@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9A0A8A9428737E6500D1904E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A8A8A28737E6500D1904E /* QuartzCore.framework */; };
 		9A28CBEE2CF4320500C6D8B1 /* libacme_windowing_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A28CBED2CF4320500C6D8B1 /* libacme_windowing_uikit.a */; };
-		9A28CBFE2CF433A900C6D8B1 /* libacme_windowing_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A28CBFD2CF433A900C6D8B1 /* libacme_windowing_uikit.a */; };
 		9A2F609B2474F2C400D392E8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C21F21C33500FDAF74 /* libz.tbd */; };
 		9A2F609C2474F2CC00D392E8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C61F21C35100FDAF74 /* libsqlite3.tbd */; };
 		9A2F609E2474F53900D392E8 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F609D2474F53900D392E8 /* CoreServices.framework */; };
@@ -54,6 +53,7 @@
 		9AAC20EE247566B50013AB72 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC20EC247566B50013AB72 /* libssl.a */; };
 		9AAC2145247571180013AB72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC2144247571180013AB72 /* libbz2.tbd */; };
 		9AAC214B247571E10013AB72 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */; };
+		9AB54BD32D2B66BC00AFBCB1 /* liboperating_ambient_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3C59B62CF19DA300179A04 /* liboperating_ambient_ios.a */; };
 		9AB73F6F2CE88255008F8B8E /* libnode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB73F6E2CE88255008F8B8E /* libnode_ios.a */; };
 		9AC3F3052CF8F74E0061DCC0 /* libios_acme_windowing_kit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3042CF8F74E0061DCC0 /* libios_acme_windowing_kit.a */; };
 		9AC3F3152CF8FD150061DCC0 /* libinnate_ui_uikit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3F3142CF8FD150061DCC0 /* libinnate_ui_uikit.a */; };
@@ -385,7 +385,6 @@
 				9A93B90C284716AA005ACD11 /* libacme_ios.a in Frameworks */,
 				9A93B94928471723005ACD11 /* libwindowing_ios.a in Frameworks */,
 				9A93B92A2847171C005ACD11 /* libios_apex_posix.a in Frameworks */,
-				9A28CBFE2CF433A900C6D8B1 /* libacme_windowing_uikit.a in Frameworks */,
 				9A93B92D2847171D005ACD11 /* libios_aqua.a in Frameworks */,
 				9A93B94B28471724005ACD11 /* libios_write_text_quartz2d.a in Frameworks */,
 				9A93B94628471722005ACD11 /* libios_imaging_coreimage.a in Frameworks */,
@@ -408,6 +407,7 @@
 				9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */,
 				9AF761561F84385800FDE7CC /* UIKit.framework in Frameworks */,
 				9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */,
+				9AB54BD32D2B66BC00AFBCB1 /* liboperating_ambient_ios.a in Frameworks */,
 				9A93B9352847171E005ACD11 /* libios_aura_posix.a in Frameworks */,
 				9AF7615D1F84388800FDE7CC /* CoreText.framework in Frameworks */,
 				9A93B9382847171F005ACD11 /* libios_base.a in Frameworks */,
@@ -1028,8 +1028,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Drawing!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;
@@ -1047,8 +1051,12 @@
 				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Simple Drawing!!";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2015-2023 ca2 Desenvolvimento de Software Ltda. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = UIApplication;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 0.1;
 				PLATFORM_MODIFIER = ios;

@@ -5,6 +5,7 @@ do(default_acme_windowing); \
 do(default_nano_graphics); \
 do(default_innate_ui); \
 do(default_windowing); \
+do(default_node); \
 do(folder_zip); \
 do(crypto_openssl); \
 do(experience_tranquillum); \
