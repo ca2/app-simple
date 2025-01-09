@@ -297,7 +297,7 @@ namespace app_simple_networking_application
    }
 
 
-   bool command_list2::on_click(::item * pitem)
+   bool command_list2::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       if (pitem->m_item.m_eelement == e_element_item)
