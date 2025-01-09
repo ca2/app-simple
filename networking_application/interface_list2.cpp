@@ -303,7 +303,7 @@ namespace app_simple_networking_application
    }
 
 
-   bool interface_list2::on_click(::item * pitem)
+   bool interface_list2::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       get_document()->network_interface_discovery(pitem->m_item.m_iItem);

@@ -215,7 +215,7 @@ namespace app_simple_http_file_server
    }
 
 
-   bool impact::on_click(::item * pitem)
+   bool impact::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       if (pitem->m_item.m_eelement == e_element_item)

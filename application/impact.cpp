@@ -308,7 +308,7 @@ namespace app_simple_application
    }
 
 
-   bool impact::on_click(::item * pitem)
+   bool impact::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       if (::is_set(pitem))
@@ -349,7 +349,7 @@ namespace app_simple_application
 
       }
 
-      return ::user::impact::on_click(pitem);
+      return ::user::impact::on_click(pitem, pmouse);
 
    }
 

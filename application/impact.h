@@ -41,13 +41,13 @@ namespace app_simple_application
 
       document * get_document();
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
       
       
-      bool on_click(::item * pitem) override;
+      bool on_click(::item * pitem, ::user::mouse * pmouse) override;
       
 
    };
