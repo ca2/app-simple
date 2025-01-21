@@ -22,6 +22,15 @@ list(APPEND library_source
    )
 
 
+list(APPEND library_references
+   acme
+   apex
+   aqua
+   aura
+   axis
+   base)
+
+
 add_library(${PROJECT_NAME} SHARED ${library_source})
 add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
@@ -45,7 +54,7 @@ elseif(${LINUX} OR ${__BSD__})
 
     target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
     #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
-    target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${global_library_references})
     target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 
