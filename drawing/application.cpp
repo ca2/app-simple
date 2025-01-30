@@ -134,7 +134,9 @@ namespace app_simple_drawing
 
       m_bMultiverseChat = !is_true("no_hello_edit");
 
-      if (impact_system("main")->get_document_count() == 0)
+      auto pimpactsystem = impact_system("main");
+
+      if (pimpactsystem->get_document_count() == 0)
       {
 
          if(prequest->m_egraphicsoutputpurpose & ::graphics::e_output_purpose_screen)
@@ -150,7 +152,7 @@ namespace app_simple_drawing
 
          }
 
-         impact_system("main")->request(prequest);
+         pimpactsystem->request(prequest);
 
       }
 
