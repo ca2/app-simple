@@ -116,7 +116,7 @@ namespace app_simple_http
 
       }
 
-      auto str = pimpactdata->m_atom.as_string();
+      auto str = pimpactdata->id().as_string();
 
       if (str.case_insensitive_ends(".simple_http"))
       {
@@ -128,7 +128,7 @@ namespace app_simple_http
       }
 
 
-      switch(pimpactdata->m_atom.as_huge_integer())
+      switch(pimpactdata->id().as_huge_integer())
       {
       case MENU_IMPACT:
       {

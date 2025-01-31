@@ -135,7 +135,7 @@ namespace app_simple_drawing
 
       auto pimpactsystem = pdocument->m_pimpactsystem;
 
-      string strId = pimpactsystem->m_atom;
+      string strId = pimpactsystem->id();
 
       string strText;
 
@@ -194,8 +194,8 @@ namespace app_simple_drawing
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == "simple_checkbox"
-         || ptopic->m_atom == "no_client_frame")
+      if (ptopic->id() == "simple_checkbox"
+         || ptopic->id() == "no_client_frame")
       {
 
          set_need_redraw();

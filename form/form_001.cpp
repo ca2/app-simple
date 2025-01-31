@@ -320,13 +320,13 @@ namespace app_simple_form
    void form_001::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_after_change_text)
+      if (ptopic->id() == ::id_after_change_text)
       {
 
          if (ptopic->m_actioncontext.is_user_source())
          {
 
-            if (ptopic->m_puserelement->user_interaction()->m_atom == "edit")
+            if (ptopic->m_puserelement->user_interaction()->id() == "edit")
             {
 
                string strText;
@@ -349,7 +349,7 @@ namespace app_simple_form
          }
 
       }
-//      else if (ptopic->m_atom == ::id_click)
+//      else if (ptopic->id() == ::id_click)
 //      {
 //
 //         if (ptopic->user_interaction_id() == "clear_button")

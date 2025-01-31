@@ -196,7 +196,7 @@ namespace app_simple_shader
 
       }
 
-      switch(pimpactdata->m_atom.as_huge_integer())
+      switch(pimpactdata->id().as_huge_integer())
       {
       case MENU_IMPACT:
       {
@@ -207,7 +207,7 @@ namespace app_simple_shader
       break;
       }
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if(strId.case_insensitive_begins_eat("shader://"))
       {
@@ -216,7 +216,7 @@ namespace app_simple_shader
 
          auto pimpact = get_app()->create_simple_shader_impact(this, pimpactdata);
 
-         pimpact->m_atom = pimpactdata->m_atom;
+         pimpact->id() = pimpactdata->id();
 
          pimpact->m_iImpact = (int) pimpactdata->m_iIndex;
 

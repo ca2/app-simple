@@ -108,14 +108,14 @@ namespace app_simple_drawing
 
       }
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if(strId.case_insensitive_begins_eat("drawing"))
       {
 
          auto pimpact = get_app()->create_simple_drawing_impact(this, pimpactdata);
 
-         pimpact->m_atom = pimpactdata->m_atom;
+         pimpact->id() = pimpactdata->id();
 
          pimpact->m_prender->initialize_simple_drawing(atoi(strId));
 

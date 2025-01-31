@@ -90,7 +90,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      string strId = get_document()->m_pimpactsystem->m_atom;
+      string strId = get_document()->m_pimpactsystem->id();
 
       string strText;
 

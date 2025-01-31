@@ -47,10 +47,10 @@ namespace app_simple_shortcut_amender
    void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_click)
+      if (ptopic->id() == ::id_click)
       {
 
-         if (ptopic->user_interaction()->m_atom == "simple_shortcut_toggle")
+         if (ptopic->user_interaction()->id() == "simple_shortcut_toggle")
          {
 
             m_pimpact->set_need_layout();
@@ -163,7 +163,7 @@ namespace app_simple_shortcut_amender
    //bool main_impact::handle(::topic * ptopic, ::context * pcontext)
    //{
 
-   //   if(ptopic->m_atom == ::id_click)
+   //   if(ptopic->id() == ::id_click)
    //   {
 
    //      if(ptopic->user_interaction_id() == "simple_shortcut_toggle")

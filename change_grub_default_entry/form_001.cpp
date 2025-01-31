@@ -203,13 +203,13 @@ namespace app_simple_change_grub_default_entry
    void form_001::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_after_change_cur_sel)
+      if (ptopic->id() == ::id_after_change_cur_sel)
       {
 
-         if (ptopic->m_puserelement->user_interaction()->m_atom == "list_box")
+         if (ptopic->m_puserelement->user_interaction()->id() == "list_box")
          {
 
-            auto atomSavedEntry = m_plistbox->get_current_item_atom();
+            auto atomSavedEntry = m_plistbox->get_current_iteid()();
 
             if (atomSavedEntry.has_character())
             {
@@ -225,10 +225,10 @@ namespace app_simple_change_grub_default_entry
          }
 
       }
-      else if (ptopic->m_atom == ::id_after_change_text)
+      else if (ptopic->id() == ::id_after_change_text)
       {
 
-         if (ptopic->m_puserelement->user_interaction()->m_atom == "edit")
+         if (ptopic->m_puserelement->user_interaction()->id() == "edit")
          {
 
             string strText;
@@ -249,16 +249,16 @@ namespace app_simple_change_grub_default_entry
          }
 
       }
-      else if (ptopic->m_atom == ::id_click)
+      else if (ptopic->id() == ::id_click)
       {
 
-         if (ptopic->m_puserelement->user_interaction()->m_atom == "clear_button")
+         if (ptopic->m_puserelement->user_interaction()->id() == "clear_button")
          {
 
             m_pedit->set_text("", ::e_source_user);
 
          }
-         else if (ptopic->m_puserelement->user_interaction()->m_atom == "restart_button")
+         else if (ptopic->m_puserelement->user_interaction()->id() == "restart_button")
          {
 
             auto pnode = node();

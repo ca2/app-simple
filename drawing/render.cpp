@@ -87,7 +87,7 @@ namespace app_simple_drawing
 
       string strDataId;
 
-      strDataId = m_pimpact->m_atom;
+      strDataId = m_pimpact->id();
 
       //m_hlsText.m_dH = 0.1;
       //m_hlsText.m_dL = 0.5;
@@ -181,7 +181,7 @@ namespace app_simple_drawing
 
       string strDataId;
 
-      strDataId = m_pimpact->m_atom;
+      strDataId = m_pimpact->id();
 
       get_app()->datastream()->set(strDataId + ".font_family", m_strFont1);
 
@@ -219,7 +219,7 @@ namespace app_simple_drawing
 
          string strDataId;
 
-         strDataId = m_pimpact->m_atom;
+         strDataId = m_pimpact->id();
 
          if (!get_app()->datastream()->get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())

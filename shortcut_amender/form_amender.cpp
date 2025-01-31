@@ -340,7 +340,7 @@ namespace app_simple_shortcut_amender
    void form_amender::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_after_change_text)
+      if (ptopic->id() == ::id_after_change_text)
       {
 
          if (ptopic->m_actioncontext.is_user_source())
@@ -413,7 +413,7 @@ namespace app_simple_shortcut_amender
          }
 
       }
-//      else if (ptopic->m_atom == ::id_click)
+//      else if (ptopic->id() == ::id_click)
 //      {
 //
 //         if (ptopic->user_interaction_id() == "clear_button")

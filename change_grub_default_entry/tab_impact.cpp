@@ -166,7 +166,7 @@ namespace app_simple_change_grub_default_entry
    void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->m_atom.as_int())
+      switch(pimpactdata->id().as_int())
       {
       case MENU_IMPACT:
       {
@@ -177,7 +177,7 @@ namespace app_simple_change_grub_default_entry
       break;
       }
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if(strId.case_insensitive_begins_eat("form"))
       {
@@ -210,7 +210,7 @@ namespace app_simple_change_grub_default_entry
 
          pform->m_iId = (int)iId;
 
-         pform->m_atom = pimpactdata->m_atom;
+         pform->id() = pimpactdata->id();
 
       }
 
@@ -230,12 +230,12 @@ namespace app_simple_change_grub_default_entry
    //         && ptopic->user_interaction() != nullptr)
    //   {
 
-   //      if(ptopic->m_atom == ::id_after_change_text)
+   //      if(ptopic->id() == ::id_after_change_text)
    //      {
 
 
    //      }
-   //      else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != NULL)
+   //      else if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != NULL)
    //      {
 
    //         string strCheck = ptopic->user_interaction_id();
@@ -269,7 +269,7 @@ namespace app_simple_change_grub_default_entry
       //////__update(::update)
       //{
 
-      //   if (ptopic->m_atom == id_control_event
+      //   if (ptopic->id() == id_control_event
       //         && ptopic->user_interaction() == m_pfontimpact
       //         && m_pimpactLast != NULL)
       //   {
@@ -294,12 +294,12 @@ namespace app_simple_change_grub_default_entry
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
-         if (ptopic->m_atom == ::id_after_change_text)
+         if (ptopic->id() == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != NULL)
+         else if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != NULL)
          {
 
             string strCheck = ptopic->user_interaction_id();

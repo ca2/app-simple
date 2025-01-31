@@ -37,7 +37,7 @@ namespace app_simple_http_folder_upload
    void impact_path::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_click)
+      if (ptopic->id() == ::id_click)
       {
 
       }
