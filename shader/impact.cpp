@@ -11,7 +11,7 @@
 #include "base/user/user/impact_system.h"
 #include "base/user/user/split_impact.h"
 #include "aura/graphics/image/image.h"
-#include "aura/graphics/image/save_options.h"
+#include "aura/graphics/image/encoding_options.h"
 #include "aura/graphics/image/context.h"
 #include "aura/message/user.h"
 #include "app/shader/render.h"
