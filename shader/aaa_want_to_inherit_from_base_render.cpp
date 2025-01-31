@@ -220,7 +220,7 @@ namespace simple_shader
 
       string strDataId;
 
-      strDataId = m_pimpact->m_atom;
+      strDataId = m_pimpact->id();
 
       m_papplication->m_pprogram = m_pprogram;
 
@@ -351,7 +351,7 @@ namespace simple_shader
 
       string strDataId;
 
-      strDataId = m_pimpact->m_atom;
+      strDataId = m_pimpact->id();
 
       if (!papp->datastream()->set(strDataId + ".font_family", m_strFont1))
       {
@@ -386,7 +386,7 @@ namespace simple_shader
 
          string strDataId;
 
-         strDataId = m_pimpact->m_atom;
+         strDataId = m_pimpact->id();
 
          if (!papp->datastream()->get(strDataId + ".font_family", m_strFont1)
             || m_strFont1.is_empty())

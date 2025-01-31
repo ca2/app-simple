@@ -117,7 +117,7 @@ namespace app_simple_networking_application
 
       }
 
-      auto str = pimpactdata->m_atom.as_string();
+      auto str = pimpactdata->id().as_string();
 
       if (str.case_insensitive_ends(".simple_networking_application"))
       {
@@ -129,7 +129,7 @@ namespace app_simple_networking_application
       }
 
 
-      switch(pimpactdata->m_atom.as_huge_integer())
+      switch(pimpactdata->id().as_huge_integer())
       {
       case MENU_IMPACT:
       {

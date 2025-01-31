@@ -164,7 +164,7 @@ namespace app_simple_os_drag_and_drop
 
       }
 
-      switch(pimpactdata->m_atom.as_int())
+      switch(pimpactdata->id().as_int())
       {
       case MENU_IMPACT:
       {
@@ -175,14 +175,14 @@ namespace app_simple_os_drag_and_drop
       break;
       }
 
-      string strId = pimpactdata->m_atom;
+      string strId = pimpactdata->id();
 
       if(strId.case_insensitive_begins_eat("drawing"))
       {
 
          auto pimpact = get_app()->create_simple_os_drag_and_drop_impact(this, pimpactdata);
 
-         pimpact->m_atom = pimpactdata->m_atom;
+         pimpact->id() = pimpactdata->id();
 
          pimpact->m_psimpleosdraganddrop->initialize_drag_and_drop(atoi(strId));
 
@@ -202,12 +202,12 @@ namespace app_simple_os_drag_and_drop
    //   if(m_pdocMenu != nullptr && dynamic_cast < ::user::impact * > (pimpact) == m_pdocMenu->get_impact(0) && ptopic->user_interaction() != nullptr)
    //   {
 
-   //      if(ptopic->m_atom == ::id_after_change_text)
+   //      if(ptopic->id() == ::id_after_change_text)
    //      {
 
 
    //      }
-   //      else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
+   //      else if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != nullptr)
    //      {
 
    //         string strCheck = ptopic->user_interaction_id();
@@ -242,7 +242,7 @@ namespace app_simple_os_drag_and_drop
       ////__update(::update)
       //{
 
-      //   if (ptopic->m_atom == id_control_event
+      //   if (ptopic->id() == id_control_event
       //         && ptopic->user_interaction() == m_pfontimpact
       //         && m_pviewTopic != nullptr)
       //   {
@@ -269,12 +269,12 @@ namespace app_simple_os_drag_and_drop
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
 
-         if (ptopic->m_atom == ::id_after_change_text)
+         if (ptopic->id() == ::id_after_change_text)
          {
 
 
          }
-         else if (ptopic->m_atom == ::id_set_check && ptopic->user_interaction() != nullptr)
+         else if (ptopic->id() == ::id_set_check && ptopic->user_interaction() != nullptr)
          {
 
             string strCheck = ptopic->user_interaction_id();

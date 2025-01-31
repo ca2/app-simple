@@ -90,7 +90,7 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      string strId = get_document()->m_pimpactsystem->m_atom;
+      string strId = get_document()->m_pimpactsystem->id();
 
       string strText;
 

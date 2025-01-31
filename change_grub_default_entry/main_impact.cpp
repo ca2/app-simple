@@ -143,7 +143,7 @@ namespace app_simple_change_grub_default_entry
    void main_impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if(ptopic->m_atom == ::id_click)
+      if(ptopic->id() == ::id_click)
       {
 
          if(ptopic->user_interaction_id() == "simple_change_grub_default_entry_toggle")

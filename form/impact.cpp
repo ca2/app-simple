@@ -94,7 +94,7 @@ namespace app_simple_form
 
       __check_refdbg
 
-      string strId = get_document()->m_pimpactsystem->m_atom;
+      string strId = get_document()->m_pimpactsystem->id();
 
       string strText;
 

@@ -146,7 +146,7 @@ namespace app_simple_shader
 
       //m_prender->m_pinteraction = this;
 
-      string strId = get_document()->m_pimpactsystem->m_atom;
+      string strId = get_document()->m_pimpactsystem->id();
 
       string strText;
 
@@ -227,7 +227,7 @@ namespace app_simple_shader
    void impact::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == "simple_checkbox" || ptopic->m_atom == "no_client_frame")
+      if (ptopic->id() == "simple_checkbox" || ptopic->id() == "no_client_frame")
       {
 
          set_need_redraw();

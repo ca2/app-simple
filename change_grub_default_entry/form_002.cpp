@@ -163,10 +163,10 @@ namespace app_simple_change_grub_default_entry
    void form_002::handle(::topic * ptopic, ::context * pcontext)
    {
 
-      if (ptopic->m_atom == ::id_click)
+      if (ptopic->id() == ::id_click)
       {
 
-         if (ptopic->m_puserelement->user_interaction()->m_atom == "send_button")
+         if (ptopic->m_puserelement->user_interaction()->id() == "send_button")
          {
 
             string strText1;
@@ -183,7 +183,7 @@ namespace app_simple_change_grub_default_entry
 
             string strData;
 
-            strData = m_pcombobox->get_current_item_atom();
+            strData = m_pcombobox->get_current_iteid()();
 
             //auto routine = [this, strText, strData]()
             //{
