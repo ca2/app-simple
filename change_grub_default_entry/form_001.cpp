@@ -209,7 +209,7 @@ namespace app_simple_change_grub_default_entry
          if (ptopic->m_puserelement->user_interaction()->id() == "list_box")
          {
 
-            auto atomSavedEntry = m_plistbox->get_current_iteid()();
+            auto atomSavedEntry = m_plistbox->get_current_item_atom();
 
             if (atomSavedEntry.has_character())
             {
