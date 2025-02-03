@@ -270,7 +270,7 @@ namespace app_simple_form
 
          string strData;
 
-      strData = m_pcombobox->get_current_item_atom();        //auto routine = [this, strText, strData]()
+         strData = m_pcombobox->get_current_item_id();        //auto routine = [this, strText, strData]()
          //{
          string strMessage = "<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>" + strText;
          output_error_message("<h1>send_button clicked</h1><h2>Text: " + strText + "</h2><h2>Data: " + strData + "</h2>", strText);
