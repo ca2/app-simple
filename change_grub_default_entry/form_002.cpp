@@ -183,7 +183,7 @@ namespace app_simple_change_grub_default_entry
 
             string strData;
 
-            strData = m_pcombobox->get_current_item_atom();
+            strData = m_pcombobox->get_current_item_id();
 
             //auto routine = [this, strText, strData]()
             //{
