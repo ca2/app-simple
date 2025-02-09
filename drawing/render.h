@@ -56,8 +56,8 @@ namespace app_simple_drawing
       virtual ~render();
 
 #ifdef _DEBUG
-      virtual huge_integer increment_reference_count() override;
-      virtual huge_integer decrement_reference_count() override;
+      virtual long long increment_reference_count() override;
+      virtual long long decrement_reference_count() override;
 #endif
 
       string get_font();

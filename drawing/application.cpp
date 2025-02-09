@@ -180,7 +180,7 @@ namespace app_simple_drawing
 
    int xxx = 0;
 
-   huge_integer application::increment_reference_count()
+   long long application::increment_reference_count()
    {
       xxx++;
 
@@ -189,7 +189,7 @@ namespace app_simple_drawing
    }
 
 
-   huge_integer application::decrement_reference_count()
+   long long application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

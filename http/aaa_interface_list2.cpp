@@ -44,7 +44,7 @@ namespace app_simple_http
 #ifdef _DEBUG
 
 
-   huge_integer interface_list2::increment_reference_count()
+   long long interface_list2::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -52,7 +52,7 @@ namespace app_simple_http
    }
 
 
-   huge_integer interface_list2::decrement_reference_count()
+   long long interface_list2::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();

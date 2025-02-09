@@ -49,7 +49,7 @@ namespace app_simple_form
 #ifdef _DEBUG
 
 
-   huge_integer impact::increment_reference_count()
+   long long impact::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -57,7 +57,7 @@ namespace app_simple_form
    }
 
 
-   huge_integer impact::decrement_reference_count()
+   long long impact::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

@@ -28,8 +28,8 @@ namespace app_simple_shader
 
 
 #ifdef _DEBUG
-      virtual huge_integer increment_reference_count() override;
-      virtual huge_integer decrement_reference_count() override;
+      virtual long long increment_reference_count() override;
+      virtual long long decrement_reference_count() override;
 #endif
 
 
