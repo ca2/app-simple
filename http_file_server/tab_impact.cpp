@@ -128,7 +128,7 @@ namespace app_simple_http_file_server
       }
 
 
-      switch(pimpactdata->id().as_huge_integer())
+      switch(pimpactdata->id().as_long_long())
       {
       case MENU_IMPACT:
       {

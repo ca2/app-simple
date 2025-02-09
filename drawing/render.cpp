@@ -37,7 +37,7 @@ namespace app_simple_drawing
 #ifdef _DEBUG
 
 
-   huge_integer render::increment_reference_count()
+   long long render::increment_reference_count()
    {
 
       return ::particle::increment_reference_count();
@@ -45,7 +45,7 @@ namespace app_simple_drawing
    }
 
 
-   huge_integer render::decrement_reference_count()
+   long long render::decrement_reference_count()
    {
 
       return ::particle::decrement_reference_count();

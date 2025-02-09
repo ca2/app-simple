@@ -47,7 +47,7 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
 
-   huge_integer impact::increment_reference_count()
+   long long impact::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -55,7 +55,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   huge_integer impact::decrement_reference_count()
+   long long impact::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

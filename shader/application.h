@@ -45,8 +45,8 @@ namespace app_simple_shader
       virtual void on_request(::request * prequest) override;
 
 //#ifdef _DEBUG
-//      virtual huge_integer increment_reference_count() override;
-//      virtual huge_integer decrement_reference_count() override;
+//      virtual long long increment_reference_count() override;
+//      virtual long long decrement_reference_count() override;
 //#endif
 
       virtual ::pointer<impact> create_simple_shader_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);

@@ -46,7 +46,7 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   huge_integer computer_list2::increment_reference_count()
+   long long computer_list2::increment_reference_count()
    {
 
       return  ::user::list2::increment_reference_count();
@@ -54,7 +54,7 @@ namespace app_simple_networking_application
    }
 
 
-   huge_integer computer_list2::decrement_reference_count()
+   long long computer_list2::decrement_reference_count()
    {
 
       return  ::user::list2::decrement_reference_count();

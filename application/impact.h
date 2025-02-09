@@ -27,8 +27,8 @@ namespace app_simple_application
 //      // void dump(dump_context & dumpcontext) const override;
 
 #ifdef _DEBUG
-      virtual huge_integer increment_reference_count() override;
-      virtual huge_integer decrement_reference_count() override;
+      virtual long long increment_reference_count() override;
+      virtual long long decrement_reference_count() override;
 #endif
 
       virtual void install_message_routing(::channel * psender) override;
