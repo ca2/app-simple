@@ -129,7 +129,7 @@ namespace app_simple_networking_application
       }
 
 
-      switch(pimpactdata->id().as_huge_integer())
+      switch(pimpactdata->id().as_long_long())
       {
       case MENU_IMPACT:
       {

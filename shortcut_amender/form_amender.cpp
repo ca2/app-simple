@@ -52,7 +52,7 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   huge_integer form_amender::increment_reference_count()
+   long long form_amender::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -60,7 +60,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   huge_integer form_amender::decrement_reference_count()
+   long long form_amender::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

@@ -38,7 +38,7 @@ namespace app_simple_nanoui_example
 #ifdef _DEBUG
 
 
-   huge_integer main_window::increment_reference_count()
+   long long main_window::increment_reference_count()
    {
 
       return ::user::main_window::increment_reference_count();
@@ -46,7 +46,7 @@ namespace app_simple_nanoui_example
    }
 
 
-   huge_integer main_window::decrement_reference_count()
+   long long main_window::decrement_reference_count()
    {
 
       return ::user::main_window::decrement_reference_count();

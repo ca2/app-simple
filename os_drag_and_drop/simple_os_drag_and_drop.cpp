@@ -35,7 +35,7 @@ namespace app_simple_os_drag_and_drop
 #ifdef _DEBUG
 
 
-   huge_integer simple_os_drag_and_drop::increment_reference_count()
+   long long simple_os_drag_and_drop::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -43,7 +43,7 @@ namespace app_simple_os_drag_and_drop
    }
 
 
-   huge_integer simple_os_drag_and_drop::decrement_reference_count()
+   long long simple_os_drag_and_drop::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

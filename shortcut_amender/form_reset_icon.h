@@ -26,8 +26,8 @@ namespace app_simple_shortcut_amender
 
 
 #ifdef _DEBUG
-      virtual huge_integer increment_reference_count() override;
-      virtual huge_integer decrement_reference_count() override;
+      virtual long long increment_reference_count() override;
+      virtual long long decrement_reference_count() override;
 #endif
 
       virtual void install_message_routing(::channel * psender) override;

@@ -30,8 +30,8 @@ namespace app_simple_box
 
 #ifdef _DEBUG
 
-      huge_integer increment_reference_count() override;
-      huge_integer decrement_reference_count() override;
+      long long increment_reference_count() override;
+      long long decrement_reference_count() override;
 
 #endif
 

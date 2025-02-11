@@ -62,7 +62,7 @@ namespace app_simple_shader
 #ifdef _DEBUG
 
 
-   huge_integer impact::increment_reference_count()
+   long long impact::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -70,7 +70,7 @@ namespace app_simple_shader
    }
 
 
-   huge_integer impact::decrement_reference_count()
+   long long impact::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();
