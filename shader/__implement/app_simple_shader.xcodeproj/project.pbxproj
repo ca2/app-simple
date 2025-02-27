@@ -67,6 +67,7 @@
 		9AA0D7B22D70FE7D00702321 /* libwindowing_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A7D534F2D7048BC003CF973 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0D7B32D70FE7D00702321 /* libwrite_text_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A7D53502D7048BC003CF973 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AA0D7B42D70FE7D00702321 /* libzip.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A7D53512D7048BC003CF973 /* libzip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AB464F92D711A0F00DEFCDC /* libapp_simple_shader.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D532E2D7048BC003CF973 /* libapp_simple_shader.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB464F92D711A0F00DEFCDC /* libapp_simple_shader.dylib in Frameworks */,
 				9A7F3F9F274D6E0E00D914CC /* libcore.dylib in Frameworks */,
 				9A57C0932BFB277B00A232C7 /* libcrypto.dylib in Frameworks */,
 				9A57C0952BFB277B00A232C7 /* libssl.dylib in Frameworks */,
