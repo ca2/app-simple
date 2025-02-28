@@ -50,16 +50,6 @@
 		9AB464F22D71197C00DEFCDC /* libapp_simple_application.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D56142D704C8D003CF973 /* libapp_simple_application.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 070B8EE21B6E53F900D26137 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 070B8EE91B6E53F900D26137;
-			remoteInfo = "Hello Multiverse!!";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9AA0D86E2D70FF0300702321 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -153,7 +143,6 @@
 		9A8F4D752A26D53C00097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A9E4A2927519BC10094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A2A27519BC10094A04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A9FD1812D714FB00069DC7E /* _app_simple_application_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_application_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,13 +151,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB464F22D71197C00DEFCDC /* libapp_simple_application.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		070B8EFA1B6E53FA00D26137 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				070B8EEA1B6E53F900D26137 /* _app_simple_application.app */,
-				9A9FD1812D714FB00069DC7E /* _app_simple_application_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,24 +268,6 @@
 			productReference = 070B8EEA1B6E53F900D26137 /* _app_simple_application.app */;
 			productType = "com.apple.product-type.application";
 		};
-		070B8EFC1B6E53FA00D26137 /* _app_simple_application_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_application_Tests" */;
-			buildPhases = (
-				070B8EF91B6E53FA00D26137 /* Sources */,
-				070B8EFA1B6E53FA00D26137 /* Frameworks */,
-				070B8EFB1B6E53FA00D26137 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */,
-			);
-			name = _app_simple_application_Tests;
-			productName = "Hello Multiverse!!Tests";
-			productReference = 9A9FD1812D714FB00069DC7E /* _app_simple_application_Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -319,10 +282,6 @@
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = L8N5V6TZE5;
 						ProvisioningStyle = Automatic;
-					};
-					070B8EFC1B6E53FA00D26137 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 070B8EE91B6E53F900D26137;
 					};
 				};
 			};
@@ -340,7 +299,6 @@
 			projectRoot = "";
 			targets = (
 				070B8EE91B6E53F900D26137 /* _app_simple_application */,
-				070B8EFC1B6E53FA00D26137 /* _app_simple_application_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -356,13 +314,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		070B8EFB1B6E53FA00D26137 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -374,22 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		070B8EF91B6E53FA00D26137 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		070B8EFF1B6E53FA00D26137 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 070B8EE91B6E53F900D26137 /* _app_simple_application */;
-			targetProxy = 070B8EFE1B6E53FA00D26137 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A273C7F29CF176000CBEB97 /* InfoPlist.strings */ = {
@@ -592,54 +528,6 @@
 			};
 			name = Release;
 		};
-		070B8F0B1B6E53FA00D26137 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
-			};
-			name = Debug;
-		};
-		070B8F0C1B6E53FA00D26137 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -657,15 +545,6 @@
 			buildConfigurations = (
 				070B8F081B6E53FA00D26137 /* Debug */,
 				070B8F091B6E53FA00D26137 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		070B8F0A1B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_application_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				070B8F0B1B6E53FA00D26137 /* Debug */,
-				070B8F0C1B6E53FA00D26137 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
