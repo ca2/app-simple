@@ -112,7 +112,6 @@
 
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_simple_notify_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_notify_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* _app_simple_notify_drawing_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = _app_simple_notify_drawing_Tests.xctest; path = "/Users/camilo/code/release/source/app-simple/notify_drawing/__implement/build/Debug/Hello Multiverse!!.app/Contents/PlugIns/_app_simple_notify_drawing_Tests.xctest"; sourceTree = "<absolute>"; };
 		9A22749E27CF41310042BAC2 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
 		9A273CA329CF17E300CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A7D54002D704A6F003CF973 /* libacme.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libacme.dylib; path = "/Users/camilo/code/release/time-macos/output/libacme.dylib"; sourceTree = "<absolute>"; };
@@ -157,7 +156,7 @@
 		9A990437275332E900B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A9E4A5327519C950094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A5427519C950094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AE5CC9222CBED0B00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		9A9FD1ED2D714FB20069DC7E /* _app_simple_notify_drawing_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_notify_drawing_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +184,6 @@
 				9A7D47CA2D7032E9003CF973 /* output */,
 				9AED779D2751983A00397A57 /* __implement */,
 				070B8EEB1B6E53F900D26137 /* Products */,
-				9A3E0BA32309FBE300B5459B /* Library */,
-				9AE5CC8C22CBEC1700EDEAD1 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				070B8EEA1B6E53F900D26137 /* _app_simple_notify_drawing.app */,
+				9A9FD1ED2D714FB20069DC7E /* _app_simple_notify_drawing_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,13 +202,6 @@
 				9A273CA229CF17E300CBEB97 /* InfoPlist.strings */,
 			);
 			path = en.lproj;
-			sourceTree = "<group>";
-		};
-		9A3E0BA32309FBE300B5459B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Library;
 			sourceTree = "<group>";
 		};
 		9A7D47CA2D7032E9003CF973 /* output */ = {
@@ -267,14 +258,6 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
-		9AE5CC8C22CBEC1700EDEAD1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9AE5CC9222CBED0B00EDEAD1 /* en.lproj */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9AED779D2751983A00397A57 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,7 +306,7 @@
 			);
 			name = _app_simple_notify_drawing_Tests;
 			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* _app_simple_notify_drawing_Tests.xctest */;
+			productReference = 9A9FD1ED2D714FB20069DC7E /* _app_simple_notify_drawing_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
