@@ -112,7 +112,6 @@
 
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_simple_form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_form.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* _app_simple_form_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = _app_simple_form_Tests.xctest; path = "/Users/camilo/code/release/source/app-simple/form/__implement/build/Debug/Hello Multiverse!!.app/Contents/PlugIns/_app_simple_form_Tests.xctest"; sourceTree = "<absolute>"; };
 		9A273CD629CF199E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A7D52612D70458A003CF973 /* libacme.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libacme.dylib; path = "/Users/camilo/code/release/time-macos/output/libacme.dylib"; sourceTree = "<absolute>"; };
 		9A7D52622D70458A003CF973 /* libacme_apple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libacme_apple.dylib; path = "/Users/camilo/code/release/time-macos/output/libacme_apple.dylib"; sourceTree = "<absolute>"; };
@@ -156,8 +155,8 @@
 		9A8F4CFD2A26D33C00097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A9905AB2753364200B13F01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9905AC2753364200B13F01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9FD18A2D714FB10069DC7E /* _app_simple_form_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_form_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAF1F9927CFDA2300D96CB7 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
-		9AE5CC9022CBECFA00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +184,6 @@
 				9A7D47CD2D7032F8003CF973 /* output */,
 				9A99047B2753360200B13F01 /* __implement */,
 				070B8EEB1B6E53F900D26137 /* Products */,
-				9A3E0BA22309FBDC00B5459B /* Library */,
-				9AE5CC8B22CBEC0400EDEAD1 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				070B8EEA1B6E53F900D26137 /* _app_simple_form.app */,
+				9A9FD18A2D714FB10069DC7E /* _app_simple_form_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,13 +202,6 @@
 				9A273CD529CF199E00CBEB97 /* InfoPlist.strings */,
 			);
 			path = en.lproj;
-			sourceTree = "<group>";
-		};
-		9A3E0BA22309FBDC00B5459B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Library;
 			sourceTree = "<group>";
 		};
 		9A7D47CD2D7032F8003CF973 /* output */ = {
@@ -279,14 +270,6 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
-		9AE5CC8B22CBEC0400EDEAD1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9AE5CC9022CBECFA00EDEAD1 /* en.lproj */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,7 +306,7 @@
 			);
 			name = _app_simple_form_Tests;
 			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* _app_simple_form_Tests.xctest */;
+			productReference = 9A9FD18A2D714FB10069DC7E /* _app_simple_form_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

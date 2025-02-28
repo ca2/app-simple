@@ -110,7 +110,6 @@
 
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_simple_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		070B8EFD1B6E53FA00D26137 /* _app_simple_drawing_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = _app_simple_drawing_Tests.xctest; path = "/Users/camilo/code/release/source/app-simple/drawing/__implement/build/Debug/Hello Multiverse!!.app/Contents/PlugIns/_app_simple_drawing_Tests.xctest"; sourceTree = "<absolute>"; };
 		9A22749627CF40EB0042BAC2 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
 		9A273C8E29CF179B00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A7D54EC2D704B36003CF973 /* libacme.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libacme.dylib; path = "/Users/camilo/code/release/time-macos/output/libacme.dylib"; sourceTree = "<absolute>"; };
@@ -154,8 +153,8 @@
 		9A9902A6275328F100B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
 		9A9E4A4227519C320094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A4327519C320094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9FD1062D714FAE0069DC7E /* _app_simple_drawing_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_drawing_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB464F42D7119D000DEFCDC /* libapp_simple_drawing.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libapp_simple_drawing.dylib; path = "/Users/camilo/code/release/time-macos/output/libapp_simple_drawing.dylib"; sourceTree = "<absolute>"; };
-		9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +182,6 @@
 				9A7D47C82D7032DD003CF973 /* output */,
 				9AED7547275196FA00397A57 /* __implement */,
 				070B8EEB1B6E53F900D26137 /* Products */,
-				9A3E0BA12309FBD400B5459B /* Library */,
-				9AE5CC8A22CBEBF400EDEAD1 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				070B8EEA1B6E53F900D26137 /* _app_simple_drawing.app */,
+				9A9FD1062D714FAE0069DC7E /* _app_simple_drawing_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,13 +200,6 @@
 				9A273C8D29CF179B00CBEB97 /* InfoPlist.strings */,
 			);
 			path = en.lproj;
-			sourceTree = "<group>";
-		};
-		9A3E0BA12309FBD400B5459B /* Library */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Library;
 			sourceTree = "<group>";
 		};
 		9A7D47C82D7032DD003CF973 /* output */ = {
@@ -265,14 +256,6 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
-		9AE5CC8A22CBEBF400EDEAD1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9AE5CC8E22CBECAE00EDEAD1 /* en.lproj */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9AED7547275196FA00397A57 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,7 +304,7 @@
 			);
 			name = _app_simple_drawing_Tests;
 			productName = "Hello Multiverse!!Tests";
-			productReference = 070B8EFD1B6E53FA00D26137 /* _app_simple_drawing_Tests.xctest */;
+			productReference = 9A9FD1062D714FAE0069DC7E /* _app_simple_drawing_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
