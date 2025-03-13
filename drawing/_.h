@@ -22,5 +22,7 @@ namespace app_simple_drawing
    class render;
 
 
-} // namespace flag
+} // namespace app_simple_drawing
+
+
 
