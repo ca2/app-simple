@@ -25,6 +25,7 @@
 		9A9E4A3127519BFA0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A2927519BC10094A04C /* Images.xcassets */; };
 		9AA14D4D282A119900B1621E /* libnanoui.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA14D4C282A119900B1621E /* libnanoui.dylib */; };
 		9AA14D4E282A119900B1621E /* libnanoui.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA14D4C282A119900B1621E /* libnanoui.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AA370192D8F652C0010C30A /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC75026786CAD00C4104F /* libaxis.dylib */; };
 		9AB3DE84278386270025099F /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE82278386270025099F /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB3DE85278386270025099F /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB3DE83278386270025099F /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9ABBB6B02AEB2BF5007611C5 /* libacme_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9ABBB6AE2AEB2BF4007611C5 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -338,6 +339,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA370192D8F652C0010C30A /* libaxis.dylib in Frameworks */,
 				9AA14D4D282A119900B1621E /* libnanoui.dylib in Frameworks */,
 				9A92318527EAE4F000B5A78D /* libapp_simple_nanoui_example.dylib in Frameworks */,
 				9AC01E2E2748D046006BEBCC /* libaura.dylib in Frameworks */,
