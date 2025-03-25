@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A22749F27CF41310042BAC2 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A22749E27CF41310042BAC2 /* application_main.cpp */; };
+		9A27016D2D91E5DF00D20305 /* libnano2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A27016B2D91E5D300D20305 /* libnano2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A273CA629CF17E300CBEB97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A273CA229CF17E300CBEB97 /* InfoPlist.strings */; };
 		9A990438275332E900B13F01 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A990437275332E900B13F01 /* _matter.zip */; };
 		9A9D308E2D73CB9300469C84 /* libnano_idn_libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9D30232D73C8D700469C84 /* libnano_idn_libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -67,6 +68,7 @@
 			files = (
 				9A9D308E2D73CB9300469C84 /* libnano_idn_libidn.dylib in CopyFiles */,
 				9AD91F2B2D7362CA00E097AF /* libacme.dylib in CopyFiles */,
+				9A27016D2D91E5DF00D20305 /* libnano2d.dylib in CopyFiles */,
 				9AD91F2C2D7362CA00E097AF /* libacme_apple.dylib in CopyFiles */,
 				9AD91F2D2D7362CA00E097AF /* libacme_darwin.dylib in CopyFiles */,
 				9AD91F2E2D7362CA00E097AF /* libacme_macos.dylib in CopyFiles */,
@@ -115,6 +117,7 @@
 /* Begin PBXFileReference section */
 		070B8EEA1B6E53F900D26137 /* _app_simple_notify_drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_notify_drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22749E27CF41310042BAC2 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
+		9A27016B2D91E5D300D20305 /* libnano2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnano2d.dylib; sourceTree = "<group>"; };
 		9A273CA329CF17E300CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		9A8F4D1E2A26D44C00097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A8F4D292A26D44C00097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +228,7 @@
 		9AD91F2A2D7362AC00E097AF /* time-macos */ = {
 			isa = PBXGroup;
 			children = (
+				9A27016B2D91E5D300D20305 /* libnano2d.dylib */,
 				9A9D30232D73C8D700469C84 /* libnano_idn_libidn.dylib */,
 				9AD91F012D7362AC00E097AF /* libacme.dylib */,
 				9AD91F022D7362AC00E097AF /* libacme_apple.dylib */,
