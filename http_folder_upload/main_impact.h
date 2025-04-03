@@ -27,7 +27,7 @@ namespace app_simple_http_folder_upload
 
       void on_create_split_impact() override;
 
-      virtual void handle(::topic * ptopic, ::context * pcontext) override;
+      virtual void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
 
       virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;

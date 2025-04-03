@@ -26,7 +26,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void main_impact::handle(::topic * ptopic, ::context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       ::user::split_impact::handle(ptopic, pcontext);

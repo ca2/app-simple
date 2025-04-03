@@ -19,7 +19,7 @@
 //
 //
 //
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_simple_notify_drawing::application application;

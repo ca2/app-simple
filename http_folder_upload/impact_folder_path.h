@@ -28,7 +28,7 @@ namespace app_simple_http_folder_upload
 
       void install_message_routing(::channel * pchannel) override;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       void plain_edit_on_after_change_text(::draw2d::graphics_pointer & pointer, const ::action_context & action_context) override;
 

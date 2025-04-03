@@ -160,7 +160,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void form_002::handle(::topic * ptopic, ::context * pcontext)
+   void form_002::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == ::id_click)

@@ -21,7 +21,7 @@
 //
 
 
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_simple_networking_application::application application;

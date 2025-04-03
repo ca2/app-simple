@@ -263,7 +263,7 @@ namespace app_simple_change_grub_default_entry
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       //////__update(::update)

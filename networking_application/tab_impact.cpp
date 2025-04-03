@@ -156,14 +156,14 @@ namespace app_simple_networking_application
 
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
 
    }
 
 
-   //void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   //void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    //{
 
 

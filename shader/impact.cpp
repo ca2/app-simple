@@ -224,7 +224,7 @@ namespace app_simple_shader
    }
 
 
-   void impact::handle(::topic * ptopic, ::context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == "simple_checkbox" || ptopic->id() == "no_client_frame")
