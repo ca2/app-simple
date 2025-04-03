@@ -47,7 +47,7 @@ namespace app_simple_form
 
       virtual void on_perform_top_down_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       
    };

@@ -317,7 +317,7 @@ namespace app_simple_form
    }
 
 
-   void form_001::handle(::topic * ptopic, ::context * pcontext)
+   void form_001::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == ::id_after_change_text)

@@ -45,7 +45,7 @@ namespace app_simple_nanoui_example
 
       void install_message_routing(::channel * psender) override;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
       virtual void set_current_application(int iIndex);
 

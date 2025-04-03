@@ -337,7 +337,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   void form_amender::handle(::topic * ptopic, ::context * pcontext)
+   void form_amender::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == ::id_after_change_text)

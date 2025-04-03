@@ -183,7 +183,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   //bool tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   //bool tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    //{
 
    //   if(m_pdocMenu != nullptr
@@ -224,7 +224,7 @@ namespace app_simple_shortcut_amender
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       //////__update(::update)

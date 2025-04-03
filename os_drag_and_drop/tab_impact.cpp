@@ -236,7 +236,7 @@ namespace app_simple_os_drag_and_drop
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       ////__update(::update)

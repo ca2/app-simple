@@ -142,7 +142,7 @@ namespace app_simple_networking_application
    }
 
 
-   void computer_list2::handle(::topic * ptopic, ::context * pcontext)
+   void computer_list2::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       if (ptopic->id() == "simple_checkbox"

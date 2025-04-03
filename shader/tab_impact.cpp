@@ -233,7 +233,7 @@ namespace app_simple_shader
    }
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
 
@@ -241,7 +241,7 @@ namespace app_simple_shader
    }
 
 
-//   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+//   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
 //   {
 //
 //

@@ -22,7 +22,7 @@
 
 
 
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_simple_shortcut_amender::application application;

@@ -6,7 +6,7 @@
 //app_simple_application::application g_app_simple_application;
 
 
-void application_main()
+void application_main(::platform::system * psystem)
 {
 
    app_simple_application::application application;

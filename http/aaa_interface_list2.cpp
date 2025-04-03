@@ -161,7 +161,7 @@ namespace app_simple_http
    }
 
 
-   void interface_list2::handle(::topic * ptopic, ::context * pcontext)
+   void interface_list2::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
 //      if (ptopic->id() == "simple_checkbox"

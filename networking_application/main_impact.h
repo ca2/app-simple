@@ -25,7 +25,7 @@ namespace app_simple_networking_application
 
       virtual void on_create_split_impact() override;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
    };
 

@@ -215,7 +215,7 @@ namespace app_simple_form
    }
 
 
-   //bool tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   //bool tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    //{
 
    //   if(m_pdocMenu != nullptr
@@ -256,7 +256,7 @@ namespace app_simple_form
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
       //////__update(::update)
