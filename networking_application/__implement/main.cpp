@@ -1,34 +1,34 @@
 #include "framework.h"
-#define APPLICATION_NAMESPACE app_core_
+#define APPLICATION_NAMESPACE app_simple_networking_application
 #include "acme/inline/application/main.inl"
 
 
-//app_simple_networking_application::application g_app_simple_networking_application;
+// //app_simple_networking_application::application g_app_simple_networking_application;
 
 
-//int __implement()
-//{
-//
-//   auto papp = ___new app_simple_networking_application::application();
-//
-//   int iExitCode = papp->__implement();
-//
-//   return iExitCode;
-//
-//}
-//
-//
-//
+// //int __implement()
+// //{
+// //
+// //   auto papp = ___new app_simple_networking_application::application();
+// //
+// //   int iExitCode = papp->__implement();
+// //
+// //   return iExitCode;
+// //
+// //}
+// //
+// //
+// //
 
 
-void application_main(::platform::system * psystem)
-{
+// void application_main(::platform::system * psystem)
+// {
 
-   app_simple_networking_application::application application;
+//    app_simple_networking_application::application application;
 
-   application.application_main();
+//    application.application_main();
 
-}
+// }
 
 
 

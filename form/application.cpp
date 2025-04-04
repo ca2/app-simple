@@ -14,6 +14,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_form);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_form);
 
 
 namespace app_simple_form

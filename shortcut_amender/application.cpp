@@ -16,6 +16,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_shortcut_amender);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_shortcut_amender);
 
 
 namespace app_simple_shortcut_amender
