@@ -44,7 +44,7 @@ namespace app_simple_os_drag_and_drop
    void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
-      //::user::split_impact::handle(ptopic, pcontext);
+      //::user::split_impact::handle(ptopic, phandlercontext);
       if (ptopic->id() == ::id_click)
       {
 

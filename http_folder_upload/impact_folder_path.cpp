@@ -42,7 +42,7 @@ namespace app_simple_http_folder_upload
    void impact_folder_path::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
-      edit_impact_base::handle(ptopic, pcontext);
+      edit_impact_base::handle(ptopic, phandlercontext);
 
    }
 

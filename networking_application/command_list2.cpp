@@ -105,7 +105,7 @@ namespace app_simple_networking_application
    void command_list2::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
-      ::user::list2::handle(ptopic, pcontext);
+      ::user::list2::handle(ptopic, phandlercontext);
 
    }
 

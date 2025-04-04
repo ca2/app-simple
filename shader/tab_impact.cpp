@@ -245,7 +245,7 @@ namespace app_simple_shader
 //   {
 //
 //
-//      ::user::tab_impact::handle(ptopic, pcontext);
+//      ::user::tab_impact::handle(ptopic, phandlercontext);
 //
 //   }
 

@@ -36,7 +36,7 @@ namespace app_simple_http
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
    }
 

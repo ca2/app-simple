@@ -172,7 +172,7 @@ namespace app_simple_networking_application
 //
 //      }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 
