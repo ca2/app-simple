@@ -10,6 +10,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_notify_drawing);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_notify_drawing);
 
 
 namespace app_simple_notify_drawing

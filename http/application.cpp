@@ -14,6 +14,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_http);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_http);
 
 
 namespace app_simple_http
