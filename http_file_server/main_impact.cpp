@@ -37,7 +37,7 @@ namespace app_simple_http_file_server
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
    }
 

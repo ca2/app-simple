@@ -134,7 +134,7 @@ namespace app_simple_os_drag_and_drop
    void impact::handle(::topic * ptopic, ::handler_context * pcontext)
    {
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
    }
 
 

@@ -1,6 +1,6 @@
 #include "framework.h"
 #define APPLICATION_NAMESPACE app_simple_notify_drawing
-#include "__implement.h"
+#include "acme/inline/application/main.inl"
 
 
 // //app_simple_notify_drawing::application g_app_simple_notify_drawing_application;

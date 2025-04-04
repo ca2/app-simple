@@ -38,7 +38,7 @@ namespace app_simple_http_folder_upload
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
    }
 

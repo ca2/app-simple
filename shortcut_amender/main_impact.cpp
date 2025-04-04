@@ -61,7 +61,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
 
 

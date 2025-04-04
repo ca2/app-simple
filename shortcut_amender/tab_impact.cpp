@@ -284,8 +284,8 @@ namespace app_simple_shortcut_amender
 
       }
 
-//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_impact::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
+      ::user::tab_impact::handle(ptopic, phandlercontext);
 
    }
 

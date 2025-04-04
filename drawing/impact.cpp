@@ -204,7 +204,7 @@ namespace app_simple_drawing
 
       }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
    }
 
 

@@ -234,7 +234,7 @@ namespace app_simple_shader
 
       }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 

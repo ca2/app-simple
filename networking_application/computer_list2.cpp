@@ -153,7 +153,7 @@ namespace app_simple_networking_application
 
       }
 
-      ::user::list2::handle(ptopic, pcontext);
+      ::user::list2::handle(ptopic, phandlercontext);
 
    }
 
