@@ -1,15 +1,15 @@
 #include "framework.h"
-#include "application.h"
+#define APPLICATION_NAMESPACE app_core_
 #include "__implement.h"
 
 
-//app_simple_shortcut_amender::application g_app_simple_shortcut_amender_application;
+//app_simple_notify_drawing::application g_app_simple_notify_drawing_application;
 
 
 //int __implement()
 //{
 //
-//   auto papp = ___new app_simple_shortcut_amender::application();
+//   auto papp = ___new app_simple_notify_drawing::application();
 //
 //   int iExitCode = papp->__implement();
 //
@@ -19,17 +19,11 @@
 //
 //
 //
-
-
-
 void application_main(::platform::system * psystem)
 {
 
-   app_simple_shortcut_amender::application application;
+   app_simple_notify_drawing::application application;
 
    application.application_main();
 
 }
-
-
-

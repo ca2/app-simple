@@ -159,7 +159,7 @@ namespace app_simple_nanoui_example
       #else
                ::string resources_folder_path("./icons");
       #endif
-               std::vector<std::pair<int, ::string>> icons;
+               ::array<::pair<int, ::string>> icons;
       
       //#if !defined(EMSCRIPTEN)
       //         try {
