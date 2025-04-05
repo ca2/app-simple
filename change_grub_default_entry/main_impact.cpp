@@ -40,7 +40,7 @@ namespace app_simple_change_grub_default_entry
    //}
 
 
-   //void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   //void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    //{
 
    //   ::user::split_impact::handle(ptopic, phandlercontext);
@@ -140,7 +140,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if(ptopic->id() == ::id_click)

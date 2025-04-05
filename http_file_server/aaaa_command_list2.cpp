@@ -102,7 +102,7 @@ namespace app_simple_http_file_server
    }
 
 
-   void command_list2::handle(::topic * ptopic, ::handler_context * pcontext)
+   void command_list2::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ::user::list2::handle(ptopic, phandlercontext);

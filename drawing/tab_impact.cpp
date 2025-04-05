@@ -128,7 +128,7 @@ namespace app_simple_drawing
    }
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ::user::tab::handle(ptopic, phandlercontext);
