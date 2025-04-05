@@ -4,7 +4,7 @@ project(_app_simple_http_folder_upload CXX)
 
 
 
-list(APPEND application_source application_main.cpp)
+list(APPEND application_source main.cpp)
 
 
 if(MSVC)
