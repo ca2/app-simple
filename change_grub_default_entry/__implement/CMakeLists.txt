@@ -4,7 +4,7 @@ project(_app_simple_change_grub_default_entry CXX)
 
 
 
-list(APPEND application_source application_main.cpp)
+list(APPEND application_source main.cpp)
 
 
 if(MSVC)

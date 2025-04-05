@@ -4,7 +4,7 @@ project(_app_simple_nanoui_example CXX)
 
 
 
-list(APPEND application_source application_main.cpp)
+list(APPEND application_source main.cpp)
 
 
 if(MSVC)
