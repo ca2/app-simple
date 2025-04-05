@@ -41,7 +41,7 @@ namespace app_simple_shortcut_amender
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       virtual string_array set_icon(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail);
 

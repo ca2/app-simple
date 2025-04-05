@@ -155,14 +155,14 @@ namespace app_simple_http_folder_upload
 
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
 
    }
 
 
-   //void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   //void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    //{
 
 

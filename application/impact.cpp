@@ -101,7 +101,7 @@ namespace app_simple_application
    }
 
 
-   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ::user::impact::handle(ptopic, phandlercontext);

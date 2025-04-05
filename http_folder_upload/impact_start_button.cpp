@@ -41,7 +41,7 @@ namespace app_simple_http_folder_upload
 
 
 
-   void impact_start_button::handle(::topic * ptopic, ::handler_context * pcontext)
+   void impact_start_button::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
    }
