@@ -37,10 +37,10 @@ namespace app_simple_http
 
 
 
-   void edit_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void edit_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
-      edit_impact_base::handle(ptopic, pcontext);
+      edit_impact_base::handle(ptopic, phandlercontext);
 
    }
 

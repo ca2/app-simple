@@ -279,7 +279,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   void form_reset_icon::handle(::topic * ptopic, ::handler_context * pcontext)
+   void form_reset_icon::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == ::id_after_change_text)

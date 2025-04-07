@@ -161,7 +161,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void interface_list2::handle(::topic * ptopic, ::handler_context * pcontext)
+   void interface_list2::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
 //      if (ptopic->id() == "simple_checkbox"
@@ -172,7 +172,7 @@ namespace app_simple_http_folder_upload
 //
 //      }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 

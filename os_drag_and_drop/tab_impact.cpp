@@ -236,7 +236,7 @@ namespace app_simple_os_drag_and_drop
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       ////__update(::update)
@@ -264,7 +264,7 @@ namespace app_simple_os_drag_and_drop
 
       //}
 
-//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
 
       if (m_pdocMenu != nullptr && ptopic->is_about(m_pdocMenu->get_impact(0)))
       {
@@ -297,7 +297,7 @@ namespace app_simple_os_drag_and_drop
 
       }
 
-      ::user::tab_impact::handle(ptopic, pcontext);
+      ::user::tab_impact::handle(ptopic, phandlercontext);
 
    }
 

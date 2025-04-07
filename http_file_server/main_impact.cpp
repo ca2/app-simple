@@ -29,7 +29,7 @@ namespace app_simple_http_file_server
    }
 
 
-   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == ::id_click)
@@ -37,7 +37,7 @@ namespace app_simple_http_file_server
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
    }
 

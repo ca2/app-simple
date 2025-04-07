@@ -263,7 +263,7 @@ namespace app_simple_change_grub_default_entry
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       //////__update(::update)
@@ -322,8 +322,8 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_impact::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
+      ::user::tab_impact::handle(ptopic, phandlercontext);
 
    }
 
