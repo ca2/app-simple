@@ -6,6 +6,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_os_drag_and_drop);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_os_drag_and_drop);
 
 
 namespace app_simple_os_drag_and_drop

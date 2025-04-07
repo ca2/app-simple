@@ -7,6 +7,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_box);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_box);
 
 
 namespace app_simple_box

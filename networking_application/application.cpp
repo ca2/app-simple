@@ -15,6 +15,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_networking_application);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_networking_application);
 
 
 namespace app_simple_networking_application

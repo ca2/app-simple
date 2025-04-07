@@ -17,6 +17,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_http_file_server);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_http_file_server);
 
 
 namespace app_simple_http_file_server
