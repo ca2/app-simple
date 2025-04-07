@@ -44,7 +44,7 @@ namespace app_simple_shortcut_amender
    //}
 
 
-   void main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == ::id_click)
@@ -61,7 +61,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      ::user::split_impact::handle(ptopic, pcontext);
+      ::user::split_impact::handle(ptopic, phandlercontext);
 
 
 
@@ -160,7 +160,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   //bool main_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   //bool main_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    //{
 
    //   if(ptopic->id() == ::id_click)

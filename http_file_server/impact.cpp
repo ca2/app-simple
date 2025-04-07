@@ -136,7 +136,7 @@ namespace app_simple_http_file_server
    }
 
 
-   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == id_enter_key)
@@ -152,7 +152,7 @@ namespace app_simple_http_file_server
 
       }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 

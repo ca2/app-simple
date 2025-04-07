@@ -215,7 +215,7 @@ namespace app_simple_form
    }
 
 
-   //bool tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   //bool tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    //{
 
    //   if(m_pdocMenu != nullptr
@@ -256,7 +256,7 @@ namespace app_simple_form
    //}
 
 
-   void tab_impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void tab_impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       //////__update(::update)
@@ -316,8 +316,8 @@ namespace app_simple_form
 
       }
 
-//      ::userex::pane_tab_impact::handle(ptopic, pcontext);
-      ::user::tab_impact::handle(ptopic, pcontext);
+//      ::userex::pane_tab_impact::handle(ptopic, phandlercontext);
+      ::user::tab_impact::handle(ptopic, phandlercontext);
 
    }
 

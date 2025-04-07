@@ -38,7 +38,7 @@ namespace app_simple_shortcut_amender
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       void on_change_cur_sel() override;
 

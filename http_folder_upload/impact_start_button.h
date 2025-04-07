@@ -28,7 +28,7 @@ namespace app_simple_http_folder_upload
 
       void install_message_routing(::channel * pchannel) override;
 
-      void handle(::topic * ptopic, ::handler_context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       bool on_click(::item * pitem) override;
 

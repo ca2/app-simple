@@ -141,7 +141,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void impact::handle(::topic * ptopic, ::handler_context * pcontext)
+   void impact::handle(::topic * ptopic, ::handler_context * phandlercontext)
    {
 
       if (ptopic->id() == id_enter_key)
@@ -157,7 +157,7 @@ namespace app_simple_http_folder_upload
 
       }
 
-      ::user::impact::handle(ptopic, pcontext);
+      ::user::impact::handle(ptopic, phandlercontext);
 
    }
 
