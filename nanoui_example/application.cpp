@@ -5,6 +5,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_nanoui_example);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_nanoui_example);
 
 
 namespace app_simple_nanoui_example

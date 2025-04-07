@@ -10,6 +10,7 @@ namespace simple_app
 
 
    __IMPLEMENT_APPLICATION_RELEASE_TIME();
+IMPLEMENT_APPLICATION_FACTORY();
 
 
    application::application()

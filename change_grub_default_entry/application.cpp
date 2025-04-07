@@ -15,6 +15,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_change_grub_default_entry);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_change_grub_default_entry);
 
 
 //

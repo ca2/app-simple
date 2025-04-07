@@ -20,6 +20,7 @@
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_http_folder_upload);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_http_folder_upload);
 
 
 namespace app_simple_http_folder_upload
