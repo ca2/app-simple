@@ -119,7 +119,7 @@ namespace app_simple_nfs_desktop
 
       //return true;
 
-      read_ini_configuration();
+      //read_ini_configuration();
 
    }
 

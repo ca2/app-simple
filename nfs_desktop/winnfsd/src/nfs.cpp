@@ -9,7 +9,7 @@
 nfs::nfs() :
    DatagramSockets{ {this},{this}, {this} },
    ServerSockets{ {this},{this}, {this} },
-   m_nUID(0), m_nGID(0), m_bLogOn(true), m_sFileName(NULL) ,
+   m_bLogOn(true), m_sFileName(NULL) ,
    m_PortmapProg(this),
    m_NFSProg(this),
    m_MountProg(this)
@@ -31,11 +31,18 @@ nfs::~nfs()
 }
 
 
+bool nfs::include_hostname_in_configuration_path()
+{
+
+   return true;
+
+}
+
 
 ::string nfs::get_bind_address() const
 {
 
-   return property("bind-address").as_string();
+   return property("bind_address").as_string();
 
 }
 
@@ -43,10 +50,108 @@ nfs::~nfs()
 void nfs::set_bind_address(const ::scoped_string & scopedstrBindAddress)
 {
 
-   property("bind-address") = scopedstrBindAddress;
+   property("bind_address") = scopedstrBindAddress;
 
 }
 
+
+int nfs::get_user_id() const
+{
+
+   return property("user_id").as_int();
+
+}
+
+
+void nfs::set_user_id(int iUserId)
+{
+
+   property("user_id") = iUserId;
+
+}
+
+
+int nfs::get_group_id() const
+{
+
+   return property("group_id").as_int();
+
+}
+
+
+void nfs::set_group_id(int iUserId)
+{
+
+   property("group_id") = iUserId;
+
+}
+
+
+
+::file::path nfs::get_mount_path(int iIndex) const
+{
+   
+   ::string strMountPath;
+
+   strMountPath.formatf("mount_path_%d", iIndex + 1);
+
+   return property(strMountPath).as_file_path();
+
+}
+
+
+void nfs::set_mount_path(int iIndex, const ::file::path & path)
+{
+
+   ::string strMountPath;
+
+   strMountPath.formatf("mount_path_%d", iIndex + 1);
+
+   property(strMountPath) = path;
+
+}
+
+
+::string nfs::get_mount_alias(int iIndex) const
+{
+
+   ::string strMountAlias;
+
+   strMountAlias.formatf("mount_alias_%d", iIndex + 1);
+
+   return property(strMountAlias).as_string();
+
+}
+
+
+void nfs::set_mount_alias(int iIndex, const ::scoped_string & scopedstrAlias)
+{
+
+   ::string strMountAlias;
+
+   strMountAlias.formatf("mount_alias_%d", iIndex + 1);
+
+   property(strMountAlias) = scopedstrAlias;
+
+}
+
+
+int nfs::get_mount_count()
+{
+
+   int iCount = 0;
+
+   while (get_mount_path(iCount).has_character()
+      && get_mount_alias(iCount).has_character())
+   {
+
+      iCount++;
+
+   }
+
+   return iCount;
+
+}
 
 
 
@@ -418,14 +523,31 @@ int nfs::main(int argc, char * argv[])
 }
 
 
-void nfs::simple_server(int iUsr, int iGrp, const char * pAddr, std::vector<std::vector<std::string>> paths)
+void nfs::netnode_from_ini_configuration()
 {
+
+   read_ini_configuration();
+
+   simple_netnode();
+
+}
+
+
+void nfs::simple_netnode()
+{
+
+   // minimal configuration example:
+   // user_id=1001
+   // group_id=1001
+   // bind_address=1001
+   // =1001
+
    
    m_nUID = iUsr;
    
    m_nGID = iGrp;
    
-   set_bind_address(pAddr);
+   //set_bind_address(pAddr);
 
    main_start(paths);
 
