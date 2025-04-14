@@ -7,14 +7,14 @@
 #include "base/user/user/show.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
    using edit_impact_base = ::app_consumer < application, ::user::show < ::user::plain_edit > >;
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP edit_impact :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP edit_impact :
       virtual public edit_impact_base
    {
    public:

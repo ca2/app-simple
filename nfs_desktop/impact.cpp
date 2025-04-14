@@ -19,9 +19,11 @@
 #include "aura/message/user.h"
 #include "base/user/user/impact_system.h"
 #include "base/user/user/split_impact.h"
+#include "winnfsd/src/nfs.h"
+//#include "winnfsd/src/nfs_server.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
@@ -70,7 +72,7 @@ namespace app_simple_winnfsd_desktop
    void impact::install_message_routing(::channel * psender)
    {
 
-      ::user::impact::install_message_routing(psender);
+      ::app_simple_nfs_desktop::interaction::install_message_routing(psender);
 
       MESSAGE_LINK(e_message_create,psender,this,&impact::on_message_create);
       MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
@@ -92,6 +94,10 @@ namespace app_simple_winnfsd_desktop
 
       }
 
+
+      //m_papp->m_pnfsserverapplication = new nfs_server_application();
+
+      //m_papp->m_pnfsserverapplication->m_pnfsserver->simple_server(1001, 1001, "192.168.0.89", "C:\\Users\\camilo\\nfs", "/nfs");
 
 
    }
@@ -185,17 +191,7 @@ namespace app_simple_winnfsd_desktop
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      auto rectangleX = this->rectangle();
-
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
-
-      pgraphics->fill_rectangle(rectangleX, color::blue);
-
-      pgraphics->set_text_color(color::white);
-
-      ::string str = m_strRequestResult;
-
-      pgraphics->draw_text(str, rectangleX);
+      ::app_simple_nfs_desktop::interaction::_001OnDraw(pgraphics);
 
    }
 
@@ -274,7 +270,7 @@ namespace app_simple_winnfsd_desktop
    //}
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

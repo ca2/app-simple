@@ -4,11 +4,14 @@
 #include "base/platform/application.h"
 
 
-namespace app_simple_winnfsd_desktop
+class nfs;
+
+
+namespace app_simple_nfs_desktop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP application :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP application :
       virtual public ::base::application
    {
    public:
@@ -17,10 +20,12 @@ namespace app_simple_winnfsd_desktop
       ::file::path                                    m_pathFolder;
       ::user::document *                              m_pdocMenu;
       ::user::plain_edit_impact *                     m_prollfps;
-      //::user::multiple_document_template *            m_ptemplateCommand;
-      //::user::single_document_template *              m_ptemplateSimpleDrawingMain;
       tab_impact *                                    m_ptabimpact;
-      ::pointer < incoming_socket_thread >            m_pincomingsocketthread;
+      
+      ::pointer < nfs >                               m_pnfs;
+
+      ::property_set                                  m_set; 
+
 
       application();
       ~application() override;
@@ -39,6 +44,14 @@ namespace app_simple_winnfsd_desktop
       virtual long long increment_reference_count() override;
       virtual long long decrement_reference_count() override;
 #endif
+
+
+      //virtual void read_ini();
+      //virtual void write_ini();
+
+
+      //::string get_bind_address() const override;
+      //void set_bind_address(const ::scoped_string & scopedstrBindAddress) override;
 
       //virtual ::pointer<impact> create_simple_drawing_impact(::user::impact * pimpactParent, ::user::impact_data * pimpactdata);
 
@@ -65,7 +78,7 @@ namespace app_simple_winnfsd_desktop
    };
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

@@ -6,11 +6,11 @@
 #include "apex/platform/app_consumer.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP tab_impact :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP tab_impact :
       virtual public ::app_consumer < application, ::user::tab_impact > ,
       virtual public ::user::form_callback
    {
@@ -55,7 +55,7 @@ namespace app_simple_winnfsd_desktop
    };
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 
