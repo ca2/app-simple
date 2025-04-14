@@ -5,11 +5,11 @@
 #include "base/user/user/document.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP main_document :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP main_document :
       public ::user::document
    {
    public:
@@ -34,7 +34,7 @@ namespace app_simple_winnfsd_desktop
    };
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

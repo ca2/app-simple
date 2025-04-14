@@ -18,7 +18,7 @@
 #include "aqua/multimedia/multimedia.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
@@ -155,7 +155,7 @@ namespace app_simple_winnfsd_desktop
    }
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

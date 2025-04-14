@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8e5d91c7-edc0-4d92-b733-aeffca5af850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{06aedfbf-5bb8-479a-ad0c-0cf2f5f4da26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\winnfsd">
+      <UniqueIdentifier>{d1f165b3-d7a9-4960-bd18-7d7f3a6c4e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\winnfsd\src">
+      <UniqueIdentifier>{48571c73-97c0-4417-bb60-1d57af931fbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\winnfsd">
+      <UniqueIdentifier>{8a67876d-2135-47e2-8bfc-5f9633522dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\winnfsd\src">
+      <UniqueIdentifier>{d0a62475-d3d0-46ab-bf44-a5c77e4ee0f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_frame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tab_impact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="impact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main_impact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="edit_impact.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\DatagramSocket.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\FileTable.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\FileTree.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\MountProg.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\nfs.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\NFS3Prog.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\NFSProg.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\PortmapProg.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\RPCProg.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\RPCServer.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\ServerSocket.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\Socket.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\SocketStream.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\conv.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="winnfsd\src\NFSProgNewWrite.cpp">
+      <Filter>Source Files\winnfsd\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main_document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main_frame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tab_impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_library.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main_impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="edit_impact.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\conv.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\DatagramSocket.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\FileTable.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\FileTree.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\InputStream.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\MountProg.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\nfs.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\NFS3Prog.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\NFSProg.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\OutputStream.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\PortmapProg.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\resource.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\RPCProg.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\RPCServer.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\ServerSocket.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\Socket.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\SocketListener.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\SocketStream.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\tree.hh">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="winnfsd\src\aaa_nfs_server_application.h">
+      <Filter>Header Files\winnfsd\src</Filter>
+    </ClInclude>
+    <ClInclude Include="interaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="deployment.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

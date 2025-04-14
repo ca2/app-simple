@@ -4,15 +4,17 @@
 
 #include "acme/prototype/collection/int_map.h"
 #include "apex/platform/app_consumer.h"
-#include "base/user/user/impact.h"
+#include "app-simple/nfs_desktop/interaction.h"
+#include "base/user/user/margin.h"
+#include "base/user/user/show.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP impact :
-      virtual public ::app_consumer < application, ::user::impact >
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP impact :
+      virtual public ::app_consumer < application, ::user::show < ::user::margin < ::app_simple_nfs_desktop::interaction > > >
    {
    public:
 
@@ -59,6 +61,6 @@ namespace app_simple_winnfsd_desktop
    };
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 

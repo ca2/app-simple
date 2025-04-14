@@ -20,7 +20,7 @@
 #include "base/user/user/split_impact.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
@@ -356,7 +356,7 @@ namespace app_simple_winnfsd_desktop
    //}
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

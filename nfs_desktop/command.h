@@ -4,10 +4,10 @@
 
 #include "acme/handler/item.h"
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP command :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP command :
       virtual public ::item
    {
    public:
@@ -29,4 +29,4 @@ namespace app_simple_winnfsd_desktop
 
    };
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop

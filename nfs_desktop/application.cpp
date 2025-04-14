@@ -8,23 +8,24 @@
 #include "main_document.h"
 #include "impact.h"
 #include "tab_impact.h"
-#include "incoming_socket.h"
-#include "incoming_socket_thread.h"
-#include "socket.h"
+//#include "incoming_socket.h"
+//#include "incoming_socket_thread.h"
+//#include "socket.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/handler/request.h"
 #include "base/user/user/multiple_document_template.h"
 #include "base/user/user/single_document_template.h"
 
 
-__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_winnfsd_desktop);
-IMPLEMENT_APPLICATION_FACTORY(app_simple_winnfsd_desktop);
+__IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_nfs_desktop);
+IMPLEMENT_APPLICATION_FACTORY(app_simple_nfs_desktop);
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
-   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_winnfsd_desktop));
+   // __IMPLEMENT_APPLICATION_RELEASE_TIME1(app_simple_nfs_desktop));
 
 
    application::application()
@@ -62,19 +63,19 @@ namespace app_simple_winnfsd_desktop
    void application::init_instance()
    {
 
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::document >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::frame >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::main_frame >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::tab_impact >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::main_document >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::edit_impact >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::main_impact >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::document >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::frame >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::main_frame >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::tab_impact >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::main_document >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::edit_impact >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::main_impact >();
 
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::document >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::impact >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::document >();
+      factory()->add_factory_item <::app_simple_nfs_desktop::impact >();
 
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::incoming_socket >();
-      factory()->add_factory_item <::app_simple_winnfsd_desktop::socket >();
+      //factory()->add_factory_item <::app_simple_nfs_desktop::incoming_socket >();
+      //factory()->add_factory_item <::app_simple_nfs_desktop::socket >();
 
       //default_toggle_check_handling("simple_checkbox");
 
@@ -90,8 +91,8 @@ namespace app_simple_winnfsd_desktop
       //}
       add_impact_system("main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::type < ::app_simple_winnfsd_desktop::main_document >(),
-                               ::type < ::app_simple_winnfsd_desktop::main_frame >(),
+                               ::type < ::app_simple_nfs_desktop::main_document >(),
+                               ::type < ::app_simple_nfs_desktop::main_frame >(),
                                get_pane_impact_type()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
@@ -114,9 +115,11 @@ namespace app_simple_winnfsd_desktop
 
       //default_data_save_handling("simple_text");
 
-      __defer_construct_new(m_pincomingsocketthread);
+      //__defer_construct_new(m_pincomingsocketthread);
 
       //return true;
+
+      read_ini_configuration();
 
    }
 
@@ -231,7 +234,7 @@ namespace app_simple_winnfsd_desktop
    //}
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

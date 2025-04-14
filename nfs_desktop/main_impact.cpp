@@ -9,7 +9,7 @@
 #include "apex/database/_binary_stream.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
@@ -91,7 +91,7 @@ namespace app_simple_winnfsd_desktop
 
       }
 
-      m_peditimpact = host_impact < ::app_simple_winnfsd_desktop::edit_impact >(0);
+      m_peditimpact = host_impact < ::app_simple_nfs_desktop::edit_impact >(0);
 
       m_peditimpact->m_pmainimpact = this;
 
@@ -102,7 +102,7 @@ namespace app_simple_winnfsd_desktop
 
       }
 
-      m_pimpact = host_impact < ::app_simple_winnfsd_desktop::impact >(1);
+      m_pimpact = host_impact < ::app_simple_nfs_desktop::impact >(1);
 
       if (m_pimpact == NULL)
       {
@@ -164,7 +164,7 @@ namespace app_simple_winnfsd_desktop
    }
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

@@ -4,11 +4,11 @@
 #include "base/user/simple/frame_window.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
-   class CLASS_DECL_APP_SIMPLE_WINNFSD_DESKTOP frame :
+   class CLASS_DECL_APP_SIMPLE_NFS_DESKTOP frame :
       virtual public simple_frame_window
    {
    public:
@@ -28,7 +28,7 @@ namespace app_simple_winnfsd_desktop
    };
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

@@ -9,7 +9,7 @@
 #include "base/user/user/multiple_document_template.h"
 
 
-namespace app_simple_winnfsd_desktop
+namespace app_simple_nfs_desktop
 {
 
 
@@ -47,8 +47,8 @@ namespace app_simple_winnfsd_desktop
 
       m_papp->m_ptabimpact = this;
 
-      set_tab("Menu", MENU_IMPACT);
-      set_tab("app_simple_winnfsd_desktop", MAIN_IMPACT);
+      set_tab("Menu", APP_OPTIONS_IMPACT);
+      set_tab("app_simple_nfs_desktop", MAIN_IMPACT);
 
       set_current_tab_by_id(MAIN_IMPACT);
 
@@ -140,7 +140,7 @@ namespace app_simple_winnfsd_desktop
       case MAIN_IMPACT:
       {
 
-         ::user::impact::create_impact < app_simple_winnfsd_desktop::main_impact >(pimpactdata);
+         ::user::impact::create_impact < app_simple_nfs_desktop::main_impact >(pimpactdata);
 
       }
       break;
@@ -171,7 +171,7 @@ namespace app_simple_winnfsd_desktop
    //}
 
 
-} // namespace app_simple_winnfsd_desktop
+} // namespace app_simple_nfs_desktop
 
 
 

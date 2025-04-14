@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(_app_simple_winnfsd_desktop CXX)
+project(_app_simple_nfs_desktop CXX)
 
 
 
@@ -26,7 +26,7 @@ list(APPEND executable_references
    aura
    axis
    base
-   app_simple_winnfsd_desktop)
+   app_simple_nfs_desktop)
 
 
 if(${LINUX} OR ${__BSD__})
@@ -86,6 +86,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${executable_include_director
 
 target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base app_simple_winnfsd_desktop)
+target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base app_simple_nfs_desktop)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
