@@ -234,7 +234,7 @@ namespace app_simple_nfs_desktop
          {
             break;
          }
-         auto & strLine = stra[i];
+         auto & strLine = stra[iIndex];
          pgraphics->text_out(x, y, strLine);
          y -= 25;
       }

@@ -86,9 +86,9 @@ void CMountProg::Export(const char *path, const char *pathAlias)
 	if (path != NULL && pathAlias != NULL) {
 		if (m_PathMap.count(pathAlias) == 0) {
 			m_PathMap[pathAlias] = formattedPath;
-			printf("Path #%i is: %s, path alias is: %s\n", m_PathMap.size(), path, pathAlias);
+         PrintLog("Path #%i is: %s, path alias is: %s\n", m_PathMap.size(), path, pathAlias);
 		} else {
-			printf("Path %s with path alias %s already known\n", path, pathAlias);
+         PrintLog("Path %s with path alias %s already known\n", path, pathAlias);
 		}
 
 		free(formattedPath);

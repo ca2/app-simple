@@ -44,7 +44,7 @@ public:
    CPortmapProg m_PortmapProg;
    CNFSProg m_NFSProg;
    CMountProg m_MountProg;
-   nfs * m_pnfs;
+   //nfs * m_pnfs;
    //const char * m_sInAddr;
    CDatagramSocket DatagramSockets[SOCKET_NUM];
    CServerSocket ServerSockets[SOCKET_NUM];
