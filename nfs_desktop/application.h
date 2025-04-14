@@ -74,6 +74,8 @@ namespace app_simple_nfs_desktop
       // done through idle/polled evaluation)?
       //DECLARE_MESSAGE_HANDLER(_001OnUpdateSimpleCheckbox);
 
+      void create_options_body(::user::interaction * pparent) override;
+
 
    };
 

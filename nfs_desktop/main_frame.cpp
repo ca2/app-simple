@@ -13,6 +13,8 @@ namespace app_simple_nfs_desktop
 
       //m_bDefaultCreateToolbar = false;
 
+      m_bDefaultNotifyIcon2 = true;
+
       window_enable_full_screen();
 
    }

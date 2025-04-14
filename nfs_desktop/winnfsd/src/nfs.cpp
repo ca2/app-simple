@@ -367,7 +367,7 @@ int nfs::PrintLog(const char * format, ...)
 
       str.formatf_arguments(format, vargs);
 
-      m_pnfs->Print(str);
+      Print(str);
 
       va_end(vargs);
 
@@ -382,10 +382,10 @@ void nfs::start(std::vector<std::vector<std::string>> paths)
 {
 
 	bool bRESULT_SUCCESS;
-	
+
 	m_PortmapProg.Set(PROG_MOUNT, MOUNT_PORT);  //map port for mount
 	m_PortmapProg.Set(PROG_NFS, NFS_PORT);  //map port for nfs
-	m_NFSProg.SetUserID(m_nUID, m_nGID);  //set uid and gid of files
+	m_NFSProg.SetUserID(get_user_id(), get_group_id());  //set uid and gid of files
 
 	mountPaths(paths);
 
@@ -417,12 +417,18 @@ void nfs::start(std::vector<std::vector<std::string>> paths)
          PrintLog("NFS daemon starts failed.\n");
 		}
 	} else {
-		printf("Portmap daemon starts failed.\n");
+      PrintLog("Portmap daemon starts failed.\n");
 	}
 
+	if (bRESULT_SUCCESS) 
+   {
 
-	if (bRESULT_SUCCESS) {
       m_localHost = gethostbyname("");
+
+      PrintLog("User ID %d\n", get_user_id());
+
+      PrintLog("Group ID %d\n", get_group_id());
+
       PrintLog("Listening on %s\n", get_bind_address().c_str());  //local address
 		//inputCommand();  //wait for commands
 	}
@@ -449,16 +455,18 @@ int nfs::main(int argc, char * argv[])
       printUsage(pPath);
       return 1;
    }
-
-   m_nUID = m_nGID = 0;
+   
    m_bLogOn = true;
    m_sFileName = NULL;
+
+   set_user_id(0);
+   set_group_id(0);
    set_bind_address("0.0.0.0");
 
    for (int i = 1; i < argc; i++) {//parse parameters
       if (_stricmp(argv[i], "-id") == 0) {
-         m_nUID = atoi(argv[++i]);
-         m_nGID = atoi(argv[++i]);
+         set_user_id(atoi(argv[++i]));
+         set_group_id(atoi(argv[++i]));
       }
       else if (_stricmp(argv[i], "-log") == 0) {
          m_bLogOn = _stricmp(argv[++i], "off") != 0;
@@ -528,26 +536,42 @@ void nfs::netnode_from_ini_configuration()
 
    read_ini_configuration();
 
-   simple_netnode();
+   run_netnode();
 
 }
 
 
-void nfs::simple_netnode()
+void nfs::run_netnode()
 {
 
    // minimal configuration example:
    // user_id=1001
    // group_id=1001
    // bind_address=1001
-   // =1001
+   // mount_path_1=C:\Dropbox
+   // mount_alias_1=/dropbox
 
    
-   m_nUID = iUsr;
+   //m_nUID = iUsr;
    
-   m_nGID = iGrp;
+   //m_nGID = iGrp;
    
    //set_bind_address(pAddr);
+
+   std::vector<std::vector<std::string>> paths;
+
+   int iCount = get_mount_count();
+
+   for (int i = 0; i < iCount; i++)
+   {
+
+      auto path = get_mount_path(i);
+
+      auto alias = get_mount_alias(i);
+
+      paths.push_back({ path.c_str(), alias.c_str() });
+
+   }
 
    main_start(paths);
 
