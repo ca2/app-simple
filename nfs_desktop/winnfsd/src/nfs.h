@@ -37,7 +37,7 @@ public:
    std::vector<std::vector<std::string>> pPaths;
    char * pPath = NULL;
    bool pathFile = false;
-   unsigned int m_nUID, m_nGID;
+   //unsigned int m_nUID, m_nGID;
    bool m_bLogOn;
    char * m_sFileName;
    CRPCServer m_RPCServer;
@@ -66,9 +66,26 @@ public:
 
    virtual void Print(const ::scoped_string & scopedstr);
 
+
+   bool include_hostname_in_configuration_path() override;
+
    virtual ::string get_bind_address() const;
    virtual void set_bind_address(const ::scoped_string & scopedstrBindAddress);
 
+   virtual int get_user_id() const;
+   virtual void set_user_id(int iUserId);
+
+   virtual int get_group_id() const;
+   virtual void set_group_id(int iUserId);
+
+
+   virtual ::file::path get_mount_path(int iIndex) const;
+   virtual void set_mount_path(int iIndex, const ::file::path & path);
+
+   virtual ::string get_mount_alias(int iIndex) const;
+   virtual void set_mount_alias(int iIndex, const ::scoped_string & scopedstrAlias);
+
+   virtual int get_mount_count();
 
    void printAbout();
    void printUsage(char * pFile);
@@ -77,7 +94,8 @@ public:
 
    //-id 1001 1001 - addr 192.168.0.89 - pathFile C : / Dropbox / winnfsd.txt
 
-   void simple_server(int iUsr, int iGrp, const char * pAddr, std::vector<std::vector<std::string>> paths);
+   void netnode_from_ini_configuration();
+   void run_netnode();
 
    void main_start(std::vector<std::vector<std::string>> paths);
 

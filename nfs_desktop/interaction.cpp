@@ -99,12 +99,15 @@ namespace app_simple_nfs_desktop
 
       __construct_new(m_papp->m_pnfs);
 
-      std::vector<std::vector<std::string>> paths;
 
-      paths.push_back({ "C:\\Users\\camilo\\nfs", "/nfs" });
-      paths.push_back({ "C:\\Dropbox", "/dropbox" });
+      m_papp->m_pnfs->netnode_from_ini_configuration();
 
-      m_papp->m_pnfs->simple_server(1001, 1001, "192.168.0.89", paths);
+      //std::vector<std::vector<std::string>> paths;
+
+      //paths.push_back({ "C:\\Users\\camilo\\nfs", "/nfs" });
+      //paths.push_back({ "C:\\Dropbox", "/dropbox" });
+
+      //m_papp->m_pnfs->simple_server(1001, 1001, "192.168.0.89", paths);
 
 
    }
