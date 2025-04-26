@@ -115,7 +115,7 @@ namespace app_simple_http_folder_upload
       fork([this, strUrl]()
       {
 
-         property_set set;
+         ::property_set set;
 
          auto & http = application()->http();
 
