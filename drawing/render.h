@@ -5,7 +5,7 @@
 //
 //#define __PROPERTIES2(xxx)\
 //class xxx ## _properties: \
-//   public property_set \
+//   public ::property_set \
 //{ \
 //public: \
 //

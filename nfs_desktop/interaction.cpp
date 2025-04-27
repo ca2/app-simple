@@ -127,7 +127,7 @@ namespace app_simple_nfs_desktop
       fork([this, strUrl]()
       {
 
-         property_set set;
+         ::property_set set;
 
          ::cast < ::database::client > pdatabaseclient = application();
 
