@@ -2,8 +2,9 @@
 #define _MOUNTPROG_H_
 
 #include "RPCProg.h"
-#include <map>
-#include <string>
+//#include <map>
+//#include <string>
+#include "acme/prototype/collection/string_map.h"
 
 #define MOUNT_NUM_MAX 100
 #define MOUNT_PATH_MAX 100
@@ -19,18 +20,19 @@ class CMountProg : public CRPCProg
     public:
     CMountProg(nfs * pnfs);
     virtual ~CMountProg();
-	bool SetPathFile(const char *file);
+	//bool SetPathFile(const char *file);
     void Export(const char *path, const char *pathAlias);
 	bool Refresh();
     char *GetClientAddr(int nIndex);
     int GetMountNumber(void);
     int Process(IInputStream *pInStream, IOutputStream *pOutStream, ProcessParam *pParam);
-	char *FormatPath(const char *pPath, pathFormats format);
+	//char *FormatPath(const char *pPath, pathFormats format);
 
     protected:
     int m_nMountNum;
-	char *m_pPathFile;
-	std::map<std::string, std::string> m_PathMap;
+	//char *m_pPathFile;
+	//std::map<::string, ::string> m_PathMap;
+    string_to_string m_PathMap;
     char *m_pClientAddr[MOUNT_NUM_MAX];
     IInputStream *m_pInStream;
     IOutputStream *m_pOutStream;
@@ -46,9 +48,9 @@ class CMountProg : public CRPCProg
     ProcessParam *m_pParam;
     int m_nResult;
 
-	bool GetPath(char **returnPath);
-    char *GetPath(int &pathNumber);
-	bool ReadPathsFromFile(const char* sFileName);
+	bool GetPath(::file::path & path);
+   ::file::path GetPath(int &pathNumber);
+	//bool ReadPathsFromFile(const char* sFileName);
 };
 
 #endif

@@ -175,7 +175,7 @@ class nfspath3 : public opaque
 	nfspath3();
 	~nfspath3();
 	void SetSize(uint32 len);
-    void Set(const char *str);
+    void Set(const ::file::path & path);
 };
 
 typedef struct
@@ -405,9 +405,9 @@ class CNFS3Prog : public CRPCProg
     private:
     int m_nResult;
 
-    bool GetPath(std::string &path);
-    bool ReadDirectory(std::string &dirName, std::string &fileName);
-    char *GetFullPath(std::string &dirName, std::string &fileName);
+    bool GetPath(::file::path &path);
+    bool ReadDirectory(::file::path & dirName, ::string &fileName);
+    char *GetFullPath(::string &dirName, ::string &fileName);
     nfsstat3 CheckFile(const char *fullPath);
     nfsstat3 CheckFile(const char *directory, const char *fullPath);
     bool GetFileHandle(const char *path, nfs_fh3 *pObject);
@@ -416,10 +416,10 @@ class CNFS3Prog : public CRPCProg
     bool GetFileAttributesForNFS(const char *path, wcc_attr *pAttr);
     bool GetFileAttributesForNFS(const char *path, fattr3 *pAttr);
     bool GetFileAttributesForNFS(FILE * pfile, const char * path, wcc_attr * pAttr);
-    bool GetFileAttributesForNFS(FILE * pfile, FILE_ITEM * pfileitem, const char * path, fattr3 * pAttr);
+    bool GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const char * path, fattr3 * pAttr);
     UINT32 FileTimeToPOSIX(FILETIME ft);
-    std::unordered_map<int, FILE*> unstableStorageFile1;
-    std::unordered_map<int, ::pointer < memory_file >> unstableStorageFile;
+    //std::unordered_map<int, FILE*> unstableStorageFile1;
+    //std::unordered_map<int, ::pointer < memory_file >> unstableStorageFile;
 };
 
 #endif

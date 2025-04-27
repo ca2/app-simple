@@ -11,7 +11,7 @@
 //
 //nfsstat3 CNFS3Prog::ProcedureWRITE(void)
 //{
-//   std::string path;
+//   ::string path;
 //   offset3 offset;
 //   count3 count;
 //   stable_how stable;
@@ -42,7 +42,7 @@
 //         ::pointer < ::memory_file >  pfile;
 //
 //         nfs_fh3 handle;
-//         GetFileHandle(cStr, &handle);
+//         get_file_handle(cStr, &handle);
 //         int handleId = *(unsigned int *)handle.contents;
 //
 //         if (unstableStorageFile.count(handleId) == 0) {
