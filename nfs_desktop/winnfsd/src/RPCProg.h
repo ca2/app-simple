@@ -3,6 +3,7 @@
 
 #include "InputStream.h"
 #include "OutputStream.h"
+#include "FileTable.h"
 
 /* The maximum number of bytes in a pathname argument. */
 #define MAXPATHLEN 1024
@@ -28,7 +29,8 @@ typedef struct
     char *pRemoteAddr;
 } ProcessParam;
 class nfs;
-class CRPCProg
+class CRPCProg :
+   public CFileTableAccessor
 {
     public:
 

@@ -109,11 +109,11 @@ void nfspath3::SetSize(uint32 len)
     path = (char *)contents;
 }
 
-void nfspath3::Set(const char *str)
+void nfspath3::Set(const ::file::path &pathParam)
 {
-   auto len = strlen(str);
+   auto len = strlen(pathParam);
     SetSize(len);
-    strcpy_s(path, (len + 1), str);
+    strcpy_s(path, (len + 1), pathParam);
 }
 
 typedef nfsstat3(CNFS3Prog::*PPROC)(void);
@@ -358,7 +358,7 @@ nfsstat3 CNFS3Prog::ProcedureNULL(void)
 
 nfsstat3 CNFS3Prog::ProcedureGETATTR(void)
 {
-    std::string path;
+    ::file::path path;
     fattr3 obj_attributes;
     nfsstat3 stat;
 
@@ -386,7 +386,7 @@ nfsstat3 CNFS3Prog::ProcedureGETATTR(void)
 
 nfsstat3 CNFS3Prog::ProcedureSETATTR(void)
 {
-    std::string path;
+   ::file::path path;
     sattr3 new_attributes;
     sattrguard3 guard;
     wcc_data obj_wcc;
@@ -481,8 +481,8 @@ nfsstat3 CNFS3Prog::ProcedureLOOKUP(void)
 
     PrintLog("LOOKUP");
 
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
 
     path = GetFullPath(dirName, fileName);
@@ -509,7 +509,7 @@ nfsstat3 CNFS3Prog::ProcedureLOOKUP(void)
 
 nfsstat3 CNFS3Prog::ProcedureACCESS(void)
 {
-    std::string path;
+   ::file::path path;
     uint32 access;
     post_op_attr obj_attributes;
     nfsstat3 stat;
@@ -539,7 +539,7 @@ nfsstat3 CNFS3Prog::ProcedureACCESS(void)
 nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
 {
     PrintLog("READLINK");
-    std::string path;
+    ::file::path path;
     char *pMBBuffer = 0;
 
     post_op_attr symlink_attributes;
@@ -571,7 +571,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
             }
             else {
                 DeviceIoControl(hFile, FSCTL_GET_REPARSE_POINT, NULL, 0, lpOutBuffer, MAXIMUM_REPARSE_DATA_BUFFER_SIZE, &bytesReturned, NULL);
-                std::string finalSymlinkPath;
+                ::string finalSymlinkPath;
                 if (lpOutBuffer->ReparseTag == IO_REPARSE_TAG_SYMLINK || lpOutBuffer->ReparseTag == IO_REPARSE_TAG_MOUNT_POINT)
                 {
                     if (lpOutBuffer->ReparseTag == IO_REPARSE_TAG_SYMLINK)
@@ -580,25 +580,25 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
                         WCHAR *szPrintName = new WCHAR[plen + 1];
                         wcsncpy_s(szPrintName, plen + 1, &lpOutBuffer->SymbolicLinkReparseBuffer.PathBuffer[lpOutBuffer->SymbolicLinkReparseBuffer.PrintNameOffset / sizeof(WCHAR)], plen);
                         szPrintName[plen] = 0;
-                        std::wstring wStringTemp(szPrintName);
+                        wstring wStringTemp(szPrintName);
                         delete[] szPrintName;
-                        std::string cPrintName(wStringTemp.begin(), wStringTemp.end());
+                        ::string cPrintName(wStringTemp.begin(), wStringTemp.end());
                         finalSymlinkPath.assign(cPrintName);
                         // TODO: Revisit with cleaner solution
                         if (!PathIsRelativeA(cPrintName.c_str()))
                         {
-                            std::string strFromChar;
+                            ::string strFromChar;
                             strFromChar.append("\\\\?\\");
                             strFromChar.append(cPrintName);
                             char *target = _strdup(strFromChar.c_str());
                             // remove last folder
-                            size_t lastFolderIndex = path.find_last_of('\\');
-                            if (lastFolderIndex != std::string::npos) {
+                            auto lastFolderIndex = path.rear_find_index('\\');
+                            if (lastFolderIndex>= 0) {
                                 path = path.substr(0, lastFolderIndex);
                             }
                             char szOut[MAX_PATH] = "";
                             PathRelativePathToA(szOut, cStr, FILE_ATTRIBUTE_DIRECTORY, target, FILE_ATTRIBUTE_DIRECTORY);
-                            std::string symlinkPath(szOut);
+                            ::string symlinkPath(szOut);
                             finalSymlinkPath.assign(symlinkPath);
                         }
                     }
@@ -610,25 +610,27 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
                         WCHAR *szSubName = new WCHAR[slen + 1];
                         wcsncpy_s(szSubName, slen + 1, &lpOutBuffer->MountPointReparseBuffer.PathBuffer[lpOutBuffer->MountPointReparseBuffer.SubstituteNameOffset / sizeof(WCHAR)], slen);
                         szSubName[slen] = 0;
-                        std::wstring wStringTemp(szSubName);
+                        wstring wStringTemp(szSubName);
                         delete[] szSubName;
-                        std::string target(wStringTemp.begin(), wStringTemp.end());
-                        target.erase(0, 2);
-                        target.insert(0, 2, '\\');
+                        ::string target(wStringTemp.begin(), wStringTemp.end());
+                        target.erase((character_count)0, (character_count)2);
+                        target.insert(0, '\\');
+                        target.insert(0, '\\');
                         // remove last folder, see above
-                        size_t lastFolderIndex = path.find_last_of('\\');
-                        if (lastFolderIndex != std::string::npos) {
+                        auto lastFolderIndex = path.rear_find_index('\\');
+                        if (lastFolderIndex >= 0) {
                             path = path.substr(0, lastFolderIndex);
                         }
                         char szOut[MAX_PATH] = "";
                         PathRelativePathToA(szOut, cStr, FILE_ATTRIBUTE_DIRECTORY, target.c_str(), FILE_ATTRIBUTE_DIRECTORY);
-                        std::string symlinkPath = szOut;
+                        ::string symlinkPath = szOut;
                         finalSymlinkPath.assign(symlinkPath);
                     }
 
                     // write path always with / separator, so windows created symlinks work too
-                    std::replace(finalSymlinkPath.begin(), finalSymlinkPath.end(), '\\', '/');
-                    char *result = _strdup(finalSymlinkPath.c_str());
+                    /// std::replace(finalSymlinkPath.begin(), finalSymlinkPath.end(), '\\', '/');
+                    //char *result = _strdup(finalSymlinkPath.c_str());
+                    ::file::path result(finalSymlinkPath);
                     data.Set(result);
                 }
                 free(lpOutBuffer);
@@ -650,7 +652,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
 
 nfsstat3 CNFS3Prog::ProcedureREAD(void)
 {
-    std::string path;
+   ::file::path path;
     offset3 offset;
     count3 count;
     post_op_attr file_attributes;
@@ -705,7 +707,7 @@ nfsstat3 CNFS3Prog::ProcedureREAD(void)
 
 nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
 {
-   std::string path;
+   ::file::path path;
    offset3 offset;
    count3 count;
    stable_how stable;
@@ -731,23 +733,47 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
     Read(&data);
     stat = CheckFile(cStr);
 
-    auto pfileitem = GetFileItem(cStr);
+    auto pfileitem = get_item_by_path(cStr);
 
     if (stat == NFS3_OK) {
+       _synchronous_lock synchronouslock(m_pmutexCleanup);
+
+       if (!pfileitem->m_t.m_pLastFile)
+       {
+
+          pfileitem->m_t.m_pLastFile = _fsopen(cStr, "r+b", _SH_DENYWR);
+
+          m_fileitemaCleanup.add(&pfileitem->m_t);
+
+       }
+
+       pfileitem->m_t.m_timeLastFile.Now();
+
+       pFile = pfileitem->m_t.m_pLastFile;
+
 
         if (stable == UNSTABLE) {
             nfs_fh3 handle;
             GetFileHandle(cStr, &handle);
             int handleId = *(unsigned int *)handle.contents;
 
-            if (unstableStorageFile1.count(handleId) == 0){
-                pFile = _fsopen(cStr, "r+b", _SH_DENYWR);
-                if (pFile != NULL) {
-                   unstableStorageFile1.insert(std::make_pair(handleId, pFile));
-                }
-            } else {
-                pFile = unstableStorageFile1[handleId];
-            }
+
+
+            ////if (unstableStorageFile1.count(handleId) == 0){
+            //   if (!pfileitem->m_t.m_pLastFile)
+            //   {
+
+            //      pfileitem->m_t.m_pLastFile = _fsopen(cStr, "r+b", _SH_DENYWR);
+
+            //   }
+            //   // pFile = _fsopen(cStr, "r+b", _SH_DENYWR);
+            //   pFile = pfileitem->m_t.m_pLastFile;
+            //    //if (pFile != NULL) {
+            //      // unstableStorageFile1.insert(std::make_pair(handleId, pFile));
+            //    //}
+            ////} else {
+            ////    pFile = unstableStorageFile1[handleId];
+            ////}
 
             file_wcc.before.attributes_follow = GetFileAttributesForNFS(pFile, cStr, &file_wcc.before.attributes);
 
@@ -773,21 +799,6 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
             //file_wcc.after.attributes_follow = file_wcc.before.attributes_follow;
             file_wcc.after.attributes_follow = GetFileAttributesForNFS(pFile,pfileitem, cStr, &file_wcc.after.attributes);
         } else {
-
-           _synchronous_lock synchronouslock(m_pmutexCleanup);
-
-           if (!pfileitem->m_pLastFile)
-           {
-
-              pfileitem->m_pLastFile = _fsopen(cStr, "r+b", _SH_DENYWR);
-
-              m_fileitemaCleanup.add(pfileitem);
-
-           }
-
-           pfileitem->m_timeLastFile.Now();
-
-           pFile = pfileitem->m_pLastFile;
 
             if (pFile != NULL) {
                file_wcc.before.attributes_follow = GetFileAttributesForNFS(pFile, cStr, &file_wcc.before.attributes);
@@ -853,8 +864,8 @@ nfsstat3 CNFS3Prog::ProcedureCREATE(void)
     FILE *pFile;
 
     PrintLog("CREATE");
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
     path = GetFullPath(dirName, fileName);
     Read(&how);
@@ -911,8 +922,8 @@ nfsstat3 CNFS3Prog::ProcedureMKDIR(void)
 
     PrintLog("MKDIR");
 
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
     path = GetFullPath(dirName, fileName);
     Read(&attributes);
@@ -968,8 +979,8 @@ nfsstat3 CNFS3Prog::ProcedureSYMLINK(void)
     DWORD targetFileAttr;
     DWORD dwFlags;
 
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
     path = GetFullPath(dirName, fileName);
 
@@ -981,12 +992,12 @@ nfsstat3 CNFS3Prog::ProcedureSYMLINK(void)
     // Convert target path to windows path format, maybe this could also be done
     // in a safer way by a combination of PathRelativePathTo and GetFullPathName.
     // Without this conversion nested folder symlinks do not work cross platform.
-    std::string strFromChar;
-    strFromChar.append(symlink.symlink_data.path); // target (should be relative path));
-    std::replace(strFromChar.begin(), strFromChar.end(), '/', '\\');
+    ::file::path strFromChar(symlink.symlink_data.path);
+    //strFromChar.append(symlink.symlink_data.path); // target (should be relative path));
+    // std::replace(strFromChar.begin(), strFromChar.end(), '/', '\\');
     _In_ LPSTR lpTargetFileName = const_cast<LPSTR>(strFromChar.c_str());
 
-    std::string fullTargetPath = dirName + std::string("\\") + std::string(lpTargetFileName);
+    ::string fullTargetPath = dirName + ::string("\\") + ::string(lpTargetFileName);
 
     // Relative path do not work with GetFileAttributes (directory are not recognized)
     // so we normalize the path before calling GetFileAttributes
@@ -1047,8 +1058,8 @@ nfsstat3 CNFS3Prog::ProcedureREMOVE(void)
 
     PrintLog("REMOVE");
 
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
     path = GetFullPath(dirName, fileName);
     stat = CheckFile((char*)dirName.c_str(), path);
@@ -1058,7 +1069,7 @@ nfsstat3 CNFS3Prog::ProcedureREMOVE(void)
     if (stat == NFS3_OK) {
         DWORD fileAttr = GetFileAttributesA(path);
         if ((fileAttr & FILE_ATTRIBUTE_DIRECTORY) && (fileAttr & FILE_ATTRIBUTE_REPARSE_POINT)) {
-            returnCode = RemoveFolder(path);
+            returnCode = EraseFolder(path);
             if (returnCode != 0) {
                 if (returnCode == ERROR_DIR_NOT_EMPTY) {
                     stat = NFS3ERR_NOTEMPTY;
@@ -1067,7 +1078,7 @@ nfsstat3 CNFS3Prog::ProcedureREMOVE(void)
                 }
             }
         } else {
-            if (!RemoveFile(path)) {
+            if (!EraseFile(path)) {
                 stat = NFS3ERR_IO;
             }
         }
@@ -1090,8 +1101,8 @@ nfsstat3 CNFS3Prog::ProcedureRMDIR(void)
 
     PrintLog("RMDIR");
 
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     ReadDirectory(dirName, fileName);
     path = GetFullPath(dirName, fileName);
     stat = CheckFile((char*)dirName.c_str(), path);
@@ -1099,7 +1110,7 @@ nfsstat3 CNFS3Prog::ProcedureRMDIR(void)
     dir_wcc.before.attributes_follow = GetFileAttributesForNFS((char*)dirName.c_str(), &dir_wcc.before.attributes);
 
     if (stat == NFS3_OK) {
-        returnCode = RemoveFolder(path);
+        returnCode = EraseFolder(path);
         if (returnCode != 0) {
             if (returnCode == ERROR_DIR_NOT_EMPTY) {
                 stat = NFS3ERR_NOTEMPTY;
@@ -1126,13 +1137,13 @@ nfsstat3 CNFS3Prog::ProcedureRENAME(void)
 
     PrintLog("RENAME");
 
-    std::string dirFromName;
-    std::string fileFromName;
+    ::file::path dirFromName;
+    ::string fileFromName;
     ReadDirectory(dirFromName, fileFromName);
     strcpy_s(pathFrom, GetFullPath(dirFromName, fileFromName));
 
-    std::string dirToName;
-    std::string fileToName;
+    ::file::path dirToName;
+    ::string fileToName;
     ReadDirectory(dirToName, fileToName);
     pathTo = GetFullPath(dirToName, fileToName);
 
@@ -1144,7 +1155,7 @@ nfsstat3 CNFS3Prog::ProcedureRENAME(void)
     if (FileExists(pathTo)) {
 		DWORD fileAttr = GetFileAttributesA(pathTo);
 		if ((fileAttr & FILE_ATTRIBUTE_DIRECTORY) && (fileAttr & FILE_ATTRIBUTE_REPARSE_POINT)) {
-			returnCode = RemoveFolder(pathTo);
+			returnCode = EraseFolder(pathTo);
 			if (returnCode != 0) {
 				if (returnCode == ERROR_DIR_NOT_EMPTY) {
 					stat = NFS3ERR_NOTEMPTY;
@@ -1154,7 +1165,7 @@ nfsstat3 CNFS3Prog::ProcedureRENAME(void)
 			}
 		}
 		else {
-			if (!RemoveFile(pathTo)) {
+			if (!EraseFile(pathTo)) {
 				stat = NFS3ERR_IO;
 			}
 		}
@@ -1189,10 +1200,10 @@ nfsstat3 CNFS3Prog::ProcedureRENAME(void)
 nfsstat3 CNFS3Prog::ProcedureLINK(void)
 {
     PrintLog("LINK");
-    std::string path;
+    ::file::path path;
     diropargs3 link;
-    std::string dirName;
-    std::string fileName;
+    ::file::path dirName;
+    ::string fileName;
     nfsstat3 stat;
     post_op_attr obj_attributes;
     wcc_data dir_wcc;
@@ -1227,7 +1238,7 @@ nfsstat3 CNFS3Prog::ProcedureLINK(void)
 
 nfsstat3 CNFS3Prog::ProcedureREADDIR(void)
 {
-    std::string path;
+    ::file::path path;
     cookie3 cookie;
     cookieverf3 cookieverf;
     count3 count;
@@ -1286,7 +1297,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIR(void)
 
                     ::string strName(fileinfo.name);
                     sprintf_s(filePath, "%s\\%s", cStr, strName.c_str());
-                    fileid = GetFileID(filePath);
+                    fileid = get_file_handle(filePath).m_ll;
                     Write(&fileid); //file id
                     name.Set(strName);
                     Write(&name); //name
@@ -1312,7 +1323,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIR(void)
 
 nfsstat3 CNFS3Prog::ProcedureREADDIRPLUS(void)
 {
-    std::string path;
+    ::file::path path;
     cookie3 cookie;
     cookieverf3 cookieverf;
     count3 dircount, maxcount;
@@ -1370,7 +1381,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIRPLUS(void)
                     Write(&bFollows); //value follows
                     ::string strName(fileinfo.name);
                     sprintf_s(filePath, "%s\\%s", cStr, strName.c_str());
-                    fileid = GetFileID(filePath);
+                    fileid = get_file_handle(filePath).m_ll;
                     Write(&fileid); //file id
                     name.Set(strName);
                     Write(&name); //name
@@ -1401,7 +1412,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIRPLUS(void)
 
 nfsstat3 CNFS3Prog::ProcedureFSSTAT(void)
 {
-    std::string path;
+    ::file::path path;
     post_op_attr obj_attributes;
     size3 tbytes, fbytes, abytes, tfiles, ffiles, afiles;
     uint32 invarsec;
@@ -1446,7 +1457,7 @@ nfsstat3 CNFS3Prog::ProcedureFSSTAT(void)
 
 nfsstat3 CNFS3Prog::ProcedureFSINFO(void)
 {
-    std::string path;
+    ::file::path path;
     post_op_attr obj_attributes;
     uint32 rtmax, rtpref, rtmult, wtmax, wtpref, wtmult, dtpref;
     size3 maxfilesize;
@@ -1500,7 +1511,7 @@ nfsstat3 CNFS3Prog::ProcedureFSINFO(void)
 
 nfsstat3 CNFS3Prog::ProcedurePATHCONF(void)
 {
-    std::string path;
+    ::file::path path;
     post_op_attr obj_attributes;
     nfsstat3 stat;
     uint32 linkmax, name_max;
@@ -1543,7 +1554,7 @@ nfsstat3 CNFS3Prog::ProcedurePATHCONF(void)
 
 nfsstat3 CNFS3Prog::ProcedureCOMMIT(void)
 {
-    std::string path;
+    //::file::path path;
     int handleId;
     offset3 offset;
     count3 count;
@@ -1554,10 +1565,10 @@ nfsstat3 CNFS3Prog::ProcedureCOMMIT(void)
 
     PrintLog("COMMIT");
     Read(&file);
-    bool validHandle = GetFilePath(file.contents, path);
-    const char* cStr = validHandle ? path.c_str() : NULL;
+    auto path = GetFilePath(file);
+    const char* cStr = path.has_character() ? path.c_str() : NULL;
 
-    if (validHandle) {
+    if (path.has_character()) {
         PrintLog(" %s ", path.c_str());
     }
 
@@ -1572,23 +1583,33 @@ nfsstat3 CNFS3Prog::ProcedureCOMMIT(void)
 
     handleId = *(unsigned int*)file.contents;
 
-    if (unstableStorageFile1.count(handleId) != 0) {
-       if (unstableStorageFile1[handleId] != NULL) {
-          fclose(unstableStorageFile1[handleId]);
-          unstableStorageFile1.erase(handleId);
+    {
+
+       auto pfileitem = get_item_by_path(cStr);
+
+       _synchronous_lock synchronouslock(m_pmutexCleanup);
+
+       if (pfileitem->m_t.m_pLastFile)
+       {
+
+          fflush(pfileitem->m_t.m_pLastFile);
+
           stat = NFS3_OK;
        }
-    }
-    else if (unstableStorageFile[handleId] != NULL) 
-    {
-       m_pnfs->file()->copy(cStr, unstableStorageFile[handleId]);
-        unstableStorageFile.erase(handleId);
-        stat = NFS3_OK;
-    
-    } else 
-    {
+       else
+       //}
+       //else if (unstableStorageFile[handleId] != NULL) 
+       //{
+       //   m_pnfs->file()->copy(cStr, unstableStorageFile[handleId]);
+       //    unstableStorageFile.erase(handleId);
+       //    stat = NFS3_OK;
+       //
+       //} else 
+       {
           stat = NFS3ERR_IO;
-      }
+       }
+
+    }
 
     file_wcc.after.attributes_follow = GetFileAttributesForNFS(cStr, &file_wcc.after.attributes);
 
@@ -1829,12 +1850,13 @@ void CNFS3Prog::Write(wcc_attr *pAttr)
     Write(&pAttr->ctime);
 }
 
-bool CNFS3Prog::GetPath(std::string &path)
+bool CNFS3Prog::GetPath(::file::path &path)
 {
     nfs_fh3 object;
 
     Read(&object);
-    bool valid = GetFilePath(object.contents, path);
+     path = GetFilePath(object);
+     bool valid = path.has_character();
     if (valid) {
         PrintLog(" %s ", path.c_str());
     } else {
@@ -1844,13 +1866,15 @@ bool CNFS3Prog::GetPath(std::string &path)
     return valid;
 }
 
-bool CNFS3Prog::ReadDirectory(std::string &dirName, std::string &fileName)
+bool CNFS3Prog::ReadDirectory(::file::path & dirName, ::string &fileName)
 {
     diropargs3 fileRequest;
     Read(&fileRequest);
 
-    if (GetFilePath(fileRequest.dir.contents, dirName)) {
-        fileName = std::string(fileRequest.name.name);
+    dirName = GetFilePath(fileRequest.dir);
+
+    if (dirName.has_character()) {
+        fileName = ::string(fileRequest.name.name);
         return true;
     } else {
         return false;
@@ -1859,16 +1883,16 @@ bool CNFS3Prog::ReadDirectory(std::string &dirName, std::string &fileName)
     //PrintLog(" %s | %s ", dirName.c_str(), fileName.c_str());
 }
 
-char *CNFS3Prog::GetFullPath(std::string &dirName, std::string &fileName)
+char *CNFS3Prog::GetFullPath(::string &dirName, ::string &fileName)
 {
-    //TODO: Return std::string
+    //TODO: Return ::string
     static char fullPath[MAXPATHLEN + 1];
 
     if (dirName.size() + 1 + fileName.size() > MAXPATHLEN) {
         return NULL;
     }
 
-    sprintf_s(fullPath, "%s\\%s", dirName.c_str(), fileName.c_str()); //concate path and filename
+    sprintf_s(fullPath, "%s/%s", dirName.c_str(), fileName.c_str()); //concate path and filename
     PrintLog(" %s ", fullPath);
 
     return fullPath;
@@ -1914,11 +1938,13 @@ nfsstat3 CNFS3Prog::CheckFile(const char *directory, const char *fullPath)
 
 bool CNFS3Prog::GetFileHandle(const char *path, nfs_fh3 *pObject)
 {
-	if (!::GetFileHandle(path)) {
+
+   auto filehandle = CFileTableAccessor::get_file_handle(path);
+	if (!filehandle.m_ll) {
 		PrintLog("no filehandle(path %s)", path);
 		return false;
 	}
-    auto err = memcpy_s(pObject->contents, NFS3_FHSIZE, ::GetFileHandle(path), pObject->length);
+    auto err = memcpy_s(pObject->contents, NFS3_FHSIZE, &filehandle.m_ll, pObject->length);
 	if (err != 0) {
 		PrintLog(" err %d ", err);
 		return false;
@@ -2051,7 +2077,7 @@ bool CNFS3Prog::GetUnstableFileAttributesForNFS(::memory_file * pfile, const cha
    pAttr->rdev.specdata1 = 0;
    pAttr->rdev.specdata2 = 0;
    pAttr->fsid = 7; //NTFS //4; 
-   pAttr->fileid = GetFileID(path);
+   pAttr->fileid = get_file_handle(path).m_ll;
    pAttr->atime.seconds = time.m_iSecond;
    pAttr->atime.nseconds = 0;
    pAttr->mtime.seconds = time.m_iSecond;
@@ -2137,7 +2163,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(const char *path, fattr3 *pAttr)
     pAttr->rdev.specdata1 = 0;
     pAttr->rdev.specdata2 = 0;
     pAttr->fsid = 7; //NTFS //4; 
-    pAttr->fileid = GetFileID(path);
+    pAttr->fileid = get_file_handle(path).m_ll;
     pAttr->atime.seconds = FileTimeToPOSIX(lpFileInformation.ftLastAccessTime);
     pAttr->atime.nseconds = 0;
     pAttr->mtime.seconds = FileTimeToPOSIX(lpFileInformation.ftLastWriteTime);
@@ -2150,7 +2176,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(const char *path, fattr3 *pAttr)
 }
 
 
-bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, FILE_ITEM * pfileitem, const char * path, fattr3 * pAttr)
+bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const char * path, fattr3 * pAttr)
 {
 
    DWORD fileAttr;
@@ -2164,16 +2190,16 @@ bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, FILE_ITEM * pfileitem, con
 
    class ::time timeNow(now_t{});
 
-   if ((timeNow - pfileitem->m_timeLastFileAttribute) > 1_s)
+   if ((timeNow - pfileitem->m_t.m_timeLastFileAttribute) > 1_s)
    {
 
-      pfileitem->m_uLastFileAttributes = GetFileAttributesW(wstrPath);
+      pfileitem->m_t.m_uLastFileAttributes = GetFileAttributesW(wstrPath);
 
-      pfileitem->m_timeLastFileAttribute = timeNow;
+      pfileitem->m_t.m_timeLastFileAttribute = timeNow;
 
    }
 
-   fileAttr = pfileitem->m_uLastFileAttributes;
+   fileAttr = pfileitem->m_t.m_uLastFileAttributes;
 
    if (path == NULL || fileAttr == INVALID_FILE_ATTRIBUTES)
    {
@@ -2237,7 +2263,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, FILE_ITEM * pfileitem, con
    pAttr->rdev.specdata1 = 0;
    pAttr->rdev.specdata2 = 0;
    pAttr->fsid = 7; //NTFS //4; 
-   pAttr->fileid = GetFileID(path);
+   pAttr->fileid = get_file_handle(path).m_ll;
    pAttr->atime.seconds = FileTimeToPOSIX(lpFileInformation.ftLastAccessTime);
    pAttr->atime.nseconds = 0;
    pAttr->mtime.seconds = FileTimeToPOSIX(lpFileInformation.ftLastWriteTime);

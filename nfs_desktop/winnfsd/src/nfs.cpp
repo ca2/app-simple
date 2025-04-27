@@ -15,7 +15,7 @@ nfs::nfs() :
    m_MountProg(this)
 
 {
-
+   //m_pfiletable = new CFileTable();
 
 }
 
@@ -27,7 +27,7 @@ nfs::~nfs()
       ServerSockets[i].Close();
    }
 
-
+   //delete m_pfiletable;
 }
 
 
@@ -291,7 +291,7 @@ void nfs::printConfirmQuit(void)
     printf("Are you sure to quit? (y/N): ");
 }
 
-void nfs::mountPaths(std::vector<std::vector<std::string>> paths)
+void nfs::mountPaths(std::vector<std::vector<::string>> paths)
 {
 	int i;
 	int numberOfElements = paths.size();
@@ -378,7 +378,7 @@ int nfs::PrintLog(const char * format, ...)
 }
 
 
-void nfs::start(std::vector<std::vector<std::string>> paths)
+void nfs::start(std::vector<std::vector<::string>> paths)
 {
 
 	bool bRESULT_SUCCESS;
@@ -442,7 +442,7 @@ void nfs::start(std::vector<std::vector<std::string>> paths)
 
 int nfs::main(int argc, char * argv[])
 {
-   std::vector<std::vector<std::string>> pPaths;
+   std::vector<std::vector<::string>> pPaths;
    char * pPath = NULL;
    bool pathFile = false;
 
@@ -474,27 +474,27 @@ int nfs::main(int argc, char * argv[])
       else if (_stricmp(argv[i], "-addr") == 0) {
          set_bind_address(argv[++i]);
       }
-      else if (_stricmp(argv[i], "-pathFile") == 0) {
-         m_sFileName = argv[++i];
+      //else if (_stricmp(argv[i], "-pathFile") == 0) {
+      //   m_sFileName = argv[++i];
 
-         if (m_MountProg.SetPathFile(m_sFileName) == false) {
-            printf("Can't open file %s.\n", m_sFileName);
-            return 1;
-         }
-         else {
-            m_MountProg.Refresh();
-            pathFile = true;
-         }
-      }
+      //   if (m_MountProg.SetPathFile(m_sFileName) == false) {
+      //      printf("Can't open file %s.\n", m_sFileName);
+      //      return 1;
+      //   }
+      //   else {
+      //      m_MountProg.Refresh();
+      //      pathFile = true;
+      //   }
+      //}
       else if (i == argc - 2) {
          pPath = argv[argc - 2];  //path is before the last parameter
 
          char * pCurPathAlias = argv[argc - 1]; //path alias is the last parameter
 
          if (pPath != NULL || pCurPathAlias != NULL) {
-            std::vector<std::string> pCurPaths;
-            pCurPaths.push_back(std::string(pPath));
-            pCurPaths.push_back(std::string(pCurPathAlias));
+            std::vector<::string> pCurPaths;
+            pCurPaths.push_back(::string(pPath));
+            pCurPaths.push_back(::string(pCurPathAlias));
             pPaths.push_back(pCurPaths);
          }
 
@@ -508,9 +508,9 @@ int nfs::main(int argc, char * argv[])
             strcpy_s(curPathAlias, pPath);
             char * pCurPathAlias = curPathAlias;
 
-            std::vector<std::string> pCurPaths;
-            pCurPaths.push_back(std::string(pPath));
-            pCurPaths.push_back(std::string(pCurPathAlias));
+            std::vector<::string> pCurPaths;
+            pCurPaths.push_back(::string(pPath));
+            pCurPaths.push_back(::string(pCurPathAlias));
             pPaths.push_back(pCurPaths);
          }
 
@@ -558,7 +558,7 @@ void nfs::run_netnode()
    
    //set_bind_address(pAddr);
 
-   std::vector<std::vector<std::string>> paths;
+   std::vector<std::vector<::string>> paths;
 
    int iCount = get_mount_count();
 
@@ -578,7 +578,7 @@ void nfs::run_netnode()
 }
 
 
-void nfs::main_start(std::vector<std::vector<std::string>> paths)
+void nfs::main_start(std::vector<std::vector<::string>> paths)
 {
 
    //AllocConsole();

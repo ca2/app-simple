@@ -5,7 +5,8 @@
 #include <stdio.h>
 
 CRPCProg::CRPCProg(nfs * pnfs) :
-   m_pnfs(pnfs)
+   m_pnfs(pnfs),
+   CFileTableAccessor(&pnfs->m_filetable)
 {
    m_bLogOn = true;
 }

@@ -102,7 +102,7 @@ namespace app_simple_nfs_desktop
 
       m_papp->m_pnfs->netnode_from_ini_configuration();
 
-      //std::vector<std::vector<std::string>> paths;
+      //std::vector<std::vector<::string>> paths;
 
       //paths.push_back({ "C:\\Users\\camilo\\nfs", "/nfs" });
       //paths.push_back({ "C:\\Dropbox", "/dropbox" });

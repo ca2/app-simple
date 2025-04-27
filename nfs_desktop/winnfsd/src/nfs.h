@@ -6,6 +6,7 @@
 #include "MountProg.h"
 #include "ServerSocket.h"
 #include "DatagramSocket.h"
+#include "FileTable.h"
 #include <stdio.h>
 #include <direct.h>
 #include <iostream>
@@ -33,8 +34,9 @@ class nfs :
 {
 public:
 
+   CFileTable m_filetable;
    hostent * m_localHost;
-   std::vector<std::vector<std::string>> pPaths;
+   std::vector<std::vector<::string>> pPaths;
    char * pPath = NULL;
    bool pathFile = false;
    //unsigned int m_nUID, m_nGID;
@@ -97,9 +99,9 @@ public:
    void netnode_from_ini_configuration();
    void run_netnode();
 
-   void main_start(std::vector<std::vector<std::string>> paths);
+   void main_start(std::vector<std::vector<::string>> paths);
 
-   void start(std::vector<std::vector<std::string>> paths);
+   void start(std::vector<std::vector<::string>> paths);
    void inputCommand();
    void printLine();
    void printHelp();
@@ -110,7 +112,7 @@ public:
    virtual int PrintLog(const char * format, ...);
 
 
-   void mountPaths(std::vector<std::vector<std::string>> paths);
+   void mountPaths(std::vector<std::vector<::string>> paths);
 
 };
 
