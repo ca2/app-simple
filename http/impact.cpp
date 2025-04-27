@@ -111,7 +111,7 @@ namespace app_simple_http
       fork([this, strUrl]()
       {
 
-         property_set set;
+         ::property_set set;
 
          ::cast < ::database::client > pdatabaseclient = application();
 

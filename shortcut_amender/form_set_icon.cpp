@@ -593,9 +593,9 @@ namespace app_simple_shortcut_amender
             {
 
                straAction.add(
-                  (const char *) (elinkWritten & ::file::e_link_icon ? "" : "\u2717?!! ")
-                  + path.windows_path().path() + ": "
-                  + plink->m_pathIcon.windows_path().path());
+                  ::string((elinkWritten & ::file::e_link_icon ? L"" : L"\u2717?!! ")
+                  + path.windows_path().path() + L": "
+                  + plink->m_pathIcon.windows_path().path()));
 
             }
 
