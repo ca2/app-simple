@@ -55,7 +55,7 @@
 		9AE86D1C2858924600F88364 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C14285891B400F88364 /* Launch Screen.storyboard */; };
 		9AE86D1D2858924800F88364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C13285891B400F88364 /* Images.xcassets */; };
 		9AE86D1E2858924A00F88364 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9AE86C0A285891B400F88364 /* _matter.zip */; };
-		9AE86D4C2858A15700F88364 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE86C17285891B400F88364 /* application_main.cpp */; };
+		9AE86D4C2858A15700F88364 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AE86C17285891B400F88364 /* main.cpp */; };
 		9AF7614E1F8437C000FDE7CC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B5903518866047002C6FEC /* CoreFoundation.framework */; };
 		9AF761541F84383D00FDE7CC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C41F21C33E00FDAF74 /* libbz2.tbd */; };
 		9AF761551F84384500FDE7CC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8181C21F21C33500FDAF74 /* libz.tbd */; };
@@ -365,7 +365,7 @@
 		9AE86C13285891B400F88364 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9AE86C14285891B400F88364 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9AE86C15285891B400F88364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AE86C17285891B400F88364 /* application_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
+		9AE86C17285891B400F88364 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9AEB6A0B1F81DD0400F40B32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -618,7 +618,7 @@
 				9A50CC822B6CA93900FDB101 /* _____release.xcconfig */,
 				9AE86C0A285891B400F88364 /* _matter.zip */,
 				9A28CC102CF4354900C6D8B1 /* _static_factory_.inl */,
-				9AE86C17285891B400F88364 /* application_main.cpp */,
+				9AE86C17285891B400F88364 /* main.cpp */,
 				9AE86C10285891B400F88364 /* ios */,
 			);
 			name = __implement;
@@ -959,7 +959,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE86D4C2858A15700F88364 /* application_main.cpp in Sources */,
+				9AE86D4C2858A15700F88364 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
