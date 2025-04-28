@@ -14,7 +14,7 @@
 		9A2F609E2474F53900D392E8 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2F609D2474F53900D392E8 /* CoreServices.framework */; };
 		9A4972262001905400B9C9B2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4972092001905400B9C9B2 /* ImageIO.framework */; };
 		9A4BE107200018A200DED594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A5752BB16AAE1D2000CC4EF /* Foundation.framework */; };
-		9A50C7292B6C7A2100FDB101 /* application_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C7282B6C7A2100FDB101 /* application_main.cpp */; };
+		9A50C7292B6C7A2100FDB101 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A50C7282B6C7A2100FDB101 /* main.cpp */; };
 		9A50C74D2B6C7DB500FDB101 /* libios_acme_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C74C2B6C7DB500FDB101 /* libios_acme_darwin.a */; };
 		9A50C74F2B6C7DB500FDB101 /* libios_apex_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C74E2B6C7DB500FDB101 /* libios_apex_darwin.a */; };
 		9A50C7512B6C7DB500FDB101 /* libios_aura_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A50C7502B6C7DB500FDB101 /* libios_aura_darwin.a */; };
@@ -267,7 +267,7 @@
 		9A31091F2CE8306F0067398D /* libnode_ios.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnode_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4972092001905400B9C9B2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9A4972272001907B00B9C9B2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9A50C7282B6C7A2100FDB101 /* application_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_main.cpp; sourceTree = "<group>"; };
+		9A50C7282B6C7A2100FDB101 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9A50C7482B6C7D4F00FDB101 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A50C7492B6C7D4F00FDB101 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A50C74C2B6C7DB500FDB101 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -572,7 +572,7 @@
 				9A50C7492B6C7D4F00FDB101 /* _____release.xcconfig */,
 				9AE86A2928588ED900F88364 /* _matter.zip */,
 				9AD7E4DD2D1E4FF900D91148 /* _static_factory_.inl */,
-				9A50C7282B6C7A2100FDB101 /* application_main.cpp */,
+				9A50C7282B6C7A2100FDB101 /* main.cpp */,
 				9AE86A2C28588ED900F88364 /* ios */,
 			);
 			name = __implement;
@@ -865,7 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A50C7292B6C7A2100FDB101 /* application_main.cpp in Sources */,
+				9A50C7292B6C7A2100FDB101 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
