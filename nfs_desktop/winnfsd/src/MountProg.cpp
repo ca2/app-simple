@@ -286,7 +286,9 @@ bool CMountProg::GetPath(::file::path &returnPath)
 
       ::file::path pathRel;
 
-      if (path == pair.element1())
+      auto & str1 = pair.element1();
+
+      if (path == str1)
       {
 
          returnPath = pair.element2();
@@ -296,7 +298,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
          break;
 
       }
-      else if (path.begins_eat(pair.element1() + "/"))
+      else if (path.begins_eat(str1 + "/"))
       {
 
          returnPath = pair.element2() / path;
