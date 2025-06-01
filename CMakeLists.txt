@@ -9,7 +9,7 @@ add_subdirectory(http)
 add_subdirectory(http_file_server)
 add_subdirectory(nanoui_example)
 add_subdirectory(notify_drawing)
-add_subdirectory(shader)
+#add_subdirectory(shader)
 
 
 
