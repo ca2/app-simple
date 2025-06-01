@@ -319,11 +319,11 @@ namespace app_simple_application
 
             print_line("on_click : e_element_client");
             
-            ::array < ::file::file_dialog_filter > filtera;
+            ::file::file_dialog_filter filter;
             
-            filtera.add({"application.txt", "application.txt"});
+            filter.add({"application.txt", "application.txt"});
             
-            pick_single_file(filtera, [ this ] (const ::file::path & path)
+            pick_single_file_to_open(filter, [ this ] (const ::file::path & path)
                              {
                
                try {
@@ -341,7 +341,7 @@ namespace app_simple_application
                   pmessagebox->async();
                }
                
-            }, false);
+            });
 
             return true;
 
