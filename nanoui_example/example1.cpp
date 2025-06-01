@@ -241,10 +241,10 @@ namespace app_simple_nanoui_example
                   //auto pwindow = m_puserinteraction->window();
                   //auto poswindow = pwindow->get_os_data();
                   auto pdialog = node()->node_file_dialog();
-                  pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
-                  pdialog->m_filedialogfiltera.add({ "JPEG file", "*.jpeg" });
-                  pdialog->m_filedialogfiltera.add({ "JPG file", "*.jpg" });
-                  pdialog->m_filedialogfiltera.add({ "Text file", "*.txt" });
+                  pdialog->m_filedialogfilter.add({ "Portable Network Graphics", "*.png" });
+                  pdialog->m_filedialogfilter.add({ "JPEG file", "*.jpeg" });
+                  pdialog->m_filedialogfilter.add({ "JPG file", "*.jpg" });
+                  pdialog->m_filedialogfilter.add({ "Text file", "*.txt" });
                   pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
@@ -276,8 +276,8 @@ namespace app_simple_nanoui_example
                   //auto poswindow = pwindow->get_os_data();
                   auto pdialog = node()->node_file_dialog();
                   pdialog->m_puserelement = m_puserinteraction;
-                  pdialog->m_filedialogfiltera.add({ "Portable Network Graphics", "*.png" });
-                  pdialog->m_filedialogfiltera.add({ "Text file", "*.txt" } );
+                  pdialog->m_filedialogfilter.add({ "Portable Network Graphics", "*.png" });
+                  pdialog->m_filedialogfilter.add({ "Text file", "*.txt" } );
                   pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
