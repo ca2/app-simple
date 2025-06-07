@@ -323,22 +323,33 @@ namespace app_simple_application
             
             filter.add({"application.txt", "application.txt"});
             
-            pick_single_file_to_open(filter, [ this ] (const ::file::path & path)
+            pick_single_file_to_open(filter, [ this ] (::file::file_dialog * pdialog)
                              {
                
-               try {
-                  auto memory = file()->as_memory(path);
-                  
-                  auto size = memory.size();
-                  
-                  informationf("got file with %d bytes", size);
-                  
-                  file()->put_memory(m_papp->m_pathApplicationText, memory);
-                  
+               try 
+               {
 
-               } catch (...) {
+                  if (pdialog->m_patha.has_element())
+                  {
+
+                     auto memory = file()->as_memory(pdialog->m_patha.first());
+
+                     auto size = memory.size();
+
+                     informationf("got file with %d bytes", size);
+
+                     file()->put_memory(m_papp->m_pathApplicationText, memory);
+
+                  }
+
+               } 
+               catch (...) 
+               {
+
                   auto pmessagebox = message_box("No file loaded...");
+
                   pmessagebox->async();
+
                }
                
             });
