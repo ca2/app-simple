@@ -241,9 +241,7 @@ namespace app_simple_drawing
    string application::draw2d_get_default_implementation_name()
    {
 
-      //return system()->implementation_name("draw2d", "opengl");
-
-      return {};
+      return ::base::application::draw2d_get_default_implementation_name();
 
    }
 
