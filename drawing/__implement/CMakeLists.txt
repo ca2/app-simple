@@ -71,6 +71,7 @@ add_dependencies(${PROJECT_NAME} database_sqlite3)
 add_dependencies(${PROJECT_NAME} experience_core)
 add_dependencies(${PROJECT_NAME} folder_zip)
 add_dependencies(${PROJECT_NAME} draw2d_cairo)
+add_dependencies(${PROJECT_NAME} imaging_freeimage)
 
 
 list(APPEND executable_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
