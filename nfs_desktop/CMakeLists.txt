@@ -50,7 +50,6 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 list(APPEND library_references
@@ -63,6 +62,10 @@ list(APPEND library_references
    bred
    core
    )
+
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
+
 
 if (MSVC)
    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
