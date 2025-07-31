@@ -39,7 +39,7 @@ namespace simple_shader
 #endif
 
       string get_font();
-      ::e_status set_font(const string& strFont);
+      ::e_status set_font(const ::scoped_string & scopedstrFont);
 
       virtual ::e_status update_shader();
       virtual void defer_update_shader();
@@ -55,7 +55,7 @@ namespace simple_shader
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void defer_load_fragment(const ::string & pszPath);
+      virtual void defer_load_fragment(const ::scoped_string & scopedstrPath);
 
 
    };
