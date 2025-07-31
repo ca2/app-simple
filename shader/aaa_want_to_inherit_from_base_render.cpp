@@ -105,10 +105,10 @@ namespace simple_shader
    }
 
 
-   void render::defer_load_fragment(const ::string & pszPathPrefix)
+   void render::defer_load_fragment(const ::scoped_string & scopedstrPathPrefix)
    {
 
-      if (string(pszPathPrefix) == "default")
+      if (string(scopedstrPathPrefix) == "default")
       {
 
          m_strProjection.empty();
@@ -128,7 +128,7 @@ namespace simple_shader
       for (auto& path : listing)
       {
 
-         if (path.name().case_insensitive_begins(pszPathPrefix))
+         if (path.name().case_insensitive_begins(scopedstrPathPrefix))
          {
 
             m_strFragment = m_papplication->load_fragment(path, m_eshadersource);
@@ -339,7 +339,7 @@ namespace simple_shader
    }
 
 
-   ::e_status render::set_font(const ::string & strFont)
+   ::e_status render::set_font(const ::scoped_string & scopedstrFont)
    {
 
       if (strFont.is_empty())
