@@ -164,7 +164,7 @@ class filename3 : public opaque
     filename3();
     ~filename3();
     void SetSize(uint32 len);
-    void Set(const_char_pointer  str);
+    void Set(const_char_pointer str);
 };
 
 class nfspath3 : public opaque
@@ -408,15 +408,15 @@ class CNFS3Prog : public CRPCProg
     bool GetPath(::file::path &path);
     bool ReadDirectory(::file::path & dirName, ::string &fileName);
     char *GetFullPath(::string &dirName, ::string &fileName);
-    nfsstat3 CheckFile(const_char_pointer  fullPath);
-    nfsstat3 CheckFile(const_char_pointer  directory, const_char_pointer  fullPath);
-    bool GetFileHandle(const_char_pointer  path, nfs_fh3 *pObject);
-    bool GetUnstableFileAttributesForNFS(memory_file * pfile, const_char_pointer  path, wcc_attr * pAttr);
-    bool GetUnstableFileAttributesForNFS(memory_file * pfile, const_char_pointer  path, fattr3 * pAttr);
-    bool GetFileAttributesForNFS(const_char_pointer  path, wcc_attr *pAttr);
-    bool GetFileAttributesForNFS(const_char_pointer  path, fattr3 *pAttr);
-    bool GetFileAttributesForNFS(FILE * pfile, const_char_pointer  path, wcc_attr * pAttr);
-    bool GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const_char_pointer  path, fattr3 * pAttr);
+    nfsstat3 CheckFile(const_char_pointer fullPath);
+    nfsstat3 CheckFile(const_char_pointer directory, const_char_pointer fullPath);
+    bool GetFileHandle(const_char_pointer path, nfs_fh3 *pObject);
+    bool GetUnstableFileAttributesForNFS(memory_file * pfile, const_char_pointer path, wcc_attr * pAttr);
+    bool GetUnstableFileAttributesForNFS(memory_file * pfile, const_char_pointer path, fattr3 * pAttr);
+    bool GetFileAttributesForNFS(const_char_pointer path, wcc_attr *pAttr);
+    bool GetFileAttributesForNFS(const_char_pointer path, fattr3 *pAttr);
+    bool GetFileAttributesForNFS(FILE * pfile, const_char_pointer path, wcc_attr * pAttr);
+    bool GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const_char_pointer path, fattr3 * pAttr);
     UINT32 FileTimeToPOSIX(FILETIME ft);
     //std::unordered_map<int, FILE*> unstableStorageFile1;
     //std::unordered_map<int, ::pointer < memory_file >> unstableStorageFile;

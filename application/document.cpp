@@ -30,7 +30,7 @@ namespace app_simple_application
       
       path = papp->m_pathApplicationText;
 
-      //const_char_pointer  pszPath = path.c_str();
+      //const_char_pointer pszPath = path.c_str();
       
       try
       {

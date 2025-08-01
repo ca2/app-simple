@@ -26,7 +26,7 @@
 #endif
 
 
-::string NfsProcessPath(const_char_pointer  path);
+::string NfsProcessPath(const_char_pointer path);
 
 static unsigned int __stdcall NFS3ProcCleanupThreadProc(void * lpParameter)
 {
@@ -86,7 +86,7 @@ void filename3::SetSize(uint32 len)
     name = (char *)contents;
 }
 
-void filename3::Set(const_char_pointer  str)
+void filename3::Set(const_char_pointer str)
 {
    auto len = strlen(str);
     SetSize(len);
@@ -364,7 +364,7 @@ nfsstat3 CNFS3Prog::ProcedureGETATTR(void)
 
     PrintLog("GETATTR");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     stat = CheckFile(cStr);
 	//printf("\nscanned file %s\n", path);
     if (stat == NFS3ERR_NOENT) {
@@ -399,7 +399,7 @@ nfsstat3 CNFS3Prog::ProcedureSETATTR(void)
 
     PrintLog("SETATTR");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     Read(&new_attributes);
     Read(&guard);
     stat = CheckFile(cStr);
@@ -516,7 +516,7 @@ nfsstat3 CNFS3Prog::ProcedureACCESS(void)
 
     PrintLog("ACCESS");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     Read(&access);
     stat = CheckFile(cStr);
 
@@ -554,7 +554,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
     DWORD bytesReturned;
 
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     stat = CheckFile(cStr);
     if (stat == NFS3_OK) {
 
@@ -663,7 +663,7 @@ nfsstat3 CNFS3Prog::ProcedureREAD(void)
 
     PrintLog("READ");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     Read(&offset);
     Read(&count);
     stat = CheckFile(cStr);
@@ -719,7 +719,7 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
 
    PrintLog("WRITE");
    bool validHandle = GetPath(path);
-   const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+   const_char_pointer cStr = validHandle ? path.c_str() : NULL;
    Read(&offset);
    Read(&count);
    Read(&stable);
@@ -1209,7 +1209,7 @@ nfsstat3 CNFS3Prog::ProcedureLINK(void)
     wcc_data dir_wcc;
 
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     ReadDirectory(dirName, fileName);
 
     char *linkFullPath = GetFullPath(dirName, fileName);
@@ -1255,7 +1255,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIR(void)
 
     PrintLog("READDIR");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     Read(&cookie);
     Read(&cookieverf);
     Read(&count);
@@ -1342,7 +1342,7 @@ nfsstat3 CNFS3Prog::ProcedureREADDIRPLUS(void)
 
     PrintLog("READDIRPLUS");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     Read(&cookie);
     Read(&cookieverf);
     Read(&dircount);
@@ -1421,7 +1421,7 @@ nfsstat3 CNFS3Prog::ProcedureFSSTAT(void)
 
     PrintLog("FSSTAT");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     stat = CheckFile(cStr);
 
     if (stat == NFS3_OK) {
@@ -1467,7 +1467,7 @@ nfsstat3 CNFS3Prog::ProcedureFSINFO(void)
 
     PrintLog("FSINFO");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     stat = CheckFile(cStr);
 
     if (stat == NFS3_OK) {
@@ -1519,7 +1519,7 @@ nfsstat3 CNFS3Prog::ProcedurePATHCONF(void)
 
     PrintLog("PATHCONF");
     bool validHandle = GetPath(path);
-    const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+    const_char_pointer cStr = validHandle ? path.c_str() : NULL;
     stat = CheckFile(cStr);
 
     if (stat == NFS3_OK) {
@@ -1566,7 +1566,7 @@ nfsstat3 CNFS3Prog::ProcedureCOMMIT(void)
     PrintLog("COMMIT");
     Read(&file);
     auto path = GetFilePath(file);
-    const_char_pointer  cStr = path.has_character() ? path.c_str() : NULL;
+    const_char_pointer cStr = path.has_character() ? path.c_str() : NULL;
 
     if (path.has_character()) {
         PrintLog(" %s ", path.c_str());
@@ -1898,7 +1898,7 @@ char *CNFS3Prog::GetFullPath(::string &dirName, ::string &fileName)
     return fullPath;
 }
 
-nfsstat3 CNFS3Prog::CheckFile(const_char_pointer  fullPath)
+nfsstat3 CNFS3Prog::CheckFile(const_char_pointer fullPath)
 {
 
    if (fullPath == NULL)
@@ -1922,7 +1922,7 @@ nfsstat3 CNFS3Prog::CheckFile(const_char_pointer  fullPath)
 
 }
 
-nfsstat3 CNFS3Prog::CheckFile(const_char_pointer  directory, const_char_pointer  fullPath)
+nfsstat3 CNFS3Prog::CheckFile(const_char_pointer directory, const_char_pointer fullPath)
 {
     // FileExists will not work for the root of a drive, e.g. \\?\D:\, therefore check if it is a drive root with GetDriveType
     if (directory == NULL || (!FileExists(directory) && GetDriveTypeA(directory) < 2) || fullPath == NULL) {
@@ -1936,7 +1936,7 @@ nfsstat3 CNFS3Prog::CheckFile(const_char_pointer  directory, const_char_pointer 
     return NFS3_OK;
 }
 
-bool CNFS3Prog::GetFileHandle(const_char_pointer  path, nfs_fh3 *pObject)
+bool CNFS3Prog::GetFileHandle(const_char_pointer path, nfs_fh3 *pObject)
 {
 
    auto filehandle = CFileTableAccessor::get_file_handle(path);
@@ -1953,7 +1953,7 @@ bool CNFS3Prog::GetFileHandle(const_char_pointer  path, nfs_fh3 *pObject)
     return true;
 }
 
-bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer  path, wcc_attr *pAttr)
+bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer path, wcc_attr *pAttr)
 {
     struct stat data;
 
@@ -1979,7 +1979,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer  path, wcc_attr *pAtt
 
 
 
-bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, const_char_pointer  path, wcc_attr * pAttr)
+bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, const_char_pointer path, wcc_attr * pAttr)
 {
    struct stat data;
 
@@ -2004,7 +2004,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, const_char_pointer  path, 
 }
 
 
-bool CNFS3Prog::GetUnstableFileAttributesForNFS(::memory_file * pfile, const_char_pointer  path, fattr3 * pAttr)
+bool CNFS3Prog::GetUnstableFileAttributesForNFS(::memory_file * pfile, const_char_pointer path, fattr3 * pAttr)
 {
    //DWORD fileAttr;
    //BY_HANDLE_FILE_INFORMATION lpFileInformation;
@@ -2091,7 +2091,7 @@ bool CNFS3Prog::GetUnstableFileAttributesForNFS(::memory_file * pfile, const_cha
 
 
 
-bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer  path, fattr3 *pAttr)
+bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer path, fattr3 *pAttr)
 {
     DWORD fileAttr;
     BY_HANDLE_FILE_INFORMATION lpFileInformation;
@@ -2176,7 +2176,7 @@ bool CNFS3Prog::GetFileAttributesForNFS(const_char_pointer  path, fattr3 *pAttr)
 }
 
 
-bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const_char_pointer  path, fattr3 * pAttr)
+bool CNFS3Prog::GetFileAttributesForNFS(FILE * pfile, tree_path_item<FILE_ITEM> * pfileitem, const_char_pointer path, fattr3 * pAttr)
 {
 
    DWORD fileAttr;

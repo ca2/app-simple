@@ -170,14 +170,14 @@ namespace app_simple_drawing
    ::e_status render::set_font(const ::scoped_string & scopedstrFont)
    {
 
-      if (strFont.is_empty())
+      if (scopedstrFont.is_empty())
       {
 
          return error_bad_argument;
 
       }
 
-      m_strFont1 = strFont;
+      m_strFont1 = scopedstrFont;
 
       string strDataId;
 
@@ -193,7 +193,7 @@ namespace app_simple_drawing
    ::e_status render::set_hover_font(const ::scoped_string & scopedstrHoverFont)
    {
 
-      m_strHoverFont = strHoverFont;
+      m_strHoverFont = scopedstrHoverFont;
 
       return ::success;
 

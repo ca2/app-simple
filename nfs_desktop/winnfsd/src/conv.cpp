@@ -3,7 +3,7 @@
 #include "conv.h"
 #include <string.h>
 
-wchar_t* _conv_from_utf8(const_char_pointer  s) {
+wchar_t* _conv_from_utf8(const_char_pointer s) {
 	auto count = MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, s, strlen(s), NULL, 0);
 	if (count == 0) {
 		return NULL;
@@ -17,7 +17,7 @@ wchar_t* _conv_from_utf8(const_char_pointer  s) {
 	return dest;
 }
 
-wchar_t* _conv_from_932(const_char_pointer  s) {
+wchar_t* _conv_from_932(const_char_pointer s) {
 	auto count = MultiByteToWideChar(932, MB_ERR_INVALID_CHARS, s, strlen(s), NULL, 0);
 	if (count == 0) {
 		return NULL;
@@ -45,7 +45,7 @@ char* _conv_to_932(const wchar_t* s) {
 	return dest;
 }
 
-char* _utf8_to_932(const_char_pointer  s){
+char* _utf8_to_932(const_char_pointer s){
     auto utf8 = _conv_from_utf8(s);
     auto sjis = _conv_to_932(utf8);
     free(utf8);

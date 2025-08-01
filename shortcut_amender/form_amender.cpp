@@ -596,7 +596,7 @@ namespace app_simple_shortcut_amender
          {
 
             straAction.add(
-               (const_char_pointer  )(elinkWritten & ::file::e_link_target ? u8"" : u8"\u2717!! ")
+               (const_char_pointer )(elinkWritten & ::file::e_link_target ? u8"" : u8"\u2717!! ")
                + node()->display_file_path(path) + ": "
                + node()->display_file_path(plink->m_pathTarget) +
                + " <== "
@@ -616,7 +616,7 @@ namespace app_simple_shortcut_amender
          {
 
             straAction.add(
-               (const_char_pointer  )(elinkWritten & ::file::e_link_folder ? u8"" : u8"\u2717!! ")
+               (const_char_pointer )(elinkWritten & ::file::e_link_folder ? u8"" : u8"\u2717!! ")
                + node()->display_file_path(path) + ": "
                + node()->display_file_path(plink->m_pathFolder)
                + " <== "
@@ -636,7 +636,7 @@ namespace app_simple_shortcut_amender
          {
 
             straAction.add(
-               (const_char_pointer  ) (elinkWritten & ::file::e_link_icon ? u8"" : u8"\u2717!! ")
+               (const_char_pointer )(elinkWritten & ::file::e_link_icon ? u8"" : u8"\u2717!! ")
                + node()->display_file_path(path) + ": "
                + node()->display_file_path(plink->m_pathIcon)
                + " <== "

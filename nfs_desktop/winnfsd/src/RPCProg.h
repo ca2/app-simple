@@ -42,7 +42,7 @@ class CRPCProg :
 
     protected:
     bool m_bLogOn;
-    virtual int PrintLog(const_char_pointer  format, ...);
+    virtual int PrintLog(const_char_pointer format, ...);
 };
 
 #endif

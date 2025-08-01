@@ -47,7 +47,7 @@ public:
    CNFSProg m_NFSProg;
    CMountProg m_MountProg;
    //nfs * m_pnfs;
-   //const_char_pointer  m_sInAddr;
+   //const_char_pointer m_sInAddr;
    CDatagramSocket DatagramSockets[SOCKET_NUM];
    CServerSocket ServerSockets[SOCKET_NUM];
 
@@ -109,7 +109,7 @@ public:
    void printCount();
    void printConfirmQuit();
 
-   virtual int PrintLog(const_char_pointer  format, ...);
+   virtual int PrintLog(const_char_pointer format, ...);
 
 
    void mountPaths(std::vector<std::vector<::string>> paths);
