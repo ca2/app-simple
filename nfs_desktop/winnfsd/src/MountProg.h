@@ -20,13 +20,13 @@ class CMountProg : public CRPCProg
     public:
     CMountProg(nfs * pnfs);
     virtual ~CMountProg();
-	//bool SetPathFile(const_char_pointer  file);
-    void Export(const_char_pointer  path, const_char_pointer  pathAlias);
+	//bool SetPathFile(const_char_pointer file);
+    void Export(const_char_pointer path, const_char_pointer pathAlias);
 	bool Refresh();
     char *GetClientAddr(int nIndex);
     int GetMountNumber(void);
     int Process(IInputStream *pInStream, IOutputStream *pOutStream, ProcessParam *pParam);
-	//char *FormatPath(const_char_pointer  pPath, pathFormats format);
+	//char *FormatPath(const_char_pointer pPath, pathFormats format);
 
     protected:
     int m_nMountNum;
@@ -50,7 +50,7 @@ class CMountProg : public CRPCProg
 
 	bool GetPath(::file::path & path);
    ::file::path GetPath(int &pathNumber);
-	//bool ReadPathsFromFile(const_char_pointer  sFileName);
+	//bool ReadPathsFromFile(const_char_pointer sFileName);
 };
 
 #endif

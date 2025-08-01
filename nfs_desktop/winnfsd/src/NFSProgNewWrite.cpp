@@ -22,7 +22,7 @@
 //
 //   PrintLog("WRITE");
 //   bool validHandle = GetPath(path);
-//   const_char_pointer  cStr = validHandle ? path.c_str() : NULL;
+//   const_char_pointer cStr = validHandle ? path.c_str() : NULL;
 //   Read(&offset);
 //   Read(&count);
 //   Read(&stable);

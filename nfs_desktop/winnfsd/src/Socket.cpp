@@ -2,7 +2,7 @@
 #include "Socket.h"
 #include <process.h>
 
-//const_char_pointer  g_sInAddr;
+//const_char_pointer g_sInAddr;
 
 static unsigned int __stdcall ThreadProc(void *lpParameter)
 {
@@ -72,9 +72,9 @@ void CSocket::Send(void)
         return;
 
     if (m_nType == SOCK_STREAM) {
-        send(m_Socket, (const_char_pointer  )m_SocketStream.GetOutput(), m_SocketStream.GetOutputSize(), 0);
+        send(m_Socket, (const_char_pointer )m_SocketStream.GetOutput(), m_SocketStream.GetOutputSize(), 0);
     } else if (m_nType == SOCK_DGRAM) {
-        sendto(m_Socket, (const_char_pointer  )m_SocketStream.GetOutput(), m_SocketStream.GetOutputSize(), 0, (struct sockaddr *)&m_RemoteAddr, sizeof(struct sockaddr));
+        sendto(m_Socket, (const_char_pointer )m_SocketStream.GetOutput(), m_SocketStream.GetOutputSize(), 0, (struct sockaddr *)&m_RemoteAddr, sizeof(struct sockaddr));
     }
 
     m_SocketStream.Reset();  //clear output buffer
