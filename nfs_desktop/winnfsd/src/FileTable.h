@@ -82,7 +82,7 @@ public:
    virtual tree_path_item <FILE_ITEM> * create_new_tree_path_item(tree_path_item<FILE_ITEM> * pitemParent, const ::scoped_string & scopedstr) override;
 
 
-   //file_handle get_file_handle(const char *path);
+   //file_handle get_file_handle(const_char_pointer  path);
    ::string get_path_by_handle(unsigned long handle);
    tree_path_item<FILE_ITEM>* find_item_by_path(const ::scoped_string & scopedstr);
    bool _EraseItem(const ::scoped_string & scopedstr);

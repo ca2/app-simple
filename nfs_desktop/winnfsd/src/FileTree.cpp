@@ -208,7 +208,7 @@
 //	//DisplayTree(topNode.node, 0);
 //}
 
-//void CFileTree::rename_item(const char *absolutePathFrom, const char *absolutePathTo)
+//void CFileTree::rename_item(const_char_pointer  absolutePathFrom, const_char_pointer  absolutePathTo)
 //{
 //	tree_path_item<FILE_ITEM>* node = findNodeFromRootWithPath(absolutePathFrom);
 //	tree_path_item<FILE_ITEM>* parentNode = findParentNodeFromRootForPath(absolutePathTo);
@@ -232,7 +232,7 @@
 //	DisplayTree(topNode.node, 0);
 //}
 //
-//tree_path_item<FILE_ITEM>* CFileTree::find_item(const char *absolutePath)
+//tree_path_item<FILE_ITEM>* CFileTree::find_item(const_char_pointer  absolutePath)
 //{
 //	tree_path_item<FILE_ITEM>* node = findNodeFromRootWithPath(absolutePath);
 //	if (node == NULL) {
@@ -241,7 +241,7 @@
 //	return node;
 //}
 
-//tree_path_item<FILE_ITEM>* CFileTree::findNodeFromRootWithPath(const char *path)
+//tree_path_item<FILE_ITEM>* CFileTree::findNodeFromRootWithPath(const_char_pointer  path)
 //{
 //	// No topNode - bail out.
 //	if (topNode.node == NULL){
@@ -292,7 +292,7 @@
 //	return NULL;
 //}
 //
-//tree_path_item<FILE_ITEM>* CFileTree::findNodeWithPathFromNode(const char *path, tree_path_item<FILE_ITEM>* node)
+//tree_path_item<FILE_ITEM>* CFileTree::findNodeWithPathFromNode(const_char_pointer  path, tree_path_item<FILE_ITEM>* node)
 //{
 //	tree<FILE_ITEM>::sibling_iterator sib = filesTree.begin(node);
 //	tree<FILE_ITEM>::sibling_iterator end = filesTree.end(node);
@@ -319,7 +319,7 @@
 //	return NULL;
 //}
 //
-//tree_path_item<FILE_ITEM>* CFileTree::findParentNodeFromRootForPath(const char *path) {
+//tree_path_item<FILE_ITEM>* CFileTree::findParentNodeFromRootForPath(const_char_pointer  path) {
 //	::string sPath(path);
 //	::string nPath(topNode->path);
 //

@@ -562,7 +562,7 @@ namespace app_simple_change_grub_default_entry
 
       auto ptarget = pdata + iStart;
 
-      auto psource = (const char *) blockValue.data();
+      auto psource = (const_char_pointer  ) blockValue.data();
 
       auto c = blockValue.size();
 
