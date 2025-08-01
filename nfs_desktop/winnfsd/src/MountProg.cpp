@@ -54,7 +54,7 @@ CMountProg::~CMountProg()
 
 }
 
-//bool CMountProg::SetPathFile(const char *file)
+//bool CMountProg::SetPathFile(const_char_pointer  file)
 //{
 //	char *formattedFile = FormatPath(file, FORMAT_PATH);
 //
@@ -78,7 +78,7 @@ CMountProg::~CMountProg()
 //	return false;
 //}
 
-void CMountProg::Export(const char *path, const char *pathAlias)
+void CMountProg::Export(const_char_pointer  path, const_char_pointer  pathAlias)
 {
 	//char *formattedPath = FormatPath(path, FORMAT_PATH);
 	//pathAlias = FormatPath(pathAlias, FORMAT_PATHALIAS);
@@ -221,7 +221,7 @@ void CMountProg::ProcedureEXPORT(void)
 	PrintLog("EXPORT");
 
 	for (auto &exportedPath : m_PathMap) {
-		const char* path = exportedPath.element1().c_str();
+		const_char_pointer  path = exportedPath.element1().c_str();
 		int length = strlen(path);
 		// dirpath
 		m_pOutStream->Write(1);
@@ -378,7 +378,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 }
 
 
-//bool CMountProg::ReadPathsFromFile(const char* sFileName)
+//bool CMountProg::ReadPathsFromFile(const_char_pointer  sFileName)
 //{
 //	std::ifstream pathFile(sFileName);
 //
@@ -426,7 +426,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 //	return true;
 //}
 
-//char *CMountProg::FormatPath(const char *pPath, pathFormats format)
+//char *CMountProg::FormatPath(const_char_pointer  pPath, pathFormats format)
 //{
 //    size_t len = strlen(pPath);
 //

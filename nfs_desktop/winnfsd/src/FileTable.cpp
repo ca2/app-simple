@@ -10,7 +10,7 @@
 #include "tree_path_item.h"
 
 
-::string NfsProcessPath(const char * path)
+::string NfsProcessPath(const_char_pointer  path)
 {
 
    ::string strPath(path);
@@ -190,7 +190,7 @@ CFileTable::~CFileTable()
     //}
 }
 
-//unsigned long CFileTable::GetIDByPath(const char *path)
+//unsigned long CFileTable::GetIDByPath(const_char_pointer  path)
 //{
 //    unsigned char *handle;
 //
@@ -620,8 +620,8 @@ int CFileTable::RenameDirectory(const ::scoped_string & scopedstrFrom, const ::s
    throw "todo";
 	//errno_t errorNumber = RenameFile(scopedstrFrom, scopedstrTo);
 
-	//const char* dotFile = "\\.";
-	//const char* backFile = "\\..";
+	//const_char_pointer  dotFile = "\\.";
+	//const_char_pointer  backFile = "\\..";
 
 	//char* dotDirectoryPathFrom;
 	//char* dotDirectoryPathTo;
@@ -679,8 +679,8 @@ int CFileTable::EraseFolder(const ::scoped_string &scopedstr)
 
     if (RemoveDirectoryA(path) != 0) {
        throw "todo";
-        //const char* dotFile = "\\.";
-        //const char* backFile = "\\..";
+        //const_char_pointer  dotFile = "\\.";
+        //const_char_pointer  backFile = "\\..";
 
         //char* dotDirectoryPath;
         //char* backDirectoryPath;

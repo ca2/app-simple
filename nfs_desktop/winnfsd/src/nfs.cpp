@@ -349,7 +349,7 @@ void nfs::inputCommand(void)
 }
 
 
-int nfs::PrintLog(const char * format, ...)
+int nfs::PrintLog(const_char_pointer  format, ...)
 {
 
    va_list vargs;

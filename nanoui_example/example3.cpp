@@ -180,7 +180,7 @@ pmessagebox->sync(); }
 //    );
 //
 //    glfwSetDropCallback(window,
-//        [](GLFWwindow *, int count, const char **filenames) {
+//        [](GLFWwindow *, int count, const_char_pointer  *filenames) {
 //            screen->drop_callback_event(count, filenames);
 //        }
 //    );
