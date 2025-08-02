@@ -1,6 +1,6 @@
 #include "framework.h"
 #define APPLICATION_NAMESPACE app_simple_nanoui_example
-#include "acme/inline/application/main.inl"
+#include "acme/inline/application/main_executable.inl"
 
 
 // //app_simple_nanoui_example::application g_app_simple_nanoui_example_application;
