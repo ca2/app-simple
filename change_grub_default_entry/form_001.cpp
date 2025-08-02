@@ -448,7 +448,7 @@ namespace app_simple_change_grub_default_entry
    ::e_status form_001::set_grub_saved_entry(const ::file::path& pathGrubFolder, const ::scoped_string & scopedstrSavedEntry)
    {
 
-      if (strSavedEntry == get_grub_saved_entry(pathGrubFolder))
+      if (scopedstrSavedEntry == get_grub_saved_entry(pathGrubFolder))
       {
 
          return ::success;
@@ -461,7 +461,7 @@ namespace app_simple_change_grub_default_entry
 
       auto memory = pcontext->file()->as_memory(pathGrubEnv);
 
-      auto estatus = grub_set_variable(memory, "saved_entry=", strSavedEntry);
+      auto estatus = grub_set_variable(memory, "saved_entry=", scopedstrSavedEntry);
 
       if (!estatus)
       {
