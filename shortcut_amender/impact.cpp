@@ -1,8 +1,8 @@
 #include "framework.h"
 #include "impact.h"
 #include "document.h"
-#include "base/user/user/split_impact.h"
-#include "base/user/user/impact_system.h"
+#include "berg/user/user/split_impact.h"
+#include "berg/user/user/impact_system.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/graphics.h"
 

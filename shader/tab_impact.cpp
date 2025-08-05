@@ -4,8 +4,8 @@
 #include "application.h"
 #include "app/shader/render.h"
 #include "acme/filesystem/filesystem/listing.h"
-#include "base/user/menu/list_impact.h"
-#include "base/user/user/tab_pane.h"
+#include "berg/user/menu/list_impact.h"
+#include "berg/user/user/tab_pane.h"
 
 
 namespace app_simple_shader

@@ -6,7 +6,7 @@
 #include "acme/platform/system.h"
 #include "app-simple/drawing/document.h"
 #include "app-simple/drawing/tab_impact.h"
-#include "base/user/user/single_document_template.h"
+#include "berg/user/user/single_document_template.h"
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_notify_drawing);

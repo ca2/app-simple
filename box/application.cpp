@@ -3,7 +3,7 @@
 #include "document.h"
 #include "main_frame.h"
 #include "impact.h"
-#include "base/user/user/single_document_template.h"
+#include "berg/user/user/single_document_template.h"
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_box);
