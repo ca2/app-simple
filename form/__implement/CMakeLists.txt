@@ -23,7 +23,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    app_simple_form)
 
 if(${LINUX} OR ${__BSD__})

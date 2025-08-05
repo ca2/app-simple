@@ -45,7 +45,7 @@ list(APPEND library_references
    aura
    app_shader
    axis
-   base
+   berg
    bred
    core
    )

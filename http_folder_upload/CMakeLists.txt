@@ -58,7 +58,7 @@ list(APPEND app_simple_http_folder_upload_references
    aqua
    aura
    axis
-   base
+   berg
    bred
    core
    )
