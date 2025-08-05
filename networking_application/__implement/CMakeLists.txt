@@ -25,7 +25,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    bred
    core
    app_simple_networking_application)
@@ -88,6 +88,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${executable_include_director
 
 target_link_directories(${PROJECT_NAME} PRIVATE ${library_link_directories})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base app_simple_networking_application)
+target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis berg app_simple_networking_application)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)

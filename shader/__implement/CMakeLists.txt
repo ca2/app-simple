@@ -23,7 +23,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    bred
    core
    app_simple_shader

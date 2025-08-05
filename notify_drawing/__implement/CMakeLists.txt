@@ -23,7 +23,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    app_simple_drawing
    app_simple_notify_drawing
    )

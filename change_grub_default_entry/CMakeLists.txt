@@ -36,7 +36,7 @@ list(APPEND library_references
    aqua
    aura
    axis
-   base
+   berg
 )
 
 add_library(${PROJECT_NAME} SHARED ${library_source})
@@ -53,7 +53,7 @@ if (MSVC)
    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis berg)
 elseif (${LINUX} OR ${__BSD__} OR ${ANDROID})
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
    #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)

@@ -24,7 +24,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    app_simple_change_grub_default_entry
    )
 

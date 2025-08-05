@@ -47,12 +47,12 @@ if (MSVC)
    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
-   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis berg)
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 elseif (${LINUX} OR ${__BSD__} OR ${ANDROID})
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
    #target_link_options(${PROJECT_NAME} PRIVATE -Wl,-rpath=$ORIGIN)
-   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis base)
+   target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis berg)
    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 endif ()
 
@@ -92,7 +92,7 @@ list(APPEND executable_references
    aqua
    aura
    axis
-   base
+   berg
    app_simple_shortcut)
 
 if(${LINUX} OR ${__BSD__})
