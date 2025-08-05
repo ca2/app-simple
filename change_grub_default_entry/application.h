@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "base/platform/application.h"
+#include "berg/platform/application.h"
 
 
 namespace app_simple_change_grub_default_entry

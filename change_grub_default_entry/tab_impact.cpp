@@ -6,8 +6,8 @@
 #include "acme/constant/id.h"
 #include "acme/constant/impact.h"
 #include "acme/handler/topic.h"
-#include "base/user/user/tab_pane.h"
-#include "base/platform/application.h"
+#include "berg/user/user/tab_pane.h"
+#include "berg/platform/application.h"
 
 
 namespace app_simple_change_grub_default_entry

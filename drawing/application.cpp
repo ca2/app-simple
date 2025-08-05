@@ -8,8 +8,8 @@
 #include "acme/handler/request.h"
 #include "acme/platform/system.h"
 #include "aura/user/user/button.h"
-#include "base/user/user/show.h"
-#include "base/user/user/single_document_template.h"
+#include "berg/user/user/show.h"
+#include "berg/user/user/single_document_template.h"
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_drawing);
@@ -76,10 +76,6 @@ namespace app_simple_drawing
       factory()->add_factory_item <::app_simple_drawing::impact >();
       factory()->add_factory_item <::app_simple_drawing::tab_impact >();
 
-      //default_save_handling(m_checkSimple);
-
-      //default_save_handling(m_checkNoClientFrame);
-
       ::base::application::init_instance();
 
       add_impact_system(
@@ -89,17 +85,11 @@ namespace app_simple_drawing
                                ::type < main_frame >(),
                                get_pane_impact_type()));
 
-      //m_ptemplateSimpleDrawingMain = pdoctemplate;
-
-      //add_document_template(pdoctemplate);
-
       default_data_save_handling(m_checkSimple);
 
       default_data_save_handling(m_checkNoClientFrame);
 
       default_data_save_handling(m_textSimple);
-
-      //return true;
 
    }
 

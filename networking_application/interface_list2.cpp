@@ -14,8 +14,8 @@
 #include "apex/platform/system.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "aura/message/user.h"
-#include "base/user/user/impact_system.h"
-#include "base/user/user/split_impact.h"
+#include "berg/user/user/impact_system.h"
+#include "berg/user/user/split_impact.h"
 
 
 namespace app_simple_networking_application

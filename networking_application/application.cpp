@@ -10,8 +10,8 @@
 #include "computer_list2.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
-#include "base/user/user/multiple_document_template.h"
-#include "base/user/user/single_document_template.h"
+#include "berg/user/user/multiple_document_template.h"
+#include "berg/user/user/single_document_template.h"
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_networking_application);

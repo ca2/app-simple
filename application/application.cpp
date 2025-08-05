@@ -5,11 +5,11 @@
 #include "impact.h"
 #include "acme/filesystem/filesystem/file_system_options.h"
 #include "acme/handler/request.h"
-#include "base/user/user/tab_impact.h"
-#include "base/platform/session.h"
-#include "base/user/user/document_manager.h"
-#include "base/user/user/user.h"
-#include "base/user/user/single_document_template.h"
+#include "berg/user/user/tab_impact.h"
+#include "berg/platform/session.h"
+#include "berg/user/user/document_manager.h"
+#include "berg/user/user/user.h"
+#include "berg/user/user/single_document_template.h"
 
 
 __IMPLEMENT_APPLICATION_RELEASE_TIME(app_simple_application);

@@ -2,7 +2,7 @@
 
 
 #include "apex/platform/app_consumer.h"
-#include "base/user/user/split_impact.h"
+#include "berg/user/user/split_impact.h"
 
 
 namespace app_simple_shortcut_amender

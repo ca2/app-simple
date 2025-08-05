@@ -5,8 +5,8 @@
 #include "acme/prototype/collection/int_map.h"
 #include "apex/platform/app_consumer.h"
 #include "app-simple/nfs_desktop/interaction.h"
-#include "base/user/user/margin.h"
-#include "base/user/user/show.h"
+#include "berg/user/user/margin.h"
+#include "berg/user/user/show.h"
 
 
 namespace app_simple_nfs_desktop
