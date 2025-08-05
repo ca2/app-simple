@@ -9,7 +9,7 @@ namespace app_simple_form
 
 
    class CLASS_DECL_APP_SIMPLE_FORM application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 

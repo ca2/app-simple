@@ -9,7 +9,7 @@ namespace app_simple_change_grub_default_entry
 
 
    class CLASS_DECL_APP_SIMPLE_CHANGE_GRUB_DEFAULT_ENTRY application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 

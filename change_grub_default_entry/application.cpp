@@ -84,9 +84,9 @@ namespace app_simple_change_grub_default_entry
       factory()->add_factory_item <::app_simple_change_grub_default_entry::form_001 >();
       factory()->add_factory_item <::app_simple_change_grub_default_entry::form_002 >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
-      //if (!::base::application::init_instance())
+      //if (!::berg::application::init_instance())
       //{
 
       //   return false;

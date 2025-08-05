@@ -76,7 +76,7 @@ namespace app_simple_drawing
       factory()->add_factory_item <::app_simple_drawing::impact >();
       factory()->add_factory_item <::app_simple_drawing::tab_impact >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
@@ -97,7 +97,7 @@ namespace app_simple_drawing
    void application::term_application()
    {
 
-      ::base::application::term_application();
+      ::berg::application::term_application();
 
    }
 
@@ -231,7 +231,7 @@ namespace app_simple_drawing
    string application::draw2d_get_default_implementation_name()
    {
 
-      return ::base::application::draw2d_get_default_implementation_name();
+      return ::berg::application::draw2d_get_default_implementation_name();
 
    }
 

@@ -86,9 +86,9 @@ namespace app_simple_shortcut_amender
       factory()->add_factory_item <::app_simple_shortcut_amender::form_reset_icon >();
       factory()->add_factory_item <::app_simple_shortcut_amender::form_set_icon >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
-      //if (!::base::application::init_instance())
+      //if (!::berg::application::init_instance())
       //{
 
       //   return false;

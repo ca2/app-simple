@@ -9,7 +9,7 @@ namespace app_simple_drawing
 
 
    class CLASS_DECL_APP_SIMPLE_DRAWING application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 
