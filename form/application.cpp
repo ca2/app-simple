@@ -83,7 +83,7 @@ namespace app_simple_form
       factory()->add_factory_item <::app_simple_form::form_001 >();
       factory()->add_factory_item <::app_simple_form::form_002 >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
       add_impact_system("main", __initialize_new ::user::single_document_template(
                                "main",
                                ::type < document >(),

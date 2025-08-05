@@ -9,7 +9,7 @@ namespace app_simple_os_drag_and_drop
 
 
    class CLASS_DECL_APP_SIMPLE_OS_DRAG_AND_DROP application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 

@@ -50,9 +50,9 @@ namespace app_simple_box
       factory()->add_factory_item <::app_simple_box::main_frame >();
       factory()->add_factory_item <::app_simple_box::impact >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
-      //if (!::base::application::init_instance())
+      //if (!::berg::application::init_instance())
       //{
 
       //   return false;

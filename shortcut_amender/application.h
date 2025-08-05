@@ -9,7 +9,7 @@ namespace app_simple_shortcut_amender
 
 
    class CLASS_DECL_app_simple_shortcut_amender application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 

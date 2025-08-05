@@ -86,9 +86,9 @@ namespace app_simple_http_folder_upload
 
       default_toggle_check_handling("no_client_frame");
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
-      //if (!::base::application::init_instance())
+      //if (!::berg::application::init_instance())
       //{
 
       //   return false;
@@ -130,7 +130,7 @@ namespace app_simple_http_folder_upload
    void application::term_application()
    {
 
-      ::base::application::term_application();
+      ::berg::application::term_application();
 
    }
 

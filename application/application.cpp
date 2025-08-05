@@ -61,7 +61,7 @@ namespace app_simple_application
       factory()->add_factory_item <::app_simple_application::main_frame >();
       factory()->add_factory_item <::app_simple_application::impact >();
 
-      ::base::application::init_instance();
+      ::berg::application::init_instance();
 
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
@@ -89,7 +89,7 @@ namespace app_simple_application
    void application::term_application()
    {
 
-      ::base::application::term_application();
+      ::berg::application::term_application();
 
    }
 

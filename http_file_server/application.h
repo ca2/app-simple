@@ -9,7 +9,7 @@ namespace app_simple_http_file_server
 
 
    class CLASS_DECL_APP_SIMPLE_HTTP_FILE_SERVER application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 

@@ -9,7 +9,7 @@ namespace app_simple_http_folder_upload
 
 
    class CLASS_DECL_APP_SIMPLE_HTTP_FOLDER_UPLOAD application :
-      virtual public ::base::application
+      virtual public ::berg::application
    {
    public:
 
