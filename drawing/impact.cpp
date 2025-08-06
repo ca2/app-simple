@@ -33,22 +33,6 @@ namespace app_simple_drawing
    }
 
 
-//   void impact::assert_ok() const
-//   {
-//
-//      user::box::assert_ok();
-//
-//   }
-//
-//
-//   void impact::dump(dump_context & dumpcontext) const
-//   {
-//
-//      user::box::dump(dumpcontext);
-//
-//   }
-
-
 #ifdef _DEBUG
 
 
