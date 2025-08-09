@@ -68,7 +68,7 @@ namespace app_simple_shader
 
       auto papp = get_app();
 
-      ::file::listing listing;
+      ::file::listing_base listing;
 
       papp->get_shader_listing(listing);
 

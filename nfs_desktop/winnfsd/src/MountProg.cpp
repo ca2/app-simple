@@ -384,7 +384,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 //
 //	if (pathFile.is_open()) {
 //		::string line, path;
-//		::file::path_array paths;
+//		::file::path_array_base paths;
 //		std::istringstream ss;
 //
 //		while (std::getline(pathFile, line)) {
