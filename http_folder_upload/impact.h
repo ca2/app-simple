@@ -24,7 +24,7 @@ namespace app_simple_http_folder_upload
 
       bool  m_bRunningSynchronization;
 
-      ::file::listing m_listing;
+      ::file::listing_base m_listing;
 
 
       impact();
