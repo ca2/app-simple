@@ -311,7 +311,7 @@ namespace app_simple_change_grub_default_entry
 
       auto pcontext = m_papplication;
 
-      string_array straLines;
+      string_array_base straLines;
 
       auto pathGrubCfg = get_grub_cfg_path(pathGrubFolder);
       
@@ -419,7 +419,7 @@ namespace app_simple_change_grub_default_entry
    string form_001::get_grub_saved_entry(const ::file::path& pathGrubFolder)
    {
 
-      string_array straLines;
+      string_array_base straLines;
 
       auto pcontext = m_papplication;
 

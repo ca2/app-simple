@@ -41,7 +41,7 @@ namespace app_simple_shortcut_amender
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
-      virtual string_array reset_icon(const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail);
+      virtual string_array_base reset_icon(const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail);
 
 
    };

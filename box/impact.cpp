@@ -185,7 +185,7 @@ namespace app_simple_box
 
       //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
 
-      string_array & stra = get_document()->m_straLine;
+      string_array_base & stra = get_document()->m_straLine;
 
       //      stra.add("<3");
       //      stra.add("T");

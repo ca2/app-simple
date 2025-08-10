@@ -176,7 +176,7 @@ namespace app_simple_http_file_server
 
    //         outheader("content-type") = "text/html; charset=UTF-8";
 
-   //         string_array stra;
+   //         string_array_base stra;
 
    //         auto papp = get_app();
 

@@ -195,7 +195,7 @@ namespace app_simple_application
 
       _synchronous_lock synchronouslockDocument(get_document()->synchronization());
       
-      string_array & stra = get_document()->m_straLine;
+      string_array_base & stra = get_document()->m_straLine;
       
       bool bWhite  = true;
       

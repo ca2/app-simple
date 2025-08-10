@@ -70,7 +70,7 @@ namespace app_simple_change_grub_default_entry
 
       strForm = papp->payload("tab");
 
-      string_array straForm;
+      string_array_base straForm;
 
       straForm.add("form1");
       straForm.add("form2");
@@ -114,7 +114,7 @@ namespace app_simple_change_grub_default_entry
       //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_impact::on_change_cur_sel();
       string strId = get_impact_id();
-      string_array stra;
+      string_array_base stra;
 
       stra.explode("->:<-",strId);
 

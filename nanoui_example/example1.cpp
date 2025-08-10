@@ -301,7 +301,7 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "Combo box", "sans-bold");
 
-      ::string_array straComboItems{"Combo box item 1", "Combo box item 2", "Combo box item 3" };
+      ::string_array_base straComboItems{"Combo box item 1", "Combo box item 2", "Combo box item 3" };
                ___new ComboBox(window, straComboItems);
                ___new Label(window, "Check box", "sans-bold");
                CheckBox * cb = ___new CheckBox (window, "Flag 1",
@@ -485,7 +485,7 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "Combo box :", "sans-bold");
 
-      ::string_array straComboItems2{ "Item 1", "Item 2", "Item 3"  };
+      ::string_array_base straComboItems2{ "Item 1", "Item 2", "Item 3"  };
                ComboBox * cobo =
                   ___new ComboBox(window, straComboItems2);
                cobo->set_font_size(16);
