@@ -488,7 +488,7 @@ namespace app_simple_shortcut_amender
       strMessage.formatf("Gonna search for '%s', in '%s' and replace by '%s'\n\n",
          strSource.c_str(), strFolder.c_str(), strTarget.c_str());
 
-      string_array straAction = set_icon(strTarget, strFolder, strSource, bThumbnail);
+      string_array_base straAction = set_icon(strTarget, strFolder, strSource, bThumbnail);
 
       strMessage += straAction.implode("\n");
 
@@ -511,7 +511,7 @@ namespace app_simple_shortcut_amender
 
 
 
-   string_array form_set_icon::set_icon(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail)
+   string_array_base form_set_icon::set_icon(const ::scoped_string & scopedstrTarget, const ::file::path & pathFolder, const ::scoped_string & scopedstrSource, bool bThumbnail)
    {
 
       file::listing listing;
@@ -520,7 +520,7 @@ namespace app_simple_shortcut_amender
 
       directory()->enumerate(listing);
 
-      string_array straAction;
+      string_array_base straAction;
 
       if (listing.is_empty())
       {

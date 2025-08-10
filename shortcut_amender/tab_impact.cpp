@@ -78,7 +78,7 @@ namespace app_simple_shortcut_amender
       //::userex::pane_tab_impact::on_change_cur_sel();
       ::user::tab_impact::on_change_cur_sel();
       string strId = get_impact_id();
-      string_array stra;
+      string_array_base stra;
 
       stra.explode("->:<-",strId);
 

@@ -78,7 +78,7 @@ namespace app_simple_http
 
       string strId = get_impact_id();
 
-      string_array stra;
+      string_array_base stra;
 
       stra.explode("->:<-",strId);
 

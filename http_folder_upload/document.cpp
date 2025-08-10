@@ -116,7 +116,7 @@ namespace app_simple_http_folder_upload
 
             ::string str = node()->get_output("netsh interface show interface", 5_minute);
 
-            ::string_array stra;
+            ::string_array_base stra;
 
             stra.add_lines(str);
 
@@ -188,7 +188,7 @@ namespace app_simple_http_folder_upload
          else if (strCommand.case_insensitive_begins_eat("set dns server "))
          {
 
-            ::string_array stra;
+            ::string_array_base stra;
 
             stra.explode(" ", strCommand);
 

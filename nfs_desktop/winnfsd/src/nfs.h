@@ -56,7 +56,7 @@ public:
 
 
 
-   ::string_array m_straLog;
+   ::string_array_base m_straLog;
    ::string m_strBuffer;
    ::file_pointer                                 m_pfileLog;
 
