@@ -1,7 +1,7 @@
 #include "framework.h"
 #include "acme/_application_library.h"
 #include "acme/platform/release_time.h"
-#define APPLICATION_NAMESPACE app_simple_shader
+#define APPLICATION_NAMESPACE app_simple_shortcut_amender
 #include "acme/inline/application/main_application_library.inl"
 
 
