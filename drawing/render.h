@@ -47,7 +47,7 @@ namespace app_simple_drawing
       string                              m_strFont1;
       string                              m_strHoverFont;
       int                                 m_iDrawing;
-      string_map < ::image::image_pointer >      m_pimagemap;
+      string_map_base < ::image::image_pointer >      m_pimagemap;
       ::image::image_pointer                     m_pimage1;
       ::image::image_pointer                     m_pimage2;
       ::color::hls                        m_hlsText;

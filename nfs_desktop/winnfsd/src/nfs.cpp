@@ -247,7 +247,7 @@ void nfs::printHelp(void)
     printf("about: display messages about this program\n");
     printf("help: display help\n");
     printf("log on/off: display log messages or not\n");
-    printf("list: list mounted clients\n");
+    printf("list_base: list_base mounted clients\n");
     printf("refresh: refresh the mounted folders\n");
     printf("reset: reset the service\n");
     printf("quit: quit this program\n");
@@ -324,7 +324,7 @@ void nfs::inputCommand(void)
 			m_RPCServer.SetLogOn(true);
 		} else if (_stricmp(command, "log off") == 0) {
 			m_RPCServer.SetLogOn(false);
-		} else if (_stricmp(command, "list") == 0) {
+		} else if (_stricmp(command, "list_base") == 0) {
 			printList();
 		} else if (_stricmp(command, "quit") == 0) {
 			if (m_MountProg.GetMountNumber() == 0) {
@@ -383,8 +383,8 @@ void nfs::start(std::vector<std::vector<::string>> paths)
 
 	bool bRESULT_SUCCESS;
 
-	m_PortmapProg.Set(PROG_MOUNT, MOUNT_PORT);  //map port for mount
-	m_PortmapProg.Set(PROG_NFS, NFS_PORT);  //map port for nfs
+	m_PortmapProg.Set(PROG_MOUNT, MOUNT_PORT);  //map_base port for mount
+	m_PortmapProg.Set(PROG_NFS, NFS_PORT);  //map_base port for nfs
 	m_NFSProg.SetUserID(get_user_id(), get_group_id());  //set uid and gid of files
 
 	mountPaths(paths);

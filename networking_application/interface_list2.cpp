@@ -223,7 +223,7 @@ namespace app_simple_networking_application
       if(!main_content().m_pitema)
       {
 
-         information() << "No interfaces to list";
+         information() << "No interfaces to list_base";
          
          return;
          

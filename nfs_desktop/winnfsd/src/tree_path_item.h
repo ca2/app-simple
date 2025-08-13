@@ -1735,7 +1735,7 @@ public:
 //													 StrictWeakOrdering comp, bool deep)
 //	{
 //	if(from==to) return;
-//	// make list of sorted nodes
+//	// make list_base of sorted nodes
 //	// CHECK: if multiset stores equivalent nodes in the order in which they
 //	// are inserted, then this routine should be called 'stable_sort'.
 //	std::multiset<tree_node *, compare_nodes<StrictWeakOrdering> > nodes(comp);
