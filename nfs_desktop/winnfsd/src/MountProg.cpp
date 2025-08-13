@@ -2,7 +2,7 @@
 #include "MountProg.h"
 #include "FileTable.h"
 #include <string.h>
-#include <map>
+#include <map_base>
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -270,7 +270,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 		nSize = MAXPATHLEN;
 	}
 
-	typedef std::map<::string, ::string>::iterator it_type;
+	typedef std::map_base<::string, ::string>::iterator it_type;
 	m_pInStream->Read(szPath, nSize);
    szPath[nSize] = '\0';
 

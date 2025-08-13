@@ -98,7 +98,7 @@ namespace app_simple_nfs_desktop
       if (m_peditimpact == NULL)
       {
 
-         output_error_message("Could not create file list ::user::impact");
+         output_error_message("Could not create file list_base ::user::impact");
 
       }
 
@@ -107,7 +107,7 @@ namespace app_simple_nfs_desktop
       if (m_pimpact == NULL)
       {
 
-         output_error_message("Could not create file list ::user::impact");
+         output_error_message("Could not create file list_base ::user::impact");
 
       }
 

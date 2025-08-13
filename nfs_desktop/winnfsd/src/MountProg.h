@@ -2,7 +2,7 @@
 #define _MOUNTPROG_H_
 
 #include "RPCProg.h"
-//#include <map>
+//#include <map_base>
 //#include <string>
 #include "acme/prototype/collection/string_map.h"
 
@@ -31,8 +31,8 @@ class CMountProg : public CRPCProg
     protected:
     int m_nMountNum;
 	//char *m_pPathFile;
-	//std::map<::string, ::string> m_PathMap;
-    string_to_string m_PathMap;
+	//std::map_base<::string, ::string> m_PathMap;
+    string_to_string_base m_PathMap;
     char *m_pClientAddr[MOUNT_NUM_MAX];
     IInputStream *m_pInStream;
     IOutputStream *m_pOutStream;

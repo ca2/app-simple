@@ -103,7 +103,7 @@ namespace app_simple_http_folder_upload
       if (m_pimpactfolderpath == NULL)
       {
 
-         output_error_message("Could not create file list ::user::impact");
+         output_error_message("Could not create file list_base ::user::impact");
 
       }
 
@@ -116,7 +116,7 @@ namespace app_simple_http_folder_upload
       if (m_pimpactnetnodeurl == NULL)
       {
 
-         output_error_message("Could not create file list ::user::impact");
+         output_error_message("Could not create file list_base ::user::impact");
 
       }
 
@@ -130,7 +130,7 @@ namespace app_simple_http_folder_upload
       if (m_pimpactstartbutton == NULL)
       {
 
-         output_error_message("Could not create file list ::user::impact");
+         output_error_message("Could not create file list_base ::user::impact");
 
       }
 

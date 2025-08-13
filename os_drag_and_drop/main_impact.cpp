@@ -101,7 +101,7 @@ namespace app_simple_os_drag_and_drop
 //      if(m_pimpact == NULL)
 //      {
 //
-//         output_error_message("Could not create file list ::user::impact");
+//         output_error_message("Could not create file list_base ::user::impact");
 //
 //      }
 //
