@@ -118,7 +118,7 @@ namespace app_simple_nfs_desktop
 
       //default_data_save_handling("simple_text");
 
-      //__defer_construct_new(m_pincomingsocketthread);
+      //ødefer_construct_new(m_pincomingsocketthread);
 
       //return true;
 
@@ -358,15 +358,15 @@ namespace app_simple_nfs_desktop
 
          };
 
-      //auto pstill = __allocate ::user::still();
+      //auto pstill = øallocate ::user::still();
 
-      //__construct_new(m_pedit);
+      //øconstruct_new(m_pedit);
 
-      //__construct_new(m_pbuttonClear);
+      //øconstruct_new(m_pbuttonClear);
 
-      //__construct_new(m_pbuttonSend);
+      //øconstruct_new(m_pbuttonSend);
 
-      //__construct_new(m_pstillReceiver);
+      //øconstruct_new(m_pstillReceiver);
 
       //m_pstill->create_control(this, "still");
 

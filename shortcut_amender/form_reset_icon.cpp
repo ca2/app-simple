@@ -99,19 +99,19 @@ namespace app_simple_shortcut_amender
 
       }
 
-      __construct_new(m_pstillFolder);
+      øconstruct_new(m_pstillFolder);
 
-      __construct_new(m_peditFolder);
+      øconstruct_new(m_peditFolder);
 
-      __construct_new(m_pstillSource);
+      øconstruct_new(m_pstillSource);
 
-      __construct_new(m_peditSource);
+      øconstruct_new(m_peditSource);
 
-      __construct_new(m_pbuttonClear);
+      øconstruct_new(m_pbuttonClear);
 
-      __construct_new(m_pbuttonSend);
+      øconstruct_new(m_pbuttonSend);
 
-      __construct_new(m_pstillReceiver);
+      øconstruct_new(m_pstillReceiver);
 
       m_pstillFolder->create_control(this, "still_folder");
 

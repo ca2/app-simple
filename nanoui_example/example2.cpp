@@ -56,14 +56,14 @@ namespace app_simple_nanoui_example
          //if (use_gl_4_1) {
          //   // NanoGUI presents many options for you to utilize at your discretion.
          //   // See include/nanoui/screen.h for what all of these represent.
-         //   screen = __allocate< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
+         //   screen = øallocate< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
          //      /* resizable */ true, /* fullscreen */ false,
          //      /* depth_buffer */ true, /* stencil_buffer */ true,
          //      /* float_buffer */ false, /* gl_major */ 4,
          //      /* gl_minor */ 1);
          //}
          //else {
-         //   screen = __allocate< Screen(Vector2i >(500, 700), "NanoGUI test");
+         //   screen = øallocate< Screen(Vector2i >(500, 700), "NanoGUI test");
          //}
 
       nanoui::FormHelper * guiNanouiExample = ___new ::nanoui::FormHelper(this);

@@ -102,7 +102,7 @@ namespace app_simple_drawing
 
       //auto estatus = 
       
-      __construct_new(m_prender);
+      øconstruct_new(m_prender);
 
       //if(!estatus)
       //{
