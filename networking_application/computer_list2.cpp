@@ -290,7 +290,7 @@ namespace app_simple_networking_application
       if (pitem->m_item.m_eelement == e_element_item)
       {
 
-         auto phyperlink = __create_new <::hyperlink >();
+         auto phyperlink = øcreate_new <::hyperlink >();
 
          phyperlink->m_strLink.formatf("http://127.0.0.1:%d/", get_app()->networking_application()->wait_get_current_port(1_min));
 

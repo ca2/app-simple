@@ -97,7 +97,7 @@ namespace app_simple_nfs_desktop
 
       set_timer(e_timer_redraw, 1_s);
 
-      __construct_new(m_papp->m_pnfs);
+      øconstruct_new(m_papp->m_pnfs);
 
 
       m_papp->m_pnfs->netnode_from_ini_configuration();
@@ -279,7 +279,7 @@ namespace app_simple_nfs_desktop
       if (pitem->m_item.m_eelement == e_element_item)
       {
 
-         //auto phyperlink = __create_new <::hyperlink >();
+         //auto phyperlink = øcreate_new <::hyperlink >();
 
          //phyperlink->m_strLink.formatf("http://127.0.0.1:%d/", get_app()->http()->wait_get_current_port(1_min));
 

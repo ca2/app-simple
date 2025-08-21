@@ -85,7 +85,7 @@ namespace app_simple_http_file_server
    //::pointer < ::netserver::socket_handler > incoming_socket_thread::create_socket_handler()
    //{
 
-   //   return __allocate ::install::socket_handler();
+   //   return øallocate ::install::socket_handler();
 
 
    //}
@@ -94,7 +94,7 @@ namespace app_simple_http_file_server
    //::pointer < ::sockets::listen_socket_base > incoming_socket_thread::create_listen_socket()
    //{
 
-   //   return __allocate ::sockets::listen_socket < socket >();
+   //   return øallocate ::sockets::listen_socket < socket >();
 
    //}
 
@@ -102,7 +102,7 @@ namespace app_simple_http_file_server
    //::thread * create_new_socket_thread(::object* pparticle)
    //{
 
-   //   auto pthreadSsl = pparticle->__create_new < incoming_socket_thread >();
+   //   auto pthreadSsl = pparticle->øcreate_new < incoming_socket_thread >();
 
    //   //pthreadSsl->initialize_socket_thread(pparticle);
 

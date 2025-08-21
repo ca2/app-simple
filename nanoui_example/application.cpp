@@ -56,7 +56,7 @@ namespace app_simple_nanoui_example
    void application::on_request(::request * prequest)
    {
 
-      __construct_new(m_pmainwindow);
+      øconstruct_new(m_pmainwindow);
 
       m_pmainwindow->display(e_display_normal);
 

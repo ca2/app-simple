@@ -128,7 +128,7 @@ namespace app_simple_shader
 
       //auto estatus = 
       
-      __construct_new(m_prender);
+      øconstruct_new(m_prender);
 
 
       m_prender->m_puserinteraction = this;
