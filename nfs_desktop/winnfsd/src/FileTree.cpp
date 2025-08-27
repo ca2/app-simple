@@ -48,7 +48,21 @@
 ::string _following_path(::string path) {
 	//auto wcs = _conv_from_932(path.c_str());
 	//if (wcs == NULL) {
-		return path.find_index('\\') ? path.substr(path.find_index('\\') + 1) : ::string("");
+
+   auto p = path.find_first_character_in("\\/");
+
+   if (::found(p))
+   {
+
+      return path.substr(p + 1);
+
+   }
+   else
+   {
+
+      return {};
+
+   }
 	//}
 	//auto wpath = std::basic_string<wchar_t>(wcs);
 	//delete wcs;
