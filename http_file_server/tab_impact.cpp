@@ -3,7 +3,7 @@
 #include "impact.h"
 #include "main_impact.h"
 #include "application.h"
-#include "acme/constant/message.h"
+#include "acme/constant/user_message.h"
 #include "berg/user/menu/list_impact.h"
 #include "berg/user/user/tab_pane.h"
 #include "berg/user/user/multiple_document_template.h"
