@@ -3,7 +3,7 @@
 #include "document.h"
 #include "main_impact.h"
 #include "application.h"
-#include "acme/constant/message.h"
+#include "acme/constant/user_message.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/graphics.h"
 #include "berg/user/user/impact_system.h"

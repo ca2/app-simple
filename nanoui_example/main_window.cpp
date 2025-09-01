@@ -4,7 +4,7 @@
 #include "example2.h"
 #include "example_icons.h"
 #include "acme/constant/id.h"
-#include "acme/constant/message.h"
+#include "acme/constant/user_message.h"
 #include "aura/message/user.h"
 #include "app/nanoui/Screen.h"
 

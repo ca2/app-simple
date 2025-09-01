@@ -4,7 +4,7 @@
 #include "render.h"
 #include "document.h"
 #include "acme/constant/id.h"
-#include "acme/constant/message.h"
+#include "acme/constant/user_message.h"
 #include "acme/handler/handler.h"
 #include "apex/handler/signal.h"
 #include "aura/graphics/draw2d/graphics.h"
