@@ -131,7 +131,7 @@ namespace app_simple_http_folder_upload
 
       edit_impact_base::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &impact_folder_path::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &impact_folder_path::on_message_create);
 
 
    }

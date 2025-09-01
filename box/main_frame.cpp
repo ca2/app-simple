@@ -64,7 +64,7 @@ namespace app_simple_box
 
       simple_main_frame::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &simple_main_frame::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &simple_main_frame::on_message_create);
 
    }
 

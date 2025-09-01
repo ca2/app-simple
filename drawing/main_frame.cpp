@@ -114,7 +114,7 @@ namespace app_simple_drawing
 
       simple_frame_window::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &simple_main_frame::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &simple_main_frame::on_message_create);
 
    }
 
