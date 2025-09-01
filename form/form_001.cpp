@@ -86,8 +86,8 @@ namespace app_simple_form
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &form_001::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &form_001::on_message_destroy);
+      MESSAGE_LINK(::user::e_message_create, psender, this, &form_001::on_message_create);
+      MESSAGE_LINK(::user::e_message_destroy, psender, this, &form_001::on_message_destroy);
 
       add_command_handler("send_button", { this,  &form_001::_001OnSendButton });
       add_command_handler("clear_button", { this,  &form_001::_001OnClearButton });

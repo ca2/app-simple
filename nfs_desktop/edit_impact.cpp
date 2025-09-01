@@ -127,7 +127,7 @@ namespace app_simple_nfs_desktop
 
       edit_impact_base::install_message_routing(pchannel);
 
-      MESSAGE_LINK(e_message_create, pchannel, this, &edit_impact::on_message_create);
+      MESSAGE_LINK(::user::e_message_create, pchannel, this, &edit_impact::on_message_create);
 
       add_command_prober("edit_undo", { this,  &edit_impact::_001OnUpdateEditUndo });
       add_command_handler("edit_undo", { this,  &edit_impact::_001OnEditUndo });

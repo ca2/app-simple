@@ -70,8 +70,8 @@ namespace app_simple_networking_application
 
       ::user::show < ::user::list2>::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create,psender,this,&computer_list2::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &computer_list2::on_message_destroy);
+      MESSAGE_LINK(::user::e_message_create,psender,this,&computer_list2::on_message_create);
+      MESSAGE_LINK(::user::e_message_destroy, psender, this, &computer_list2::on_message_destroy);
 
    }
 

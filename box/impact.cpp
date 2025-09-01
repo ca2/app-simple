@@ -81,8 +81,8 @@ namespace app_simple_box
 
       ::user::impact::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &impact::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &impact::on_message_destroy);
+      MESSAGE_LINK(::user::e_message_create, psender, this, &impact::on_message_create);
+      MESSAGE_LINK(::user::e_message_destroy, psender, this, &impact::on_message_destroy);
 
    }
 
@@ -321,7 +321,7 @@ namespace app_simple_box
       auto pmessagebox = __initialize_new::message_box(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
-         e_message_box_yes_no | e_message_box_icon_information
+         ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
       );
 
       pmessagebox->async()

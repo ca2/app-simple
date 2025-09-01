@@ -71,8 +71,8 @@ namespace app_simple_nfs_desktop
 
       ::user::show < ::user::list2>::install_message_routing(psender);
 
-      MESSAGE_LINK(e_message_create, psender, this, &command_list2::on_message_create);
-      MESSAGE_LINK(e_message_destroy, psender, this, &command_list2::on_message_destroy);
+      MESSAGE_LINK(::user::e_message_create, psender, this, &command_list2::on_message_create);
+      MESSAGE_LINK(::user::e_message_destroy, psender, this, &command_list2::on_message_destroy);
 
    }
 
