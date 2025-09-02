@@ -76,7 +76,7 @@ namespace app_simple_shortcut_amender
 
       form::install_message_routing(psender);
 
-      MESSAGE_LINK(::user::e_message_create, psender, this, &form_amender::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, psender, this, &form_amender::on_message_create);
 
       add_command_handler("send_button", { this,  &form_amender::_001OnSendButton });
       add_command_handler("clear_button", { this,  &form_amender::_001OnClearButton });
