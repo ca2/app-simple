@@ -30,7 +30,7 @@ namespace app_simple_http_file_server
 
       ::user::tab_impact::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &tab_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &tab_impact::on_message_create);
 
    }
 

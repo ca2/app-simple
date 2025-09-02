@@ -121,7 +121,7 @@ namespace app_simple_http
 
       edit_impact_base::install_message_routing(pchannel);
 
-      MESSAGE_LINK(::user::e_message_create, pchannel, this, &edit_impact::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_create, pchannel, this, &edit_impact::on_message_create);
 
       add_command_prober("edit_undo", { this,  &edit_impact::_001OnUpdateEditUndo });
       add_command_handler("edit_undo", { this,  &edit_impact::_001OnEditUndo });
