@@ -582,7 +582,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
                         szPrintName[plen] = 0;
                         wstring wStringTemp(szPrintName);
                         delete[] szPrintName;
-                        ::string cPrintName(wStringTemp.begin(), wStringTemp.end());
+                        ::string cPrintName(wStringTemp);
                         finalSymlinkPath.assign(cPrintName);
                         // TODO: Revisit with cleaner solution
                         if (!PathIsRelativeA(cPrintName.c_str()))
@@ -612,7 +612,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
                         szSubName[slen] = 0;
                         wstring wStringTemp(szSubName);
                         delete[] szSubName;
-                        ::string target(wStringTemp.begin(), wStringTemp.end());
+                        ::string target(wStringTemp);
                         target.erase((character_count)0, (character_count)2);
                         target.insert(0, '\\');
                         target.insert(0, '\\');
