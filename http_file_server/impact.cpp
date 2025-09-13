@@ -121,7 +121,7 @@ namespace app_simple_http_file_server
 
          {
 
-            synchronous_lock synchronouslock(this->synchronization());
+            synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             m_strRequestResult = str;
 

@@ -67,9 +67,9 @@ namespace app_simple_http_folder_upload
 
       ::pointer<::message::command>pcommand(pmessage);
 
-      _synchronous_lock synchronouslock(this->synchronization());
+      _synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-      _synchronous_lock slFile(m_ptree->m_peditfile->synchronization());
+      _synchronous_lock slFile(m_ptree->m_peditfile->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       pcommand->enable(m_ptree->m_peditfile->CanUndo());
 
@@ -81,9 +81,9 @@ namespace app_simple_http_folder_upload
 
       ::pointer<::message::command>pcommand(pmessage);
 
-      _synchronous_lock synchronouslock(this->synchronization());
+      _synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
-      _synchronous_lock slFile(m_ptree->m_peditfile->synchronization());
+      _synchronous_lock slFile(m_ptree->m_peditfile->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
       pcommand->enable(m_ptree->m_peditfile->GetRedoBranchCount() > 0);
 
