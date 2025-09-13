@@ -158,7 +158,7 @@ int nfs::get_mount_count()
 void nfs::Print(const ::scoped_string & scopedstr)
 {
 
-   _synchronous_lock synchronouslock(synchronization());
+   synchronous_lock synchronouslock(synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
    m_strBuffer += scopedstr;
 

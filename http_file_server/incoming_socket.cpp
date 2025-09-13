@@ -160,7 +160,7 @@ namespace app_simple_http_file_server
    //         //if (papp->installer().m_bInstalling)
    //         //{
 
-   //         //   synchronous_lock synchronouslock(papp->m_plibrary->synchronization());
+   //         //   synchronous_lock synchronouslock(papp->m_plibrary->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
    //         //   response().file()->write(papp->m_plibrary->m_itema[papp->installer().m_iRequest]->m_prequest->m_strId);
    //         //   response().file()->write("\r\n");
@@ -180,7 +180,7 @@ namespace app_simple_http_file_server
 
    //         auto papp = get_app();
 
-   //         synchronous_lock synchronouslock(papp->m_plibraryFromInternet->synchronization());
+   //         synchronous_lock synchronouslock(papp->m_plibraryFromInternet->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
    //         //for (int i = papp->installer().m_iRequest +
    //         //             (papp->installer().m_bInstalling ? 1: 0);

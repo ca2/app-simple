@@ -137,7 +137,7 @@ namespace app_simple_nfs_desktop
 
          {
 
-            synchronous_lock synchronouslock(this->synchronization());
+            synchronous_lock synchronouslock(this->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
             m_strRequestResult = str;
 
@@ -222,7 +222,7 @@ namespace app_simple_nfs_desktop
       pgraphics->set_text_color(color::white);
 
       //::string str = m_strRequestResult;
-      _synchronous_lock synchronouslock(m_papp->m_pnfs->synchronization());
+      _synchronous_lock synchronouslock(m_papp->m_pnfs->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
       auto & stra = m_papp->m_pnfs->m_straLog;
       int x = 10;
       int y = rectangleX.height() - 25;
