@@ -146,7 +146,7 @@ void CNFS3Prog::RunCleanup()
       Sleep(1000);
 
       {
-         _synchronous_lock synchronouslock(m_pmutexCleanup, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+         _synchronous_lock synchronouslock(m_pmutexCleanup, m_pmutexCleanup, SYNCHRONOUS_LOCK_SUFFIX);
 
          for (int i = 0; i < m_fileitemaCleanup.size(); )
          {
@@ -736,7 +736,7 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
     auto pfileitem = get_item_by_path(cStr);
 
     if (stat == NFS3_OK) {
-       _synchronous_lock synchronouslock(m_pmutexCleanup, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+       _synchronous_lock synchronouslock(m_pmutexCleanup, m_pmutexCleanup, SYNCHRONOUS_LOCK_SUFFIX);
 
        if (!pfileitem->m_t.m_pLastFile)
        {
@@ -1587,7 +1587,7 @@ nfsstat3 CNFS3Prog::ProcedureCOMMIT(void)
 
        auto pfileitem = get_item_by_path(cStr);
 
-       _synchronous_lock synchronouslock(m_pmutexCleanup, DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
+       _synchronous_lock synchronouslock(m_pmutexCleanup, m_pmutexCleanup, SYNCHRONOUS_LOCK_SUFFIX);
 
        if (pfileitem->m_t.m_pLastFile)
        {
