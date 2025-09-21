@@ -51,21 +51,21 @@
 /* Begin PBXContainerItemProxy section */
 		9ABDE8322C76CFB200619F93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9ABDE82D2C76CFB200619F93 /* base.xcodeproj */;
+			containerPortal = 9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AD117F324F51BE400177261;
 			remoteInfo = base;
 		};
 		9ABDE8342C76CFB200619F93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9ABDE82D2C76CFB200619F93 /* base.xcodeproj */;
+			containerPortal = 9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A93B6FA2846EB33005ACD11;
 			remoteInfo = ios_base;
 		};
 		9ABDE8362C76CFE100619F93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9ABDE82D2C76CFB200619F93 /* base.xcodeproj */;
+			containerPortal = 9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AD117F224F51BE400177261;
 			remoteInfo = base;
@@ -116,7 +116,7 @@
 		9AAFC2362A8B3486005D10AB /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
 		9AAFC2552A8B3BC3005D10AB /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAFC2572A8B3BCA005D10AB /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ABDE82D2C76CFB200619F93 /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,7 @@
 		9A1D5D352751A81D003D9B5F = {
 			isa = PBXGroup;
 			children = (
-				9ABDE82D2C76CFB200619F93 /* base.xcodeproj */,
+				9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */,
 				9A9902C027532C3F00B13F01 /* http_file_server */,
 				9A1D5D3F2751A81D003D9B5F /* Products */,
 				9A99041327532D3E00B13F01 /* Frameworks */,
@@ -295,7 +295,7 @@
 			projectReferences = (
 				{
 					ProductGroup = 9ABDE82E2C76CFB200619F93 /* Products */;
-					ProjectRef = 9ABDE82D2C76CFB200619F93 /* base.xcodeproj */;
+					ProjectRef = 9ABDE82D2C76CFB200619F93 /* berg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -432,18 +432,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -525,18 +527,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
