@@ -39,7 +39,7 @@
 		9AA3F9AA2A95C8F8004283CA /* command.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA3F9A42A95C8F8004283CA /* command.h */; };
 		9AAFC2372A8B3486005D10AB /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFC2352A8B3486005D10AB /* main_impact.cpp */; };
 		9AAFC2382A8B3486005D10AB /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFC2362A8B3486005D10AB /* main_impact.h */; };
-		9AAFC2562A8B3BC3005D10AB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2552A8B3BC3005D10AB /* libbase.dylib */; };
+		9AAFC2562A8B3BC3005D10AB /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2552A8B3BC3005D10AB /* libberg.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,7 @@
 		9AA3F9A42A95C8F8004283CA /* command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = command.h; sourceTree = "<group>"; };
 		9AAFC2352A8B3486005D10AB /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
 		9AAFC2362A8B3486005D10AB /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
-		9AAFC2552A8B3BC3005D10AB /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAFC2552A8B3BC3005D10AB /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAFC2572A8B3BCA005D10AB /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABDE8222C76CF6F00619F93 /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AAFC2562A8B3BC3005D10AB /* libbase.dylib in Frameworks */,
+				9AAFC2562A8B3BC3005D10AB /* libberg.dylib in Frameworks */,
 				9A99041527532D3E00B13F01 /* libacme.dylib in Frameworks */,
 				9A99041727532D3E00B13F01 /* libapex.dylib in Frameworks */,
 				9A99041927532D3E00B13F01 /* libaqua.dylib in Frameworks */,
@@ -182,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAFC2572A8B3BCA005D10AB /* libbred.dylib */,
-				9AAFC2552A8B3BC3005D10AB /* libbase.dylib */,
+				9AAFC2552A8B3BC3005D10AB /* libberg.dylib */,
 				9A99041427532D3E00B13F01 /* libacme.dylib */,
 				9A99041627532D3E00B13F01 /* libapex.dylib */,
 				9A99041827532D3E00B13F01 /* libaqua.dylib */,
@@ -195,7 +195,7 @@
 		9ABDE8232C76CF6F00619F93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ABDE8282C76CF6F00619F93 /* libbase.dylib */,
+				9ABDE8282C76CF6F00619F93 /* libberg.dylib */,
 				9ABDE82A2C76CF6F00619F93 /* libios_base.a */,
 			);
 			name = Products;
@@ -285,10 +285,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9ABDE8282C76CF6F00619F93 /* libbase.dylib */ = {
+		9ABDE8282C76CF6F00619F93 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9ABDE8272C76CF6F00619F93 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

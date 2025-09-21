@@ -35,7 +35,7 @@
 		9AD91F3E2D7362CA00E097AF /* libaura_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F142D7362AC00E097AF /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F3F2D7362CA00E097AF /* libaura_posix.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F152D7362AC00E097AF /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F402D7362CA00E097AF /* libaxis.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F162D7362AC00E097AF /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AD91F412D7362CA00E097AF /* libbase.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F172D7362AC00E097AF /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AD91F412D7362CA00E097AF /* libberg.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F172D7362AC00E097AF /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F422D7362CA00E097AF /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F182D7362AC00E097AF /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F432D7362CA00E097AF /* libcrypto_openssl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F192D7362AC00E097AF /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F442D7362CA00E097AF /* libdarwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F1A2D7362AC00E097AF /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -55,7 +55,7 @@
 		9AD91F522D7362CA00E097AF /* libwindowing_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F282D7362AC00E097AF /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F532D7362CA00E097AF /* libwrite_text_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AD91F292D7362AC00E097AF /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AD91F542D7362CE00E097AF /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91F012D7362AC00E097AF /* libacme.dylib */; };
-		9AD91F552D7362D400E097AF /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91F172D7362AC00E097AF /* libbase.dylib */; };
+		9AD91F552D7362D400E097AF /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91F172D7362AC00E097AF /* libberg.dylib */; };
 		9AD91F562D7362DA00E097AF /* libapp_simple_notify_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91F0E2D7362AC00E097AF /* libapp_simple_notify_drawing.dylib */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,7 @@
 				9AD91F3E2D7362CA00E097AF /* libaura_macos.dylib in CopyFiles */,
 				9AD91F3F2D7362CA00E097AF /* libaura_posix.dylib in CopyFiles */,
 				9AD91F402D7362CA00E097AF /* libaxis.dylib in CopyFiles */,
-				9AD91F412D7362CA00E097AF /* libbase.dylib in CopyFiles */,
+				9AD91F412D7362CA00E097AF /* libberg.dylib in CopyFiles */,
 				9AD91F422D7362CA00E097AF /* libcrypto.dylib in CopyFiles */,
 				9AD91F432D7362CA00E097AF /* libcrypto_openssl.dylib in CopyFiles */,
 				9AD91F442D7362CA00E097AF /* libdarwin.dylib in CopyFiles */,
@@ -147,7 +147,7 @@
 		9AD91F142D7362AC00E097AF /* libaura_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = "<group>"; };
 		9AD91F152D7362AC00E097AF /* libaura_posix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = "<group>"; };
 		9AD91F162D7362AC00E097AF /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = "<group>"; };
-		9AD91F172D7362AC00E097AF /* libbase.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = "<group>"; };
+		9AD91F172D7362AC00E097AF /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = "<group>"; };
 		9AD91F182D7362AC00E097AF /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
 		9AD91F192D7362AC00E097AF /* libcrypto_openssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto_openssl.dylib; sourceTree = "<group>"; };
 		9AD91F1A2D7362AC00E097AF /* libdarwin.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD91F542D7362CE00E097AF /* libacme.dylib in Frameworks */,
-				9AD91F552D7362D400E097AF /* libbase.dylib in Frameworks */,
+				9AD91F552D7362D400E097AF /* libberg.dylib in Frameworks */,
 				9AD91F562D7362DA00E097AF /* libapp_simple_notify_drawing.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +252,7 @@
 				9AD91F142D7362AC00E097AF /* libaura_macos.dylib */,
 				9AD91F152D7362AC00E097AF /* libaura_posix.dylib */,
 				9AD91F162D7362AC00E097AF /* libaxis.dylib */,
-				9AD91F172D7362AC00E097AF /* libbase.dylib */,
+				9AD91F172D7362AC00E097AF /* libberg.dylib */,
 				9AD91F182D7362AC00E097AF /* libcrypto.dylib */,
 				9AD91F192D7362AC00E097AF /* libcrypto_openssl.dylib */,
 				9AD91F1A2D7362AC00E097AF /* libdarwin.dylib */,
@@ -442,6 +442,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
@@ -521,6 +526,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",

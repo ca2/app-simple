@@ -24,7 +24,7 @@
 		9A7D922C251AF35E00DE81AE /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7D922B251AF35E00DE81AE /* libapex.dylib */; };
 		9A833BF524F5453E00C079FB /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB38C8E2275344400B208A8 /* libaura.dylib */; };
 		9A833BF724F5454300C079FB /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BF624F5454300C079FB /* libaxis.dylib */; };
-		9A833BF824F5454900C079FB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BF224F5452200C079FB /* libbase.dylib */; };
+		9A833BF824F5454900C079FB /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A833BF224F5452200C079FB /* libberg.dylib */; };
 		9AA624E522BA435C0090BD40 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA623F122BA43530090BD40 /* main_frame.h */; };
 		9AA624E722BA435C0090BD40 /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA623F422BA43530090BD40 /* main_impact.cpp */; };
 		9AA624E922BA435C0090BD40 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA6240522BA43550090BD40 /* main_frame.cpp */; };
@@ -109,7 +109,7 @@
 		9AA624CE22BA435A0090BD40 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		9AA624DA22BA435C0090BD40 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		9AB38C8E2275344400B208A8 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AB38C902275345000B208A8 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB38C902275345000B208A8 /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E8A1904CFFD001AEFFB /* libapp_simple_os_drag_and_drop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libapp_simple_os_drag_and_drop.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24E991904CFFD001AEFFB /* app_core_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_core_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE24EA41904CFFD001AEFFB /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				9A2E62B825258F970001CC7E /* libaqua.dylib in Frameworks */,
 				9A7D922A251AF35E00DE81AE /* libacme.dylib in Frameworks */,
 				9A7D922C251AF35E00DE81AE /* libapex.dylib in Frameworks */,
-				9A833BF824F5454900C079FB /* libbase.dylib in Frameworks */,
+				9A833BF824F5454900C079FB /* libberg.dylib in Frameworks */,
 				9A833BF724F5454300C079FB /* libaxis.dylib in Frameworks */,
 				9A833BF524F5453E00C079FB /* libaura.dylib in Frameworks */,
 			);
@@ -159,7 +159,7 @@
 		9A833BEE24F5452200C079FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A833BF224F5452200C079FB /* libbase.dylib */,
+				9A833BF224F5452200C079FB /* libberg.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 				9A7D9229251AF35E00DE81AE /* libacme.dylib */,
 				9A7D922B251AF35E00DE81AE /* libapex.dylib */,
 				9A833BF624F5454300C079FB /* libaxis.dylib */,
-				9AB38C902275345000B208A8 /* libbase.dylib */,
+				9AB38C902275345000B208A8 /* libberg.dylib */,
 				9AB38C8E2275344400B208A8 /* libaura.dylib */,
 				9AF75DF71F83EBBB00FDE7CC /* libios_core.dylib */,
 				9AF75DF51F83EBB300FDE7CC /* libios_base.dylib */,
@@ -367,10 +367,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A833BF224F5452200C079FB /* libbase.dylib */ = {
+		9A833BF224F5452200C079FB /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9A833BF124F5452200C079FB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

@@ -29,7 +29,7 @@
 		9AEA1B8B2679469C006F4A68 /* libaura_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B6E2679469B006F4A68 /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B8D2679469D006F4A68 /* libaura_posix.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B6F2679469B006F4A68 /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B8F2679469D006F4A68 /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B702679469B006F4A68 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AEA1B912679469D006F4A68 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B712679469B006F4A68 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AEA1B912679469D006F4A68 /* libberg.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AEA1B712679469B006F4A68 /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B932679469D006F4A68 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA8040926657ABF00A6B449 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B952679469D006F4A68 /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AA803B726657ABB00A6B449 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AEA1B972679469D006F4A68 /* libexperience_tranquillum.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A42D7CA266597550011645D /* libexperience_tranquillum.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -214,7 +214,7 @@
 			dstSubfolderSpec = 6;
 			files = (
 				9AEA1B792679469B006F4A68 /* libacme_posix.dylib in Embed Libraries */,
-				9AEA1B912679469D006F4A68 /* libbase.dylib in Embed Libraries */,
+				9AEA1B912679469D006F4A68 /* libberg.dylib in Embed Libraries */,
 				9AEA1BA926794746006F4A68 /* libssl.dylib in Embed Libraries */,
 				9AEA1BA626794743006F4A68 /* libcrypto.dylib in Embed Libraries */,
 				9AEA1BA12679469E006F4A68 /* lib.dylib in Embed Libraries */,
@@ -275,7 +275,7 @@
 		9AEA1B6E2679469B006F4A68 /* libaura_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B6F2679469B006F4A68 /* libaura_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B702679469B006F4A68 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AEA1B712679469B006F4A68 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEA1B712679469B006F4A68 /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B722679469B006F4A68 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1B732679469B006F4A68 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEA1BA2267946DE006F4A68 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 				9AEA1B6E2679469B006F4A68 /* libaura_macos.dylib */,
 				9AEA1B6F2679469B006F4A68 /* libaura_posix.dylib */,
 				9AEA1B702679469B006F4A68 /* libaxis.dylib */,
-				9AEA1B712679469B006F4A68 /* libbase.dylib */,
+				9AEA1B712679469B006F4A68 /* libberg.dylib */,
 				9AEA1B722679469B006F4A68 /* libidn.dylib */,
 				9AEA1B732679469B006F4A68 /* libwindowing_macos.dylib */,
 				9AEA1B6026794656006F4A68 /* libacme_apple.dylib */,
