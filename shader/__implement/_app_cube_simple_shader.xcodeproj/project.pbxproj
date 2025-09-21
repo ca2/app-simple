@@ -29,7 +29,7 @@
 		9A5A875E26D262ED004AF957 /* libaura_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875526D262ED004AF957 /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A876026D262ED004AF957 /* libaura_posix.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875626D262ED004AF957 /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A876226D262ED004AF957 /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875726D262ED004AF957 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A5A876426D262EE004AF957 /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875826D262ED004AF957 /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A5A876426D262EE004AF957 /* libberg.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875826D262ED004AF957 /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A876626D262EE004AF957 /* libbred.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875926D262ED004AF957 /* libbred.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A876926D262EE004AF957 /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A5A875A26D262ED004AF957 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9A5A877026D26309004AF957 /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E48526611FDA00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -295,7 +295,7 @@
 				9A57C0962BFB277B00A232C7 /* libssl.dylib in Embed Libraries */,
 				9A5A877E26D2630A004AF957 /* libwindowing_macos.dylib in Embed Libraries */,
 				9A5A876026D262ED004AF957 /* libaura_posix.dylib in Embed Libraries */,
-				9A5A876426D262EE004AF957 /* libbase.dylib in Embed Libraries */,
+				9A5A876426D262EE004AF957 /* libberg.dylib in Embed Libraries */,
 				9A5A876626D262EE004AF957 /* libbred.dylib in Embed Libraries */,
 				9A9A19622AFC383600FA9BEB /* libdarwin.dylib in Embed Libraries */,
 				9A5A873E26D262AF004AF957 /* libacme_macos.dylib in Embed Libraries */,
@@ -341,7 +341,7 @@
 		9A5A875526D262ED004AF957 /* libaura_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A875626D262ED004AF957 /* libaura_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A875726D262ED004AF957 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A5A875826D262ED004AF957 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5A875826D262ED004AF957 /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A875926D262ED004AF957 /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A875A26D262ED004AF957 /* libdatabase_sqlite3.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdatabase_sqlite3.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5A876A26D26309004AF957 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -542,7 +542,7 @@
 				9A5A875526D262ED004AF957 /* libaura_macos.dylib */,
 				9A5A875626D262ED004AF957 /* libaura_posix.dylib */,
 				9A5A875726D262ED004AF957 /* libaxis.dylib */,
-				9A5A875826D262ED004AF957 /* libbase.dylib */,
+				9A5A875826D262ED004AF957 /* libberg.dylib */,
 				9A5A875926D262ED004AF957 /* libbred.dylib */,
 				9A5A875A26D262ED004AF957 /* libdatabase_sqlite3.dylib */,
 				9A5A873F26D262D7004AF957 /* libacme_posix.dylib */,
@@ -1051,6 +1051,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
@@ -1127,6 +1132,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
