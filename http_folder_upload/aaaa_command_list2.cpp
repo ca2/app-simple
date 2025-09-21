@@ -71,8 +71,8 @@ namespace app_simple_http_folder_upload
 
       ::user::show < ::user::list2>::install_message_routing(psender);
 
-      MESSAGE_LINK(::user::e_message_create, psender, this, &command_list2::on_message_create);
-      MESSAGE_LINK(::user::e_message_destroy, psender, this, &command_list2::on_message_destroy);
+      USER_MESSAGE_LINK(::user::e_message_create, psender, this, &command_list2::on_message_create);
+      USER_MESSAGE_LINK(::user::e_message_destroy, psender, this, &command_list2::on_message_destroy);
 
    }
 
@@ -179,7 +179,7 @@ namespace app_simple_http_folder_upload
       if (iCurrentCommand < 0)
       {
 
-         __construct_new(pcommandCurrent);
+         øconstruct_new(pcommandCurrent);
 
          pcommandCurrent->m_strCommand = "(No Command)";
 
@@ -187,7 +187,7 @@ namespace app_simple_http_folder_upload
       else if (iCurrentCommand >= main_content().m_pitema->size())
       {
 
-         __construct_new(pcommandCurrent);
+         øconstruct_new(pcommandCurrent);
 
          pcommandCurrent->m_strCommand = "Done!!";
 
@@ -303,7 +303,7 @@ namespace app_simple_http_folder_upload
       if (pitem->m_item.m_eelement == e_element_item)
       {
 
-         auto phyperlink = __create_new <::hyperlink >();
+         auto phyperlink = øcreate_new <::hyperlink >();
 
          phyperlink->m_strLink.formatf("http://127.0.0.1:%d/", get_app()->networking_application()->wait_get_current_port(1_min));
 
