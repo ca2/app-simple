@@ -294,7 +294,7 @@ void nfs::printConfirmQuit(void)
 void nfs::mountPaths(std::vector<std::vector<::string>> paths)
 {
 	int i;
-	int numberOfElements = paths.size();
+	int numberOfElements = (int) paths.size();
 
 	for (i = 0; i < numberOfElements; i++) {
 		char *pPath = (char*)paths[i][0].c_str();
