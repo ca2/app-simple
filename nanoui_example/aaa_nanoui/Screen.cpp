@@ -399,7 +399,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //
 //#if defined(NANOUI_USE_METAL)
 //   if (depth_buffer) {
-//      m_depth_stencil_texture = __allocate< Texture >(
+//      m_depth_stencil_texture = øallocate< Texture >(
 //         stencil_buffer ? Texture::PixelFormat::DepthStencil
 //         : Texture::PixelFormat::Depth,
 //         Texture::ComponentFormat::Float32,

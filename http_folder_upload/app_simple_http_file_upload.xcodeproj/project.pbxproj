@@ -41,7 +41,7 @@
 		9AAFBF8E2A8B3453005D10AB /* computer_list2.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFBF8C2A8B3453005D10AB /* computer_list2.h */; };
 		9AAFC2372A8B3486005D10AB /* main_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AAFC2352A8B3486005D10AB /* main_impact.cpp */; };
 		9AAFC2382A8B3486005D10AB /* main_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AAFC2362A8B3486005D10AB /* main_impact.h */; };
-		9AAFC2562A8B3BC3005D10AB /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2552A8B3BC3005D10AB /* libbase.dylib */; };
+		9AAFC2562A8B3BC3005D10AB /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2552A8B3BC3005D10AB /* libberg.dylib */; };
 		9AAFC2582A8B3BCA005D10AB /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2572A8B3BCA005D10AB /* libbred.dylib */; };
 		9AAFC2592A8B3BD1005D10AB /* libcore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAFC2502A8B3B38005D10AB /* libcore.dylib */; };
 /* End PBXBuildFile section */
@@ -109,7 +109,7 @@
 		9AAFC2352A8B3486005D10AB /* main_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_impact.cpp; sourceTree = "<group>"; };
 		9AAFC2362A8B3486005D10AB /* main_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_impact.h; sourceTree = "<group>"; };
 		9AAFC24A2A8B3B37005D10AB /* core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = core.xcodeproj; path = ../../app/core/core.xcodeproj; sourceTree = SOURCE_ROOT; };
-		9AAFC2552A8B3BC3005D10AB /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AAFC2552A8B3BC3005D10AB /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAFC2572A8B3BCA005D10AB /* libbred.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbred.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,7 +120,7 @@
 			files = (
 				9AAFC2592A8B3BD1005D10AB /* libcore.dylib in Frameworks */,
 				9AAFC2582A8B3BCA005D10AB /* libbred.dylib in Frameworks */,
-				9AAFC2562A8B3BC3005D10AB /* libbase.dylib in Frameworks */,
+				9AAFC2562A8B3BC3005D10AB /* libberg.dylib in Frameworks */,
 				9A99041527532D3E00B13F01 /* libacme.dylib in Frameworks */,
 				9A99041727532D3E00B13F01 /* libapex.dylib in Frameworks */,
 				9A99041927532D3E00B13F01 /* libaqua.dylib in Frameworks */,
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAFC2572A8B3BCA005D10AB /* libbred.dylib */,
-				9AAFC2552A8B3BC3005D10AB /* libbase.dylib */,
+				9AAFC2552A8B3BC3005D10AB /* libberg.dylib */,
 				9A99041427532D3E00B13F01 /* libacme.dylib */,
 				9A99041627532D3E00B13F01 /* libapex.dylib */,
 				9A99041827532D3E00B13F01 /* libaqua.dylib */,
@@ -419,18 +419,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -511,18 +513,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",

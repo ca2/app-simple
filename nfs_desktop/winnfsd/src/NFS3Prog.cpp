@@ -89,7 +89,7 @@ void filename3::SetSize(uint32 len)
 void filename3::Set(const_char_pointer str)
 {
    auto len = strlen(str);
-    SetSize(len);
+    SetSize((uint32) len);
     strcpy_s(name, (len + 1), str);
 }
 
@@ -112,7 +112,7 @@ void nfspath3::SetSize(uint32 len)
 void nfspath3::Set(const ::file::path &pathParam)
 {
    auto len = strlen(pathParam);
-    SetSize(len);
+    SetSize((uint32) len);
     strcpy_s(path, (len + 1), pathParam);
 }
 
@@ -674,7 +674,7 @@ nfsstat3 CNFS3Prog::ProcedureREAD(void)
 
         if (pFile != NULL) {
             _fseeki64(pFile, offset, SEEK_SET) ;
-            count = fread(data.contents, sizeof(char), count, pFile);
+            count = (count3) fread(data.contents, sizeof(char), count, pFile);
             eof = fgetc(pFile) == EOF;
             fclose(pFile);
         } else {
@@ -779,7 +779,7 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
 
             if (pFile != NULL) {
                 _fseeki64(pFile, offset, SEEK_SET);
-                count = fwrite(data.contents, sizeof(char), data.length, pFile);
+                count = (count3) fwrite(data.contents, sizeof(char), data.length, pFile);
             } else {
                 char buffer[BUFFER_SIZE];
                 errno_t errorNumber = errno;
@@ -813,7 +813,7 @@ nfsstat3 CNFS3Prog::ProcedureWRITE1(void)
                 else
                 {
                    _fseeki64(pFile, offset, SEEK_SET);
-                   count = fwrite(data.contents, sizeof(char), data.length, pFile);
+                   count = (count3) fwrite(data.contents, sizeof(char), data.length, pFile);
                    PrintLog(" written ");
                 }
                 file_wcc.after.attributes_follow = GetFileAttributesForNFS(pFile, pfileitem, cStr, &file_wcc.after.attributes);
@@ -2078,12 +2078,12 @@ bool CNFS3Prog::GetUnstableFileAttributesForNFS(::memory_file * pfile, const_cha
    pAttr->rdev.specdata2 = 0;
    pAttr->fsid = 7; //NTFS //4; 
    pAttr->fileid = get_file_handle(path).m_ll;
-   pAttr->atime.seconds = time.m_iSecond;
+   pAttr->atime.seconds = (uint32)time.m_iSecond;
    pAttr->atime.nseconds = 0;
-   pAttr->mtime.seconds = time.m_iSecond;
+   pAttr->mtime.seconds = (uint32)time.m_iSecond;
    pAttr->mtime.nseconds = 0;
    // This seems to be the changed time, not creation time
-   pAttr->ctime.seconds = time.m_iSecond;
+   pAttr->ctime.seconds = (uint32)time.m_iSecond;
    pAttr->ctime.nseconds = 0;
 
    return true;
