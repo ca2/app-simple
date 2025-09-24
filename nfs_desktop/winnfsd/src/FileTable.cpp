@@ -466,8 +466,8 @@ bool CFileTable::_EraseItem(const ::scoped_string & scopedstr) {
 	if (foundDeletedItem != NULL) {
 		// Remove from table
 		//FILE_TABLE *pTable;
-		unsigned int i;
-		unsigned long handle = foundDeletedItem->m_t.handle.m_ll;
+		//unsigned int i;
+		unsigned long handle = (unsigned long) foundDeletedItem->m_t.handle.m_ll;
 
       m_treenodea[handle] = nullptr;
 
@@ -572,7 +572,7 @@ tree_path_item<FILE_ITEM> * CFileTable::get_item_by_path(const ::scoped_string &
 ::file::path CFileTable::GetFilePath(file_handle handle)
 {
 
-   if (handle.m_ll < 0 || handle.m_ll >= m_treenodea.size())
+   if (handle.m_ll < 0 || handle.m_ll >= (unsigned long) m_treenodea.size())
    {
 
       return {};
