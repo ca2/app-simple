@@ -12,20 +12,20 @@
 		9A9E4A782751A3100094A04C /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9E4A772751A3100094A04C /* libaqua.dylib */; };
 		9A9E4A7A2751A3100094A04C /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9E4A792751A3100094A04C /* libaura.dylib */; };
 		9A9E4A7C2751A3100094A04C /* libbred.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9E4A7B2751A3100094A04C /* libbred.dylib */; };
-		9A9E4A7D2751A3100094A04C /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD63251B10010064BCDE /* libbase.dylib */; };
+		9A9E4A7D2751A3100094A04C /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A18FD63251B10010064BCDE /* libberg.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9A18FD62251B10010064BCDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A18FD5E251B10010064BCDE /* base.xcodeproj */;
+			containerPortal = 9A18FD5E251B10010064BCDE /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AD117F324F51BE400177261;
 			remoteInfo = base;
 		};
 		9A18FD64251B100F0064BCDE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A18FD5E251B10010064BCDE /* base.xcodeproj */;
+			containerPortal = 9A18FD5E251B10010064BCDE /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AD117F224F51BE400177261;
 			remoteInfo = base;
@@ -45,7 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A18FD5E251B10010064BCDE /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A18FD5E251B10010064BCDE /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A9E4A732751A3100094A04C /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A752751A3100094A04C /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A772751A3100094A04C /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +91,7 @@
 				9A9E4A762751A3100094A04C /* libapex.dylib in Frameworks */,
 				9A9E4A782751A3100094A04C /* libaqua.dylib in Frameworks */,
 				9A9E4A7A2751A3100094A04C /* libaura.dylib in Frameworks */,
-				9A9E4A7D2751A3100094A04C /* libbase.dylib in Frameworks */,
+				9A9E4A7D2751A3100094A04C /* libberg.dylib in Frameworks */,
 				9A9E4A7C2751A3100094A04C /* libbred.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +102,7 @@
 		9A18FD5F251B10010064BCDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A18FD63251B10010064BCDE /* libbase.dylib */,
+				9A18FD63251B10010064BCDE /* libberg.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9A18FD5E251B10010064BCDE /* base.xcodeproj */,
+				9A18FD5E251B10010064BCDE /* berg.xcodeproj */,
 				9A9E4ADC2751A54E0094A04C /* http */,
 				9AEB75A416F78DF10085103B /* Products */,
 				9A920FD61F3BF68400CD9D94 /* Frameworks */,
@@ -237,7 +237,7 @@
 			projectReferences = (
 				{
 					ProductGroup = 9A18FD5F251B10010064BCDE /* Products */;
-					ProjectRef = 9A18FD5E251B10010064BCDE /* base.xcodeproj */;
+					ProjectRef = 9A18FD5E251B10010064BCDE /* berg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -249,10 +249,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A18FD63251B10010064BCDE /* libbase.dylib */ = {
+		9A18FD63251B10010064BCDE /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9A18FD62251B10010064BCDE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

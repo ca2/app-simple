@@ -24,7 +24,7 @@
 		9A8C84B82784C272000C8587 /* libaqua.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C84B72784C272000C8587 /* libaqua.dylib */; };
 		9A8C84BA2784C279000C8587 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C84B92784C279000C8587 /* libaura.dylib */; };
 		9A8C84BB2784C286000C8587 /* libapp_simple_drawing.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C8358278459BD000C8587 /* libapp_simple_drawing.dylib */; };
-		9A8C84BD2784C2F6000C8587 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C84BC2784C2F6000C8587 /* libbase.dylib */; };
+		9A8C84BD2784C2F6000C8587 /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C84BC2784C2F6000C8587 /* libberg.dylib */; };
 		9A8C84BF2784C328000C8587 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8C84BE2784C328000C8587 /* libaxis.dylib */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		9A8C84B52784BD64000C8587 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C84B72784C272000C8587 /* libaqua.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C84B92784C279000C8587 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8C84BC2784C2F6000C8587 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8C84BC2784C2F6000C8587 /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8C84BE2784C328000C8587 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8C84BF2784C328000C8587 /* libaxis.dylib in Frameworks */,
-				9A8C84BD2784C2F6000C8587 /* libbase.dylib in Frameworks */,
+				9A8C84BD2784C2F6000C8587 /* libberg.dylib in Frameworks */,
 				9A8C84BB2784C286000C8587 /* libapp_simple_drawing.dylib in Frameworks */,
 				9A8C84BA2784C279000C8587 /* libaura.dylib in Frameworks */,
 				9A8C84B82784C272000C8587 /* libaqua.dylib in Frameworks */,
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8C84BE2784C328000C8587 /* libaxis.dylib */,
-				9A8C84BC2784C2F6000C8587 /* libbase.dylib */,
+				9A8C84BC2784C2F6000C8587 /* libberg.dylib */,
 				9A8C84B92784C279000C8587 /* libaura.dylib */,
 				9A8C84B72784C272000C8587 /* libaqua.dylib */,
 				9A8C84B52784BD64000C8587 /* libapex.dylib */,
@@ -376,18 +376,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -470,18 +472,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",

@@ -21,7 +21,7 @@
 		9AB15C1529A87AD000DFDF90 /* libapex_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C1229A87AD000DFDF90 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AB15C1729A87AD100DFDF90 /* libaura_darwin.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AC01E6B2748D309006BEBCC /* libcrypto_openssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AC01E462748D26D006BEBCC /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libbase.dylib */; };
+		9AC01E732748DB54006BEBCC /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libberg.dylib */; };
 		9AE7A3DA2D1CD76C00070257 /* libacme_windowing_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3D82D1CD76C00070257 /* libacme_windowing_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AE7A3DD2D1CD77400070257 /* libacme_windowing_kit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3DB2D1CD77400070257 /* libacme_windowing_kit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AE7A3E02D1CD77C00070257 /* libinnate_ui_appkit.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AE7A3DE2D1CD77C00070257 /* libinnate_ui_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -46,7 +46,7 @@
 		9AFFC7EA2678757600C4104F /* libaura_macos.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7CF2678757600C4104F /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC7EC2678757600C4104F /* libaura_posix.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7D02678757600C4104F /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC7F5267875AA00C4104F /* libaxis.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A353DAC266225570060257B /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AFFC7F7267875AA00C4104F /* libbase.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libbase.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AFFC7F7267875AA00C4104F /* libberg.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9AFFC7F0267875AA00C4104F /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC7FD267875AB00C4104F /* libdatabase_sqlite3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A353E5926622AB90060257B /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC7FF267875AB00C4104F /* libdraw2d_quartz2d.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A00E29A26611EAA00517464 /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9AFFC801267875AB00C4104F /* libexperience_core.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9A353DE3266228100060257B /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -277,7 +277,7 @@
 				9AEC3F6F2D1AB17400F9E621 /* liboperating_ambient_macos.dylib in Embed Libraries */,
 				9A8C50D72783DA83000C8587 /* libssl.dylib in Embed Libraries */,
 				9A90BC9A2B549F2B002BFC9E /* libarchive.dylib in Embed Libraries */,
-				9AFFC7F7267875AA00C4104F /* libbase.dylib in Embed Libraries */,
+				9AFFC7F7267875AA00C4104F /* libberg.dylib in Embed Libraries */,
 				9AFFC7E22678757600C4104F /* libapp_simple_drawing.dylib in Embed Libraries */,
 				9AFFC803267875AB00C4104F /* libidn.dylib in Embed Libraries */,
 				9AFFC7D22678757600C4104F /* libacme.dylib in Embed Libraries */,
@@ -364,7 +364,7 @@
 		9AFFC7CE2678757600C4104F /* libaura_apple.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_apple.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC7CF2678757600C4104F /* libaura_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC7D02678757600C4104F /* libaura_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFFC7F0267875AA00C4104F /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFFC7F0267875AA00C4104F /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC7F3267875AA00C4104F /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFFC80A267875D200C4104F /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -374,7 +374,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AC01E732748DB54006BEBCC /* libbase.dylib in Frameworks */,
+				9AC01E732748DB54006BEBCC /* libberg.dylib in Frameworks */,
 				9AFFC7D12678757600C4104F /* libacme.dylib in Frameworks */,
 				9AFFC7E12678757600C4104F /* libapp_simple_drawing.dylib in Frameworks */,
 				9AFFC7D92678757600C4104F /* libapex.dylib in Frameworks */,
@@ -543,7 +543,7 @@
 				9AB15C1329A87AD000DFDF90 /* libaura_darwin.dylib */,
 				9AB15C0F29A87AC300DFDF90 /* libacme_darwin.dylib */,
 				9AFFC80A267875D200C4104F /* libwindowing_macos.dylib */,
-				9AFFC7F0267875AA00C4104F /* libbase.dylib */,
+				9AFFC7F0267875AA00C4104F /* libberg.dylib */,
 				9AFFC7F3267875AA00C4104F /* libidn.dylib */,
 				9AFFC7C42678757600C4104F /* libacme.dylib */,
 				9AFFC7C52678757600C4104F /* libacme_apple.dylib */,
@@ -1059,18 +1059,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -1139,18 +1141,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",

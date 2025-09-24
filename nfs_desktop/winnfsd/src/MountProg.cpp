@@ -222,7 +222,7 @@ void CMountProg::ProcedureEXPORT(void)
 
 	for (auto &exportedPath : m_PathMap) {
 		const_char_pointer path = exportedPath.element1().c_str();
-		int length = strlen(path);
+		int length = (int) strlen(path);
 		// dirpath
 		m_pOutStream->Write(1);
 		m_pOutStream->Write(length);

@@ -10,7 +10,7 @@
 		07B65520190F3001002DAADE /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEB75BE16F78E600085103B /* framework.cpp */; };
 		9A415C26247393B200EF2BCD /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A85299C212F93A80073FBAB /* application.cpp */; };
 		9A83B58E2807FBF200A1A2B6 /* libaxis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83B58D2807FBF200A1A2B6 /* libaxis.dylib */; };
-		9A83B5932807FBF900A1A2B6 /* libbase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83B5922807FBF900A1A2B6 /* libbase.dylib */; };
+		9A83B5932807FBF900A1A2B6 /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A83B5922807FBF900A1A2B6 /* libberg.dylib */; };
 		9A83B5A22807FC6600A1A2B6 /* impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A83B59C2807FC6600A1A2B6 /* impact.h */; };
 		9A83B5A32807FC6600A1A2B6 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A83B59D2807FC6600A1A2B6 /* main_frame.h */; };
 		9A83B5A42807FC6600A1A2B6 /* impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A83B59E2807FC6600A1A2B6 /* impact.cpp */; };
@@ -32,21 +32,21 @@
 /* Begin PBXContainerItemProxy section */
 		9A438898299E6A9F00D2EE15 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
+			containerPortal = 9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A93B6FA2846EB33005ACD11;
 			remoteInfo = ios_base;
 		};
 		9A83B5982807FC2300A1A2B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
+			containerPortal = 9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AD117F324F51BE400177261;
 			remoteInfo = base;
 		};
 		9A83B59A2807FC2A00A1A2B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
+			containerPortal = 9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9AD117F224F51BE400177261;
 			remoteInfo = base;
@@ -67,8 +67,8 @@
 
 /* Begin PBXFileReference section */
 		9A83B58D2807FBF200A1A2B6 /* libaxis.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A83B5922807FBF900A1A2B6 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A83B5942807FC2300A1A2B6 /* base.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = base.xcodeproj; path = ../../app/base/base.xcodeproj; sourceTree = SOURCE_ROOT; };
+		9A83B5922807FBF900A1A2B6 /* libberg.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = berg.xcodeproj; path = ../../app/berg/berg.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A83B59C2807FC6600A1A2B6 /* impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = impact.h; sourceTree = "<group>"; };
 		9A83B59D2807FC6600A1A2B6 /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
 		9A83B59E2807FC6600A1A2B6 /* impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = impact.cpp; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A83B5932807FBF900A1A2B6 /* libbase.dylib in Frameworks */,
+				9A83B5932807FBF900A1A2B6 /* libberg.dylib in Frameworks */,
 				9A83B58E2807FBF200A1A2B6 /* libaxis.dylib in Frameworks */,
 				9AE12F472661FAF0009F476A /* libacme.dylib in Frameworks */,
 				9AE12F492661FAF0009F476A /* libapex.dylib in Frameworks */,
@@ -121,7 +121,7 @@
 		9A83B5952807FC2300A1A2B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A83B5992807FC2300A1A2B6 /* libbase.dylib */,
+				9A83B5992807FC2300A1A2B6 /* libberg.dylib */,
 				9A438899299E6A9F00D2EE15 /* libios_base.a */,
 			);
 			name = Products;
@@ -130,7 +130,7 @@
 		9A920FD61F3BF68400CD9D94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A83B5922807FBF900A1A2B6 /* libbase.dylib */,
+				9A83B5922807FBF900A1A2B6 /* libberg.dylib */,
 				9A83B58D2807FBF200A1A2B6 /* libaxis.dylib */,
 				9AE12F462661FAF0009F476A /* libacme.dylib */,
 				9AE12F482661FAF0009F476A /* libapex.dylib */,
@@ -161,7 +161,7 @@
 		9AEB759A16F78DF10085103B = {
 			isa = PBXGroup;
 			children = (
-				9A83B5942807FC2300A1A2B6 /* base.xcodeproj */,
+				9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */,
 				9AEB75AA16F78E600085103B /* simple_box */,
 				9AE24EA21904CFFD001AEFFB /* app_core_hellomultiverse_iosTests */,
 				9AEB75A416F78DF10085103B /* Products */,
@@ -278,7 +278,7 @@
 			projectReferences = (
 				{
 					ProductGroup = 9A83B5952807FC2300A1A2B6 /* Products */;
-					ProjectRef = 9A83B5942807FC2300A1A2B6 /* base.xcodeproj */;
+					ProjectRef = 9A83B5942807FC2300A1A2B6 /* berg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -297,10 +297,10 @@
 			remoteRef = 9A438898299E6A9F00D2EE15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A83B5992807FC2300A1A2B6 /* libbase.dylib */ = {
+		9A83B5992807FC2300A1A2B6 /* libberg.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libbase.dylib;
+			path = libberg.dylib;
 			remoteRef = 9A83B5982807FC2300A1A2B6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -465,18 +465,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -551,18 +553,20 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
 				USER_HEADER_SEARCH_PATHS = (
 					.,
 					"$(WorkspaceDir)/source",
-					"$(WorkspaceDir)/source/include",
 					"$(WorkspaceDir)/source/app",
-					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/source/app/_include",
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include/configuration_selection/$(CONFIGURATION)",
-					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
 					"$(WorkspaceDir)/port/_",
-					"$(WorkspaceDir)/port/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
