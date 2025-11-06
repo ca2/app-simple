@@ -244,6 +244,8 @@
 		9A4388C1299E6F9000D2EE15 /* database_sqlite3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = database_sqlite3.xcodeproj; path = ../../../app/database_sqlite3/database_sqlite3.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A4388CC299E70A800D2EE15 /* experience_core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_core.xcodeproj; path = ../../../app/experience_core/experience_core.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A499F6C2D1A685100FB4C3D /* operating_ambient_macos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = operating_ambient_macos.xcodeproj; path = "../../../../operating_system/operating_system-macos/operating_ambient_macos/operating_ambient_macos.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9A6FB77F2EBCC79F003BBE61 /* _____debug_application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug_application.xcconfig"; sourceTree = "<group>"; };
+		9A6FB7802EBCC79F003BBE61 /* _____release_application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release_application.xcconfig"; sourceTree = "<group>"; };
 		9A71B82D2A469E4500F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A83B5AC2807FCEE00A1A2B6 /* libidn.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A83B5B12807FD2300A1A2B6 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,6 +498,8 @@
 		9AED742C275196C600397A57 /* __implement */ = {
 			isa = PBXGroup;
 			children = (
+				9A6FB77F2EBCC79F003BBE61 /* _____debug_application.xcconfig */,
+				9A6FB7802EBCC79F003BBE61 /* _____release_application.xcconfig */,
 				9A8F4D5E2A26D50200097EE1 /* _____debug.xcconfig */,
 				9A8F4D5F2A26D50200097EE1 /* _____release.xcconfig */,
 				9A8F4D4D2A26D50200097EE1 /* __implement */,
@@ -1010,6 +1014,7 @@
 		};
 		070B8F081B6E53FA00D26137 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6FB77F2EBCC79F003BBE61 /* _____debug_application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
@@ -1020,6 +1025,7 @@
 		};
 		070B8F091B6E53FA00D26137 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6FB77F2EBCC79F003BBE61 /* _____debug_application.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
