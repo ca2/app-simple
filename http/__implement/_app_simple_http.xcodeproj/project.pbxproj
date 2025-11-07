@@ -239,6 +239,20 @@
 			remoteGlobalIDString = 9A64C1702660C62C0074030F;
 			remoteInfo = write_text_quartz2d;
 		};
+		9AB99E2C2EBDD76400A2EA01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A6FB9E32EBCD838003BBE61 /* _app_simple_form.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 070B8EEA1B6E53F900D26137;
+			remoteInfo = _app_simple_form;
+		};
+		9AB99E2E2EBDD76400A2EA01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A6FB9E32EBCD838003BBE61 /* _app_simple_form.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 070B8EFD1B6E53FA00D26137;
+			remoteInfo = _app_simple_form_Tests;
+		};
 		9ABDE8082C76CDF600619F93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9ABDE8032C76CDF600619F93 /* nano_idn_libidn.xcodeproj */;
@@ -563,6 +577,15 @@
 			path = macos;
 			sourceTree = "<group>";
 		};
+		9AB99E282EBDD76300A2EA01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AB99E2D2EBDD76400A2EA01 /* _app_simple_form.app */,
+				9AB99E2F2EBDD76400A2EA01 /* _app_simple_form_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9ABDE8042C76CDF600619F93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +766,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 9AB99E282EBDD76300A2EA01 /* Products */;
+					ProjectRef = 9A6FB9E32EBCD838003BBE61 /* _app_simple_form.xcodeproj */;
+				},
+				{
 					ProductGroup = 9AED78C32751989E00397A57 /* Products */;
 					ProjectRef = 9AED78C22751989E00397A57 /* app_simple_http.xcodeproj */;
 				},
@@ -913,6 +940,20 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libstatic_networking_bsd.a;
 			remoteRef = 9A9A19352AFC378400FA9BEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB99E2D2EBDD76400A2EA01 /* _app_simple_form.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = _app_simple_form.app;
+			remoteRef = 9AB99E2C2EBDD76400A2EA01 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AB99E2F2EBDD76400A2EA01 /* _app_simple_form_Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = _app_simple_form_Tests.xctest;
+			remoteRef = 9AB99E2E2EBDD76400A2EA01 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9ABDE8092C76CDF600619F93 /* libnano_idn_libidn.dylib */ = {
