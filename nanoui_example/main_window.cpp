@@ -141,18 +141,30 @@ namespace app_simple_nanoui_example
 
       auto papplication = m_exampleapplicationa[iIndex].get();
 
+      auto ptoplevel = top_level();
+
 #if !defined(UNIVERSAL_WINDOWS)
 
       int cx = papplication->m_size.cx() + 20;
       int cy = papplication->m_size.cy() + 48;
 
-      top_level()->set_size({cx, cy});
+      if(::is_set(ptoplevel))
+      {
+
+         ptoplevel->set_size({cx, cy});
+
+      }
 
 #endif
 
       set_appearance(papplication);
 
-      top_level()->set_need_layout();
+      if(::is_set(ptoplevel))
+      {
+
+         ptoplevel->set_need_layout();
+
+      }
 
       set_need_layout();
 
