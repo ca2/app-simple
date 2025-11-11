@@ -159,7 +159,7 @@ namespace app_simple_shader
 
       }
 
-      informationf("\nfinished simple_shader::on_request");
+      informationf("----> finished simple_shader::on_request");
 
    }
 

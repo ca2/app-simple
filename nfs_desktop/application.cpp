@@ -194,7 +194,7 @@ namespace app_simple_nfs_desktop
 
       //}
 
-      informationf("\nfinished simple_webserver::on_request");
+      informationf("----> finished simple_webserver::on_request");
 
    }
 

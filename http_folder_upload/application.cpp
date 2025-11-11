@@ -194,7 +194,7 @@ namespace app_simple_http_folder_upload
 
       //}
 
-      informationf("\nfinished simple_webserver::on_request");
+      informationf("----> finished simple_webserver::on_request");
 
    }
 
