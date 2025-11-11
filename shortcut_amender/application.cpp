@@ -183,7 +183,7 @@ namespace app_simple_shortcut_amender
 
       }
 
-      informationf("\nfinished simple_shortcut::on_request");
+      informationf("----> finished simple_shortcut::on_request");
 
    }
 

@@ -212,7 +212,7 @@ namespace app_simple_networking_application
 
       }
 
-      informationf("\nfinished simple_webserver::on_request");
+      informationf("----> finished simple_webserver::on_request");
 
    }
 
