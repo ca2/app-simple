@@ -154,7 +154,7 @@ namespace app_simple_drawing
 
       }
 
-      informationf("\nfinished simple_drawing::on_request");
+      informationf("----> finished simple_drawing::on_request");
 
    }
 

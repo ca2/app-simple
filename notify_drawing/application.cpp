@@ -142,7 +142,7 @@ namespace app_simple_notify_drawing
 
       }
 
-      informationf("\nfinished notify_drawing::on_request");
+      informationf("----> finished notify_drawing::on_request");
 
    }
 

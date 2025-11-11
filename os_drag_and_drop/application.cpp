@@ -159,7 +159,7 @@ namespace app_simple_os_drag_and_drop
 
       }
 
-      informationf("\nfinished app_simple_os_drag_and_drop::on_request");
+      informationf("----> finished app_simple_os_drag_and_drop::on_request");
 
    }
 
