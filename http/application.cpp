@@ -180,7 +180,7 @@ namespace app_simple_http
 
       //}
 
-      informationf("\nfinished simple_webserver::on_request");
+      informationf("----> finished simple_webserver::on_request");
 
    }
 
