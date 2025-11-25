@@ -208,8 +208,8 @@ namespace app_simple_http_folder_upload
       for (::collection::index i = 0; i < m_listing.size(); i++)
       {
 
-         rectangleX.top() = y;
-         rectangleX.bottom() = y + iHeight;
+         rectangleX.top = y;
+         rectangleX.bottom = y + iHeight;
 
          pgraphics->draw_text(m_listing[i], rectangleX);
 

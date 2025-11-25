@@ -241,15 +241,15 @@ namespace app_simple_networking_application
 
                   pgraphics->text_out(iMaxX1 + 20, y, strAddress);
 
-                  r.left() = iMaxX1 + 20;
-                  r.top() = y;
-                  r.bottom() = y + iHeight;
-                  r.right() = r.left() + (int) (size.cx());
+                  r.left = iMaxX1 + 20;
+                  r.top = y;
+                  r.bottom = y + iHeight;
+                  r.right = r.left + (int) (size.cx());
 
-                  if (r.right() > iMaxX1)
+                  if (r.right > iMaxX1)
                   {
 
-                     iMaxX2 = r.right();
+                     iMaxX2 = r.right;
 
                   }
 

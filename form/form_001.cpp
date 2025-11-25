@@ -243,7 +243,7 @@ namespace app_simple_form
 
       auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
 
-      y += rectangleStillMargin.top();
+      y += rectangleStillMargin.top;
       
       m_pstill->m_ealignText = e_align_left;
 
@@ -251,7 +251,7 @@ namespace app_simple_form
 
       y += sizeStill.cy();
 
-      y += rectangleStillMargin.bottom();
+      y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
       
@@ -261,13 +261,13 @@ namespace app_simple_form
       
       //y += 1;
       
-      y += rectangleEditMargin.top();
+      y += rectangleEditMargin.top;
 
       m_pedit->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy()));
 
       y += sizeEdit.cy();
 
-      y += rectangleEditMargin.bottom();
+      y += rectangleEditMargin.bottom;
 
       auto sizeButtonClear = m_pbuttonClear->get_adjusted_fitting_size(pgraphics);
 
@@ -277,7 +277,7 @@ namespace app_simple_form
 
       auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_pedit->get_style(pgraphics));
 
-      y += maximum(sizeButtonMarginClear.top(), sizeButtonMarginSend.top());
+      y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
       y += 4;
       
@@ -287,25 +287,25 @@ namespace app_simple_form
 
       ::double_rectangle rectangleSend;
       
-      rectangleSend.right() = rectClient.right() - iRight;
+      rectangleSend.right = rectClient.right - iRight;
       
-      rectangleSend.left() = rectangleSend.right() - button_width;
+      rectangleSend.left = rectangleSend.right - button_width;
       
-      rectangleSend.top() = y;
+      rectangleSend.top = y;
       
-      rectangleSend.bottom() = y + button_height;
+      rectangleSend.bottom = y + button_height;
       
       m_pbuttonSend->display_child(rectangleSend);
       
       ::double_rectangle rectangleClear;
       
-      rectangleClear.right() = rectangleSend.left() - iLeft;
+      rectangleClear.right = rectangleSend.left - iLeft;
       
-      rectangleClear.left() = rectangleClear.right() - button_width;
+      rectangleClear.left = rectangleClear.right - button_width;
       
-      rectangleClear.top() = rectangleSend.top();
+      rectangleClear.top = rectangleSend.top;
       
-      rectangleClear.bottom() = rectangleSend.bottom();
+      rectangleClear.bottom = rectangleSend.bottom;
 
       m_pbuttonClear->display_child(rectangleClear);
 

@@ -256,15 +256,15 @@ namespace app_simple_http_folder_upload
 
                pgraphics->text_out(iMaxX1 + 20, y, strText);
 
-               r.left() = iMaxX1 + 20;
-               r.top() = y;
-               r.bottom() = y + iHeight;
-               r.right() = r.left() + (int)(size.cx());
+               r.left = iMaxX1 + 20;
+               r.top = y;
+               r.bottom = y + iHeight;
+               r.right = r.left + (int)(size.cx());
 
-               if (r.right() > iMaxX1)
+               if (r.right > iMaxX1)
                {
 
-                  iMaxX2 = r.right();
+                  iMaxX2 = r.right;
 
                }
 
