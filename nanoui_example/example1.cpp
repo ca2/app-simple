@@ -223,7 +223,7 @@ namespace app_simple_nanoui_example
                //      const Texture * texture = m_images[m_current_image].first.get();
                //      uint8_t * data = m_images[m_current_image].second.get();
                //      for (int ch = 0; ch < 4; ++ch) {
-               //         uint8_t value = data[(index.x() + index.y() * texture->size().x()) * 4 + ch];
+               //         uint8_t value = data[(index.x + index.y * texture->size().x) * 4 + ch];
                //         snprintf(out[ch], size, "%i", (int)value);
                //      }
                //   }

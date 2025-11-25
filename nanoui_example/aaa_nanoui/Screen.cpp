@@ -654,23 +654,23 @@ Screen::~Screen() {
 //         Vector2i pos = widget->absolute_position() +
 //            Vector2i(widget->width() / 2, widget->height() + 10);
 //
-//         nvgTextBounds(m_nvg_context, pos.x(), pos.y(),
+//         nvgTextBounds(m_nvg_context, pos.x, pos.y,
 //            widget->tooltip().c_str(), nullptr, bounds);
 //
 //         int h = (bounds[2] - bounds[0]) / 2;
 //         if (h > tooltip_width / 2) {
 //            nvgTextAlign(m_nvg_context, NVG_ALIGN_CENTER | NVG_ALIGN_TOP);
-//            nvgTextBoxBounds(m_nvg_context, pos.x(), pos.y(), tooltip_width,
+//            nvgTextBoxBounds(m_nvg_context, pos.x, pos.y, tooltip_width,
 //               widget->tooltip().c_str(), nullptr, bounds);
 //
 //            h = (bounds[2] - bounds[0]) / 2;
 //         }
 //         int shift = 0;
 //
-//         if (pos.x() - h - 8 < 0) {
+//         if (pos.x - h - 8 < 0) {
 //            /* Keep tooltips on screen */
-//            shift = pos.x() - h - 8;
-//            pos.x() -= shift;
+//            shift = pos.x - h - 8;
+//            pos.x -= shift;
 //            bounds[0] -= shift;
 //            bounds[2] -= shift;
 //         }
@@ -692,7 +692,7 @@ Screen::~Screen() {
 //
 //         nvgFillColor(m_nvg_context, Color(255, 255));
 //         nvgFontBlur(m_nvg_context, 0.0f);
-//         nvgTextBox(m_nvg_context, pos.x() - h, pos.y(), tooltip_width,
+//         nvgTextBox(m_nvg_context, pos.x - h, pos.y, tooltip_width,
 //            widget->tooltip().c_str(), nullptr);
 //      }
 //   }

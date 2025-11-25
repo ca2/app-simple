@@ -197,9 +197,9 @@ Array<Value, Size> normalize(const Array<Value, Size> & a) {
 template <typename Value>
 Array<Value, 3> cross(const Array<Value, 3> & a, const Array<Value, 3> & b) {
    return Array<Value, 3>(
-      a.y() * b.z() - a.z() * b.y(),
-      a.z() * b.x() - a.x() * b.z(),
-      a.x() * b.y() - a.y() * b.x()
+      a.y * b.z - a.z * b.y,
+      a.z * b.x - a.x * b.z,
+      a.x * b.y - a.y * b.x
       );
 }
 
@@ -474,22 +474,22 @@ template <typename Value_, size_t Size_> struct Matrix {
 
       Matrix result(0);
       result.m[3][3] = 1;
-      result.m[0][0] = c + axis.x() * axis.x() * t;
-      result.m[1][1] = c + axis.y() * axis.y() * t;
-      result.m[2][2] = c + axis.z() * axis.z() * t;
+      result.m[0][0] = c + axis.x * axis.x * t;
+      result.m[1][1] = c + axis.y * axis.y * t;
+      result.m[2][2] = c + axis.z * axis.z * t;
 
-      Value tmp1 = axis.x() * axis.y() * t,
-         tmp2 = axis.z() * s;
+      Value tmp1 = axis.x * axis.y * t,
+         tmp2 = axis.z * s;
       result.m[0][1] = tmp1 + tmp2;
       result.m[1][0] = tmp1 - tmp2;
 
-      tmp1 = axis.x() * axis.z() * t;
-      tmp2 = axis.y() * s;
+      tmp1 = axis.x * axis.z * t;
+      tmp2 = axis.y * s;
       result.m[0][2] = tmp1 - tmp2;
       result.m[2][0] = tmp1 + tmp2;
 
-      tmp1 = axis.y() * axis.z() * t;
-      tmp2 = axis.x() * s;
+      tmp1 = axis.y * axis.z * t;
+      tmp2 = axis.x * s;
       result.m[1][2] = tmp1 + tmp2;
       result.m[2][1] = tmp1 - tmp2;
 
@@ -542,15 +542,15 @@ template <typename Value_, size_t Size_> struct Matrix {
       dir = -dir;
 
       Matrix result(0);
-      result.m[0][0] = left.x();
-      result.m[0][1] = left.y();
-      result.m[0][2] = left.z();
-      result.m[1][0] = new_up.x();
-      result.m[1][1] = new_up.y();
-      result.m[1][2] = new_up.z();
-      result.m[2][0] = dir.x();
-      result.m[2][1] = dir.y();
-      result.m[2][2] = dir.z();
+      result.m[0][0] = left.x;
+      result.m[0][1] = left.y;
+      result.m[0][2] = left.z;
+      result.m[1][0] = new_up.x;
+      result.m[1][1] = new_up.y;
+      result.m[1][2] = new_up.z;
+      result.m[2][0] = dir.x;
+      result.m[2][1] = dir.y;
+      result.m[2][2] = dir.z;
       result.m[3][0] = -dot(left, origin);
       result.m[3][1] = -dot(new_up, origin);
       result.m[3][2] = -dot(dir, origin);

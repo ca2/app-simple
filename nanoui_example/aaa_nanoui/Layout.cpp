@@ -177,7 +177,7 @@ BoxLayout::BoxLayout(enum_orientation orientation, enum_alignment alignment,
 //
 //      bool indent_cur = indent && label == nullptr;
 //      Vector2i ps = Vector2i(available_width - (indent_cur ? m_group_indent : 0),
-//         c->preferred_size(ctx).y());
+//         c->preferred_size(ctx).y);
 //      Vector2i fs = c->fixed_size();
 //
 //      Vector2i target_size(
