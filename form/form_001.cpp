@@ -247,15 +247,15 @@ namespace app_simple_form
       
       m_pstill->m_ealignText = e_align_left;
 
-      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-      y += sizeStill.cy();
+      y += sizeStill.cy;
 
       y += rectangleStillMargin.bottom;
 
       auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
       
-      sizeEdit.cx() = cx;
+      sizeEdit.cx = cx;
 
       auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
       
@@ -263,9 +263,9 @@ namespace app_simple_form
       
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy()));
+      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy));
 
-      y += sizeEdit.cy();
+      y += sizeEdit.cy;
 
       y += rectangleEditMargin.bottom;
 
@@ -281,9 +281,9 @@ namespace app_simple_form
 
       y += 4;
       
-      auto button_width = maximum(sizeButtonClear.cx() + 32, sizeButtonSend.cx() + 32);
+      auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
 
-      auto button_height = maximum(sizeButtonClear.cy(), sizeButtonSend.cy());
+      auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
       ::double_rectangle rectangleSend;
       
@@ -312,7 +312,7 @@ namespace app_simple_form
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy() * 5));
+      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy * 5));
 
    }
 

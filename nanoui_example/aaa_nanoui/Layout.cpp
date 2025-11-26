@@ -148,8 +148,8 @@ BoxLayout::BoxLayout(enum_orientation orientation, enum_alignment alignment,
 //      );
 //
 //      bool indent_cur = indent && label == nullptr;
-//      height += target_size.cy();
-//      width = std::max(width, target_size.cx() + 2 * m_margin + (indent_cur ? m_group_indent : 0));
+//      height += target_size.cy;
+//      width = std::max(width, target_size.cx + 2 * m_margin + (indent_cur ? m_group_indent : 0));
 //
 //      if (label)
 //         indent = !label->caption().empty();
@@ -189,7 +189,7 @@ BoxLayout::BoxLayout(enum_orientation orientation, enum_alignment alignment,
 //      c->set_size(target_size);
 //      c->perform_layout(ctx);
 //
-//      height += target_size.cy();
+//      height += target_size.cy;
 //
 //      if (label)
 //         indent = !label->caption().empty();

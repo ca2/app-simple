@@ -62,9 +62,9 @@ namespace app_simple_box
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
          "main",
-         ::type < document >(),
-         ::type < main_frame >(),
-         ::type < impact >()));
+         ::as_type < document >(),
+         ::as_type < main_frame >(),
+         ::as_type < impact >()));
 
       //m_ptemplateAppSimpleBoxMain = pdoctemplate;
 

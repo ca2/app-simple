@@ -201,7 +201,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //            caption.c_str(), monitor, nullptr);
 //      }
 //      else {
-//         m_glfw_window = glfwCreateWindow(size.cx(), size.cy(),
+//         m_glfw_window = glfwCreateWindow(size.cx, size.cy,
 //            caption.c_str(), nullptr, nullptr);
 //      }
 //
@@ -391,7 +391,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //         Screen * s = it->second;
 //
 //         s->m_pixel_ratio = get_pixel_ratio(w);
-//         s->resize_callback_event(s->m_size.cx(), s->m_size.cy());
+//         s->resize_callback_event(s->m_size.cx, s->m_size.cy);
 //      }
 //   );
 //
@@ -444,8 +444,8 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   m_size = Vector2i((int)w, (int)h);
 //#elif defined(_WIN32) || defined(__linux__)
 //   if (m_pixel_ratio != 1 && !m_fullscreen)
-//      glfwSetWindowSize(window, m_size.cx() * m_pixel_ratio,
-//         m_size.cy() * m_pixel_ratio);
+//      glfwSetWindowSize(window, m_size.cx * m_pixel_ratio,
+//         m_size.cy * m_pixel_ratio);
 //#endif
 //
 //#if defined(NANOUI_GLAD)
@@ -541,10 +541,10 @@ Screen::~Screen() {
 //   Widget::set_size(size);
 //
 //#if defined(_WIN32) || defined(__linux__) || defined(EMSCRIPTEN)
-//   glfwSetWindowSize(m_glfw_window, size.cx() * m_pixel_ratio,
-//      size.cy() * m_pixel_ratio);
+//   glfwSetWindowSize(m_glfw_window, size.cx * m_pixel_ratio,
+//      size.cy * m_pixel_ratio);
 //#else
-//   glfwSetWindowSize(m_glfw_window, size.cx(), size.cy());
+//   glfwSetWindowSize(m_glfw_window, size.cx, size.cy);
 //#endif
 //}
 //

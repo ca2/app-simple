@@ -145,8 +145,8 @@ namespace app_simple_nanoui_example
 
 #if !defined(UNIVERSAL_WINDOWS)
 
-      int cx = papplication->m_size.cx() + 20;
-      int cy = papplication->m_size.cy() + 48;
+      int cx = papplication->m_size.cx + 20;
+      int cy = papplication->m_size.cy + 48;
 
       if(::is_set(ptoplevel))
       {

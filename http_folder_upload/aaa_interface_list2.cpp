@@ -266,7 +266,7 @@ namespace app_simple_http_folder_upload
             r.left = 25;
             r.top = y;
             r.bottom = y + iHeight;
-            r.right = r.left + (int) (size.cx());
+            r.right = r.left + (int) (size.cx);
 
             if (r.right > iMaxX1)
             {

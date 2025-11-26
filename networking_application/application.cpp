@@ -68,10 +68,10 @@ namespace app_simple_networking_application
    }
 
 
-   ::type_atom application::get_pane_impact_type() const
+   ::type application::get_pane_impact_type() const
    {
 
-      return ::type < tab_impact >();
+      return ::as_type < tab_impact >();
 
    }
 
@@ -115,8 +115,8 @@ namespace app_simple_networking_application
 
       add_impact_system("main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::type < ::app_simple_networking_application::document >(),
-                               ::type < ::app_simple_networking_application::main_frame >(),
+                               ::as_type < ::app_simple_networking_application::document >(),
+                               ::as_type < ::app_simple_networking_application::main_frame >(),
                                get_pane_impact_type()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
@@ -126,9 +126,9 @@ namespace app_simple_networking_application
       add_impact_system(
          "command", __initialize_new ::user::multiple_document_template(
             "command",
-            ::type < command_document >(),
-            ::type < main_frame >(),
-            ::type < command_list2 >()));
+            ::as_type < command_document >(),
+            ::as_type < main_frame >(),
+            ::as_type < command_list2 >()));
 
       //m_ptemplateCommand = pdoctemplate2;
 
