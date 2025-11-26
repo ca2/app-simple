@@ -104,9 +104,9 @@ namespace app_simple_nfs_desktop
 
       //add_impact_system("impact", __initialize_new ::user::multiple_document_template(
       //   "command",
-      //   ::type < main_document >(),
-      //   ::type < main_frame >(),
-      //   ::type < impact >()));
+      //   ::as_type < main_document >(),
+      //   ::as_type < main_frame >(),
+      //   ::as_type < impact >()));
 
       //m_ptemplateCommand = pdoctemplate2;
 

@@ -151,9 +151,9 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleStillMargin.top;
 
-      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-      y += sizeStill.cy();
+      y += sizeStill.cy;
 
       y += rectangleStillMargin.bottom;
 
@@ -163,7 +163,7 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
+      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 
 
       //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
@@ -176,9 +176,9 @@ namespace app_simple_change_grub_default_entry
 
       //y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
-      auto button_width = sizeButtonRestart.cx() + 32;
+      auto button_width = sizeButtonRestart.cx + 32;
 
-      auto button_height = sizeButtonRestart.cy();
+      auto button_height = sizeButtonRestart.cy;
 
       //m_pbuttonClear->display_child(::double_rectangle_dimension(iLeft, y, button_width, button_height));
 
@@ -190,7 +190,7 @@ namespace app_simple_change_grub_default_entry
 
       y += button_height;
 
-      y += sizeEdit.cy();
+      y += sizeEdit.cy;
 
       y += rectangleEditMargin.bottom;
 

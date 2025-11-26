@@ -90,9 +90,9 @@ namespace app_simple_shader
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::type < document >(),
-                               ::type < main_frame >(),
-                               ::type < tab_impact >()));
+                               ::as_type < document >(),
+                               ::as_type < main_frame >(),
+                               ::as_type < tab_impact >()));
 
       //add_document_template(pdoctemplate);
 

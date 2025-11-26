@@ -218,9 +218,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleStillMargin.top;
 
-         m_pstillFolder->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+         m_pstillFolder->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-         y += sizeStill.cy();
+         y += sizeStill.cy;
 
          y += rectangleStillMargin.bottom;
 
@@ -234,9 +234,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleEditMargin.top;
 
-         m_peditFolder->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
+         m_peditFolder->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 
-         y += sizeEdit.cy();
+         y += sizeEdit.cy;
 
          y += rectangleEditMargin.bottom;
 
@@ -251,9 +251,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleStillMargin.top;
 
-         m_pstillSource->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+         m_pstillSource->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-         y += sizeStill.cy();
+         y += sizeStill.cy;
 
          y += rectangleStillMargin.bottom;
 
@@ -267,9 +267,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleEditMargin.top;
 
-         m_peditSource->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
+         m_peditSource->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 
-         y += sizeEdit.cy();
+         y += sizeEdit.cy;
 
          y += rectangleEditMargin.bottom;
 
@@ -283,9 +283,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleStillMargin.top;
 
-         m_pstillTarget->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx(), sizeStill.cy()));
+         m_pstillTarget->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
-         y += sizeStill.cy();
+         y += sizeStill.cy;
 
          y += rectangleStillMargin.bottom;
 
@@ -301,9 +301,9 @@ namespace app_simple_shortcut_amender
 
          y += rectangleEditMargin.top;
 
-         m_peditTarget->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy()));
+         m_peditTarget->display_child(::double_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 
-         y += sizeEdit.cy();
+         y += sizeEdit.cy;
 
          y += rectangleEditMargin.bottom;
 
@@ -320,9 +320,9 @@ namespace app_simple_shortcut_amender
 
       y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 
-      auto button_width = maximum(sizeButtonClear.cx() + 32, sizeButtonSend.cx() + 32);
+      auto button_width = maximum(sizeButtonClear.cx + 32, sizeButtonSend.cx + 32);
 
-      auto button_height = maximum(sizeButtonClear.cy(), sizeButtonSend.cy());
+      auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
       m_pbuttonClear->display_child(::double_rectangle_dimension(iLeft, y, button_width, button_height));
 
@@ -332,7 +332,7 @@ namespace app_simple_shortcut_amender
 
       m_pstillReceiver->m_ealignText = e_align_top_left;
 
-      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, 4000, sizeEdit.cy() * 100));
+      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, 4000, sizeEdit.cy * 100));
 
    }
 

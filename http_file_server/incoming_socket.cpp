@@ -21,7 +21,7 @@ namespace app_simple_http_file_server
    incoming_socket::incoming_socket()
    {
       
-      m_typeAttendSocket = ::type<::app_simple_http_file_server::socket >();
+      m_typeAttendSocket = ::as_type < ::app_simple_http_file_server::socket >();
 
    }
 

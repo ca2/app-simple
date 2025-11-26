@@ -58,7 +58,7 @@ namespace app_simple_drawing
 
 
 
-      virtual ::type_atom get_pane_impact_type() const;
+      virtual ::type get_pane_impact_type() const;
 
 
 
