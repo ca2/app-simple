@@ -102,7 +102,7 @@ namespace app_simple_http_file_server
       //   "command",
       //   typeid(main_document ),
       //   typeid(main_frame ),
-      //   typeid(impact )));
+      //   typeid(impact)));
 
       //m_ptemplateCommand = pdoctemplate2;
 

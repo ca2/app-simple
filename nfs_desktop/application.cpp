@@ -106,7 +106,7 @@ namespace app_simple_nfs_desktop
       //   "command",
       //   typeid(main_document ),
       //   typeid(main_frame ),
-      //   typeid(impact )));
+      //   typeid(impact)));
 
       //m_ptemplateCommand = pdoctemplate2;
 
