@@ -57,7 +57,7 @@ namespace app_simple_http_folder_upload
    ::type application::get_pane_impact_type() const
    {
 
-      return ::as_type < tab_impact >();
+      return typeid(tab_impact );
 
    }
 
@@ -96,8 +96,8 @@ namespace app_simple_http_folder_upload
       //}
       add_impact_system("main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::as_type < ::app_simple_http_folder_upload::main_document >(),
-                               ::as_type < ::app_simple_http_folder_upload::main_frame >(),
+                               typeid(::app_simple_http_folder_upload::main_document ),
+                               typeid(::app_simple_http_folder_upload::main_frame ),
                                get_pane_impact_type()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;
@@ -106,9 +106,9 @@ namespace app_simple_http_folder_upload
 
       //add_impact_system("impact", __initialize_new ::user::multiple_document_template(
       //   "command",
-      //   ::as_type < main_document >(),
-      //   ::as_type < main_frame >(),
-      //   ::as_type < impact >()));
+      //   typeid(main_document ),
+      //   typeid(main_frame ),
+      //   typeid(impact )));
 
       //m_ptemplateCommand = pdoctemplate2;
 
