@@ -61,9 +61,9 @@ namespace app_simple_notify_drawing
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::as_type < app_simple_drawing::document >(),
-                               ::as_type < main_frame >(),
-                               ::as_type < app_simple_drawing::tab_impact >()));
+                               typeid(app_simple_drawing::document ),
+                               typeid(main_frame ),
+                               typeid(app_simple_drawing::tab_impact )));
       //m_ptemplateNotifyDrawingMain = pdoctemplate;
       //add_document_template(pdoctemplate);
 
@@ -71,9 +71,9 @@ namespace app_simple_notify_drawing
 //      pdoctemplate = __initialize_new ::user::single_document_template(
 //                          this,
 //                          "main",
-//                          ::as_type < simple_drawing::document >(),
-//                          ::as_type < simple_drawing::frame >(),
-//                          ::as_type < simple_drawing::main_impact >()));
+//                          typeid(simple_drawing::document ),
+//                          typeid(simple_drawing::frame ),
+//                          typeid(simple_drawing::main_impact )));
 //
 //      m_ptemplateNotifyDrawingImpact = pdoctemplate;
 //

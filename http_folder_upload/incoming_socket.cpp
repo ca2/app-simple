@@ -21,7 +21,7 @@ namespace app_simple_http_folder_upload
    incoming_socket::incoming_socket()
    {
       
-      m_typeAttendSocket = ::as_type < ::app_simple_http_folder_upload::socket >();
+      m_typeAttendSocket = typeid(::app_simple_http_folder_upload::socket );
 
    }
 

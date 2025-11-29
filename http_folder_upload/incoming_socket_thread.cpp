@@ -32,7 +32,7 @@ namespace app_simple_http_folder_upload
       ::httpd::incoming_socket_thread::initialize(pparticle);
 
 
-      m_typeIncomingSocket = ::as_type < ::app_simple_http_folder_upload::incoming_socket >();
+      m_typeIncomingSocket = typeid(::app_simple_http_folder_upload::incoming_socket );
 
 
       m_strIp = "127.0.0.1";

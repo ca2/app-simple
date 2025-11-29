@@ -96,9 +96,9 @@ namespace app_simple_change_grub_default_entry
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                               "main",
-                              ::as_type < document >(),
-                              ::as_type < main_frame >(),
-                              ::as_type < form_001 >()
+                              typeid(document ),
+                              typeid(main_frame ),
+                              typeid(form_001 )
                ));
 
       //m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;

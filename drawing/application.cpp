@@ -55,7 +55,7 @@ namespace app_simple_drawing
    ::type application::get_pane_impact_type() const
    {
 
-      return ::as_type < tab_impact >();
+      return typeid(tab_impact );
 
    }
 
@@ -81,8 +81,8 @@ namespace app_simple_drawing
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               ::as_type < document >(),
-                               ::as_type < main_frame >(),
+                               typeid(document ),
+                               typeid(main_frame ),
                                get_pane_impact_type()));
 
       default_data_save_handling(m_checkSimple);

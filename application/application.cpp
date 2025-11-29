@@ -66,9 +66,9 @@ namespace app_simple_application
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
          "main",
-         ::as_type < document >(),
-         ::as_type < main_frame >(),
-         ::as_type < impact >()));
+         typeid(document ),
+         typeid(main_frame ),
+         typeid(impact )));
       
       
 #if defined(APPLE_IOS)
