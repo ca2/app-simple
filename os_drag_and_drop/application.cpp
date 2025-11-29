@@ -63,7 +63,7 @@ namespace app_simple_os_drag_and_drop
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               typeid(document ),
+                               typeid(document),
                                typeid(main_frame ),
                                typeid(tab_impact )));
 
@@ -73,8 +73,8 @@ namespace app_simple_os_drag_and_drop
       add_impact_system(
          "impact", __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(document ),
-                          typeid(frame ),
+                          typeid(document),
+                          typeid(frame),
                           typeid(main_impact )));
 
       //m_ptemplateSimpleDrawingImpact = pdoctemplate;

@@ -81,7 +81,7 @@ namespace app_simple_drawing
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               typeid(document ),
+                               typeid(document),
                                typeid(main_frame ),
                                get_pane_impact_type()));
 

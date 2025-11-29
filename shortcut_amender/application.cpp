@@ -98,7 +98,7 @@ namespace app_simple_shortcut_amender
          "main",
          __initialize_new ::user::single_document_template (
                                "main",
-                               typeid(document ),
+                               typeid(document),
                                typeid(main_frame ),
                                typeid(tab_impact )));
       //m_ptemplateShortcutAmenderMain = pdoctemplate;
@@ -108,8 +108,8 @@ namespace app_simple_shortcut_amender
       add_impact_system(
          "impact", __initialize_new ::user::single_document_template(
                           "main",
-                          typeid(document ),
-                          typeid(frame ),
+                          typeid(document),
+                          typeid(frame),
                           typeid(main_impact )));
 
 

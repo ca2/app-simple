@@ -90,7 +90,7 @@ namespace app_simple_shader
       add_impact_system(
          "main", __initialize_new ::user::single_document_template(
                                "main",
-                               typeid(document ),
+                               typeid(document),
                                typeid(main_frame ),
                                typeid(tab_impact )));
 
