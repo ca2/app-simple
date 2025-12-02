@@ -46,7 +46,7 @@ namespace app_simple_networking_application
       void create_networking_application(const ::scoped_string & scopedstrHostName, ::networking::application_handler * papplicationhandlerCreateNetworkApplication = nullptr) override;
 
 
-      virtual ::type get_pane_impact_type() const;
+      virtual ::platform::type get_pane_impact_type() const;
 
 
 

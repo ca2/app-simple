@@ -48,10 +48,10 @@ namespace app_simple_http
    }
 
 
-   ::type application::get_pane_impact_type() const
+   ::platform::type application::get_pane_impact_type() const
    {
 
-      return typeid(tab_impact );
+      return ::type < tab_impact >();
 
    }
 
@@ -83,9 +83,9 @@ namespace app_simple_http
 
       //}
       add_impact_system("main", __initialize_new ::user::single_document_template(
-                               "main",
-                               typeid(::app_simple_http::main_document ),
-                               typeid(::app_simple_http::main_frame ),
+                               "main", 
+                     ::type<::app_simple_http::main_document>(),
+                                   ::type<::app_simple_http::main_frame>(),
                                get_pane_impact_type()));
 
       //m_ptemplateSimpleDrawingMain = pdoctemplate;

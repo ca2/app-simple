@@ -46,7 +46,7 @@ namespace app_simple_http
       //void create_networking_application() override;
 
 
-      virtual ::type get_pane_impact_type() const;
+      virtual ::platform::type get_pane_impact_type() const;
 
 
 
