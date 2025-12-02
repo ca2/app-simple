@@ -55,10 +55,10 @@ namespace app_simple_nfs_desktop
    }
 
 
-   ::type application::get_pane_impact_type() const
+   ::platform::type application::get_pane_impact_type() const
    {
 
-      return typeid(tab_impact );
+      return ::type < tab_impact >();
 
    }
 
