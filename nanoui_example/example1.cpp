@@ -89,8 +89,8 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "A tool palette", "sans-bold");
                Widget * tools = ___new Widget(window);
-               tools->set_layout(___new BoxLayout(::e_orientation_horizontal,
-                  ::nanoui::e_alignment_middle, 0, 6));
+               tools->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
+                                                  ::int_rectangle(0, 0, 0, 0), 6));
       
                b = ___new ToolButton(tools, e_font_awesome_cloud);
                b = ___new ToolButton(tools, e_font_awesome_fast_forward);
@@ -121,8 +121,7 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "Message dialog", "sans-bold");
                tools = ___new Widget(window);
-               tools->set_layout(___new BoxLayout(::e_orientation_horizontal,
-                  e_alignment_middle, 0, 6));
+               tools->set_layout(___new BoxLayout(::e_orientation_horizontal, e_alignment_middle, ::int_rectangle(0, 0, 0, 0), 6));
                b = ___new Button(tools, "Info");
                b->set_callback([this] {
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
@@ -231,8 +230,8 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "File dialog", "sans-bold");
                tools = ___new Widget(window);
-               tools->set_layout(___new BoxLayout(::e_orientation_horizontal,
-                  ::nanoui::e_alignment_middle, 0, 6));
+               tools->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
+                                                  ::int_rectangle(0, 0, 0, 0), 6));
                b = ___new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
@@ -332,8 +331,8 @@ namespace app_simple_nanoui_example
                ___new Label(window, "Slider and text box", "sans-bold");
       
                Widget * panel = ___new Widget(window);
-               panel->set_layout(___new BoxLayout(::e_orientation_horizontal,
-                  ::nanoui::e_alignment_middle, 0, 20));
+               panel->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
+                                                  ::int_rectangle(0, 0, 0, 0), 20));
       
                Slider * slider = ___new Slider(panel);
                slider->set_value(0.5f, e_source_initialize);
@@ -423,8 +422,8 @@ namespace app_simple_nanoui_example
                // A button to go back to the first tab and scroll the window.
                panel = window->add<Widget>();
                panel->add<Label>("Jump to tab: ");
-               panel->set_layout(___new BoxLayout(::e_orientation_horizontal,
-                  ::nanoui::e_alignment_middle, 0, 6));
+               panel->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
+                                                  ::int_rectangle(0, 0, 0, 0), 6));
       
                auto ib = panel->add<IntBox<int>>();
                ib->set_editable(true);
