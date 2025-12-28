@@ -35,7 +35,7 @@ list(APPEND library_source
    )
 
 
-if (MSVC)
+if(${WIN32})
    set(LIBCXX_TARGETING_MSVC ON)
 endif ()
 
@@ -83,7 +83,7 @@ target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
 
 
 
-if (MSVC)
+if(${WIN32})
    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")

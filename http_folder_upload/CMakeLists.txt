@@ -35,7 +35,7 @@ list(APPEND library_source
    )
 
 
-if (MSVC)
+if(${WIN32})
    set(LIBCXX_TARGETING_MSVC ON)
 else ()
    set(LIBCXX_TARGETING_MSVC OFF)
@@ -83,7 +83,7 @@ list(APPEND app_simple_http_folder_upload_references
    core
    )
 
-if (MSVC)
+if(${WIN32})
    target_compile_options(app_simple_http_folder_upload PRIVATE "/MD$<$<CONFIG:Debug>:d>")
    target_link_options(app_simple_http_folder_upload PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
    target_link_options(app_simple_http_folder_upload PRIVATE "/SUBSYSTEM:WINDOWS")
