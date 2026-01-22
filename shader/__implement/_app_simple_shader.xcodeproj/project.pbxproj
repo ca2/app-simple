@@ -1052,6 +1052,7 @@
 				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
 					"$(WorkspaceDir)/port/include",
 					"$(WorkspaceDir)/source/app/include",
 				);
@@ -1132,6 +1133,7 @@
 				SDKROOT = macosx;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
 					"$(WorkspaceDir)/port/include",
 					"$(WorkspaceDir)/source/app/include",
 				);
