@@ -244,7 +244,7 @@ namespace app_simple_nanoui_example
                   pdialog->m_filedialogfilter.add({ "JPEG file", "*.jpeg" });
                   pdialog->m_filedialogfilter.add({ "JPG file", "*.jpg" });
                   pdialog->m_filedialogfilter.add({ "Text file", "*.txt" });
-                  pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
+                  pdialog->m_procedureResponse = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
                      if(pdialog->m_patha.has_element())
@@ -277,7 +277,7 @@ namespace app_simple_nanoui_example
                   pdialog->m_puserelement = m_puserinteraction;
                   pdialog->m_filedialogfilter.add({ "Portable Network Graphics", "*.png" });
                   pdialog->m_filedialogfilter.add({ "Text file", "*.txt" } );
-                  pdialog->m_function = [this, image_impact](::file::file_dialog * pdialog)
+                  pdialog->m_procedureResponse = [this, image_impact](::file::file_dialog * pdialog)
                   {
 
                      if(pdialog->m_patha.has_element())
