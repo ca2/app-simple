@@ -7,4 +7,11 @@
     <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stage|ARM64'">
+    <RemoteDebuggerCommand>C:\Users\camilo\application\app-simple\x64\form\shared_app_simple_shortcut.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerWorkingDirectory>C:\Users\camilo\application\app-simple\x64\form\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerServerName>bilbo.camilothomas.com</RemoteDebuggerServerName>
+    <RemoteDebuggerConnection>RemoteWithoutAuthentication</RemoteDebuggerConnection>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>
