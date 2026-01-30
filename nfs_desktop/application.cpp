@@ -201,7 +201,7 @@ namespace app_simple_nfs_desktop
 
 
 
-   void application::create_options_body(::user::interaction * pparent)
+   void application::create_options_body(const ::atom & atom, ::user::interaction * pparent)
    {
 
       auto pstillBindAddress = create_label<::user::still>(pparent, "Bind Address");
