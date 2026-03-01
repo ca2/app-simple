@@ -235,7 +235,7 @@
 		070B8EFD1B6E53FA00D26137 /* _app_simple_box_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_box_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A22748F27CF40D00042BAC2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9A273C8729CF177E00CBEB97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		9A273FED29CF284200CBEB97 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = ../_matter.zip; sourceTree = "<group>"; };
+		9A273FED29CF284200CBEB97 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A43888B299E65B400D2EE15 /* app_simple_box.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_simple_box.xcodeproj; path = ../app_simple_box.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A43889B299E6D5100D2EE15 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libssl.dylib"; sourceTree = "<group>"; };
 		9A43889D299E6D5A00D2EE15 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
@@ -736,17 +736,19 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(EXECUTABLE_FOLDER_PATH)/$(EXECUTABLE_NAME)",
+				"${WorkspaceDir}/../operating_system/tool/bin/_on_before_build_executable",
 				"$(WorkspaceDir)/output_copy.txt",
 			);
+			name = _on_after_build_executable;
 			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
 			);
 			outputPaths = (
-				"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/$(EXECUTABLE_NAME)",
+				"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/output/$(EXECUTABLE_NAME)",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ". ${WorkspaceDir}/../operating_system/tool/bin/_on_after_build_executable\n";
+			shellScript = "$HOME/code/operating_system/tool/bin/_on_after_build_executable\n";
 		};
 		9A932B492D6DB966006557FC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -755,17 +757,21 @@
 			);
 			inputFileListPaths = (
 			);
-			inputPaths = (
-				"$(PROJECT_DIR)/matter.txt",
+			inputFileListPaths = (
+				"$(SRCROOT)/../matter.txt",
 			);
+			inputPaths = (
+			);
+			name = _on_before_build_executable;
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(PROJECT_DIR)/_matter.zip",
+				"$(SRCROOT)/_matter.zip",
+				"$(SRCROOT)/output.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ". ${WorkspaceDir}/../operating_system/tool/bin/_on_before_build_executable\n";
+			shellScript = "${WorkspaceDir}/../operating_system/tool/bin/_on_before_build_executable\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
