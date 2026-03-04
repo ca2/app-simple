@@ -44,7 +44,7 @@ namespace app_simple_networking_application
    bool command_document::on_open_document(const ::payload & payloadFile)
    {
 
-      øconstruct_new(m_pitemaCommand);
+      construct_newø(m_pitemaCommand);
 
       auto lines = file_system()->lines(payloadFile);
 

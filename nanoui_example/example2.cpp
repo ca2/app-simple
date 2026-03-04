@@ -56,14 +56,14 @@ namespace app_simple_nanoui_example
          //if (use_gl_4_1) {
          //   // NanoGUI presents many options for you to utilize at your discretion.
          //   // See include/nanoui/screen.h for what all of these represent.
-         //   screen = øallocate< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
+         //   screen = allocateø< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
          //      /* resizable */ true, /* fullscreen */ false,
          //      /* depth_buffer */ true, /* stencil_buffer */ true,
          //      /* float_buffer */ false, /* gl_major */ 4,
          //      /* gl_minor */ 1);
          //}
          //else {
-         //   screen = øallocate< Screen(Vector2i >(500, 700), "NanoGUI test");
+         //   screen = allocateø< Screen(Vector2i >(500, 700), "NanoGUI test");
          //}
 
       nanoui::FormHelper * guiNanouiExample = ___new ::nanoui::FormHelper(this);
@@ -72,9 +72,9 @@ namespace app_simple_nanoui_example
       guiNanouiExample->add_button("A button", [this]()
          { 
             
-            auto pmessagebox = __initialize_new ::message_box("Button pressed.");
+            auto pmessageboxpayload = __initialize_new ::message_box_payload("Button pressed.");
 
-            pmessagebox->async();
+            post(pmessageboxpayload);
 
          });
 
@@ -98,8 +98,8 @@ namespace app_simple_nanoui_example
 
          gui->add_group("Other widgets");
          gui->add_button("A button", [this]() 
-            { auto pmessagebox = __initialize_new::message_box("Button pressed.");
-         pmessagebox->async();
+            { auto pmessageboxpayload = __initialize_new ::message_box_payload("Button pressed.");
+         post(pmessageboxpayload);
             });
 
          set_visible(true);
@@ -125,9 +125,9 @@ namespace app_simple_nanoui_example
             [this]
             {
 
-               //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+               //auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Pushed Plain Button!");
 
-//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//send(pmessageboxpayload);/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->next_application();
 
@@ -138,9 +138,9 @@ namespace app_simple_nanoui_example
             [this]
             {
 
-               //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+               //auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Pushed Plain Button!");
 
-//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//send(pmessageboxpayload);/* std::cout << "pushed!" << std::endl; */
 
                m_pmainwindow->previous_application();
 

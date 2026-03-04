@@ -91,7 +91,7 @@ namespace app_simple_os_drag_and_drop
 
       //auto estatus = 
       
-      øconstruct_new(m_psimpleosdraganddrop);
+      construct_newø(m_psimpleosdraganddrop);
 
       //if (!estatus)
       //{

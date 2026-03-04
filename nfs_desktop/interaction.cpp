@@ -97,7 +97,7 @@ namespace app_simple_nfs_desktop
 
       set_timer(e_timer_redraw, 1_s);
 
-      øconstruct_new(m_papp->m_pnfs);
+      construct_newø(m_papp->m_pnfs);
 
 
       m_papp->m_pnfs->netnode_from_ini_configuration();

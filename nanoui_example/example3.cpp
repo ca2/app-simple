@@ -143,9 +143,9 @@ namespace app_simple_nanoui_example
 
     gui->add_group("Other widgets");
     gui->add_button("A button", []()
-       { auto pmessagebox = __initialize_new ::message_box(nullptr, "Button pressed.");
+       { auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Button pressed.");
 
-pmessagebox->sync(); }
+send(pmessageboxpayload); }
     )
        ->set_tooltip("Testing a much longer tooltip, that will wrap around to ___new lines multiple times.");;
 

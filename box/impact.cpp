@@ -318,7 +318,7 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      auto pmessagebox = __initialize_new::message_box(
+      auto pmessageboxpayload = __initialize_new ::message_box_payload(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
@@ -333,7 +333,7 @@ namespace app_simple_box
 
                auto papp = get_app();
 
-               papp->_001TryCloseApplication();
+               papp->_001PostTryCloseApplication();
 
             }
             else
@@ -346,7 +346,7 @@ namespace app_simple_box
          };
 
 
-      //pmessagebox->async();
+      //post(pmessageboxpayload);
 
    }
 

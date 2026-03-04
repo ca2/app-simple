@@ -51,9 +51,9 @@ namespace app_simple_nanoui_example
       Button * b = ___new Button(window, "Plain button");
       b->set_callback([this] 
          {
-            auto pmessagebox = __initialize_new::message_box("Pushed Plain Button!");
+            auto pmessageboxpayload = __initialize_new ::message_box_payload("Pushed Plain Button!");
             /* std::cout << "pushed!" << std::endl; */ 
-            pmessagebox->async();
+            post(pmessageboxpayload);
          
          });
       b->set_tooltip("short tooltip");
@@ -62,9 +62,9 @@ namespace app_simple_nanoui_example
       b = window->add<Button>("Styled", e_font_awesome_rocket);
       b->set_background_color(::rgba(0, 0, 255, 25));
       b->set_callback([this] { 
-         auto pmessagebox = __initialize_new::message_box("Pushed Styled!");
+         auto pmessageboxpayload = __initialize_new ::message_box_payload("Pushed Styled!");
          /* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ 
-         pmessagebox->async();
+         post(pmessageboxpayload);
          });
       b->set_tooltip("This button has a fairly long tooltip. It is so long, in "
          "fact, that the shown text will span several lines.");
@@ -77,7 +77,7 @@ namespace app_simple_nanoui_example
             string_stream str;
             str << "Toggle button state: " << state;
             auto pmessagebox = message_box(str.as_string());
-            pmessagebox->async();
+            post(pmessageboxpayload);
          
          });
       
@@ -126,9 +126,9 @@ namespace app_simple_nanoui_example
                b->set_callback([this] {
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
                   dlg->set_callback([this](int result) { 
-                     auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                     auto pmessageboxpayload = __initialize_new ::message_box_payload("Dialog result: " + ::as_string(result)); 
                      
-                     pmessagebox->async();
+                     post(pmessageboxpayload);
                      });
                   });
                b = ___new Button(tools, "Warn");
@@ -136,9 +136,9 @@ namespace app_simple_nanoui_example
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
                   dlg->set_callback([this](int result) 
                      {
-                        auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                        auto pmessageboxpayload = __initialize_new ::message_box_payload("Dialog result: " + ::as_string(result)); 
                      
-                        pmessagebox->async();
+                        post(pmessageboxpayload);
                      });
                   });
                b = ___new Button(tools, "Ask");
@@ -146,9 +146,9 @@ namespace app_simple_nanoui_example
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
                   dlg->set_callback([this](int result) 
                      {
-                        auto pmessagebox = __initialize_new::message_box("Dialog result: " + ::as_string(result)); 
+                        auto pmessageboxpayload = __initialize_new ::message_box_payload("Dialog result: " + ::as_string(result)); 
                      
-                        pmessagebox->async();
+                        post(pmessageboxpayload);
                      });
                   });
       
@@ -307,9 +307,9 @@ namespace app_simple_nanoui_example
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
-                     auto pmessagebox = __initialize_new::message_box(str.as_string());
+                     auto pmessageboxpayload = __initialize_new ::message_box_payload(str.as_string());
 
-                     pmessagebox->async();
+                     post(pmessageboxpayload);
 
                   }
                );
@@ -319,9 +319,9 @@ namespace app_simple_nanoui_example
                      
                      string_stream str;
                      str << "Check box 2 state: " << state;
-                     auto pmessagebox = __initialize_new::message_box(str.as_string());
+                     auto pmessageboxpayload = __initialize_new ::message_box_payload(str.as_string());
 
-                     pmessagebox->async();
+                     post(pmessageboxpayload);
 
                   }
                );
@@ -350,7 +350,7 @@ namespace app_simple_nanoui_example
                   
                   str.formatf("Final slider value: %d", (int)(value * 100));
                   auto pmessagebox = message_box(str);
-                  pmessagebox->async();
+                  post(pmessageboxpayload);
                   });
                text_box->set_fixed_size({ 60, 25 });
                text_box->set_font_size(20);
@@ -497,7 +497,7 @@ namespace app_simple_nanoui_example
                   string_stream str;
                   str << "ColorPicker final callback: [" << c << "]";
                   auto pmessagebox = message_box(str.as_string());
-                  pmessagebox->async();
+                  post(pmessageboxpayload);
                   });
                // setup a fast callback for the color picker widget on a ___new window
                // for demonstrative purposes
@@ -548,9 +548,9 @@ namespace app_simple_nanoui_example
                   [this] 
                   { 
                      
-                     //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+                     //auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Pushed Plain Button!");
 
-//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//send(pmessageboxpayload);/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->next_application();
 
@@ -561,9 +561,9 @@ namespace app_simple_nanoui_example
                   [this]
                   {
 
-                     //auto pmessagebox = __initialize_new ::message_box(nullptr, "Pushed Plain Button!");
+                     //auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Pushed Plain Button!");
 
-//pmessagebox->sync();/* std::cout << "pushed!" << std::endl; */
+//send(pmessageboxpayload);/* std::cout << "pushed!" << std::endl; */
 
                      m_pmainwindow->previous_application();
 

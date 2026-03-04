@@ -87,15 +87,15 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      øconstruct_new(m_pstill);
+      construct_newø(m_pstill);
 
-      øconstruct_new(m_pedit);
+      construct_newø(m_pedit);
 
-      øconstruct_new(m_pcombobox);
+      construct_newø(m_pcombobox);
 
       m_pcombobox->m_bEdit = false;
 
-      øconstruct_new(m_pbutton);
+      construct_newø(m_pbutton);
 
       m_pstill->create_control(this, "still");
 

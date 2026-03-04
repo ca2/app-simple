@@ -125,7 +125,7 @@ namespace app_simple_form
 
          //output_error_message("m=1");
 
-         _001TryCloseApplication();
+         _001PostTryCloseApplication();
 
          return;
 

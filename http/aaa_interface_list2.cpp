@@ -94,7 +94,7 @@ namespace app_simple_http
       //for (::collection::index iItem = 0; iItem < addressa.size(); iItem++)
       //{
 
-      //   auto pitem = øallocate ::item(e_element_item, iItem);
+      //   auto pitem = allocateø ::item(e_element_item, iItem);
 
       //   add_item(pitem);
 
