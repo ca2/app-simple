@@ -95,13 +95,13 @@ namespace app_simple_change_grub_default_entry
 
       }
 
-      øconstruct_new(m_pstill);
+      construct_newø(m_pstill);
 
-      øconstruct_new(m_pedit);
+      construct_newø(m_pedit);
 
-      øconstruct_new(m_plistbox);
+      construct_newø(m_plistbox);
 
-      øconstruct_new(m_pbuttonRestart);
+      construct_newø(m_pbuttonRestart);
 
       m_pstill->create_control(this, "still");
 

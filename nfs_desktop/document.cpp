@@ -44,7 +44,7 @@ namespace app_simple_nfs_desktop
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
-      øconstruct_new(m_pitemaCommand);
+      construct_newø(m_pitemaCommand);
 
       auto lines = file_system()->lines(payloadFile);
 

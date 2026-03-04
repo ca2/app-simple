@@ -41,7 +41,7 @@ public:
     MyCanvas(Widget *parent) : Canvas(parent, 1), m_rotation(0.f) {
         using namespace nanoui;
 
-        m_shader = øallocate< Shader >(
+        m_shader = allocateø< Shader >(
             render_pass(),
 
             // An identifying name

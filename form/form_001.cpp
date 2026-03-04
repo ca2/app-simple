@@ -111,23 +111,23 @@ namespace app_simple_form
 
       __check_refdbg
 
-      øconstruct_new(m_pstill);
+      construct_newø(m_pstill);
 
       __check_refdbg
 
-      øconstruct_new(m_pedit);
+      construct_newø(m_pedit);
 
       __check_refdbg
 
-      øconstruct_new(m_pbuttonClear);
+      construct_newø(m_pbuttonClear);
 
       __check_refdbg
 
-      øconstruct_new(m_pbuttonSend);
+      construct_newø(m_pbuttonSend);
 
       __check_refdbg
 
-      øconstruct_new(m_pstillReceiver);
+      construct_newø(m_pstillReceiver);
 
       __check_refdbg
 

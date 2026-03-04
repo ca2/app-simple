@@ -179,7 +179,7 @@ namespace app_simple_http_folder_upload
       if (iCurrentCommand < 0)
       {
 
-         øconstruct_new(pcommandCurrent);
+         construct_newø(pcommandCurrent);
 
          pcommandCurrent->m_strCommand = "(No Command)";
 
@@ -187,7 +187,7 @@ namespace app_simple_http_folder_upload
       else if (iCurrentCommand >= main_content().m_pitema->size())
       {
 
-         øconstruct_new(pcommandCurrent);
+         construct_newø(pcommandCurrent);
 
          pcommandCurrent->m_strCommand = "Done!!";
 

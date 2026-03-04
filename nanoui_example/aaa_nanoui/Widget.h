@@ -166,7 +166,7 @@ public:
 //   /// Variadic shorthand notation to construct and add a child widget
 //   template<typename WidgetClass, typename... Args>
 //   WidgetClass * add(const Args&... args) {
-//      return øallocate< WidgetClass >(this, args...);
+//      return allocateø< WidgetClass >(this, args...);
 //   }
 //
 //   /// Walk up the hierarchy and return the parent window

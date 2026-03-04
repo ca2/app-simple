@@ -348,7 +348,7 @@ namespace app_simple_application
 
                   auto pmessagebox = message_box("No file loaded...");
 
-                  pmessagebox->async();
+                  post(pmessageboxpayload);
 
                }
                

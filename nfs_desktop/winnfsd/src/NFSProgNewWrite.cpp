@@ -46,7 +46,7 @@
 //         int handleId = *(unsigned int *)handle.contents;
 //
 //         if (unstableStorageFile.count(handleId) == 0) {
-//            m_papplication->øconstruct_new(pfile);
+//            m_papplication->construct_newø(pfile);
 //            if (pfile) {
 //               unstableStorageFile.insert(std::make_pair(handleId, pfile));
 //            }

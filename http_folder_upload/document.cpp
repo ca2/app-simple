@@ -43,7 +43,7 @@ namespace app_simple_http_folder_upload
    bool document::on_open_document(const ::payload & payloadFile)
    {
 
-      øconstruct_new(m_pitemaCommand);
+      construct_newø(m_pitemaCommand);
 
       auto lines = file_system()->lines(payloadFile);
 
