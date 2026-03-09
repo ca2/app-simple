@@ -76,7 +76,7 @@ namespace app_simple_nanoui_example
          {
             string_stream str;
             str << "Toggle button state: " << state;
-            auto pmessagebox = message_box(str.as_string());
+            auto pmessageboxpayload = message_box(str.as_string());
             post(pmessageboxpayload);
          
          });
@@ -349,7 +349,7 @@ namespace app_simple_nanoui_example
                   string str;
                   
                   str.formatf("Final slider value: %d", (int)(value * 100));
-                  auto pmessagebox = message_box(str);
+                  auto pmessageboxpayload = message_box(str);
                   post(pmessageboxpayload);
                   });
                text_box->set_fixed_size({ 60, 25 });
@@ -496,7 +496,7 @@ namespace app_simple_nanoui_example
                cp->set_final_callback([this](const ::color::color & c) {
                   string_stream str;
                   str << "ColorPicker final callback: [" << c << "]";
-                  auto pmessagebox = message_box(str.as_string());
+                  auto pmessageboxpayload = message_box(str.as_string());
                   post(pmessageboxpayload);
                   });
                // setup a fast callback for the color picker widget on a ___new window

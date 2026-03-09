@@ -346,7 +346,7 @@ namespace app_simple_application
                catch (...) 
                {
 
-                  auto pmessagebox = message_box("No file loaded...");
+                  auto pmessageboxpayload = message_box("No file loaded...");
 
                   post(pmessageboxpayload);
 
