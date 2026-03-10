@@ -25,7 +25,7 @@ namespace app_simple_http_file_server
       socket();
       virtual ~socket();
 
-      virtual void on_send_response() override;
+      bool on_send_response() override;
 
 
    };

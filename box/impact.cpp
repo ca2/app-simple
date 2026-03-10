@@ -324,11 +324,11 @@ namespace app_simple_box
          ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
       );
 
-      pmessagebox->async()
-         << [this, pmessagebox]()
+      pmessageboxpayload->m_functionOnDialogResult
+         = [this](const ::payload & payloadResult)
          {
 
-            if (pmessagebox->m_payloadResult == e_dialog_result_yes)
+            if (payloadResult == e_dialog_result_yes)
             {
 
                auto papp = get_app();
@@ -346,7 +346,7 @@ namespace app_simple_box
          };
 
 
-      //post(pmessageboxpayload);
+      post(pmessageboxpayload);
 
    }
 
