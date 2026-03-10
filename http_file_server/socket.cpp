@@ -31,7 +31,7 @@ namespace app_simple_http_file_server
    }
 
 
-   void socket::on_send_response()
+   bool socket::on_send_response()
    {
 
       string strHost = inheader("host");
@@ -378,6 +378,8 @@ namespace app_simple_http_file_server
 //         //}
 
       //}
+
+      return true;
 
    }
 
