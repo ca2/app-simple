@@ -50,7 +50,7 @@ namespace app_simple_http_folder_upload
       for (auto & line : lines)
       {
 
-         auto pcommand = øcreate_new< command>();
+         auto pcommand = create_newø< command>();
 
          pcommand->m_strCommand = line;
 

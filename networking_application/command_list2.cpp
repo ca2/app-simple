@@ -197,7 +197,7 @@ namespace app_simple_networking_application
 
          pcommandCurrent = main_content().m_pitema->element_at(iCurrentCommand);
 
-         ødefer_construct_new(pcommandCurrent);
+         defer_construct_newø(pcommandCurrent);
 
          strPrefix = "Running command: ";
 
@@ -303,7 +303,7 @@ namespace app_simple_networking_application
       if (pitem->m_item.m_eelement == e_element_item)
       {
 
-         auto phyperlink = øcreate_new <::hyperlink >();
+         auto phyperlink = create_newø <::hyperlink >();
 
          phyperlink->m_strLink.formatf("http://127.0.0.1:%d/", get_app()->networking_application()->wait_get_current_port(1_min));
 
