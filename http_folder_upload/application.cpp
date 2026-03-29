@@ -120,7 +120,7 @@ namespace app_simple_http_folder_upload
 
       default_data_save_handling("simple_text");
 
-      ødefer_construct_new(m_pincomingsocketthread);
+      defer_construct_newø(m_pincomingsocketthread);
 
       //return true;
 

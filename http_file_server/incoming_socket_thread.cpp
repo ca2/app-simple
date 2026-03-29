@@ -102,7 +102,7 @@ namespace app_simple_http_file_server
    //::thread * create_new_socket_thread(::object* pparticle)
    //{
 
-   //   auto pthreadSsl = pparticle->øcreate_new < incoming_socket_thread >();
+   //   auto pthreadSsl = pparticle->create_newø < incoming_socket_thread >();
 
    //   //pthreadSsl->initialize_socket_thread(pparticle);
 
