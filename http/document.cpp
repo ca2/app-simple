@@ -51,7 +51,7 @@ namespace app_simple_http
       for (auto & line : lines)
       {
 
-         auto pcommand = øcreate_new< command>();
+         auto pcommand = create_newø< command>();
 
          pcommand->m_strCommand = line;
 
