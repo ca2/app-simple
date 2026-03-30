@@ -1,0 +1,412 @@
+#include "framework.h"
+#include "render.h"
+#include "impact.h"
+#include "application.h"
+#include "acme/constant/id.h"
+#include "acme/graphics/draw2d/_binary_stream.h"
+#include "acme/platform/node.h"
+#include "apex/database/_binary_stream.h"
+#include "aura/graphics/image/image.h"
+#include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/draw2d.h"
+#include "berg/user/user/impact.h"
+#include <math.h>
+
+
+CLASS_DECL_ACME ::color::color dk_red(); // <3 tbs
+
+
+namespace app_simple_about_the_operating_system
+{
+
+
+   render::render()
+   {
+
+      m_iDrawing = 1;
+
+   }
+
+
+   render::~render()
+   {
+
+   }
+
+
+#ifdef _DEBUG
+
+
+   long long render::increment_reference_count()
+   {
+
+      return ::particle::increment_reference_count();
+
+   }
+
+
+   long long render::decrement_reference_count()
+   {
+
+      return ::particle::decrement_reference_count();
+
+   }
+
+
+#endif
+
+
+   void render::on_layout(::draw2d::graphics_pointer & pgraphics)
+   {
+
+
+   }
+
+
+   void render::initialize_simple_drawing(int iDrawing)
+   {
+
+      m_iDrawing = iDrawing;
+
+      color32_t crText = argb(255, 55, 210, 120);
+
+      if (m_iDrawing == 1)
+      {
+
+         crText = argb(127, 0, 127, 200);
+
+      }
+      else if (m_iDrawing == 3)
+      {
+
+         crText = argb(255, 180, 180, 180);
+
+      }
+
+      ::color::color color(crText);
+
+      string strDataId;
+
+      strDataId = m_pimpact->id();
+
+      //m_hlsText.m_dH = 0.1;
+      //m_hlsText.m_dL = 0.5;
+      //m_hlsText.m_dS = 0.9;
+
+      //papplication->datastream()->set(strDataId, m_hlsText);
+
+      if(!get_app()->datastream()->get(strDataId +".color", m_hlsText))
+      {
+
+         m_hlsText = color.get_hls();
+
+      }
+
+   }
+
+
+   void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   {
+
+      if (m_rectangle.is_empty())
+      {
+
+         return;
+
+      }
+
+      if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
+      {
+
+         ::int_rectangle rectangle(m_rectangle);
+
+         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+
+         for (::collection::index i = 0; i < 5; i++)
+         {
+
+            pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225), 1.0);
+
+            rectangle.deflate(1, 1);
+
+         }
+
+      }
+
+      if(m_iDrawing <= 3)
+      {
+
+         _001OnDraw1Through3(pgraphics);
+
+      }
+      else if(m_iDrawing == 4)
+      {
+
+         _001OnDrawBoxGradient(pgraphics);
+
+      }
+      else if (m_iDrawing == 5)
+      {
+
+         _001OnDrawCirclePath(pgraphics);
+
+      }
+      else if(m_iDrawing == 6)
+      {
+
+         _001OnDrawArcs(pgraphics, false);
+
+      }
+      else if(m_iDrawing == 7)
+      {
+
+         _001OnDrawArcs(pgraphics, true);
+
+      }
+
+   }
+
+
+   ::e_status render::set_font(const ::scoped_string & scopedstrFont)
+   {
+
+      if (scopedstrFont.is_empty())
+      {
+
+         return error_bad_argument;
+
+      }
+
+      m_strFont1 = scopedstrFont;
+
+      string strDataId;
+
+      strDataId = m_pimpact->id();
+
+      get_app()->datastream()->set(strDataId + ".font_family", m_strFont1);
+
+      return ::success;
+
+   }
+
+
+   ::e_status render::set_hover_font(const ::scoped_string & scopedstrHoverFont)
+   {
+
+      m_strHoverFont = scopedstrHoverFont;
+
+      return ::success;
+
+   }
+
+
+   string render::get_font()
+   {
+
+      string strFont;
+
+      strFont = m_strHoverFont;
+
+      if (strFont.has_character())
+      {
+
+         return strFont;
+
+      }
+
+      if (m_strFont1.is_empty())
+      {
+
+         string strDataId;
+
+         strDataId = m_pimpact->id();
+
+         if (!get_app()->datastream()->get(strDataId + ".font_family", m_strFont1)
+            || m_strFont1.is_empty())
+         {
+
+            m_strFont1 = system()->m_pnode->font_name(e_font_sans_ex);
+
+         }
+
+      }
+
+      return m_strFont1;
+
+   }
+
+
+   void render::draw_text(::draw2d::graphics_pointer & pgraphics)
+   {
+      //Text
+
+      int_rectangle rectangle;
+
+      int iSize = minimum(m_rectangle.width(), m_rectangle.height());
+
+      iSize = iSize * 3 / 4;
+
+
+      rectangle.set_size(iSize, iSize);
+
+      rectangle.Align(e_align_center, m_rectangle);
+
+      rectangle.offset_x(-iSize / 5 * 3);
+
+      rectangle.offset_x(iSize / 5 * m_iDrawing);
+
+      ::double_size size(0., 0.);
+
+      bool bDrawText = true;
+
+      string strTitle;
+
+      auto pbrush = createø < ::draw2d::brush >();
+
+      auto psystem = system();
+
+      auto pdraw2d = psystem->draw2d();
+
+      auto pwritetext = pdraw2d->write_text();
+
+      auto pfont1 = pwritetext->create_font();
+
+      auto pfont2 = pwritetext->create_font();
+
+      string strFontFamily = get_font();
+
+
+
+      if(bDrawText)
+      {
+
+         pfont1->create_font(strFontFamily, 100_px, e_font_weight_bold);
+
+         pgraphics->set(pfont1);
+
+         strTitle = get_app()->m_textSimple.as_text();
+
+         if (strTitle.is_empty())
+         {
+
+            strTitle = get_app()->m_textMainTitle.as_text();
+
+         }
+
+         size = pgraphics->get_text_extent(strTitle);
+
+         if (!size.is_empty())
+         {
+
+            int iHeight = rectangle.height();
+
+            double dMaxDimension = size.maximum();
+
+            if (m_iDrawing == 1)
+            {
+
+               auto fontsize = ::write_text::font_size(iHeight * 80.0 / dMaxDimension, ::e_unit_pixel);
+
+
+               pfont2->create_font(strFontFamily, fontsize, e_font_weight_bold);
+
+            }
+            else
+            {
+
+               auto fontsize = ::write_text::font_size(iHeight * 160.0 / dMaxDimension, ::e_unit_pixel);
+
+
+               pfont2->create_font(strFontFamily, fontsize, e_font_weight_bold);
+
+            }
+
+         }
+
+         pgraphics->set(pfont2);
+
+         size = pgraphics->get_text_extent(strTitle);
+
+         ::int_rectangle rectangleText;
+
+         rectangleText.set_size(size);
+
+         rectangleText.inflate(10, 10);
+
+         rectangleText.Align(e_align_center, rectangle);
+
+         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+
+
+         if (m_iDrawing == 4)
+         {
+
+            pbrush->create_solid(m_hlsText);
+
+         }
+         else if (m_iDrawing == 3)
+         {
+
+            if (get_app()->m_checkSimple.is_checked())
+            {
+
+               pbrush->create_solid(m_hlsText);
+
+            }
+            else
+            {
+
+               if (m_pimage2.ok())
+               {
+
+                  pbrush->CreatePatternBrush(m_pimage2);
+
+               }
+               else
+               {
+
+                  pbrush->create_solid(m_hlsText);
+
+               }
+
+            }
+
+         }
+         else
+         {
+
+            if (get_app()->m_checkSimple.is_checked())
+            {
+
+               pbrush->create_solid(m_hlsText);
+
+            }
+            else
+            {
+
+               pbrush->CreateLinearGradientBrush(rectangleText.top_left(), rectangleText.bottom_right(), m_hlsText, argb(255, 255, 255, 200));
+
+            }
+
+         }
+
+         pgraphics->set(pbrush);
+
+         if(bDrawText)
+         {
+
+            pgraphics->draw_text(strTitle, rectangleText, e_align_center);
+
+         }
+
+
+      }
+
+
+   }
+
+
+} // namespace simple_drawing
+
+
+
