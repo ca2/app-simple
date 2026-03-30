@@ -3,6 +3,7 @@
 #include "impact.h"
 #include "frame.h"
 #include "main_frame.h"
+#include "main_impact.h"
 #include "document.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
@@ -29,13 +30,13 @@ namespace app_simple_about_the_operating_system
 
       m_ptabimpact = nullptr;
 
-      m_strAppId = "app-simple/drawing";
+      m_strAppId = "app-simple/about_the_operating_system";
 
-      m_strDatabaseAppId = "app-simple/drawing";
+      m_strDatabaseAppId = "app-simple/about_the_operating_system";
 
       m_strBaseSupportId = "ca2_flag";
 
-      m_strAppName = "Simple Drawing";
+      m_strAppName = "About the Operating System!!";
 
       m_bLicense = false;
 
@@ -65,13 +66,14 @@ namespace app_simple_about_the_operating_system
 
       m_textAppTitle = __text("text://app-simple/drawing/app_simple_about_the_operating_system/Simple Drawing");
 
-      m_textMainTitle = { "Simple Drawing", ::e_source_sync };
+      m_textMainTitle = { "About the Operating System!!", ::e_source_sync };
 
       //set_local_data();
 
       factory()->add_factory_item <::app_simple_about_the_operating_system::document >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::frame >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::main_frame >();
+      factory()->add_factory_item<::app_simple_about_the_operating_system::main_impact>();
       factory()->add_factory_item <::user::button_impact >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::impact >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::tab_impact >();
