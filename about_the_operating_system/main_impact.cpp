@@ -146,21 +146,52 @@ namespace app_simple_about_the_operating_system
 
       pgraphics->set_text_color(color_dk);
 
-      auto psystem = system();
+      
+      if (!m_pfontThomasBSHeading1)
+      {
 
-      auto pnode = psystem->draw2d();
+         auto psystem = system();
 
-      auto pwritetext = pnode->write_text();
+         auto pnode = psystem->draw2d();
 
-      auto fontsize = ::write_text::font_size(48.0 * rectangleX.height() / 1'080, e_unit_pixel);
+         auto pwritetext = pnode->write_text();
+         
+         auto fontsizeHeading1 = ::write_text::font_size(72.0 * rectangleX.height() / 1'080, e_unit_pixel);
 
-      m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
+         m_pfontThomasBSHeading1 = pwritetext->font("Fira Code", fontsizeHeading1, 900);
 
-      pgraphics->set(m_pfontThomasBS_);
+      }
 
-      pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+      if (!m_pfontThomasBS_)
+      {
+         
+         auto psystem = system();
 
-      pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+         auto pnode = psystem->draw2d();
+
+         auto pwritetext = pnode->write_text();
+
+         auto fontsize = ::write_text::font_size(36.0 * rectangleX.height() / 1'080, e_unit_pixel);
+
+         m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
+
+      }
+
+      if (!m_pfontThomasBSDetail)
+      {
+
+         auto psystem = system();
+
+         auto pnode = psystem->draw2d();
+
+         auto pwritetext = pnode->write_text();
+
+         auto fontsizeHeading1 = ::write_text::font_size(24.0 * rectangleX.height() / 1'080, e_unit_pixel);
+
+         m_pfontThomasBSDetail = pwritetext->font("Fira Code", fontsizeHeading1, 200);
+
+      }
+
 
       _synchronous_lock synchronouslockDocument(get_document()->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
 
@@ -196,24 +227,92 @@ namespace app_simple_about_the_operating_system
 
       ::color::color color;
 
-      opacity = ::opacity(208);
+      int iFont = -1024;
+
+
 
       for (auto &strItem: stra)
       {
 
+         ::string strLine = strItem;
+
+
+         if (strLine.begins_eat("#"))
+         {
+
+            strLine.trim();
+
+            if (iFont != 1)
+            {
+
+               iFont = 1;
+
+               pgraphics->set(m_pfontThomasBSHeading1);
+
+               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+
+               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+               opacity = ::opacity(218);
+               color = color::white;
+
+               color &= opacity;
+
+               pgraphics->set_text_color(color);
+            }
+         }
+         else if (strLine.begins_eat("-#"))
+         {
+
+            strLine.trim();
+
+            if (iFont != -1)
+            {
+
+               iFont = -1;
+
+               pgraphics->set(m_pfontThomasBSDetail);
+
+               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+
+               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+               opacity = ::opacity(160);
+               color = color::white;
+
+               color &= opacity;
+
+               pgraphics->set_text_color(color);
+            }
+         }
+         else
+         {
+            if (iFont != 10)
+            {
+
+               iFont = 10;
+               pgraphics->set(m_pfontThomasBS_);
+
+               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+
+               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+               color = color::white;
+               opacity = ::opacity(160);
+               color &= opacity;
+
+               pgraphics->set_text_color(color);
+            }
+         }
+
+         if (strLine != "<br />")
+         {
          
-            color = color::white;
+            pgraphics->text_out(point.x, point.y + y, strLine);
 
-         color &= opacity;
+         }
 
-         pgraphics->set_text_color(color);
-
-         pgraphics->text_out(point.x, point.y + y, strItem);
-
-         auto s = pgraphics->get_text_extent(strItem);
+         auto s = pgraphics->get_text_extent(strLine);
 
          
-         y += size.cy;
+         y += s.cy;
 
 
       }
