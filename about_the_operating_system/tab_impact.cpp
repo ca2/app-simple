@@ -2,10 +2,11 @@
 #include "tab_impact.h"
 #include "application.h"
 #include "impact.h"
-#include "main_impact.h"
+//#include "main_impact.h"
 #include "render.h"
 #include "acme/constant/user_message.h"
 #include "berg/user/user/tab_pane.h"
+#include "berg/user/impact/about_the_operating_system_impact.h"
 
 
 namespace app_simple_about_the_operating_system
@@ -45,7 +46,7 @@ namespace app_simple_about_the_operating_system
       }
 
       set_tab("Menu", MENU_IMPACT);
-      set_tab("Main", "main");
+      set_tab("Main", OPERATING_SYSTEM_INFORMATION_IMPACT);
       set_tab("text://app-simple/drawing/:002", "drawing2");
       set_tab("text://app-simple/drawing/:003", "drawing3");
       set_tab("text://app-simple/drawing/:box gradient", "drawing4");
@@ -53,7 +54,7 @@ namespace app_simple_about_the_operating_system
       set_tab("text://app-simple/drawing/:arcs", "drawing6");
       set_tab("text://app-simple/drawing/:arcpths", "drawing7");
 
-      set_current_tab_by_id("main");
+      set_current_tab_by_id(OPERATING_SYSTEM_INFORMATION_IMPACT);
 
    }
 
@@ -111,10 +112,10 @@ namespace app_simple_about_the_operating_system
 
       string strId = pimpactdata->id();
 
-      if (strId == "main")
+      if (pimpactdata->id() == OPERATING_SYSTEM_INFORMATION_IMPACT)
       {
 
-         create_impact<main_impact>(pimpactdata);
+         create_impact<berg::about_the_operating_system_impact>(pimpactdata);
 
       }
       else if(strId.case_insensitive_begins_eat("drawing"))
