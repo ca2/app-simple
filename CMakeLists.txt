@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(app-simple)
 
 
+add_subdirectory(about_the_operating_system)
 add_subdirectory(application)
 add_subdirectory(drawing)
 add_subdirectory(form)
