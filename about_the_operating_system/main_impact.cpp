@@ -111,6 +111,15 @@ namespace app_simple_about_the_operating_system
 
       }
 
+      auto rectangleX = this->rectangle();
+
+      if (rectangleX.is_empty())
+      {
+
+         return nullptr;
+
+      }
+
       auto psystem = system();
 
       auto pnode = psystem->draw2d();
@@ -121,7 +130,7 @@ namespace app_simple_about_the_operating_system
 
       auto dFontSizeEm = psimpledialogboxline->get_font_size_em();
 
-      auto iFontWeight = psimpledialogboxline->m_iFontWeight;
+      auto iFontWeight = psimpledialogboxline->get_font_weight();
 
       auto fontsize = ::write_text::font_size(dFontSizeEm * 36.0 * rectangleX.height() / 1'080, e_unit_pixel);
 
@@ -351,20 +360,22 @@ namespace app_simple_about_the_operating_system
          //    }
          // }
 
-               color = color::white;
-                auto opacity = ::opacity(psimpledialogboxline->get_byte_text_color_strength());
-                color &= opacity;
+         color = color::white;
+
+         auto opacity = ::opacity(psimpledialogboxline->get_byte_text_color_strength());
+
+         color &= opacity;
 
          pgraphics->set_text_color(color);
 
-         if (strLine != "<br />")
+         if (psimpledialogboxline->m_str.has_character())
          {
          
-            pgraphics->text_out(point.x, point.y + y, strLine);
+            pgraphics->text_out(point.x, point.y + y, psimpledialogboxline->m_str);
 
          }
 
-         auto s = pgraphics->get_text_extent(strLine);
+         auto s = pgraphics->get_text_extent(psimpledialogboxline->get_line_height_text());
 
          y += s.cy;
 

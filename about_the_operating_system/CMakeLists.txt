@@ -17,6 +17,8 @@ list(APPEND library_source
    frame.h
    main_frame.cpp
    main_frame.h
+   main_impact.cpp
+   main_impact.h
    render.cpp
    render.h
    render_1through3.cpp

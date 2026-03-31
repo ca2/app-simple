@@ -19,7 +19,7 @@ namespace app_simple_about_the_operating_system
       // ::write_text::font_pointer m_pfontThomasBSHeading1;
       // ::write_text::font_pointer m_pfontThomasBS_;
       // ::write_text::font_pointer m_pfontThomasBSDetail;
-      ::map_font < ::enum_simple_dialog_box_style, ::write_text::font_pointer > m_mapFontThomasBS_;
+      ::map_base < ::enum_simple_dialog_style, ::write_text::font_pointer > m_mapFontThomasBS_;
       //string m_strFont1;
       int m_iSequence;
 
