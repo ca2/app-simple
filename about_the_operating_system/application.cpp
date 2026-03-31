@@ -3,7 +3,7 @@
 #include "impact.h"
 #include "frame.h"
 #include "main_frame.h"
-#include "main_impact.h"
+//#include "main_impact.h"
 #include "document.h"
 #include "tab_impact.h"
 #include "acme/handler/request.h"
@@ -73,7 +73,7 @@ namespace app_simple_about_the_operating_system
       factory()->add_factory_item <::app_simple_about_the_operating_system::document >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::frame >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::main_frame >();
-      factory()->add_factory_item<::app_simple_about_the_operating_system::main_impact>();
+      //factory()->add_factory_item<::app_simple_about_the_operating_system::main_impact>();
       factory()->add_factory_item <::user::button_impact >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::impact >();
       factory()->add_factory_item <::app_simple_about_the_operating_system::tab_impact >();
