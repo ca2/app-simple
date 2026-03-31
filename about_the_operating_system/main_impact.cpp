@@ -1,14 +1,19 @@
 // From app_simple_application/impact.cpp to app_simple_about_the_operationg_system/main_impact.cpp by
 //    camilo on 2026-03-30 17:49 <3ThomasBorregaardSørensen!!
 #include "framework.h"
-#include "main_impact.h"
+#include "application.h"
 #include "document.h"
+#include "main_impact.h"
+
+#include "../../app/acme/platform/_referencing_debugging.h"
+#include "../../app/acme/user/simple/dialog_box_line.h"
 #include "acme/constant/user_message.h"
 #include "acme/filesystem/filesystem/file_context.h"
 #include "acme/filesystem/filesystem/file_system.h"
 #include "acme/platform/node.h"
 #include "acme/prototype/mathematics/mathematics.h"
-#include "application.h"
+#include "acme/user/simple/dialog_box_line.h"
+#include "aura/graphics/write_text/write_text.h"
 #include "aura/graphics/draw2d/draw2d.h"
 #include "aura/message/user.h"
 
@@ -94,6 +99,41 @@ namespace app_simple_about_the_operating_system
    void main_impact::_001OnClip(::draw2d::graphics_pointer &pgraphics) {}
 
 
+   ::write_text::font * main_impact::get_font(::simple_dialog_box_line * psimpledialogboxline)
+   {
+
+      auto & pfont = m_mapFontThomasBS_[psimpledialogboxline->m_esimpledialogstyle];
+
+      if (pfont)
+      {
+
+         return pfont;
+
+      }
+
+      auto psystem = system();
+
+      auto pnode = psystem->draw2d();
+
+      auto pwritetext = pnode->write_text();
+
+      //auto fontsizeHeading1 = ::write_text::font_size(psimpledialogboxline->m_dFontSizeEm * 36.0 * rectangleX.height() / 1'080, e_unit_pixel);
+
+      auto dFontSizeEm = psimpledialogboxline->get_font_size_em();
+
+      auto iFontWeight = psimpledialogboxline->m_iFontWeight;
+
+      auto fontsize = ::write_text::font_size(dFontSizeEm * 36.0 * rectangleX.height() / 1'080, e_unit_pixel);
+
+//      m_pfontThomasBSHeading1 =
+
+      pfont = pwritetext->font(e_font_sans_ui, fontsize, iFontWeight);
+
+      return pfont;
+
+   }
+
+
    void main_impact::_001OnDraw(::draw2d::graphics_pointer &pgraphics)
    {
 
@@ -147,50 +187,50 @@ namespace app_simple_about_the_operating_system
       pgraphics->set_text_color(color_dk);
 
       
-      if (!m_pfontThomasBSHeading1)
-      {
-
-         auto psystem = system();
-
-         auto pnode = psystem->draw2d();
-
-         auto pwritetext = pnode->write_text();
-         
-         auto fontsizeHeading1 = ::write_text::font_size(72.0 * rectangleX.height() / 1'080, e_unit_pixel);
-
-         m_pfontThomasBSHeading1 = pwritetext->font("Fira Code", fontsizeHeading1, 900);
-
-      }
-
-      if (!m_pfontThomasBS_)
-      {
-         
-         auto psystem = system();
-
-         auto pnode = psystem->draw2d();
-
-         auto pwritetext = pnode->write_text();
-
-         auto fontsize = ::write_text::font_size(36.0 * rectangleX.height() / 1'080, e_unit_pixel);
-
-         m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
-
-      }
-
-      if (!m_pfontThomasBSDetail)
-      {
-
-         auto psystem = system();
-
-         auto pnode = psystem->draw2d();
-
-         auto pwritetext = pnode->write_text();
-
-         auto fontsizeHeading1 = ::write_text::font_size(24.0 * rectangleX.height() / 1'080, e_unit_pixel);
-
-         m_pfontThomasBSDetail = pwritetext->font("Fira Code", fontsizeHeading1, 200);
-
-      }
+      // if (!m_pfontThomasBSHeading1)
+      // {
+      //
+      //    auto psystem = system();
+      //
+      //    auto pnode = psystem->draw2d();
+      //
+      //    auto pwritetext = pnode->write_text();
+      //
+      //    auto fontsizeHeading1 = ::write_text::font_size(72.0 * rectangleX.height() / 1'080, e_unit_pixel);
+      //
+      //    m_pfontThomasBSHeading1 = pwritetext->font("Fira Code", fontsizeHeading1, 900);
+      //
+      // }
+      //
+      // if (!m_pfontThomasBS_)
+      // {
+      //
+      //    auto psystem = system();
+      //
+      //    auto pnode = psystem->draw2d();
+      //
+      //    auto pwritetext = pnode->write_text();
+      //
+      //    auto fontsize = ::write_text::font_size(36.0 * rectangleX.height() / 1'080, e_unit_pixel);
+      //
+      //    m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
+      //
+      // }
+      //
+      // if (!m_pfontThomasBSDetail)
+      // {
+      //
+      //    auto psystem = system();
+      //
+      //    auto pnode = psystem->draw2d();
+      //
+      //    auto pwritetext = pnode->write_text();
+      //
+      //    auto fontsizeHeading1 = ::write_text::font_size(24.0 * rectangleX.height() / 1'080, e_unit_pixel);
+      //
+      //    m_pfontThomasBSDetail = pwritetext->font("Fira Code", fontsizeHeading1, 200);
+      //
+      // }
 
 
       _synchronous_lock synchronouslockDocument(get_document()->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
@@ -227,80 +267,95 @@ namespace app_simple_about_the_operating_system
 
       ::color::color color;
 
-      int iFont = -1024;
+      //int iFont = -1024;
 
+             pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+      //
+             pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
 
 
       for (auto &strItem: stra)
       {
 
-         ::string strLine = strItem;
+         auto psimpledialogboxline = create_newø < ::simple_dialog_box_line > ();
+
+         psimpledialogboxline->_001Parse(strItem);
+
+         auto pfont = get_font(psimpledialogboxline);
+
+//         ::string strLine = strItem;
 
 
-         if (strLine.begins_eat("#"))
-         {
+         // if (strLine.begins_eat("#"))
+         // {
+         //
+         //    strLine.trim();
+         //
+         //    if (iFont != 1)
+         //    {
+         //
+         //       iFont = 1;
+         //
+         //       pgraphics->set(m_pfontThomasBSHeading1);
+         //
+         //       pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+         //
+         //       pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+         //       opacity = ::opacity(218);
+         //       color = color::white;
+         //
+         //       color &= opacity;
+         //
+         //       pgraphics->set_text_color(color);
+         //    }
+         // }
+         // else if (strLine.begins_eat("-#"))
+         // {
+         //
+         //    strLine.trim();
+         //
+         //    if (iFont != -1)
+         //    {
+         //
+         //       iFont = -1;
+         //
+         //       pgraphics->set(m_pfontThomasBSDetail);
+         //
+         //       pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+         //
+         //       pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+         //       opacity = ::opacity(160);
+         //       color = color::white;
+         //
+         //       color &= opacity;
+         //
+         //       pgraphics->set_text_color(color);
+         //    }
+         // }
+         // else
+         // {
+         //    if (iFont != 10)
+         //    {
+         //
+         //       iFont = 10;
+         //       pgraphics->set(m_pfontThomasBS_);
+         //
+         //       pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+         //
+         //       pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+         //       color = color::white;
+         //       opacity = ::opacity(160);
+         //       color &= opacity;
+         //
+         //       pgraphics->set_text_color(color);
+         //    }
+         // }
 
-            strLine.trim();
-
-            if (iFont != 1)
-            {
-
-               iFont = 1;
-
-               pgraphics->set(m_pfontThomasBSHeading1);
-
-               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
-
-               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
-               opacity = ::opacity(218);
                color = color::white;
+                auto opacity = ::opacity(psimpledialogboxline->get_byte_text_color_strength());
+                color &= opacity;
 
-               color &= opacity;
-
-               pgraphics->set_text_color(color);
-            }
-         }
-         else if (strLine.begins_eat("-#"))
-         {
-
-            strLine.trim();
-
-            if (iFont != -1)
-            {
-
-               iFont = -1;
-
-               pgraphics->set(m_pfontThomasBSDetail);
-
-               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
-
-               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
-               opacity = ::opacity(160);
-               color = color::white;
-
-               color &= opacity;
-
-               pgraphics->set_text_color(color);
-            }
-         }
-         else
-         {
-            if (iFont != 10)
-            {
-
-               iFont = 10;
-               pgraphics->set(m_pfontThomasBS_);
-
-               pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
-
-               pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
-               color = color::white;
-               opacity = ::opacity(160);
-               color &= opacity;
-
-               pgraphics->set_text_color(color);
-            }
-         }
+         pgraphics->set_text_color(color);
 
          if (strLine != "<br />")
          {
@@ -311,13 +366,12 @@ namespace app_simple_about_the_operating_system
 
          auto s = pgraphics->get_text_extent(strLine);
 
-         
          y += s.cy;
-
 
       }
 
       pgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
+
    }
 
 
