@@ -61,10 +61,10 @@ namespace app_simple_http_folder_upload
    //      outheader("Access-Control-Allow-Origin") = "https://store.ca2software.com";
 
    //   }
-   //   else if (strServer.case_insensitive_equals("ca2.network"))
+   //   else if (strServer.case_insensitive_equals("ca2.site"))
    //   {
 
-   //      outheader("Access-Control-Allow-Origin") = "https://ca2.network";
+   //      outheader("Access-Control-Allow-Origin") = "https://ca2.site";
 
    //   }
    //   else
@@ -203,7 +203,7 @@ namespace app_simple_http_folder_upload
 
    //         outattr("http_status") = "OK";
 
-   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.network";
+   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.site";
 
    //         response().file()->write("localhost.ca2software.com is installed!!");
 
@@ -234,7 +234,7 @@ namespace app_simple_http_folder_upload
 
    //         puserinteraction->window()->switch_to_this_window(true);
 
-   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.network";
+   //         //outheader("Access-Control-Allow-Origin") = "https://ca2.site";
 
    //         response().file()->write("localhost.ca2software.com starting...");
 
@@ -335,10 +335,10 @@ namespace app_simple_http_folder_upload
 
    //      //auto strRefererServer = system()->url()->get_server(strReferer);
 
-   //      //if (strRefererServer.case_insensitive_order("ca2.network") == 0)
+   //      //if (strRefererServer.case_insensitive_order("ca2.site") == 0)
    //      //{
 
-   //      //   outheader("Access-Control-Allow-Origin") = "https://ca2.network";
+   //      //   outheader("Access-Control-Allow-Origin") = "https://ca2.site";
 
    //      //}
    //      //else if (strRefererServer.case_insensitive_order("ca2.life") == 0)
