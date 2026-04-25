@@ -613,7 +613,7 @@ nfsstat3 CNFS3Prog::ProcedureREADLINK(void)
                         wstring wStringTemp(szSubName);
                         delete[] szSubName;
                         ::string target(wStringTemp);
-                        target.erase((character_count)0, (character_count)2);
+                        target.index_erase((character_count)0, (character_count)2);
                         target.insert(0, '\\');
                         target.insert(0, '\\');
                         // remove last folder, see above
