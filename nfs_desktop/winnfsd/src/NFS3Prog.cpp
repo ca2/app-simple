@@ -1,7 +1,9 @@
 #include "framework.h"
+#include "acme/_operating_system.h"
 #pragma comment(lib, "Shlwapi.lib")
 #include "NFSProg.h"
 #include "FileTable.h"
+#include <winioctl.h>
 #include <string.h>
 #include <io.h>
 #include <direct.h>
@@ -24,7 +26,7 @@
 #else
 #define PRINT_EXTRA_LOG 9
 #endif
-
+#include <winnt.h>
 
 ::string NfsProcessPath(const_char_pointer path);
 
