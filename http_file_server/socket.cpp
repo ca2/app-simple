@@ -54,10 +54,10 @@ namespace app_simple_http_file_server
 
       ::string strServer = ::url::get_host(strReferer);
 
-      //if (strServer.case_insensitive_equals("ca2.store"))
+      //if (strServer.case_insensitive_equals("ca2.site"))
       //{
 
-      //   outheader("Access-Control-Allow-Origin") = "https://ca2.store";
+      //   outheader("Access-Control-Allow-Origin") = "https://ca2.site";
 
       //}
       //else if (strServer.case_insensitive_equals("ca2.site"))
