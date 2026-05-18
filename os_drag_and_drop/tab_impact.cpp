@@ -164,7 +164,7 @@ namespace app_simple_os_drag_and_drop
 
       }
 
-      switch(pimpactdata->id().as_int())
+      switch(pimpactdata->id().as_i32())
       {
       case MENU_IMPACT:
       {
