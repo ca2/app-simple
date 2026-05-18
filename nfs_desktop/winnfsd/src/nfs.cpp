@@ -58,7 +58,7 @@ void nfs::set_bind_address(const ::scoped_string & scopedstrBindAddress)
 int nfs::get_user_id() const
 {
 
-   return property("user_id").as_int();
+   return property("user_id").as_i32();
 
 }
 
@@ -74,7 +74,7 @@ void nfs::set_user_id(int iUserId)
 int nfs::get_group_id() const
 {
 
-   return property("group_id").as_int();
+   return property("group_id").as_i32();
 
 }
 

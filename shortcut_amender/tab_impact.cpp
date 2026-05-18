@@ -130,7 +130,7 @@ namespace app_simple_shortcut_amender
    void tab_impact::on_create_impact(::user::impact_data * pimpactdata)
    {
 
-      switch(pimpactdata->id().as_int())
+      switch(pimpactdata->id().as_i32())
       {
       case MENU_IMPACT:
       {
