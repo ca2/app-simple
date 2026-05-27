@@ -83,10 +83,10 @@ namespace app_simple_nanoui_example
         ADD_BUTTON(e_font_awesome_ambulance);
         ADD_BUTTON(e_font_awesome_american_sign_language_interpreting);
         ADD_BUTTON(e_font_awesome_anchor);
-        ADD_BUTTON(e_font_awesome_angle_double_down);
-        ADD_BUTTON(e_font_awesome_angle_double_left);
-        ADD_BUTTON(e_font_awesome_angle_double_right);
-        ADD_BUTTON(e_font_awesome_angle_double_up);
+        ADD_BUTTON(e_font_awesome_angle_f64_down);
+        ADD_BUTTON(e_font_awesome_angle_f64_left);
+        ADD_BUTTON(e_font_awesome_angle_f64_right);
+        ADD_BUTTON(e_font_awesome_angle_f64_up);
         ADD_BUTTON(e_font_awesome_angle_down);
         ADD_BUTTON(e_font_awesome_angle_left);
         ADD_BUTTON(e_font_awesome_angle_right);
@@ -231,7 +231,7 @@ namespace app_simple_nanoui_example
         ADD_BUTTON(e_font_awesome_chart_pie);
         ADD_BUTTON(e_font_awesome_check);
         ADD_BUTTON(e_font_awesome_check_circle);
-        ADD_BUTTON(e_font_awesome_check_double);
+        ADD_BUTTON(e_font_awesome_check_f64);
         ADD_BUTTON(e_font_awesome_check_square);
         ADD_BUTTON(e_font_awesome_cheese);
         ADD_BUTTON(e_font_awesome_chess);
@@ -606,7 +606,7 @@ namespace app_simple_nanoui_example
         ADD_BUTTON(e_font_awesome_map_signs);
         ADD_BUTTON(e_font_awesome_marker);
         ADD_BUTTON(e_font_awesome_mars);
-        ADD_BUTTON(e_font_awesome_mars_double);
+        ADD_BUTTON(e_font_awesome_mars_f64);
         ADD_BUTTON(e_font_awesome_mars_stroke);
         ADD_BUTTON(e_font_awesome_mars_stroke_h);
         ADD_BUTTON(e_font_awesome_mars_stroke_v);
@@ -990,7 +990,7 @@ namespace app_simple_nanoui_example
         ADD_BUTTON(e_font_awesome_utensils);
         ADD_BUTTON(e_font_awesome_vector_square);
         ADD_BUTTON(e_font_awesome_venus);
-        ADD_BUTTON(e_font_awesome_venus_double);
+        ADD_BUTTON(e_font_awesome_venus_f64);
         ADD_BUTTON(e_font_awesome_venus_mars);
         ADD_BUTTON(e_font_awesome_vial);
         ADD_BUTTON(e_font_awesome_vials);

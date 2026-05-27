@@ -62,7 +62,7 @@ namespace app_simple_form
 #ifdef _DEBUG
 
 
-   long long form_001::increment_reference_count()
+   ::i64 form_001::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -70,7 +70,7 @@ namespace app_simple_form
    }
 
 
-   long long form_001::decrement_reference_count()
+   ::i64 form_001::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
@@ -231,11 +231,11 @@ namespace app_simple_form
 
       information() << "form_001 " << rectClient;
       
-      double iLeft = minimum(100.0, rectClient.width() * 0.05);
+      ::f64 iLeft = minimum(100.0, rectClient.width() * 0.05);
 
-      double iRight = iLeft;
+      ::f64 iRight = iLeft;
 
-      double y = iLeft * 2.0;
+      ::f64 y = iLeft * 2.0;
       
       auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
       
@@ -247,7 +247,7 @@ namespace app_simple_form
       
       m_pstill->m_ealignText = e_align_left;
 
-      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
+      m_pstill->display_child(::f64_rectangle_dimension(iLeft, y, sizeStill.cx, sizeStill.cy));
 
       y += sizeStill.cy;
 
@@ -263,7 +263,7 @@ namespace app_simple_form
       
       y += rectangleEditMargin.top;
 
-      m_pedit->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy));
+      m_pedit->display_child(::f64_rectangle_dimension(iLeft, y, cx, sizeEdit.cy));
 
       y += sizeEdit.cy;
 
@@ -285,7 +285,7 @@ namespace app_simple_form
 
       auto button_height = maximum(sizeButtonClear.cy, sizeButtonSend.cy);
 
-      ::double_rectangle rectangleSend;
+      ::f64_rectangle rectangleSend;
       
       rectangleSend.right = rectClient.right - iRight;
       
@@ -297,7 +297,7 @@ namespace app_simple_form
       
       m_pbuttonSend->display_child(rectangleSend);
       
-      ::double_rectangle rectangleClear;
+      ::f64_rectangle rectangleClear;
       
       rectangleClear.right = rectangleSend.left - iLeft;
       
@@ -312,7 +312,7 @@ namespace app_simple_form
 
       y += button_height + 20;
 
-      m_pstillReceiver->display_child(::double_rectangle_dimension(iLeft, y, cx, sizeEdit.cy * 5));
+      m_pstillReceiver->display_child(::f64_rectangle_dimension(iLeft, y, cx, sizeEdit.cy * 5));
 
    }
 

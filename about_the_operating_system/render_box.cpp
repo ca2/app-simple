@@ -21,17 +21,17 @@ namespace app_simple_about_the_operating_system
 
       pgraphics->text_out(100, 50, "Round Rectangle (100, 100) - (900, 500) r = 100");
 
-      ::double_rectangle r(100, 100, 900, 500);
+      ::f64_rectangle r(100, 100, 900, 500);
 
-      double greekdeltax = m_rectangle.width() / 1000.0;
+      ::f64 greekdeltax = m_rectangle.width() / 1000.0;
 
-      double greekdeltay = m_rectangle.height() / 600.0;
+      ::f64 greekdeltay = m_rectangle.height() / 600.0;
 
-      double d = minimum(greekdeltax, greekdeltay);
+      ::f64 d = minimum(greekdeltax, greekdeltay);
 
       r *= d;
 
-      double radius = 100 * d;
+      ::f64 radius = 100 * d;
 
       ::draw2d::pen_pointer ppen;
 

@@ -205,13 +205,13 @@ public:
 //    * The amount of extra scaling applied to *icon* fonts.
 //    * See \ref nanoui::Widget::m_icon_extra_scale.
 //    */
-//   float icon_extra_scale() const { return m_icon_extra_scale; }
+//   ::f32 icon_extra_scale() const { return m_icon_extra_scale; }
 //
 //   /**
 //    * Sets the amount of extra scaling applied to *icon* fonts.
 //    * See \ref nanoui::Widget::m_icon_extra_scale.
 //    */
-//   void set_icon_extra_scale(float scale) { m_icon_extra_scale = scale; }
+//   void set_icon_extra_scale(::f32 scale) { m_icon_extra_scale = scale; }
 //
 //   /// Return a pointer to the cursor of the widget
 //   Cursor cursor() const { return m_cursor; }
@@ -251,10 +251,10 @@ public:
 //   virtual bool keyboard_event(int key, int scancode, int action, int modifiers);
 //
 //   /// Handle text input (UTF-32 format) (default implementation: do nothing)
-//   virtual bool keyboard_character_event(unsigned int codepoint);
+//   virtual bool keyboard_character_event(::u32 codepoint);
 //
 
-   virtual ::int_size preferred_size(::draw2d::graphics_pointer & pointer) const override;
+   virtual ::i32_size preferred_size(::draw2d::graphics_pointer & pointer) const override;
 
    virtual void perform_layout::draw2d::graphics_pointer & pointer) override;
 
@@ -284,7 +284,7 @@ protected:
 //    *     \ref nanoui::Widget::m_icon_extra_scale.  This tiered scaling
 //    *     strategy may not be appropriate with fonts other than ``entypo.ttf``.
 //    */
-//   float icon_scale() const { return m_theme->m_icon_scale * m_icon_extra_scale; }
+//   ::f32 icon_scale() const { return m_theme->m_icon_scale * m_icon_extra_scale; }
 //
 // protected:
    Widget * m_parent;
@@ -332,7 +332,7 @@ protected:
 //    *       virtual void draw(NVGcontext *ctx) {
 //    *           // fontSize depends on the kind of Widget.  Search for `FontSize`
 //    *           // in the Theme class (e.g., standard vs button)
-//    *           float ih = font_size;
+//    *           ::f32 ih = font_size;
 //    *           // assuming your Widget has a declared `mIcon`
 //    *           if (nvgIsFontIcon(mIcon)) {
 //    *               ih *= icon_scale();
@@ -343,7 +343,7 @@ protected:
 //    *       }
 //    * \endrst
 //    */
-//   float m_icon_extra_scale;
+//   ::f32 m_icon_extra_scale;
 //   Cursor m_cursor;
 
    virtual void _nanoui_to_user(::user::interaction * puserinteraction);

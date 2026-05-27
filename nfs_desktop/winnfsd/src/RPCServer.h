@@ -21,7 +21,7 @@ class CRPCServer : public ISocketListener
     CRPCProg *m_pProgTable[PROG_NUM];
     HANDLE m_hMutex;
 
-    int Process(int nType, IInputStream *pInStream, IOutputStream *pOutStream, char *pRemoteAddr);
+    int Process(int nType, IInputStream *pInStream, IOutputStream *pOutStream, ::i8 *pRemoteAddr);
 };
 
 #endif

@@ -59,15 +59,15 @@ namespace app_simple_nanoui_example
 //
 //bool bvar = true;
 //int ivar = 12345678;
-//double dvar = 3.1415926;
-//float fvar = (float)dvar;
+//::f64 dvar = 3.1415926;
+//::f32 fvar = (::f32)dvar;
 //std::string strval = "A string";
 //test_enum enumval = Item2;
 //Color colval(0.5f, 0.5f, 0.7f, 1.f);
 //
 //Screen *screen = nullptr;
 //
-//int main(int /* argc */, char ** /* argv */) {
+//int main(int /* argc */, ::i8 ** /* argv */) {
 //    glfwInit();
 //    glfwSetTime(0);
 //
@@ -134,8 +134,8 @@ namespace app_simple_nanoui_example
 
     gui->add_group("Validating fields");
     gui->add_variable("int", ivar)->set_spinnable(true);
-    gui->add_variable("float", fvar)->set_tooltip("Test.");
-    gui->add_variable("double", dvar)->set_spinnable(true);
+    gui->add_variable("::f32", fvar)->set_tooltip("Test.");
+    gui->add_variable("::f64", dvar)->set_spinnable(true);
 
     gui->add_group("Complex types");
     gui->add_variable("Enumeration", enumval, enabled)->set_items({ "Item 1", "Item 2", "Item 3" });
@@ -156,7 +156,7 @@ send(pmessageboxpayload); }
 //    screen->draw_all();
 //
 //    glfwSetCursorPosCallback(window,
-//            [](GLFWwindow *, double x, double y) {
+//            [](GLFWwindow *, ::f64 x, ::f64 y) {
 //            screen->cursor_pos_callback_event(x, y);
 //        }
 //    );
@@ -174,7 +174,7 @@ send(pmessageboxpayload); }
 //    );
 //
 //    glfwSetCharCallback(window,
-//        [](GLFWwindow *, unsigned int codepoint) {
+//        [](GLFWwindow *, ::u32 codepoint) {
 //            screen->char_callback_event(codepoint);
 //        }
 //    );
@@ -186,7 +186,7 @@ send(pmessageboxpayload); }
 //    );
 //
 //    glfwSetScrollCallback(window,
-//        [](GLFWwindow *, double x, double y) {
+//        [](GLFWwindow *, ::f64 x, ::f64 y) {
 //            screen->scroll_callback_event(x, y);
 //       }
 //    );

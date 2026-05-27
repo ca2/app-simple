@@ -47,7 +47,7 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -55,7 +55,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

@@ -41,7 +41,7 @@ namespace app_simple_application
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return ::user::impact::increment_reference_count();
@@ -49,7 +49,7 @@ namespace app_simple_application
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return ::user::impact::decrement_reference_count();
@@ -149,7 +149,7 @@ namespace app_simple_application
 //
 //      }
 
-      ::double_rectangle rectangleClipBox;
+      ::f64_rectangle rectangleClipBox;
 
       //pgraphics->reset_clip();
 
@@ -169,7 +169,7 @@ namespace app_simple_application
 
 #ifdef DEBUG_WORK
 
-      ::int_rectangle rectangleDryProWithLove_Work(5, 5, 1915, 1075);
+      ::i32_rectangle rectangleDryProWithLove_Work(5, 5, 1915, 1075);
 
       pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
@@ -199,11 +199,11 @@ namespace app_simple_application
       
       bool bWhite  = true;
       
-      double x = 0.;
+      ::f64 x = 0.;
       
-      double y = 0.;
+      ::f64 y = 0.;
       
-      ::int_point point;
+      ::i32_point point;
 
       string strText;
 

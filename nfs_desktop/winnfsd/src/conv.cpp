@@ -31,12 +31,12 @@ wchar_t* _conv_from_932(const_char_pointer s) {
 	return dest;
 }
 
-char* _conv_to_932(const wchar_t* s) {
+::i8* _conv_to_932(const wchar_t* s) {
 	auto count = WideCharToMultiByte(932, 0, s,(int)  wcslen(s), NULL, 0, NULL, NULL);
 	if (count == 0) {
 		return NULL;
 	}
-	auto dest = new char[count + 1];
+	auto dest = new ::i8[count + 1];
 	auto err = WideCharToMultiByte(932, 0, s, (int) wcslen(s), dest, count, NULL, NULL);
 	if (err == 0) {
 		return NULL;
@@ -45,7 +45,7 @@ char* _conv_to_932(const wchar_t* s) {
 	return dest;
 }
 
-char* _utf8_to_932(const_char_pointer s){
+::i8* _utf8_to_932(const_char_pointer s){
     auto utf8 = _conv_from_utf8(s);
     auto sjis = _conv_to_932(utf8);
     free(utf8);

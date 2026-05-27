@@ -2,7 +2,7 @@
 #pragma once
 
 #include "acme/filesystem/filesystem/listing.h"
-#include "acme/prototype/collection/int_map.h"
+#include "acme/prototype/collection/integer_map.h"
 #include "apex/platform/app_consumer.h"
 #include "aura/user/user/scroll.h"
 #include "berg/user/user/show.h"
@@ -32,8 +32,8 @@ namespace app_simple_http_folder_upload
 
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
 

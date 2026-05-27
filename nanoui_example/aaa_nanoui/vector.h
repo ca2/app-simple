@@ -220,9 +220,9 @@ Array<Value, Size> min(const Array<Value, Size> & a1, const Array<Value, Size> &
 }
 
 // Import some common Enoki types
-using Vector2f = Array<float, 2>;
-using Vector3f = Array<float, 3>;
-using Vector4f = Array<float, 4>;
+using Vector2f = Array<::f32, 2>;
+using Vector3f = Array<::f32, 3>;
+using Vector4f = Array<::f32, 4>;
 using Vector2i = Array<int32_t, 2>;
 using Vector3i = Array<int32_t, 3>;
 using Vector4i = Array<int32_t, 4>;
@@ -266,18 +266,18 @@ public:
     * the ``alpha`` parameter for this Color object's alpha component.
     *
     * \param color
-    * The three dimensional float vector being copied.
+    * The three dimensional ::f32 vector being copied.
     *
     * \param alpha
     * The value to set this object's alpha component to.
     */
-   Color(const Vector3f & color, float alpha)
+   Color(const Vector3f & color, ::f32 alpha)
       : Color(color[0], color[1], color[2], alpha) { }
 
    /**
-    * Copies (x, y, z) from the input vector, casted as floats first and then
+    * Copies (x, y, z) from the input vector, casted as f32s first and then
     * divided by ``255.0``, and uses the value specified by the ``alpha``
-    * parameter, casted to a float and divided by ``255.0`` as well, for this
+    * parameter, casted to a ::f32 and divided by ``255.0`` as well, for this
     * Color object's alpha component.
     *
     * \param color
@@ -294,12 +294,12 @@ public:
     * to be ``1.0``.
     *
     * \param color
-    * The three dimensional float vector being copied.
+    * The three dimensional ::f32 vector being copied.
     */
    Color(const Vector3f & color) : Color(color, 1.0f) {}
 
    /**
-    * Copies (x, y, z) from the input vector, casting to floats and dividing by
+    * Copies (x, y, z) from the input vector, casting to f32s and dividing by
     * ``255.0``.  The alpha of this color will be set to ``1.0``.
     *
     * \param color
@@ -309,7 +309,7 @@ public:
       : Color(Vector3f(color) / 255.f, 1.f) { }
 
    /**
-    * Copies (x, y, z, w) from the input vector, casting to floats and dividing
+    * Copies (x, y, z, w) from the input vector, casting to f32s and dividing
     * by ``255.0``.
     *
     * \param color
@@ -327,12 +327,12 @@ public:
     * \param alpha
     * The alpha component of the color.
     */
-   Color(float intensity, float alpha)
+   Color(::f32 intensity, ::f32 alpha)
       : Color(Vector3f(intensity), alpha) { }
 
    /**
     * Creates the Color ``(intensity, intensity, intensity, alpha) / 255.0``.
-    * Values are casted to floats before division.
+    * Values are casted to f32s before division.
     *
     * \param intensity
     * The value to be used for red, green, and blue, will be divided by ``255.0``.
@@ -358,11 +358,11 @@ public:
     * \param a
     * The alpha component of the color.
     */
-   Color(float r, float g, float b, float a) : Color(Vector4f(r, g, b, a)) { }
+   Color(::f32 r, ::f32 g, ::f32 b, ::f32 a) : Color(Vector4f(r, g, b, a)) { }
 
    /**
     * Explicit constructor: creates the Color ``(r, g, b, a) / 255.0``.
-    * Values are casted to floats before division.
+    * Values are casted to f32s before division.
     *
     * \param r
     * The red component of the color, will be divided by ``255.0``.
@@ -376,24 +376,24 @@ public:
     * \param a
     * The alpha component of the color, will be divided by ``255.0``.
     */
-   Color(int r, int g, int b, int a) : Color(Vector4f((float)r, (float)g, (float)b, (float)a) / 255.f) { }
+   Color(int r, int g, int b, int a) : Color(Vector4f((::f32)r, (::f32)g, (::f32)b, (::f32)a) / 255.f) { }
 
    /// Return a reference to the red channel
-   float & r() { return x(); }
+   ::f32 & r() { return x(); }
    /// Return a reference to the red channel (const version)
-   const float & r() const { return x(); }
+   const ::f32 & r() const { return x(); }
    /// Return a reference to the green channel
-   float & g() { return y(); }
+   ::f32 & g() { return y(); }
    /// Return a reference to the green channel (const version)
-   const float & g() const { return y(); }
+   const ::f32 & g() const { return y(); }
    /// Return a reference to the blue channel
-   float & b() { return z(); }
+   ::f32 & b() { return z(); }
    /// Return a reference to the blue channel (const version)
-   const float & b() const { return z(); }
+   const ::f32 & b() const { return z(); }
    /// Return a reference to the alpha channel
-   float & a() { return w(); }
+   ::f32 & a() { return w(); }
    /// Return a reference to the alpha channel (const version)
-   const float & a() const { return w(); }
+   const ::f32 & a() const { return w(); }
 
    /**
     * Computes the luminance as ``l = 0.299r + 0.587g + 0.144b + 0.0a``.  If
@@ -402,7 +402,7 @@ public:
     * an alpha component of 1.0.
     */
    Color contrasting_color() const {
-      float luminance = dot(*this, Color(0.299f, 0.587f, 0.144f, 0.f));
+      ::f32 luminance = dot(*this, Color(0.299f, 0.587f, 0.144f, 0.f));
       return Color(luminance < 0.5f ? 1.f : 0.f, 1.f);
    }
 
@@ -561,9 +561,9 @@ template <typename Value_, size_t Size_> struct Matrix {
    Value m[Size][Size];
 };
 
-using Matrix2f = Matrix<float, 2>;
-using Matrix3f = Matrix<float, 3>;
-using Matrix4f = Matrix<float, 4>;
+using Matrix2f = Matrix<::f32, 2>;
+using Matrix3f = Matrix<::f32, 3>;
+using Matrix4f = Matrix<::f32, 4>;
 
 template <typename Stream, typename Value, size_t Size,
    std::enable_if_t<std::is_base_of_v<std::ostream, Stream>, int> = 0>

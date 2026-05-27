@@ -242,7 +242,7 @@ class Window;
  *     wait for the termination of the main loop and then swap the two thread
  *     environments back into their initial configuration.
  */
-//extern NANOUI_EXPORT void mainloop(float refresh = -1.f);
+//extern NANOUI_EXPORT void mainloop(::f32 refresh = -1.f);
 //
 ///// Request the application main loop to terminate (e.g. if you detached mainloop).
 //extern NANOUI_EXPORT void leave();
@@ -281,7 +281,7 @@ class Window;
  * exceeding the standard dynamic range from 0.0-1.0.
  *
  * To leverage either of these features, you will need to create a \ref Screen
- * with <tt>float_buffer=True</tt>. Only the macOS Metal backend of NanoGUI
+ * with <tt>f32_buffer=True</tt>. Only the macOS Metal backend of NanoGUI
  * implements this function right now. All other platforms return <tt>(false,
  * false)</tt>.
  *

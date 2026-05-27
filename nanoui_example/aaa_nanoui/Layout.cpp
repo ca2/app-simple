@@ -433,7 +433,7 @@ AdvancedGridLayout::AdvancedGridLayout(const std::vector<int> & cols, const std:
 //   for (int axis = 0; axis < 2; ++axis) {
 //      std::vector<int> & grid = _grid[axis];
 //      const std::vector<int> & sizes = axis == 0 ? m_cols : m_rows;
-//      const std::vector<float> & stretch = axis == 0 ? m_col_stretch : m_row_stretch;
+//      const std::vector<::f32> & stretch = axis == 0 ? m_col_stretch : m_row_stretch;
 //      grid = sizes;
 //
 //      for (int phase = 0; phase < 2; ++phase) {
@@ -453,7 +453,7 @@ AdvancedGridLayout::AdvancedGridLayout(const std::vector<int> & cols, const std:
 //                  (std::string)anchor);
 //
 //            int current_size = 0;
-//            float total_stretch = 0;
+//            ::f32 total_stretch = 0;
 //            for (int i = anchor.pos[axis];
 //               i < anchor.pos[axis] + anchor.size[axis]; ++i) {
 //               if (sizes[i] == 0 && anchor.size[axis] == 1)
@@ -467,7 +467,7 @@ AdvancedGridLayout::AdvancedGridLayout(const std::vector<int> & cols, const std:
 //               throw std::runtime_error(
 //                  "Advanced grid layout: no space to place widget: " +
 //                  (std::string)anchor);
-//            float amt = (target_size - current_size) / total_stretch;
+//            ::f32 amt = (target_size - current_size) / total_stretch;
 //            for (int i = anchor.pos[axis];
 //               i < anchor.pos[axis] + anchor.size[axis]; ++i)
 //               grid[i] += (int)std::round(amt * stretch[i]);
@@ -475,10 +475,10 @@ AdvancedGridLayout::AdvancedGridLayout(const std::vector<int> & cols, const std:
 //      }
 //
 //      int current_size = std::accumulate(grid.begin(), grid.end(), 0);
-//      float total_stretch = std::accumulate(stretch.begin(), stretch.end(), 0.0f);
+//      ::f32 total_stretch = std::accumulate(stretch.begin(), stretch.end(), 0.0f);
 //      if (current_size >= container_size[axis] || total_stretch == 0)
 //         continue;
-//      float amt = (container_size[axis] - current_size) / total_stretch;
+//      ::f32 amt = (container_size[axis] - current_size) / total_stretch;
 //      for (size_t i = 0; i < grid.size(); ++i)
 //         grid[i] += (int)std::round(amt * stretch[i]);
 //   }

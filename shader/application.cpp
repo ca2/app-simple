@@ -175,7 +175,7 @@ namespace app_simple_shader
 //#ifdef _DEBUG
 //
 //
-//   long long application::increment_reference_count()
+//   ::i64 application::increment_reference_count()
 //   {
 //
 //      return ::object::increment_reference_count();
@@ -183,7 +183,7 @@ namespace app_simple_shader
 //   }
 //
 //
-//   long long application::decrement_reference_count()
+//   ::i64 application::decrement_reference_count()
 //   {
 //
 //      return ::object::decrement_reference_count();

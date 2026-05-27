@@ -204,7 +204,7 @@ void nfs::Print(const ::scoped_string & scopedstr)
 
 
 
-void nfs::printUsage(char *pExe)
+void nfs::printUsage(::i8 *pExe)
 {
     printf("\n");
     printf("Usage: %s [-id <uid> <gid>] [-log on | off] [-pathFile <file>] [-addr <ip>] [export path] [alias path]\n\n", pExe);
@@ -297,15 +297,15 @@ void nfs::mountPaths(std::vector<std::vector<::string>> paths)
 	int numberOfElements = (int) paths.size();
 
 	for (i = 0; i < numberOfElements; i++) {
-		char *pPath = (char*)paths[i][0].c_str();
-		char *pPathAlias = (char*)paths[i][1].c_str();
+		::i8 *pPath = (::i8*)paths[i][0].c_str();
+		::i8 *pPathAlias = (::i8*)paths[i][1].c_str();
 		m_MountProg.Export(pPath, pPathAlias);  //export path for mount
 	}
 }
 
 void nfs::inputCommand(void)
 {
-	char command[20];
+	::i8 command[20];
 
 	printf("Type 'help' to see help\n\n");
 
@@ -440,10 +440,10 @@ void nfs::start(std::vector<std::vector<::string>> paths)
 
 
 
-int nfs::main(int argc, char * argv[])
+int nfs::main(int argc, ::i8 * argv[])
 {
    std::vector<std::vector<::string>> pPaths;
-   char * pPath = NULL;
+   ::i8 * pPath = NULL;
    bool pathFile = false;
 
 
@@ -489,7 +489,7 @@ int nfs::main(int argc, char * argv[])
       else if (i == argc - 2) {
          pPath = argv[argc - 2];  //path is before the last parameter
 
-         char * pCurPathAlias = argv[argc - 1]; //path alias is the last parameter
+         ::i8 * pCurPathAlias = argv[argc - 1]; //path alias is the last parameter
 
          if (pPath != NULL || pCurPathAlias != NULL) {
             std::vector<::string> pCurPaths;
@@ -501,12 +501,12 @@ int nfs::main(int argc, char * argv[])
          break;
       }
       else if (i == argc - 1) {
-         char * pPath = argv[argc - 1];  //path is the last parameter
+         ::i8 * pPath = argv[argc - 1];  //path is the last parameter
 
          if (pPath != NULL) {
-            char curPathAlias[MAXPATHLEN];
+            ::i8 curPathAlias[MAXPATHLEN];
             strcpy_s(curPathAlias, pPath);
-            char * pCurPathAlias = curPathAlias;
+            ::i8 * pCurPathAlias = curPathAlias;
 
             std::vector<::string> pCurPaths;
             pCurPaths.push_back(::string(pPath));

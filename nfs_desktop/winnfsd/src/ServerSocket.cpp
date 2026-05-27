@@ -5,7 +5,7 @@
 #include "nfs.h"
 
 
-static unsigned int __stdcall ThreadProc(void *lpParameter)
+static ::u32 __stdcall ThreadProc(void *lpParameter)
 {
     ((CServerSocket *)lpParameter)->Run();
 
@@ -35,7 +35,7 @@ bool CServerSocket::Open(int nPort, int nMaxNum)
 {
     struct sockaddr_in localAddr;
     int i;
-    unsigned int id;
+    ::u32 id;
 
     Close();
 

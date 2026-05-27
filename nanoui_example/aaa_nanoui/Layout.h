@@ -411,7 +411,7 @@ public:
 
       /// Allows for printing out Anchor position, size, and alignment.
       operator std::string() const {
-         char buf[50];
+         ::i8 buf[50];
          std::snprintf(buf, 50, "Format[pos=(%i, %i), size=(%i, %i), align=(%i, %i)]",
             pos[0], pos[1], size[0], size[1], (int)align[0], (int)align[1]);
          return buf;
@@ -433,16 +433,16 @@ public:
    int row_count() const { return (int)m_rows.size(); }
 
    /// Append a row of the given size (and stretch factor)
-   void append_row(int size, float stretch = 0.f) { m_rows.push_back(size); m_row_stretch.push_back(stretch); };
+   void append_row(int size, ::f32 stretch = 0.f) { m_rows.push_back(size); m_row_stretch.push_back(stretch); };
 
    /// Append a column of the given size (and stretch factor)
-   void append_col(int size, float stretch = 0.f) { m_cols.push_back(size); m_col_stretch.push_back(stretch); };
+   void append_col(int size, ::f32 stretch = 0.f) { m_cols.push_back(size); m_col_stretch.push_back(stretch); };
 
    /// Set the stretch factor of a given row
-   void set_row_stretch(int index, float stretch) { m_row_stretch.at(index) = stretch; }
+   void set_row_stretch(int index, ::f32 stretch) { m_row_stretch.at(index) = stretch; }
 
    /// Set the stretch factor of a given column
-   void set_col_stretch(int index, float stretch) { m_col_stretch.at(index) = stretch; }
+   void set_col_stretch(int index, ::f32 stretch) { m_col_stretch.at(index) = stretch; }
 
    /// Specify the anchor data structure for a given widget
    void set_anchor(const Widget * widget, const Anchor & anchor) { m_anchor[widget] = anchor; }
@@ -476,10 +476,10 @@ protected:
    std::vector<int> m_rows;
 
    /// The stretch for each column of this AdvancedGridLayout.
-   std::vector<float> m_col_stretch;
+   std::vector<::f32> m_col_stretch;
 
    /// The stretch for each row of this AdvancedGridLayout.
-   std::vector<float> m_row_stretch;
+   std::vector<::f32> m_row_stretch;
 
    /// The mapping of widgets to their specified anchor points.
    std::unordered_map<const Widget *, Anchor> m_anchor;

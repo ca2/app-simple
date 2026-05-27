@@ -163,7 +163,7 @@ int Widget::font_size() const {
 //   return false;
 //}
 //
-//bool Widget::keyboard_character_event(unsigned int) {
+//bool Widget::keyboard_character_event(::u32) {
 //   return false;
 //}
 

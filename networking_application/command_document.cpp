@@ -81,14 +81,14 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   long long command_document::increment_reference_count()
+   ::i64 command_document::increment_reference_count()
    {
 
       return  ::user::document::increment_reference_count();
 
    }
 
-   long long command_document::decrement_reference_count()
+   ::i64 command_document::decrement_reference_count()
    {
 
       return  ::user::document::decrement_reference_count();

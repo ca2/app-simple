@@ -37,11 +37,11 @@ public:
    CFileTable m_filetable;
    hostent * m_localHost;
    std::vector<std::vector<::string>> pPaths;
-   char * pPath = NULL;
+   ::i8 * pPath = NULL;
    bool pathFile = false;
-   //unsigned int m_nUID, m_nGID;
+   //::u32 m_nUID, m_nGID;
    bool m_bLogOn;
-   char * m_sFileName;
+   ::i8 * m_sFileName;
    CRPCServer m_RPCServer;
    CPortmapProg m_PortmapProg;
    CNFSProg m_NFSProg;
@@ -90,9 +90,9 @@ public:
    virtual int get_mount_count();
 
    void printAbout();
-   void printUsage(char * pFile);
+   void printUsage(::i8 * pFile);
 
-   int main(int argc, char * argv[]);
+   int main(int argc, ::i8 * argv[]);
 
    //-id 1001 1001 - addr 192.168.0.89 - pathFile C : / Dropbox / winnfsd.txt
 

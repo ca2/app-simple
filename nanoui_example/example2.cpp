@@ -30,8 +30,8 @@ using namespace nanoui;
 //
 //bool bvar = true;
 //int ivar = 12345678;
-//double dvar = 3.1415926;
-//float fvar = (float)dvar;
+//::f64 dvar = 3.1415926;
+//::f32 fvar = (::f32)dvar;
 //::string strval = "A string";
 //::string strval2 = "";
 //test_enum enumval = Item2;
@@ -59,7 +59,7 @@ namespace app_simple_nanoui_example
          //   screen = allocateø< Screen(Vector2i >(500, 700), "NanoGUI test [GL 4.1]",
          //      /* resizable */ true, /* fullscreen */ false,
          //      /* depth_buffer */ true, /* stencil_buffer */ true,
-         //      /* float_buffer */ false, /* gl_major */ 4,
+         //      /* f32_buffer */ false, /* gl_major */ 4,
          //      /* gl_minor */ 1);
          //}
          //else {
@@ -88,8 +88,8 @@ namespace app_simple_nanoui_example
 
          gui->add_group("Validating fields");
          gui->add_variable("int", ivar)->set_spinnable(true);
-         gui->add_variable("float", fvar);
-         gui->add_variable("double", dvar)->set_spinnable(true);
+         gui->add_variable("::f32", fvar);
+         gui->add_variable("::f64", dvar)->set_spinnable(true);
 
          gui->add_group("Complex types");
          gui->add_variable("Enumeration", enumval, enabled)
@@ -146,7 +146,7 @@ namespace app_simple_nanoui_example
 
 
             });
-         //b->set_tooltip("short tooltip");
+         //b->set_tooltip("::i16 tooltip");
 
 
    }

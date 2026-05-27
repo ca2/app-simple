@@ -75,11 +75,11 @@ NAMESPACE_BEGIN(nanoui)
 //#endif
 //
 ///* Calculate pixel ratio for hi-dpi devices. */
-//static float get_pixel_ratio(GLFWwindow * window) {
+//static ::f32 get_pixel_ratio(GLFWwindow * window) {
 //#if defined(EMSCRIPTEN)
 //   return emscripten_get_device_pixel_ratio();
 //#else
-//   float xscale, yscale;
+//   ::f32 xscale, yscale;
 //   glfwGetWindowContentScale(window, &xscale, &yscale);
 //   return xscale;
 //#endif
@@ -87,15 +87,15 @@ NAMESPACE_BEGIN(nanoui)
 //
 //#if defined(EMSCRIPTEN)
 //static EM_BOOL nanoui_emscripten_resize_callback(int eventType, const EmscriptenUiEvent *, void *) {
-//   double ratio = emscripten_get_device_pixel_ratio();
+//   ::f64 ratio = emscripten_get_device_pixel_ratio();
 //
 //   int w1, h1;
 //   emscripten_get_canvas_element_size("#canvas", &w1, &h1);
 //
-//   double w2, h2;
+//   ::f64 w2, h2;
 //   emscripten_get_element_css_size("#canvas", &w2, &h2);
 //
-//   double w3 = w2 * ratio, h3 = h2 * ratio;
+//   ::f64 w3 = w2 * ratio, h3 = h2 * ratio;
 //
 //   if (w1 != (int)w3 || h1 != (int)h3)
 //      emscripten_set_canvas_element_size("#canvas", w3, h3);
@@ -118,25 +118,25 @@ Screen::Screen()
   /* memset(m_cursors, 0, sizeof(GLFWcursor *) * (size_t)Cursor::CursorCount);
 #if defined(NANOUI_USE_OPENGL)
    GLint n_stencil_bits = 0, n_depth_bits = 0;
-   GLboolean float_mode;
+   GLboolean f32_mode;
    CHK(glGetFramebufferAttachmentParameteriv(GL_DRAW_FRAMEBUFFER,
       GL_DEPTH, GL_FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE, &n_depth_bits));
    CHK(glGetFramebufferAttachmentParameteriv(GL_DRAW_FRAMEBUFFER,
       GL_STENCIL, GL_FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE, &n_stencil_bits));
-   CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &float_mode));
+   CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &f32_mode));
    m_depth_buffer = n_depth_bits > 0;
    m_stencil_buffer = n_stencil_bits > 0;
-   m_f_buffer = (bool)float_mode;
+   m_f_buffer = (bool)f32_mode;
 #endif*/
 }
 
 Screen::Screen(const Vector2i & size, const std::string & caption, bool resizable,
    bool fullscreen, bool depth_buffer, bool stencil_buffer,
-   bool float_buffer, unsigned int gl_major, unsigned int gl_minor)
+   bool f32_buffer, ::u32 gl_major, ::u32 gl_minor)
    : Widget(nullptr)/*,  m_glfw_window(nullptr), m_nvg_context(nullptr),
    m_cursor(Cursor::Arrow), m_background(0.3f, 0.3f, 0.32f, 1.f), m_caption(caption),
    m_shutdown_glfw_on_destruct(false), m_fullscreen(fullscreen), m_depth_buffer(depth_buffer),
-   m_stencil_buffer(stencil_buffer), m_f_buffer(float_buffer), m_redraw(false)*/ {
+   m_stencil_buffer(stencil_buffer), m_f_buffer(f32_buffer), m_redraw(false)*/ {
    
    
    // memset(m_cursors, 0, sizeof(GLFWcursor *) * (int)Cursor::CursorCount);
@@ -248,9 +248,9 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //
 //#if defined(NANOUI_USE_OPENGL)
 //   if (m_f_buffer) {
-//      GLboolean float_mode;
-//      CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &float_mode));
-//      if (!float_mode) {
+//      GLboolean f32_mode;
+//      CHK(glGetBooleanv(GL_RGBA_FLOAT_MODE, &f32_mode));
+//      if (!f32_mode) {
 //         fprintf(stderr, "Could not allocate floating point framebuffer.\n");
 //         m_f_buffer = false;
 //      }
@@ -281,7 +281,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //
 //   /* Propagate GLFW happenings to the appropriate Screen instance */
 //   glfwSetCursorPosCallback(m_glfw_window,
-//      [](GLFWwindow * w, double x, double y) {
+//      [](GLFWwindow * w, ::f64 x, ::f64 y) {
 //         auto it = __nanoui_screens.find(w);
 //         if (it == __nanoui_screens.end())
 //            return;
@@ -317,7 +317,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   );
 //
 //   glfwSetCharCallback(m_glfw_window,
-//      [](GLFWwindow * w, unsigned int codepoint) {
+//      [](GLFWwindow * w, ::u32 codepoint) {
 //         auto it = __nanoui_screens.find(w);
 //         if (it == __nanoui_screens.end())
 //            return;
@@ -329,7 +329,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   );
 //
 //   glfwSetDropCallback(m_glfw_window,
-//      [](GLFWwindow * w, int count, const char ** filenames) {
+//      [](GLFWwindow * w, int count, const ::i8 ** filenames) {
 //         auto it = __nanoui_screens.find(w);
 //         if (it == __nanoui_screens.end())
 //            return;
@@ -341,7 +341,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   );
 //
 //   glfwSetScrollCallback(m_glfw_window,
-//      [](GLFWwindow * w, double x, double y) {
+//      [](GLFWwindow * w, ::f64 x, ::f64 y) {
 //         auto it = __nanoui_screens.find(w);
 //         if (it == __nanoui_screens.end())
 //            return;
@@ -384,7 +384,7 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   );
 //
 //   glfwSetWindowContentScaleCallback(m_glfw_window,
-//      [](GLFWwindow * w, float, float) {
+//      [](GLFWwindow * w, ::f32, ::f32) {
 //         auto it = __nanoui_screens.find(w);
 //         if (it == __nanoui_screens.end())
 //            return;
@@ -423,9 +423,9 @@ Screen::Screen(const Vector2i & size, const std::string & caption, bool resizabl
 //   m_pixel_ratio = get_pixel_ratio(window);
 //
 //#if defined(EMSCRIPTEN)
-//   double w, h;
+//   ::f64 w, h;
 //   emscripten_get_element_css_size("#canvas", &w, &h);
-//   double ratio = emscripten_get_device_pixel_ratio(),
+//   ::f64 ratio = emscripten_get_device_pixel_ratio(),
 //      w2 = w * ratio, h2 = h * ratio;
 //
 //   if (w != m_size[0] || h != m_size[1]) {
@@ -582,7 +582,7 @@ Screen::~Screen() {
 //#else
 //   /* Recompute pixel ratio on OSX */
 //   if (m_size[0])
-//      m_pixel_ratio = (float)m_fbsize[0] / (float)m_size[0];
+//      m_pixel_ratio = (::f32)m_fbsize[0] / (::f32)m_size[0];
 //#if defined(NANOUI_USE_METAL)
 //   metal_window_set_content_scale(nswin, m_pixel_ratio);
 //#endif
@@ -638,7 +638,7 @@ Screen::~Screen() {
 //
 //   draw(m_nvg_context);
 //
-//   double elapsed = glfwGetTime() - m_last_interaction;
+//   ::f64 elapsed = glfwGetTime() - m_last_interaction;
 //
 //   if (elapsed > 0.5f) {
 //      /* Draw tooltips */
@@ -646,7 +646,7 @@ Screen::~Screen() {
 //      if (widget && !widget->tooltip().empty()) {
 //         int tooltip_width = 150;
 //
-//         float bounds[4];
+//         ::f32 bounds[4];
 //         nvgFontFace(m_nvg_context, "sans");
 //         nvgFontSize(m_nvg_context, 15.0f);
 //         nvgTextAlign(m_nvg_context, NVG_ALIGN_LEFT | NVG_ALIGN_TOP);
@@ -710,7 +710,7 @@ Screen::~Screen() {
 //   return false;
 //}
 //
-//bool Screen::keyboard_character_event(unsigned int codepoint) {
+//bool Screen::keyboard_character_event(::u32 codepoint) {
 //   if (m_focus_path.size() > 0) {
 //      for (auto it = m_focus_path.rbegin() + 1; it != m_focus_path.rend(); ++it)
 //         if ((*it)->focused() && (*it)->keyboard_character_event(codepoint))
@@ -736,7 +736,7 @@ Screen::~Screen() {
 //   }
 //}
 //
-//void Screen::cursor_pos_callback_event(double x, double y) {
+//void Screen::cursor_pos_callback_event(::f64 x, ::f64 y) {
 //   Vector2i p((int)x, (int)y);
 //
 //#if defined(_WIN32) || defined(__linux__) || defined(EMSCRIPTEN)
@@ -842,7 +842,7 @@ Screen::~Screen() {
 //   }
 //}
 //
-//void Screen::char_callback_event(unsigned int codepoint) {
+//void Screen::char_callback_event(::u32 codepoint) {
 //   m_last_interaction = glfwGetTime();
 //   try {
 //      m_redraw |= keyboard_character_event(codepoint);
@@ -852,14 +852,14 @@ Screen::~Screen() {
 //   }
 //}
 //
-//void Screen::drop_callback_event(int count, const char ** filenames) {
+//void Screen::drop_callback_event(int count, const ::i8 ** filenames) {
 //   std::vector<std::string> arg(count);
 //   for (int i = 0; i < count; ++i)
 //      arg[i] = filenames[i];
 //   m_redraw |= drop_event(arg);
 //}
 //
-//void Screen::scroll_callback_event(double x, double y) {
+//void Screen::scroll_callback_event(::f64 x, ::f64 y) {
 //   m_last_interaction = glfwGetTime();
 //   try {
 //      if (m_focus_path.size() > 1) {
@@ -969,7 +969,7 @@ Screen::~Screen() {
 //}
 //
 //bool Screen::tooltip_fade_in_progress() const {
-//   double elapsed = glfwGetTime() - m_last_interaction;
+//   ::f64 elapsed = glfwGetTime() - m_last_interaction;
 //   if (elapsed < 0.25f || elapsed > 1.25f)
 //      return false;
 //   /* Temporarily increase the frame rate to fade in the tooltip */

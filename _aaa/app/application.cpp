@@ -61,7 +61,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 
       __refer(m_pwindow, create_newø < window >());
 
-      ::int_rectangle rectangleWindow;
+      ::i32_rectangle rectangleWindow;
 
       m_pwindow->_001InitialFramePosition(rectangleWindow, {0.05, 0.05, 0.4, 0.4});
 
@@ -85,7 +85,7 @@ IMPLEMENT_APPLICATION_FACTORY();
 #ifdef _DEBUG
 
 
-   long long application::increment_reference_count()
+   ::i64 application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -93,7 +93,7 @@ IMPLEMENT_APPLICATION_FACTORY();
    }
 
 
-   long long application::decrement_reference_count()
+   ::i64 application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

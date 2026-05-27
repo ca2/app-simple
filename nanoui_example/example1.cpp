@@ -56,7 +56,7 @@ namespace app_simple_nanoui_example
             post(pmessageboxpayload);
          
          });
-      b->set_tooltip("short tooltip");
+      b->set_tooltip("::i16 tooltip");
 
       ///* Alternative construction notation using variadic template */
       b = window->add<Button>("Styled", e_font_awesome_rocket);
@@ -90,7 +90,7 @@ namespace app_simple_nanoui_example
                ___new Label(window, "A tool palette", "sans-bold");
                Widget * tools = ___new Widget(window);
                tools->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
-                                                  ::int_rectangle(0, 0, 0, 0), 6));
+                                                  ::i32_rectangle(0, 0, 0, 0), 6));
       
                b = ___new ToolButton(tools, e_font_awesome_cloud);
                b = ___new ToolButton(tools, e_font_awesome_fast_forward);
@@ -121,7 +121,7 @@ namespace app_simple_nanoui_example
       
                ___new Label(window, "Message dialog", "sans-bold");
                tools = ___new Widget(window);
-               tools->set_layout(___new BoxLayout(::e_orientation_horizontal, e_alignment_middle, ::int_rectangle(0, 0, 0, 0), 6));
+               tools->set_layout(___new BoxLayout(::e_orientation_horizontal, e_alignment_middle, ::i32_rectangle(0, 0, 0, 0), 6));
                b = ___new Button(tools, "Info");
                b->set_callback([this] {
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
@@ -218,7 +218,7 @@ namespace app_simple_nanoui_example
                   });
       
                //image_impact->set_pixel_callback(
-               //   [this](const Vector2i & index, char ** out, size_t size) {
+               //   [this](const Vector2i & index, ::i8 ** out, size_t size) {
                //      const Texture * texture = m_images[m_current_image].first.get();
                //      uint8_t * data = m_images[m_current_image].second.get();
                //      for (int ch = 0; ch < 4; ++ch) {
@@ -231,7 +231,7 @@ namespace app_simple_nanoui_example
                ___new Label(window, "File dialog", "sans-bold");
                tools = ___new Widget(window);
                tools->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
-                                                  ::int_rectangle(0, 0, 0, 0), 6));
+                                                  ::i32_rectangle(0, 0, 0, 0), 6));
                b = ___new Button(tools, "Open");
                b->set_callback([this,image_impact] {
                   
@@ -332,7 +332,7 @@ namespace app_simple_nanoui_example
       
                Widget * panel = ___new Widget(window);
                panel->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
-                                                  ::int_rectangle(0, 0, 0, 0), 20));
+                                                  ::i32_rectangle(0, 0, 0, 0), 20));
       
                Slider * slider = ___new Slider(panel);
                slider->set_value(0.5f, e_source_initialize);
@@ -342,10 +342,10 @@ namespace app_simple_nanoui_example
                text_box->set_fixed_size({ 60, 25 });
                text_box->set_value("50", e_source_initialize);
                text_box->set_unit("%");
-               slider->set_callback([text_box](float value) {
+               slider->set_callback([text_box](::f32 value) {
                   text_box->set_value(::as_string((int)(value * 100)), e_source_user);
                   });
-               slider->set_final_callback([&](float value) {
+               slider->set_final_callback([&](::f32 value) {
                   string str;
                   
                   str.formatf("Final slider value: %d", (int)(value * 100));
@@ -423,7 +423,7 @@ namespace app_simple_nanoui_example
                panel = window->add<Widget>();
                panel->add<Label>("Jump to tab: ");
                panel->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
-                                                  ::int_rectangle(0, 0, 0, 0), 6));
+                                                  ::i32_rectangle(0, 0, 0, 0), 6));
       
                auto ib = panel->add<IntBox<int>>();
                ib->set_editable(true);
@@ -461,17 +461,17 @@ namespace app_simple_nanoui_example
       
                /* Positive integer widget */ {
                   ___new Label(window, "Positive integer :", "sans-bold");
-                  auto int_box = ___new IntBox<int>(window);
-                  int_box->set_editable(true);
-                  int_box->set_fixed_size({ 100, 20 });
-                  int_box->set_value(50, e_source_initialize);
-                  int_box->set_unit("Mhz");
-                  int_box->set_default_value("0");
-                  int_box->set_font_size(16);
-                  int_box->set_format("[1-9][0-9]*");
-                  int_box->set_spinnable(true);
-                  int_box->set_minimum_value(1);
-                  int_box->set_value_increment(2);
+                  auto i32_box = ___new IntBox<int>(window);
+                  i32_box->set_editable(true);
+                  i32_box->set_fixed_size({ 100, 20 });
+                  i32_box->set_value(50, e_source_initialize);
+                  i32_box->set_unit("Mhz");
+                  i32_box->set_default_value("0");
+                  i32_box->set_font_size(16);
+                  i32_box->set_format("[1-9][0-9]*");
+                  i32_box->set_spinnable(true);
+                  i32_box->set_minimum_value(1);
+                  i32_box->set_value_increment(2);
                }
       
                /* Checkbox widget */ {
@@ -526,13 +526,13 @@ namespace app_simple_nanoui_example
                cp->set_callback([b, red_int_box, blue_int_box, green_int_box, alpha_int_box](const ::color::color & c) {
                   b->set_background_color(c);
                   b->set_text_color(c.contrasting_color());
-                  int red = (int) c.byte_red();
+                  int red = (int) c.u8_red();
                   red_int_box->set_value(red, e_source_user);
-                  int green = (int)c.byte_green();
+                  int green = (int)c.u8_green();
                   green_int_box->set_value(green, e_source_user);
-                  int blue = (int)c.byte_blue();
+                  int blue = (int)c.u8_blue();
                   blue_int_box->set_value(blue, e_source_user);
-                  int alpha = (int)c.byte_opacity();
+                  int alpha = (int)c.u8_opacity();
                   alpha_int_box->set_value(alpha, e_source_user);
                   });
       
@@ -569,7 +569,7 @@ namespace app_simple_nanoui_example
 
 
                   });
-               b->set_tooltip("short tooltip");
+               b->set_tooltip("::i16 tooltip");
 
    }
 
@@ -609,13 +609,13 @@ namespace app_simple_nanoui_example
 
       pcontext->fill_color(rgba(1.0f, 1.0f, 1.0f, 0.5f));
 
-      auto angle = fmod(double_second(), 2.0 * π);
+      auto angle = fmod(f64_second(), 2.0 * π);
 
-      pcontext->translate((float)centerX, (float)centerY);
-      pcontext->rotate((float) angle);
+      pcontext->translate((::f32)centerX, (::f32)centerY);
+      pcontext->rotate((::f32) angle);
 
       pcontext->begin_path();
-      pcontext->rectangle(-iSize / 2.f, -iSize / 2.f, (float)iSize, (float)iSize);
+      pcontext->rectangle(-iSize / 2.f, -iSize / 2.f, (::f32)iSize, (::f32)iSize);
       pcontext->fill();
 
 

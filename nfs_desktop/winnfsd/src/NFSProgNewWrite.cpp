@@ -43,7 +43,7 @@
 //
 //         nfs_fh3 handle;
 //         get_file_handle(cStr, &handle);
-//         int handleId = *(unsigned int *)handle.contents;
+//         int handleId = *(::u32 *)handle.contents;
 //
 //         if (unstableStorageFile.count(handleId) == 0) {
 //            m_papplication->construct_newø(pfile);
@@ -59,12 +59,12 @@
 //
 //         if (pfile != NULL) {
 //            //_fseeki64(pFile, offset, SEEK_SET);
-//            //count = fwrite(data.contents, sizeof(char), data.length, pFile);
+//            //count = fwrite(data.contents, sizeof(::i8), data.length, pFile);
 //            pfile->translate(offset, ::e_seek_set);
 //            pfile->write(data.contents, data.length);
 //         }
 //         else {
-//            //char buffer[BUFFER_SIZE];
+//            //::i8 buffer[BUFFER_SIZE];
 //            //errno_t errorNumber = errno;
 //            //strerror_s(buffer, BUFFER_SIZE, errorNumber);
 //            //PrintLog(buffer);
@@ -92,11 +92,11 @@
 //
 //         if (pFile != NULL) {
 //            _fseeki64(pFile, offset, SEEK_SET);
-//            count = fwrite(data.contents, sizeof(char), data.length, pFile);
+//            count = fwrite(data.contents, sizeof(::i8), data.length, pFile);
 //            fclose(pFile);
 //         }
 //         else {
-//            char buffer[BUFFER_SIZE];
+//            ::i8 buffer[BUFFER_SIZE];
 //            errno_t errorNumber = errno;
 //            strerror_s(buffer, BUFFER_SIZE, errorNumber);
 //            PrintLog(buffer);

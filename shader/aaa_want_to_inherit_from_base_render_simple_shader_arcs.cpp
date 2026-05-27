@@ -10,7 +10,7 @@ namespace simple_shader
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle& r, double dStart, double dAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle& r, ::f64 dStart, ::f64 dAngle, bool bPath)
    {
 
       auto pfont = createø < ::write_text::font > ();
@@ -51,7 +51,7 @@ namespace simple_shader
 
       size = size1.maximum(size2);
 
-      ::double_rectangle rectangleBack(r);
+      ::f64_rectangle rectangleBack(r);
 
       rectangleBack.deflate(2, 2);
 
@@ -141,9 +141,9 @@ namespace simple_shader
 
       pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      double_array daStart;
+      f64_array daStart;
 
-      double_array daAngle;
+      f64_array daAngle;
 
       daStart.add(0.0);
       daAngle.add(100.0);
@@ -194,7 +194,7 @@ namespace simple_shader
       daStart.add(45.0);
       daAngle.add(-100.0);
 
-      ::double_rectangle rClient(m_rect);
+      ::f64_rectangle rClient(m_rect);
 
       if (__bool(papp->m_echeckSimple))
       {

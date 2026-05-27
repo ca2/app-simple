@@ -19,11 +19,11 @@ struct FILE_ITEM
 
       return m_strName;
    }
-    unsigned int nPathLen;
+    ::u32 nPathLen;
     file_handle handle;
     bool bCached;
     class ::time m_timeLastFileAttribute;
-    unsigned int m_uLastFileAttributes;
+    ::u32 m_uLastFileAttributes;
     class ::time m_timeLastFile;
     FILE * m_pLastFile = nullptr;
 } ;
@@ -93,7 +93,7 @@ public:
 
    ::array < tree_path_item < FILE_ITEM > * > m_treenodea;
    //FILE_TABLE *m_pFirstTable, *m_pLastTable;
-   // unsigned int m_nTableSize;
+   // ::u32 m_nTableSize;
    // CACHE_LIST *m_pCacheList;
 
    tree_path_item<FILE_ITEM>* get_item_by_handle(unsigned long handle);
