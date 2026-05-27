@@ -44,7 +44,7 @@ namespace app_simple_about_the_operating_system
 #ifdef DEBUG
 
 
-   long long main_frame::increment_reference_count()
+   ::i64 main_frame::increment_reference_count()
    {
 
       //~ if(m_preferenceitema->m_iStep == 211)
@@ -60,7 +60,7 @@ namespace app_simple_about_the_operating_system
 
 
 
-   long long main_frame::decrement_reference_count()
+   ::i64 main_frame::decrement_reference_count()
    {
 
       return ::simple_main_frame::decrement_reference_count();

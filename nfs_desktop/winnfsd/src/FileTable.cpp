@@ -166,7 +166,7 @@ CFileTable::CFileTable()
 CFileTable::~CFileTable()
 {
     //FILE_TABLE *pTable, *pTemp;
-    //unsigned int i;
+    //::u32 i;
     //CACHE_LIST *pPrev;
 
     //pTable = m_pFirstTable;
@@ -192,7 +192,7 @@ CFileTable::~CFileTable()
 
 //unsigned long CFileTable::GetIDByPath(const_char_pointer path)
 //{
-//    unsigned char *handle;
+//    ::u8 *handle;
 //
 //    handle = GetHandleByPath(path);
 //	if (handle == NULL)
@@ -255,7 +255,7 @@ tree_path_item<FILE_ITEM>* CFileTable::find_item_by_path(const ::scoped_string &
 	tree_path_item<FILE_ITEM>* ptreelistitem= NULL;/*
     CACHE_LIST *pCurr;
 
-    unsigned int i, j, nPathLen;
+    ::u32 i, j, nPathLen;
     FILE_TABLE *pTable;
 
     nPathLen = strlen(path);
@@ -316,14 +316,14 @@ tree_path_item<FILE_ITEM>* CFileTable::get_item(const ::scoped_string & scopedst
 
  //   FILE_ITEM item;
 	//tree_path_item<FILE_ITEM>* ptreelistitem;
- //   unsigned int nIndex;
+ //   ::u32 nIndex;
 
-	//item.path = new char[strlen(path) + 1];
+	//item.path = new ::i8[strlen(path) + 1];
 	//strcpy_s(item.path, (strlen(path) + 1), path);  //path
 	//item.nPathLen = strlen(item.path);  //path length
-	//item.handle = new unsigned char[NFS3_FHSIZE];
-	//memset(item.handle, 0, NFS3_FHSIZE * sizeof(unsigned char));
-	//*(unsigned int *)item.handle = m_nTableSize;  //let its handle equal the index
+	//item.handle = new ::u8[NFS3_FHSIZE];
+	//memset(item.handle, 0, NFS3_FHSIZE * sizeof(::u8));
+	//*(::u32 *)item.handle = m_nTableSize;  //let its handle equal the index
 	//item.bCached = false;  //not in the cache
 
  //   if (m_nTableSize > 0 && (m_nTableSize & (TABLE_SIZE - 1)) == 0) {
@@ -332,7 +332,7 @@ tree_path_item<FILE_ITEM>* CFileTable::get_item(const ::scoped_string & scopedst
  //       memset(m_pLastTable, 0, sizeof(FILE_TABLE));
  //   }
 
-	////printf("\nAdd file %s for handle %i\n", path, *(unsigned int *)item.handle);
+	////printf("\nAdd file %s for handle %i\n", path, *(::u32 *)item.handle);
 
 	//m_tree.AddItem(path, item.handle);
 	//ptreelistitem = m_tree.find_item(path);
@@ -358,7 +358,7 @@ tree_path_item<FILE_ITEM>* CFileTable::get_item_by_handle(unsigned long handle)
 
    return m_treenodea[handle];
 	//FILE_TABLE *pTable;
-	//unsigned int i;
+	//::u32 i;
 
 	//if (nID >= m_nTableSize) {
 	//	return NULL;
@@ -424,7 +424,7 @@ tree_path_item<FILE_ITEM>* CFileTable::get_item_by_handle(unsigned long handle)
 bool CFileTable::_EraseItem(const ::scoped_string & scopedstr) {
    /* CACHE_LIST *pCurr;
     FILE_ITEM *pItem;
-    unsigned int i, j, nPathLen;
+    ::u32 i, j, nPathLen;
     FILE_TABLE *pTable;
     int pItemIndex;
 
@@ -466,7 +466,7 @@ bool CFileTable::_EraseItem(const ::scoped_string & scopedstr) {
 	if (foundDeletedItem != NULL) {
 		// Remove from table
 		//FILE_TABLE *pTable;
-		//unsigned int i;
+		//::u32 i;
 		unsigned long handle = (unsigned long) foundDeletedItem->m_t.handle.m_ll;
 
       m_treenodea[handle] = nullptr;
@@ -505,7 +505,7 @@ void CFileTable::_RenameItem(const ::scoped_string & scopedstrFrom, const ::scop
 	} else {
 		delete[] pItem->path;
 		pItem->nPathLen = strlen(pathTo);
-		pItem->path = new char[pItem->nPathLen + 1];
+		pItem->path = new ::i8[pItem->nPathLen + 1];
 		strcpy_s(pItem->path, (pItem->nPathLen + 1), pathTo);  //replace the path by new one
 	}
 	*/
@@ -623,23 +623,23 @@ int CFileTable::RenameDirectory(const ::scoped_string & scopedstrFrom, const ::s
 	//const_char_pointer dotFile = "\\.";
 	//const_char_pointer backFile = "\\..";
 
-	//char* dotDirectoryPathFrom;
-	//char* dotDirectoryPathTo;
-	//char* backDirectoryPathFrom;
-	//char* backDirectoryPathTo;
-	//dotDirectoryPathFrom = (char *)malloc(strlen(pathFrom) + 1 + 3);
+	//::i8* dotDirectoryPathFrom;
+	//::i8* dotDirectoryPathTo;
+	//::i8* backDirectoryPathFrom;
+	//::i8* backDirectoryPathTo;
+	//dotDirectoryPathFrom = (::i8 *)malloc(strlen(pathFrom) + 1 + 3);
 	//strcpy_s(dotDirectoryPathFrom, (strlen(pathFrom) + 1), pathFrom);
 	//strcat_s(dotDirectoryPathFrom, (strlen(pathFrom) + 5), dotFile);
 
-	//dotDirectoryPathTo = (char *)malloc(strlen(pathTo) + 1 + 3);
+	//dotDirectoryPathTo = (::i8 *)malloc(strlen(pathTo) + 1 + 3);
 	//strcpy_s(dotDirectoryPathTo, (strlen(pathTo) + 1), pathTo);
 	//strcat_s(dotDirectoryPathTo, (strlen(pathTo) + 5), dotFile);
 
-	//backDirectoryPathFrom = (char *)malloc(strlen(pathFrom) + 1 + 4);
+	//backDirectoryPathFrom = (::i8 *)malloc(strlen(pathFrom) + 1 + 4);
 	//strcpy_s(backDirectoryPathFrom, (strlen(pathFrom) + 1), pathFrom);
 	//strcat_s(backDirectoryPathFrom, (strlen(pathFrom) + 6), backFile);
 
-	//backDirectoryPathTo = (char *)malloc(strlen(pathTo) + 1 + 4);
+	//backDirectoryPathTo = (::i8 *)malloc(strlen(pathTo) + 1 + 4);
 	//strcpy_s(backDirectoryPathTo, (strlen(pathTo) + 1), pathTo);
 	//strcat_s(backDirectoryPathTo, (strlen(pathTo) + 6), backFile);
 
@@ -682,12 +682,12 @@ int CFileTable::EraseFolder(const ::scoped_string &scopedstr)
         //const_char_pointer dotFile = "\\.";
         //const_char_pointer backFile = "\\..";
 
-        //char* dotDirectoryPath;
-        //char* backDirectoryPath;
-        //dotDirectoryPath = (char *)malloc(strlen(path) + 1 + 3);
+        //::i8* dotDirectoryPath;
+        //::i8* backDirectoryPath;
+        //dotDirectoryPath = (::i8 *)malloc(strlen(path) + 1 + 3);
         //strcpy_s(dotDirectoryPath, (strlen(path) + 1), path);
         //strcat_s(dotDirectoryPath, (strlen(path) + 5), dotFile);
-        //backDirectoryPath = (char *)malloc(strlen(path) + 1 + 4);
+        //backDirectoryPath = (::i8 *)malloc(strlen(path) + 1 + 4);
         //strcpy_s(backDirectoryPath, (strlen(path) + 1), path);
         //strcat_s(backDirectoryPath, (strlen(path) + 6), backFile);
 

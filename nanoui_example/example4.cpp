@@ -34,7 +34,7 @@ using nanoui::Shader;
 using nanoui::Canvas;
 using nanoui::ref;
 
-constexpr float Pi = 3.14159f;
+constexpr ::f32 Pi = 3.14159f;
 
 class MyCanvas : public Canvas {
 public:
@@ -68,7 +68,7 @@ public:
             })"
 #elif defined(NANOUI_USE_GLES)
             // Vertex shader
-            R"(precision highp float;
+            R"(precision highp ::f32;
             uniform mat4 mvp;
             attribute vec3 position;
             attribute vec3 color;
@@ -79,7 +79,7 @@ public:
             })",
 
             // Fragment shader
-            R"(precision highp float;
+            R"(precision highp ::f32;
             varying vec4 frag_color;
             void main() {
                 gl_FragColor = frag_color;
@@ -89,17 +89,17 @@ public:
             R"(using namespace metal;
 
             struct VertexOut {
-                float4 position [[position]];
-                float4 color;
+                f324 position [[position]];
+                f324 color;
             };
 
-            vertex VertexOut vertex_main(const device packed_float3 *position,
-                                         const device packed_float3 *color,
-                                         constant float4x4 &mvp,
+            vertex VertexOut vertex_main(const device packed_f323 *position,
+                                         const device packed_f323 *color,
+                                         constant f324x4 &mvp,
                                          uint id [[vertex_id]]) {
                 VertexOut vert;
-                vert.position = mvp * float4(position[id], 1.f);
-                vert.color = float4(color[id], 1.f);
+                vert.position = mvp * f324(position[id], 1.f);
+                vert.color = f324(color[id], 1.f);
                 return vert;
             })",
 
@@ -107,11 +107,11 @@ public:
             R"(using namespace metal;
 
             struct VertexOut {
-                float4 position [[position]];
-                float4 color;
+                f324 position [[position]];
+                f324 color;
             };
 
-            fragment float4 fragment_main(VertexOut vert [[stage_in]]) {
+            fragment f324 fragment_main(VertexOut vert [[stage_in]]) {
                 return vert.color;
             })"
 #endif
@@ -126,14 +126,14 @@ public:
             7, 6, 5, 5, 4, 7
         };
 
-        float positions[3*8] = {
+        ::f32 positions[3*8] = {
             -1.f, 1.f, 1.f, -1.f, -1.f, 1.f,
             1.f, -1.f, 1.f, 1.f, 1.f, 1.f,
             -1.f, 1.f, -1.f, -1.f, -1.f, -1.f,
             1.f, -1.f, -1.f, 1.f, 1.f, -1.f
         };
 
-        float colors[3*8] = {
+        ::f32 colors[3*8] = {
             0, 1, 1, 0, 0, 1,
             1, 0, 1, 1, 1, 1,
             0, 1, 0, 0, 0, 0,
@@ -145,7 +145,7 @@ public:
         m_shader->set_buffer("color", VariableType::Float32, {8, 3}, colors);
     }
 
-    void set_rotation(float rotation) {
+    void set_rotation(::f32 rotation) {
         m_rotation = rotation;
     }
 
@@ -160,7 +160,7 @@ public:
 
         Matrix4f model = Matrix4f::rotate(
             Vector3f(0, 1, 0),
-            (float) glfwGetTime()
+            (::f32) glfwGetTime()
         );
 
         Matrix4f model2 = Matrix4f::rotate(
@@ -169,10 +169,10 @@ public:
         );
 
         Matrix4f proj = Matrix4f::perspective(
-            float(25 * Pi / 180),
+            ::f32(25 * Pi / 180),
             0.1f,
             20.f,
-            m_size.cx / (float) m_size.cy
+            m_size.cx / (::f32) m_size.cy
         );
 
         Matrix4f mvp = proj * view * model * model2;
@@ -187,7 +187,7 @@ public:
 
 private:
     ref<Shader> m_shader;
-    float m_rotation;
+    ::f32 m_rotation;
 };
 
 class ExampleApplication : public nanoui::Screen {
@@ -215,7 +215,7 @@ public:
 
         Button *b1 = ___new Button(tools, "Random Rotation");
         b1->set_callback([this]() {
-            m_canvas->set_rotation((float) Pi * rand() / (float) RAND_MAX);
+            m_canvas->set_rotation((::f32) Pi * rand() / (::f32) RAND_MAX);
         });
 
         perform_layout();
@@ -239,7 +239,7 @@ private:
     MyCanvas *m_canvas;
 };
 
-int main(int /* argc */, char ** /* argv */) {
+int main(int /* argc */, ::i8 ** /* argv */) {
     try {
         nanoui::init();
 

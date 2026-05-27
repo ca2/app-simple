@@ -37,7 +37,7 @@ namespace app_simple_about_the_operating_system
 #ifdef _DEBUG
 
 
-   long long render::increment_reference_count()
+   ::i64 render::increment_reference_count()
    {
 
       return ::particle::increment_reference_count();
@@ -45,7 +45,7 @@ namespace app_simple_about_the_operating_system
    }
 
 
-   long long render::decrement_reference_count()
+   ::i64 render::decrement_reference_count()
    {
 
       return ::particle::decrement_reference_count();
@@ -118,7 +118,7 @@ namespace app_simple_about_the_operating_system
       if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
       {
 
-         ::int_rectangle rectangle(m_rectangle);
+         ::i32_rectangle rectangle(m_rectangle);
 
          pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
@@ -240,7 +240,7 @@ namespace app_simple_about_the_operating_system
    {
       //Text
 
-      int_rectangle rectangle;
+      i32_rectangle rectangle;
 
       int iSize = minimum(m_rectangle.width(), m_rectangle.height());
 
@@ -255,7 +255,7 @@ namespace app_simple_about_the_operating_system
 
       rectangle.offset_x(iSize / 5 * m_iDrawing);
 
-      ::double_size size(0., 0.);
+      ::f64_size size(0., 0.);
 
       bool bDrawText = true;
 
@@ -300,7 +300,7 @@ namespace app_simple_about_the_operating_system
 
             int iHeight = rectangle.height();
 
-            double dMaxDimension = size.maximum();
+            ::f64 dMaxDimension = size.maximum();
 
             if (m_iDrawing == 1)
             {
@@ -327,7 +327,7 @@ namespace app_simple_about_the_operating_system
 
          size = pgraphics->get_text_extent(strTitle);
 
-         ::int_rectangle rectangleText;
+         ::i32_rectangle rectangleText;
 
          rectangleText.set_size(size);
 

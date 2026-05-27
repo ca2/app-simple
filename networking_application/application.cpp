@@ -228,7 +228,7 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   long long application::increment_reference_count()
+   ::i64 application::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -236,7 +236,7 @@ namespace app_simple_networking_application
    }
 
 
-   long long application::decrement_reference_count()
+   ::i64 application::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

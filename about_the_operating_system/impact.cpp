@@ -36,7 +36,7 @@ namespace app_simple_about_the_operating_system
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -44,7 +44,7 @@ namespace app_simple_about_the_operating_system
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();
@@ -206,7 +206,7 @@ namespace app_simple_about_the_operating_system
       if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
       {
 
-         ::int_rectangle rectangle = this->rectangle();
+         ::i32_rectangle rectangle = this->rectangle();
 
          for (::collection::index i = 0; i < 11; i++)
          {

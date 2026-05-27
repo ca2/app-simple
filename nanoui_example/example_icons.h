@@ -31,8 +31,8 @@ namespace app_simple_nanoui_example
 
       bool bvar = true;
       int ivar = 12345678;
-      double dvar = 3.1415926;
-      float fvar = (float)dvar;
+      ::f64 dvar = 3.1415926;
+      ::f32 fvar = (::f32)dvar;
       ::string strval = "A string";
       test_enum enumval = Item2;
 

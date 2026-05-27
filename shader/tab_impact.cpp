@@ -196,7 +196,7 @@ namespace app_simple_shader
 
       }
 
-      switch(pimpactdata->id().as_long_long())
+      switch(pimpactdata->id().as_i64())
       {
       case MENU_IMPACT:
       {

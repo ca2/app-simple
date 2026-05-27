@@ -23,17 +23,17 @@ class CMountProg : public CRPCProg
 	//bool SetPathFile(const_char_pointer file);
     void Export(const_char_pointer path, const_char_pointer pathAlias);
 	bool Refresh();
-    char *GetClientAddr(int nIndex);
+    ::i8 *GetClientAddr(int nIndex);
     int GetMountNumber(void);
     int Process(IInputStream *pInStream, IOutputStream *pOutStream, ProcessParam *pParam);
-	//char *FormatPath(const_char_pointer pPath, pathFormats format);
+	//::i8 *FormatPath(const_char_pointer pPath, pathFormats format);
 
     protected:
     int m_nMountNum;
-	//char *m_pPathFile;
+	//::i8 *m_pPathFile;
 	//std::map_base<::string, ::string> m_PathMap;
     string_to_string_base m_PathMap;
-    char *m_pClientAddr[MOUNT_NUM_MAX];
+    ::i8 *m_pClientAddr[MOUNT_NUM_MAX];
     IInputStream *m_pInStream;
     IOutputStream *m_pOutStream;
 

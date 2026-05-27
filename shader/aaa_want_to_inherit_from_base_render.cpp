@@ -66,7 +66,7 @@ namespace simple_shader
 #ifdef _DEBUG
 
 
-   long long render::increment_reference_count()
+   ::i64 render::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -74,7 +74,7 @@ namespace simple_shader
    }
 
 
-   long long render::decrement_reference_count()
+   ::i64 render::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
@@ -226,7 +226,7 @@ namespace simple_shader
 
       m_papplication->draw();
 
-      //unsigned int texture1;
+      //::u32 texture1;
 
       //glGenTextures(1, &texture1);
 
@@ -276,9 +276,9 @@ namespace simple_shader
 
             {
 
-               float x = (float) psession->get_cursor_position().x;
+               ::f32 x = (::f32) psession->get_cursor_position().x;
 
-               float y = (float) psession->get_cursor_position().y;
+               ::f32 y = (::f32) psession->get_cursor_position().y;
 
                m_papplication->m_pprogram->m_pshader->setVec2("mouse", x, y);
                m_papplication->m_pprogram->m_pshader->setVec2("iMouse", x, y);
@@ -287,9 +287,9 @@ namespace simple_shader
 
             {
 
-               float cx = (float) m_papplication->m_pbuffer->m_pimage->width();
+               ::f32 cx = (::f32) m_papplication->m_pbuffer->m_pimage->width();
 
-               float cy = (float) m_papplication->m_pbuffer->m_pimage->height();
+               ::f32 cy = (::f32) m_papplication->m_pbuffer->m_pimage->height();
 
                m_papplication->m_pprogram->m_pshader->setVec2("resolution", cx, cy);
                m_papplication->m_pprogram->m_pshader->setVec2("iResolution", cx, cy);
@@ -298,11 +298,11 @@ namespace simple_shader
 
             {
 
-               double dElapsed = __double(m_durationStart.elapsed());
+               ::f64 dElapsed = __f64(m_durationStart.elapsed());
 
-               double dTime = dElapsed / 1000.0;
+               ::f64 dTime = dElapsed / 1000.0;
 
-               float time = (float) dTime;
+               ::f32 time = (::f32) dTime;
 
                m_papplication->m_pprogram->m_pshader->setFloat("time", time);
                m_papplication->m_pprogram->m_pshader->setFloat("iTime", time);

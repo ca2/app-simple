@@ -77,7 +77,7 @@ namespace app_simple_drawing
 
       }
 
-      int_rectangle rectangle;
+      i32_rectangle rectangle;
 
       int iSize = minimum(m_rectangle.width(), m_rectangle.height());
 
@@ -91,7 +91,7 @@ namespace app_simple_drawing
 
       rectangle.offset_x(iSize / 5 * m_iDrawing);
       
-      ::double_size size(0., 0.);
+      ::f64_size size(0., 0.);
       
       bool bDrawText = true;
       
@@ -130,7 +130,7 @@ namespace app_simple_drawing
 
             int iHeight = rectangle.height();
 
-            double dMaxDimension = size.maximum();
+            ::f64 dMaxDimension = size.maximum();
 
             if (m_iDrawing == 1)
             {
@@ -206,7 +206,7 @@ namespace app_simple_drawing
 
       pgraphics->ellipse(rectangle);
 
-      ::int_rectangle rectangleText;
+      ::i32_rectangle rectangleText;
 
       rectangleText.set_size(size);
 

@@ -4,7 +4,7 @@
 
 //const_char_pointer g_sInAddr;
 
-static unsigned int __stdcall ThreadProc(void *lpParameter)
+static ::u32 __stdcall ThreadProc(void *lpParameter)
 {
     CSocket *pSocket;
 
@@ -35,7 +35,7 @@ int CSocket::GetType(void)
 
 void CSocket::Open(SOCKET socket, ISocketListener *pListener, struct sockaddr_in *pRemoteAddr)
 {
-    unsigned int id;
+    ::u32 id;
 
     Close();
 
@@ -85,7 +85,7 @@ bool CSocket::Active(void)
     return m_bActive;  //thread is active or not
 }
 
-char *CSocket::GetRemoteAddress(void)
+::i8 *CSocket::GetRemoteAddress(void)
 {
     return inet_ntoa(m_RemoteAddr.sin_addr);
 }
@@ -119,7 +119,7 @@ void CSocket::Run(void)
             // work around this. The MSB of the fragment header determines if the
             // fragment is complete (not used here) and the remaining bits define the
             // length of the rpc call (this is what we want)
-            nBytes = recv(m_Socket, (char *)m_SocketStream.GetInput(), 4, MSG_PEEK);
+            nBytes = recv(m_Socket, (::i8 *)m_SocketStream.GetInput(), 4, MSG_PEEK);
 
             // only if at least 4 bytes are availabe (the fragment header) we can continue
             if (nBytes == 4){
@@ -128,14 +128,14 @@ void CSocket::Run(void)
                 fragmentHeaderMsb = (int)(fragmentHeader & 0x80000000);
                 fragmentHeaderLengthBytes = (int)(fragmentHeader ^ 0x80000000) + 4;
                 while (nBytes != fragmentHeaderLengthBytes) {
-                    nBytes = recv(m_Socket, (char *)m_SocketStream.GetInput(), fragmentHeaderLengthBytes, MSG_PEEK);
+                    nBytes = recv(m_Socket, (::i8 *)m_SocketStream.GetInput(), fragmentHeaderLengthBytes, MSG_PEEK);
                 }
-                nBytes = recv(m_Socket, (char *)m_SocketStream.GetInput(), fragmentHeaderLengthBytes, 0);
+                nBytes = recv(m_Socket, (::i8 *)m_SocketStream.GetInput(), fragmentHeaderLengthBytes, 0);
             } else {
                 nBytes = 0;
             }
         } else if (m_nType == SOCK_DGRAM) {
-            nBytes = recvfrom(m_Socket, (char *)m_SocketStream.GetInput(), m_SocketStream.GetBufferSize(), 0, (struct sockaddr *)&m_RemoteAddr, &nSize);
+            nBytes = recvfrom(m_Socket, (::i8 *)m_SocketStream.GetInput(), m_SocketStream.GetBufferSize(), 0, (struct sockaddr *)&m_RemoteAddr, &nSize);
         }
 
 

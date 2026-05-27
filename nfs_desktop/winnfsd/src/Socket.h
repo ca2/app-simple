@@ -16,7 +16,7 @@ class CSocket
     void Close(void);
     void Send(void);
     bool Active(void);
-    char *GetRemoteAddress(void);
+    ::i8 *GetRemoteAddress(void);
     int GetRemotePort(void);
     IInputStream *GetInputStream(void);
     IOutputStream *GetOutputStream(void);

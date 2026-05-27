@@ -9,12 +9,12 @@ class CNFSProg : public CRPCProg
     public:
     CNFSProg(nfs * pnfs);
     ~CNFSProg();
-    void SetUserID(unsigned int nUID, unsigned int nGID);
+    void SetUserID(::u32 nUID, ::u32 nGID);
     int Process(IInputStream *pInStream, IOutputStream *pOutStream, ProcessParam *pParam);
     void SetLogOn(bool bLogOn);
 
     private:
-    unsigned int m_nUID, m_nGID;
+    ::u32 m_nUID, m_nGID;
     CNFS3Prog *m_pNFS3Prog;
 };
 

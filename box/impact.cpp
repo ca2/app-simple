@@ -41,7 +41,7 @@ namespace app_simple_box
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return ::user::impact::increment_reference_count();
@@ -49,7 +49,7 @@ namespace app_simple_box
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return ::user::impact::increment_reference_count();
@@ -139,7 +139,7 @@ namespace app_simple_box
    void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
    {
 
-      //pgraphics->fill_rectangle(double_rectangle_dimension(100, 100, 100, 100), color::magenta);
+      //pgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 
@@ -152,7 +152,7 @@ namespace app_simple_box
 
       }
 
-      //pgraphics->fill_rectangle(double_rectangle_dimension(100, 100, 100, 100), color::magenta);
+      //pgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 
@@ -169,7 +169,7 @@ namespace app_simple_box
 
 #ifdef DEBUG_WORK
 
-      ::int_rectangle rectangleDryProWithLove_Work(100, 100, 200, 200);
+      ::i32_rectangle rectangleDryProWithLove_Work(100, 100, 200, 200);
 
       pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
@@ -195,11 +195,11 @@ namespace app_simple_box
 
       bool bWhite = true;
 
-      double x = 0.;
+      ::f64 x = 0.;
 
-      double y = 0.;
+      ::f64 y = 0.;
 
-      ::int_point point;
+      ::i32_point point;
 
       string strText = "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);";
 

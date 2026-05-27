@@ -6,11 +6,11 @@
 class IInputStream
 {
     public:
-    virtual unsigned int Read(void *pData, unsigned int nSize) = 0;
-    virtual unsigned int Read(unsigned long *pnValue) = 0;
-    virtual unsigned int Read8(unsigned __int64 *pnValue) = 0;
-    virtual unsigned int Skip(unsigned int nSize) = 0;
-    virtual unsigned int GetSize(void) = 0;
+    virtual ::u32 Read(void *pData, ::u32 nSize) = 0;
+    virtual ::u32 Read(unsigned long *pnValue) = 0;
+    virtual ::u32 Read8(unsigned __int64 *pnValue) = 0;
+    virtual ::u32 Skip(::u32 nSize) = 0;
+    virtual ::u32 GetSize(void) = 0;
 };
 
 #endif

@@ -46,7 +46,7 @@ namespace app_simple_networking_application
 #ifdef _DEBUG
 
 
-   long long computer_list2::increment_reference_count()
+   ::i64 computer_list2::increment_reference_count()
    {
 
       return  ::user::list2::increment_reference_count();
@@ -54,7 +54,7 @@ namespace app_simple_networking_application
    }
 
 
-   long long computer_list2::decrement_reference_count()
+   ::i64 computer_list2::decrement_reference_count()
    {
 
       return  ::user::list2::decrement_reference_count();
@@ -218,7 +218,7 @@ namespace app_simple_networking_application
 
          y += iHeight;
 
-         ::int_rectangle r;
+         ::i32_rectangle r;
 
          //int iMaxX1 = 0;
          auto paddressMask = system()->networking()->create_ip4_address("255.255.255.0");

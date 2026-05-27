@@ -50,7 +50,7 @@ namespace app_simple_nfs_desktop
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -58,7 +58,7 @@ namespace app_simple_nfs_desktop
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();

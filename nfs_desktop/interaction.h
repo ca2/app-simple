@@ -1,7 +1,7 @@
 // Created by camilo on 2025-04-12 23:30 <3ThomasBorregaardSorensen!!
 #pragma once
 
-#include "acme/prototype/collection/int_map.h"
+#include "acme/prototype/collection/integer_map.h"
 #include "apex/platform/app_consumer.h"
 #include "aura/user/user/scroll.h"
 
@@ -26,8 +26,8 @@ namespace app_simple_nfs_desktop
 
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
 

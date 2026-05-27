@@ -75,7 +75,7 @@ namespace simple_shader
 
       //rectangle.offset_x(iSize / 5 * m_iDrawing);
       //
-      //::double_size size(0., 0.);
+      //::f64_size size(0., 0.);
       //
       //bool bDrawText = true;
       //
@@ -161,7 +161,7 @@ namespace simple_shader
 
       //pgraphics->ellipse(rectangle);
 
-      //::double_rectangle rectangleText;
+      //::f64_rectangle rectangleText;
 
       //rectangleText.set_size(size);
 

@@ -44,7 +44,7 @@ namespace app_simple_http_folder_upload
 #ifdef _DEBUG
 
 
-   long long interface_list2::increment_reference_count()
+   ::i64 interface_list2::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -52,7 +52,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   long long interface_list2::decrement_reference_count()
+   ::i64 interface_list2::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();
@@ -239,7 +239,7 @@ namespace app_simple_http_folder_upload
 
          int y = 10 + iHeight;
 
-         ::int_rectangle r;
+         ::i32_rectangle r;
 
          for (auto & pitem : *main_content().m_pitema)
          {

@@ -128,7 +128,7 @@ namespace app_simple_http
       }
 
 
-      switch(pimpactdata->id().as_long_long())
+      switch(pimpactdata->id().as_i64())
       {
       case MENU_IMPACT:
       {

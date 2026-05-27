@@ -31,7 +31,7 @@ Window::Window(Widget * parent, const std::string & title)
 //
 //   nvgFontSize(ctx, 18.0f);
 //   nvgFontFace(ctx, "sans-bold");
-//   float bounds[4];
+//   ::f32 bounds[4];
 //   nvgTextBounds(ctx, 0, 0, m_title.c_str(), nullptr, bounds);
 //
 //   return Vector2i(

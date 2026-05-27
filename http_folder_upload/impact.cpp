@@ -52,7 +52,7 @@ namespace app_simple_http_folder_upload
 #ifdef _DEBUG
 
 
-   long long impact::increment_reference_count()
+   ::i64 impact::increment_reference_count()
    {
 
       return  ::user::impact::increment_reference_count();
@@ -60,7 +60,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   long long impact::decrement_reference_count()
+   ::i64 impact::decrement_reference_count()
    {
 
       return  ::user::impact::decrement_reference_count();
@@ -332,7 +332,7 @@ namespace app_simple_http_folder_upload
 
       directory_system()->enumerate(m_listing);
 
-      set_total_size(::int_size(800, 20 * m_listing.size()+ 50));
+      set_total_size(::i32_size(800, 20 * m_listing.size()+ 50));
 
       set_need_redraw();
 

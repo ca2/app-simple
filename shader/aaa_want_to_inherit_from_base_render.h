@@ -34,8 +34,8 @@ namespace simple_shader
       virtual ::e_status initialize(::particle * pparticle) override;
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
       string get_font();
@@ -51,7 +51,7 @@ namespace simple_shader
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle & r, double dStart, double dAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, rectangle & r, ::f64 dStart, ::f64 dAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

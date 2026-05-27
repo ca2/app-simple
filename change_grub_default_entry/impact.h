@@ -22,8 +22,8 @@ namespace app_simple_change_grub_default_entry
 //      // void dump(dump_context & dumpcontext) const override;
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
 

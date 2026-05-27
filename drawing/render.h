@@ -42,7 +42,7 @@ namespace app_simple_drawing
    public:
 
 
-      int_rectangle                       m_rectangle;
+      i32_rectangle                       m_rectangle;
       impact *                            m_pimpact;
       string                              m_strFont1;
       string                              m_strHoverFont;
@@ -56,8 +56,8 @@ namespace app_simple_drawing
       virtual ~render();
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
       string get_font();
@@ -78,7 +78,7 @@ namespace app_simple_drawing
 
       virtual void _001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::double_angle angleStart, ::double_angle angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64_angle angleStart, ::f64_angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

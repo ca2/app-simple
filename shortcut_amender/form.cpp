@@ -19,7 +19,7 @@ namespace app_simple_shortcut_amender
 //         //index iLine;
 //         //index iToken;
 //         //character_count iChar;
-//         //class int_point ptCursor;
+//         //class i32_point ptCursor;
 //         //ptCursor = pmouse->m_pt;
 //         //if (m_lyrictemplatelines.hit_test(ptCursor, iLine, iToken, iChar)
 //         //   == ::user::e_line_hit_link)
@@ -77,7 +77,7 @@ namespace app_simple_shortcut_amender
 #ifdef _DEBUG
 
 
-   long long form::increment_reference_count()
+   ::i64 form::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -85,7 +85,7 @@ namespace app_simple_shortcut_amender
    }
 
 
-   long long form::decrement_reference_count()
+   ::i64 form::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();

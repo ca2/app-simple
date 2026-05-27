@@ -17,7 +17,7 @@ namespace app_simple_os_drag_and_drop
    public:
 
 
-      int_rectangle                          m_rectangle;
+      i32_rectangle                          m_rectangle;
       ::user::impact *                       m_pimpact;
       string                                 m_strFont;
       int                                    m_iDragAndDrop;
@@ -29,8 +29,8 @@ namespace app_simple_os_drag_and_drop
 
 
 #ifdef _DEBUG
-      virtual long long increment_reference_count() override;
-      virtual long long decrement_reference_count() override;
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
 #endif
 
       virtual void initialize_drag_and_drop(int iDragAndDrop);
@@ -41,7 +41,7 @@ namespace app_simple_os_drag_and_drop
 
       virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
 
-      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, int_rectangle & r, ::float_angle angleStart, ::float_angle angleAngle, bool bPath);
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f32_angle angleStart, ::f32_angle angleAngle, bool bPath);
 
       virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
 

@@ -44,7 +44,7 @@ NAMESPACE_BEGIN(nanoui)
        * NanoGUI widgets.  The default value is ``0.77f``, setting to e.g. higher
        * than ``1.0f`` is generally discouraged.
        */
-      float m_icon_scale;
+      ::f32 m_icon_scale;
 
       /* Spacing-related parameters */
       /// The font size for all widgets other than buttons and textboxes (default: `` 16``).
@@ -62,7 +62,7 @@ NAMESPACE_BEGIN(nanoui)
       /// Rounding radius for Button (and derived types) widgets (default: ``2``).
       int m_button_corner_radius;
       /// The border width for Tab_header widgets (default: ``0.75f``).
-      float m_tab_border_width;
+      ::f32 m_tab_border_width;
       /// The inner margin on a Tab_header widget (default: ``5``).
       int m_tab_inner_margin;
       /// The minimum size for buttons on a Tab_header widget (default: ``20``).

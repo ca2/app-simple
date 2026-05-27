@@ -44,7 +44,7 @@ namespace app_simple_change_grub_default_entry
 #ifdef _DEBUG
 
   
-   long long form_002::increment_reference_count()
+   ::i64 form_002::increment_reference_count()
    {
 
       return ::object::increment_reference_count();
@@ -52,7 +52,7 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   long long form_002::decrement_reference_count()
+   ::i64 form_002::decrement_reference_count()
    {
 
       return ::object::decrement_reference_count();
@@ -131,31 +131,31 @@ namespace app_simple_change_grub_default_entry
 
       ::user::form_impact::on_layout(pgraphics);
 
-      double iLeft = 100.;
+      ::f64 iLeft = 100.;
 
-      double y = 100.;
+      ::f64 y = 100.;
 
       auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
 
-      m_pstill->display_child(::double_rectangle_dimension(iLeft, y, 200, sizeStill.cy));
+      m_pstill->display_child(::f64_rectangle_dimension(iLeft, y, 200, sizeStill.cy));
 
       y += sizeStill.cy * 1.25;
 
       auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
 
-      m_pedit->display_child(::double_rectangle_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy));
+      m_pedit->display_child(::f64_rectangle_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy));
 
       y += sizeEdit.cy * 1.25;
 
       auto sizeCombo = m_pcombobox->get_adjusted_fitting_size(pgraphics);
 
-      m_pcombobox->display_child(::double_rectangle_dimension(iLeft, y, 200., sizeCombo.cy));
+      m_pcombobox->display_child(::f64_rectangle_dimension(iLeft, y, 200., sizeCombo.cy));
 
       y += sizeCombo.cy * 1.25;
 
       auto sizeButton = m_pbutton->get_adjusted_fitting_size(pgraphics);
 
-      m_pbutton->display_child(::double_rectangle_dimension(iLeft-30., y, 200., sizeButton.cy));
+      m_pbutton->display_child(::f64_rectangle_dimension(iLeft-30., y, 200., sizeButton.cy));
 
    }
 

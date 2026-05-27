@@ -160,7 +160,7 @@ public:
 
         //// If the tree is empty just add the new path as node on the top level.
         //if (filesTree.empty()) {
-        //	item.path = new char[strlen(absolutePath) + 1];
+        //	item.path = new ::i8[strlen(absolutePath) + 1];
         //	strcpy_s(item.path, (strlen(absolutePath) + 1), absolutePath);
         //	item.nPathLen = strlen(item.path);
 
@@ -173,7 +173,7 @@ public:
         //	tree_path_item<FILE_ITEM>* parentNode = findParentNodeFromRootForPath(absolutePath);
         //	::string splittedPath = _basename_932(sPath);
         //	//printf("spl %s %s\n", splittedPath.c_str(), absolutePath);
-        //	item.path = new char[splittedPath.length() + 1];
+        //	item.path = new ::i8[splittedPath.length() + 1];
         //	strcpy_s(item.path, (splittedPath.length() + 1), splittedPath.c_str());
         //	// If a parent was found use th parent.
         //	if (parentNode) {
@@ -182,7 +182,7 @@ public:
         //	} else {
         //		// Node wasn't found - most likely a new root - add it to the top level.
         //		//printf("No parent node found for %s. Adding new sibbling.", absolutePath);
-        //		item.path = new char[strlen(absolutePath) + 1];
+        //		item.path = new ::i8[strlen(absolutePath) + 1];
         //		strcpy_s(item.path, (strlen(absolutePath) + 1), absolutePath);
         //		item.nPathLen = strlen(item.path);
         //		
@@ -331,7 +331,7 @@ public:
 //				void         skip_children();
 //				void         skip_children(bool skip);
 //				/// Number of children of the node pointed to by the iterator.
-//				unsigned int number_of_children() const;
+//				::u32 number_of_children() const;
 //
 //				sibling_iterator begin() const;
 //				sibling_iterator end() const;
@@ -355,8 +355,8 @@ public:
 //			   pre_order_iterator&  operator--();
 //				pre_order_iterator   operator++(int);
 //				pre_order_iterator   operator--(int);
-//				pre_order_iterator&  operator+=(unsigned int);
-//				pre_order_iterator&  operator-=(unsigned int);
+//				pre_order_iterator&  operator+=(::u32);
+//				pre_order_iterator&  operator-=(::u32);
 //		};
 //
 //		/// Depth-first iterator, first accessing the children, then the node itself.
@@ -373,8 +373,8 @@ public:
 //			   post_order_iterator&  operator--();
 //				post_order_iterator   operator++(int);
 //				post_order_iterator   operator--(int);
-//				post_order_iterator&  operator+=(unsigned int);
-//				post_order_iterator&  operator-=(unsigned int);
+//				post_order_iterator&  operator+=(::u32);
+//				post_order_iterator&  operator-=(::u32);
 //
 //				/// Set iterator to the first child as deep as possible down the tree.
 //				void descend_all();
@@ -391,7 +391,7 @@ public:
 //				bool    operator!=(const breadth_first_queued_iterator&) const;
 //				breadth_first_queued_iterator&  operator++();
 //				breadth_first_queued_iterator   operator++(int);
-//				breadth_first_queued_iterator&  operator+=(unsigned int);
+//				breadth_first_queued_iterator&  operator+=(::u32);
 //
 //			private:
 //				std::queue<tree_node *> traversal_queue;
@@ -416,8 +416,8 @@ public:
 //			   fixed_depth_iterator&  operator--();
 //				fixed_depth_iterator   operator++(int);
 //				fixed_depth_iterator   operator--(int);
-//				fixed_depth_iterator&  operator+=(unsigned int);
-//				fixed_depth_iterator&  operator-=(unsigned int);
+//				fixed_depth_iterator&  operator+=(::u32);
+//				fixed_depth_iterator&  operator-=(::u32);
 //
 //				tree_node *top_node;
 //		};
@@ -436,8 +436,8 @@ public:
 //				sibling_iterator&  operator--();
 //				sibling_iterator   operator++(int);
 //				sibling_iterator   operator--(int);
-//				sibling_iterator&  operator+=(unsigned int);
-//				sibling_iterator&  operator-=(unsigned int);
+//				sibling_iterator&  operator+=(::u32);
+//				sibling_iterator&  operator-=(::u32);
 //
 //				tree_node *range_first() const;
 //				tree_node *range_last() const;
@@ -460,8 +460,8 @@ public:
 //            leaf_iterator&  operator--();
 //            leaf_iterator   operator++(int);
 //            leaf_iterator   operator--(int);
-//            leaf_iterator&  operator+=(unsigned int);
-//            leaf_iterator&  operator-=(unsigned int);
+//            leaf_iterator&  operator+=(::u32);
+//            leaf_iterator&  operator-=(::u32);
 //			private:
 //				tree_node *top_node;
 //      };
@@ -475,9 +475,9 @@ public:
 //		/// Return post-order end iterator of the tree.
 //		post_order_iterator  end_post() const;
 //		/// Return fixed-depth iterator to the first node at a given depth from the given iterator.
-//		fixed_depth_iterator begin_fixed(const iterator_base&, unsigned int) const;
+//		fixed_depth_iterator begin_fixed(const iterator_base&, ::u32) const;
 //		/// Return fixed-depth end iterator.
-//		fixed_depth_iterator end_fixed(const iterator_base&, unsigned int) const;
+//		fixed_depth_iterator end_fixed(const iterator_base&, ::u32) const;
 //		/// Return breadth-first iterator to the first node at a given depth.
 //		breadth_first_queued_iterator begin_breadth_first() const;
 //		/// Return breadth-first end iterator.
@@ -601,9 +601,9 @@ public:
 //		/// Determine the maximal depth of the tree with top node at the given position.
 //		int      max_depth(const iterator_base&) const;
 //		/// Count the number of children of node at position.
-//		static unsigned int number_of_children(const iterator_base&);
+//		static ::u32 number_of_children(const iterator_base&);
 //		/// Count the number of siblings (left and right) of node at iterator. Total nodes at this level is +1.
-//		unsigned int number_of_siblings(const iterator_base&) const;
+//		::u32 number_of_siblings(const iterator_base&) const;
 //		/// Determine whether node at position is in the subtrees with root in the range.
 //		bool     is_in_subtree(const iterator_base& position, const iterator_base& begin, 
 //									  const iterator_base& end) const;
@@ -614,11 +614,11 @@ public:
 //		iterator lowest_common_ancestor(const iterator_base&, const iterator_base &) const;
 //
 //		/// Determine the index of a node in the range of siblings to which it belongs.
-//		unsigned int index(sibling_iterator it) const;
+//		::u32 index(sibling_iterator it) const;
 //		/// Inverse of 'index': return the n-th child of the node at position.
-//		static sibling_iterator child(const iterator_base& position, unsigned int);
+//		static sibling_iterator child(const iterator_base& position, ::u32);
 //		/// Return iterator to the sibling indicated by index
-//		sibling_iterator sibling(const iterator_base& position, unsigned int);  				
+//		sibling_iterator sibling(const iterator_base& position, ::u32);  				
 //		
 //		/// For debugging only: verify internal consistency by inspecting all pointers in the tree
 //		/// (which will also trigger a valgrind error in case something got corrupted).
@@ -877,13 +877,13 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::fixed_depth_iterator tree<T>::begin_fixed(const iterator_base& pos, unsigned int dp) const
+//typename tree<T>::fixed_depth_iterator tree<T>::begin_fixed(const iterator_base& pos, ::u32 dp) const
 //	{
 //	typename tree<T>::fixed_depth_iterator ret;
 //	ret.top_node=pos.node;
 //
 //	tree_node *tmp=pos.node;
-//	unsigned int curdepth=0;
+//	::u32 curdepth=0;
 //	while(curdepth<dp) { // go down one level
 //		while(tmp->first_child==0) {
 //			if(tmp->next_sibling==0) {
@@ -908,11 +908,11 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::fixed_depth_iterator tree<T>::end_fixed(const iterator_base& pos, unsigned int dp) const
+//typename tree<T>::fixed_depth_iterator tree<T>::end_fixed(const iterator_base& pos, ::u32 dp) const
 //	{
 //	assert(1==0); // FIXME: not correct yet: use is_valid() as a temporary workaround 
 //	tree_node *tmp=pos.node;
-//	unsigned int curdepth=1;
+//	::u32 curdepth=1;
 //	while(curdepth<dp) { // go down one level
 //		while(tmp->first_child==0) {
 //			tmp=tmp->next_sibling;
@@ -1950,12 +1950,12 @@ public:
 //	}
 //
 //template <class T>
-//unsigned int tree<T>::number_of_children(const iterator_base& it) 
+//::u32 tree<T>::number_of_children(const iterator_base& it) 
 //	{
 //	tree_node *pos=it.node->first_child;
 //	if(pos==0) return 0;
 //	
-//	unsigned int ret=1;
+//	::u32 ret=1;
 ////	  while(pos!=it.node->last_child) {
 ////		  ++ret;
 ////		  pos=pos->next_sibling;
@@ -1966,10 +1966,10 @@ public:
 //	}
 //
 //template <class T>
-//unsigned int tree<T>::number_of_siblings(const iterator_base& it) const
+//::u32 tree<T>::number_of_siblings(const iterator_base& it) const
 //	{
 //	tree_node *pos=it.node;
-//	unsigned int ret=0;
+//	::u32 ret=0;
 //	// count forward
 //	while(pos->next_sibling && 
 //			pos->next_sibling!=m_pnodeHead &&
@@ -2101,9 +2101,9 @@ public:
 //	}
 //
 //template <class T>
-//unsigned int tree<T>::index(sibling_iterator it) const
+//::u32 tree<T>::index(sibling_iterator it) const
 //	{
-//	unsigned int ind=0;
+//	::u32 ind=0;
 //	if(it.node->parent==0) {
 //		while(it.node->prev_sibling!=m_pnodeHead) {
 //			it.node=it.node->prev_sibling;
@@ -2120,7 +2120,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::sibling_iterator tree<T>::sibling(const iterator_base& it, unsigned int num)
+//typename tree<T>::sibling_iterator tree<T>::sibling(const iterator_base& it, ::u32 num)
 //   {
 //   tree_node *tmp;
 //   if(it.node->parent==0) {
@@ -2161,7 +2161,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::sibling_iterator tree<T>::child(const iterator_base& it, unsigned int num) 
+//typename tree<T>::sibling_iterator tree<T>::child(const iterator_base& it, ::u32 num) 
 //	{
 //	tree_node *tmp=it.node->first_child;
 //	while(num--) {
@@ -2288,12 +2288,12 @@ public:
 //   }
 //
 //template <class T>
-//unsigned int tree<T>::iterator_base::number_of_children() const
+//::u32 tree<T>::iterator_base::number_of_children() const
 //	{
 //	tree_node *pos=node->first_child;
 //	if(pos==0) return 0;
 //	
-//	unsigned int ret=1;
+//	::u32 ret=1;
 //	while(pos!=node->last_child) {
 //		++ret;
 //		pos=pos->next_sibling;
@@ -2390,7 +2390,7 @@ public:
 //}
 //
 //template <class T>
-//typename tree<T>::pre_order_iterator& tree<T>::pre_order_iterator::operator+=(unsigned int num)
+//typename tree<T>::pre_order_iterator& tree<T>::pre_order_iterator::operator+=(::u32 num)
 //	{
 //	while(num>0) {
 //		++(*this);
@@ -2400,7 +2400,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::pre_order_iterator& tree<T>::pre_order_iterator::operator-=(unsigned int num)
+//typename tree<T>::pre_order_iterator& tree<T>::pre_order_iterator::operator-=(::u32 num)
 //	{
 //	while(num>0) {
 //		--(*this);
@@ -2500,7 +2500,7 @@ public:
 //
 //
 //template <class T>
-//typename tree<T>::post_order_iterator& tree<T>::post_order_iterator::operator+=(unsigned int num)
+//typename tree<T>::post_order_iterator& tree<T>::post_order_iterator::operator+=(::u32 num)
 //	{
 //	while(num>0) {
 //		++(*this);
@@ -2510,7 +2510,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::post_order_iterator& tree<T>::post_order_iterator::operator-=(unsigned int num)
+//typename tree<T>::post_order_iterator& tree<T>::post_order_iterator::operator-=(::u32 num)
 //	{
 //	while(num>0) {
 //		--(*this);
@@ -2592,7 +2592,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::breadth_first_queued_iterator& tree<T>::breadth_first_queued_iterator::operator+=(unsigned int num)
+//typename tree<T>::breadth_first_queued_iterator& tree<T>::breadth_first_queued_iterator::operator+=(::u32 num)
 //	{
 //	while(num>0) {
 //		++(*this);
@@ -2768,7 +2768,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::fixed_depth_iterator& tree<T>::fixed_depth_iterator::operator-=(unsigned int num)
+//typename tree<T>::fixed_depth_iterator& tree<T>::fixed_depth_iterator::operator-=(::u32 num)
 //	{
 //	while(num>0) {
 //		--(*this);
@@ -2778,7 +2778,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::fixed_depth_iterator& tree<T>::fixed_depth_iterator::operator+=(unsigned int num)
+//typename tree<T>::fixed_depth_iterator& tree<T>::fixed_depth_iterator::operator+=(::u32 num)
 //	{
 //	while(num>0) {
 //		++(*this);
@@ -2862,7 +2862,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::sibling_iterator& tree<T>::sibling_iterator::operator+=(unsigned int num)
+//typename tree<T>::sibling_iterator& tree<T>::sibling_iterator::operator+=(::u32 num)
 //	{
 //	while(num>0) {
 //		++(*this);
@@ -2872,7 +2872,7 @@ public:
 //	}
 //
 //template <class T>
-//typename tree<T>::sibling_iterator& tree<T>::sibling_iterator::operator-=(unsigned int num)
+//typename tree<T>::sibling_iterator& tree<T>::sibling_iterator::operator-=(::u32 num)
 //	{
 //	while(num>0) {
 //		--(*this);
@@ -2981,7 +2981,7 @@ public:
 //
 //
 //template <class T>
-//typename tree<T>::leaf_iterator& tree<T>::leaf_iterator::operator+=(unsigned int num)
+//typename tree<T>::leaf_iterator& tree<T>::leaf_iterator::operator+=(::u32 num)
 //   {
 //   while(num>0) {
 //      ++(*this);
@@ -2991,7 +2991,7 @@ public:
 //   }
 //
 //template <class T>
-//typename tree<T>::leaf_iterator& tree<T>::leaf_iterator::operator-=(unsigned int num)
+//typename tree<T>::leaf_iterator& tree<T>::leaf_iterator::operator-=(::u32 num)
 //   {
 //   while(num>0) {
 //      --(*this);

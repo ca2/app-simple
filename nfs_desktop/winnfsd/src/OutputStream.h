@@ -6,7 +6,7 @@
 struct file_handle
 {
 
-   unsigned long long m_ll = 0;
+   ::u64 m_ll = 0;
 
 };
 
@@ -14,8 +14,8 @@ struct file_handle
 class IOutputStream
 {
     public:
-    virtual void Write(const void *pData, unsigned int nSize) = 0;
-    virtual void Write(file_handle handle, unsigned int nSize)
+    virtual void Write(const void *pData, ::u32 nSize) = 0;
+    virtual void Write(file_handle handle, ::u32 nSize)
     {
        if (nSize < sizeof(handle))
        {
@@ -23,7 +23,7 @@ class IOutputStream
           throw "what!!";
        }
        Write(&handle, sizeof(handle));
-       char sz[64]{};
+       ::i8 sz[64]{};
        nSize -= sizeof(handle);
        while (nSize > 0)
        {

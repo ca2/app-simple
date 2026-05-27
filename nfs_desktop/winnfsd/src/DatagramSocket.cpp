@@ -36,10 +36,10 @@ bool CDatagramSocket::Open(int nPort)
 
     int snd_buffer = 1024 * 1024 * 1;
     int snd_buffer_sizeof = (int)sizeof(snd_buffer);
-    setsockopt(m_Socket, SOL_SOCKET, SO_SNDBUF, (char*)&snd_buffer, snd_buffer_sizeof);
+    setsockopt(m_Socket, SOL_SOCKET, SO_SNDBUF, (::i8*)&snd_buffer, snd_buffer_sizeof);
     int rcv_buffer = 1024 * 1024 * 8;
     int rcv_buffer_sizeof = (int)sizeof(rcv_buffer);
-    setsockopt(m_Socket, SOL_SOCKET, SO_RCVBUF, (char*)&rcv_buffer, rcv_buffer_sizeof);
+    setsockopt(m_Socket, SOL_SOCKET, SO_RCVBUF, (::i8*)&rcv_buffer, rcv_buffer_sizeof);
 
     memset(&localAddr, 0, sizeof(localAddr));
     localAddr.sin_family = AF_INET;

@@ -137,7 +137,7 @@
 //
 //	//// If the tree is empty just add the new path as node on the top level.
 //	//if (filesTree.empty()) {
-//	//	item.path = new char[strlen(absolutePath) + 1];
+//	//	item.path = new ::i8[strlen(absolutePath) + 1];
 //	//	strcpy_s(item.path, (strlen(absolutePath) + 1), absolutePath);
 //	//	item.nPathLen = strlen(item.path);
 //
@@ -150,7 +150,7 @@
 //	//	tree_path_item<FILE_ITEM>* parentNode = findParentNodeFromRootForPath(absolutePath);
 //	//	::string splittedPath = _basename_932(sPath);
 //	//	//printf("spl %s %s\n", splittedPath.c_str(), absolutePath);
-//	//	item.path = new char[splittedPath.length() + 1];
+//	//	item.path = new ::i8[splittedPath.length() + 1];
 //	//	strcpy_s(item.path, (splittedPath.length() + 1), splittedPath.c_str());
 //	//	// If a parent was found use th parent.
 //	//	if (parentNode) {
@@ -159,7 +159,7 @@
 //	//	} else {
 //	//		// Node wasn't found - most likely a new root - add it to the top level.
 //	//		//printf("No parent node found for %s. Adding new sibbling.", absolutePath);
-//	//		item.path = new char[strlen(absolutePath) + 1];
+//	//		item.path = new ::i8[strlen(absolutePath) + 1];
 //	//		strcpy_s(item.path, (strlen(absolutePath) + 1), absolutePath);
 //	//		item.nPathLen = strlen(item.path);
 //	//		
@@ -231,7 +231,7 @@
 //		if (filesTree.number_of_children(parentNode) < 1) {
 //			FILE_ITEM emptyItem;
 //			emptyItem.nPathLen = 0;
-//			emptyItem.path = const_cast<char*>("");
+//			emptyItem.path = const_cast<::i8*>("");
 //			filesTree.append_child(tree<FILE_ITEM>::iterator_base(parentNode), emptyItem);
 //		}
 //		tree<FILE_ITEM>::iterator firstChild = filesTree.begin(parentNode);
@@ -239,7 +239,7 @@
 //
 //		::string sPath(absolutePathTo);
 //		::string splittedPath = sPath.substr(sPath.find_last_of('\\') + 1);
-//		node->data.path = new char[splittedPath.length() + 1];
+//		node->data.path = new ::i8[splittedPath.length() + 1];
 //		strcpy_s(node->data.path, (splittedPath.length() + 1), splittedPath.c_str());
 //
 //	}

@@ -67,14 +67,14 @@ namespace app_simple_os_drag_and_drop
 #ifdef _DEBUG
 
 
-   long long document::increment_reference_count()
+   ::i64 document::increment_reference_count()
    {
 
       return  ::user::document::increment_reference_count();
 
    }
 
-   long long document::decrement_reference_count()
+   ::i64 document::decrement_reference_count()
    {
 
       return  ::user::document::decrement_reference_count();

@@ -141,7 +141,7 @@ class opaque
 {
     public:
     uint32 length;
-    unsigned char *contents;
+    ::u8 *contents;
 
     opaque();
     opaque(uint32 len);
@@ -159,7 +159,7 @@ class nfs_fh3 : public opaque
 class filename3 : public opaque
 {
     public:
-    char *name;
+    ::i8 *name;
 
     filename3();
     ~filename3();
@@ -170,7 +170,7 @@ class filename3 : public opaque
 class nfspath3 : public opaque
 {
 	public:
-	char *path;
+	::i8 *path;
 
 	nfspath3();
 	~nfspath3();
@@ -340,7 +340,7 @@ class CNFS3Prog : public CRPCProg
     public:
     CNFS3Prog(nfs * pnfs);
     ~CNFS3Prog();
-    void SetUserID(unsigned int nUID, unsigned int nGID);
+    void SetUserID(::u32 nUID, ::u32 nGID);
     int Process(IInputStream *pInStream, IOutputStream *pOutStream, ProcessParam *pParam);
     void RunCleanup();
 
@@ -349,7 +349,7 @@ class CNFS3Prog : public CRPCProg
     IInputStream *m_pInStream;
     IOutputStream *m_pOutStream;
     ProcessParam *m_pParam;
-    unsigned int m_idThreadCleanup;
+    ::u32 m_idThreadCleanup;
     HANDLE m_hThreadCleanup;
     ::pointer < ::mutex > m_pmutexCleanup;
     ::array < FILE_ITEM * > m_fileitemaCleanup;
@@ -407,7 +407,7 @@ class CNFS3Prog : public CRPCProg
 
     bool GetPath(::file::path &path);
     bool ReadDirectory(::file::path & dirName, ::string &fileName);
-    char *GetFullPath(::string &dirName, ::string &fileName);
+    ::i8 *GetFullPath(::string &dirName, ::string &fileName);
     nfsstat3 CheckFile(const_char_pointer fullPath);
     nfsstat3 CheckFile(const_char_pointer directory, const_char_pointer fullPath);
     bool GetFileHandle(const_char_pointer path, nfs_fh3 *pObject);

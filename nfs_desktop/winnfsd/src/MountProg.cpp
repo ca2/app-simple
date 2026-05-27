@@ -56,7 +56,7 @@ CMountProg::~CMountProg()
 
 //bool CMountProg::SetPathFile(const_char_pointer file)
 //{
-//	char *formattedFile = FormatPath(file, FORMAT_PATH);
+//	::i8 *formattedFile = FormatPath(file, FORMAT_PATH);
 //
 //	if (!formattedFile) {
 //		return false;
@@ -80,7 +80,7 @@ CMountProg::~CMountProg()
 
 void CMountProg::Export(const_char_pointer path, const_char_pointer pathAlias)
 {
-	//char *formattedPath = FormatPath(path, FORMAT_PATH);
+	//::i8 *formattedPath = FormatPath(path, FORMAT_PATH);
 	//pathAlias = FormatPath(pathAlias, FORMAT_PATHALIAS);
 
 	if (path != NULL && pathAlias != NULL) {
@@ -111,7 +111,7 @@ int CMountProg::GetMountNumber(void)
     return m_nMountNum;  //the number of clients mounted
 }
 
-char *CMountProg::GetClientAddr(int nIndex)
+::i8 *CMountProg::GetClientAddr(int nIndex)
 {
     int i;
 
@@ -162,7 +162,7 @@ void CMountProg::ProcedureNULL(void)
 void CMountProg::ProcedureMNT(void)
 {
 	Refresh();
-    //char *path = new char[MAXPATHLEN + 1];
+    //::i8 *path = new ::i8[MAXPATHLEN + 1];
 
    ::file::path path;
 	int i;
@@ -185,7 +185,7 @@ void CMountProg::ProcedureMNT(void)
 
 		for (i = 0; i < MOUNT_NUM_MAX; i++) {
 			if (m_pClientAddr[i] == NULL) { //search an empty space
-				m_pClientAddr[i] = new char[strlen(m_pParam->pRemoteAddr) + 1];
+				m_pClientAddr[i] = new ::i8[strlen(m_pParam->pRemoteAddr) + 1];
 				strcpy_s(m_pClientAddr[i], (strlen(m_pParam->pRemoteAddr) + 1), m_pParam->pRemoteAddr);  //remember the client address
 				break;
 			}
@@ -226,7 +226,7 @@ void CMountProg::ProcedureEXPORT(void)
 		// dirpath
 		m_pOutStream->Write(1);
 		m_pOutStream->Write(length);
-		m_pOutStream->Write(const_cast<char*>(path), length);
+		m_pOutStream->Write(const_cast<::i8*>(path), length);
 		int fillBytes = (length % 4);
 		if (fillBytes > 0) {
 			fillBytes = 4 - fillBytes;
@@ -259,9 +259,9 @@ void CMountProg::ProcedureNOIMP(void)
 bool CMountProg::GetPath(::file::path &returnPath)
 {
 	unsigned long i, nSize;
-	char szPath[MAXPATHLEN + 1];
+	::i8 szPath[MAXPATHLEN + 1];
    ///::file::path path;
-	//static char finalPath[MAXPATHLEN + 1];
+	//static ::i8 finalPath[MAXPATHLEN + 1];
 	bool bFoundPath = false;
 
 	m_pInStream->Read(&nSize);
@@ -312,7 +312,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 	//	// strip slashes
 	//	::string pathAliasTemp(iterator->first.c_str());
 	//	pathAliasTemp.erase(pathAliasTemp.find_last_not_of("/\\") + 1);
-	//	char* pathAlias = const_cast<char*>(pathAliasTemp.c_str());
+	//	::i8* pathAlias = const_cast<::i8*>(pathAliasTemp.c_str());
 
 	//	// strip slashes
 	//	::string windowsPathTemp(iterator->second.c_str());
@@ -320,7 +320,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 	//	if (windowsPathTemp.substr(windowsPathTemp.size() - 2) != ":\\") {
 	//		windowsPathTemp.erase(windowsPathTemp.find_last_not_of("/\\") + 1);
 	//	}
-	//	char* windowsPath = const_cast<char*>(windowsPathTemp.c_str());
+	//	::i8* windowsPath = const_cast<::i8*>(windowsPathTemp.c_str());
 
 	//	size_t aliasPathSize = strlen(pathAlias);
 	//	size_t windowsPathSize = strlen(windowsPath);
@@ -409,12 +409,12 @@ bool CMountProg::GetPath(::file::path &returnPath)
 //				paths[0].erase(paths[0].find_last_not_of("/\\ ") + 1);
 //			}
 //
-//			char *pCurPath = (char*)malloc(paths[0].size() + 1);
-//			pCurPath = (char*)paths[0].c_str();
+//			::i8 *pCurPath = (::i8*)malloc(paths[0].size() + 1);
+//			pCurPath = (::i8*)paths[0].c_str();
 //			
 //			if (pCurPath != NULL) {
-//				char *pCurPathAlias = (char*)malloc(paths[1].size() + 1);
-//				pCurPathAlias = (char*)paths[1].c_str();
+//				::i8 *pCurPathAlias = (::i8*)malloc(paths[1].size() + 1);
+//				pCurPathAlias = (::i8*)paths[1].c_str();
 //				Export(pCurPath, pCurPathAlias);
 //			}
 //		}
@@ -426,7 +426,7 @@ bool CMountProg::GetPath(::file::path &returnPath)
 //	return true;
 //}
 
-//char *CMountProg::FormatPath(const_char_pointer pPath, pathFormats format)
+//::i8 *CMountProg::FormatPath(const_char_pointer pPath, pathFormats format)
 //{
 //    size_t len = strlen(pPath);
 //
@@ -471,32 +471,32 @@ bool CMountProg::GetPath(::file::path &returnPath)
 //		return NULL;
 //	}
 //
-//	char *result = (char *)malloc(len + 1);
+//	::i8 *result = (::i8 *)malloc(len + 1);
 //	strncpy_s(result, len + 1, pPath, len);
 //
 //	//Check for right path format
 //	if (format == FORMAT_PATH) {
 //		if (result[0] == '.') {
-//			static char path1[MAXPATHLEN];
+//			static ::i8 path1[MAXPATHLEN];
 //			_getcwd(path1, MAXPATHLEN);
 //
 //			if (result[1] == '\0') {
 //				len = strlen(path1);
-//				result = (char *)realloc(result, len + 1);
+//				result = (::i8 *)realloc(result, len + 1);
 //				strcpy_s(result, len + 1, path1);
 //			} else if (result[1] == '\\') {
 //				strcat_s(path1, result + 1);
 //				len = strlen(path1);
-//				result = (char *)realloc(result, len + 1);
+//				result = (::i8 *)realloc(result, len + 1);
 //				strcpy_s(result, len + 1, path1);
 //			}
 //
 //		}
 //		if (len >= 2 && result[1] == ':' && ((result[0] >= 'A' && result[0] <= 'Z') || (result[0] >= 'a' && result[0] <= 'z'))) { //check path format
-//			char tempPath[MAXPATHLEN] = "\\\\?\\";
+//			::i8 tempPath[MAXPATHLEN] = "\\\\?\\";
 //			strcat_s(tempPath, result);
 //			len = strlen(tempPath);
-//			result = (char *)realloc(result, len + 1);
+//			result = (::i8 *)realloc(result, len + 1);
 //			strcpy_s(result, len + 1, tempPath);
 //		}
 //

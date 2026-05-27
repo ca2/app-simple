@@ -39,7 +39,7 @@ Vector2i Label::preferred_size(NVGcontext * ctx) const {
    nvgFontFace(ctx, m_font.c_str());
    nvgFontSize(ctx, font_size());
    if (m_fixed_size.cx > 0) {
-      float bounds[4];
+      ::f32 bounds[4];
       nvgTextAlign(ctx, NVG_ALIGN_LEFT | NVG_ALIGN_TOP);
       nvgTextBoxBounds(ctx, m_pos.x, m_pos.y, m_fixed_size.cx, m_caption.c_str(), nullptr, bounds);
       return Vector2i(m_fixed_size.cx, bounds[3] - bounds[1]);

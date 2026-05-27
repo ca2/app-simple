@@ -47,7 +47,7 @@ namespace app_simple_nfs_desktop
 #ifdef _DEBUG
 
 
-   long long command_list2::increment_reference_count()
+   ::i64 command_list2::increment_reference_count()
    {
 
       return  ::user::list2::increment_reference_count();
@@ -55,7 +55,7 @@ namespace app_simple_nfs_desktop
    }
 
 
-   long long command_list2::decrement_reference_count()
+   ::i64 command_list2::decrement_reference_count()
    {
 
       return  ::user::list2::decrement_reference_count();
@@ -221,7 +221,7 @@ namespace app_simple_nfs_desktop
 
          y += iHeight;
 
-         ::int_rectangle r;
+         ::i32_rectangle r;
 
          //int iMaxX1 = 0;
 //         auto paddressMask = system()->networking()->create_ip4_address("255.255.255.0");

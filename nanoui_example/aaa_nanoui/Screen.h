@@ -55,7 +55,7 @@ public:
     *     rasterize non-convex polygons. (NanoGUI does not render such
     *     polygons, but your application might.)
     *
-    * \param float_buffer
+    * \param f32_buffer
     *     Should NanoGUI try to allocate a floating point framebuffer? This
     *     is useful for HDR and wide-gamut displays.
     *
@@ -84,9 +84,9 @@ public:
       bool fullscreen = false,
       bool depth_buffer = true,
       bool stencil_buffer = true,
-      bool float_buffer = false,
-      unsigned int gl_major = 3,
-      unsigned int gl_minor = 2
+      bool f32_buffer = false,
+      ::u32 gl_major = 3,
+      ::u32 gl_minor = 2
    );
 
    /// Release all resources
@@ -161,7 +161,7 @@ public:
 //   virtual void draw_teardown();
 //
 //   /// Return the ratio between pixel and device coordinates (e.g. >= 2 on Mac Retina displays)
-//   float pixel_ratio() const { return m_pixel_ratio; }
+//   ::f32 pixel_ratio() const { return m_pixel_ratio; }
 //
 //   /// Handle a file drop happening
 //   virtual bool drop_event(const std::vector<std::string> & /* filenames */) {
@@ -172,7 +172,7 @@ public:
 //   virtual bool keyboard_event(int key, int scancode, int action, int modifiers);
 //
 //   /// Text input happening handler: codepoint is native endian UTF-32 format
-//   virtual bool keyboard_character_event(unsigned int codepoint);
+//   virtual bool keyboard_character_event(::u32 codepoint);
 //
 //   /// Window resize happening handler
 //   virtual bool resize_event(const Vector2i & size);
@@ -205,7 +205,7 @@ public:
 //   bool has_stencil_buffer() const { return m_stencil_buffer; }
 //
 //   /// Does the framebuffer use a floating point representation
-//   bool has_float_buffer() const { return m_f_buffer; }
+//   bool has_f32_buffer() const { return m_f_buffer; }
 //
 //#if defined(NANOUI_USE_METAL)
 //   /// Return the associated CAMetalLayer object
@@ -256,12 +256,12 @@ public:
 //   void initialize(GLFWwindow * window, bool shutdown_glfw);
 //
 //   /* Event handlers */
-//   void cursor_pos_callback_event(double x, double y);
+//   void cursor_pos_callback_event(::f64 x, ::f64 y);
 //   void mouse_button_callback_event(int button, int action, int modifiers);
 //   void key_callback_event(int key, int scancode, int action, int mods);
-//   void char_callback_event(unsigned int codepoint);
-//   void drop_callback_event(int count, const char ** filenames);
-//   void scroll_callback_event(double x, double y);
+//   void char_callback_event(::u32 codepoint);
+//   void drop_callback_event(int count, const ::i8 ** filenames);
+//   void scroll_callback_event(::f64 x, ::f64 y);
 //   void resize_callback_event(int width, int height);
 //
 //   /* Internal helper functions */
@@ -278,12 +278,12 @@ public:
 //   Cursor m_cursor;
 //   std::vector<Widget *> m_focus_path;
 //   Vector2i m_fbsize;
-//   float m_pixel_ratio;
+//   ::f32 m_pixel_ratio;
 //   int m_mouse_state, m_modifiers;
 //   Vector2i m_mouse_pos;
 //   bool m_drag_active;
 //   Widget * m_drag_widget = nullptr;
-//   double m_last_interaction;
+//   ::f64 m_last_interaction;
 //   bool m_process_events = true;
 //   Color m_background;
 //   std::string m_caption;

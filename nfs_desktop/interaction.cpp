@@ -51,7 +51,7 @@ namespace app_simple_nfs_desktop
 #ifdef _DEBUG
 
 
-   long long interaction::increment_reference_count()
+   ::i64 interaction::increment_reference_count()
    {
 
       return  ::user::interaction::increment_reference_count();
@@ -59,7 +59,7 @@ namespace app_simple_nfs_desktop
    }
 
 
-   long long interaction::decrement_reference_count()
+   ::i64 interaction::decrement_reference_count()
    {
 
       return  ::user::interaction::decrement_reference_count();
@@ -240,7 +240,7 @@ namespace app_simple_nfs_desktop
       }
 
 
-      //::double_size size(1920.0, (y+1) * 25.0);
+      //::f64_size size(1920.0, (y+1) * 25.0);
 
 
       //if (get_total_size() != size)

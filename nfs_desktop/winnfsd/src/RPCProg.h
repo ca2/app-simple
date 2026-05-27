@@ -24,9 +24,9 @@ enum
 
 typedef struct
 {
-    unsigned int nVersion;
-    unsigned int nProc;
-    char *pRemoteAddr;
+    ::u32 nVersion;
+    ::u32 nProc;
+    ::i8 *pRemoteAddr;
 } ProcessParam;
 class nfs;
 class CRPCProg :

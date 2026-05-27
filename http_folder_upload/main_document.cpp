@@ -54,14 +54,14 @@ namespace app_simple_http_folder_upload
 #ifdef _DEBUG
 
 
-   long long main_document::increment_reference_count()
+   ::i64 main_document::increment_reference_count()
    {
 
       return  ::user::document::increment_reference_count();
 
    }
 
-   long long main_document::decrement_reference_count()
+   ::i64 main_document::decrement_reference_count()
    {
 
       return  ::user::document::decrement_reference_count();

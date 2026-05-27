@@ -96,7 +96,7 @@ void CRPCServer::SocketReceived(CSocket *pSocket)
     ReleaseMutex(m_hMutex);
 }
 
-int CRPCServer::Process(int nType, IInputStream *pInStream, IOutputStream *pOutStream, char *pRemoteAddr)
+int CRPCServer::Process(int nType, IInputStream *pInStream, IOutputStream *pOutStream, ::i8 *pRemoteAddr)
 {
     RPC_HEADER header;
     int nPos, nSize;

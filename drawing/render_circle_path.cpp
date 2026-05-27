@@ -24,13 +24,13 @@ namespace app_simple_drawing
 
       pgraphics->text_out(100, 50, "Circle Path (300, 300) - (800, 800) r = 250");
 
-      ::double_rectangle r(300, 300, 800, 800);
+      ::f64_rectangle r(300, 300, 800, 800);
 
-      double greekdeltax = m_rectangle.width() / 1000.0;
+      ::f64 greekdeltax = m_rectangle.width() / 1000.0;
 
-      double greekdeltay = m_rectangle.height() / 900.0;
+      ::f64 greekdeltay = m_rectangle.height() / 900.0;
 
-      double d = minimum(greekdeltax, greekdeltay);
+      ::f64 d = minimum(greekdeltax, greekdeltay);
 
       r *= d;
 
@@ -40,7 +40,7 @@ namespace app_simple_drawing
 
       ppath->begin_figure();
 
-      ::double_ellipse ellipse;
+      ::f64_ellipse ellipse;
 
       ellipse.set(r);
 
@@ -48,7 +48,7 @@ namespace app_simple_drawing
 
       ppath->close_figure();
 
-      double radius = 100 * d;
+      ::f64 radius = 100 * d;
 
       ::draw2d::pen_pointer ppen;
 

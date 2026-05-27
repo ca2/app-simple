@@ -12,7 +12,7 @@ CNFSProg::~CNFSProg()
     delete m_pNFS3Prog;
 }
 
-void CNFSProg::SetUserID(unsigned int nUID, unsigned int nGID)
+void CNFSProg::SetUserID(::u32 nUID, ::u32 nGID)
 {
     m_nUID = nUID;
     m_nGID = nGID;
