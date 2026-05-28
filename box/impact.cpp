@@ -324,7 +324,7 @@ namespace app_simple_box
          ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
       );
 
-      pmessageboxpayload->m_functionOnDialogResult
+      pmessageboxpayload->m_functionOnDialogResult2
          = [this](const ::payload & payloadResult)
          {
 
