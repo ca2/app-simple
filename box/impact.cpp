@@ -27,7 +27,7 @@ namespace app_simple_box
    impact::impact()
    {
 
-      m_flagNonClient -= e_non_client_background;
+      m_enonclient -= ::user::e_non_client_background;
 
    }
 
@@ -330,9 +330,7 @@ namespace app_simple_box
 
             if (payloadResult == e_dialog_result_yes)
             {
-
                auto papp = get_app();
-
                papp->_001PostTryCloseApplication();
 
             }

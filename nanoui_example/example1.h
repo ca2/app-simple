@@ -19,6 +19,9 @@ namespace app_simple_nanoui_example
 
       ::pointer<main_window>  m_pmainwindow;
 
+
+      //::pointer<timer_task> m_ptimertask;
+
       ::collection::index m_current_image;
 
       ProgressBar * m_progress;
@@ -27,6 +30,9 @@ namespace app_simple_nanoui_example
 
 
       void draw_contents(::nano2d::context * ctx) override;
+
+
+      void on_show_widget(bool bShow) override;
 
 
    };

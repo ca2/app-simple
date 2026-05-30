@@ -12,9 +12,9 @@ namespace app_simple_os_drag_and_drop
 
       payload(FONTSEL_IMPACT) = true;
 
-      m_flagNonClient.erase(e_non_client_background);
+      m_enonclient.erase(::user::e_non_client_background);
 
-      m_flagNonClient.erase(e_non_client_focus_rect);
+      m_enonclient.erase(::user::e_non_client_focus_rect);
 
 
    }

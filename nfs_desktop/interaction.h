@@ -51,7 +51,7 @@ namespace app_simple_nfs_desktop
 
       bool on_click(::item * pitem, ::user::mouse * pmouse) override;
 
-      void on_timer(::timer * ptimer) override;
+      void operator()(::timer * ptimer) override;
       //void network_interface_discovery(::collection::index iItem);
 
 
