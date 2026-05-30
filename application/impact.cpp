@@ -21,7 +21,7 @@ namespace app_simple_application
    impact::impact()
    {
 
-      m_flagNonClient -= e_non_client_background;
+      m_enonclient -= ::user::e_non_client_background;
       m_iSequence = 0;
       m_bNeedFullRedrawOnResize = true;
       

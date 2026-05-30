@@ -21,8 +21,8 @@ namespace app_simple_http_folder_upload
 
       m_pmainimpact = nullptr;
 
-      m_flagNonClient.add(e_non_client_background);
-      m_flagNonClient.add(e_non_client_focus_rect);
+      m_enonclient.add(::user::e_non_client_background);
+      m_enonclient.add(::user::e_non_client_focus_rect);
 
 
    }

@@ -24,6 +24,7 @@
 #include "nanoui/TabWidget.h"
 #include "nanoui/ColorWheel.h"
 #include "nano2d/context.h"
+//#include "acme/platform/timer_task.h"
 #include "acme/filesystem/file/file_stream1.h"
 #include "acme/filesystem/filesystem/file_dialog.h"
 #include "aura/windowing/window.h"
@@ -34,7 +35,7 @@ namespace app_simple_nanoui_example
 
 
    ExampleApplication1::ExampleApplication1(main_window * pmainwindow) :
-      Screen(pmainwindow, { 1024, 768 }, "NanoGUI Test"),
+      Screen(pmainwindow, { 1024, 768 }, "NanoGUI Test"), Widget(nullptr),
       m_pmainwindow(pmainwindow)
    {
 
@@ -621,6 +622,48 @@ namespace app_simple_nanoui_example
 
       //nvgRestore(ctx);
 
+
+   }
+
+
+   void ExampleApplication1::on_show_widget(bool bShow)
+   {
+
+      if (bShow)
+      {
+
+         // if (!m_ptimertask)
+         // {
+         //
+         //    construct_newø(m_ptimertask);
+         //
+         //    m_ptimertask
+         //
+         // }
+
+         set_timer(e_timer_redraw, 100_ms, [this](::timer * ptimer)
+         {
+
+            set_need_redraw();
+
+            post_redraw();
+
+         });
+
+      }
+      else
+      {
+
+         // if (m_ptimertask)
+         // {
+         //
+         //    m_ptimertask->set_finish();
+         //
+         // }
+
+         kill_timer(e_timer_redraw);
+
+      }
 
    }
 

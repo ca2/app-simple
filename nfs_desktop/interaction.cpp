@@ -12,7 +12,7 @@
 #include "acme/handler/topic.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/platform/hyperlink.h"
-#include "acme/platform/timer.h"
+//#include "acme/platform/timer.h"
 #include "acme/user/user/content.h"
 #include "apex/database/_binary_stream.h"
 #include "apex/networking/http/context.h"
@@ -33,9 +33,9 @@ namespace app_simple_nfs_desktop
 
       //payload(FONTSEL_IMPACT) = true;
 
-      m_flagNonClient.erase(e_non_client_background);
+      m_enonclient.erase(::user::e_non_client_background);
 
-      m_flagNonClient.erase(e_non_client_focus_rect);
+      m_enonclient.erase(::user::e_non_client_focus_rect);
 
       m_bDefaultClickHandling = true;
 
@@ -249,7 +249,7 @@ namespace app_simple_nfs_desktop
       //}
 
    }
-   void interaction::on_timer(::timer *ptimer)
+   void interaction::operator()(::timer * ptimer)
    {
     //if(ptimer->m_etimer == e_timer_redraw)
     //  {

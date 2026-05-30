@@ -43,7 +43,7 @@ namespace app_simple_nanoui_example
 
 
    ExampleApplication2::ExampleApplication2(main_window * pmainwindow) :
-      Screen(pmainwindow, { 500, 900 }, "NanoGUI Test"),
+       Screen(pmainwindow, {500, 900}, "NanoGUI Test"), Widget(nullptr),
       m_pmainwindow(pmainwindow)
    {
 

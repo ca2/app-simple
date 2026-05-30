@@ -12,8 +12,8 @@ namespace app_simple_os_drag_and_drop
 
       //m_ptopimpact = NULL;
       m_pimpact    = NULL;
-      m_flagNonClient.add(e_non_client_background);
-      m_flagNonClient.add(e_non_client_focus_rect);
+      m_enonclient.add(::user::e_non_client_background);
+      m_enonclient.add(::user::e_non_client_focus_rect);
 
 
    }

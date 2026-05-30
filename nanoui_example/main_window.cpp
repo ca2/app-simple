@@ -20,7 +20,7 @@ namespace app_simple_nanoui_example
    {
 
       //m_pexampleapplication = nullptr;
-      m_flagNonClient -= e_non_client_background;
+      m_enonclient -= ::user::e_non_client_background;
       m_bDefaultClickHandling = true;
       m_bDefaultEditHandling = true;
 
