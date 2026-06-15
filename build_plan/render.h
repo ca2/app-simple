@@ -1,0 +1,93 @@
+#pragma once
+
+
+//
+//
+//#define __PROPERTIES2(xxx)\
+//class xxx ## _properties: \
+//   public ::property_set \
+//{ \
+//public: \
+//
+//
+//#define __PROPERTY2(type, name, ID) type & name = payload_reference(topic(ID))
+//
+//
+//
+//#define __END_PROPERTIES2(xxx) }; \
+//xxx ## _properties & properties() {return *m_pobjectproperties;} \
+//inline void create_object_properties() { m_pobjectproperties = m_ppropertyset = allocateø(xxx ## _properties(this));} \
+//__pointer(xxx ## _properties) m_pobjectproperties
+//
+//
+//
+//
+
+
+#include "acme/prototype/collection/string_map.h"
+#include "acme/prototype/geometry2d/angle.h"
+#include "acme/prototype/geometry2d/rectangle.h"
+//#include "acme/prototype/geometry2d/_geometry2d.h"
+//#include "acme/prototype/geometry2d/size.h"
+#include "apex/platform/app_consumer.h"
+
+
+namespace app_simple_build_plan
+{
+
+
+   class CLASS_DECL_APP_SIMPLE_BUILD_PLAN render :
+      virtual public app_consumer < application >
+   {
+   public:
+
+
+      i32_rectangle                       m_rectangle;
+      impact *                            m_pimpact;
+      string                              m_strFont1;
+      string                              m_strHoverFont;
+      int                                 m_iDrawing;
+      string_map_base < ::image::image_pointer >      m_pimagemap;
+      ::image::image_pointer                     m_pimage1;
+      ::image::image_pointer                     m_pimage2;
+      ::color::hls                        m_hlsText;
+
+      render();
+      virtual ~render();
+
+#ifdef _DEBUG
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
+#endif
+
+      string get_font();
+
+      ::e_status set_font(const ::scoped_string & scopedstrFont);
+
+      ::e_status set_hover_font(const ::scoped_string & scopedstrHoverFont);
+
+      virtual void initialize_simple_build_plan(int iDrawing);
+
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics);
+
+      virtual void _001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics);
+
+      virtual void _001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath);
+
+      virtual void _001OnDrawBoxGradient(::draw2d::graphics_pointer & pgraphics);
+
+      virtual void _001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics);
+
+      virtual void draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle & r, ::f64_angle angleStart, ::f64_angle angleAngle, bool bPath);
+
+      virtual void on_layout(::draw2d::graphics_pointer & pgraphics);
+
+      virtual void draw_text(::draw2d::graphics_pointer & pgraphics);
+
+
+   };
+
+
+} // namespace simple_build_plan
+
+
