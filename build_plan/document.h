@@ -1,0 +1,53 @@
+#pragma once
+
+
+#include "berg/user/user/document.h"
+
+
+namespace app_simple_build_plan
+{
+
+
+   class CLASS_DECL_APP_SIMPLE_BUILD_PLAN document :
+      public ::user::document
+   {
+   public:
+
+
+      document();
+	   ~document() override;
+
+
+	   // void assert_ok() const override;
+	   // void dump(dump_context & dumpcontext) const override;
+
+      bool on_new_document() override;
+      virtual bool on_open_document(const ::payload & payloadFile) override;
+
+#ifdef _DEBUG
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
+#endif
+
+      //virtual ::stream& write(::stream& stream) const override;
+
+
+   };
+
+
+} // namespace simple_build_plan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
