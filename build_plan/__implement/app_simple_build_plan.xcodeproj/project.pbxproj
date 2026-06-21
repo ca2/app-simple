@@ -56,6 +56,12 @@
 		9AD91E532D7361CA00E097AF /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91E022D7361A300E097AF /* libacme.dylib */; };
 		9AD91E542D7361CE00E097AF /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91E172D7361A300E097AF /* libberg.dylib */; };
 		9AD91E552D7361D300E097AF /* libapp_simple_build_plan.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD91E0E2D7361A300E097AF /* libapp_simple_build_plan.dylib */; };
+		9A214EB26075914497713E43 /* libappkit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A31FDD23F6C6127DF6BAD61 /* libappkit.dylib */; };
+		9AC6D8FE0ADBC796E975704E /* libappkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A31FDD23F6C6127DF6BAD61 /* libappkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A8CA649775DC0892D63F270 /* libcore_foundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB70FF00BF5C70236DB169 /* libcore_foundation.dylib */; };
+		9AC45FE36C1BF3B06432CA99 /* libcore_foundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AEB70FF00BF5C70236DB169 /* libcore_foundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A27B9A8F847674515EA82A7 /* libcore_graphics.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACA9166473A14987DB28C40 /* libcore_graphics.dylib */; };
+		9A50D637784CF4CCAA2F0EB1 /* libcore_graphics.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9ACA9166473A14987DB28C40 /* libcore_graphics.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +113,10 @@
 				9AD91E502D7361C500E097AF /* libunac.dylib in CopyFiles */,
 				9AD91E512D7361C500E097AF /* libwindowing_macos.dylib in CopyFiles */,
 				9AD91E522D7361C500E097AF /* libwrite_text_quartz2d.dylib in CopyFiles */,
+				9AC6D8FE0ADBC796E975704E /* libappkit.dylib in CopyFiles */,
+				9AC45FE36C1BF3B06432CA99 /* libcore_foundation.dylib in CopyFiles */,
+				9A50D637784CF4CCAA2F0EB1 /* libcore_graphics.dylib in CopyFiles */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +173,9 @@
 		9AD91E272D7361A300E097AF /* libunac.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = "<group>"; };
 		9AD91E282D7361A300E097AF /* libwindowing_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = "<group>"; };
 		9AD91E292D7361A300E097AF /* libwrite_text_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwrite_text_quartz2d.dylib; sourceTree = "<group>"; };
+		9A31FDD23F6C6127DF6BAD61 /* libappkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libappkit.dylib; sourceTree = "<group>"; };
+		9AEB70FF00BF5C70236DB169 /* libcore_foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_foundation.dylib; sourceTree = "<group>"; };
+		9ACA9166473A14987DB28C40 /* libcore_graphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_graphics.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +186,10 @@
 				9AD91E532D7361CA00E097AF /* libacme.dylib in Frameworks */,
 				9AD91E542D7361CE00E097AF /* libberg.dylib in Frameworks */,
 				9AD91E552D7361D300E097AF /* libapp_simple_build_plan.dylib in Frameworks */,
+				9A214EB26075914497713E43 /* libappkit.dylib in Frameworks */,
+				9A8CA649775DC0892D63F270 /* libcore_foundation.dylib in Frameworks */,
+				9A27B9A8F847674515EA82A7 /* libcore_graphics.dylib in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +284,10 @@
 				9AD91E272D7361A300E097AF /* libunac.dylib */,
 				9AD91E282D7361A300E097AF /* libwindowing_macos.dylib */,
 				9AD91E292D7361A300E097AF /* libwrite_text_quartz2d.dylib */,
+				9A31FDD23F6C6127DF6BAD61 /* libappkit.dylib */,
+				9AEB70FF00BF5C70236DB169 /* libcore_foundation.dylib */,
+				9ACA9166473A14987DB28C40 /* libcore_graphics.dylib */,
+
 			);
 			path = "time-macos";
 			sourceTree = "<group>";

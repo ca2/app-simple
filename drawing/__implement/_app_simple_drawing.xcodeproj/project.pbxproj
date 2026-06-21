@@ -99,6 +99,13 @@
 			remoteGlobalIDString = 9A1CC36C2CF2BE37004A00CB;
 			remoteInfo = operating_ambient_macos;
 		};
+		9A3392062FE57A4700C0ED37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A353D1F2661FD8F0060257B /* app_simple_drawing.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AEB75A216F78DF10085103B;
+			remoteInfo = app_simple_drawing;
+		};
 		9A353D2F2661FD8F0060257B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A353D1F2661FD8F0060257B /* app_simple_drawing.xcodeproj */;
@@ -257,7 +264,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A499F7B2D1A687000FB4C3D /* operating_ambient_macos.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A1CC36B2CF2BE37004A00CB;
+			remoteGlobalIDString = 9A6FBA322EBD3C15003BBE61;
 			remoteInfo = operating_ambient_macos;
 		};
 /* End PBXContainerItemProxy section */
@@ -338,7 +345,7 @@
 		9A8F4D3C2A26D4CE00097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A8F4D4A2A26D4CE00097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
 		9A90BC982B549F2B002BFC9E /* libarchive.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libarchive.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A9902A6275328F100B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
+		9A9902A6275328F100B13F01 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A9902AD275329C500B13F01 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A9A19252AFC376300FA9BEB /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9E4A4227519C320094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -599,16 +606,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_drawing" */;
 			buildPhases = (
-				9A932B3C2D6DB95F006557FC /* ShellScript */,
+				9A932B3C2D6DB95F006557FC /* _on_before_build_executable */,
 				070B8EE61B6E53F900D26137 /* Sources */,
 				070B8EE71B6E53F900D26137 /* Frameworks */,
 				070B8EE81B6E53F900D26137 /* Resources */,
 				9AFFC7ED2678757700C4104F /* Embed Libraries */,
-				9A930EDF2D6DAC52006557FC /* ShellScript */,
+				9A930EDF2D6DAC52006557FC /* _on_after_build_executable */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9A3392072FE57A4700C0ED37 /* PBXTargetDependency */,
 				9AEC3D492D1A971000F9E621 /* PBXTargetDependency */,
 				9A9902B5275329ED00B13F01 /* PBXTargetDependency */,
 				9AC01E672748D29A006BEBCC /* PBXTargetDependency */,
@@ -883,7 +891,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9A930EDF2D6DAC52006557FC /* ShellScript */ = {
+		9A930EDF2D6DAC52006557FC /* _on_after_build_executable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -902,18 +910,16 @@
 				"$(SRCROOT)/output.xcfilelist",
 			);
 			outputPaths = (
-				"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/output/$(EXECUTABLE_NAME)",
+				"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/output-$(CONFIIGURATION)/$(EXECUTABLE_NAME)",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$HOME/code/operating_system/tool/bin/_on_after_build_executable\n";
 		};
-		9A932B3C2D6DB95F006557FC /* ShellScript */ = {
+		9A932B3C2D6DB95F006557FC /* _on_before_build_executable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputFileListPaths = (
 				"",
@@ -965,6 +971,11 @@
 			isa = PBXTargetDependency;
 			name = imaging_coreimage;
 			targetProxy = 9A0705F326625499004E8CB4 /* PBXContainerItemProxy */;
+		};
+		9A3392072FE57A4700C0ED37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = app_simple_drawing;
+			targetProxy = 9A3392062FE57A4700C0ED37 /* PBXContainerItemProxy */;
 		};
 		9A353D91266223ED0060257B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1219,7 +1230,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"@loader_path",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
@@ -1237,7 +1251,10 @@ LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"@loader_path",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
