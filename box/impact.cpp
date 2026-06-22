@@ -318,17 +318,17 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      auto pmessageboxpayload = __initialize_new ::message_box_payload(
+      auto pmessagebox = __initialize_new ::acme::user::message_box(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
       );
 
-      pmessageboxpayload->m_functionOnDialogResult2
-         = [this](const ::payload & payloadResult)
+      pmessagebox->m_functionOnMessageBoxResult
+         = [this](::acme::user::message_box * pmessagebox)
          {
 
-            if (payloadResult == e_dialog_result_yes)
+            if (pmessagebox->m_payloadResult == e_dialog_result_yes)
             {
                auto papp = get_app();
                papp->_001PostTryCloseApplication();
@@ -344,12 +344,11 @@ namespace app_simple_box
          };
 
 
-      post(pmessageboxpayload);
+      pmessagebox->display(e_display_normal, {});
 
    }
 
 
 } // namespace app_simple_box
-
 
 

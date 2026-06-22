@@ -316,7 +316,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 6;
+			dstSubfolderSpec = 10;
 			files = (
 				9A9E4A9E2751A3B20094A04C /* libacme_posix.dylib in Embed Libraries */,
 				9A9E4ABE2751A3B30094A04C /* libdraw2d_quartz2d.dylib in Embed Libraries */,
@@ -373,7 +373,7 @@
 		9A6FB9E62EBCD9CE003BBE61 /* _____debug_application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug_application.xcconfig"; sourceTree = "<group>"; };
 		9A6FB9E72EBCD9CE003BBE61 /* _____release_application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release_application.xcconfig"; sourceTree = "<group>"; };
 		9A71B8482A469EA700F9FC3D /* libunac.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A8C816A2783F856000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
+		9A8C816A2783F856000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
 		9A8C818327844A71000C8587 /* crypto_openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypto_openssl.xcodeproj; path = ../../../app/crypto_openssl/crypto_openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A8C818927844A7B000C8587 /* folder_zip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = folder_zip.xcodeproj; path = ../../../app/folder_zip/folder_zip.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9A8F4D2C2A26D49200097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
@@ -662,12 +662,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_http_file_server" */;
 			buildPhases = (
-				9A581CA22D8F6EBD001987ED /* ShellScript */,
+				9A581CA22D8F6EBD001987ED /* _on_before_build_executable */,
 				070B8EE61B6E53F900D26137 /* Sources */,
 				070B8EE71B6E53F900D26137 /* Frameworks */,
 				070B8EE81B6E53F900D26137 /* Resources */,
 				9A9E4ACF2751A3B40094A04C /* Embed Libraries */,
-				9A581CA32D8F6EC7001987ED /* ShellScript */,
+				9A581CA32D8F6EC7001987ED /* _on_after_build_executable */,
 			);
 			buildRules = (
 			);
@@ -985,12 +985,10 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9A581CA22D8F6EBD001987ED /* ShellScript */ = {
+		9A581CA22D8F6EBD001987ED /* _on_before_build_executable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputFileListPaths = (
 				"",
@@ -1012,7 +1010,7 @@
 			shellPath = /bin/sh;
 			shellScript = "${WorkspaceDir}/../operating_system/tool/bin/_on_before_build_executable\n";
 		};
-		9A581CA32D8F6EC7001987ED /* ShellScript */ = {
+		9A581CA32D8F6EC7001987ED /* _on_after_build_executable */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1336,7 +1334,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"@loader_path",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";
@@ -1354,7 +1355,10 @@ LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Hello Multiverse!!Tests/Info.plist";
-LD_RUNPATH_SEARCH_PATHS = "@executable_path @loader_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path",
+					"@loader_path",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ca2.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hello Multiverse!!.app/Contents/MacOS/Hello Multiverse!!";

@@ -72,9 +72,9 @@ namespace app_simple_nanoui_example
       guiNanouiExample->add_button("A button", [this]()
          { 
             
-            auto pmessageboxpayload = __initialize_new ::message_box_payload("Button pressed.");
+            auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
 
-            post(pmessageboxpayload);
+            pmessagebox->display(e_display_normal, {});
 
          });
 
@@ -98,8 +98,8 @@ namespace app_simple_nanoui_example
 
          gui->add_group("Other widgets");
          gui->add_button("A button", [this]() 
-            { auto pmessageboxpayload = __initialize_new ::message_box_payload("Button pressed.");
-         post(pmessageboxpayload);
+            { auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
+         pmessagebox->display(e_display_normal, {});
             });
 
          set_visible(true);
@@ -163,6 +163,5 @@ namespace app_simple_nanoui_example
 
 
 } // namespace app_simple_nanoui_example
-
 
 
