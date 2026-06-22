@@ -143,9 +143,10 @@ namespace app_simple_nanoui_example
 
     gui->add_group("Other widgets");
     gui->add_button("A button", []()
-       { auto pmessageboxpayload = __initialize_new ::message_box_payload(nullptr, "Button pressed.");
+       { auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
 
-send(pmessageboxpayload); }
+         pmessagebox->display(e_display_normal, {});
+         pmessagebox->wait_dialog_response(); }
     )
        ->set_tooltip("Testing a much longer tooltip, that will wrap around to ___new lines multiple times.");;
 
@@ -246,6 +247,5 @@ send(pmessageboxpayload); }
 
 
 } // namespace app_simple_nanoui_example
-
 
 
