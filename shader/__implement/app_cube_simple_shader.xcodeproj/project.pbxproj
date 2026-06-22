@@ -11,6 +11,12 @@
 		9A790D0A29CF53EA006B682C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A790D0629CF53EA006B682C /* InfoPlist.strings */; };
 		9A8C7DCC2783F61C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7DCB2783F61C000C8587 /* _matter.zip */; };
 		9A9E4A6A27519CAE0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A6227519CAE0094A04C /* Images.xcassets */; };
+		9A8E92E5227AC8E50F49F8BE /* libappkit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */; };
+		9AB481CA4FBB88B4C0EDCF61 /* libappkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9AA1D699F784059A1D63C118 /* libcore_foundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */; };
+		9A63CC738756359ED4C5FCDE /* libcore_foundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9A85B32D89FE75A423C7538D /* libcore_graphics.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */; };
+		9AFD165767742C6B28A7291A /* libcore_graphics.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,6 +26,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				9AB481CA4FBB88B4C0EDCF61 /* libappkit.dylib in CopyFiles */,
+				9A63CC738756359ED4C5FCDE /* libcore_foundation.dylib in CopyFiles */,
+				9AFD165767742C6B28A7291A /* libcore_graphics.dylib in CopyFiles */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +44,9 @@
 		9A8F4D0D2A26D37200097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
 		9A9E4A6227519CAE0094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9A9E4A6327519CAE0094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libappkit.dylib; sourceTree = "<group>"; };
+		9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_foundation.dylib; sourceTree = "<group>"; };
+		9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_graphics.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8E92E5227AC8E50F49F8BE /* libappkit.dylib in Frameworks */,
+				9AA1D699F784059A1D63C118 /* libcore_foundation.dylib in Frameworks */,
+				9A85B32D89FE75A423C7538D /* libcore_graphics.dylib in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,10 @@
 		9A9FD7FB2D715EA70069DC7E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */,
+				9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */,
+				9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */,
+
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
