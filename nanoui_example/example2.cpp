@@ -13,6 +13,7 @@
 #include "framework.h"
 #include "example2.h"
 #include "main_window.h"
+#include "acme/user/interface/message_box.h"
 #include "nanoui/FormHelper.h"
 
 
@@ -72,7 +73,8 @@ namespace app_simple_nanoui_example
       guiNanouiExample->add_button("A button", [this]()
          { 
             
-            auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
+            auto pmessagebox = createø < ::user_interface::message_box >();
+            pmessagebox->initialize_message_box("Button pressed.");
 
             pmessagebox->display(e_display_normal, {});
 
@@ -98,8 +100,10 @@ namespace app_simple_nanoui_example
 
          gui->add_group("Other widgets");
          gui->add_button("A button", [this]() 
-            { auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
-         pmessagebox->display(e_display_normal, {});
+            { 
+               auto pmessagebox = createø < ::user_interface::message_box >();
+               pmessagebox->initialize_message_box("Button pressed.");
+               pmessagebox->display(e_display_normal, {});
             });
 
          set_visible(true);
@@ -163,5 +167,3 @@ namespace app_simple_nanoui_example
 
 
 } // namespace app_simple_nanoui_example
-
-

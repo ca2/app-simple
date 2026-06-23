@@ -143,7 +143,9 @@ namespace app_simple_nanoui_example
 
     gui->add_group("Other widgets");
     gui->add_button("A button", []()
-       { auto pmessagebox = __initialize_new ::acme::user::message_box("Button pressed.");
+       { 
+         auto pmessagebox = createø < ::user_interface::message_box >();
+         pmessagebox->initialize_message_box("Button pressed.");
 
          pmessagebox->display(e_display_normal, {});
          pmessagebox->wait_dialog_response(); }
@@ -247,5 +249,4 @@ namespace app_simple_nanoui_example
 
 
 } // namespace app_simple_nanoui_example
-
 

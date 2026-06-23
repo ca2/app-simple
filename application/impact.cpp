@@ -7,6 +7,7 @@
 #include "acme/filesystem/filesystem/file_context.h"
 #include "acme/platform/node.h"
 #include "acme/prototype/mathematics/mathematics.h"
+#include "acme/user/interface/message_box.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
 
