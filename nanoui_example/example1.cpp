@@ -27,6 +27,7 @@
 //#include "acme/platform/timer_task.h"
 #include "acme/filesystem/file/file_stream1.h"
 #include "acme/filesystem/filesystem/file_dialog.h"
+#include "acme/user/interface/message_box.h"
 #include "aura/windowing/window.h"
 
 
@@ -52,7 +53,8 @@ namespace app_simple_nanoui_example
       Button * b = ___new Button(window, "Plain button");
       b->set_callback([this] 
          {
-            auto pmessagebox = __initialize_new ::acme::user::message_box("Pushed Plain Button!");
+            auto pmessagebox = createø < ::user_interface::message_box >();
+            pmessagebox->initialize_message_box("Pushed Plain Button!");
             /* std::cout << "pushed!" << std::endl; */ 
             pmessagebox->display(e_display_normal, {});
          
@@ -63,7 +65,8 @@ namespace app_simple_nanoui_example
       b = window->add<Button>("Styled", e_font_awesome_rocket);
       b->set_background_color(::rgba(0, 0, 255, 25));
       b->set_callback([this] { 
-         auto pmessagebox = __initialize_new ::acme::user::message_box("Pushed Styled!");
+         auto pmessagebox = createø < ::user_interface::message_box >();
+         pmessagebox->initialize_message_box("Pushed Styled!");
          /* std::cout << "pushed!" << std::endl; std::cout << "pushed!" << std::endl;*/ 
          pmessagebox->display(e_display_normal, {});
          });
@@ -127,7 +130,8 @@ namespace app_simple_nanoui_example
                b->set_callback([this] {
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Information, "Title", "This is an information message");
                   dlg->set_callback([this](int result) { 
-                     auto pmessagebox = __initialize_new ::acme::user::message_box("Dialog result: " + ::as_string(result)); 
+                     auto pmessagebox = createø < ::user_interface::message_box >();
+                     pmessagebox->initialize_message_box("Dialog result: " + ::as_string(result)); 
                      
                      pmessagebox->display(e_display_normal, {});
                      });
@@ -137,7 +141,8 @@ namespace app_simple_nanoui_example
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a warning message");
                   dlg->set_callback([this](int result) 
                      {
-                        auto pmessagebox = __initialize_new ::acme::user::message_box("Dialog result: " + ::as_string(result)); 
+                        auto pmessagebox = createø < ::user_interface::message_box >();
+                        pmessagebox->initialize_message_box("Dialog result: " + ::as_string(result)); 
                      
                         pmessagebox->display(e_display_normal, {});
                      });
@@ -147,7 +152,8 @@ namespace app_simple_nanoui_example
                   auto dlg = ___new MessageDialog(this, MessageDialog::Type::Warning, "Title", "This is a question message", "Yes", "No", true);
                   dlg->set_callback([this](int result) 
                      {
-                        auto pmessagebox = __initialize_new ::acme::user::message_box("Dialog result: " + ::as_string(result)); 
+                        auto pmessagebox = createø < ::user_interface::message_box >();
+                        pmessagebox->initialize_message_box("Dialog result: " + ::as_string(result)); 
                      
                         pmessagebox->display(e_display_normal, {});
                      });
@@ -308,7 +314,8 @@ namespace app_simple_nanoui_example
                   [this](bool state) { 
                      string_stream str;
                      str << "Check box 1 state: " << state;
-                     auto pmessagebox = __initialize_new ::acme::user::message_box(str.as_string());
+                     auto pmessagebox = createø < ::user_interface::message_box >();
+                     pmessagebox->initialize_message_box(str.as_string());
 
                      pmessagebox->display(e_display_normal, {});
 
@@ -320,7 +327,8 @@ namespace app_simple_nanoui_example
                      
                      string_stream str;
                      str << "Check box 2 state: " << state;
-                     auto pmessagebox = __initialize_new ::acme::user::message_box(str.as_string());
+                     auto pmessagebox = createø < ::user_interface::message_box >();
+                     pmessagebox->initialize_message_box(str.as_string());
 
                      pmessagebox->display(e_display_normal, {});
 

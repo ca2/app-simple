@@ -6,6 +6,7 @@
 #include "acme/constant/user_message.h"
 //#include "acme/platform/sequencer.h"
 #include "acme/prototype/mathematics/mathematics.h"
+#include "acme/user/interface/message_box.h"
 //#include "acme/user/nano/nano.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/draw2d.h"
@@ -318,20 +319,22 @@ namespace app_simple_box
    void impact::show_message_box()
    {
 
-      auto pmessagebox = __initialize_new ::acme::user::message_box(
+      auto pmessagebox = createø < ::user_interface::message_box >();
+      pmessagebox->initialize_message_box(
          "Simple Message Box!! (message_box).<br><br>Finish?",
          nullptr,
          ::user::e_message_box_yes_no | ::user::e_message_box_icon_information
       );
 
-      pmessagebox->m_functionOnMessageBoxResult
-         = [this](::acme::user::message_box * pmessagebox)
+      pmessagebox->message_box_response_callback()
+         = [this](::user_interface::message_box * pmessagebox)
          {
 
-            if (pmessagebox->m_payloadResult == e_dialog_result_yes)
+            if (pmessagebox->get_dialog_response() == e_dialog_result_yes)
             {
                auto papp = get_app();
-               papp->_001PostTryCloseApplication();
+               //papp->_001PostTryCloseApplication();
+               papp->try_close_application();
 
             }
             else
