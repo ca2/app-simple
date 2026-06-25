@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A2274A627CF414F0042BAC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A2274A527CF414F0042BAC2 /* main.cpp */; };
-		9A790D0A29CF53EA006B682C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A790D0629CF53EA006B682C /* InfoPlist.strings */; };
-		9A8C7DCC2783F61C000C8587 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C7DCB2783F61C000C8587 /* _matter.zip */; };
-		9A9E4A6A27519CAE0094A04C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9E4A6227519CAE0094A04C /* Images.xcassets */; };
-		9A8E92E5227AC8E50F49F8BE /* libappkit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */; };
-		9AB481CA4FBB88B4C0EDCF61 /* libappkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9AA1D699F784059A1D63C118 /* libcore_foundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */; };
-		9A63CC738756359ED4C5FCDE /* libcore_foundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		9A85B32D89FE75A423C7538D /* libcore_graphics.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */; };
-		9AFD165767742C6B28A7291A /* libcore_graphics.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8E29E9236B037CF316E1FF7E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA7912F9C2BC0DEF9283AB1 /* main.cpp */; };
+		131DA6CBC50734BE1DB122DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 042683FDA19A48863CECED8F /* InfoPlist.strings */; };
+		CBF44FC094284417214597E5 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 413F27E73465043EAA3F3480 /* _matter.zip */; };
+		82AB4C17F953AA94AB6F92EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CD5C9926DF59BF1F5467EE /* Images.xcassets */; };
+		B99892A12E1F1FDF3B9133DF /* libappkit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 644D2FF69D8A8AE5B87E9F90 /* libappkit.dylib */; };
+		AFBE8DDFF0E7C370E7A69ACD /* libappkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 644D2FF69D8A8AE5B87E9F90 /* libappkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D7547C6F2614BA6DF453AC8D /* libcore_foundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DB87DF0CD350A164D9DB73 /* libcore_foundation.dylib */; };
+		50B05ECA17D010CEBD7FE8BF /* libcore_foundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65DB87DF0CD350A164D9DB73 /* libcore_foundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6D69DC51B4F4CC06A590BA0E /* libcore_graphics.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0069EF5E2AEC8198C8DDEB /* libcore_graphics.dylib */; };
+		5FA29950E7886BC990FD1A46 /* libcore_graphics.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD0069EF5E2AEC8198C8DDEB /* libcore_graphics.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9AA0D7822D70FE6B00702321 /* CopyFiles */ = {
+		2294393AE175CC665DD4D3C4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				9AB481CA4FBB88B4C0EDCF61 /* libappkit.dylib in CopyFiles */,
-				9A63CC738756359ED4C5FCDE /* libcore_foundation.dylib in CopyFiles */,
-				9AFD165767742C6B28A7291A /* libcore_graphics.dylib in CopyFiles */,
+				AFBE8DDFF0E7C370E7A69ACD /* libappkit.dylib in CopyFiles */,
+				50B05ECA17D010CEBD7FE8BF /* libcore_foundation.dylib in CopyFiles */,
+				5FA29950E7886BC990FD1A46 /* libcore_graphics.dylib in CopyFiles */,
 
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,27 +36,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		070B8EEA1B6E53F900D26137 /* _app_simple_shader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_shader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A2274A527CF414F0042BAC2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9A790D0729CF53EA006B682C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		9A8C7DCB2783F61C000C8587 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
-		9A8F4D002A26D37200097EE1 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
-		9A8F4D0D2A26D37200097EE1 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
-		9A9E4A6227519CAE0094A04C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9A9E4A6327519CAE0094A04C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libappkit.dylib; sourceTree = "<group>"; };
-		9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_foundation.dylib; sourceTree = "<group>"; };
-		9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_graphics.dylib; sourceTree = "<group>"; };
+		EF029254BE006F4C75860AEC /* _app_simple_shader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_shader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA7912F9C2BC0DEF9283AB1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2D887174C340190A171E66A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		413F27E73465043EAA3F3480 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
+		D7D2EA5EB69CD61CAC645018 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
+		B088D404CE3CF2FF2509C858 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
+		21CD5C9926DF59BF1F5467EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8FC926370D7DD3049AC5BAE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		644D2FF69D8A8AE5B87E9F90 /* libappkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libappkit.dylib; sourceTree = "<group>"; };
+		65DB87DF0CD350A164D9DB73 /* libcore_foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_foundation.dylib; sourceTree = "<group>"; };
+		AD0069EF5E2AEC8198C8DDEB /* libcore_graphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_graphics.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		070B8EE71B6E53F900D26137 /* Frameworks */ = {
+		A019D79DF9E28D6AE9C297BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8E92E5227AC8E50F49F8BE /* libappkit.dylib in Frameworks */,
-				9AA1D699F784059A1D63C118 /* libcore_foundation.dylib in Frameworks */,
-				9A85B32D89FE75A423C7538D /* libcore_graphics.dylib in Frameworks */,
+				B99892A12E1F1FDF3B9133DF /* libappkit.dylib in Frameworks */,
+				D7547C6F2614BA6DF453AC8D /* libcore_foundation.dylib in Frameworks */,
+				6D69DC51B4F4CC06A590BA0E /* libcore_graphics.dylib in Frameworks */,
 
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,60 +64,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		070B8EE11B6E53F900D26137 = {
+		2AC25B990F3BAE0E5C85E515 = {
 			isa = PBXGroup;
 			children = (
-				9AED7674275197D200397A57 /* __implement */,
-				9A9FD7FB2D715EA70069DC7E /* Frameworks */,
-				070B8EEB1B6E53F900D26137 /* Products */,
+				5EF1BA4800262E49663CF66F /* __implement */,
+				75C8F8D5195AF627D8B2FE16 /* Frameworks */,
+				A58A96B6CF08E257EF7D75C6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		070B8EEB1B6E53F900D26137 /* Products */ = {
+		A58A96B6CF08E257EF7D75C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				070B8EEA1B6E53F900D26137 /* _app_simple_shader.app */,
+				EF029254BE006F4C75860AEC /* _app_simple_shader.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A790D0529CF53EA006B682C /* en.lproj */ = {
+		97E4D0B60A4ABBA4428D5349 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				9A790D0629CF53EA006B682C /* InfoPlist.strings */,
+				042683FDA19A48863CECED8F /* InfoPlist.strings */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
 		};
-		9A9E4A5F27519CAE0094A04C /* macos */ = {
+		4D8FF53455FD5A357260839B /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				9A790D0529CF53EA006B682C /* en.lproj */,
-				9A9E4A6227519CAE0094A04C /* Images.xcassets */,
-				9A9E4A6327519CAE0094A04C /* Info.plist */,
+				97E4D0B60A4ABBA4428D5349 /* en.lproj */,
+				21CD5C9926DF59BF1F5467EE /* Images.xcassets */,
+				8FC926370D7DD3049AC5BAE3 /* Info.plist */,
 			);
 			path = macos;
 			sourceTree = "<group>";
 		};
-		9A9FD7FB2D715EA70069DC7E /* Frameworks */ = {
+		75C8F8D5195AF627D8B2FE16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A9339A8E0F3E45F840EC1D0 /* libappkit.dylib */,
-				9AE1870245A354E6C5673F6E /* libcore_foundation.dylib */,
-				9A1BABA73161C5119711A0C7 /* libcore_graphics.dylib */,
+				644D2FF69D8A8AE5B87E9F90 /* libappkit.dylib */,
+				65DB87DF0CD350A164D9DB73 /* libcore_foundation.dylib */,
+				AD0069EF5E2AEC8198C8DDEB /* libcore_graphics.dylib */,
 
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9AED7674275197D200397A57 /* __implement */ = {
+		5EF1BA4800262E49663CF66F /* __implement */ = {
 			isa = PBXGroup;
 			children = (
-				9A8F4D002A26D37200097EE1 /* _____debug.xcconfig */,
-				9A8F4D0D2A26D37200097EE1 /* _____release.xcconfig */,
-				9A2274A527CF414F0042BAC2 /* main.cpp */,
-				9A8C7DCB2783F61C000C8587 /* _matter.zip */,
-				9A9E4A5F27519CAE0094A04C /* macos */,
+				D7D2EA5EB69CD61CAC645018 /* _____debug.xcconfig */,
+				B088D404CE3CF2FF2509C858 /* _____release.xcconfig */,
+				9AA7912F9C2BC0DEF9283AB1 /* main.cpp */,
+				413F27E73465043EAA3F3480 /* _matter.zip */,
+				4D8FF53455FD5A357260839B /* macos */,
 			);
 			name = __implement;
 			sourceTree = "<group>";
@@ -125,14 +125,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		070B8EE91B6E53F900D26137 /* _app_simple_shader */ = {
+		BC0D8581F03F3F4878C34432 /* _app_simple_shader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_shader" */;
+			buildConfigurationList = D926DBF2CFA336CF5B043F38 /* Build configuration list for PBXNativeTarget "_app_simple_shader" */;
 			buildPhases = (
-				070B8EE61B6E53F900D26137 /* Sources */,
-				070B8EE71B6E53F900D26137 /* Frameworks */,
-				070B8EE81B6E53F900D26137 /* Resources */,
-				9AA0D7822D70FE6B00702321 /* CopyFiles */,
+				1EDA672E135A896071D148DB /* Sources */,
+				A019D79DF9E28D6AE9C297BE /* Frameworks */,
+				A0E2E15FF12463046ACAD0BF /* Resources */,
+				2294393AE175CC665DD4D3C4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -140,27 +140,27 @@
 			);
 			name = _app_simple_shader;
 			productName = "Hello Multiverse!!";
-			productReference = 070B8EEA1B6E53F900D26137 /* _app_simple_shader.app */;
+			productReference = EF029254BE006F4C75860AEC /* _app_simple_shader.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		070B8EE21B6E53F900D26137 /* Project object */ = {
+		419417F10F875E230529A50C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "ca2 Software Development";
 				TargetAttributes = {
-					070B8EE91B6E53F900D26137 = {
+					BC0D8581F03F3F4878C34432 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = L8N5V6TZE5;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "app_simple_shader" */;
+			buildConfigurationList = A3938B8349B9E2C10C2F0094 /* Build configuration list for PBXProject "app_simple_shader" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,45 +168,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 070B8EE11B6E53F900D26137;
-			productRefGroup = 070B8EEB1B6E53F900D26137 /* Products */;
+			mainGroup = 2AC25B990F3BAE0E5C85E515;
+			productRefGroup = A58A96B6CF08E257EF7D75C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				070B8EE91B6E53F900D26137 /* _app_simple_shader */,
+				BC0D8581F03F3F4878C34432 /* _app_simple_shader */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		070B8EE81B6E53F900D26137 /* Resources */ = {
+		A0E2E15FF12463046ACAD0BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C7DCC2783F61C000C8587 /* _matter.zip in Resources */,
-				9A790D0A29CF53EA006B682C /* InfoPlist.strings in Resources */,
-				9A9E4A6A27519CAE0094A04C /* Images.xcassets in Resources */,
+				CBF44FC094284417214597E5 /* _matter.zip in Resources */,
+				131DA6CBC50734BE1DB122DA /* InfoPlist.strings in Resources */,
+				82AB4C17F953AA94AB6F92EB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		070B8EE61B6E53F900D26137 /* Sources */ = {
+		1EDA672E135A896071D148DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A2274A627CF414F0042BAC2 /* main.cpp in Sources */,
+				8E29E9236B037CF316E1FF7E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9A790D0629CF53EA006B682C /* InfoPlist.strings */ = {
+		042683FDA19A48863CECED8F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9A790D0729CF53EA006B682C /* en */,
+				2D887174C340190A171E66A4 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -214,9 +214,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		070B8F051B6E53FA00D26137 /* Debug */ = {
+		23A83E484B4C231AD7C2E1B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A8F4D002A26D37200097EE1 /* _____debug.xcconfig */;
+			baseConfigurationReference = D7D2EA5EB69CD61CAC645018 /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -301,9 +301,9 @@
 			};
 			name = Debug;
 		};
-		070B8F061B6E53FA00D26137 /* Release */ = {
+		07A6AE141DEB73A319AA0F55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A8F4D0D2A26D37200097EE1 /* _____release.xcconfig */;
+			baseConfigurationReference = B088D404CE3CF2FF2509C858 /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -385,7 +385,7 @@
 			};
 			name = Release;
 		};
-		070B8F081B6E53FA00D26137 /* Debug */ = {
+		F030417A1313966F904696DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -395,7 +395,7 @@
 			};
 			name = Debug;
 		};
-		070B8F091B6E53FA00D26137 /* Release */ = {
+		703758477D241DE4C6CE5A58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -408,25 +408,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		070B8EE51B6E53F900D26137 /* Build configuration list for PBXProject "app_simple_shader" */ = {
+		A3938B8349B9E2C10C2F0094 /* Build configuration list for PBXProject "app_simple_shader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				070B8F051B6E53FA00D26137 /* Debug */,
-				070B8F061B6E53FA00D26137 /* Release */,
+				23A83E484B4C231AD7C2E1B1 /* Debug */,
+				07A6AE141DEB73A319AA0F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		070B8F071B6E53FA00D26137 /* Build configuration list for PBXNativeTarget "_app_simple_shader" */ = {
+		D926DBF2CFA336CF5B043F38 /* Build configuration list for PBXNativeTarget "_app_simple_shader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				070B8F081B6E53FA00D26137 /* Debug */,
-				070B8F091B6E53FA00D26137 /* Release */,
+				F030417A1313966F904696DB /* Debug */,
+				703758477D241DE4C6CE5A58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 070B8EE21B6E53F900D26137 /* Project object */;
+	rootObject = 419417F10F875E230529A50C /* Project object */;
 }
