@@ -20,25 +20,33 @@ namespace app_simple_build_plan
 
       //::pointer<render>          m_prender;
 
+      ::string m_strId;
 
-      class string_column :
-         virtual public ::particle
-      {
-      public:
-         ::pointer_array<string_array> m_str2a;
-         ::index_array m_iaCurrent;
-         ::color_array m_coloraBackground;
-         ::color_array m_coloraText;
-         void add_row(::collection::index iLine, berg::form_handler * pformhandler, ::user::line_layout *plinelayout,
-                      const ::scoped_string &scopedstr, const ::procedure & procedureUpdate, bool bStatus, bool bSimplified);
+      ::pointer<::user::line_layout> m_plinelayout;
 
-         ::string get_row_payload(int iLine);
-      };
+      ::pointer<build_plan_layout> m_pbuildplanlayout;
+
+
+      //class string_column :
+      //   virtual public ::particle
+      //{
+      //public:
+      //   ::pointer_array<string_array> m_str2a;
+      //   ::index_array m_iaCurrent;
+      //   ::color_array m_coloraBackground;
+      //   ::color_array m_coloraText;
+      //   void add_row(::collection::index iLine, berg::form_handler * pformhandler, ::user::line_layout *plinelayout,
+      //                const ::scoped_string &scopedstr, const ::procedure & procedureUpdate, bool bStatus, bool bSimplified);
+
+      //   ::string get_row_payload(int iLine);
+      //};
+      //
+      //::pointer<string_column> m_pcolumnDateStart;
+      //::pointer<string_column> m_pcolumnDateEnd;
+      //::pointer<string_column> m_pcolumnStatus;
+      //::pointer_array<::user::plain_edit> m_editaComment;
+
       
-      ::pointer<string_column> m_pcolumnDateStart;
-      ::pointer<string_column> m_pcolumnDateEnd;
-      ::pointer<string_column> m_pcolumnStatus;
-      ::pointer_array<::user::plain_edit> m_editaComment;
 
       impact();
       ~impact() override;
@@ -54,6 +62,8 @@ namespace app_simple_build_plan
 #endif
 
 
+      virtual void replace_build_plan();
+
       void on_property_changed(::data::property_change & change) override;
 
 
@@ -65,6 +75,9 @@ namespace app_simple_build_plan
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
       ::user::document * get_document();
+
+
+      //virtual void update_build_plan_from_storage();
 
       //virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
 
