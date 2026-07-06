@@ -44,6 +44,7 @@ namespace app_simple_build_plan
       }
 
       set_tab("Menu", MENU_IMPACT);
+      set_tab("05Jul2026", "build_plan:05Jul2026");
       set_tab("12Jun2026", "build_plan:12Jun2026");
       set_tab("text://app-simple/build_plan/:002", "drawing2");
       set_tab("text://app-simple/build_plan/:003", "drawing3");
@@ -52,7 +53,7 @@ namespace app_simple_build_plan
       set_tab("text://app-simple/build_plan/:arcs", "drawing6");
       set_tab("text://app-simple/build_plan/:arcpths", "drawing7");
 
-      set_current_tab_by_id("build_plan:12Jun2026");
+      set_current_tab_by_id("build_plan:05Jul2026");
 
    }
 
