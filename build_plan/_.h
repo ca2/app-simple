@@ -20,6 +20,7 @@ namespace app_simple_build_plan
    class document;
    class impact;
    class render;
+   class build_plan_layout;
 
 
 } // namespace app_simple_build_plan
