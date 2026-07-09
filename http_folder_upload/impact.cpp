@@ -32,7 +32,7 @@ namespace app_simple_http_folder_upload
    {
       m_bRunningSynchronization = false;
  
-      //payload(FONTSEL_IMPACT) = true;
+      //payload("font_selection_impact") = true;
 
       m_enonclient.erase(::user::e_non_client_background);
 

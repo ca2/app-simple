@@ -73,7 +73,7 @@ namespace app_simple_shortcut_amender
 
       //set_local_data();
 
-      //puser->will_use_impact_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint("font_selection_impact");
 
       factory()->add_factory_item <::app_simple_shortcut_amender::document >();
       factory()->add_factory_item <::app_simple_shortcut_amender::frame >();

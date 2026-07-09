@@ -100,7 +100,7 @@ namespace app_simple_shortcut_amender
       if(get_impact_id() == ::e_impact_simple_form)
       {
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if(ptabpaneFileManager != nullptr
                && ptabpaneFileManager->m_pplaceholder != nullptr)
@@ -110,7 +110,7 @@ namespace app_simple_shortcut_amender
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr
                && ptabpaneFontSel->m_pplaceholder != nullptr)

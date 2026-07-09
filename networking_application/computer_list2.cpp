@@ -26,7 +26,7 @@ namespace app_simple_networking_application
    computer_list2::computer_list2()
    {
 
-      //payload(FONTSEL_IMPACT) = true;
+      //payload("font_selection_impact") = true;
 
       m_enonclient.erase(::user::e_non_client_background);
 

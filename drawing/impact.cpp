@@ -69,7 +69,7 @@ namespace app_simple_drawing
    void impact::on_message_create(::message::message * pmessage)
    {
 
-      payload(FONTSEL_IMPACT) = true;
+      payload("font_selection_impact") = true;
 
       ::pointer<::message::create> pcreate(pmessage);
 
