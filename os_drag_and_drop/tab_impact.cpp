@@ -62,8 +62,8 @@ namespace app_simple_os_drag_and_drop
       set_tab("003", "drawing3");
       set_tab("arcs", "drawing4");
       set_tab("arcpths", "drawing5");
-      set_tab("Font",FONTSEL_IMPACT);
-      set_tab("Open", FILEMANAGER_IMPACT);
+      set_tab("Font","font_selection_impact");
+      set_tab("Open", "file_manager_impact");
 
       set_current_tab_by_id("drawing1");
 
@@ -114,7 +114,7 @@ namespace app_simple_os_drag_and_drop
       if(get_impact_id() == MAIN_IMPACT)
       {
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
@@ -123,7 +123,7 @@ namespace app_simple_os_drag_and_drop
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
@@ -135,7 +135,7 @@ namespace app_simple_os_drag_and_drop
          m_pviewTopic = nullptr;
 
       }
-      //else if (get_impact_id() == FONTSEL_IMPACT)
+      //else if (get_impact_id() == "font_selection_impact")
       //{
 
       //   ::pointer<::user::font_list_impact> pfontview = ptabpaneFontSel->m_pplaceholder->get_child_by_id("font_list_impact");

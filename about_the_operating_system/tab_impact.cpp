@@ -75,7 +75,7 @@ namespace app_simple_about_the_operating_system
       if(string_begins(strImpactId, "drawing"))
       {
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
@@ -84,7 +84,7 @@ namespace app_simple_about_the_operating_system
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {

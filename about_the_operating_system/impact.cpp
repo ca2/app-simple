@@ -69,7 +69,7 @@ namespace app_simple_about_the_operating_system
    void impact::on_message_create(::message::message * pmessage)
    {
 
-      payload(FONTSEL_IMPACT) = true;
+      payload("font_selection_impact") = true;
 
       ::pointer<::message::create> pcreate(pmessage);
 

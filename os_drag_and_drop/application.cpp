@@ -40,7 +40,7 @@ namespace app_simple_os_drag_and_drop
 
       ///set_local_data();
 
-      //puser->will_use_impact_hint(FONTSEL_IMPACT);
+      //puser->will_use_impact_hint("font_selection_impact");
       
       factory()->add_factory_item <::app_simple_os_drag_and_drop::document >();
       factory()->add_factory_item <::app_simple_os_drag_and_drop::frame >();

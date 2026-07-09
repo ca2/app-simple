@@ -31,7 +31,7 @@ namespace app_simple_nfs_desktop
    interaction::interaction()
    {
 
-      //payload(FONTSEL_IMPACT) = true;
+      //payload("font_selection_impact") = true;
 
       m_enonclient.erase(::user::e_non_client_background);
 

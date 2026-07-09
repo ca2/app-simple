@@ -100,9 +100,9 @@ namespace app_simple_shader
       //set_tab("13", "shader13");
       //set_tab("14", "shader14");
 
-      //set_tab("Font", FONTSEL_IMPACT);
-      //set_tab("Color", COLORSEL_IMPACT);
-      //set_tab("Open", FILEMANAGER_IMPACT);
+      //set_tab("Font", "font_selection_impact");
+      //set_tab("Color", "color_selection_impact");
+      //set_tab("Open", "file_manager_impact");
 
       if (listing.has_element())
       {
@@ -159,7 +159,7 @@ namespace app_simple_shader
 
          string strShaderPath = strId;
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
@@ -168,7 +168,7 @@ namespace app_simple_shader
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {

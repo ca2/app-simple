@@ -136,7 +136,7 @@ namespace app_simple_change_grub_default_entry
       if(get_impact_id() == ::e_impact_simple_change_grub_default_entry)
       {
 
-         auto ptabpaneFileManager = get_tab_by_id(FILEMANAGER_IMPACT);
+         auto ptabpaneFileManager = get_tab_by_id("file_manager_impact");
 
          if(ptabpaneFileManager != nullptr
                && ptabpaneFileManager->m_pplaceholder != nullptr)
@@ -146,7 +146,7 @@ namespace app_simple_change_grub_default_entry
 
          }
 
-         auto ptabpaneFontSel = get_tab_by_id(FONTSEL_IMPACT);
+         auto ptabpaneFontSel = get_tab_by_id("font_selection_impact");
 
          if (ptabpaneFontSel != nullptr
                && ptabpaneFontSel->m_pplaceholder != nullptr)

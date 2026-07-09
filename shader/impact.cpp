@@ -107,7 +107,7 @@ namespace app_simple_shader
 
       }
 
-      payload(FONTSEL_IMPACT) = true;
+      payload("font_selection_impact") = true;
 
       add_graphical_output_purpose(this,::graphics::e_output_purpose_screen_fps);
 
