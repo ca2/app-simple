@@ -20,6 +20,7 @@
 #include "berg/user/user/impact_system.h"
 #include "berg/user/user/split_impact.h"
 
+
 namespace app_simple_build_plan
 {
 
@@ -286,7 +287,9 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend =
-         "G:/application/app-simple/build_plan/" + m_strId + "_edit_build_plan_time_and_status.comma_separated";
+         "google_drive://application/app-simple/build_plan/" + m_strId + "_edit_build_plan_time_and_status.comma_separated";
+
+      auto pathProcessedSend = m_papplication->defer_process_path(pathSend);
 
       file()->put_text(pathSend, str);
 
@@ -301,7 +304,7 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend2 =
-         "G:/application/app-simple/build_plan/" + m_strId + "_edit_build_plan_comment.comma_separated";
+         "google_drive://application/app-simple/build_plan/" + m_strId + "_edit_build_plan_comment.comma_separated";
 
       file()->put_text(pathSend2, str2);
 
@@ -336,8 +339,9 @@ namespace app_simple_build_plan
          return true;
       };*/
 
-      ::file::path path = "G:/application/app-simple/build_plan/" + m_strId + "_build_plan.comma_separated";
+      ::file::path path = "google_drive://application/app-simple/build_plan/" + m_strId + "_build_plan.comma_separated";
 
+      auto pathProcessed = m_papplication->defer_process_path(path);
 
       ::pointer_array<string_array> str2aCommaSeparated;
 
