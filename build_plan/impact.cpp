@@ -92,6 +92,14 @@ namespace app_simple_build_plan
 
       m_papp->m_propertylistenera.add(this);
 
+//
+//      m_papp->fork([this]()
+//      {
+//            ::string strId = 
+//
+//
+//});
+
       //{
 
       //   auto psignal = get_app()->get_signal("simple_checkbox");
@@ -415,9 +423,9 @@ namespace app_simple_build_plan
 
       pbuttonUpdate->set_size({200, 32});
 
-      auto pbuttonSend = create_button(playoutMiniToolbar, "Send");
+      //auto pbuttonSend = create_button(playoutMiniToolbar, "Send");
 
-      pbuttonSend->set_size({200, 32});
+      //pbuttonSend->set_size({200, 32});
 
       ::string strId(scopedstr);
 
@@ -428,16 +436,49 @@ namespace app_simple_build_plan
          return true;
       };
 
-      pbuttonSend->m_callbackOnClick = [this](auto, auto, auto)
-      {
-         m_pbuildplanlayout->send_build_plan_to_storage();
+      //if (m_pthreadAutoWrite)
+      //{
+
+      //   m_pthreadAutoWrite->set_finish();
+
+      //}
+      //
+      //      m_pthreadAutoWrite = m_papp->fork(
+      //   [this, strId]()
+      //      {
+
+      //         while (::task_get_run())
+      //         {
+
+      //            preempt(1_s);
+
+      //            m_pbu
+      //            if (m_bModified)
+      //            {
+
+      //               
+
+      //            }
+
+      //            }
+
+      //
+      //});
 
 
-         return true;
-      };
+      //pbuttonSend->m_callbackOnClick = [this](auto, auto, auto)
+      //{
+      //   m_pbuildplanlayout->write_build_plan();
+
+
+      //   return true;
+      //};
 
 
       replace_build_plan();
+
+      
+
    }
 
 
@@ -467,9 +508,12 @@ namespace app_simple_build_plan
 
       m_pbuildplanlayout->m_bLockGraphicalUpdate = true;
 
-      m_pbuildplanlayout->update_build_plan_from_storage();
+      m_pbuildplanlayout->update_build_plan_from_build_plan_spreadsheet_export();
 
       m_pbuildplanlayout->m_bLockGraphicalUpdate = false;
+
+      m_pbuildplanlayout->start_auto_write_task();
+
    }
 
    //   ::file::path path = "G:/application/app-simple/build_plan/" + strId + "_build_plan.comma_separated";

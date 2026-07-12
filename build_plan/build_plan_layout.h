@@ -42,6 +42,8 @@ namespace app_simple_build_plan
       ::pointer<string_column> m_pcolumnDateEnd;
       ::pointer<string_column> m_pcolumnStatus;
       ::pointer_array<::user::plain_edit> m_editaComment;
+      ::task_pointer m_ptaskAutoWrite;
+      bool m_bModified;
 
       build_plan_layout();
       ~build_plan_layout() override;
@@ -50,11 +52,13 @@ namespace app_simple_build_plan
       //      // void assert_ok() const override;
       //      // void dump(dump_context & dumpcontext) const override;
 
+      virtual void start_auto_write_task();
 
+      virtual void auto_write_step();
 
-      virtual void update_build_plan_from_storage();
+      virtual void update_build_plan_from_build_plan_spreadsheet_export();
 
-      virtual void send_build_plan_to_storage();
+      virtual void write_build_plan_parts();
 
 
    };
