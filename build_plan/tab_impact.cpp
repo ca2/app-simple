@@ -4,6 +4,8 @@
 #include "impact.h"
 #include "render.h"
 #include "acme/constant/user_message.h"
+#include "acme/filesystem/filesystem/directory_context.h"
+#include "acme/filesystem/filesystem/listing.h"
 #include "berg/user/user/tab_pane.h"
 
 
@@ -43,17 +45,68 @@ namespace app_simple_build_plan
 
       }
 
-      set_tab("Menu", MENU_IMPACT);
-      set_tab("05Jul2026", "build_plan:05Jul2026");
-      set_tab("12Jun2026", "build_plan:12Jun2026");
-      set_tab("text://app-simple/build_plan/:002", "drawing2");
-      set_tab("text://app-simple/build_plan/:003", "drawing3");
-      set_tab("text://app-simple/build_plan/:box gradient", "drawing4");
-      set_tab("text://app-simple/build_plan/:circle path", "drawing5");
-      set_tab("text://app-simple/build_plan/:arcs", "drawing6");
-      set_tab("text://app-simple/build_plan/:arcpths", "drawing7");
+      ::file::path pathBuildPlanFolder = "google_drive://application/app-simple/build_plan";
 
-      set_current_tab_by_id("build_plan:05Jul2026");
+      auto files = directory()->files(pathBuildPlanFolder);
+
+      files.predicate_sort(
+         [](auto &path1, auto &path2)
+         {
+            return path1 > path2;
+         });
+
+      int iLimitCount = 10;
+
+      auto & straBuildPlan = m_papp->m_straBuildPlan;
+
+      for (auto & path : files)
+      {
+
+         ::string strName = path.name();
+
+         if (strName.ends_eat(".build_plan_spreadsheet_export"))
+         {
+
+            auto strBuildPlan = strName;
+
+            straBuildPlan.add(strBuildPlan);
+
+            if (straBuildPlan.size() >= 10)
+            {
+
+               break;
+
+            }
+
+         }
+
+      }
+
+      ::string_array & straBuildPlanId = m_papp->m_straBuildPlanId;
+
+      add_tab("Menu", MENU_IMPACT);
+
+      if (straBuildPlan.has_element())
+      {
+         for (auto &strBuildPlan: straBuildPlan)
+         {
+            ::string strBuildPlanId;
+            strBuildPlanId = "build_plan:" + strBuildPlan;
+            add_tab(strBuildPlan, strBuildPlanId);
+            straBuildPlanId.add(strBuildPlanId);
+         }
+         set_current_tab_by_id(straBuildPlanId.first());
+      }
+      //set_tab("05Jul2026", "build_plan:05Jul2026");
+      //set_tab("12Jun2026", "build_plan:12Jun2026");
+      //set_tab("text://app-simple/build_plan/:002", "drawing2");
+      //set_tab("text://app-simple/build_plan/:003", "drawing3");
+      //set_tab("text://app-simple/build_plan/:box gradient", "drawing4");
+      //set_tab("text://app-simple/build_plan/:circle path", "drawing5");
+      //set_tab("text://app-simple/build_plan/:arcs", "drawing6");
+      //set_tab("text://app-simple/build_plan/:arcpths", "drawing7");
+
+      
 
    }
 
