@@ -18,6 +18,10 @@ namespace app_simple_build_plan
       ::data::check_property           m_checkNoClientFrame;
       ::data::text_property            m_textSimple;
       ::data::text_property            m_textMainTitle;
+
+
+      ::string_array m_straBuildPlan;
+      ::string_array m_straBuildPlanId;
       //__PROPERTIES(application)
       //   __PROPERTY(e_check, m_echeckSimple, "simple_checkbox");
       //   __PROPERTY(e_check, m_echeckNoClientFrame, "no_client_frame");
