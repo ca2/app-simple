@@ -28,6 +28,8 @@ namespace app_simple_build_plan
    build_plan_layout::build_plan_layout()
    {
 
+      m_bModified = true;
+
    }
 
 
@@ -270,7 +272,7 @@ namespace app_simple_build_plan
 
 
 
-   void build_plan_layout::send_build_plan_to_storage()
+   void build_plan_layout::write_build_plan_parts()
    {
       //::pointer_array<::string_array> straa;
 
@@ -287,11 +289,19 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend =
-         "google_drive://application/app-simple/build_plan/" + m_strId + "_edit_build_plan_time_and_status.comma_separated";
+         "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part1.txt";
+      auto timeNow = ::time::now();
+      ::string strDate;
+      ::earth::time earthtimeNow(timeNow);
+      strDate.formatf("%04d-%02d-%02d_%02d-%02d", earthtimeNow.year(), earthtimeNow.month(),
+         earthtimeNow.day(), earthtimeNow.hour(), earthtimeNow.minute());
+      ::file::path pathSendB = "google_drive://application/app-simple/build_plan/collection/" + m_strId + "_"+strDate+".build_plan/part1.txt";
 
       auto pathProcessedSend = m_papplication->defer_process_path(pathSend);
+      auto pathProcessedSendB = m_papplication->defer_process_path(pathSendB);
 
       file()->put_text(pathSend, str);
+      file()->put_text(pathSendB, str);
 
       ::string_stream str2;
       for (int iLine = 0; iLine < m_editaComment.size(); iLine++)
@@ -304,17 +314,64 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend2 =
-         "google_drive://application/app-simple/build_plan/" + m_strId + "_edit_build_plan_comment.comma_separated";
+         "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part2.txt";
+      ::file::path pathSendB2 =
+         "google_drive://application/app-simple/build_plan/collection/" + m_strId + "_" + strDate + ".build_plan/part2.txt";
 
       file()->put_text(pathSend2, str2);
+      file()->put_text(pathSendB2, str2);
 
 
    }
 
 
+   void build_plan_layout::start_auto_write_task()
+   {
+
+      
+      if (m_ptaskAutoWrite)
+      {
+
+         m_ptaskAutoWrite->set_finish();
+      }
+
+      m_ptaskAutoWrite = m_papp->fork(
+         [this]()
+         {
+            while (::task_get_run())
+            {
+
+               preempt(1_s);
+
+               auto_write_step();
+
+            }
+         });
 
 
-   void build_plan_layout::update_build_plan_from_storage()
+
+   }
+
+
+   void build_plan_layout::auto_write_step()
+   {
+
+      if (!m_bModified)
+      {
+
+         return;
+
+      }
+
+      m_bModified = false;
+
+      write_build_plan_parts();
+
+   }
+
+
+
+   void build_plan_layout::update_build_plan_from_build_plan_spreadsheet_export()
    {
 
 
@@ -339,7 +396,7 @@ namespace app_simple_build_plan
          return true;
       };*/
 
-      ::file::path path = "google_drive://application/app-simple/build_plan/" + m_strId + "_build_plan.comma_separated";
+      ::file::path path = "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan_spreadsheet_export";
 
       auto pathProcessed = m_papplication->defer_process_path(path);
 
@@ -688,13 +745,21 @@ namespace app_simple_build_plan
                auto span = timeEnd - timeStart;
                pstillSpan->set_window_text(datetime()->friendly_elapsed(span.m_iSecond));
             }
+            
+            m_bModified = true;
+
+         };
+
+         ::procedure procedureUpdateStatus = [this]()
+         {
+            m_bModified = true;
          };
 
          m_pcolumnDateStart->add_row(iLine, this, playoutLine, strStart, procedureUpdateSpan, false, false);
 
          m_pcolumnDateEnd->add_row(iLine, this, playoutLine, strEnd, procedureUpdateSpan, false, false);
 
-         m_pcolumnStatus->add_row(iLine, this, playoutLine, strStatus, {}, true, true);
+         m_pcolumnStatus->add_row(iLine, this, playoutLine, strStatus, procedureUpdateStatus, true, true);
 
          auto plabelHost = create_label(playoutLine);
 

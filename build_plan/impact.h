@@ -26,7 +26,6 @@ namespace app_simple_build_plan
 
       ::pointer<build_plan_layout> m_pbuildplanlayout;
 
-
       //class string_column :
       //   virtual public ::particle
       //{
