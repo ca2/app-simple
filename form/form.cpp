@@ -2,6 +2,7 @@
 #include "form.h"
 #include "acme/constant/user_message.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/message/user.h"
 
 

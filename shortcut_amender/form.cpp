@@ -2,6 +2,7 @@
 #include "form.h"
 #include "aura/message/user.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 
 
 namespace app_simple_shortcut_amender

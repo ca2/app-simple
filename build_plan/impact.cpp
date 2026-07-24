@@ -11,6 +11,7 @@
 #include "acme/prototype/datetime/datetime.h"
 #include "apex/handler/signal.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/graphics/image/context.h"
 #include "aura/graphics/image/drawing.h"
 #include "aura/graphics/write_text/font.h"
@@ -753,7 +754,7 @@ namespace app_simple_build_plan
 
    //            ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-   //            pimage->g()->draw(imagedrawing);
+   //            pgraphicsImage->draw(imagedrawing);
    //         }
 
 
@@ -814,7 +815,7 @@ namespace app_simple_build_plan
 
    //            ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-   //            pimage->g()->draw(imagedrawing);
+   //            pgraphicsImage->draw(imagedrawing);
 
 
    //         }

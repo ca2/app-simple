@@ -14,6 +14,7 @@
 #include "apex/networking/networking.h"
 #include "apex/platform/system.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/message/user.h"
 #include "berg/user/user/impact_system.h"
 #include "berg/user/user/split_impact.h"
