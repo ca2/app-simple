@@ -3,6 +3,7 @@
 #include "application.h"
 #include <math.h>
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/graphics/draw2d/draw2d.h"
 #include "aura/graphics/draw2d/pen.h"
 

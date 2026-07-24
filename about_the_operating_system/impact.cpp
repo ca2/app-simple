@@ -8,6 +8,7 @@
 #include "acme/handler/handler.h"
 #include "apex/handler/signal.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/message/user.h"
 #include "berg/user/user/impact_system.h"
 #include "berg/user/user/split_impact.h"

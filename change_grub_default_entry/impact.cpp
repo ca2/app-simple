@@ -5,6 +5,7 @@
 #include "berg/user/user/impact_system.h"
 #include "berg/user/user/split_impact.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_pointer.h"
 
 
 namespace app_simple_change_grub_default_entry
