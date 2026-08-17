@@ -1,5 +1,5 @@
 // From computer_list2.h by camilo on 2023-08-16 17:07 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "command.h"
 
 

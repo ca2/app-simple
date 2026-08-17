@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "FileTable.h"
 #include <string>
 #include <io.h>

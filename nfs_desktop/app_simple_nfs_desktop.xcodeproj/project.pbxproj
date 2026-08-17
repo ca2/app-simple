@@ -23,7 +23,7 @@
 		318D16C821F53EE12583CC49 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 875F1EF5BB5E857492743A90 /* _.cpp */; };
 		91B1D454C367D11BAE9299CA /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 802DF31DA310B56C77F63C7A /* frame.cpp */; };
 		A1FDBCE23C5581217A369DF9 /* main_frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4352B27085CAF5C7C3895F30 /* main_frame.cpp */; };
-		9ABDB8139CA7A29C089D1DA5 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22662FD7CB043F3910D45073 /* framework.cpp */; };
+		9ABDB8139CA7A29C089D1DA5 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 22662FD7CB043F3910D45073 /* platform.cpp */; };
 		398EA71CFDE8AFE45FDC0533 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 530E7FE9F43DFB4A29EFA8E0 /* application.h */; };
 		DBF3E8D50F913F33AAD93C97 /* frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 79105142531DEE281E3C2DB0 /* frame.h */; };
 		B753D8DB42159BF3826032B5 /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44A652ED29EF19BF6FCF9B6 /* tab_impact.cpp */; };
@@ -31,7 +31,7 @@
 		03DD66B2790A7FFFA927BF37 /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 09BBBB38223CE5A57D76732B /* tab_impact.h */; };
 		CC1F25EA26F496C5977CF2B3 /* document.h in Headers */ = {isa = PBXBuildFile; fileRef = 28B56DDC0530CE1414E19901 /* document.h */; };
 		0200A558802ADCC286513765 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 07428B13472050DFD646FE3F /* resource.h */; };
-		C96B38C3C7928FE3E1871EB9 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1617946E9F7DE59BB9C1A1D1 /* framework.h */; };
+		C96B38C3C7928FE3E1871EB9 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 1617946E9F7DE59BB9C1A1D1 /* platform.h */; };
 		B179F464D0C081E7DE4B0AD6 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1251B4D9A5A9AF17EF4F0F2 /* application.cpp */; };
 		500C709B8FA26F17CB5BD6D2 /* document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95E34890C5C214C173E6939 /* document.cpp */; };
 		7A69B06FD2367B2BD3FE5532 /* main_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BB1FC85D39CB7BE7BEE4A2 /* main_frame.h */; };
@@ -92,7 +92,7 @@
 		F832AC822B50E810393F66C2 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		802DF31DA310B56C77F63C7A /* frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		4352B27085CAF5C7C3895F30 /* main_frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
-		22662FD7CB043F3910D45073 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		22662FD7CB043F3910D45073 /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		530E7FE9F43DFB4A29EFA8E0 /* application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		79105142531DEE281E3C2DB0 /* frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		E44A652ED29EF19BF6FCF9B6 /* tab_impact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tab_impact.cpp; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		09BBBB38223CE5A57D76732B /* tab_impact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab_impact.h; sourceTree = "<group>"; };
 		28B56DDC0530CE1414E19901 /* document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		07428B13472050DFD646FE3F /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
-		1617946E9F7DE59BB9C1A1D1 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		1617946E9F7DE59BB9C1A1D1 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		F1251B4D9A5A9AF17EF4F0F2 /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		E95E34890C5C214C173E6939 /* document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		15BB1FC85D39CB7BE7BEE4A2 /* main_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 				2CBD319E05EC0AF0240D982C /* edit_impact.h */,
 				802DF31DA310B56C77F63C7A /* frame.cpp */,
 				79105142531DEE281E3C2DB0 /* frame.h */,
-				22662FD7CB043F3910D45073 /* framework.cpp */,
-				1617946E9F7DE59BB9C1A1D1 /* framework.h */,
+				22662FD7CB043F3910D45073 /* platform.cpp */,
+				1617946E9F7DE59BB9C1A1D1 /* platform.h */,
 				958491DF488A9DAE73090645 /* impact.cpp */,
 				4E5CAA7C2253F7C11845462B /* impact.h */,
 				696DC5B78BE4ECD40CBADF40 /* incoming_socket_thread.cpp */,
@@ -227,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6354928ADEE710A703538F6 /* targetver.h in Headers */,
-				C96B38C3C7928FE3E1871EB9 /* framework.h in Headers */,
+				C96B38C3C7928FE3E1871EB9 /* platform.h in Headers */,
 				DBF3E8D50F913F33AAD93C97 /* frame.h in Headers */,
 				03DD66B2790A7FFFA927BF37 /* tab_impact.h in Headers */,
 				275C6E135CB25CB6813123E4 /* impact.h in Headers */,
@@ -331,7 +331,7 @@
 				E9D097FB2D536C440229D27D /* socket.cpp in Sources */,
 				500C709B8FA26F17CB5BD6D2 /* document.cpp in Sources */,
 				7AF9E912AA1E499844F7C7E5 /* incoming_socket_thread.cpp in Sources */,
-				9ABDB8139CA7A29C089D1DA5 /* framework.cpp in Sources */,
+				9ABDB8139CA7A29C089D1DA5 /* platform.cpp in Sources */,
 				05EAAB8D46B54A5B55E7D88B /* main_document.cpp in Sources */,
 				6A012E663CB6AF03435B6DCB /* command.cpp in Sources */,
 				A1FDBCE23C5581217A369DF9 /* main_frame.cpp in Sources */,
@@ -408,7 +408,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -504,7 +504,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

@@ -1,5 +1,5 @@
 // From command_list2.cpp by camilo on 2023-08-16 17:07 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "command.h"
 #include "command_document.h"
 #include "command_list2.h"

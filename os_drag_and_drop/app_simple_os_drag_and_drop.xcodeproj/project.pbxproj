@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8D06D09AD3B4919BF655012 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 657C6E141A06C41830A5F2E1 /* framework.cpp */; };
+		F8D06D09AD3B4919BF655012 /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 657C6E141A06C41830A5F2E1 /* platform.cpp */; };
 		3731707900686AFD72A4AD8E /* simple_os_drag_and_drop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7BFB246F1D530B132C91D13 /* simple_os_drag_and_drop.cpp */; };
 		EF028B1B1B783EE6F2BD3E4E /* _.h in Headers */ = {isa = PBXBuildFile; fileRef = 62322918735EF18CB72A0C14 /* _.h */; };
 		51B9E90B8492F39915D13E4B /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 464BD55445F0EA19210F7E68 /* tab_impact.h */; };
@@ -41,8 +41,8 @@
 		545BF02ACC1BD83494B6AE54 /* libapp_simple_os_drag_and_drop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BCF91607624638F536A716 /* libapp_simple_os_drag_and_drop.a */; };
 		DEB22A90799543FBB6198EC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EEF4C70C35C1AE9BAD322FC /* InfoPlist.strings */; };
 		F6C4FDC5B57322D579B3FABA /* app_core_hellomultiverse_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C1307956B53E99A94EC760 /* app_core_hellomultiverse_iosTests.m */; };
-		67A7F5CC94B74BF17DB68C6C /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 657C6E141A06C41830A5F2E1 /* framework.cpp */; };
-		DDE8D40156D850342F327D76 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 113965A6F1D33139911E6E74 /* framework.h */; };
+		67A7F5CC94B74BF17DB68C6C /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 657C6E141A06C41830A5F2E1 /* platform.cpp */; };
+		DDE8D40156D850342F327D76 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 113965A6F1D33139911E6E74 /* platform.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +116,8 @@
 		A9C401B5E8B4106314BF5D23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53C1307956B53E99A94EC760 /* app_core_hellomultiverse_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = app_core_hellomultiverse_iosTests.m; sourceTree = "<group>"; };
 		E58F43214637018155444E12 /* libapp_simple_os_drag_and_drop.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_os_drag_and_drop.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		657C6E141A06C41830A5F2E1 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		113965A6F1D33139911E6E74 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		657C6E141A06C41830A5F2E1 /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
+		113965A6F1D33139911E6E74 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		061F0AED67EF4A3C88E09F61 /* libios_aura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libios_aura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCAA803E8D53F6262B816F7 /* libios_axis.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libios_axis.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF413947FB1427346E0E77B3 /* libios_base.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libios_base.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,8 +234,8 @@
 				B93EDE5DB36A32CEC03C2961 /* document.h */,
 				3195DDC87A3BBD7C865F8AD6 /* frame.cpp */,
 				BAC47DF6B8B2CA06626BBA85 /* frame.h */,
-				657C6E141A06C41830A5F2E1 /* framework.cpp */,
-				113965A6F1D33139911E6E74 /* framework.h */,
+				657C6E141A06C41830A5F2E1 /* platform.cpp */,
+				113965A6F1D33139911E6E74 /* platform.h */,
 				9040EA0A5220F8D5D4868684 /* main_frame.cpp */,
 				D4852F7C42512381F301E8E2 /* main_frame.h */,
 				62FDE53A90122CC07506E7FB /* main_impact.cpp */,
@@ -263,7 +263,7 @@
 				061B24F83F361FC121CA6828 /* impact.h in Headers */,
 				E950247DC3FEE3127006DE22 /* main_frame.h in Headers */,
 				51B9E90B8492F39915D13E4B /* tab_impact.h in Headers */,
-				DDE8D40156D850342F327D76 /* framework.h in Headers */,
+				DDE8D40156D850342F327D76 /* platform.h in Headers */,
 				5668E3AEB964AAF4FCC8EEE1 /* main_impact.h in Headers */,
 				A23B41AECF29555794491511 /* document.h in Headers */,
 				CD430B214914369384913068 /* application.h in Headers */,
@@ -399,7 +399,7 @@
 				161B6AE80346D36FA9CE2DD9 /* main_frame.cpp in Sources */,
 				5663044BE4EE6C17048A6668 /* main_impact.cpp in Sources */,
 				C6EA6FC010B0223574D8E7A0 /* impact.cpp in Sources */,
-				F8D06D09AD3B4919BF655012 /* framework.cpp in Sources */,
+				F8D06D09AD3B4919BF655012 /* platform.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +420,7 @@
 				078BD10D1827622070BEC8A2 /* impact.cpp in Sources */,
 				3DBD2524ABBB4A58544D3C4B /* tab_impact.cpp in Sources */,
 				F74D72C53EFA66EED39ED23A /* main_impact.cpp in Sources */,
-				67A7F5CC94B74BF17DB68C6C /* framework.cpp in Sources */,
+				67A7F5CC94B74BF17DB68C6C /* platform.cpp in Sources */,
 				0600FFADFF5824CF7619CEB0 /* document.cpp in Sources */,
 				3731707900686AFD72A4AD8E /* simple_os_drag_and_drop.cpp in Sources */,
 				D61099CEC870700959972377 /* application.cpp in Sources */,
@@ -590,7 +590,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -660,7 +660,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

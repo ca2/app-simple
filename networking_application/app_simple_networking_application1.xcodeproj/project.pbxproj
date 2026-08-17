@@ -54,7 +54,7 @@
 		3E9646B3B32F4601CEB61B9B /* _app_simple_networking_application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _app_simple_networking_application.h; sourceTree = "<group>"; };
 		83129DFA350909975F0C6197 /* frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
 		F337A3B27866477F6DE4A11E /* main_frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_frame.cpp; sourceTree = "<group>"; };
-		C1E795D1947CF8F30015E1F8 /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		C1E795D1947CF8F30015E1F8 /* platform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
 		0E78578E6D6AA182C1FC14BE /* application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = application.h; sourceTree = "<group>"; };
 		F5D5980624121F50C07E998F /* frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = frame.h; sourceTree = "<group>"; };
 		8E544666B9CB10965CECB5E4 /* tab_impact.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tab_impact.cpp; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		DA018E4839FD110416D9CA4A /* tab_impact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tab_impact.h; sourceTree = "<group>"; };
 		94D79C840E925343B012173F /* document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = document.h; sourceTree = "<group>"; };
 		4319CA160B87EEEFC0658C66 /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
-		BB0CAA9F942AF930019EDDDF /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		BB0CAA9F942AF930019EDDDF /* platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 		ADD563A9A0F0DB3625301812 /* application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 		DBF5AB4B7C98820C1E91909C /* document.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = document.cpp; sourceTree = "<group>"; };
 		B2EDF0F2FCD9D1165E0E4282 /* main_frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_frame.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 				94D79C840E925343B012173F /* document.h */,
 				83129DFA350909975F0C6197 /* frame.cpp */,
 				F5D5980624121F50C07E998F /* frame.h */,
-				C1E795D1947CF8F30015E1F8 /* framework.cpp */,
-				BB0CAA9F942AF930019EDDDF /* framework.h */,
+				C1E795D1947CF8F30015E1F8 /* platform.cpp */,
+				BB0CAA9F942AF930019EDDDF /* platform.h */,
 				226EC9C89FDFB0CDC4E7D63F /* impact.cpp */,
 				10F937D806ECC9F99AD8AA9E /* impact.h */,
 				F337A3B27866477F6DE4A11E /* main_frame.cpp */,
@@ -349,7 +349,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -417,7 +417,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

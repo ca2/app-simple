@@ -249,7 +249,7 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
@@ -324,7 +324,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticRelease|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">Create</PrecompiledHeader>

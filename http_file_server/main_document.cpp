@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "main_document.h"
 //#include "computer_list2.h"
 //#include "interface_list2.h"

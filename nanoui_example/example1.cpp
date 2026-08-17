@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "example1.h"
 #include "main_window.h"
 #include "acme/constant/_font_awesome.h"
@@ -179,17 +179,17 @@ namespace app_simple_nanoui_example
       //#endif
       
                ___new Label(window, "Image panel & scroll panel", "sans-bold");
-               PopupButton * image_panel_btn = ___new PopupButton(window, "Image Panel");
-               image_panel_btn->set_icon(e_font_awesome_images);
-               popup = image_panel_btn->popup();
+               PopupButton * ppopupbuttonImagePanel = ___new PopupButton(window, "Image Panel");
+               ppopupbuttonImagePanel->set_icon(e_font_awesome_images);
+               popup = ppopupbuttonImagePanel->popup();
                VScrollPanel * vscroll = ___new VScrollPanel(popup);
                ImagePanel * img_panel = ___new ImagePanel(vscroll);
                img_panel->load_image_directory("matter://icons");
                popup->set_fixed_size({ 245, 150 });
       
-               auto image_window = ___new Window(this, "Selected image");
-               image_window->set_position({ 710, 15 });
-               image_window->set_layout(___new GroupLayout(3));
+               auto pwindowImage = ___new Window(this, "Selected image");
+               pwindowImage->set_position({ 710, 15 });
+               pwindowImage->set_layout(___new GroupLayout(3));
       
                //// Create a Texture instance for each object
                //for (auto & icon : icons) {
@@ -212,19 +212,19 @@ namespace app_simple_nanoui_example
                //   m_images.emplace_back(tex, std::transfer(texture_data));
                //}
       
-               ImageImpact * image_impact = ___new ImageImpact(image_window);
+               ImageImpact * pimageimpact = ___new ImageImpact(pwindowImage);
                //if (!m_images.empty())
-                 // image_impact->set_image(m_images[0].first);
-               image_impact->center();
+                 // pimage_impact->set_image(m_images[0].first);
+               pimageimpact->center();
                m_current_image = 0;
       
-               img_panel->set_callback([this, image_impact, img_panel](::collection::index i) {
+               img_panel->set_callback([this, pimageimpact, img_panel](::collection::index i) {
                   //std::cout << "Selected item " << i << std::endl;
-                  image_impact->set_image(img_panel->_get_image(i));
+                  pimageimpact->set_image(img_panel->_get_image(i));
                   m_current_image = i;
                   });
       
-               //image_impact->set_pixel_callback(
+               //pimage_impact->set_pixel_callback(
                //   [this](const Vector2i & index, ::i8 ** out, size_t size) {
                //      const Texture * texture = m_images[m_current_image].first.get();
                //      uint8_t * data = m_images[m_current_image].second.get();
@@ -240,7 +240,7 @@ namespace app_simple_nanoui_example
                tools->set_layout(___new BoxLayout(::e_orientation_horizontal, ::nanoui::e_alignment_middle,
                                                   ::i32_rectangle(0, 0, 0, 0), 6));
                b = ___new Button(tools, "Open");
-               b->set_callback([this,image_impact] {
+               b->set_callback([this,pimageimpact] {
                   
                   //m_puserinteraction->node()->node_post(__routine([this, image_impact]()
                     //         {
@@ -251,13 +251,13 @@ namespace app_simple_nanoui_example
                   pdialog->m_filedialogfilter.add({ "JPEG file", "*.jpeg" });
                   pdialog->m_filedialogfilter.add({ "JPG file", "*.jpg" });
                   pdialog->m_filedialogfilter.add({ "Text file", "*.txt" });
-                  pdialog->m_procedureResponse = [this, image_impact](::file::file_dialog * pdialog)
+                  pdialog->m_procedureResponse = [this, pimageimpact](::file::file_dialog * pdialog)
                   {
 
                      if(pdialog->m_patha.has_element())
                      {
 
-                        image_impact->set_image(___load_image(m_puserinteraction, pdialog->m_patha.first().c_str()));
+                        pimageimpact->set_image(___load_image(m_puserinteraction, pdialog->m_patha.first().c_str()));
 
                      }
 
@@ -275,7 +275,7 @@ namespace app_simple_nanoui_example
                  // });
 
                b = ___new Button(tools, "Save");
-               b->set_callback([this, image_impact]
+               b->set_callback([this, pimageimpact]
                {
 
                   //auto pwindow = m_puserinteraction->window();
@@ -284,13 +284,13 @@ namespace app_simple_nanoui_example
                   pdialog->m_puserelement = m_puserinteraction;
                   pdialog->m_filedialogfilter.add({ "Portable Network Graphics", "*.png" });
                   pdialog->m_filedialogfilter.add({ "Text file", "*.txt" } );
-                  pdialog->m_procedureResponse = [this, image_impact](::file::file_dialog * pdialog)
+                  pdialog->m_procedureResponse = [this, pimageimpact](::file::file_dialog * pdialog)
                   {
 
                      if(pdialog->m_patha.has_element())
                      {
 
-                        ___save_image(m_puserinteraction, pdialog->m_patha.first().c_str(), image_impact->image());
+                        ___save_image(m_puserinteraction, pdialog->m_patha.first().c_str(), pimageimpact->image());
 
                      }
 

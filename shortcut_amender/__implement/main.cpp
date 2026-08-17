@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #define APPLICATION_NAMESPACE app_simple_shortcut_amender
 #include "acme/inline/application/main_executable.inl"
 

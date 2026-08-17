@@ -1,5 +1,5 @@
 // From document.cpp by camilo on 2023-08-16 17:21 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "command.h"
 #include "document.h"
 //#include "computer_list2.h"

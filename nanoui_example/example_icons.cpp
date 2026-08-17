@@ -16,7 +16,7 @@
  * was generated, so the scripts that generated it needs to update as well.
  */
 
-#include "framework.h"
+#include "platform.h"
 #include "main_window.h"
 #include "example_icons.h"
 #include "acme/constant/_font_awesome.h"

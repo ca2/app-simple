@@ -310,14 +310,14 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -332,8 +332,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -352,8 +352,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -372,8 +372,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -392,13 +392,13 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -412,8 +412,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -430,8 +430,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -448,8 +448,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -463,7 +463,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -473,7 +473,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -487,8 +487,8 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -512,13 +512,13 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -532,8 +532,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -550,14 +550,14 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -572,8 +572,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
@@ -592,13 +592,13 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(OutDir);$(__operating_system)storage-universal_windows\third\library\$(PlatformName)\$(Configuration)\;$(__operating_system)storage-universal_windows\library\$(PlatformName)\$(Configuration)\;$(SolutionDir)..\..\..\time\$(PlatformName)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -612,8 +612,8 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>

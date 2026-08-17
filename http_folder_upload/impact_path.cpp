@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "application.h"
 #include "impact_path.h"
 #include "impact_folder_path.h"

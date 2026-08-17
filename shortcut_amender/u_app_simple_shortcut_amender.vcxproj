@@ -72,7 +72,7 @@
     <ClInclude Include="form_001.h" />
     <ClInclude Include="form_002.h" />
     <ClInclude Include="frame.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="main_impact.h" />
     <ClInclude Include="tab_impact.h" />
@@ -86,7 +86,7 @@
     <ClCompile Include="form_001.cpp" />
     <ClCompile Include="form_002.cpp" />
     <ClCompile Include="frame.cpp" />
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
@@ -406,7 +406,7 @@
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <CompileAsManaged>false</CompileAsManaged>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -416,7 +416,7 @@
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -435,8 +435,8 @@
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <CompileAsManaged>false</CompileAsManaged>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -461,7 +461,7 @@
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -469,7 +469,7 @@
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -487,8 +487,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -533,14 +533,14 @@
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -560,8 +560,8 @@
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -584,8 +584,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -608,8 +608,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -631,7 +631,7 @@
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -639,7 +639,7 @@
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -657,8 +657,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -680,8 +680,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -703,8 +703,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -727,7 +727,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -735,7 +735,7 @@
       <CompileAsWinRT>false</CompileAsWinRT>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -755,8 +755,8 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -779,7 +779,7 @@
       <AdditionalIncludeDirectories>include;$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../../operating_system/operating_system-universal_windows/_include;$(SolutionDir)../../../operating_system/operating_system-universal_windows;$(SolutionDir)../../../operating_system/operating_system-windows_common;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../../source/port/include;$(SolutionDir)../../../source/port;.;$(IntDir);$(SolutionDir)../../../;$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
@@ -787,7 +787,7 @@
       <AssemblerListingLocation>$(IntDir)%(RelativeDir)</AssemblerListingLocation>
       <EnableModules>false</EnableModules>
       <OpenMPSupport>false</OpenMPSupport>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -805,8 +805,8 @@
       <AdditionalIncludeDirectories>$(SolutionDir)../../inc;$(__sensitive)/sensitive/include;$(SolutionDir)../../../source/include;$(__operating_system)local/include;$(__operating_system)third-universal_windows/$(PlatformName)/$(Configuration)/include;$(__operating_system)third-universal_windows/include;$(__operating_system)third-universal_windows/third/include;$(__operating_system)third-universal_windows/third/include/include;$(SolutionDir)../../operating_system-universal_windows/_include;$(SolutionDir)../../operating_system-universal_windows;$(SolutionDir)../../../source/app/_include;$(SolutionDir)../../third/include;.;$(IntDir);$(SolutionDir)../../../source;$(SolutionDir)../../../source/app;$(ProjectDir)../..;$(ProjectDir)../../;$(ProjectDir)../;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <ExceptionHandling>Async</ExceptionHandling>
-      <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderOutputFile>$(IntDir)framework.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderFile>platform.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)platform.pch</PrecompiledHeaderOutputFile>
       <PreprocessorDefinitions>_APP_SIMPLE_SHORTCUT_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsManaged>false</CompileAsManaged>
       <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>

@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "simple_os_drag_and_drop.h"
 #include "acme/platform/node.h"
 #include "acme/platform/system.h"
@@ -176,7 +176,7 @@ namespace app_simple_os_drag_and_drop
 
                   ::image::image_pointer pimpl = pimage->clone();
 
-                  ::image::image_pointer imageClone = pimpl;
+                  ::image::image_pointer pimageClone = pimpl;
 
                   m_pimagemap["pat1grayed"] = imageClone;
 

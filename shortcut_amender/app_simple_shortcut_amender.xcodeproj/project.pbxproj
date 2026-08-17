@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89CA3CB8F58D1669E9EB250D /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E826A0E9798C5DBB0042125C /* framework.cpp */; };
+		89CA3CB8F58D1669E9EB250D /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E826A0E9798C5DBB0042125C /* platform.cpp */; };
 		EFA64A546B4DEF6C8A334009 /* tab_impact.h in Headers */ = {isa = PBXBuildFile; fileRef = 201F182F1268869063B3F731 /* tab_impact.h */; };
 		35B373717B9019882C8ACDAA /* tab_impact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABF3F700A15F476CA9054C35 /* tab_impact.cpp */; };
 		FDCC1638A929E04A010C9604 /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD8FD3E15F0D6CCC72AFC8A /* application.cpp */; };
@@ -44,8 +44,8 @@
 		FFF6073912406D833C8C0D85 /* form_002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCA90E9EF002ED38C296BEFF /* form_002.cpp */; };
 		F07D179506BF9449F9ED7DF9 /* libapp_simple_shortcut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 550AF6E9548E325BDC1C0A2C /* libapp_simple_shortcut.a */; };
 		C376E738C7F41A03AFDCA00F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65E3BBEB34B22CBE88E4573 /* InfoPlist.strings */; };
-		E7DD85FBAB24CDC28E83997F /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E826A0E9798C5DBB0042125C /* framework.cpp */; };
-		7F3AEC8C72EF2EBEED5F5DAA /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = BDAF8B862A6C443D4F630A53 /* framework.h */; };
+		E7DD85FBAB24CDC28E83997F /* platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E826A0E9798C5DBB0042125C /* platform.cpp */; };
+		7F3AEC8C72EF2EBEED5F5DAA /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = BDAF8B862A6C443D4F630A53 /* platform.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +118,8 @@
 		7E3468AAC83FA833180DA546 /* app_core_hellomultiverse_iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "app_core_hellomultiverse_iosTests-Info.plist"; sourceTree = "<group>"; };
 		DA73D2624C051C7E713CB090 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE3678C3D86B09CA7FECCAB2 /* libapp_simple_shortcut.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_shortcut.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		E826A0E9798C5DBB0042125C /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		BDAF8B862A6C443D4F630A53 /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		E826A0E9798C5DBB0042125C /* platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform.cpp; sourceTree = "<group>"; };
+		BDAF8B862A6C443D4F630A53 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,8 +229,8 @@
 				03E584F6F9D2111AC1427A4F /* document.h */,
 				9001C4F33092291E2B0FB882 /* frame.cpp */,
 				BBB52D2B22E9532E13CD611A /* frame.h */,
-				E826A0E9798C5DBB0042125C /* framework.cpp */,
-				BDAF8B862A6C443D4F630A53 /* framework.h */,
+				E826A0E9798C5DBB0042125C /* platform.cpp */,
+				BDAF8B862A6C443D4F630A53 /* platform.h */,
 				DEADE18F9C7E07FDBC62565E /* main_frame.cpp */,
 				DB2D2DF3E6B27E4FA5467EF0 /* main_frame.h */,
 				0964D728D8E04B95F857A1AB /* main_impact.cpp */,
@@ -252,7 +252,7 @@
 			files = (
 				15E39CDFA80C7275910484F4 /* _.h in Headers */,
 				88009BAD217A101CAABE48D7 /* frame.h in Headers */,
-				7F3AEC8C72EF2EBEED5F5DAA /* framework.h in Headers */,
+				7F3AEC8C72EF2EBEED5F5DAA /* platform.h in Headers */,
 				4431E7354B062F98E3AA4C18 /* form_002.h in Headers */,
 				D8E5FCABD38F11CEC009C45A /* form.h in Headers */,
 				8A61B8DC98E176143A1B883D /* document.h in Headers */,
@@ -394,7 +394,7 @@
 				F8FFC93A22DF79414AB6A397 /* main_frame.cpp in Sources */,
 				DD4C43089652B0BF27D7F324 /* main_impact.cpp in Sources */,
 				41B3487287209C9BD8ABA066 /* impact.cpp in Sources */,
-				89CA3CB8F58D1669E9EB250D /* framework.cpp in Sources */,
+				89CA3CB8F58D1669E9EB250D /* platform.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +419,7 @@
 				FAEEC3A9EA43871327F3FCF5 /* impact.cpp in Sources */,
 				35B373717B9019882C8ACDAA /* tab_impact.cpp in Sources */,
 				FDCC1638A929E04A010C9604 /* application.cpp in Sources */,
-				E7DD85FBAB24CDC28E83997F /* framework.cpp in Sources */,
+				E7DD85FBAB24CDC28E83997F /* platform.cpp in Sources */,
 				73CA44B42DD775FBD909BF20 /* form_001.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,7 +580,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -649,7 +649,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

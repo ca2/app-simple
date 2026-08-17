@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "MountProg.h"
 #include "FileTable.h"
 #include <string.h>
