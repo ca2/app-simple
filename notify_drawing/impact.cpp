@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "impact.h"
 #include "application.h"
 #include "app-simple/drawing/render.h"

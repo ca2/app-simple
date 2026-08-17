@@ -36,7 +36,7 @@
 		4DEB565B6287C1DC7CA405E3 /* application.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A1A78F60DFFA9FB94AE2016 /* application.h */; };
 		63F6AF94BA5573E613DFCF4C /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ED7A7DEB094706EF598361A /* _.cpp */; };
 		09C101D51761958812CBB62A /* libios_app_simple_shader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDAEEF5044B6B72A281B10A /* libios_app_simple_shader.a */; };
-		3ADCFA6B204F12133E577745 /* framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DD21F4681F93AD2DF8F0EE /* framework.h */; };
+		3ADCFA6B204F12133E577745 /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DD21F4681F93AD2DF8F0EE /* platform.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +125,7 @@
 		3DDAEEF5044B6B72A281B10A /* libios_app_simple_shader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_app_simple_shader.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB469506CCB745CF2673889 /* app_graphics3d_hellomultiverse_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_graphics3d_hellomultiverse_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D815EA51606867A86482768B /* libapp_simple_shader.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapp_simple_shader.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		27DD21F4681F93AD2DF8F0EE /* framework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		27DD21F4681F93AD2DF8F0EE /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,7 +228,7 @@
 				4DACFCE20DF7737E5DCD2FC9 /* document.h */,
 				D60B0CEE1E3F323DA98B7B9E /* frame.cpp */,
 				3ABB885C413A2EC196A0492B /* frame.h */,
-				27DD21F4681F93AD2DF8F0EE /* framework.h */,
+				27DD21F4681F93AD2DF8F0EE /* platform.h */,
 				3CC03637B664CE1739927FEC /* main_frame.cpp */,
 				149B845EDDF11E1AB8AE59DF /* main_frame.h */,
 				46B8F53FFFB89C6CCE66E3E8 /* tab_impact.cpp */,
@@ -252,7 +252,7 @@
 				4DEB565B6287C1DC7CA405E3 /* application.h in Headers */,
 				9746088D1E10E3DB33BE1419 /* tab_impact.h in Headers */,
 				E89F05840AA91B58459F43EE /* main_frame.h in Headers */,
-				3ADCFA6B204F12133E577745 /* framework.h in Headers */,
+				3ADCFA6B204F12133E577745 /* platform.h in Headers */,
 				DE217E8FBB6B0A075B78F03A /* document.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,7 +606,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -693,7 +693,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = framework.h;
+				GCC_PREFIX_HEADER = platform.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

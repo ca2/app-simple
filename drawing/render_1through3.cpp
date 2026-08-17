@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "application.h"
 #include "render.h"
 #include "impact.h"
@@ -58,7 +58,7 @@ namespace app_simple_drawing
 
                      pimage2->transform(e_image_grayscale);
 
-                     pimage2->unmap();
+                     //pimage2->unmap();
 
                      pimage2->set_ok_flag();
 

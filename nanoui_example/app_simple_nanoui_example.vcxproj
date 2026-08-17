@@ -1087,7 +1087,7 @@
     <ClCompile Include="application.cpp" />
     <ClCompile Include="example2.cpp" />
     <ClCompile Include="example_icons.cpp" />
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -1112,7 +1112,7 @@
     <ClInclude Include="example_icons.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="example1.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
     <ClInclude Include="main_window.h" />
     <ClInclude Include="_app_simple_nanoui_example.h" />
   </ItemGroup>

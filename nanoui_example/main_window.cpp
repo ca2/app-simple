@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "main_window.h"
 #include "example1.h"
 #include "example2.h"

@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "application.h"
 #include "command_document.h"
 #include "command_list2.h"

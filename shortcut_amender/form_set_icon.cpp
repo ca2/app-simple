@@ -1,5 +1,5 @@
 // From form_set_icon.cpp by camilo on 2023-03-15 18:49 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "form_set_icon.h"
 #include "application.h"
 #include "acme/constant/id.h"

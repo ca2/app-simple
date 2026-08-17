@@ -1,5 +1,5 @@
 // From impact.cpp by camilo on 2023-08-12 20:49 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "document.h"
 #include "interface_list2.h"
 #include "application.h"

@@ -1,4 +1,4 @@
-#include "framework.h"
+#include "platform.h"
 #include "impact.h"
 #include "frame.h"
 #include "application.h"
@@ -267,7 +267,7 @@ namespace app_simple_shader
 
          auto pimage = image()->create_image(rectangleX.size());
 
-         ::draw2d::graphics_pointer pgraphics = pimage->get_graphics();
+         ::draw2d::graphics_pointer pgraphics = pgraphicsImage;
 
          m_prender->_001OnDraw(pgraphics);
 

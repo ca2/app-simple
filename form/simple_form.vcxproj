@@ -1177,7 +1177,7 @@
     <ClCompile Include="form_001.cpp" />
     <ClCompile Include="form_002.cpp" />
     <ClCompile Include="frame.cpp" />
-    <ClCompile Include="framework.cpp">
+    <ClCompile Include="platform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticDebug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -1209,7 +1209,7 @@
     <ClInclude Include="tab_impact.h" />
     <ClInclude Include="impact.h" />
     <ClInclude Include="_.h" />
-    <ClInclude Include="framework.h" />
+    <ClInclude Include="platform.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="deployment.rc" />

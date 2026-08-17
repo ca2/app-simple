@@ -1,5 +1,5 @@
 // From list2.cpp by camilo on 2023-08-12 20:49 <3ThomasBorregaardSorensen!!
-#include "framework.h"
+#include "platform.h"
 #include "impact.h"
 #include "document.h"
 #include "impact_folder_path.h"

@@ -1,5 +1,5 @@
 // Created by camilo on 2021-06-20 06:00 I love you Thomas Borregaard Soerensen__!!
-#include "framework.h"
+#include "platform.h"
 #include "acme/_application_library.h"
 #include "acme/platform/release_time.h"
 #define APPLICATION_NAMESPACE app_simple_change_grub_default_entry

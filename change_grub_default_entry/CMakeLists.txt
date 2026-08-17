@@ -14,8 +14,8 @@ list(APPEND library_source
    document.h
    frame.cpp
    frame.h
-   framework.cpp
-   framework.h
+   platform.cpp
+   platform.h
    main_frame.cpp
    main_frame.h
    main_impact.cpp
@@ -61,8 +61,8 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
-target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE platform.h)
+target_precompile_headers(static_${PROJECT_NAME} PRIVATE platform.h)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
