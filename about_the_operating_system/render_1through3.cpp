@@ -56,7 +56,13 @@ namespace app_simple_about_the_operating_system
                   if (::is_set(pimage2))
                   {
 
-                     pimage2->transform(e_image_grayscale);
+                     {
+
+                        auto ppixmapImage2 = pimage2->map();
+
+                        ppixmapImage2->transform(e_image_grayscale);
+
+                     }
 
                      //pimage2->unmap();
 
