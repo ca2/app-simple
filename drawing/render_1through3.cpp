@@ -56,11 +56,17 @@ namespace app_simple_drawing
                   if (::is_set(pimage2))
                   {
 
-                     pimage2->transform(e_image_grayscale);
+                     {
 
-                     //pimage2->unmap();
+                        auto ppixmapImage2 = pimage2->map();
 
-                     pimage2->set_ok_flag();
+                        ppixmapImage2->transform(e_image_grayscale);
+
+                        //pimage2->unmap();
+
+                        ppixmapImage2->set_ok_flag();
+
+                     }
 
                      m_pimage2 = pimage2;
 
