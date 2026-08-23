@@ -11,6 +11,7 @@
 #include "acme/prototype/datetime/datetime.h"
 #include "apex/handler/signal.h"
 #include "aura/graphics/draw2d/graphics.h"
+#include "aura/graphics/draw2d/graphics_lease.h"
 #include "aura/graphics/draw2d/graphics_pointer.h"
 #include "aura/graphics/image/context.h"
 #include "aura/graphics/image/drawing.h"
@@ -609,6 +610,8 @@ namespace app_simple_build_plan
 
                pimage = image()->create_image({48, 48});
 
+               auto pgraphicsImage = pimage->acquire_graphics();
+
                ::f64 w = 48.0;
                ::f64 h = 48.0;
 
@@ -662,6 +665,9 @@ namespace app_simple_build_plan
                auto pimage1 = pimage;
 
                pimage = image()->create_image({48, 48});
+
+               auto pgraphicsImage = pimage->acquire_graphics();
+
 
                ::f64 w = 48.0;
                ::f64 h = 48.0;
