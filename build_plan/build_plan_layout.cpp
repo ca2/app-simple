@@ -44,6 +44,7 @@ namespace app_simple_build_plan
       return m_str2a[iLine]->element_at(m_iaCurrent[iLine]);
    }
 
+
    void build_plan_layout::string_column::add_row(::collection::index iLine, berg::form_handler *pformhandler,
                                        ::user::line_layout *plinelayout, const ::scoped_string &scopedstr,
                                        const ::procedure &procedureUpdate, bool bStatus, bool bSimplified)
@@ -72,9 +73,9 @@ namespace app_simple_build_plan
 
       if (bStatus)
       {
-         auto pfont = createø<::write_text::font>();
-         pfont->create_font(e_font_sans_ui, 16_px, e_font_weight_bold);
-         peditStart->m_pfont = pfont;
+         auto pwritetextfont = createø<::write_text::font>();
+         pwritetextfont->create_font(e_font_sans_ui, 16_px, e_font_weight_bold);
+         peditStart->m_pwritetextfont = pwritetextfont;
          pstraStart->add("todo");
          pstraStart->add("running");
          pstraStart->add("skipped");
@@ -780,7 +781,7 @@ namespace app_simple_build_plan
 
          plabelHost->m_ealignText = ::e_align_left_center;
 
-         plabelHost->m_pfont = pfontHost;
+         plabelHost->m_pwritetextfont = pfontHost;
 
 
          _initialize_label(pstillSpan, playoutLine, false);
