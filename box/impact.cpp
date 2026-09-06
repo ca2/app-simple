@@ -137,10 +137,10 @@ namespace app_simple_box
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      //pgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
+      //pdraw2dgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 
@@ -153,14 +153,14 @@ namespace app_simple_box
 
       }
 
-      //pgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
+      //pdraw2dgraphics->fill_rectangle(f64_rectangle_dimension(100, 100, 100, 100), color::magenta);
 
       //return;
 
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleX, argb(128, 128, 128, 128));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(128, 128, 128, 128));
 
       //return;
 
@@ -172,19 +172,19 @@ namespace app_simple_box
 
       ::i32_rectangle rectangleDryProWithLove_Work(100, 100, 200, 200);
 
-      pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
 #endif
 
-      pgraphics->set_text_color(color_dk);
+      pdraw2dgraphics->set_solid_color(color_dk);
 
-      pgraphics->set(m_pfontThomasBS_);
+      pdraw2dgraphics->set(m_pfontThomasBS_);
 
-      pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+      pdraw2dgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
 
-      pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
 
-      //pgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);");
+      //pdraw2dgraphics->text_out({ 10, 10 }, "psimpleapplication->m_pimpact->_001OnDraw(pdraw2dgraphics);");
 
       string_array_base & stra = get_document()->m_straLine;
 
@@ -202,9 +202,9 @@ namespace app_simple_box
 
       ::i32_point point;
 
-      string strText = "psimpleapplication->m_pimpact->_001OnDraw(pgraphics);";
+      string strText = "psimpleapplication->m_pimpact->_001OnDraw(pdraw2dgraphics);";
 
-      auto size = pgraphics->get_text_extent(strText);
+      auto size = pdraw2dgraphics->get_text_extent(strText);
 
       bool bFixedPosition = true;
 
@@ -241,19 +241,19 @@ namespace app_simple_box
          if (bWhite)
          {
 
-            pgraphics->set_text_color(color::white);
+            pdraw2dgraphics->set_solid_color(color::white);
 
          }
          else
          {
 
-            pgraphics->set_text_color(color_dk);
+            pdraw2dgraphics->set_solid_color(color_dk);
 
          }
 
-         pgraphics->text_out(point.x + x, point.y + y, strItem);
+         pdraw2dgraphics->text_out(point.x + x, point.y + y, strItem);
 
-         auto s = pgraphics->get_text_extent(strItem);
+         auto s = pdraw2dgraphics->get_text_extent(strItem);
 
          x += s.cx;
 
@@ -269,37 +269,37 @@ namespace app_simple_box
       //
       //      point.x += size.cx;
       //
-      //      pgraphics->set_text_color(color_dk);
+      //      pdraw2dgraphics->set_solid_color(color_dk);
       //
-      //      size = pgraphics->get_text_extent("TBS_");
+      //      size = pdraw2dgraphics->get_text_extent("TBS_");
       //
-      //      pgraphics->text_out(point.x, point.y, strText);
+      //      pdraw2dgraphics->text_out(point.x, point.y, strText);
       //
       //      point.x += size.cx;
       //
-      //      pgraphics->set_text_color(color_dk);
+      //      pdraw2dgraphics->set_solid_color(color_dk);
       //
-      //      pgraphics->set_text_color(color::white);
+      //      pdraw2dgraphics->set_solid_color(color::white);
       //
-      //      pgraphics->text_out(point.x, point.y, strText);
+      //      pdraw2dgraphics->text_out(point.x, point.y, strText);
       //
 
-      pgraphics->set_text_color(color_dk);
+      pdraw2dgraphics->set_solid_color(color_dk);
 
 
 
-      pgraphics->text_out(point.x, point.y + y + size.cy, strText);
+      pdraw2dgraphics->text_out(point.x, point.y + y + size.cy, strText);
 
-      pgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
+      pdraw2dgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
 
-      //pgraphics->fill_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 255, 255, 0));
+      //pdraw2dgraphics->fill_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 255, 255, 0));
 
-      //pgraphics->draw_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 0, 255, 255));
+      //pdraw2dgraphics->draw_inset_rectangle({ 100, 200, 200, 300 }, argb(127, 0, 255, 255));
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
@@ -311,7 +311,7 @@ namespace app_simple_box
 
       }
 
-      ::user::impact::on_layout(pgraphics);
+      ::user::impact::on_layout(pdraw2dgraphics);
 
    }
 

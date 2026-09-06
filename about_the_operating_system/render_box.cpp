@@ -15,12 +15,12 @@ namespace app_simple_about_the_operating_system
 {
 
 
-   void render::_001OnDrawBoxGradient(::draw2d::graphics_pointer & pgraphics)
+   void render::_001OnDrawBoxGradient(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->text_out(100, 50, "Round Rectangle (100, 100) - (900, 500) r = 100");
+      pdraw2dgraphics->text_out(100, 50, "Round Rectangle (100, 100) - (900, 500) r = 100");
 
       ::f64_rectangle r(100, 100, 900, 500);
 
@@ -59,11 +59,11 @@ namespace app_simple_about_the_operating_system
 
       pbrush->CreateBoxGradientBrush(r.top_left(), r.size(), radius, ::dk_red(), ::color::transparent);
 
-      pgraphics->fill_round_rectangle(r, pbrush, radius);
+      pdraw2dgraphics->fill_round_rectangle(r, pbrush, radius);
 
-      pgraphics->::draw2d::graphics::draw_round_rectangle(r, ppen, radius);
+      pdraw2dgraphics->::draw2d::graphics::draw_round_rectangle(r, ppen, radius);
 
-      draw_text(pgraphics);
+      draw_text(pdraw2dgraphics);
 
    }
 

@@ -1165,17 +1165,21 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='StaticRelease|ARM64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="impact.cpp" />
+    <ClCompile Include="window_list_box_impact.cpp" />
     <ClCompile Include="main_frame.cpp" />
+    <ClCompile Include="split_impact.cpp" />
+    <ClCompile Include="window_size_list_box_impact.cpp" />
     <ClCompile Include="_.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="document.h" />
+    <ClInclude Include="split_impact.h" />
+    <ClInclude Include="window_size_list_box_impact.h" />
     <ClInclude Include="_.h" />
     <ClInclude Include="main_frame.h" />
     <ClInclude Include="platform.h" />
-    <ClInclude Include="impact.h" />
+    <ClInclude Include="window_list_box_impact.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="deployment.rc" />

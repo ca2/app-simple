@@ -2,7 +2,8 @@
 #include "application.h"
 #include "main_frame.h"
 #include "document.h"
-#include "impact.h"
+#include "split_impact.h"
+#include "window_list_box_impact.h"
 #include "acme/filesystem/filesystem/file_system_options.h"
 #include "acme/handler/request.h"
 #include "berg/user/user/tab_impact.h"
@@ -59,7 +60,7 @@ namespace app_simple_window_size
 
       factory()->add_factory_item <::app_simple_window_size::document >();
       factory()->add_factory_item <::app_simple_window_size::main_frame >();
-      factory()->add_factory_item <::app_simple_window_size::impact >();
+      factory()->add_factory_item <::app_simple_window_size::split_impact >();
 
       ::berg::application::init_instance();
 
@@ -68,7 +69,7 @@ namespace app_simple_window_size
          "main",
          typeid(document),
          typeid(main_frame ),
-         typeid(impact)));
+         typeid(split_impact)));
       
       
 #if defined(APPLE_IOS)

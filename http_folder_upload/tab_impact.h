@@ -46,8 +46,8 @@ namespace app_simple_http_folder_upload
 
       //void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
-      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       //void on_change_cur_sel() override;
 

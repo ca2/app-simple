@@ -18,7 +18,11 @@ namespace app_simple_window_size
    class application;
    class pane_impact;
    class document;
-   class impact;
+   class split_impact;
+
+   class window_list_box_impact;
+   class window_size_list_box_impact;
+
 
 } // namespace flag
 

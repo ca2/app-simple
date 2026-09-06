@@ -37,7 +37,7 @@ namespace app_simple_shortcut_amender
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 #ifdef _DEBUG
 
@@ -50,7 +50,7 @@ namespace app_simple_shortcut_amender
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
    };

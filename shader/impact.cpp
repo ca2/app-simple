@@ -255,7 +255,7 @@ namespace app_simple_shader
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (m_bSaveFrame)
@@ -267,9 +267,9 @@ namespace app_simple_shader
 
          auto pimage = image()->create_image(rectangleX.size());
 
-         ::draw2d::graphics_pointer pgraphics = pgraphicsImage;
+         ::draw2d::graphics_pointer pdraw2dgraphics = pgraphicsImage;
 
-         m_prender->_001OnDraw(pgraphics);
+         m_prender->_001OnDraw(pdraw2dgraphics);
 
          fork([this, pimage]()
             {
@@ -287,12 +287,12 @@ namespace app_simple_shader
 
       }
 
-      m_prender->_001OnDraw(pgraphics);
+      m_prender->_001OnDraw(pdraw2dgraphics);
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
@@ -306,7 +306,7 @@ namespace app_simple_shader
 
       m_prender->m_rectangle = rectangleX;
 
-      m_prender->on_layout(pgraphics);
+      m_prender->on_layout(pdraw2dgraphics);
 
    }
 

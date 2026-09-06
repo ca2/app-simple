@@ -172,18 +172,18 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void impact_path::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact_path::_001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::split_impact::_001OnNcDraw(pgraphics);
+      ::user::split_impact::_001OnNcDraw(pdraw2dgraphics);
 
    }
 
 
-   void impact_path::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact_path::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::split_impact::_001OnDraw(pgraphics);
+      ::user::split_impact::_001OnDraw(pdraw2dgraphics);
 
    }
 

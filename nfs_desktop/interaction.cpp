@@ -199,28 +199,28 @@ namespace app_simple_nfs_desktop
    }
 
 
-   void interaction::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void interaction::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       /*auto rectangleX = this->rectangle();
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleX, color::blue);
+      pdraw2dgraphics->fill_rectangle(rectangleX, color::blue);
 
-      pgraphics->set_text_color(color::white);
+      pdraw2dgraphics->set_solid_color(color::white);
 
       ::string str = m_strRequestResult;
 
-      pgraphics->draw_text(str, rectangleX);*/
+      pdraw2dgraphics->draw_text(str, rectangleX);*/
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleX, argb(127, 100, 180, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(127, 100, 180, 255));
 
-      pgraphics->set_text_color(color::white);
+      pdraw2dgraphics->set_solid_color(color::white);
 
       //::string str = m_strRequestResult;
       _synchronous_lock synchronouslock(m_papp->m_pnfs->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
@@ -236,7 +236,7 @@ namespace app_simple_nfs_desktop
             break;
          }
          auto & strLine = stra[iIndex];
-         pgraphics->text_out(x, y, strLine);
+         pdraw2dgraphics->text_out(x, y, strLine);
          y -= 25;
       }
 
@@ -259,7 +259,7 @@ namespace app_simple_nfs_desktop
     //  }
    }
 
-   void interaction::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void interaction::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

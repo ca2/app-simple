@@ -22,7 +22,7 @@ namespace app_simple_notify_drawing
 
       void install_message_routing(::channel * psender) override;
 
-      void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
    };
 

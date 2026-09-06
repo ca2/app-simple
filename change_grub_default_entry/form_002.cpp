@@ -126,34 +126,34 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void form_002::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_002::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pdraw2dgraphics);
 
       ::f64 iLeft = 100.;
 
       ::f64 y = 100.;
 
-      auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
+      auto sizeStill = m_pstill->get_adjusted_fitting_size(pdraw2dgraphics);
 
       m_pstill->display_child(::f64_rectangle_dimension(iLeft, y, 200, sizeStill.cy));
 
       y += sizeStill.cy * 1.25;
 
-      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
+      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pdraw2dgraphics);
 
       m_pedit->display_child(::f64_rectangle_dimension(iLeft-30.0, y, 200.0, sizeEdit.cy));
 
       y += sizeEdit.cy * 1.25;
 
-      auto sizeCombo = m_pcombobox->get_adjusted_fitting_size(pgraphics);
+      auto sizeCombo = m_pcombobox->get_adjusted_fitting_size(pdraw2dgraphics);
 
       m_pcombobox->display_child(::f64_rectangle_dimension(iLeft, y, 200., sizeCombo.cy));
 
       y += sizeCombo.cy * 1.25;
 
-      auto sizeButton = m_pbutton->get_adjusted_fitting_size(pgraphics);
+      auto sizeButton = m_pbutton->get_adjusted_fitting_size(pdraw2dgraphics);
 
       m_pbutton->display_child(::f64_rectangle_dimension(iLeft-30., y, 200., sizeButton.cy));
 

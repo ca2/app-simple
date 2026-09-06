@@ -183,18 +183,18 @@ namespace app_simple_networking_application
 
    }
 
-   void computer_list2::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void computer_list2::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleX, color::white);
+      pdraw2dgraphics->fill_rectangle(rectangleX, color::white);
 
-      pgraphics->set_text_color(color::black);
+      pdraw2dgraphics->set_solid_color(color::black);
 
-      pgraphics->set_text_rendering_hint(::write_text::e_rendering_anti_alias);
+      pdraw2dgraphics->set_text_rendering_hint(::write_text::e_rendering_anti_alias);
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       int iHeight = 25;
 
@@ -204,15 +204,15 @@ namespace app_simple_networking_application
 
       int y = 10;
 
-      pgraphics->text_out(iMaxX1 + 20, y, "Selected Network Interface");
+      pdraw2dgraphics->text_out(iMaxX1 + 20, y, "Selected Network Interface");
 
       y += iHeight;
 
-      pgraphics->text_out(iMaxX1 + 20, y, get_document()->m_strNetworkInterfaceAddress.is_empty() ? ::string("(None) (Please click address at column to the left to select a network interface...)") :get_document()->m_strNetworkInterfaceAddress);
+      pdraw2dgraphics->text_out(iMaxX1 + 20, y, get_document()->m_strNetworkInterfaceAddress.is_empty() ? ::string("(None) (Please click address at column to the left to select a network interface...)") :get_document()->m_strNetworkInterfaceAddress);
 
       y += iHeight;
 
-      pgraphics->text_out(iMaxX1 + 20, y, "Other Computers found in this Network");
+      pdraw2dgraphics->text_out(iMaxX1 + 20, y, "Other Computers found in this Network");
 
       if(get_document()->m_paddressNetworkInterface)
       {
@@ -238,9 +238,9 @@ namespace app_simple_networking_application
 
                   ::string strAddress = paddress->get_display_number();
 
-                  auto size = pgraphics->get_text_extent(strAddress);
+                  auto size = pdraw2dgraphics->get_text_extent(strAddress);
 
-                  pgraphics->text_out(iMaxX1 + 20, y, strAddress);
+                  pdraw2dgraphics->text_out(iMaxX1 + 20, y, strAddress);
 
                   r.left = iMaxX1 + 20;
                   r.top = y;
@@ -270,7 +270,7 @@ namespace app_simple_networking_application
    }
 
 
-   void computer_list2::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void computer_list2::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

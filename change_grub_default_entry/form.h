@@ -26,7 +26,7 @@ namespace app_simple_change_grub_default_entry
 //      // void dump(dump_context & dumpcontext) const override;
 
 
-      void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 #ifdef _DEBUG
       virtual ::i64 increment_reference_count() override;
@@ -37,7 +37,7 @@ namespace app_simple_change_grub_default_entry
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
    };
 

@@ -20,7 +20,7 @@ namespace app_simple_drawing
 {
 
 
-   void render::_001OnDraw1Through3(::draw2d::graphics_pointer & pgraphics)
+   void render::_001OnDraw1Through3(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       string strFontFamily = get_font();
@@ -119,7 +119,7 @@ namespace app_simple_drawing
 
          pfont1->create_font(strFontFamily, 100_px, e_font_weight_bold);
 
-         pgraphics->set(pfont1);
+         pdraw2dgraphics->set(pfont1);
 
          strTitle = get_app()->m_textSimple.as_text();
 
@@ -130,7 +130,7 @@ namespace app_simple_drawing
          
          }
 
-         size = pgraphics->get_text_extent(strTitle);
+         size = pdraw2dgraphics->get_text_extent(strTitle);
 
          if (!size.is_empty())
          {
@@ -158,9 +158,9 @@ namespace app_simple_drawing
 
          }
 
-         pgraphics->set(pfont2);
+         pdraw2dgraphics->set(pfont2);
 
-         size = pgraphics->get_text_extent(strTitle);
+         size = pdraw2dgraphics->get_text_extent(strTitle);
             
       }
 
@@ -203,15 +203,15 @@ namespace app_simple_drawing
 
       }
 
-      pgraphics->set(ppen);
+      pdraw2dgraphics->set(ppen);
 
-      pgraphics->set(pbrush);
+      pdraw2dgraphics->set(pbrush);
       
-      //pgraphics->draw_ellipse(rectangle);
+      //pdraw2dgraphics->draw_ellipse(rectangle);
       
-      //pgraphics->fill_ellipse(rectangle);
+      //pdraw2dgraphics->fill_ellipse(rectangle);
 
-      pgraphics->ellipse(rectangle);
+      pdraw2dgraphics->ellipse(rectangle);
 
       ::i32_rectangle rectangleText;
 
@@ -221,7 +221,7 @@ namespace app_simple_drawing
 
       rectangleText.Align(e_align_center, rectangle);
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       if (m_iDrawing == 1)
       {
@@ -275,12 +275,12 @@ namespace app_simple_drawing
 
       }
 
-      pgraphics->set(pbrush);
+      pdraw2dgraphics->set(pbrush);
 
       if(bDrawText)
       {
       
-         pgraphics->draw_text(strTitle, rectangleText, e_align_center);
+         pdraw2dgraphics->draw_text(strTitle, rectangleText, e_align_center);
          
       }
 
