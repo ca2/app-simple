@@ -189,15 +189,15 @@ namespace app_simple_nfs_desktop
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::app_simple_nfs_desktop::interaction::_001OnDraw(pgraphics);
+      ::app_simple_nfs_desktop::interaction::_001OnDraw(pdraw2dgraphics);
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

@@ -1,6 +1,6 @@
 #include "platform.h"
 #include "document.h"
-#include "impact.h"
+#include "split_impact.h"
 #include "application.h"
 #include "acme/filesystem/filesystem/file_context.h"
 
@@ -72,15 +72,6 @@ namespace app_simple_window_size
 
    bool document::on_open_document(const ::payload & payloadFile)
    {
-
-      impact * pimpact = get_typed_impact < impact >();
-
-      if(pimpact == NULL)
-      {
-
-         return true;
-
-      }
 
       return true;
 

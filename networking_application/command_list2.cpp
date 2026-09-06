@@ -142,7 +142,7 @@ namespace app_simple_networking_application
    }
 
 
-   void command_list2::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void command_list2::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (!main_content().m_pitema)
@@ -154,13 +154,13 @@ namespace app_simple_networking_application
 
       auto rectangleX = this->rectangle();
 
-      pgraphics->fill_rectangle(rectangleX, color::white);
+      pdraw2dgraphics->fill_rectangle(rectangleX, color::white);
 
-      pgraphics->set_text_color(color::black);
+      pdraw2dgraphics->set_solid_color(color::black);
 
-      pgraphics->set_text_rendering_hint(::write_text::e_rendering_anti_alias);
+      pdraw2dgraphics->set_text_rendering_hint(::write_text::e_rendering_anti_alias);
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       int iHeight = 25;
 
@@ -204,18 +204,18 @@ namespace app_simple_networking_application
 
       }
 
-      pgraphics->text_out(iMaxX1 + 20, y, strPrefix + pcommandCurrent->get_text(command::e_subitem_command));
+      pdraw2dgraphics->text_out(iMaxX1 + 20, y, strPrefix + pcommandCurrent->get_text(command::e_subitem_command));
 
       y += iHeight;
 
-      pgraphics->text_out(iMaxX1 + 20, y, "Current Adapter: \"" + get_document()->m_strCurrentAdapter + "\"");
+      pdraw2dgraphics->text_out(iMaxX1 + 20, y, "Current Adapter: \"" + get_document()->m_strCurrentAdapter + "\"");
 
 
 
 
       y += iHeight;
 
-      //pgraphics->text_out(iMaxX1 + 20, y, "Other Computers found in this Network");
+      //pdraw2dgraphics->text_out(iMaxX1 + 20, y, "Other Computers found in this Network");
 
       //if (get_document()->m_strCommand)
       {
@@ -253,9 +253,9 @@ namespace app_simple_networking_application
 
                }
 
-               auto size = pgraphics->get_text_extent(strText);
+               auto size = pdraw2dgraphics->get_text_extent(strText);
 
-               pgraphics->text_out(iMaxX1 + 20, y, strText);
+               pdraw2dgraphics->text_out(iMaxX1 + 20, y, strText);
 
                r.left = iMaxX1 + 20;
                r.top = y;
@@ -283,7 +283,7 @@ namespace app_simple_networking_application
    }
 
 
-   void command_list2::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void command_list2::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

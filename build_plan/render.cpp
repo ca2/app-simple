@@ -57,7 +57,7 @@ namespace app_simple_build_plan
 #endif
 
 
-   void render::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void render::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 
@@ -106,7 +106,7 @@ namespace app_simple_build_plan
    }
 
 
-   void render::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void render::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (m_rectangle.is_empty())
@@ -121,12 +121,12 @@ namespace app_simple_build_plan
 
          ::i32_rectangle rectangle(m_rectangle);
 
-         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+         pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
          for (::collection::index i = 0; i < 5; i++)
          {
 
-            pgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225), 1.0);
+            pdraw2dgraphics->draw_inset_rectangle(rectangle, argb(127, 225, 225, 225), 1.0);
 
             rectangle.deflate(1, 1);
 
@@ -137,31 +137,31 @@ namespace app_simple_build_plan
       if(m_iDrawing <= 3)
       {
 
-         _001OnDraw1Through3(pgraphics);
+         _001OnDraw1Through3(pdraw2dgraphics);
 
       }
       else if(m_iDrawing == 4)
       {
 
-         _001OnDrawBoxGradient(pgraphics);
+         _001OnDrawBoxGradient(pdraw2dgraphics);
 
       }
       else if (m_iDrawing == 5)
       {
 
-         _001OnDrawCirclePath(pgraphics);
+         _001OnDrawCirclePath(pdraw2dgraphics);
 
       }
       else if(m_iDrawing == 6)
       {
 
-         _001OnDrawArcs(pgraphics, false);
+         _001OnDrawArcs(pdraw2dgraphics, false);
 
       }
       else if(m_iDrawing == 7)
       {
 
-         _001OnDrawArcs(pgraphics, true);
+         _001OnDrawArcs(pdraw2dgraphics, true);
 
       }
 
@@ -237,7 +237,7 @@ namespace app_simple_build_plan
    }
 
 
-   void render::draw_text(::draw2d::graphics_pointer & pgraphics)
+   void render::draw_text(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
       //Text
 
@@ -283,7 +283,7 @@ namespace app_simple_build_plan
 
          pfont1->create_font(strFontFamily, 100_px, e_font_weight_bold);
 
-         pgraphics->set(pfont1);
+         pdraw2dgraphics->set(pfont1);
 
          strTitle = get_app()->m_textSimple.as_text();
 
@@ -294,7 +294,7 @@ namespace app_simple_build_plan
 
          }
 
-         size = pgraphics->get_text_extent(strTitle);
+         size = pdraw2dgraphics->get_text_extent(strTitle);
 
          if (!size.is_empty())
          {
@@ -324,9 +324,9 @@ namespace app_simple_build_plan
 
          }
 
-         pgraphics->set(pfont2);
+         pdraw2dgraphics->set(pfont2);
 
-         size = pgraphics->get_text_extent(strTitle);
+         size = pdraw2dgraphics->get_text_extent(strTitle);
 
          ::i32_rectangle rectangleText;
 
@@ -336,7 +336,7 @@ namespace app_simple_build_plan
 
          rectangleText.Align(e_align_center, rectangle);
 
-         pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+         pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
 
          if (m_iDrawing == 4)
@@ -391,12 +391,12 @@ namespace app_simple_build_plan
 
          }
 
-         pgraphics->set(pbrush);
+         pdraw2dgraphics->set(pbrush);
 
          if(bDrawText)
          {
 
-            pgraphics->draw_text(strTitle, rectangleText, e_align_center);
+            pdraw2dgraphics->draw_text(strTitle, rectangleText, e_align_center);
 
          }
 

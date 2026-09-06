@@ -118,14 +118,14 @@ namespace app_simple_application
    }
 
 
-   void impact::_001OnClip(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnClip(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
 
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
@@ -137,7 +137,7 @@ namespace app_simple_application
 
       }
 
-//      if (pgraphics->payload("set_transparent") == "set_transparent")
+//      if (pdraw2dgraphics->payload("set_transparent") == "set_transparent")
 //      {
 //
 //         information() << "set_transparent called";
@@ -152,19 +152,19 @@ namespace app_simple_application
 
       ::f64_rectangle rectangleClipBox;
 
-      //pgraphics->reset_clip();
+      //pdraw2dgraphics->reset_clip();
 
-      //pgraphics->get_clip_box(rectangleClipBox);
+      //pdraw2dgraphics->get_clip_box(rectangleClipBox);
 
-      auto matrix = pgraphics->m_matrix;
+      auto matrix = pdraw2dgraphics->m_matrix;
 
-      //auto origin = pgraphics->origin();
+      //auto origin = pdraw2dgraphics->origin();
 
       auto opacity = ::opacity(48);
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->fill_rectangle(rectangleX, argb(108, 128, 128, 128));
+      pdraw2dgraphics->fill_rectangle(rectangleX, argb(108, 128, 128, 128));
 
       ::color::color color_dk(dk_red());
 
@@ -172,11 +172,11 @@ namespace app_simple_application
 
       ::i32_rectangle rectangleDryProWithLove_Work(5, 5, 1915, 1075);
 
-      pgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
+      pdraw2dgraphics->fill_rectangle(rectangleDryProWithLove_Work, argb(255, 150, 200, 255));
 
 #endif
 
-      pgraphics->set_text_color(color_dk);
+      pdraw2dgraphics->set_solid_color(color_dk);
 
       auto psystem = system();
 
@@ -188,11 +188,11 @@ namespace app_simple_application
 
       m_pfontThomasBS_ = pwritetext->font("Fira Code", fontsize);
 
-      pgraphics->set(m_pfontThomasBS_);
+      pdraw2dgraphics->set(m_pfontThomasBS_);
 
-      pgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
+      pdraw2dgraphics->set_text_rendering_hint(write_text::e_rendering_anti_alias);
 
-      pgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(draw2d::e_alpha_mode_blend);
 
       _synchronous_lock synchronouslockDocument(get_document()->synchronization(), DEFAULT_SYNCHRONOUS_LOCK_SUFFIX);
       
@@ -210,9 +210,9 @@ namespace app_simple_application
 
       m_iSequence++;
       
-      strText.formatf("psimpleapplication->m_pimpact->_001OnDraw(pgraphics); %d", m_iSequence);
+      strText.formatf("psimpleapplication->m_pimpact->_001OnDraw(pdraw2dgraphics); %d", m_iSequence);
 
-      auto size = pgraphics->get_text_extent(strText);
+      auto size = pdraw2dgraphics->get_text_extent(strText);
 
       bool bFixedPosition = true;
 
@@ -265,11 +265,11 @@ namespace app_simple_application
 
          color &= opacity;
 
-         pgraphics->set_text_color(color);
+         pdraw2dgraphics->set_solid_color(color);
 
-         pgraphics->text_out(point.x + x, point.y + y, strItem);
+         pdraw2dgraphics->text_out(point.x + x, point.y + y, strItem);
          
-         auto s = pgraphics->get_text_extent(strItem);
+         auto s = pdraw2dgraphics->get_text_extent(strItem);
 
          x += s.cx;
          
@@ -281,16 +281,16 @@ namespace app_simple_application
       
       color &= opacity;
 
-      pgraphics->set_text_color(color);
+      pdraw2dgraphics->set_solid_color(color);
 
-      pgraphics->text_out(point.x, point.y + y + size.cy, strText);
+      pdraw2dgraphics->text_out(point.x, point.y + y + size.cy, strText);
 
-      pgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
+      pdraw2dgraphics->set_smooth_mode(::draw2d::e_smooth_mode_none);
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();
@@ -302,7 +302,7 @@ namespace app_simple_application
 
       }
 
-      ::user::impact::on_layout(pgraphics);
+      ::user::impact::on_layout(pdraw2dgraphics);
       
       setup_default_client_area_user_item();
 

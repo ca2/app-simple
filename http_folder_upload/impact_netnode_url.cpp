@@ -110,10 +110,10 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void impact_netnode_url::plain_edit_on_after_change_text(::draw2d::graphics_pointer & pgraphics, const ::action_context & context)
+   void impact_netnode_url::plain_edit_on_after_change_text(::draw2d::graphics_pointer & pdraw2dgraphics, const ::action_context & context)
    {
 
-      edit_impact_base::plain_edit_on_after_change_text(pgraphics, context);
+      edit_impact_base::plain_edit_on_after_change_text(pdraw2dgraphics, context);
 
       ::string str;
 

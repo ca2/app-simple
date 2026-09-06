@@ -15,7 +15,7 @@ namespace app_simple_about_the_operating_system
 {
 
 
-   void render::draw_arc(::draw2d::graphics_pointer & pgraphics, i32_rectangle& r, ::f64_angle angleStart, ::f64_angle angleAngle, bool bPath)
+   void render::draw_arc(::draw2d::graphics_pointer & pdraw2dgraphics, i32_rectangle& r, ::f64_angle angleStart, ::f64_angle angleAngle, bool bPath)
    {
 
       auto psystem = system();
@@ -32,9 +32,9 @@ namespace app_simple_about_the_operating_system
 
       ::color::color color(m_hlsText);
 
-      pgraphics->set_text_color(color);
+      pdraw2dgraphics->set_solid_color(color);
 
-      pgraphics->set(pfont);
+      pdraw2dgraphics->set(pfont);
 
       string str1;
 
@@ -44,19 +44,19 @@ namespace app_simple_about_the_operating_system
 
       str2.formatf("Angle: %0.0f", angleAngle.degree());
 
-      auto size1 = pgraphics->get_text_extent(str1);
+      auto size1 = pdraw2dgraphics->get_text_extent(str1);
 
       size1.cx += 32;
 
       size1.cy += 4;
 
-      auto size2 = pgraphics->get_text_extent(str2);
+      auto size2 = pdraw2dgraphics->get_text_extent(str2);
 
       size2.cx += 32;
 
       size2.cy += 4;
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::i32_size size;
 
@@ -68,11 +68,11 @@ namespace app_simple_about_the_operating_system
 
       rectangleBack.bottom = rectangleBack.top + size.cy * 2 + 4 * 3;
 
-      pgraphics->fill_rectangle(rectangleBack, argb(127, 80, 80, 80));
+      pdraw2dgraphics->fill_rectangle(rectangleBack, argb(127, 80, 80, 80));
 
-      pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + 4, str1);
+      pdraw2dgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + 4, str1);
 
-      pgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy + 8, str2);
+      pdraw2dgraphics->text_out(rectangleBack.left + 4, rectangleBack.top + size.cy + 8, str2);
 
       auto ppen = createø < ::draw2d::pen >();
 
@@ -80,7 +80,7 @@ namespace app_simple_about_the_operating_system
 
       pbrush->create_null();
 
-      pgraphics->set(pbrush);
+      pdraw2dgraphics->set(pbrush);
 
       if (get_app()->m_checkSimple.is_checked())
       {
@@ -139,19 +139,19 @@ namespace app_simple_about_the_operating_system
 
       }
 
-      pgraphics->set(ppen);
+      pdraw2dgraphics->set(ppen);
 
-      pgraphics->clear_current_point();
+      pdraw2dgraphics->clear_current_point();
 
-      pgraphics->arc(r, angleStart, angleAngle);
+      pdraw2dgraphics->arc(r, angleStart, angleAngle);
 
    }
 
 
-   void render::_001OnDrawArcs(::draw2d::graphics_pointer & pgraphics, bool bPath)
+   void render::_001OnDrawArcs(::draw2d::graphics_pointer & pdraw2dgraphics, bool bPath)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
       ::array < ::f64_angle > angleaStart;
 
@@ -211,13 +211,13 @@ namespace app_simple_about_the_operating_system
       if (get_app()->m_checkSimple.is_checked())
       {
 
-         pgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
+         pdraw2dgraphics->fill_rectangle(rClient, argb(127, 192, 192, 192));
 
       }
       else
       {
 
-         pgraphics->fill_rectangle(rClient, argb(127, 120, 120, 120));
+         pdraw2dgraphics->fill_rectangle(rClient, argb(127, 120, 120, 120));
 
       }
 
@@ -240,7 +240,7 @@ namespace app_simple_about_the_operating_system
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
+         draw_arc(pdraw2dgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 
@@ -257,7 +257,7 @@ namespace app_simple_about_the_operating_system
 
          r.right = r.left + iColumnWidth;
 
-         draw_arc(pgraphics, r, angleaStart[i], angleaAngle[i], bPath);
+         draw_arc(pdraw2dgraphics, r, angleaStart[i], angleaAngle[i], bPath);
 
          r.left = r.right;
 

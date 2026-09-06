@@ -108,10 +108,10 @@ namespace app_simple_nfs_desktop
    }
 
 
-   void edit_impact::plain_edit_on_after_change_text(::draw2d::graphics_pointer & pgraphics, const ::action_context & context)
+   void edit_impact::plain_edit_on_after_change_text(::draw2d::graphics_pointer & pdraw2dgraphics, const ::action_context & context)
    {
 
-      edit_impact_base::plain_edit_on_after_change_text(pgraphics, context);
+      edit_impact_base::plain_edit_on_after_change_text(pdraw2dgraphics, context);
 
       ::string str;
 

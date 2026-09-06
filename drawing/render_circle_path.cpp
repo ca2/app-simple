@@ -18,12 +18,12 @@ namespace app_simple_drawing
 {
 
 
-   void render::_001OnDrawCirclePath(::draw2d::graphics_pointer & pgraphics)
+   void render::_001OnDrawCirclePath(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      pgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
+      pdraw2dgraphics->set_alpha_mode(::draw2d::e_alpha_mode_blend);
 
-      pgraphics->text_out(100, 50, "Circle Path (300, 300) - (800, 800) r = 250");
+      pdraw2dgraphics->text_out(100, 50, "Circle Path (300, 300) - (800, 800) r = 250");
 
       ::f64_rectangle r(300, 300, 800, 800);
 
@@ -76,11 +76,11 @@ namespace app_simple_drawing
 
       pbrush->CreateBoxGradientBrush(r.top_left(), r.size(), radius, ::dk_red(), ::color::transparent);
 
-      pgraphics->fill(ppath, pbrush);
+      pdraw2dgraphics->fill(ppath, pbrush);
 
-      pgraphics->draw(ppath, ppen);
+      pdraw2dgraphics->draw(ppath, ppen);
 
-      draw_text(pgraphics);
+      draw_text(pdraw2dgraphics);
 
    }
 

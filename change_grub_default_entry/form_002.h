@@ -37,7 +37,7 @@ namespace app_simple_change_grub_default_entry
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 

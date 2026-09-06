@@ -201,7 +201,7 @@ namespace app_simple_drawing
    }
 
 
-   void impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       if (get_app()->m_checkNoClientFrame.echeck() != ::e_check_checked)
@@ -212,7 +212,7 @@ namespace app_simple_drawing
          for (::collection::index i = 0; i < 11; i++)
          {
 
-            pgraphics->draw_inset_rectangle(rectangle, argb(180, 80, 80, 80), 1.0);
+            pdraw2dgraphics->draw_inset_rectangle(rectangle, argb(180, 80, 80, 80), 1.0);
 
             rectangle.deflate(1, 1);
 
@@ -220,12 +220,12 @@ namespace app_simple_drawing
 
       }
 
-      m_prender->_001OnDraw(pgraphics);
+      m_prender->_001OnDraw(pdraw2dgraphics);
 
    }
 
 
-   void impact::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void impact::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
       auto rectangleX = this->rectangle();

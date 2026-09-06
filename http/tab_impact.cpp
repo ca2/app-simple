@@ -55,18 +55,18 @@ namespace app_simple_http
    }
 
 
-   void tab_impact::_001OnNcDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::tab_impact::_001OnNcDraw(pgraphics);
+      ::user::tab_impact::_001OnNcDraw(pdraw2dgraphics);
 
    }
 
 
-   void tab_impact::_001OnDraw(::draw2d::graphics_pointer & pgraphics)
+   void tab_impact::_001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::tab_impact::_001OnDraw(pgraphics);
+      ::user::tab_impact::_001OnDraw(pdraw2dgraphics);
 
    }
 

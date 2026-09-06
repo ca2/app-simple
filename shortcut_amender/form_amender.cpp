@@ -199,10 +199,10 @@ namespace app_simple_shortcut_amender
    }
 
 
-   void form_amender::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_amender::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pdraw2dgraphics);
 
       ::f64 iLeft = 100.;
 
@@ -212,9 +212,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillFolder->get_adjusted_fitting_size(pgraphics);
+         auto sizeStill = m_pstillFolder->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleStillMargin = m_pstillFolder->get_margin(m_pstillFolder->get_style(pgraphics));
+         auto rectangleStillMargin = m_pstillFolder->get_margin(m_pstillFolder->get_style(pdraw2dgraphics));
 
          y += rectangleStillMargin.top;
 
@@ -228,9 +228,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeEdit = m_peditFolder->get_adjusted_fitting_size(pgraphics);
+         auto sizeEdit = m_peditFolder->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleEditMargin = m_peditFolder->get_margin(m_peditFolder->get_style(pgraphics), ::e_element_none);
+         auto rectangleEditMargin = m_peditFolder->get_margin(m_peditFolder->get_style(pdraw2dgraphics), ::e_element_none);
 
          y += rectangleEditMargin.top;
 
@@ -245,9 +245,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillSource->get_adjusted_fitting_size(pgraphics);
+         auto sizeStill = m_pstillSource->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleStillMargin = m_pstillSource->get_margin(m_pstillSource->get_style(pgraphics));
+         auto rectangleStillMargin = m_pstillSource->get_margin(m_pstillSource->get_style(pdraw2dgraphics));
 
          y += rectangleStillMargin.top;
 
@@ -261,9 +261,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeEdit = m_peditSource->get_adjusted_fitting_size(pgraphics);
+         auto sizeEdit = m_peditSource->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pgraphics), ::e_element_none);
+         auto rectangleEditMargin = m_peditSource->get_margin(m_peditSource->get_style(pdraw2dgraphics), ::e_element_none);
 
          y += rectangleEditMargin.top;
 
@@ -277,9 +277,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         auto sizeStill = m_pstillTarget->get_adjusted_fitting_size(pgraphics);
+         auto sizeStill = m_pstillTarget->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleStillMargin = m_pstillTarget->get_margin(m_pstillTarget->get_style(pgraphics));
+         auto rectangleStillMargin = m_pstillTarget->get_margin(m_pstillTarget->get_style(pdraw2dgraphics));
 
          y += rectangleStillMargin.top;
 
@@ -295,9 +295,9 @@ namespace app_simple_shortcut_amender
 
       {
 
-         sizeEdit = m_peditTarget->get_adjusted_fitting_size(pgraphics);
+         sizeEdit = m_peditTarget->get_adjusted_fitting_size(pdraw2dgraphics);
 
-         auto rectangleEditMargin = m_peditTarget->get_margin(m_peditTarget->get_style(pgraphics), ::e_element_none);
+         auto rectangleEditMargin = m_peditTarget->get_margin(m_peditTarget->get_style(pdraw2dgraphics), ::e_element_none);
 
          y += rectangleEditMargin.top;
 
@@ -310,13 +310,13 @@ namespace app_simple_shortcut_amender
       }
 
 
-      auto sizeButtonClear = m_pbuttonClear->get_adjusted_fitting_size(pgraphics);
+      auto sizeButtonClear = m_pbuttonClear->get_adjusted_fitting_size(pdraw2dgraphics);
 
-      auto sizeButtonSend = m_pbuttonSend->get_adjusted_fitting_size(pgraphics);
+      auto sizeButtonSend = m_pbuttonSend->get_adjusted_fitting_size(pdraw2dgraphics);
 
-      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditTarget->get_style(pgraphics));
+      auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_peditTarget->get_style(pdraw2dgraphics));
 
-      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditTarget->get_style(pgraphics));
+      auto sizeButtonMarginSend = m_pbuttonSend->get_margin(m_peditTarget->get_style(pdraw2dgraphics));
 
       y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 

@@ -34,8 +34,8 @@ namespace app_simple_change_grub_default_entry
       //virtual bool BaseOnControlEvent(::user::control_event * phappening);
 
 
-      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pgraphics) override;
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void _001OnNcDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
 
 

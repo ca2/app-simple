@@ -134,10 +134,10 @@ namespace app_simple_change_grub_default_entry
    }
 
 
-   void form_001::on_layout(::draw2d::graphics_pointer & pgraphics)
+   void form_001::on_layout(::draw2d::graphics_pointer & pdraw2dgraphics)
    {
 
-      ::user::form_impact::on_layout(pgraphics);
+      ::user::form_impact::on_layout(pdraw2dgraphics);
 
       ::f64 iLeft = 10.;
 
@@ -145,9 +145,9 @@ namespace app_simple_change_grub_default_entry
 
       auto rectangleX = this->rectangle();
 
-      auto sizeStill = m_pstill->get_adjusted_fitting_size(pgraphics);
+      auto sizeStill = m_pstill->get_adjusted_fitting_size(pdraw2dgraphics);
 
-      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pgraphics));
+      auto rectangleStillMargin = m_pstill->get_margin(m_pstill->get_style(pdraw2dgraphics));
 
       y += rectangleStillMargin.top;
 
@@ -157,22 +157,22 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleStillMargin.bottom;
 
-      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pgraphics);
+      auto sizeEdit = m_pedit->get_adjusted_fitting_size(pdraw2dgraphics);
 
-      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pgraphics), ::e_element_none);
+      auto rectangleEditMargin = m_pedit->get_margin(m_pedit->get_style(pdraw2dgraphics), ::e_element_none);
 
       y += rectangleEditMargin.top;
 
       m_pedit->display_child(::f64_rectangle_dimension(iLeft, y, 600, sizeEdit.cy));
 
 
-      //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pgraphics);
+      //auto sizeButtonClear = m_pbuttonClear->_001CalculateAdjustedFittingSize(pdraw2dgraphics);
 
-      auto sizeButtonRestart = m_pbuttonRestart->get_adjusted_fitting_size(pgraphics);
+      auto sizeButtonRestart = m_pbuttonRestart->get_adjusted_fitting_size(pdraw2dgraphics);
 
-      //auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pgraphics));
+      //auto sizeButtonMarginClear = m_pbuttonClear->get_margin(m_pedit->get_style(pdraw2dgraphics));
 
-      auto sizeButtonMarginRestart = m_pbuttonRestart->get_margin(m_pedit->get_style(pgraphics));
+      auto sizeButtonMarginRestart = m_pbuttonRestart->get_margin(m_pedit->get_style(pdraw2dgraphics));
 
       //y += maximum(sizeButtonMarginClear.top, sizeButtonMarginSend.top);
 

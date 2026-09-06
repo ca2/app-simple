@@ -53,7 +53,7 @@ namespace app_simple_nanoui_example
 
       virtual void previous_application();
 
-      virtual void on_layout(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void on_layout(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
       DECLARE_MESSAGE_HANDLER(on_message_create);
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
@@ -61,9 +61,9 @@ namespace app_simple_nanoui_example
 
       bool keyboard_focus_is_focusable() override;
 
-      virtual void _001OnDraw(::draw2d::graphics_pointer & pgraphics) override;
+      virtual void _001OnDraw(::draw2d::graphics_pointer & pdraw2dgraphics) override;
 
-      //virtual void _001DrawItem(::draw2d::graphics_pointer & pgraphics, ::item * pitem) override;
+      //virtual void _001DrawItem(::draw2d::graphics_pointer & pdraw2dgraphics, ::item * pitem) override;
 
 
    };
