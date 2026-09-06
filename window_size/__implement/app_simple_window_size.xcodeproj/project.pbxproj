@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2740B49B9BD6406EE4C8DBA4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DDC43CFC1B10F80C2FED3803 /* main.cpp */; };
+		E367ACF4612FAF9C21A47304 /* libnano2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E7160FB84912A0C8ACD0402 /* libnano2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0ECE6D1D2896F5D9385D59F3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9726184DEC98E5EA5364A499 /* InfoPlist.strings */; };
+		DE4D4489E77DE8A46FC1D1DB /* libappkit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3ACE373DAC5BE64FBB9E49B /* libappkit.dylib */; };
+		ECB2CDFF65B1235D9BFCED3E /* libcore_foundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6F2D66E1E120C5003340DA /* libcore_foundation.dylib */; };
+		16B753A78E2E4D4BBB2045B8 /* libcore_graphics.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD8150789C7DBEB74870009 /* libcore_graphics.dylib */; };
+		522E5DBD40CB7A61FAA94A34 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 55CA09F2A4B2DBD360E73F17 /* _matter.zip */; };
+		2F519756EAE36AF865AD5EA5 /* libnano_idn_libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0B9796E9FF3A60EBB83386A /* libnano_idn_libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		AFF325BCB00D1C79C7F0F1CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D97834B7A5BB5196A3D75731 /* Images.xcassets */; };
+		24A87F8B60C92F636F43F5FC /* libacme.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B45DEEA3DC337B9037F729B8 /* libacme.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FEF3ABD6E3D895ED118DE1B4 /* libacme_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C8CC6FFDFAD95C2E6544296 /* libacme_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4B01DD0335B11B9368D84851 /* libacme_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF566B4B1E8647A087807E26 /* libacme_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		97F2DF9A64F0CA79B7A75D04 /* libacme_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1E8785B9870A931315BA46E /* libacme_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A194DA17862D2258F891D8FD /* libacme_posix.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F684ACDC53A274F82DBEE67A /* libacme_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7F17C4B0C40044DA2A20A0FB /* libacme_windowing_appkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9C659DEFCC7A080F19233F27 /* libacme_windowing_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D6D4F008F4C7C53A27C03F86 /* libacme_windowing_kit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C67051C9E5D70115263BAAF4 /* libacme_windowing_kit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		035BFC0EFD7D7C19C8046EDC /* libapex.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 933901614E88D7481C566A0E /* libapex.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		697C827E299CF3327DF95387 /* libapex_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9DD707170A50843BC5A3FDB /* libapex_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6FE65A45A236169DDDEE63D2 /* libapex_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9D9374D8842ACE865133D166 /* libapex_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8D16846B4F5369A633C15449 /* libapex_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DCB6DCE29BED898DC644066 /* libapex_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		923BF7D4428D329358535A9E /* libapex_posix.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F22553488F96E9CDBAF8F44B /* libapex_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B4E4A05333BAEAC7E40DAF6B /* libapp_simple_window_size.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D144E13231F59A1731E8E7 /* libapp_simple_window_size.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B031E95BA32175E35C53AA9B /* libaqua.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 34924A7485EC463CF22F56F2 /* libaqua.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D0393E6014283D4F834CCD8A /* libarchive.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5441E8AA9B87BB2B301AC7E0 /* libarchive.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		708D81BB47C3ED7022D706A1 /* libaura.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D7DEA6275E8813B577E4910 /* libaura.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7767151A29E759783C72BD21 /* libaura_apple.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 334827D45FADE45C9162800C /* libaura_apple.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		824CE5EECB0650C676D6C2EC /* libaura_darwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 10561209E065ECD6629C7722 /* libaura_darwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8A81918B0C1870015C93D89E /* libaura_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1AAB50CA8EA5F2ECF81FC7F2 /* libaura_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A3B055EF7883A9BB163CB039 /* libaura_posix.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F9EBA9D1A67B6818BC9E28E8 /* libaura_posix.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DDEFB5FED9DBAAF6DFB0328C /* libaxis.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A77F1F67C1DA9E32A89B2CE3 /* libaxis.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		03EBB2FA6A0C5AD948D84F31 /* libberg.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91F1132A08FE5EA140338F27 /* libberg.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4E229717CFA34684F258331E /* libcrypto.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43A47A65022C66E13679E559 /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		88599741861707E9CD17C94C /* libcrypto_openssl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8608D709687868071B1AE34E /* libcrypto_openssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		202BAD79B0B3145D95620DF9 /* libdarwin.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A0CEF50A2CDC2FABD281F2C /* libdarwin.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		D20442EECAD3CCCFC9FEBF1E /* libdatabase_sqlite3.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3730C9AF8853C46D650C36A6 /* libdatabase_sqlite3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0164263CE9DEE5C0AD145A06 /* libdraw2d_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17AD4B566FDC603807D0D41D /* libdraw2d_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2430202330DF75249808E5A9 /* libexperience_core.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43AEB72D8929F5BA4BC50A20 /* libexperience_core.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		759937DCA2DEAE05740F62AE /* libfolder_zip.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F67125F00644BCC9DC896254 /* libfolder_zip.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FCC0F364EA9D735CAAEBCB96 /* libidn.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = C36B7AB5AC01F9763CB49795 /* libidn.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		E4F0D041893E159EC23D2E29 /* libinnate_ui_appkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 15A7A2AD9CECBFACC0B98FEB /* libinnate_ui_appkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CDCC88D99983FE32FE041297 /* libnano_graphics_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = E831F1037EE888FA8ED44936 /* libnano_graphics_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8CFF6C01D581C5F524378BD3 /* libnetworking_bsd.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA77DD7C652D576B820E46ED /* libnetworking_bsd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		92A39032E48D5648599BFDB5 /* libnode_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = A6A58987C98FEB9A2368A8F4 /* libnode_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		60E4BB2586EF4DA3359DE887 /* liboperating_ambient_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75FF004BB0A6E6C21A602A02 /* liboperating_ambient_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A2F74A93A6E62E2F0DA468A5 /* libssl.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5F95D8346375308737C1E520 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		556960370BEBB0AB97B6DB9C /* libunac.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78DE9F3C0B858C0D73169225 /* libunac.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1CC3CDD392C72D1AC4A46CE0 /* libwindowing_macos.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2158470E595CC8F0EBBC582 /* libwindowing_macos.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		095099910AD6F30D0960FF03 /* libwrite_text_quartz2d.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50D689370062EFF5584B3CE9 /* libwrite_text_quartz2d.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BC750480672378D10257B4A3 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B45DEEA3DC337B9037F729B8 /* libacme.dylib */; };
+		45F03395C8556CFC0DAE932C /* libberg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F1132A08FE5EA140338F27 /* libberg.dylib */; };
+		97F81D587A0B2C22BCDC45EB /* libapp_simple_window_size.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D144E13231F59A1731E8E7 /* libapp_simple_window_size.dylib */; };
+		B7298AD3A4A354DDD7940527 /* libappkit.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F3ACE373DAC5BE64FBB9E49B /* libappkit.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		640A25FE541C32B10E61CEC8 /* libcore_foundation.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C6F2D66E1E120C5003340DA /* libcore_foundation.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		29D62D6B74C0BEA9E9491DF6 /* libcore_graphics.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EAD8150789C7DBEB74870009 /* libcore_graphics.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FBBD703D7D626836D3C55FA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				E367ACF4612FAF9C21A47304 /* libnano2d.dylib in CopyFiles */,
+				2F519756EAE36AF865AD5EA5 /* libnano_idn_libidn.dylib in CopyFiles */,
+				24A87F8B60C92F636F43F5FC /* libacme.dylib in CopyFiles */,
+				FEF3ABD6E3D895ED118DE1B4 /* libacme_apple.dylib in CopyFiles */,
+				4B01DD0335B11B9368D84851 /* libacme_darwin.dylib in CopyFiles */,
+				97F2DF9A64F0CA79B7A75D04 /* libacme_macos.dylib in CopyFiles */,
+				A194DA17862D2258F891D8FD /* libacme_posix.dylib in CopyFiles */,
+				7F17C4B0C40044DA2A20A0FB /* libacme_windowing_appkit.dylib in CopyFiles */,
+				D6D4F008F4C7C53A27C03F86 /* libacme_windowing_kit.dylib in CopyFiles */,
+				035BFC0EFD7D7C19C8046EDC /* libapex.dylib in CopyFiles */,
+				697C827E299CF3327DF95387 /* libapex_apple.dylib in CopyFiles */,
+				6FE65A45A236169DDDEE63D2 /* libapex_darwin.dylib in CopyFiles */,
+				8D16846B4F5369A633C15449 /* libapex_macos.dylib in CopyFiles */,
+				923BF7D4428D329358535A9E /* libapex_posix.dylib in CopyFiles */,
+				B4E4A05333BAEAC7E40DAF6B /* libapp_simple_window_size.dylib in CopyFiles */,
+				B031E95BA32175E35C53AA9B /* libaqua.dylib in CopyFiles */,
+				D0393E6014283D4F834CCD8A /* libarchive.dylib in CopyFiles */,
+				708D81BB47C3ED7022D706A1 /* libaura.dylib in CopyFiles */,
+				7767151A29E759783C72BD21 /* libaura_apple.dylib in CopyFiles */,
+				824CE5EECB0650C676D6C2EC /* libaura_darwin.dylib in CopyFiles */,
+				8A81918B0C1870015C93D89E /* libaura_macos.dylib in CopyFiles */,
+				A3B055EF7883A9BB163CB039 /* libaura_posix.dylib in CopyFiles */,
+				DDEFB5FED9DBAAF6DFB0328C /* libaxis.dylib in CopyFiles */,
+				03EBB2FA6A0C5AD948D84F31 /* libberg.dylib in CopyFiles */,
+				4E229717CFA34684F258331E /* libcrypto.dylib in CopyFiles */,
+				88599741861707E9CD17C94C /* libcrypto_openssl.dylib in CopyFiles */,
+				202BAD79B0B3145D95620DF9 /* libdarwin.dylib in CopyFiles */,
+				D20442EECAD3CCCFC9FEBF1E /* libdatabase_sqlite3.dylib in CopyFiles */,
+				0164263CE9DEE5C0AD145A06 /* libdraw2d_quartz2d.dylib in CopyFiles */,
+				2430202330DF75249808E5A9 /* libexperience_core.dylib in CopyFiles */,
+				759937DCA2DEAE05740F62AE /* libfolder_zip.dylib in CopyFiles */,
+				FCC0F364EA9D735CAAEBCB96 /* libidn.dylib in CopyFiles */,
+				E4F0D041893E159EC23D2E29 /* libinnate_ui_appkit.dylib in CopyFiles */,
+				CDCC88D99983FE32FE041297 /* libnano_graphics_quartz2d.dylib in CopyFiles */,
+				8CFF6C01D581C5F524378BD3 /* libnetworking_bsd.dylib in CopyFiles */,
+				92A39032E48D5648599BFDB5 /* libnode_macos.dylib in CopyFiles */,
+				60E4BB2586EF4DA3359DE887 /* liboperating_ambient_macos.dylib in CopyFiles */,
+				A2F74A93A6E62E2F0DA468A5 /* libssl.dylib in CopyFiles */,
+				556960370BEBB0AB97B6DB9C /* libunac.dylib in CopyFiles */,
+				1CC3CDD392C72D1AC4A46CE0 /* libwindowing_macos.dylib in CopyFiles */,
+				095099910AD6F30D0960FF03 /* libwrite_text_quartz2d.dylib in CopyFiles */,
+				B7298AD3A4A354DDD7940527 /* libappkit.dylib in CopyFiles */,
+				640A25FE541C32B10E61CEC8 /* libcore_foundation.dylib in CopyFiles */,
+				29D62D6B74C0BEA9E9491DF6 /* libcore_graphics.dylib in CopyFiles */,
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		95E16D6BEF4E58B273D08C80 /* _app_simple_window_size.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_window_size.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDC43CFC1B10F80C2FED3803 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5E7160FB84912A0C8ACD0402 /* libnano2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnano2d.dylib; sourceTree = "<group>"; };
+		91D95F1895984B4116A20245 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		F3ACE373DAC5BE64FBB9E49B /* libappkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libappkit.dylib; sourceTree = "<group>"; };
+		3C6F2D66E1E120C5003340DA /* libcore_foundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_foundation.dylib; sourceTree = "<group>"; };
+		EAD8150789C7DBEB74870009 /* libcore_graphics.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcore_graphics.dylib; sourceTree = "<group>"; };
+		55CA09F2A4B2DBD360E73F17 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = _matter.zip; sourceTree = "<group>"; };
+		00285C0DA8ED4D3B064892C4 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____debug.xcconfig"; path = "../_____debug.xcconfig"; sourceTree = "<group>"; };
+		C6A16AAE9515016D154EC9B2 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "_____release.xcconfig"; path = "../_____release.xcconfig"; sourceTree = "<group>"; };
+		A0B9796E9FF3A60EBB83386A /* libnano_idn_libidn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnano_idn_libidn.dylib; sourceTree = "<group>"; };
+		D97834B7A5BB5196A3D75731 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B9CA9707C51D920AB169156B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B45DEEA3DC337B9037F729B8 /* libacme.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = "<group>"; };
+		8C8CC6FFDFAD95C2E6544296 /* libacme_apple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_apple.dylib; sourceTree = "<group>"; };
+		DF566B4B1E8647A087807E26 /* libacme_darwin.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = "<group>"; };
+		B1E8785B9870A931315BA46E /* libacme_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_macos.dylib; sourceTree = "<group>"; };
+		F684ACDC53A274F82DBEE67A /* libacme_posix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = "<group>"; };
+		9C659DEFCC7A080F19233F27 /* libacme_windowing_appkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_windowing_appkit.dylib; sourceTree = "<group>"; };
+		C67051C9E5D70115263BAAF4 /* libacme_windowing_kit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libacme_windowing_kit.dylib; sourceTree = "<group>"; };
+		933901614E88D7481C566A0E /* libapex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = "<group>"; };
+		C9DD707170A50843BC5A3FDB /* libapex_apple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapex_apple.dylib; sourceTree = "<group>"; };
+		9D9374D8842ACE865133D166 /* libapex_darwin.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapex_darwin.dylib; sourceTree = "<group>"; };
+		8DCB6DCE29BED898DC644066 /* libapex_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapex_macos.dylib; sourceTree = "<group>"; };
+		F22553488F96E9CDBAF8F44B /* libapex_posix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapex_posix.dylib; sourceTree = "<group>"; };
+		66D144E13231F59A1731E8E7 /* libapp_simple_window_size.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libapp_simple_window_size.dylib; sourceTree = "<group>"; };
+		34924A7485EC463CF22F56F2 /* libaqua.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaqua.dylib; sourceTree = "<group>"; };
+		5441E8AA9B87BB2B301AC7E0 /* libarchive.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libarchive.dylib; sourceTree = "<group>"; };
+		7D7DEA6275E8813B577E4910 /* libaura.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = "<group>"; };
+		334827D45FADE45C9162800C /* libaura_apple.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_apple.dylib; sourceTree = "<group>"; };
+		10561209E065ECD6629C7722 /* libaura_darwin.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_darwin.dylib; sourceTree = "<group>"; };
+		1AAB50CA8EA5F2ECF81FC7F2 /* libaura_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_macos.dylib; sourceTree = "<group>"; };
+		F9EBA9D1A67B6818BC9E28E8 /* libaura_posix.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaura_posix.dylib; sourceTree = "<group>"; };
+		A77F1F67C1DA9E32A89B2CE3 /* libaxis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libaxis.dylib; sourceTree = "<group>"; };
+		91F1132A08FE5EA140338F27 /* libberg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libberg.dylib; sourceTree = "<group>"; };
+		43A47A65022C66E13679E559 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
+		8608D709687868071B1AE34E /* libcrypto_openssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto_openssl.dylib; sourceTree = "<group>"; };
+		9A0CEF50A2CDC2FABD281F2C /* libdarwin.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdarwin.dylib; sourceTree = "<group>"; };
+		3730C9AF8853C46D650C36A6 /* libdatabase_sqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdatabase_sqlite3.dylib; sourceTree = "<group>"; };
+		17AD4B566FDC603807D0D41D /* libdraw2d_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libdraw2d_quartz2d.dylib; sourceTree = "<group>"; };
+		43AEB72D8929F5BA4BC50A20 /* libexperience_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libexperience_core.dylib; sourceTree = "<group>"; };
+		F67125F00644BCC9DC896254 /* libfolder_zip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfolder_zip.dylib; sourceTree = "<group>"; };
+		C36B7AB5AC01F9763CB49795 /* libidn.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libidn.dylib; sourceTree = "<group>"; };
+		15A7A2AD9CECBFACC0B98FEB /* libinnate_ui_appkit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libinnate_ui_appkit.dylib; sourceTree = "<group>"; };
+		E831F1037EE888FA8ED44936 /* libnano_graphics_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnano_graphics_quartz2d.dylib; sourceTree = "<group>"; };
+		AA77DD7C652D576B820E46ED /* libnetworking_bsd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnetworking_bsd.dylib; sourceTree = "<group>"; };
+		A6A58987C98FEB9A2368A8F4 /* libnode_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnode_macos.dylib; sourceTree = "<group>"; };
+		75FF004BB0A6E6C21A602A02 /* liboperating_ambient_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liboperating_ambient_macos.dylib; sourceTree = "<group>"; };
+		5F95D8346375308737C1E520 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.dylib; sourceTree = "<group>"; };
+		78DE9F3C0B858C0D73169225 /* libunac.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libunac.dylib; sourceTree = "<group>"; };
+		E2158470E595CC8F0EBBC582 /* libwindowing_macos.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwindowing_macos.dylib; sourceTree = "<group>"; };
+		50D689370062EFF5584B3CE9 /* libwrite_text_quartz2d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libwrite_text_quartz2d.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8B80CD46C0335503DA42480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC750480672378D10257B4A3 /* libacme.dylib in Frameworks */,
+				DE4D4489E77DE8A46FC1D1DB /* libappkit.dylib in Frameworks */,
+				ECB2CDFF65B1235D9BFCED3E /* libcore_foundation.dylib in Frameworks */,
+				16B753A78E2E4D4BBB2045B8 /* libcore_graphics.dylib in Frameworks */,
+				45F03395C8556CFC0DAE932C /* libberg.dylib in Frameworks */,
+				97F81D587A0B2C22BCDC45EB /* libapp_simple_window_size.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45552BFDA06581A9907B6057 = {
+			isa = PBXGroup;
+			children = (
+				B83C64EF718EA8A5246F7106 /* time-macos */,
+				AC203DF2E797E07CB53D0DFB /* __implement */,
+				807A015E56E2D39196BA862F /* Frameworks */,
+				3159327B9B1BCA904F5F1869 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3159327B9B1BCA904F5F1869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95E16D6BEF4E58B273D08C80 /* _app_simple_window_size.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		538CFC89812E5C1CE9918B66 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9726184DEC98E5EA5364A499 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		4813909ED5BFD23D485AC359 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				538CFC89812E5C1CE9918B66 /* en.lproj */,
+				D97834B7A5BB5196A3D75731 /* Images.xcassets */,
+				B9CA9707C51D920AB169156B /* Info.plist */,
+			);
+			path = macos;
+			sourceTree = "<group>";
+		};
+		807A015E56E2D39196BA862F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B83C64EF718EA8A5246F7106 /* time-macos */ = {
+			isa = PBXGroup;
+			children = (
+				B45DEEA3DC337B9037F729B8 /* libacme.dylib */,
+				8C8CC6FFDFAD95C2E6544296 /* libacme_apple.dylib */,
+				DF566B4B1E8647A087807E26 /* libacme_darwin.dylib */,
+				B1E8785B9870A931315BA46E /* libacme_macos.dylib */,
+				F684ACDC53A274F82DBEE67A /* libacme_posix.dylib */,
+				9C659DEFCC7A080F19233F27 /* libacme_windowing_appkit.dylib */,
+				C67051C9E5D70115263BAAF4 /* libacme_windowing_kit.dylib */,
+				933901614E88D7481C566A0E /* libapex.dylib */,
+				C9DD707170A50843BC5A3FDB /* libapex_apple.dylib */,
+				9D9374D8842ACE865133D166 /* libapex_darwin.dylib */,
+				8DCB6DCE29BED898DC644066 /* libapex_macos.dylib */,
+				F22553488F96E9CDBAF8F44B /* libapex_posix.dylib */,
+				66D144E13231F59A1731E8E7 /* libapp_simple_window_size.dylib */,
+				F3ACE373DAC5BE64FBB9E49B /* libappkit.dylib */,
+				34924A7485EC463CF22F56F2 /* libaqua.dylib */,
+				5441E8AA9B87BB2B301AC7E0 /* libarchive.dylib */,
+				7D7DEA6275E8813B577E4910 /* libaura.dylib */,
+				334827D45FADE45C9162800C /* libaura_apple.dylib */,
+				10561209E065ECD6629C7722 /* libaura_darwin.dylib */,
+				1AAB50CA8EA5F2ECF81FC7F2 /* libaura_macos.dylib */,
+				F9EBA9D1A67B6818BC9E28E8 /* libaura_posix.dylib */,
+				A77F1F67C1DA9E32A89B2CE3 /* libaxis.dylib */,
+				91F1132A08FE5EA140338F27 /* libberg.dylib */,
+				3C6F2D66E1E120C5003340DA /* libcore_foundation.dylib */,
+				EAD8150789C7DBEB74870009 /* libcore_graphics.dylib */,
+				43A47A65022C66E13679E559 /* libcrypto.dylib */,
+				8608D709687868071B1AE34E /* libcrypto_openssl.dylib */,
+				9A0CEF50A2CDC2FABD281F2C /* libdarwin.dylib */,
+				3730C9AF8853C46D650C36A6 /* libdatabase_sqlite3.dylib */,
+				17AD4B566FDC603807D0D41D /* libdraw2d_quartz2d.dylib */,
+				43AEB72D8929F5BA4BC50A20 /* libexperience_core.dylib */,
+				F67125F00644BCC9DC896254 /* libfolder_zip.dylib */,
+				C36B7AB5AC01F9763CB49795 /* libidn.dylib */,
+				15A7A2AD9CECBFACC0B98FEB /* libinnate_ui_appkit.dylib */,
+				E831F1037EE888FA8ED44936 /* libnano_graphics_quartz2d.dylib */,
+				A0B9796E9FF3A60EBB83386A /* libnano_idn_libidn.dylib */,
+				5E7160FB84912A0C8ACD0402 /* libnano2d.dylib */,
+				AA77DD7C652D576B820E46ED /* libnetworking_bsd.dylib */,
+				A6A58987C98FEB9A2368A8F4 /* libnode_macos.dylib */,
+				75FF004BB0A6E6C21A602A02 /* liboperating_ambient_macos.dylib */,
+				5F95D8346375308737C1E520 /* libssl.dylib */,
+				78DE9F3C0B858C0D73169225 /* libunac.dylib */,
+				E2158470E595CC8F0EBBC582 /* libwindowing_macos.dylib */,
+				50D689370062EFF5584B3CE9 /* libwrite_text_quartz2d.dylib */,
+			);
+			path = "time-macos";
+			sourceTree = "<group>";
+		};
+		AC203DF2E797E07CB53D0DFB /* __implement */ = {
+			isa = PBXGroup;
+			children = (
+				00285C0DA8ED4D3B064892C4 /* _____debug.xcconfig */,
+				C6A16AAE9515016D154EC9B2 /* _____release.xcconfig */,
+				DDC43CFC1B10F80C2FED3803 /* main.cpp */,
+				55CA09F2A4B2DBD360E73F17 /* _matter.zip */,
+				4813909ED5BFD23D485AC359 /* macos */,
+			);
+			name = __implement;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00EF4123849E0D597BAB7D1C /* _app_simple_window_size */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB13ED3E8F5C365D6272852 /* Build configuration list for PBXNativeTarget "_app_simple_window_size" */;
+			buildPhases = (
+				20D056E37F0D83DD4FA41C14 /* Sources */,
+				D8B80CD46C0335503DA42480 /* Frameworks */,
+				7BE7858C28557394F5E720EA /* Resources */,
+				FBBD703D7D626836D3C55FA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = _app_simple_window_size;
+			productName = "Hello Multiverse!!";
+			productReference = 95E16D6BEF4E58B273D08C80 /* _app_simple_window_size.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B272443C661BDD1FD9048F75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
+				ORGANIZATIONNAME = "ca2 Software Development";
+				TargetAttributes = {
+					00EF4123849E0D597BAB7D1C = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = L8N5V6TZE5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9DDB0B23910CE6D52651CF39 /* Build configuration list for PBXProject "app_simple_window_size" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45552BFDA06581A9907B6057;
+			productRefGroup = 3159327B9B1BCA904F5F1869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00EF4123849E0D597BAB7D1C /* _app_simple_window_size */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BE7858C28557394F5E720EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522E5DBD40CB7A61FAA94A34 /* _matter.zip in Resources */,
+				0ECE6D1D2896F5D9385D59F3 /* InfoPlist.strings in Resources */,
+				AFF325BCB00D1C79C7F0F1CF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20D056E37F0D83DD4FA41C14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2740B49B9BD6406EE4C8DBA4 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9726184DEC98E5EA5364A499 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91D95F1895984B4116A20245 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E542F3799896A6E3C14F0CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00285C0DA8ED4D3B064892C4 /* _____debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
+					"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/output",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/_include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/port/_",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				WorkspaceDir = "$(SRCROOT)/../../../..";
+			};
+			name = Debug;
+		};
+		C4D9044D8B0258017AB669EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A16AAE9515016D154EC9B2 /* _____release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/time-$(PLATFORM_MODIFIER)/output",
+				);
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration",
+					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/source/app/include",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/_include",
+					"$(WorkspaceDir)/operating_system",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/configuration_selection/$(CONFIGURATION)",
+					"$(WorkspaceDir)/port/_",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				WorkspaceDir = "$(SRCROOT)/../../../..";
+			};
+			name = Release;
+		};
+		56D0868C1C16EDECE231690A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Application";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/time-macos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.application";
+				PRODUCT_NAME = _app_simple_window_size;
+			};
+			name = Debug;
+		};
+		9CA6B878FA2A750F39F7951D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/macos/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Simple Application";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/time-macos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "app-simple.application";
+				PRODUCT_NAME = _app_simple_window_size;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DDB0B23910CE6D52651CF39 /* Build configuration list for PBXProject "app_simple_window_size" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E542F3799896A6E3C14F0CE /* Debug */,
+				C4D9044D8B0258017AB669EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB13ED3E8F5C365D6272852 /* Build configuration list for PBXNativeTarget "_app_simple_window_size" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56D0868C1C16EDECE231690A /* Debug */,
+				9CA6B878FA2A750F39F7951D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B272443C661BDD1FD9048F75 /* Project object */;
+}

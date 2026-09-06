@@ -1,0 +1,46 @@
+#pragma once
+
+
+#include "berg/platform/application.h"
+
+
+namespace app_simple_window_size
+{
+
+
+   class CLASS_DECL_APP_SIMPLE_WINDOW_SIZE application :
+      virtual public ::berg::application
+   {
+   public:
+
+
+      ::file::path                                    m_pathApplicationText;
+      ::user::document *                              m_pdocMenu;
+      //::pointer<::user::single_document_template>  m_ptemplateSimpleDrawingMain;
+      pane_impact *                                     m_ppaneimpact;
+
+      application();
+      ~application() override;
+      
+
+      __DECLARE_APPLICATION_RELEASE_TIME();
+
+
+      virtual string preferred_experience() override;
+      virtual void init_instance() override;
+      virtual void term_application() override;
+
+      virtual void on_request(::request * prequest) override;
+
+#ifdef _DEBUG
+      virtual ::i64 increment_reference_count() override;
+      virtual ::i64 decrement_reference_count() override;
+#endif
+
+   };
+
+
+} // namespace app_simple_window_size
+
+
+
