@@ -754,7 +754,7 @@ namespace app_simple_build_plan
 
    //            ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-   //            pgraphicsImage->draw(imagedrawing);
+   //            pdraw2dgraphicsImage->draw(imagedrawing);
    //         }
 
 
@@ -815,7 +815,7 @@ namespace app_simple_build_plan
 
    //            ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-   //            pgraphicsImage->draw(imagedrawing);
+   //            pdraw2dgraphicsImage->draw(imagedrawing);
 
 
    //         }
