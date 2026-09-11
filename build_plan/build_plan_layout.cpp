@@ -611,7 +611,7 @@ namespace app_simple_build_plan
 
                pimage = image()->create_image({48, 48});
 
-               auto pgraphicsImage = pimage->acquire_graphics();
+               auto pdraw2dgraphicsImage = pimage->acquire_graphics();
 
                ::f64 w = 48.0;
                ::f64 h = 48.0;
@@ -631,7 +631,7 @@ namespace app_simple_build_plan
 
                ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-               pgraphicsImage->draw(imagedrawing);
+               pdraw2dgraphicsImage->draw(imagedrawing);
             }
 
 
@@ -667,7 +667,7 @@ namespace app_simple_build_plan
 
                pimage = image()->create_image({48, 48});
 
-               auto pgraphicsImage = pimage->acquire_graphics();
+               auto pdraw2dgraphicsImage = pimage->acquire_graphics();
 
 
                ::f64 w = 48.0;
@@ -688,7 +688,7 @@ namespace app_simple_build_plan
 
                ::image::image_drawing imagedrawing(imagedrawingoptions, imagesource);
 
-               pgraphicsImage->draw(imagedrawing);
+               pdraw2dgraphicsImage->draw(imagedrawing);
             }
 
 
