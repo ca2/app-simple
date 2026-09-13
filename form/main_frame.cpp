@@ -12,7 +12,7 @@ namespace app_simple_form
 
 #if REFERENCING_DEBUGGING
       //m_bDefaultCreateToolbar = false;
-      m_bIncludeCallStackTrace = true;
+      m_referencingdebugging.m_bIncludeCallStackTrace = true;
 #endif
 
       window_enable_full_screen();
