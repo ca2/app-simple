@@ -62,7 +62,7 @@ namespace app_simple_http_file_server
       m_iPortMaximum = (::networking::port_t)80;
 #endif
 
-      branch();
+      branch_asynchronously();
 
 //      if (!estatus)
 //      {
