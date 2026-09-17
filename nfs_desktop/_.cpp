@@ -12,3 +12,11 @@ __END_RELEASE_TIME()
 
 
 
+#ifdef WINDOWS
+
+#pragma comment(lib, "Ws2_32.lib")
+
+#endif
+
+
+
