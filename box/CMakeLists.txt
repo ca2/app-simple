@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.16)
 project(app_simple_box CXX)
 
 
+message("PROJECT_NAME = ${PROJECT_NAME}")
+
+
 set(LIBRARY_NAME app_simple_box)
 
 
@@ -67,7 +70,7 @@ if(${WIN32})
     target_link_libraries(${PROJECT_NAME} PRIVATE acme apex aqua aura axis berg)
 
 
-elseif (${LINUX} OR ${__BSD__} OR ${ANDROID})
+elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__})
 
 
     target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
