@@ -609,7 +609,7 @@ namespace app_simple_build_plan
 
                auto pimage1 = pimage;
 
-               pimage = image()->create_image({48, 48});
+               pimage = image()->create_image({48, 48}, draw2d_domain());
 
                auto pdraw2dgraphicsImage = pimage->acquire_graphics();
 
@@ -665,7 +665,7 @@ namespace app_simple_build_plan
 
                auto pimage1 = pimage;
 
-               pimage = image()->create_image({48, 48});
+               pimage = image()->create_image({48, 48}, draw2d_domain());
 
                auto pdraw2dgraphicsImage = pimage->acquire_graphics();
 
