@@ -54,7 +54,7 @@ elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__} OR ${__SUNOS__})
 
 endif ()
 
-
+message("default node is ${default_node}")
 add_dependencies(${PROJECT_NAME} ${default_node})
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_write_text})
