@@ -9,6 +9,7 @@
 #include "aura/graphics/draw2d/pen.h"
 #include "aura/graphics/write_text/font.h"
 #include "aura/graphics/image/context.h"
+#include "aura/graphics/image/load_options.h"
 #include "berg/user/user/impact.h"
 
 
@@ -37,7 +38,9 @@ namespace app_simple_drawing
 
             constructø(m_pimage1);
 
-            m_papplication->fork([this]()
+            auto pdraw2ddomain = m_pimpact->draw2d_domain();
+
+            m_papplication->fork([this, pdraw2ddomain]()
             {
 
                const char * pszImageStage = "loading matter://pat1.jpg";
@@ -46,7 +49,9 @@ namespace app_simple_drawing
 
                information() << "drawing3 image: " << pszImageStage;
 
-               auto pimage1 = image()->get_image("matter://pat1.jpg");
+               ::image::load_options loadoptions;
+               loadoptions.draw2d_domain = pdraw2ddomain;
+               auto pimage1 = image()->get_image("matter://pat1.jpg", loadoptions);
 
                information() << "drawing3 image: load returned, ok=" << pimage1.ok();
 
