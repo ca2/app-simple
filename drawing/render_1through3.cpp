@@ -40,7 +40,15 @@ namespace app_simple_drawing
             m_papplication->fork([this]()
             {
 
+               const char * pszImageStage = "loading matter://pat1.jpg";
+               try
+               {
+
+               information() << "drawing3 image: " << pszImageStage;
+
                auto pimage1 = image()->get_image("matter://pat1.jpg");
+
+               information() << "drawing3 image: load returned, ok=" << pimage1.ok();
 
                if (pimage1.ok())
                {
@@ -48,6 +56,9 @@ namespace app_simple_drawing
                   ::pointer<::image::image> pimage2;
 
                   constructø(pimage2);
+
+                  pszImageStage = "copying decoded image";
+                  information() << "drawing3 image: " << pszImageStage;
 
                   pimage2->copy_from(pimage1);
 
@@ -58,7 +69,13 @@ namespace app_simple_drawing
 
                      {
 
+                        pszImageStage = "mapping grayscale image";
+                        information() << "drawing3 image: " << pszImageStage;
+
                         auto ppixmapImage2 = pimage2->map();
+
+                        pszImageStage = "converting image to grayscale";
+                        information() << "drawing3 image: " << pszImageStage;
 
                         ppixmapImage2->transform(e_image_grayscale);
 
@@ -74,7 +91,27 @@ namespace app_simple_drawing
 
                      m_pimpact->post_redraw();
 
+                     information() << "drawing3 image: ready, redraw posted";
+
                   }
+
+               }
+
+               }
+               catch (const ::exception & e)
+               {
+
+                  information() << "drawing3 image failed at " << pszImageStage
+                     << ": " << e.get_message() << " " << e.m_strDetails;
+                  throw;
+
+               }
+               catch (...)
+               {
+
+                  information() << "drawing3 image failed at " << pszImageStage
+                     << ": unknown exception";
+                  throw;
 
                }
 
