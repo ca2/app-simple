@@ -29,7 +29,7 @@ list(APPEND executable_references
    )
 
 
-if(${LINUX} OR ${__BSD__} OR ${__SUNOS__})
+if(${LINUX} OR ${__BSD__} OR ${__SUNOS__} OR ${__HAIKU__})
 
    target_sources(${PROJECT_NAME} PRIVATE .link_object/_matter.zip.o)
 
@@ -46,7 +46,7 @@ if(${WIN32})
     target_link_libraries(${PROJECT_NAME} PRIVATE ${executable_references})
 
 
-elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__} OR ${__SUNOS__})
+elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__} OR ${__SUNOS__} OR ${__HAIKU__})
 
 
     target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)

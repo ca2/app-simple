@@ -29,7 +29,7 @@ list(APPEND executable_references
    app_simple_http_file_server)
 
 
-if(${LINUX} OR ${__BSD__} OR ${__SUNOS__})
+if(${LINUX} OR ${__BSD__} OR ${__SUNOS__} OR ${__HAIKU__})
 
    target_sources(${PROJECT_NAME} PRIVATE .link_object/_matter.zip.o)
 
@@ -47,7 +47,7 @@ if(${WIN32})
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus imaging_wic)
 
 
-elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__} OR ${__SUNOS__})
+elseif (${LINUX} OR ${__BSD__} OR ${__ANDROID__} OR ${__SUNOS__} OR ${__HAIKU__})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-fpermissive  ${EXTRA_CXX_TARGET_COMPILER_OPTIONS}>)
