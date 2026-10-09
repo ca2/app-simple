@@ -66,6 +66,7 @@ namespace app_simple_drawing
                   pszImageStage = "copying decoded image";
                   information() << "drawing3 image: " << pszImageStage;
 
+                  pimage2->create_as_descriptor(pimage1->size(), pdraw2ddomain);
                   pimage2->copy_from(pimage1);
 
                   m_pimage1 = pimage1;
@@ -91,6 +92,7 @@ namespace app_simple_drawing
 
                      }
 
+                     pimage2->set_ok_flag();
                      m_pimage2 = pimage2;
 
                      m_pimpact->set_need_redraw();
