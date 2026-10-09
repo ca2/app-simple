@@ -121,7 +121,7 @@ namespace app_simple_window_size
 
       SetSplitOrientation(e_orientation_vertical);
 
-      auto preferredDensity = preferred_density();
+      //auto preferredDensity = preferred_density();
 
       set_position_rate(0, 0.5);
 
