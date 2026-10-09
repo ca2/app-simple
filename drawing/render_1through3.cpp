@@ -10,6 +10,7 @@
 #include "aura/graphics/draw2d/pen.h"
 #include "aura/graphics/write_text/font.h"
 #include "aura/graphics/image/context.h"
+#include "aura/graphics/image/load_image.h"
 #include "aura/graphics/image/load_options.h"
 #include "berg/user/user/impact.h"
 
@@ -44,82 +45,66 @@ namespace app_simple_drawing
             m_papplication->fork([this, pdraw2ddomain]()
             {
 
-               const char * pszImageStage = "loading matter://pat1.jpg";
-               try
-               {
-
-               information() << "drawing3 image: " << pszImageStage;
+              information() << "drawing3 image: loading matter://pat1.jpg";
 
                ::image::load_options loadoptions;
                loadoptions.draw2d_domain = pdraw2ddomain;
-               auto pimage1 = image()->get_image("matter://pat1.jpg", loadoptions);
-
-               information() << "drawing3 image: load returned, ok=" << pimage1.ok();
-
-               if (pimage1.ok())
-               {
-
-                  ::pointer<::image::image> pimage2;
-
-                  constructø(pimage2);
-
-                  pszImageStage = "copying decoded image";
-                  information() << "drawing3 image: " << pszImageStage;
-
-                  pimage2->copy_from(pimage1);
-
-                  m_pimage1 = pimage1;
-
-                  if (::is_set(pimage2))
+               loadoptions.functionaLoaded.add([this](::image::load_image * ploadimage)
                   {
 
+                     auto pimage1 = ploadimage->get_image();
+
+                     information() << "drawing3 image: load returned, ok=" << ::is_ok(pimage1);
+
+                     if (::is_ok(pimage1))
                      {
 
-                        pszImageStage = "mapping grayscale image";
-                        information() << "drawing3 image: " << pszImageStage;
+                        ::pointer<::image::image> pimage2;
 
-                        auto ppixmapImage2 = pimage2->map();
+                        constructø(pimage2);
 
-                        pszImageStage = "converting image to grayscale";
-                        information() << "drawing3 image: " << pszImageStage;
+                        information() << "drawing3 image: copying decoded image";
 
-                        ppixmapImage2->transform(e_image_grayscale);
+                        pimage2->copy_from(pimage1);
 
-                        //pimage2->unmap();
+                        m_pimage1 = pimage1;
 
-                        ppixmapImage2->set_ok_flag();
+                        if (::is_set(pimage2))
+                        {
+
+                           {
+
+                              auto pszImageStage = "mapping grayscale image";
+                              information() << "drawing3 image: " << pszImageStage;
+
+                              auto ppixmapImage2 = pimage2->map();
+
+                              pszImageStage = "converting image to grayscale";
+                              information() << "drawing3 image: " << pszImageStage;
+
+                              ppixmapImage2->transform(e_image_grayscale);
+
+                           }
+
+                           m_pimage2 = pimage2;
+
+                           pimage2->set_ok_flag();
+
+                           m_pimpact->set_need_redraw();
+
+                           m_pimpact->post_redraw();
+
+                           information() << "drawing3 image: ready, redraw posted";
+
+                        }
 
                      }
 
-                     m_pimage2 = pimage2;
 
-                     m_pimpact->set_need_redraw();
 
-                     m_pimpact->post_redraw();
+                  } );
 
-                     information() << "drawing3 image: ready, redraw posted";
-
-                  }
-
-               }
-
-               }
-               catch (const ::exception & e)
-               {
-
-                  information() << "drawing3 image failed at " << pszImageStage
-                     << ": " << e.get_message() << " " << e.m_strDetails;
-                  throw;
-
-               }
-               catch (...)
-               {
-
-                  information() << "drawing3 image failed at " << pszImageStage
-                     << ": unknown exception";
-                  throw;
-
-               }
+               image()->get_image("matter://pat1.jpg", loadoptions);
 
             });
 
