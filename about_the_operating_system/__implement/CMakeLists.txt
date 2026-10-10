@@ -14,10 +14,16 @@ endif()
 
 add_executable(${PROJECT_NAME} ${application_source})
 
+if(__HAIKU__)
+   haiku_set_application_icon(${PROJECT_NAME}
+      "app-simple/about_the_operating_system"
+      "../../_matter/about_the_operating_system/_std/_std/main/icon.png")
+endif()
 
 
 
-if(${LINUX} OR ${__BSD__} OR ${__SUNOS__})
+
+if(${LINUX} OR ${__BSD__} OR ${__SUNOS__} OR ${__HAIKU__})
 
    target_sources(${PROJECT_NAME} PRIVATE .link_object/_matter.zip.o)
 

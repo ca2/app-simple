@@ -14,6 +14,12 @@ endif()
 
 add_executable(${PROJECT_NAME} ${application_source})
 
+if(__HAIKU__)
+   haiku_set_application_icon(${PROJECT_NAME}
+      "app-simple/drawing"
+      "../../_matter/drawing/_std/_std/main/icon.png")
+endif()
+
 
 
 
