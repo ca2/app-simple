@@ -7,7 +7,7 @@ project(_app_simple_application CXX)
 list(APPEND application_source main.cpp)
 
 
-if(MSVC)
+if(WIN32)
     list(APPEND application_source ../deployment.rc main.rc)
 endif()
 
@@ -56,8 +56,19 @@ if(${WIN32})
       #target_link_options(${PROJECT_NAME} PRIVATE "/IMPLIB:${LIBRARY_OUTPUT_PATH}/${PROJECT_NAME}.lib")
       #target_link_options(${PROJECT_NAME} PRIVATE "/DEF:${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.def")
    else()
+
+
       target_link_options(${PROJECT_NAME} PRIVATE "-mwindows")
+
+
+      if(MINGW)
+         target_link_options(${PROJECT_NAME} PRIVATE "-municode")
+      endif()
+
+
       #target_sources(${PROJECT_NAME} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}.def")
+
+
    endif()
 
 
@@ -98,3 +109,21 @@ set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 
+
+if(__REACTOS__ AND TARGET unac)
+   foreach(runtime sqlite unac iconv)
+      add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+         COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "$<TARGET_FILE:${runtime}>" "$<TARGET_FILE_DIR:${PROJECT_NAME}>" VERBATIM)
+   endforeach()
+endif()
+
+
+
+option(CA2_STARTUP_TRACE "Write startup stages to ca2-startup.log beside the executable" OFF)
+option(CA2_ATTACH_PARENT_CONSOLE "Attach GUI startup to the invoking console when available" OFF)
+if(WIN32)
+   target_compile_definitions(${PROJECT_NAME} PRIVATE
+      CA2_STARTUP_TRACE=$<BOOL:${CA2_STARTUP_TRACE}>
+      CA2_ATTACH_PARENT_CONSOLE=$<BOOL:${CA2_ATTACH_PARENT_CONSOLE}>)
+endif()
