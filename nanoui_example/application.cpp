@@ -20,7 +20,7 @@ namespace app_simple_nanoui_example
 
       m_strAppId = "app-simple/nanoui_example";
 
-      m_strAppName = "app-simple/nanoui_example";
+      m_strAppName = "nanoui_example";
 
       m_strBaseSupportId = "app_simple_nanoui_example";
 

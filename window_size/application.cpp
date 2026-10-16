@@ -36,7 +36,7 @@ namespace app_simple_window_size
 
       m_strAppId = "app-simple/application";
 
-      m_strAppName = "app-simple/application";
+      m_strAppName = "application";
 
       m_strBaseSupportId = "app_simple_window_size";
 

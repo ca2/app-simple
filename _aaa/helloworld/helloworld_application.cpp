@@ -12,7 +12,7 @@ namespace helloworld
    application::application()
    {
 
-      m_strAppName                     = "app-simple/helloworld";
+      m_strAppName                     = "helloworld";
       m_strBaseSupportId               = "app-simple/helloworld";
       m_bLicense                       = false;
       m_pimpactsystem    = NULL;

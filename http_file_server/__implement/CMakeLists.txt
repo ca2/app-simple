@@ -45,7 +45,7 @@ endif()
 if(${WIN32})
    
 
-   target_compile_options(${PROJECT_NAME} PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
+   #target_compile_options(${PROJECT_NAME} PRIVATE "/D_APP_ID=\"app-simple/drawing\"")
 
 
    if(MSVC)
