@@ -123,7 +123,7 @@ namespace simple_shader
 
       ::file::listing listing(get_context());
 
-      listing.ls_pattern("dropbox://shader/simple shader/", { "*.frag" });
+      listing.ls_pattern("cloud://shader/simple shader/", { "*.frag" });
 
       for (auto& path : listing)
       {

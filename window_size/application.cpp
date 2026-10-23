@@ -78,7 +78,7 @@ namespace app_simple_window_size
       
 #else
       
-      m_pathApplicationText = "dropbox-app://application.txt";
+      m_pathApplicationText = "cloud-app://application.txt";
       
 #endif
 

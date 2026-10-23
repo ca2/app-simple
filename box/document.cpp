@@ -44,7 +44,7 @@ namespace app_simple_box
       
       auto pfile = papp->file();
       
-      pfile->lines(m_straLine, "dropbox://app_simple_application.txt");
+      pfile->lines(m_straLine, "cloud://app_simple_application.txt");
 
       if (m_straLine.is_empty())
       {

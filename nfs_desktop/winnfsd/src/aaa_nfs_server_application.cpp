@@ -26,7 +26,7 @@
 ////void nfs_server_application::read_ini()
 ////{
 ////
-////   m_set = file_system()->parse_ini("dropbox-app://configuration.ini");
+////   m_set = file_system()->parse_ini("cloud-app://configuration.ini");
 ////
 ////}
 ////
@@ -34,7 +34,7 @@
 ////void nfs_server_application::write_ini()
 ////{
 ////
-////   file_system()->set_ini("dropbox-app://configuration.ini", m_set);
+////   file_system()->set_ini("cloud-app://configuration.ini", m_set);
 ////
 ////}
 //

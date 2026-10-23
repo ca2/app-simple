@@ -77,7 +77,7 @@ namespace app_simple_application
       
 #else
       
-      m_pathApplicationText = "dropbox-app://application.txt";
+      m_pathApplicationText = "cloud-app://application.txt";
       
 #endif
 
