@@ -351,7 +351,7 @@ class CNFS3Prog : public CRPCProg
     ProcessParam *m_pParam;
     ::u32 m_idThreadCleanup;
     HANDLE m_hThreadCleanup;
-    ::pointer < ::mutex > m_pmutexCleanup;
+    ::pointer < ::parallelization::mutex > m_pmutexCleanup;
     ::array < FILE_ITEM * > m_fileitemaCleanup;
 
     nfsstat3 ProcedureNULL(void);
