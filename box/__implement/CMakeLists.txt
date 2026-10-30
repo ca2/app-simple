@@ -90,7 +90,9 @@ endif ()
 
 
 add_dependencies(${PROJECT_NAME} app_simple_box)
-add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
+if(app_common_dependencies)
+   add_dependencies(${PROJECT_NAME} ${app_common_dependencies})
+endif()
 add_dependencies(${PROJECT_NAME} experience_tranquillum)
 add_dependencies(${PROJECT_NAME} ${default_draw2d})
 add_dependencies(${PROJECT_NAME} ${default_imaging})
