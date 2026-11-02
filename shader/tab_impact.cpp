@@ -164,7 +164,7 @@ namespace app_simple_shader
          if(ptabpaneFileManager != nullptr && ptabpaneFileManager->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFileManager->m_pplaceholder->hide();
+            ptabpaneFileManager->m_pplaceholder->display(::e_display_none);
 
          }
 
@@ -173,7 +173,7 @@ namespace app_simple_shader
          if (ptabpaneFontSel != nullptr && ptabpaneFontSel->m_pplaceholder != nullptr)
          {
 
-            ptabpaneFontSel->m_pplaceholder->hide();
+            ptabpaneFontSel->m_pplaceholder->display(::e_display_none);
 
          }
 

@@ -10,6 +10,7 @@
 #include "apex/database/_binary_stream.h"
 #include "berg/user/user/impact_system.h"
 #include "berg/user/user/split_impact.h"
+#include "aura/graphics/draw2d/graphics_lease.h"
 #include "aura/graphics/image/image.h"
 #include "aura/graphics/image/encoding_options.h"
 #include "aura/graphics/image/context.h"
@@ -265,9 +266,9 @@ namespace app_simple_shader
 
          auto rectangleX = this->rectangle();
 
-         auto pimage = image()->create_image(rectangleX.size());
+         auto pimage = image()->create_image(rectangleX.size(), draw2d_domain());
 
-         ::draw2d::graphics_pointer pdraw2dgraphics = pdraw2dgraphicsImage;
+         auto pdraw2dgraphics = pimage->acquire_graphics();
 
          m_prender->_001OnDraw(pdraw2dgraphics);
 
