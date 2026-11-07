@@ -148,7 +148,7 @@ namespace app_simple_nanoui_example
          pmessagebox->initialize_message_box("Button pressed.");
 
          pmessagebox->display(e_display_normal, {});
-         pmessagebox->wait_dialog_response(); }
+         pmessagebox->wait_for_dialog_response(); }
     )
        ->set_tooltip("Testing a much longer tooltip, that will wrap around to ___new lines multiple times.");;
 
