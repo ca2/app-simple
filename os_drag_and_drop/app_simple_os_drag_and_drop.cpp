@@ -1,5 +1,5 @@
 #include "platform.h"
-#include "simple_os_drag_and_drop.h"
+#include "app_simple_os_drag_and_drop.h"
 #include "acme/platform/node.h"
 #include "acme/platform/system.h"
 #include "aura/graphics/draw2d/graphics.h"

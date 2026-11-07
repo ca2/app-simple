@@ -75,7 +75,6 @@
 		<Compiler>
 			<Add option="-fPIC" />
 			<Add option="-std=c++17" />
-			<Add option='-include &quot;platform.h&quot;' />
 			<Add option="-fexceptions" />
 			<Add option="-fnon-call-exceptions" />
 			<Add option="-fno-pie" />
@@ -136,10 +135,12 @@
 		<Unit filename="pane_impact.h" />
 		<Unit filename="simple_drag_and_drop.h" />
 		<Unit filename="simple_drawing_simple_drawing.h" />
-		<Unit filename="simple_os_drag_and_drop.cpp" />
+		<Unit filename="app_simple_os_drag_and_drop.cpp" />
 		<Unit filename="impact.cpp" />
 		<Unit filename="impact.h" />
 		<Extensions>
+			<code_completion />
+			<debugger />
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
 				<doxyfile_project />
@@ -149,6 +150,7 @@
 				<doxyfile_dot />
 				<general />
 			</DoxyBlocks>
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

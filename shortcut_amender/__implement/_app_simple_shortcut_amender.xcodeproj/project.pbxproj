@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D52C697EEF70B140CA254CF /* _app_simple_shortcut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut.cpp */; };
+		9D52C697EEF70B140CA254CF /* _app_simple_shortcut_amender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut_amender.cpp */; };
 		6683B72199BDC205AD135210 /* _matter.zip in Resources */ = {isa = PBXBuildFile; fileRef = 993D0211E1A4FE7886E6A3F3 /* _matter.zip */; };
 		034F6DCC49FB89C63F9EDC3B /* libcrypto.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 5F1132525E78CEAB9BACD93F /* libcrypto.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7615C38ADEC236FE7E2CEE14 /* libssl.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 48FF7DBEF9E9384E20892208 /* libssl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -275,10 +275,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DF88FDA142561B7ED2739A88 /* _app_simple_shortcut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_shortcut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF88FDA142561B7ED2739A88 /* _app_simple_shortcut_amender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = _app_simple_shortcut_amender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA9FD524DED10EC9228B632 /* _app_simple_shortcut_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = _app_simple_shortcut_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC6DC615BA2E4B933907A1E /* experience_tranquillum.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = experience_tranquillum.xcodeproj; path = ../../../app/experience_tranquillum/experience_tranquillum.xcodeproj; sourceTree = SOURCE_ROOT; };
-		3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_shortcut.cpp; sourceTree = "<group>"; };
+		3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut_amender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _app_simple_shortcut_amender.cpp; sourceTree = "<group>"; };
 		993D0211E1A4FE7886E6A3F3 /* _matter.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = _matter.zip; path = _matter.zip; sourceTree = "<group>"; };
 		5F1132525E78CEAB9BACD93F /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libcrypto.dylib"; sourceTree = "<group>"; };
 		48FF7DBEF9E9384E20892208 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../../../../operating_system/storage-macos/Debug/library/libssl.dylib"; sourceTree = "<group>"; };
@@ -360,7 +360,7 @@
 		B2305B463F6377376618F835 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF88FDA142561B7ED2739A88 /* _app_simple_shortcut.app */,
+				DF88FDA142561B7ED2739A88 /* _app_simple_shortcut_amender.app */,
 				EAA9FD524DED10EC9228B632 /* _app_simple_shortcut_Tests.xctest */,
 			);
 			name = Products;
@@ -394,7 +394,7 @@
 		E539846CDFA3F119D0AECBB9 /* macos */ = {
 			isa = PBXGroup;
 			children = (
-				3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut.cpp */,
+				3DBBB5B945AB5D3C3B98AA54 /* _app_simple_shortcut_amender.cpp */,
 			);
 			path = macos;
 			sourceTree = "<group>";
@@ -525,9 +525,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut */ = {
+		0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut_amender */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D2A130FC811C41E6762D5BD /* Build configuration list for PBXNativeTarget "_app_simple_shortcut" */;
+			buildConfigurationList = 2D2A130FC811C41E6762D5BD /* Build configuration list for PBXNativeTarget "_app_simple_shortcut_amender" */;
 			buildPhases = (
 				131DE8A0CD36D01617D07BBF /* Sources */,
 				AF8CFDB25B4F57E7B8F622CF /* Frameworks */,
@@ -547,9 +547,9 @@
 				8242D551F762513625F60BDE /* PBXTargetDependency */,
 				8848B62E6FB4AFBDB24FFE7E /* PBXTargetDependency */,
 			);
-			name = _app_simple_shortcut;
+			name = _app_simple_shortcut_amender;
 			productName = "Hello Multiverse!!";
-			productReference = DF88FDA142561B7ED2739A88 /* _app_simple_shortcut.app */;
+			productReference = DF88FDA142561B7ED2739A88 /* _app_simple_shortcut_amender.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3E1F8A6EB4B1E3057B289858 /* _app_simple_shortcut_Tests */ = {
@@ -590,7 +590,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57CAD7E664B460D927BBB66E /* Build configuration list for PBXProject "_app_simple_shortcut" */;
+			buildConfigurationList = 57CAD7E664B460D927BBB66E /* Build configuration list for PBXProject "_app_simple_shortcut_amender" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -641,7 +641,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut */,
+				0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut_amender */,
 				3E1F8A6EB4B1E3057B289858 /* _app_simple_shortcut_Tests */,
 			);
 		};
@@ -788,7 +788,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D52C697EEF70B140CA254CF /* _app_simple_shortcut.cpp in Sources */,
+				9D52C697EEF70B140CA254CF /* _app_simple_shortcut_amender.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,7 +804,7 @@
 /* Begin PBXTargetDependency section */
 		DF03BEDB20A94E2F167F41AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut */;
+			target = 0B1B9F24C7C53926BCE1B05C /* _app_simple_shortcut_amender */;
 			targetProxy = 801B8482A15ED02E7B0CE13F /* PBXContainerItemProxy */;
 		};
 		EFD7E3D414D10AB2B12F143D /* PBXTargetDependency */ = {
@@ -1072,7 +1072,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57CAD7E664B460D927BBB66E /* Build configuration list for PBXProject "_app_simple_shortcut" */ = {
+		57CAD7E664B460D927BBB66E /* Build configuration list for PBXProject "_app_simple_shortcut_amender" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07D7B51C831847C70F51FAE3 /* Debug */,
@@ -1081,7 +1081,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D2A130FC811C41E6762D5BD /* Build configuration list for PBXNativeTarget "_app_simple_shortcut" */ = {
+		2D2A130FC811C41E6762D5BD /* Build configuration list for PBXNativeTarget "_app_simple_shortcut_amender" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC8EEB44285732AD6EE130D8 /* Debug */,

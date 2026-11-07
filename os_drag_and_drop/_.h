@@ -36,7 +36,7 @@ namespace app_simple_os_drag_and_drop
 #define APP_TYPE ::app_simple_os_drag_and_drop::application
 
 
-#include "simple_os_drag_and_drop.h"
+#include "app_simple_os_drag_and_drop.h"
 
 
 #include "document.h"
