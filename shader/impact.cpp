@@ -15,7 +15,7 @@
 #include "aura/graphics/image/encoding_options.h"
 #include "aura/graphics/image/context.h"
 #include "aura/message/user.h"
-#include "app/shader/render.h"
+#include "bred/user/user/gpu_shader_render.h"
 
 #include <math.h>
 
@@ -129,10 +129,10 @@ namespace app_simple_shader
 
       //auto estatus = 
       
-      construct_newø(m_prender);
+      construct_newø(m_pusergpushaderrender);
 
 
-      m_prender->m_puserinteraction = this;
+      m_pusergpushaderrender->m_puserinteraction = this;
 
       //if(!estatus)
       //{
@@ -165,7 +165,7 @@ namespace app_simple_shader
 
       }
 
-      m_prender->update_shader();
+      m_pusergpushaderrender->update_shader();
 
       {
 
@@ -190,7 +190,7 @@ namespace app_simple_shader
 
             //auto pproperty = fetch_property(atom);
 
-            m_prender->defer_load_fragment(change.m_payload.as_string());
+            m_pusergpushaderrender->defer_load_fragment(change.m_payload.as_string());
 
          };
 
@@ -270,7 +270,7 @@ namespace app_simple_shader
 
          auto pdraw2dgraphics = pimage->acquire_graphics();
 
-         m_prender->_001OnDraw(pdraw2dgraphics);
+         m_pusergpushaderrender->to_draw2d_graphics(pdraw2dgraphics);
 
          fork([this, pimage]()
             {
@@ -288,7 +288,7 @@ namespace app_simple_shader
 
       }
 
-      m_prender->_001OnDraw(pdraw2dgraphics);
+      m_pusergpushaderrender->to_draw2d_graphics(pdraw2dgraphics);
 
    }
 
@@ -305,9 +305,9 @@ namespace app_simple_shader
 
       }
 
-      m_prender->m_rectangle = rectangleX;
+      m_pusergpushaderrender->m_rectangle = rectangleX;
 
-      m_prender->on_layout(pdraw2dgraphics);
+      m_pusergpushaderrender->on_layout(pdraw2dgraphics);
 
    }
 

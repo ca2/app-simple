@@ -15,13 +15,13 @@ namespace app_simple_shader
    public:
 
 
-      int                                 m_iImpact;
-      ::pointer<::app_shader::render>     m_prender;
-      bool                                m_bSaveFrame;
+      int                                       m_iImpact;
+      ::pointer<::user::gpu_shader_render>      m_pusergpushaderrender;
+      bool                                      m_bSaveFrame;
 
 
       impact();
-      virtual ~impact();
+      ~impact() override;
 
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;

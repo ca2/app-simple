@@ -2,10 +2,11 @@
 #include "tab_impact.h"
 #include "impact.h"
 #include "application.h"
-#include "app/shader/render.h"
 #include "acme/filesystem/filesystem/listing.h"
 #include "berg/user/menu/list_impact.h"
 #include "berg/user/user/tab_pane.h"
+#include "bred/user/user/gpu_shader_list.h"
+#include "bred/user/user/gpu_shader_render.h"
 
 
 namespace app_simple_shader
@@ -66,15 +67,15 @@ namespace app_simple_shader
 
       _001SetVertical();
 
-      auto papp = get_app();
+      //auto papp = m_pg();
 
-      ::file::listing_base listing;
+      //::file::listing_base listing;
 
-      papp->get_shader_listing(listing);
+      //papp->get_shader_listing(listing);
 
       set_tab("Menu", MENU_IMPACT);
 
-      for (auto& path : listing)
+      for (auto& path : m_papp->m_pusergpushaderlist->m_filelisting)
       {
 
          string strTitle = path.title();
@@ -104,10 +105,10 @@ namespace app_simple_shader
       //set_tab("Color", "color_selection_impact");
       //set_tab("Open", "file_manager_impact");
 
-      if (listing.has_element())
+      if (m_papp->m_pusergpushaderlist->m_filelisting.has_element())
       {
 
-         auto path = listing.first();
+         auto path = m_papp->m_pusergpushaderlist->m_filelisting.first();
 
          ::string strPath = path;
 
@@ -222,7 +223,7 @@ namespace app_simple_shader
 
          ::pointer<app_simple_shader::impact> pviewShader = pimpact;
 
-         pviewShader->m_prender->m_strShaderPath = strShaderPath;
+         pviewShader->m_pusergpushaderrender->m_strShaderPath = strShaderPath;
 
          pimpactdata->m_eflag.add(::user::e_flag_hidid_on_show);
 

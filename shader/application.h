@@ -25,9 +25,10 @@ namespace app_simple_shader
       //::user::document *                     m_pdocMenu;
       //::user::plain_edit_impact *              m_prollfps;
       //::user::single_document_template *     m_ptemplateSimpleShaderMain;
-      tab_impact *                             m_ptabimpact;
+      tab_impact *                              m_ptabimpact;
+      ::pointer < ::user::gpu_shader_list >     m_pusergpushaderlist;
 
-      string                                 m_strMainTitle;
+      string                                    m_strMainTitle;
 
       ::data::text_property                     m_textLoadFragmentPathPrefix;
 

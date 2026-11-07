@@ -16,16 +16,15 @@ namespace app_simple_shader
    public:
 
 
-      ::user::split_impact *                            m_ptopviewLast;
+      ::user::split_impact *                          m_ptopviewLast;
       ::pointer<impact>                               m_pviewTopic;
       string                                          m_strTopicTitle;
 
-
-      ::pointer<::user::document>                            m_pdocMenu;
+      ::pointer<::user::document>                     m_pdocMenu;
 
 
       tab_impact();
-      virtual ~tab_impact();
+      ~tab_impact() override;
 
 
       void on_create_impact(::user::impact_data * pimpactdata) override;
