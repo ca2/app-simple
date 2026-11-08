@@ -54,7 +54,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   ::type application::get_pane_impact_type() const
+   ::platform::type application::get_pane_impact_type() const
    {
 
       return typeid(tab_impact );

@@ -78,7 +78,7 @@ namespace app_simple_about_the_operating_system
       //virtual ::atom translate_property_id(const ::atom& atom) override;
 
 
-      string draw2d_get_default_implementation_name() override;
+      string draw2d_get_implementation_name() override;
 
 
    };

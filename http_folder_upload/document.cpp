@@ -5,6 +5,7 @@
 //#include "computer_list2.h"
 //#include "interface_list2.h"
 #include "application.h"
+#include "acme/constant/id.h"
 #include "acme/filesystem/filesystem/file_system.h"
 #include "acme/prototype/collection/_generic_array.h"
 #include "apex/platform/node.h"

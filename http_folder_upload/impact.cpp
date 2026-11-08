@@ -118,12 +118,12 @@ namespace app_simple_http_folder_upload
 
          ::property_set set;
 
-         auto & http = application()->http();
+         auto phttp = application()->http();
 
-         application()->datastream()->set("url", strUrl);
+         m_papp->datastream()->set("url", strUrl);
 
          ::string str =
-            http.get(strUrl, set);
+            phttp->get(strUrl, set);
 
          {
 
@@ -236,7 +236,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   bool impact::on_click(::item * pitem)
+   bool impact::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       if (pitem->m_item.m_eelement == e_element_item)

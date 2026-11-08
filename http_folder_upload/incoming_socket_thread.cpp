@@ -56,7 +56,7 @@ namespace app_simple_http_folder_upload
       m_iPortMinimum = (::networking::port_t)80;
       m_iPortMaximum = (::networking::port_t)80;
 
-      branch();
+      branch_asynchronously();
 
 //      if (!estatus)
 //      {

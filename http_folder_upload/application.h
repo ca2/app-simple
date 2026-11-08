@@ -47,7 +47,7 @@ namespace app_simple_http_folder_upload
       //void create_networking_application() override;
 
 
-      virtual ::type get_pane_impact_type() const;
+      virtual ::platform::type get_pane_impact_type() const;
 
 
 

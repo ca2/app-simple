@@ -55,7 +55,7 @@ namespace app_simple_http_folder_upload
       DECLARE_MESSAGE_HANDLER(on_message_destroy);
 
 
-      bool on_click(::item * pitem) override;
+      bool on_click(::item * pitem, ::user::mouse * pmouse) override;
 
       virtual void start_synchronization();
 

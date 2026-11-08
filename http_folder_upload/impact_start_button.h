@@ -30,7 +30,7 @@ namespace app_simple_http_folder_upload
 
       void handle(::topic * ptopic, ::handler_context * phandlercontext) override;
 
-      bool on_click(::item * pitem) override;
+      bool on_click(::item * pitem, ::user::mouse * pmouse) override;
 
       void OnActivateImpact(bool bActivate, ::pointer<impact>pActivateImpact, ::pointer<impact>DeactiveImpact) override;
 

@@ -31,7 +31,7 @@ namespace app_simple_http_folder_upload
    }
 
 
-   void socket::on_send_response()
+   bool socket::on_send_response()
    {
 
       string strHost = inheader("host");
@@ -48,11 +48,7 @@ namespace app_simple_http_folder_upload
 
       string strReferer = inheader("referer");
 
-      auto psystem = system();
-
-      auto purl = psystem->url();
-
-      ::string strServer = purl->get_server(strReferer);
+      ::string strServer = ::url::get_host(strReferer);
 
       //if (strServer.case_insensitive_equals("store.ca2software.com"))
       //{
@@ -378,6 +374,8 @@ namespace app_simple_http_folder_upload
 //         //}
 
       //}
+
+return true;
 
    }
 
