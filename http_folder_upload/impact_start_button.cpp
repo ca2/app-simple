@@ -96,7 +96,8 @@ namespace app_simple_http_folder_upload
 
    }
 
-   bool impact_start_button::on_click(::item * pitem)
+
+   bool impact_start_button::on_click(::item * pitem, ::user::mouse * pmouse)
    {
 
       enable_window(false);

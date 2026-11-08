@@ -82,9 +82,9 @@ namespace app_simple_http_folder_upload
       factory()->add_factory_item <::app_simple_http_folder_upload::incoming_socket >();
       factory()->add_factory_item <::app_simple_http_folder_upload::socket >();
 
-      default_toggle_check_handling("simple_checkbox");
+      //default_toggle_check_handling("simple_checkbox");
 
-      default_toggle_check_handling("no_client_frame");
+      //default_toggle_check_handling("no_client_frame");
 
       ::berg::application::init_instance();
 
@@ -114,11 +114,11 @@ namespace app_simple_http_folder_upload
 
       //add_document_template(pdoctemplate2);
 
-      default_data_save_handling("simple_checkbox");
+      //default_data_save_handling("simple_checkbox");
 
-      default_data_save_handling("no_client_frame");
+      //default_data_save_handling("no_client_frame");
 
-      default_data_save_handling("simple_text");
+      //default_data_save_handling("simple_text");
 
       defer_construct_newø(m_pincomingsocketthread);
 
