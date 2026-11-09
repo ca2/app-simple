@@ -9,6 +9,8 @@
 #include "form_001.h"
 #include "form_002.h"
 #include "acme/handler/request.h"
+#include "acme/platform/system.h"
+#include "aura/windowing/windowing.h"
 #include "aura/user/user/button.h"
 #include "berg/user/user/show.h"
 #include "berg/user/user/single_document_template.h"
@@ -124,7 +126,18 @@ namespace app_simple_change_grub_default_entry
       if (impact_system("main")->get_document_count() == 0)
       {
 
-         prequest->m_egraphicsoutputpurpose -= ::graphics::e_output_purpose_screen;
+         if (system()->windowing()->has_notify_icon_interface())
+         {
+
+            prequest->m_egraphicsoutputpurpose -= ::graphics::e_output_purpose_screen;
+
+         }
+         else
+         {
+
+            prequest->m_egraphicsoutputpurpose |= ::graphics::e_output_purpose_screen;
+
+         }
 
          impact_system("main")->request(prequest);
 

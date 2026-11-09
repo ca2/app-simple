@@ -4,6 +4,8 @@
 #include "form.h"
 
 
+namespace micro { class command_message_box; }
+
 namespace app_simple_change_grub_default_entry
 {
 
@@ -20,6 +22,16 @@ namespace app_simple_change_grub_default_entry
       ::pointer<::user::button>            m_pbuttonRestart;
       ::pointer<::user::list_box>          m_plistbox;
 
+
+      ::pointer<::user::button> m_pbuttonLoad;
+      ::pointer<::micro::command_message_box> m_pPermissionBox;
+      ::file::path m_pathPermissionMessage;
+      bool m_bPermissionRetry = false;
+      bool m_bPermissionRetryPosted = false;
+      void stop_permission_retry();
+      ::string m_strPendingSavedEntry;
+      ::pointer<::micro::command_message_box> m_pSaveBox;
+      void check_pending_saved_entry();
 
       form_001();
       ~form_001() override;

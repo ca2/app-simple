@@ -26,6 +26,7 @@ list(APPEND library_source
    form.cpp
    form.h
    form_001.h
+   grub_menu.h
    form_002.h
    tab_impact.cpp
    tab_impact.h

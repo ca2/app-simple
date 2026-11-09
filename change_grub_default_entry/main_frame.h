@@ -17,6 +17,8 @@ namespace app_simple_change_grub_default_entry
       main_frame();
       virtual ~main_frame();
 
+      void initialize(::particle * pparticle) override;
+
 
 //      // void assert_ok() const override;
 //      // void dump(dump_context & dumpcontext) const override;

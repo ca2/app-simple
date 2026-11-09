@@ -1,5 +1,7 @@
 #include "platform.h"
 #include "main_frame.h"
+#include "acme/platform/system.h"
+#include "aura/windowing/windowing.h"
 
 
 namespace app_simple_change_grub_default_entry
@@ -18,6 +20,16 @@ namespace app_simple_change_grub_default_entry
 
    main_frame::~main_frame()
    {
+
+   }
+
+
+   void main_frame::initialize(::particle * pparticle)
+   {
+
+      ::simple_main_frame::initialize(pparticle);
+
+      enable_default_notification_icon(system()->windowing()->has_notify_icon_interface());
 
    }
 
