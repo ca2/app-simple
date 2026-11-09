@@ -2,6 +2,7 @@
 
 
 #include "form.h"
+#include <atomic>
 
 
 namespace micro { class command_message_box; }
@@ -32,6 +33,7 @@ namespace app_simple_change_grub_default_entry
       ::string m_strPendingSavedEntry;
       ::pointer<::micro::command_message_box> m_pSaveBox;
       void check_pending_saved_entry();
+      std::atomic_bool m_bRebootPending{false};
 
       form_001();
       ~form_001() override;

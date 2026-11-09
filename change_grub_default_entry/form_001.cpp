@@ -291,21 +291,38 @@ namespace app_simple_change_grub_default_entry
          else if (ptopic->m_puserelement->user_interaction()->id() == "restart_button")
          {
 
-            if (m_strPendingSavedEntry.has_character()) return;
-            auto pnode = node();
-
-            try
+            if (m_strPendingSavedEntry.has_character() || m_bRebootPending.exchange(true)) return;
+            m_pbuttonRestart->enable_window(false);
+            m_pbuttonRestart->set_window_text("Restart requested...");
+            ::pointer<form_001> hold = this;
+            fork([this, hold]()
             {
-               pnode->reboot();
-            }
-            catch (const ::exception &)
-            {
-               auto pbox = create_newø < ::micro::message_box >();
-               pbox->initialize_message_box(
-                  "The system rejected the restart request. Check session authorization and try again.",
-                  "Restart failed");
-               pbox->display(e_display_normal, {});
-            }
+               ::string error;
+               try
+               {
+                  node()->reboot();
+               }
+               catch (const ::exception & exception)
+               {
+                  error = exception.get_message();
+                  if (exception.m_strDetails.has_character()) error += "\n\n" + exception.m_strDetails;
+               }
+               catch (...)
+               {
+                  error = "The restart request failed.";
+               }
+               if (error.is_empty()) return;
+               main_post([this, hold, error]()
+               {
+                  m_bRebootPending = false;
+                  m_pbuttonRestart->enable_window(true);
+                  m_pbuttonRestart->set_window_text("Restart Now");
+                  auto pbox = create_newø < ::micro::message_box >();
+                  pbox->m_pacmeuserinteractionOwner = top_level();
+                  pbox->initialize_message_box(error, "Restart failed or cancelled");
+                  pbox->display(e_display_normal, {});
+               });
+            });
 
             ptopic->m_bRet = true;
 
