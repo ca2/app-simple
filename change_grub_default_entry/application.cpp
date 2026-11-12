@@ -13,6 +13,7 @@
 #include "aura/windowing/windowing.h"
 #include "aura/user/user/button.h"
 #include "berg/user/user/show.h"
+#include "berg/user/user/frame_window.h"
 #include "berg/user/user/single_document_template.h"
 
 
@@ -126,20 +127,32 @@ namespace app_simple_change_grub_default_entry
       if (impact_system("main")->get_document_count() == 0)
       {
 
-         if (system()->windowing()->has_notify_icon_interface())
-         {
-
-            prequest->m_egraphicsoutputpurpose -= ::graphics::e_output_purpose_screen;
-
-         }
-         else
-         {
-
-            prequest->m_egraphicsoutputpurpose |= ::graphics::e_output_purpose_screen;
-
-         }
+         prequest->m_egraphicsoutputpurpose |= ::graphics::e_output_purpose_screen;
 
          impact_system("main")->request(prequest);
+
+      }
+      else
+      {
+
+         auto pdocument = impact_system("main")->get_document(0);
+         auto pimpact = pdocument->get_impact();
+
+         if (pimpact)
+         {
+
+            auto pframe = pimpact->parent_frame();
+
+            if (pframe)
+            {
+
+               pframe->display(e_display_normal, { ::user::e_activation_set_foreground });
+               pframe->set_need_redraw();
+               pframe->post_redraw();
+
+            }
+
+         }
 
       }
 
