@@ -19,6 +19,8 @@
 #include "aura/user/user/plain_edit.h"
 #include "axis/user/user/list_box.h"
 #if defined(LINUX)
+#include <cerrno>
+#include <sys/vfs.h>
 #include <unistd.h>
 #endif
 
@@ -378,7 +380,7 @@ namespace app_simple_change_grub_default_entry
       auto pathConfig = get_grub_cfg_path(pathFolder);
       m_pstill->set_window_text("Boot or GRUB Folder:");
 
-      if (pathFolder.is_empty() || !file()->exists(pathConfig))
+      if (pathFolder.is_empty())
       {
          stop_permission_retry();
          m_pstill->set_window_text("Boot or GRUB Folder: grub.cfg not found");
@@ -389,6 +391,12 @@ namespace app_simple_change_grub_default_entry
       string config;
       try
       {
+#if defined(LINUX)
+         // exists() treats an unsearchable parent directory as a missing file.
+         // Preserve EACCES so the permission dialog and retry can run.
+         if (::access(pathConfig.c_str(), R_OK) != 0 && errno == EACCES)
+            throw ::exception(error_file_access_denied);
+#endif
          config = file()->as_string(pathConfig);
       }
       catch (const ::exception & exception)
@@ -418,10 +426,34 @@ namespace app_simple_change_grub_default_entry
                m_pathPermissionMessage = pathConfig;
                string quoted = pathConfig;
                quoted.replace_with("'\"'\"'", "'");
+               ::string permissionCommand = "sudo chmod a+r -- '" + quoted + "'";
+#if defined(LINUX)
+               // FAT permissions come from mount options; chmod and ACLs cannot
+               // grant access. Walk to an accessible ancestor to query the mount.
+               auto pathProbe = pathFolder;
+               struct statfs filesystem;
+               while (::statfs(pathProbe.c_str(), &filesystem) != 0)
+               {
+                  if (errno != EACCES || pathProbe == pathProbe.folder()) break;
+                  pathProbe = pathProbe.folder();
+               }
+               if (::statfs(pathProbe.c_str(), &filesystem) == 0 && filesystem.f_type == 0x4d44)
+               {
+                  // FAT may retain its original masks on remount. Unmount and
+                  // mount the same device afresh, without formatting it.
+                  const std::string script =
+                     "target=$(findmnt -n -o TARGET -T \"$1\") && "
+                     "source=$(findmnt -n -o SOURCE -T \"$1\") && "
+                     "umount -- \"$target\" && "
+                     "mount -t vfat -o uid=0,gid=0,fmask=0133,dmask=0022 -- \"$source\" \"$target\"";
+                  permissionCommand = (std::string("sudo sh -c ") + grub_menu::shell_quote(script)
+                     + " sh " + grub_menu::shell_quote(pathProbe.c_str())).c_str();
+               }
+#endif
                // Finish the main window's create/text-change handler before
                // initializing another native window, entirely on the GUI thread.
                ::pointer<form_001> hold = this;
-               main_post([this, hold, quoted]()
+               main_post([this, hold, permissionCommand]()
                {
                   if (!hold->m_bPermissionRetry) return;
                   auto pbox = hold->create_newø < ::micro::command_message_box >();
@@ -431,7 +463,7 @@ namespace app_simple_change_grub_default_entry
                   pbox->initialize_command_message_box(
                      "Cannot read the GRUB configuration. Copy the command into a terminal and run it. "
                      "The entries will load automatically as soon as access is granted.",
-                     "sudo chmod a+r -- '" + quoted + "'",
+                     permissionCommand,
                      [pwindow](const ::string & command) { pwindow->copydesk()->set_plain_text(command); });
                   pbox->display(e_display_normal, {});
                });
@@ -537,13 +569,8 @@ namespace app_simple_change_grub_default_entry
       check_pending_saved_entry();
       if (m_strPendingSavedEntry.is_empty()) return ::success;
 
-#if defined(LINUX)
-      auto command = std::string("sudo setfacl -m u:") + std::to_string(::getuid())
-         + ":rw -- " + grub_menu::shell_quote(pathEnvironment.c_str());
-#else
       auto command = std::string("sudo grub-editenv ") + grub_menu::shell_quote(pathEnvironment.c_str())
          + " set " + grub_menu::shell_quote("saved_entry=" + std::string(requested.c_str()));
-#endif
 
       ::pointer<form_001> hold = this;
       main_post([this, hold, command]()
@@ -559,9 +586,8 @@ namespace app_simple_change_grub_default_entry
          pbox->m_pacmeuserinteractionOwner = top_level();
          ::pointer<::windowing::window> pwindow = window();
          pbox->initialize_command_message_box(
-            "The app needs write access to grubenv. Copy and run this command to grant your account access. "
-            "The selection will then be saved automatically. A system update may remove this grant; "
-            "the app will ask again when needed.",
+            "Saving the GRUB default requires administrator access. Copy and run this command in a terminal. "
+            "The app will verify the saved selection automatically.",
             command.c_str(),
             [pwindow](const ::string & text) { pwindow->copydesk()->set_plain_text(text); },
             "Allow saving the GRUB default");
