@@ -96,13 +96,16 @@ namespace app_simple_change_grub_default_entry
 
       //}
 
-      add_impact_system(
-         "main", __initialize_new ::user::single_document_template(
+      auto ptemplate = __initialize_new ::user::single_document_template(
                               "main",
                               typeid(document),
                               typeid(main_frame ),
                               typeid(form_001 )
-               ));
+               );
+
+      ptemplate->m_bHiddenOnNotifyIcon = true;
+
+      add_impact_system("main", ptemplate);
 
       //m_ptemplateChangeGrubDefaultEntryMain = pdoctemplate;
 

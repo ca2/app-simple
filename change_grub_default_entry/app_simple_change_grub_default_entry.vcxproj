@@ -1215,6 +1215,10 @@
     <ProjectReference Include="..\..\app\axis\axis.vcxproj">
       <Project>{a2cbd4ed-ed0f-482b-9b16-f48f21c32835}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\app\experience_tranquillum\experience_tranquillum.vcxproj">
+      <Project>{3c892817-9f8b-493c-a3e1-aac25943a7f9}</Project>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
