@@ -292,13 +292,13 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend =
-         "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part1.txt";
+         "google-drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part1.txt";
       auto timeNow = ::time::now();
       ::string strDate;
       ::earth::time earthtimeNow(timeNow);
       strDate.formatf("%04d-%02d-%02d_%02d-%02d", earthtimeNow.year(), earthtimeNow.month(),
          earthtimeNow.day(), earthtimeNow.hour(), earthtimeNow.minute());
-      ::file::path pathSendB = "google_drive://application/app-simple/build_plan/collection/" + m_strId + "_"+strDate+".build_plan/part1.txt";
+      ::file::path pathSendB = "google-drive://application/app-simple/build_plan/collection/" + m_strId + "_"+strDate+".build_plan/part1.txt";
 
       auto pathProcessedSend = m_papplication->defer_process_path(pathSend);
       auto pathProcessedSendB = m_papplication->defer_process_path(pathSendB);
@@ -317,9 +317,9 @@ namespace app_simple_build_plan
          // straa.main_add(allocateø string_array{strStart, strEnd, strStatus});
       }
       ::file::path pathSend2 =
-         "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part2.txt";
+         "google-drive://application/app-simple/build_plan/" + m_strId + ".build_plan/part2.txt";
       ::file::path pathSendB2 =
-         "google_drive://application/app-simple/build_plan/collection/" + m_strId + "_" + strDate + ".build_plan/part2.txt";
+         "google-drive://application/app-simple/build_plan/collection/" + m_strId + "_" + strDate + ".build_plan/part2.txt";
 
       file()->put_text(pathSend2, str2);
       file()->put_text(pathSendB2, str2);
@@ -399,7 +399,7 @@ namespace app_simple_build_plan
          return true;
       };*/
 
-      ::file::path path = "google_drive://application/app-simple/build_plan/" + m_strId + ".build_plan_spreadsheet_export";
+      ::file::path path = "google-drive://application/app-simple/build_plan/" + m_strId + ".build_plan_spreadsheet_export";
 
       auto pathProcessed = m_papplication->defer_process_path(path);
 
