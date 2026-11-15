@@ -98,6 +98,20 @@ namespace app_simple_change_grub_default_entry::grub_menu
       return entries;
    }
 
+   inline bool uses_saved_default(const std::string & config)
+   {
+      std::istringstream input(config);
+      std::string line;
+      while (std::getline(input, line))
+      {
+         auto words = tokens(line);
+         if (words.size() >= 2 && words[0] == "set"
+            && (words[1] == "default=${saved_entry}" || words[1] == "default=$saved_entry"))
+            return true;
+      }
+      return false;
+   }
+
    inline std::string default_entry(const std::string & config, const std::string & environment)
    {
       std::string saved, next, line;
