@@ -31,8 +31,6 @@ namespace app_simple_change_grub_default_entry
       bool m_bPermissionRetryPosted = false;
       void stop_permission_retry();
       ::string m_strPendingSavedEntry;
-      ::pointer<::micro::command_message_box> m_pSaveBox;
-      void check_pending_saved_entry();
       std::atomic_bool m_bRebootPending{false};
 
       form_001();

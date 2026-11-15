@@ -31,7 +31,6 @@
 namespace app_simple_change_grub_default_entry
 {
    constexpr auto timer_grub_permission_retry = static_cast<enum_timer>(0x47525542);
-   constexpr auto timer_grub_saved_entry_retry = static_cast<enum_timer>(0x47525543);
 
 
 
@@ -556,105 +555,82 @@ namespace app_simple_change_grub_default_entry
    
    ::e_status form_001::set_grub_saved_entry(const ::file::path& pathGrubFolder, const ::scoped_string & scopedstrSavedEntry)
    {
+      // Only one authorization/save may be active at a time.
+      if (m_strPendingSavedEntry.has_character()) return ::success;
       ::string requested(scopedstrSavedEntry);
       if (requested == get_grub_saved_entry(pathGrubFolder)) return ::success;
 
+      auto pathEnvironment = get_grubenv_path(pathGrubFolder);
       m_strPendingSavedEntry = requested;
       m_pbuttonRestart->enable_window(false);
-      m_pstill->set_window_text("Default not saved yet: run the command in the dialog");
+      m_plistbox->enable_window(false);
+      m_pedit->enable_window(false);
+      m_pbuttonLoad->enable_window(false);
+      m_pstill->set_window_text("Saving the boot default: authorize if prompted...");
       set_need_layout();
 
-      auto pathEnvironment = get_grubenv_path(pathGrubFolder);
-      // Save immediately if the account still has access from a previous grant.
-      check_pending_saved_entry();
-      if (m_strPendingSavedEntry.is_empty()) return ::success;
-
-      auto command = std::string("sudo grub-editenv ") + grub_menu::shell_quote(pathEnvironment.c_str())
-         + " set " + grub_menu::shell_quote("saved_entry=" + std::string(requested.c_str()));
-
       ::pointer<form_001> hold = this;
-      main_post([this, hold, command]()
+      fork([this, hold, pathGrubFolder, pathEnvironment, requested]()
       {
-         if (m_strPendingSavedEntry.is_empty()) return;
-         if (m_pSaveBox)
-         {
-            m_pSaveBox->message_box_response_callback() = {};
-            m_pSaveBox->set_dialog_response(e_dialog_result_cancel);
-         }
-         auto pbox = create_newø < ::micro::command_message_box >();
-         m_pSaveBox = pbox;
-         pbox->m_pacmeuserinteractionOwner = top_level();
-         ::pointer<::windowing::window> pwindow = window();
-         pbox->initialize_command_message_box(
-            "Saving the GRUB default requires administrator access. Copy and run this command in a terminal. "
-            "The app will verify the saved selection automatically.",
-            command.c_str(),
-            [pwindow](const ::string & text) { pwindow->copydesk()->set_plain_text(text); },
-            "Allow saving the GRUB default");
-         pbox->message_box_response_callback() = [this](::user_interface::message_box *)
-         {
-            m_pSaveBox.release();
-            m_strPendingSavedEntry.clear();
-            kill_timer(timer_grub_saved_entry_retry);
-            m_pbuttonRestart->enable_window(true);
-            update_grub_entry_list(get_grub_folder_path());
-         };
-         pbox->display(e_display_normal, {});
-      });
-      set_timer(timer_grub_saved_entry_retry, 500_ms, [this](::timer *)
-      {
-         ::pointer<form_001> hold = this;
-         main_post([this, hold]() { check_pending_saved_entry(); });
-      });
-      return ::success;
-   }
-
-
-   void form_001::check_pending_saved_entry()
-   {
-      if (m_strPendingSavedEntry.is_empty()) return;
-      try
-      {
-         auto pathFolder = get_grub_folder_path();
-         if (get_grub_saved_entry(pathFolder) != m_strPendingSavedEntry)
+         ::string error;
+         try
          {
 #if defined(LINUX)
-            auto pathEnvironment = get_grubenv_path(pathFolder);
-            if (::access(pathEnvironment.c_str(), W_OK) != 0) return;
-            auto command = std::string("grub-editenv ") + grub_menu::shell_quote(pathEnvironment.c_str())
-               + " set " + grub_menu::shell_quote("saved_entry=" + std::string(m_strPendingSavedEntry.c_str()));
-            ::string error;
+            // Use the session's graphical authentication agent. Never fall back
+            // to a terminal password prompt in this GUI application.
+            auto command = std::string(::access(pathEnvironment.c_str(), W_OK) == 0
+               ? "grub-editenv " : "pkexec --disable-internal-agent grub-editenv ")
+               + grub_menu::shell_quote(pathEnvironment.c_str())
+               + " set " + grub_menu::shell_quote("saved_entry=" + std::string(requested.c_str()));
+            ::string diagnostic;
             ::i32 exitCode = -1;
             node()->get_posix_shell_command_output(command.c_str(), e_posix_shell_system_default,
-               &error, &exitCode, 10_s);
-            if (exitCode != 0)
-            {
-               m_pstill->set_window_text("Could not save the boot default: " + error);
-               set_need_layout();
-               return;
-            }
-            if (get_grub_saved_entry(pathFolder) != m_strPendingSavedEntry) return;
+               &diagnostic, &exitCode, 5_min);
+            if (exitCode == 126)
+               error = "Administrator authorization was cancelled. The boot default was not saved.";
+            else if (exitCode == 127)
+               error = "Administrator authorization could not be obtained. Ensure Polkit and a desktop authentication agent are installed and running.";
+            else if (exitCode != 0)
+               error = "Could not save the boot default. " + diagnostic;
+            else if (get_grub_saved_entry(pathGrubFolder) != requested)
+               error = "The saved boot default could not be verified.";
 #else
-            return;
+            error = "Saving the boot default is not supported on this platform.";
 #endif
          }
-      }
-      catch (const ::exception &) { return; }
-
-      information() << "GRUB saved default verified: " << m_strPendingSavedEntry;
-      m_strPendingSavedEntry.clear();
-      kill_timer(timer_grub_saved_entry_retry);
-      m_pbuttonRestart->enable_window(true);
-      if (m_pSaveBox)
-      {
-         auto pbox = m_pSaveBox;
-         m_pSaveBox.release();
-         pbox->set_dialog_response(e_dialog_result_cancel);
-      }
-      else
-      {
-         update_grub_entry_list(get_grub_folder_path());
-      }
+         catch (const ::exception & exception)
+         {
+            error = exception.get_message();
+            if (error.is_empty()) error = "Could not save the boot default.";
+         }
+         catch (...)
+         {
+            error = "Could not save the boot default.";
+         }
+         main_post([this, hold, error]()
+         {
+            m_strPendingSavedEntry.clear();
+            m_pbuttonRestart->enable_window(true);
+            m_plistbox->enable_window(true);
+            m_pedit->enable_window(true);
+            m_pbuttonLoad->enable_window(true);
+            update_grub_entry_list(get_grub_folder_path());
+            if (error.has_character())
+            {
+               m_pstill->set_window_text(error);
+               auto pbox = create_newø < ::micro::message_box >();
+               pbox->m_pacmeuserinteractionOwner = top_level();
+               pbox->initialize_message_box(error, "Boot default not saved");
+               pbox->display(e_display_normal, {});
+            }
+            else
+            {
+               m_pstill->set_window_text("Boot default saved.");
+            }
+            set_need_layout();
+         });
+      });
+      return ::success;
    }
 
 
