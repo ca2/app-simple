@@ -45,7 +45,7 @@ namespace app_simple_build_plan
 
       }
 
-      ::file::path pathBuildPlanFolder = "google_drive://application/app-simple/build_plan";
+      ::file::path pathBuildPlanFolder = "google-drive://application/app-simple/build_plan";
 
       auto files = directory()->files(pathBuildPlanFolder);
 

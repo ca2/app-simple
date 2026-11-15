@@ -321,6 +321,8 @@ namespace app_simple_change_grub_default_entry
                   auto pbox = create_newø < ::micro::message_box >();
                   pbox->m_pacmeuserinteractionOwner = top_level();
                   pbox->initialize_message_box(error, "Restart failed or cancelled");
+                  // GTK must finish creating the native window before the show request.
+                  pbox->create_window(e_parallelization_synchronous);
                   pbox->display(e_display_normal, {});
                });
             });
@@ -464,6 +466,8 @@ namespace app_simple_change_grub_default_entry
                      "The entries will load automatically as soon as access is granted.",
                      permissionCommand,
                      [pwindow](const ::string & command) { pwindow->copydesk()->set_plain_text(command); });
+                  // GTK must finish creating the native window before the show request.
+                  pbox->create_window(e_parallelization_synchronous);
                   pbox->display(e_display_normal, {});
                });
             }
@@ -533,7 +537,8 @@ namespace app_simple_change_grub_default_entry
 
       auto pathGrubEnv = get_grubenv_path(pathGrubFolder);
 
-      straLines = pcontext->file()->lines(pathGrubEnv);
+      try { straLines = pcontext->file()->lines(pathGrubEnv); }
+      catch (const ::exception &) { return ""; }
 
       string strEntry;
 
@@ -557,6 +562,28 @@ namespace app_simple_change_grub_default_entry
    {
       // Only one authorization/save may be active at a time.
       if (m_strPendingSavedEntry.has_character()) return ::success;
+
+      auto config = file()->as_string(get_grub_cfg_path(pathGrubFolder));
+      if (!grub_menu::uses_saved_default(config.c_str()))
+      {
+         update_grub_entry_list(pathGrubFolder);
+         ::pointer<form_001> hold = this;
+         main_post([this, hold]()
+         {
+            auto pbox = create_newø < ::micro::message_box >();
+            pbox->m_pacmeuserinteractionOwner = top_level();
+            pbox->initialize_message_box(
+               "This GRUB configuration does not use saved_entry as its default. "
+               "Boot into the Linux installation that owns this boot menu, set GRUB_DEFAULT=saved "
+               "in /etc/default/grub, and regenerate its grub.cfg. Then load the entries again. "
+               "Changing grubenv from another Linux works when you select the boot folder used by the active GRUB.",
+               "Enable saved GRUB defaults");
+            pbox->create_window(e_parallelization_synchronous);
+            pbox->display(e_display_normal, {});
+         });
+         return error_failed;
+      }
+
       ::string requested(scopedstrSavedEntry);
       if (requested == get_grub_saved_entry(pathGrubFolder)) return ::success;
 

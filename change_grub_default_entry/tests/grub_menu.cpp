@@ -26,6 +26,10 @@ submenu 'Advanced options' $menuentry_id_option 'advanced-id' {
 }
 menuentry 'Firmware settings' { }
 )GRUB";
+   assert(uses_saved_default(config));
+   assert(uses_saved_default("set default=$saved_entry"));
+   assert(!uses_saved_default("set default=0"));
+   assert(!uses_saved_default("# set default=\"${saved_entry}\""));
    auto entries = parse(config);
    assert(entries.size() == 4);
    assert(entries[0].display_title() == "Linux main");
