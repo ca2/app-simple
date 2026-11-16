@@ -116,6 +116,7 @@ namespace app_simple_change_grub_default_entry
 
       construct_newø(m_pbuttonRestart);
       construct_newø(m_pbuttonLoad);
+      construct_newø(m_pbuttonShowSubentries);
 
       m_pstill->create_control(this, "still");
 
@@ -133,6 +134,10 @@ namespace app_simple_change_grub_default_entry
       m_pbuttonLoad->create_control(this, "load_entries");
       m_pbuttonLoad->add_handler(this);
       m_pbuttonLoad->set_window_text("Load Entries");
+      m_pbuttonShowSubentries->create_control(this, "show_subentries");
+      m_pbuttonShowSubentries->add_handler(this);
+      m_pbuttonShowSubentries->set_window_text("Show subentries");
+      m_pbuttonShowSubentries->set_check(::e_check_unchecked, ::e_source_initialize);
 
       m_pstill->set_window_text("Boot or GRUB Folder:");
 
@@ -218,6 +223,11 @@ namespace app_simple_change_grub_default_entry
 
       y += rectangleEditMargin.bottom;
 
+      auto sizeShowSubentries = m_pbuttonShowSubentries->get_adjusted_fitting_size(pdraw2dgraphics);
+      m_pbuttonShowSubentries->display_child(::f64_rectangle_dimension(
+         iLeft, y, sizeShowSubentries.cx + 32, sizeShowSubentries.cy));
+      y += sizeShowSubentries.cy + 10;
+
       m_plistbox->display_child(::f64_rectangle_dimension(iLeft, y, rectangleX.width() - iLeft * 2, rectangleX.bottom - iLeft - y));
 
       m_plistbox->set_need_layout();
@@ -277,7 +287,15 @@ namespace app_simple_change_grub_default_entry
       else if (ptopic->id() == ::id_click)
       {
 
-         if (ptopic->m_puserelement->user_interaction()->id() == "load_entries")
+         if (ptopic->m_puserelement->user_interaction()->id() == "show_subentries")
+         {
+            m_bShowSubentries = !m_bShowSubentries;
+            m_pbuttonShowSubentries->set_check(
+               m_bShowSubentries ? ::e_check_checked : ::e_check_unchecked, ::e_source_initialize);
+            update_grub_entry_list(get_grub_folder_path());
+            ptopic->m_bRet = true;
+         }
+         else if (ptopic->m_puserelement->user_interaction()->id() == "load_entries")
          {
             m_pathPermissionMessage.clear();
             update_grub_entry_list(get_grub_folder_path());
@@ -492,6 +510,8 @@ namespace app_simple_change_grub_default_entry
       string selectedId;
       for (const auto & entry : entries)
       {
+         // Numeric paths contain '>' only for entries inside a submenu.
+         if (!m_bShowSubentries && entry.index.find('>') != std::string::npos) continue;
          m_plistbox->add_item(entry.display_title().c_str(), entry.id.c_str());
          if (selected == entry.id || selected == entry.title_path || selected == entry.index)
             selectedId = entry.id.c_str();
@@ -593,6 +613,7 @@ namespace app_simple_change_grub_default_entry
       m_plistbox->enable_window(false);
       m_pedit->enable_window(false);
       m_pbuttonLoad->enable_window(false);
+      m_pbuttonShowSubentries->enable_window(false);
       m_pstill->set_window_text("Saving the boot default: authorize if prompted...");
       set_need_layout();
 
@@ -641,6 +662,7 @@ namespace app_simple_change_grub_default_entry
             m_plistbox->enable_window(true);
             m_pedit->enable_window(true);
             m_pbuttonLoad->enable_window(true);
+            m_pbuttonShowSubentries->enable_window(true);
             update_grub_entry_list(get_grub_folder_path());
             if (error.has_character())
             {

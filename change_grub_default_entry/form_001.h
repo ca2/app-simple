@@ -25,6 +25,8 @@ namespace app_simple_change_grub_default_entry
 
 
       ::pointer<::user::button> m_pbuttonLoad;
+      ::pointer<::user::button> m_pbuttonShowSubentries;
+      bool m_bShowSubentries = false;
       ::pointer<::micro::command_message_box> m_pPermissionBox;
       ::file::path m_pathPermissionMessage;
       bool m_bPermissionRetry = false;
